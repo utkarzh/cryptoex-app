@@ -37,11 +37,11 @@ const Navbar = () => {
           <div
             className={`flex-col absolute ${
               isSidebarOpen ? "flex lg:flex" : "hidden lg:flex"
-            } top-[70px]   pt-3 pb-6 bg-[#06062a] lg:bg-transparent lg:py-0 left-0  z-[100] lg:static lg:flex-row w-[100%] h-fit lg:h-full  items-center gap-4 transition-all duration-500 shadow-[-0px_-0px_1px_white] lg:shadow-none`}
+            } top-[70px]   pt-3 pb-6 bg-[#06062a] lg:bg-transparent lg:py-0 left-0  z-[100] lg:static lg:flex-row w-[100%] h-fit lg:h-full  items-start pl-4 lg:pl-0 lg:items-center gap-4 transition-all duration-500 shadow-[-0px_-0px_1px_white] lg:shadow-none `}
           >
             {/* last part after small screen */}
-            <div className="w-full flex lg:hidden flex-col gap-2">
-              <div className="flex flex-row-reverse gap-2 justify-between px-4 items-center">
+            <div className="w-full flex lg:hidden flex-col gap-2  ">
+              <div className="flex flex-row-reverse gap-2 justify-between pr-4 items-center">
                 <div className="flex gap-1 text-xl items-center ">
                   <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
                   <span className="relative ">
@@ -50,7 +50,7 @@ const Navbar = () => {
                   </span>
                 </div>
 
-                {/* <div className="flex gap-3 items-center px-3 p-1 border border-gray-700 rounded-full text-sm ">
+                <div className="flex gap-3 items-center px-3 p-1 border border-gray-700 rounded-full text-sm ">
                     <GrAssistListening className="text-3xl bg-yellow-400 p-1 rounded-full text-white" />
 
                     <div className="flex flex-col  text-[12px]">
@@ -61,12 +61,12 @@ const Navbar = () => {
                     <div className="text-green-600 cursor-pointer ">
                       See All
                     </div>
-                  </div> */}
+                  </div>
               </div>
             </div>
 
             {/* toggle button */}
-            <div className=" w-fit text-sm bg-gray-700 rounded-full flex items-center">
+            <div className=" w-fit text-sm bg-gray-700 rounded-full flex items-center ">
               <div
                 className={`w-full ${
                   isExchange
@@ -93,7 +93,7 @@ const Navbar = () => {
             <div className="h-[50%] hidden lg:block border-r-2 rounded border-gray-600 my-2 border-2 "></div>
 
             {/* items */}
-            <div className="w-full flex flex-col lg:flex-row  gap-3 text-sm items-center">
+            <div className="w-full flex flex-col lg:flex-row  gap-3 text-sm items-start pl-2 lg:pl-0 lg:items-center">
                 {/* trade */}
               <div className="flex items-center cursor-pointer  relative group">
                 <span>Trade</span>
@@ -160,7 +160,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex gap-3 items-center px-3 p-1 border border-gray-700 rounded-full text-sm ">
-              <GrAssistListening className="text-3xl bg-yellow-400 p-1 rounded-full text-white" />
+              <Image src="/images/coins/plath.png" alt=""  width={40} height={40} className="w-7 h-auto"/>
 
               <div className="flex flex-col  text-[12px]">
                 <span className="text-slate-500">New Listing</span>

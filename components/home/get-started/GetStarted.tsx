@@ -13,7 +13,7 @@ const GetStarted = () => {
           <Marketing/>
         </div>
         {/* benifits */}
-        <div className='w-full pb-28'>
+        <div className='w-full'>
             <Benefits/>
         </div>
     </div>

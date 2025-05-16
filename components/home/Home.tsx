@@ -3,8 +3,8 @@ import Hero from './hero/Hero'
 import CurrencyWedgets from './currency-wedgets/CurrencyWedgets'
 import CreateAccount from './create-account/CreateAccount'
 import GetStarted from './get-started/GetStarted'
-// import Features from './features/Features'
-// import Partners from './partners/Partners'
+import Features from './features/Features'
+import Partners from './partners/Partners'
 
 const Home = () => {
   return (
@@ -13,8 +13,8 @@ const Home = () => {
       <CurrencyWedgets/>
       <CreateAccount/>
       <GetStarted/>
-      {/* <Features/> */}
-      {/* <Partners/> */}
+      <Features/>
+      <Partners/>
     </div>
   )
 }

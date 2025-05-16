@@ -3,6 +3,7 @@ import HeroCurrencyStrip from './HeroCurrencyStrip'
 import Image from 'next/image'
 import { saira } from '@/utils/Font'
 import Marquee from 'react-fast-marquee'
+import TextChangeEffect from '@/components/common/TextChangeEffect'
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
 
       <div className={` ${saira.className} text-[25vw] lg:text-[20vw] font-extrabold tracking-wide opacity-80 z-[30] relative`}>
         <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#06062a]/80 "></div>
-        INDOEX
+        <TextChangeEffect/>
       </div>
 
       {/* add background image here */}

@@ -1,97 +1,277 @@
+"use client"
 import Card from '@/components/common/Card'
-import React from 'react'
+import { saira } from '@/utils/Font'
+import React, { useRef, useState } from 'react'
 import { IoWalletOutline } from 'react-icons/io5'
-import { LuChevronDown, LuCircleGauge, LuDollarSign } from 'react-icons/lu'
+import { LuChevronDown, LuChevronUp, LuCircleGauge, LuDollarSign } from 'react-icons/lu'
 import { TbBracketsAngle } from 'react-icons/tb'
 
 
 const FeaturesContent = () => {
-  return (
-    <div className='w-full mt-16 pb-20 flex justify-center'>
-        {/* container */}
-        <div className='w-fit flex gap-2 relative '>
 
-          {/* leftside content */}
-          <div className='flex flex-col gap-2'>
-           <Card>
-                <div className='w-[200px] p-2 min-h-[100px] justify-start flex flex-col gap-3'>
+  const containerRef1 = useRef<HTMLDivElement>(null);
+  const containerRef2 = useRef<HTMLDivElement>(null);
+    let scrollInterval1: NodeJS.Timeout | null = null;
+    let scrollInterval2: NodeJS.Timeout | null = null;
+    let container1 :HTMLDivElement | null ;
+    let container2 :HTMLDivElement | null ;
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isScolling, setIsScrolling] = useState(false);
+  
+    const startScrollDownLeft = () => {
+       container1 = containerRef1.current;
+      
+      if (!container1) return;
 
-                  <div className='w-fit p-1 bg-slate-700 rounded-full'>
-                    <LuDollarSign className='text-md'/>
-                  </div>
-                  <div className='w-full flex flex-col gap-1'>
-                    <h3 className='text-[14px] font-medium'>Reasonable Commissions</h3>
-                    <p className='text-[10px] font-extralight'>Profitable investment opportunities and conditions</p>
-                  </div>
-                </div>
-            </Card>
+      // Clear any existing scroll interval
+      if (scrollInterval1) clearInterval(scrollInterval1);
+  
+      // Start auto-scrolling down
+      if(container1){
+          scrollInterval1 = setInterval(() => {
+        if (!container1) return;
+        if (container1.scrollTop + container1.clientHeight >= container1.scrollHeight) {
+          clearInterval(scrollInterval1!);
+          return;
+        }
+        container1.scrollTop += 5; // adjust speed of container1
+      }, 60); // ~60fps
+      }
+    };
+    const startScrollDownRight = () => {
+       
+       container2 = containerRef2.current;
+      if (!container2) return;
 
-             <Card>
-              <div className='w-[200px] p-2 min-h-[100px]  flex flex-col gap-3'>
+      // Clear any existing scroll interva
+      if (scrollInterval2) clearInterval(scrollInterval2);
+  
+      // Start auto-scrolling down
+      if(container2){
+         scrollInterval2 = setInterval(() => {
+        if (!container2) return;
+        if (container2.scrollTop + container2.clientHeight >= container2.scrollHeight) {
+          clearInterval(scrollInterval2!);
+          return;
+        }
+        container2.scrollTop += 5; // adjust speed
+      }, 60);
+      }
+    };
 
-                  <div className='w-fit p-1 bg-slate-700 rounded-full'>
-                    <IoWalletOutline className='text-md'/>
-                  </div>
-                  <div className='w-full flex flex-col gap-1'>
-                    <h3 className='text-[14px] font-medium'>Algorithmic Trading</h3>
-                    <p className='text-[10px] font-extralight'>API for crossplatform trading robots</p>
-                  </div>
-                </div>
-            </Card>
-            </div>
-          {/* middle content */}
     
-                <div className=' h-[70%] my-auto w-[200px] p-4 flex flex-col items-center justify-center'>
 
-                  <div className='w-fit h-fit p-1 bg-green-600 rounded-full'>
-                    <LuCircleGauge className='text-2xl'/>
-                  </div>
-                  <div className='w-0 h-full border-l border-green-400'></div>
-                  <div className='w-fit h-fit p-1 bg-slate-600 rounded-full z-[60] opacity-60 cursor-pointer'>
-                    <LuChevronDown className='text-xl '/>
-                  </div>
-                  
-                </div>
-            
-          {/* rightside content */}
-             <div className='flex flex-col gap-2 z-[40]'>
-           <Card>
-              <div className='w-[200px] min-h-[100px] p-2 flex flex-col gap-3'>
+     const startScrollUp = () => {
+       container1 = containerRef1.current;
+       container2 = containerRef2.current;
+      // if (!container) return;
+      // Clear any existing scroll interval
+      if (scrollInterval1) clearInterval(scrollInterval1);
+      if (scrollInterval2) clearInterval(scrollInterval2);
+  
+      // Start auto-scrolling down
+      scrollInterval1 = setInterval(() => {
+        if (!container1) return;
+        if (container1.scrollTop  <= 0) {
+          clearInterval(scrollInterval1!);
+        }
+        container1.scrollTop -= 5; // adjust speed of container1
+      }, 60); // ~60fps
 
-                  <div className='w-fit p-1 bg-slate-700 rounded-full'>
-                    <IoWalletOutline className='text-md'/>
-                  </div>
-                  <div className='w-full flex flex-col gap-1'>
-                    <h3 className='text-[14px] font-medium'>Secure Wallets</h3>
-                    <p className='text-[10px] font-extralight'>Keep your digital assets in user wallets</p>
-                  </div>
-                </div>
-            </Card>
+      scrollInterval2 = setInterval(() => {
+        if (!container2) return;
+        if (container2.scrollTop + container2.clientHeight <= 0) {
+          clearInterval(scrollInterval2!);
+          return;
+        }
+        container2.scrollTop -= 5; // adjust speed
+      }, 60);
 
-            
+      // setIsScrolling(true);
+    };
+  
+  
+    // const stopScroll = () => {
+    //   console.log("Scrolling offf...")
+    //   if (scrollInterval1) {
+    //     clearInterval(scrollInterval1);
+    //   }
+    //    if (scrollInterval2) {
+    //     clearInterval(scrollInterval2);
+    //   }
+    //   setIsScrolling(false);
+    // };
 
-             <Card>
-              <div className='w-[200px] min-h-[100px] p-2 flex flex-col gap-3'>
+    // const resetScroll = () => {
+    //    if (scrollInterval1) {
+    //     clearInterval(scrollInterval1);
+    //   }
+    //    if (scrollInterval2) {
+    //     clearInterval(scrollInterval2);
+    //   }
+    //   if (container1) container1.scrollTop = 0
+    //   if (container2) container2.scrollTop = 0
 
-                  <div className='w-fit p-1 bg-slate-700 rounded-full'>
-                    <TbBracketsAngle className='text-md'/>
-                  </div>
-                  <div className='w-full flex flex-col gap-1'>
-                    <h3 className='text-[14px] font-medium'>Payment Options</h3>
-                    <p className='text-[10px] font-extralight'>More than 10 ways to deposit to an account</p>
-                  </div>
-                </div>
-            </Card>
+    //   setIsScrolled(false);
+    //   setIsScrolling(false);
+    // }
+
+    const scrollDown = () => {
+      startScrollDownLeft();
+      startScrollDownRight();
+    }
+  return (
+    <div
+      className="w-full mt-24  flex justify-center  relative  "
+      // onMouseLeave={resetScroll}
+    >
+      {/* container */}
+      <div
+        className="w-fit  flex gap-2 relative  "
+      >
+        {/* leftside content */}
+        <div
+          className="w-fit max-h-[270px]  overflow-hidden flex flex-col gap-2"
+          ref={containerRef1}
+        >
+          <Card>
+            <div className="w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <LuDollarSign className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>
+                  Reasonable Commissions
+                </h3>
+                <p className="text-[10px] font-extralight">
+                  Profitable investment opportunities and conditions
+                </p>
+              </div>
             </div>
+          </Card>
 
-            {/* effect */}
+          <Card>
+            <div className="w-[250px] p-2 py-4 min-h-[100px]  flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>Algorithmic Trading</h3>
+                <p className="text-[10px] font-extralight">
+                  API for crossplatform trading robots
+                </p>
+              </div>
+            </div>
+          </Card>
 
-            <div className="absolute z-[50] bottom-0 left-0 w-full  h-[80%] bg-gradient-to-b from-transparent via-[#06062a]/50  to-[#06062a]  "></div>
-
-           
+          <Card>
+            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>Algorithmic Trading</h3>
+                <p className="text-[10px] font-extralight">
+                  API for crossplatform trading robots
+                </p>
+              </div>
+            </div>
+          </Card>
         </div>
+        {/* middle content */}
+        <div className=" h-[70%] my-auto w-[200px] p-4 flex flex-col items-center justify-center ">
+          {!isScrolled ? (
+            <div className="w-fit h-fit p-1 bg-green-600 rounded-full">
+              <LuCircleGauge className="text-2xl" />
+            </div>
+          ) : (
+            <div
+              className="w-fit h-fit p-1 bg-slate-600 rounded-full z-[60] opacity-60 cursor-pointer border"
+              onClick={startScrollUp}
+            >
+              <LuChevronUp className="text-xl " />
+            </div>
+          )}
+          <div
+            className={`w-0 h-full border-l ${
+              isScolling ? "border-yellow-500 animate-ping" : "border-green-400"
+            } `}
+          ></div>
+          <div
+            className="w-fit h-fit p-1 bg-slate-600 rounded-full z-[60] opacity-60 cursor-pointer "
+            onClick={ scrollDown}
+          >
+            <LuChevronDown className="text-xl " />
+          </div>
+        </div>
+
+        {/* rightside content */}
+        <div
+          className="flex  max-h-[270px] overflow-hidden flex-col gap-2 z-[40]"
+          ref={containerRef2}
+        >
+          <Card>
+            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>Secure Wallets</h3>
+                <p className="text-[10px] font-extralight">
+                  Keep your digital assets in user wallets
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <TbBracketsAngle className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>Payment Options</h3>
+                <p className="text-[10px] font-extralight">
+                  More than 10 ways to deposit to an account
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>Algorithmic Trading</h3>
+                <p className="text-[10px] font-extralight">
+                  API for crossplatform trading robots
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card>
+            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className="text-[14px] font-medium">Algorithmic Trading</h3>
+                <p className="text-[10px] font-extralight">
+                  API for crossplatform trading robots
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+
+      {/* effect */}
+      <div className="absolute z-[50] bottom-0 left-0 w-full  h-[80%] bg-gradient-to-b from-transparent via-[#06062a]/50  to-[#06062a] "></div>
     </div>
-  )
+  );
 }
 
 export default FeaturesContent

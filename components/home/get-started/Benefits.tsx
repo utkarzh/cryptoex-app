@@ -1,4 +1,5 @@
 "use client"
+import { saira } from '@/utils/Font';
 import React, { useState } from 'react'
 import { BiDollar, BiStats } from 'react-icons/bi';
 import { CiStar } from 'react-icons/ci';
@@ -11,7 +12,7 @@ const Benefits = () => {
   const [isUserBenefits, setIsUserBenifits] = useState(false);
 
   return (
-    <div className="w-full h-fit  ">
+    <div className="w-full h-fit   ">
       <div className="w-[65%] sm:w-[75%] relative rounded-r-md py-8 flex justify-end  ">
         <div className="bg-[url('/images/hexblock.png')] bg-cover bg-center opacity-30  h-full w-full absolute top-0 right-0 bg-transparent rounded-r-md  z-[20] "></div>
         <div className={`opacity-80 rounded-r-md  h-full w-full absolute top-0 right-0 ${isUserBenefits ? "bg-yellow-600" : "bg-green-600"} transition-all duration-500 z-[30]`}></div>
@@ -27,7 +28,7 @@ const Benefits = () => {
                 
 
               <div className="flex flex-col gap0">
-                <h2 className="text-[14px] font-bold ">Coin/Token Listings</h2>
+                <h2 className={`${saira.className} text-[14px] font-bold`}>Coin/Token Listings</h2>
                 <p className="font-extralight text-[12px]">
                   IndoEx is expanding investment access to all qualified
                   cryptocurrencies worldwide.
@@ -44,7 +45,7 @@ const Benefits = () => {
                 
 
               <div className="flex flex-col gap0">
-                <h2 className="text-[14px] font-bold ">Trading Contest</h2>
+                <h2 className={`${saira.className} text-[14px] font-bold`}>Trading Contest</h2>
                 <p className="font-extralight text-[12px]">
                   Our trading contests let users showcase skills. Hold 0.1 BTC to enter and win rewards!
                 </p>
@@ -62,7 +63,7 @@ const Benefits = () => {
                 
 
               <div className="flex flex-col gap0">
-                <h2 className="text-[14px] font-bold ">Custom Pairing</h2>
+                <h2 className={`${saira.className} text-[14px] font-bold`}>Custom Pairing</h2>
                 <p className="font-extralight text-[12px]">
                 Unlike other exchanges, IndoEx charges no fees for extra market pairs.
                 </p>
@@ -78,7 +79,7 @@ const Benefits = () => {
                 
 
               <div className="flex flex-col gap0">
-                <h2 className="text-[14px] font-bold ">Listing Contest</h2>
+                <h2 className={`${saira.className} text-[14px] font-bold`}>Listing Contest</h2>
                 <p className="font-extralight text-[12px]">
                Our listing competition rewards the winner with 3 BTC. More benefits await.
                 </p>

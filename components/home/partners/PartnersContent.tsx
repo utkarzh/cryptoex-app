@@ -9,7 +9,7 @@ const PartnersContent = () => {
   return (
     <div className='w-full h-fit py-20 flex justify-center items-center'>
         {/* container */}
-        <div className=' flex gap-6 items-center'>
+        <div className=' flex flex-col lg:flex-row gap-6 items-center justify-center'>
             {/* image and effect */}
             <div className='w-full'>
                 <div className=' w-[460px] h-[460px] relative flex justify-center items-center p-6'>

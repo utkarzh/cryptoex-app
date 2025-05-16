@@ -48,8 +48,8 @@ const HomeCryptoList:FC<Props> = ({isExpended, title, value, onSelect}) => {
     onSelect(value);
   }
   return (
-    <div className={`bg-[#161735]  ${isExpended ? "w-full min-w-none md:min-w-md" : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8"}   max-h-screen overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-2  text-white flex flex-col gap-4 transition-all duration-700 ease-in-out`}>
-      <div className={`w-[84%] mx-auto flex px-4 mt-4 ${isExpended ? "justify-between" : "justify-center"} `}>
+    <div className={`bg-[#161735]  ${isExpended ? "w-full min-w-none md:min-w-md" : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 opacoty-100 md:opacity-35"}   max-h-screen overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-2  text-white flex flex-col gap-4 transition-all duration-700 ease-in-out`}>
+      <div className={`w-[84%] mx-auto flex px-4 mt-4 ${isExpended ? "justify-between" : " justify-between md:justify-center"} `}>
         {/* heading */}
         <div className="w-fit gap-1 flex items-center justify-center" onClick={ selectHandler}>
           {value === "spot" && <FaFire />}
@@ -57,7 +57,7 @@ const HomeCryptoList:FC<Props> = ({isExpended, title, value, onSelect}) => {
           {value === "topgainer" && <IoStatsChart />}
           <h2 className={`text-nowrap font-medium text-[18px] cursor-pointer ${saira.className}`}>{title}</h2>
         </div>
-        {isExpended && <MdSearch className="text-2xl cursor-pointer" />}
+        <MdSearch className={`${isExpended ? "block" : "block md:hidden"} text-2xl cursor-pointer`} />
       </div>
 
       <div className="w-full  border-b border-slate-500"></div>
