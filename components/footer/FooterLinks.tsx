@@ -1,3 +1,4 @@
+import { saira } from '@/utils/Font'
 import Link from 'next/link'
 import React from 'react'
 
@@ -53,11 +54,11 @@ const FooterLinks = () => {
   return (
 
     <div className='w-full flex flex-col gap-4 justify-between'>
-    <div className='w-full flex gap-16 '>
+    <div className='w-full flex flex-wrap lg:flex-nowrap gap-8 lg:gap-16 '>
 
         {/* services */}
         <div className='flex flex-col gap-2'>
-            <h3 className='text-[14px] font-medium'>Services</h3>
+            <h3 className={` ${saira.className} text-[14px] font-medium`}>Services</h3>
             <div className='flex flex-col gap-1'>
                 {
                     serviceLinks.map((val, index) =>  <Link href={`${val.url}`} className='text-[13px] font-extralight' key={index}>{val.title}</Link> )
@@ -68,7 +69,7 @@ const FooterLinks = () => {
 
         {/* Legalisation */}
          <div className='flex flex-col gap-2'>
-            <h3 className='text-[14px] font-medium'>Legalisation</h3>
+            <h3 className={` ${saira.className} text-[14px] font-medium`}>Legalisation</h3>
             <div className='flex flex-col gap-1'>
                 {
                     legalisationLinks.map((val, index) =>  <Link href={`${val.url}`} className='text-[13px] font-extralight text-nowrap' key={index}>{val.title}</Link> )

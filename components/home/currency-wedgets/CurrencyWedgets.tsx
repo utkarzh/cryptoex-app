@@ -16,7 +16,7 @@ const CurrencyWedgets = () => {
 
   console.log("SelectedList", selectedList)
   return (
-    <div className="w-full pt-14  flex justify-center p-4 sm:p-6 md:p-8 lg:p-10  ">
+    <div className="w-full mt-20 text-black dark:text-white  flex justify-center p-4 sm:p-6 md:p-8 lg:p-10  ">
       {/* container */}
       <div className="w-full flex flex-col md:flex-row gap-2 overflow-x-auto scrollbar-custom overflow-y-hidden ">
 

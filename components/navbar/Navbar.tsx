@@ -19,8 +19,7 @@ const Navbar = () => {
   };
   return (
     <>
-      {/* <nav className="bg-white dark:bg-gray-700 w-full h-fit text-black dark:text-white"> */}
-      <nav className="">
+      <nav className=" bg-transparent w-full h-fit text-black dark:text-white">
         {/* nav container */}
         <div className="  w-full relative h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
           {/* logo part */}
@@ -28,7 +27,7 @@ const Navbar = () => {
             <Image
               width={200}
               height={100}
-              className="w-auto max-w-[130px]  cursor-pointer bg-transparent"
+              className="w-auto max-w-[130px]  cursor-pointer p-1 rounded bg-black dark:bg-transparent "
               src="/images/logo.png"
               alt="logo"
             />
@@ -37,7 +36,7 @@ const Navbar = () => {
           <div
             className={`flex-col absolute ${
               isSidebarOpen ? "flex lg:flex" : "hidden lg:flex"
-            } top-[70px]   pt-3 pb-6 bg-[#06062a] lg:bg-transparent lg:py-0 left-0  z-[100] lg:static lg:flex-row w-[100%] h-fit lg:h-full  items-start pl-4 lg:pl-0 lg:items-center gap-4 transition-all duration-500 shadow-[-0px_-0px_1px_white] lg:shadow-none `}
+            } top-[70px]  pt-3 pb-6 bg-white dark:bg-[#06062a] lg:bg-transparent lg:py-0 left-0  z-[100] lg:static lg:flex-row w-[100%] h-fit lg:h-full  items-start pl-4 lg:pl-0 lg:items-center gap-4 transition-all duration-500 lg:transition-none shadow-[-0px_-0px_1px_black] dark:shadow-[-0px_-0px_1px_white] lg:shadow-none lg:dark:shadow-none`}
           >
             {/* last part after small screen */}
             <div className="w-full flex lg:hidden flex-col gap-2  ">
@@ -66,12 +65,12 @@ const Navbar = () => {
             </div>
 
             {/* toggle button */}
-            <div className=" w-fit text-sm bg-gray-700 rounded-full flex items-center ">
+            <div className=" w-fit text-sm bg-slate-300 text-black dark:text-white dark:bg-gray-700 rounded-full flex items-center ">
               <div
                 className={`w-full ${
                   isExchange
-                    ? "bg-green-700 text-black"
-                    : "bg-transparent text-white"
+                    ? "bg-green-600 dark:bg-green-700 text-white "
+                    : "bg-transparent "
                 }  rounded-full px-2 py-1 cursor-pointer transition-all duration-300`}
                 onClick={() => setIsExchange(true)}
               >
@@ -80,8 +79,8 @@ const Navbar = () => {
               <div
                 className={` w-full ${
                   !isExchange
-                    ? "bg-green-700 text-black"
-                    : "bg-transparent text-white"
+                    ? "bg-green-600 dark:bg-green-700 text-white"
+                    : "bg-transparent "
                 }  rounded-full px-4 py-1 cursor-pointer transition-all duration-300 `}
                 onClick={() => setIsExchange(false)}
               >
@@ -95,45 +94,45 @@ const Navbar = () => {
             {/* items */}
             <div className="w-full flex flex-col lg:flex-row  gap-3 text-sm items-start pl-2 lg:pl-0 lg:items-center">
                 {/* trade */}
-              <div className="flex items-center cursor-pointer  relative group">
-                <span>Trade</span>
+              <div className="flex items-center cursor-pointer  relative group group">
+                <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">Trade</span>
                 <RiArrowDropDownFill className="text-2xl" />
-                <div className="absolute z-[50] bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-gray-700 hidden group-hover:block">
+                <div className="absolute z-[50] bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block">
                   <ul className="flex flex-col gap-1 p-2">
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
                   </ul>
                 </div>
               </div>
 
               {/* market */}
-              <div className="flex items-center cursor-pointer">
-                <span className="mr-2">Markets</span>
+              <div className="flex items-center cursor-pointer group">
+                <span className="mr-2 group-hover:text-green-600  transition-all duration-300 ease-out">Markets</span>
               </div>
 
               {/* earn */}
-               <div className="flex items-center cursor-pointer  relative group z-[30]">
-                <span>Earn</span>
+               <div className="flex items-center cursor-pointer  relative group z-[30] group">
+                <span className="group-hover:text-green-600  transition-all duration-300 ease-out">Earn</span>
                 <RiArrowDropDownFill className="text-2xl" />
-                <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-gray-700 hidden group-hover:block">
+                <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block">
                   <ul className="flex flex-col gap-1 p-2">
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
                   </ul>
                 </div>
               </div>
 
               {/* events */}
                <div className="flex items-center cursor-pointer  relative group">
-                <span>Events</span>
+                <span className="group-hover:text-green-600  transition-all duration-300 ease-out">Events</span>
                 <RiArrowDropDownFill className="text-2xl" />
-                <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-gray-700 hidden group-hover:block ">
+                <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block ">
                   <ul className="flex flex-col gap-1 p-2">
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
-                    <li className=" w-full hover:bg-gray-500 hover:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item1</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item2</li>
+                    <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">Item3</li>
                   </ul>
                 </div>
               </div>
@@ -141,10 +140,10 @@ const Navbar = () => {
 
             {/* signup and login after small screen */}
             <div className="flex lg:hidden flex-wrap items-center justify-center gap-2 text-sm">
-              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-gray-700 cursor-pointer">
+              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer">
                 Sign in
               </button>
-              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-green-700 cursor-pointer">
+              <button className="w-fit text-nowrap p-1 px-3 rounded-full text-white  bg-green-600 dark:bg-green-700 cursor-pointer">
                 Sign up
               </button>
             </div>
@@ -172,10 +171,10 @@ const Navbar = () => {
 
             {/* sign in and signup pages */}
             <div className="flex gap-2 text-sm">
-              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-gray-700 cursor-pointer">
+              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer">
                 Sign in
               </button>
-              <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-green-700 cursor-pointer">
+              <button className="w-fit text-nowrap p-1 px-3 rounded-full text-white bg-green-600 dark:bg-green-700 cursor-pointer">
                 Sign up
               </button>
             </div>

@@ -5,7 +5,7 @@ import FeaturesContent from './FeaturesContent'
 
 const Features = () => {
   return (
-    <div className="w-full h-fit bg-[#06062a] pb-20">
+    <div className="w-full h-fit  pb-20">
         <FeaturesHeading/>
         <FeaturesContent/>
     </div>

@@ -5,6 +5,7 @@ import { FaFire } from "react-icons/fa";
 import { MdSearch } from "react-icons/md";
 import { IoStatsChart } from "react-icons/io5";
 import { VscDiffAdded } from "react-icons/vsc";
+import MiniGraph from "./MiniGraph";
 // import SplineChart from "@/components/common/SplineChart";
 
 
@@ -48,7 +49,7 @@ const HomeCryptoList:FC<Props> = ({isExpended, title, value, onSelect}) => {
     onSelect(value);
   }
   return (
-    <div className={`bg-[#161735]  ${isExpended ? "w-full min-w-none md:min-w-md" : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 opacoty-100 md:opacity-35"}   max-h-screen overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-2  text-white flex flex-col gap-4 transition-all duration-700 ease-in-out`}>
+    <div className={` bg-[#eff0f2] dark:bg-[#161735]  ${isExpended ? "w-full min-w-none md:min-w-md" : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 opacoty-100 md:opacity-35"}   max-h-screen overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-2  flex flex-col gap-4 transition-all duration-700 ease-in-out`}>
       <div className={`w-[84%] mx-auto flex px-4 mt-4 ${isExpended ? "justify-between" : " justify-between md:justify-center"} `}>
         {/* heading */}
         <div className="w-fit gap-1 flex items-center justify-center" onClick={ selectHandler}>
@@ -65,7 +66,7 @@ const HomeCryptoList:FC<Props> = ({isExpended, title, value, onSelect}) => {
       <div className="w-full items-start justify-center flex flex-col gap-6">
         <table className=" w-full table-auto">
           <thead >
-            <tr className="text-[12px] text-slate-300 ">
+            <tr className="text-[12px] text-slate-800 dark:text-slate-300 ">
               <th className="font-extralight pb-4">Coins</th>
               <th className={` ${isExpended ? "table-cell" : " table-cell md:hidden"} font-extralight pb-4`}>Last Price</th>
               <th className={` ${isExpended ? "table-cell" : "table-cell md:hidden"} font-extralight pb-4`}>24h change</th>
@@ -98,7 +99,7 @@ const HomeCryptoList:FC<Props> = ({isExpended, title, value, onSelect}) => {
 
                 <td className={` ${isExpended ? "table-cell" : "table-cell md:hidden"}`}>
                   {/* <SplineChart width={100} height={100}/> */}
-                  Graph
+                  <MiniGraph/>
                    </td>
                 <td className={` ${isExpended ? "table-cell" : "table-cell md:hidden"}`}>111154564.15</td>
                 

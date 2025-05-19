@@ -1,5 +1,4 @@
 "use client"
-import Card from '@/components/common/Card'
 import { saira } from '@/utils/Font'
 import React, { useRef, useState } from 'react'
 import { IoWalletOutline } from 'react-icons/io5'
@@ -16,61 +15,17 @@ const FeaturesContent = () => {
     let container1 :HTMLDivElement | null ;
     let container2 :HTMLDivElement | null ;
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isScolling, setIsScrolling] = useState(false);
   
-    const startScrollDownLeft = () => {
-       container1 = containerRef1.current;
-      
-      if (!container1) return;
-
-      // Clear any existing scroll interval
-      if (scrollInterval1) clearInterval(scrollInterval1);
-  
-      // Start auto-scrolling down
-      if(container1){
-          scrollInterval1 = setInterval(() => {
-        if (!container1) return;
-        if (container1.scrollTop + container1.clientHeight >= container1.scrollHeight) {
-          clearInterval(scrollInterval1!);
-          return;
-        }
-        container1.scrollTop += 5; // adjust speed of container1
-      }, 60); // ~60fps
-      }
-    };
-    const startScrollDownRight = () => {
-       
-       container2 = containerRef2.current;
-      if (!container2) return;
-
-      // Clear any existing scroll interva
-      if (scrollInterval2) clearInterval(scrollInterval2);
-  
-      // Start auto-scrolling down
-      if(container2){
-         scrollInterval2 = setInterval(() => {
-        if (!container2) return;
-        if (container2.scrollTop + container2.clientHeight >= container2.scrollHeight) {
-          clearInterval(scrollInterval2!);
-          return;
-        }
-        container2.scrollTop += 5; // adjust speed
-      }, 60);
-      }
-    };
-
-    
-
-     const startScrollUp = () => {
+   
+     const scrollUp = () => {
        container1 = containerRef1.current;
        container2 = containerRef2.current;
-      // if (!container) return;
       // Clear any existing scroll interval
       if (scrollInterval1) clearInterval(scrollInterval1);
       if (scrollInterval2) clearInterval(scrollInterval2);
-  
+
       // Start auto-scrolling down
-      scrollInterval1 = setInterval(() => {
+        scrollInterval1 = setInterval(() => {
         if (!container1) return;
         if (container1.scrollTop  <= 0) {
           clearInterval(scrollInterval1!);
@@ -86,57 +41,70 @@ const FeaturesContent = () => {
         }
         container2.scrollTop -= 5; // adjust speed
       }, 60);
-
-      // setIsScrolling(true);
     };
+
+   const scrollDown = () => {
+       container1 = containerRef1.current;
+       container2 = containerRef2.current;
+      
+      // if (!container1) return;
+
+      // Clear any existing scroll interval
+      if (scrollInterval1) clearInterval(scrollInterval1);
+      if (scrollInterval2) clearInterval(scrollInterval2);
   
-  
-    // const stopScroll = () => {
-    //   console.log("Scrolling offf...")
-    //   if (scrollInterval1) {
-    //     clearInterval(scrollInterval1);
-    //   }
-    //    if (scrollInterval2) {
-    //     clearInterval(scrollInterval2);
-    //   }
-    //   setIsScrolling(false);
-    // };
+      // Start auto-scrolling down
+      if(container1){
+          scrollInterval1 = setInterval(() => {
+        if (!container1) return;
+        if (container1.scrollTop + container1.clientHeight >= container1.scrollHeight) {
+          clearInterval(scrollInterval1!);
+          return;
+        }
+        container1.scrollTop += 5; // adjust speed of container1
+      }, 60); // ~60fps
+
+       if(container2){
+         scrollInterval2 = setInterval(() => {
+        if (!container2) return;
+        if (container2.scrollTop + container2.clientHeight >= container2.scrollHeight) {
+          clearInterval(scrollInterval2!);
+          setIsScrolled(true);
+          return;
+        }
+        container2.scrollTop += 5; // adjust speed
+      }, 60);
+      }
+      }
+
+    };
 
     // const resetScroll = () => {
-    //    if (scrollInterval1) {
-    //     clearInterval(scrollInterval1);
-    //   }
-    //    if (scrollInterval2) {
-    //     clearInterval(scrollInterval2);
-    //   }
-    //   if (container1) container1.scrollTop = 0
-    //   if (container2) container2.scrollTop = 0
-
+    //   container1 = containerRef1.current;
+    //    container2 = containerRef2.current;
+    //   if(container1) container1.scrollTop = 0;
+    //   if(container2) container2.scrollTop = 0;
     //   setIsScrolled(false);
-    //   setIsScrolling(false);
     // }
 
-    const scrollDown = () => {
-      startScrollDownLeft();
-      startScrollDownRight();
-    }
+
   return (
     <div
-      className="w-full mt-24  flex justify-center  relative  "
+      className="w-full mt-8  flex justify-center  relative  "
       // onMouseLeave={resetScroll}
     >
       {/* container */}
       <div
-        className="w-fit  flex gap-2 relative  "
+        className="w-full sm:w-fit  flex flex-col sm:flex-row gap-2 relative  "
       >
-        {/* leftside content */}
+        {/* left section */}
         <div
-          className="w-fit max-h-[270px]  overflow-hidden flex flex-col gap-2"
+          className="w-full sm:w-fit max-h-full sm:max-h-[270px]  overflow-hidden flex flex-col gap-2"
           ref={containerRef1}
         >
-          <Card>
-            <div className="w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
+            <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <LuDollarSign className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -148,11 +116,11 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card>
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
             <div className="w-[250px] p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <IoWalletOutline className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -162,11 +130,11 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card>
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
             <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <IoWalletOutline className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -176,43 +144,41 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
         </div>
-        {/* middle content */}
-        <div className=" h-[70%] my-auto w-[200px] p-4 flex flex-col items-center justify-center ">
+        {/* middle section */}
+        <div className=" h-[70%] hidden sm:flex my-auto w-[100px] md:w-[200px] p-4 flex-col items-center justify-center ">
           {!isScrolled ? (
-            <div className="w-fit h-fit p-1 bg-green-600 rounded-full">
+            <div className="w-fit h-fit p-1 text-white bg-green-600 rounded-full">
               <LuCircleGauge className="text-2xl" />
             </div>
           ) : (
             <div
-              className="w-fit h-fit p-1 bg-slate-600 rounded-full z-[60] opacity-60 cursor-pointer border"
-              onClick={startScrollUp}
+              className="w-fit h-fit p-1 bg-slate-300 dark:bg-slate-600 hover:bg-slate-500 hover:text-white  dark:hover:bg-slate-500 transition-all duration-300 rounded-full z-[60] opacity-60 cursor-pointer "
+              onClick={scrollUp}
             >
               <LuChevronUp className="text-xl " />
             </div>
           )}
           <div
-            className={`w-0 h-full border-l ${
-              isScolling ? "border-yellow-500 animate-ping" : "border-green-400"
-            } `}
+            className={`w-0 h-full border-l border-green-600 dark:border-green-400`}
           ></div>
           <div
-            className="w-fit h-fit p-1 bg-slate-600 rounded-full z-[60] opacity-60 cursor-pointer "
+            className="w-fit h-fit p-1 bg-slate-300 dark:bg-slate-600 hover:bg-slate-500 hover:text-white dark:hover:bg-slate-500 transition-all duration-300 rounded-full z-[60] opacity-60 cursor-pointer "
             onClick={ scrollDown}
           >
             <LuChevronDown className="text-xl " />
           </div>
         </div>
 
-        {/* rightside content */}
+        {/* rightside section */}
         <div
           className="flex  max-h-[270px] overflow-hidden flex-col gap-2 z-[40]"
           ref={containerRef2}
         >
-          <Card>
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
             <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <IoWalletOutline className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -222,11 +188,11 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card>
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
             <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <TbBracketsAngle className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -236,11 +202,11 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card>
+          <div className='w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-[#eff0f2]  dark:bg-[#161735]'>
             <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                 <IoWalletOutline className="text-lg" />
               </div>
               <div className="w-full flex flex-col gap-1">
@@ -250,26 +216,14 @@ const FeaturesContent = () => {
                 </p>
               </div>
             </div>
-          </Card>
+          </div>
 
-          <Card>
-            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className="text-[14px] font-medium">Algorithmic Trading</h3>
-                <p className="text-[10px] font-extralight">
-                  API for crossplatform trading robots
-                </p>
-              </div>
-            </div>
-          </Card>
+        
         </div>
       </div>
 
       {/* effect */}
-      <div className="absolute z-[50] bottom-0 left-0 w-full  h-[80%] bg-gradient-to-b from-transparent via-[#06062a]/50  to-[#06062a] "></div>
+      <div className="absolute hidden sm:block z-[50] bottom-0 left-0 w-full  h-[80%] bg-gradient-to-b from-transparent via-white/50 dark:via-[#06062a]/50 to-white  dark:to-[#06062a] "></div>
     </div>
   );
 }

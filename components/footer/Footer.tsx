@@ -7,12 +7,12 @@ import FooterInfo from './FooterInfo'
 
 const Footer = () => {
   return (
-    <div className='w-full h-fit flex justify-center items-center border rounded-md pt-14 pb-6 bg-[#06062a] '>
+    <div className='w-full max-w-[100vw]  h-fit  flex justify-center items-center shadow-[1px_0px_4px_#48b873] rounded-md pt-14 pb-6 bg-white dark:bg-[#06062a] '>
         {/* footer container */}
-        <div className='w-[80%] flex flex-col gap-4 justify-center items-center'>
+        <div className='w-[80%] flex flex-col gap-4 justify-center items-center overflow-hidden'>
 
             {/* content section */}
-            <div className='w-full h-full flex gap-24 pb-4'>
+            <div className='w-full h-full flex flex-col lg:flex-row gap-10 lg:gap-24 pb-4'>
                 <FooterGlance/>
                 <FooterLinks/>
                 <FooterInfo/>

@@ -1,3 +1,4 @@
+import { saira } from '@/utils/Font';
 import Link from 'next/link';
 import React from 'react'
 
@@ -15,7 +16,7 @@ const FooterInfo = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-2">
-        <h3 className="text-[14px] font-medium">Others</h3>
+        <h3 className={` ${saira.className} text-[14px] font-medium`}>Others</h3>
         <div className='flex flex-col gap-[7px]'>
             {
                     otherLinks.map((val, index) =>  <Link href={`${val.url}`} className='text-[13px] font-extralight' key={index}>{val.title}</Link> )

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "@/utils/ThemeProvider";
-// import Footer from "@/components/footer/Footer";
+import Footer from "@/components/footer/Footer";
 import { inter } from '../utils/Font'
 
 
@@ -22,14 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-        className={`${inter.className}  bg-[#06062a]  `}
+        className={`${inter.className}  bg-white dark:bg-[#06062a]  `}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar/>
         <div className="w-full mt-[0] overflow-hidden">
            {children}
         </div>
-        {/* <Footer/> */}
+        <Footer/>
         </ThemeProvider>
       </body>
     </html>

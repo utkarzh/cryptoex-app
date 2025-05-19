@@ -6,7 +6,7 @@ type Props = {
 
 const Card:FC<Props> = ({children}) => {
   return (
-    <div className='w-fit rounded-md p-2 bg-[#161735]'>{children}</div>
+    <div className='w-fit rounded-md p-2 bg-[#eff0f2] dark:bg-[#161735]'>{children}</div>
   )
 }
 

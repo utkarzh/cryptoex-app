@@ -15,14 +15,14 @@ const Benefits = () => {
     <div className="w-full h-fit   ">
       <div className="w-[65%] sm:w-[75%] relative rounded-r-md py-8 flex justify-end  ">
         <div className="bg-[url('/images/hexblock.png')] bg-cover bg-center opacity-30  h-full w-full absolute top-0 right-0 bg-transparent rounded-r-md  z-[20] "></div>
-        <div className={`opacity-80 rounded-r-md  h-full w-full absolute top-0 right-0 ${isUserBenefits ? "bg-yellow-600" : "bg-green-600"} transition-all duration-500 z-[30]`}></div>
+        <div className={`opacity-80 rounded-r-md  h-full w-full absolute top-0 right-0 ${isUserBenefits ? " bg-yellow-500 dark:bg-yellow-600" : "bg-green-400 dark:bg-green-600"} transition-all duration-500 z-[30]`}></div>
 
-        <div className={`w-[95%] sm:w-[80%] z-[40] ${isUserBenefits ? "bg-yellow-600/50": "bg-green-600/50"}  transition-all duration-500 p-4 py-6 rounded-l-md flex flex-col gap-10`}>
+        <div className={`w-[95%] sm:w-[80%] z-[40] ${isUserBenefits ? "bg-yellow-700/50 dark:bg-yellow-600/50": "bg-green-800/50 dark:bg-green-600/50"}  transition-all duration-500 p-4 py-6 rounded-l-md flex flex-col gap-10`}>
           <div className="w-full flex flex-col sm:flex-row gap-4">
             {/* first card */}
             <div className="w-full h-full flex justify-center items-center gap-2">
 
-              <div className='border border-white rounded-full p-1'>
+              <div className='border rounded-full p-1'>
                 <RiFocus3Line className='text-[20px]'/>
               </div>
                 
@@ -39,7 +39,7 @@ const Benefits = () => {
             {/* 2nd card */}
             <div className="w-full h-full flex justify-center items-center gap-2">
 
-              <div className='border border-white rounded-full p-1'>
+              <div className='border  rounded-full p-1'>
                 <BiStats className='text-[20px]'/>
               </div>
                 
@@ -57,7 +57,7 @@ const Benefits = () => {
             {/* 3rd card */}
             <div className="w-full h-full flex justify-center items-center gap-2">
 
-              <div className='border border-white rounded-full p-1'>
+              <div className='border  rounded-full p-1'>
                 <BiDollar  className='text-[20px]'/>
               </div>
                 
@@ -73,7 +73,7 @@ const Benefits = () => {
             {/* 4th card */}
            <div className="w-full h-full flex justify-center items-center gap-2">
 
-              <div className='border border-white rounded-full p-1'>
+              <div className='border  rounded-full p-1'>
                 <CiStar  className='text-[20px]'/>
               </div>
                 
@@ -93,17 +93,17 @@ const Benefits = () => {
         {/* side buttons */}
         <div className='absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2  p-1 rounded-full  flex justify-center items-center z-[90]'>
 
-        <div className=' p-1 rounded-full bg-gradient-to-r from-transparent to-black/70 z-[30]'>
+        <div className=' p-1 rounded-full bg-gradient-to-r from-transparent to-white/70 dark:to-black/70 z-[30]'>
         <div className='p-1 bg-white rounded-full '>
           {
-            isUserBenefits ? <ImUserPlus  className='text-[16px] sm:text-[22px] text-yellow-700'/> : <IoStorefront className='text-[16px] sm:text-[22px] text-green-700'/>
+            isUserBenefits ? <ImUserPlus  className='text-[16px] sm:text-[22px] text-yellow-700'/> : <IoStorefront className='text-[16px] sm:text-[22px] text-green-600 dark:text-green-700'/>
           }
         </div>
         </div>
 
         
 
-        <div className={`absolute left-1/2 bg-gradient-to-r ${ isUserBenefits ? "from-yellow-700 via-yellow-700" : "from-green-700 via-green-700"} to-[#06062a] transition-all duration-500 w-fit h-[70%] text-nowrap pl-[50%] z-[20] flex justify-center items-center pr-2 text-[12px] sm:text-[14px] font-medium`} 
+        <div className={`absolute left-1/2 bg-gradient-to-r ${ isUserBenefits ? "from-yellow-600/50 dark:from-yellow-700 via-yellow-500/50 dark:via-yellow-700" : "from-green-600/50 dark:from-green-700 via-green-500/40 dark:via-green-700"} to-white dark:to-[#06062a] transition-all duration-500 w-fit h-[70%] text-nowrap pl-[50%] z-[20] flex justify-center items-center pr-2 text-[12px] sm:text-[14px] font-medium`} 
         >  
         <span className='transition-all delay-100 duration-700 '>{
           isUserBenefits ? "User benefits" : "Vendor benefits"}</span>

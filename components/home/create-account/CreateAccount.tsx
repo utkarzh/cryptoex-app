@@ -31,16 +31,16 @@ const CreateAccount = () => {
  
 
   return (
-    <div ref={ref} className='w-full text-white flex flex-col sm:flex-row gap-6 justify-center items-center py-2 pb-10 pt-18'
+    <div ref={ref} className='w-full flex flex-col sm:flex-row gap-6 justify-center items-center py-2 pt-18'
     onMouseEnter={contentChangeHandler}
     >
         {/* counting div */}
-        <div className='w-fit flex flex-row sm:flex-col justify-center items-center gap-1 text-[10px] '>
-          <div className={`px-2 rounded-full bg-green-700 text-[16px]`}>1</div>
-          <div className={`h-0 sm:h-3 w-3 sm:w-0 ${activeState >= 2  ? "border-green-600" : "border-white"} border transition-all duration-300`}></div>
-          <div className={`px-2 rounded-full ${activeState >= 2 ? "bg-green-700" : "bg-slate-700"} transition-all duration-300 text-[16px]`}>2</div>
-          <div className={`h-0 sm:h-3 w-3 sm:w-0 ${activeState >= 3  ? "border-green-600" : "border-white"} border transition-all duration-300`}></div>
-          <div className={`px-2 rounded-full ${activeState >= 3 ? "bg-green-700" : "bg-slate-700"} transition-all duration-300 text-[16px]`}>3</div>
+        <div className='w-fit flex text-white flex-row sm:flex-col justify-center items-center gap-1 text-[10px] '>
+          <div className={`px-2 rounded-full bg-green-600 dark:bg-green-700 text-[16px]`}>1</div>
+          <div className={`h-0 sm:h-3 w-3 sm:w-0 ${activeState >= 2  ? "border-green-600" : "border-slate-300 dark:border-white"} border transition-all duration-300`}></div>
+          <div className={`px-2 rounded-full ${activeState >= 2 ? "bg-green-600 dark:bg-green-700" : "bg-slate-300 dark:bg-gray-700"} transition-all duration-300 text-[16px]`}>2</div>
+          <div className={`h-0 sm:h-3 w-3 sm:w-0 ${activeState >= 3  ? "border-green-600" : "border-slate-300 dark:border-white"} border transition-all duration-300`}></div>
+          <div className={`px-2 rounded-full ${activeState >= 3 ? "bg-green-600 dark:bg-green-700" : "bg-slate-300 dark:bg-gray-700"} transition-all duration-300 text-[16px]`}>3</div>
         </div>
         {/* image*/}
   
@@ -60,7 +60,7 @@ const CreateAccount = () => {
             {/* sub title */}
             <p className='max-w-[320px] text-[12px] font-extralight '>Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.</p>
             {/* button */}
-            <button className='w-fit flex mt-4 text-[12px] items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-black cursor-pointer '>
+            <button className='w-fit flex mt-4 text-[12px] items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer '>
                 Get Started 
                 <IoIosArrowRoundForward className='text-lg'/>
             </button>
@@ -72,7 +72,7 @@ const CreateAccount = () => {
             {/* sub title */}
             <p className='max-w-[320px] text-[12px] font-extralight '>Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.</p>
             {/* button */}
-            <button className='w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-cyan-700 text-white cursor-pointer '>
+            <button className='w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-cyan-700 text-white dark:text-black cursor-pointer '>
                 Update KYC 
                 <IoIosArrowRoundForward className='text-lg'/>
             </button>
@@ -84,7 +84,7 @@ const CreateAccount = () => {
             {/* sub title */}
             <p className='max-w-[320px] text-[12px] font-extralight '>Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.</p>
             {/* button */}
-            <button className='w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-yellow-700 text-white cursor-pointer '>
+            <button className='w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-yellow-700 text-white dark:text-black cursor-pointer '>
                  Start Trading
                 <IoIosArrowRoundForward className='text-lg'/>
             </button>
