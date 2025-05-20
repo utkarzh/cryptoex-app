@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { MdSearch } from "react-icons/md";
 import { RiBtcLine } from "react-icons/ri";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
@@ -68,7 +68,7 @@ const TradeNavBar = () => {
 
   const test = [];
 
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < 7; i++) {
     test.push(...testData);
   }
 

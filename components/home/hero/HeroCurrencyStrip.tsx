@@ -14,13 +14,13 @@ const HeroCurrencyStrip = () => {
       test.push({
         cointTitle: "ETH",
         coinName: "Ethereum",
-        coinImgUrl: "/images/coins/ethereum.png",
+        coinImgUrl: "/images/coins/ethereumrounded.png",
       });
     } else {
       test.push({
         cointTitle: "SOL",
-        coinName: "Solon",
-        coinImgUrl: "/images/coins/sol.png",
+        coinName: "Solana",
+        coinImgUrl: "/images/coins/solanarounded.png",
       });
     }
   }
@@ -29,7 +29,7 @@ const HeroCurrencyStrip = () => {
       {test.map((val, index) => (
         <div key={index} className="flex gap-4">
           <CoinCard
-            cointTitle= {val.cointTitle}
+            cointTitle={val.cointTitle}
             coinName={val.coinName}
             coinImgUrl={val.coinImgUrl}
             key={index}
