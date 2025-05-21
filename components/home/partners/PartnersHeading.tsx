@@ -22,9 +22,11 @@ const PartnersHeading = () => {
       <div
         className={`${saira.className}  absolute top-0 left-0 w-full  text-nowrap overflow-hidden text-[19vw] tracking-wide font-bold text-center `}
       >
-        <span className="opacity-10 dark:opacity-20 relative -left-4">PARTNERS</span>
-        
-        <div className="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-t from-white dark:from-[#06062a] via-white/90 dark:via-[#06062a]/80 to-transparent  z-[30]"></div>
+        <span className="opacity-10 dark:opacity-20 relative -left-4">
+          PARTNERS
+        </span>
+
+        <div className="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-t from-[#eff0f2] dark:from-[#06062a] via-[#eff0f2]/80 dark:via-[#06062a]/80 to-transparent  z-[30]"></div>
         <div className="w-full bg-[#000]/2 dark:bg-[#fff]/5 absolute top-1/2 -translate-y-1/2 flex  z-[50] py-2">
           <Marquee>
             <div className="flex gap-8 justify-center items-center">

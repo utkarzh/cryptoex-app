@@ -13,6 +13,7 @@ const TradeNavBar = () => {
   container = containerRef.current;
 
   const scrollLeft = () => {
+    console.log("Left is clickedd.....");
     container = containerRef.current;
     if (container) {
       console.log("Container", container);
@@ -20,10 +21,12 @@ const TradeNavBar = () => {
       if (container.clientWidth < container.scrollWidth) {
         setIsScrollStart(true);
       }
+
       if (
-        container.scrollLeft + container.clientWidth >=
+        container.scrollLeft + container.clientWidth + 5 >=
         container.scrollWidth
       ) {
+        console.log("enddd");
         setIsScrollEnd(false);
       }
     }
@@ -68,25 +71,33 @@ const TradeNavBar = () => {
 
   const test = [];
 
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 8; i++) {
     test.push(...testData);
   }
 
   return (
-    <div className="w-full bg-[#eff0f2] dark:bg-[#1d1f38] flex justify-center my-4  h-[40px]  ">
+    <div className="w-full bg-white dark:bg-[#1d1f38] flex justify-center my-4  h-[40px]  ">
       {/* container div */}
-      <div className="w-[94%] flex gap-6 items-center  overflow-hidden">
+      <div className="w-[94%] flex gap-6 items-center  overflow-hidden relative  ">
+        {/* effect */}
+        {/* right */}
+        <div className="h-full w-10 absolute z-[30] top-0 right-[75px]  bg-gradient-to-r from-transparent to-white dark:to-[#1d1f38] opacity-100  "></div>
+        {/* left */}
+        <div className="h-full w-10 absolute z-[30] top-0 left-[45px]  bg-gradient-to-l from-transparent to-white dark:to-[#1d1f38] opacity-100 "></div>
         {/* search logo */}
         <div className="w-fit">
           <MdSearch className="text-2xl cursor-pointer" />
         </div>
         {/* crypto name and tag */}
         <div
-          className="w-full max-w-full flex gap-14 overflow-x-hidden "
+          className="w-full max-w-full flex gap-14 overflow-x-hidden"
           ref={containerRef}
         >
           {test.map((val, index) => (
-            <div className="w-fit  flex gap-1 items-center" key={index}>
+            <div
+              className="w-fit  flex gap-1 items-center cursor-pointer"
+              key={index}
+            >
               {/* name */}
               <Image
                 width={32}

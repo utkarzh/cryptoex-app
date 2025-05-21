@@ -9,7 +9,7 @@ type Props = {
 
 const ContentCard: FC<Props> = ({ title, content }) => {
   return (
-    <div className="bg-[#eff0f2]  dark:bg-[#161735]  rounded-xl p-4 py-6 flex  flex-col gap-3">
+    <div className="bg-white  shadow shadow-black/40 dark:shadow-white/20 dark:bg-[#161735]  rounded-xl p-4 py-6 flex  flex-col gap-3">
       {/* title */}
       <div className="flex gap-1 items-center">
         <LuClock3 className="" />

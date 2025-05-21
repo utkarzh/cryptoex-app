@@ -9,7 +9,10 @@ const Hero = () => {
   return (
     <div className="w-full h-[calc(100vh-70px)] flex justify-center items-center relative  ">
       {/* background */}
-      <div className="w-full h-full z-[40] opacity-10 absolute top-0 left-0 bg-[url(/images/bg.jpg)] bg-cover"></div>
+      {/* <div className="w-full h-full z-[40] opacity-10 absolute top-0 left-0 bg-[url(/images/bg.jpg)] bg-cover"></div> */}
+
+      {/* <div className="w-[50%] h-full z-[30] opacity-100 absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover border"></div>
+      <div className="w-[50%] h-full z-[30] opacity-100 absolute top-0 left-0 rotate-180bg-[url(/images/homebg.png)] bg-cover border"></div> */}
 
       {/* /heading and subheading */}
       <div className="w-full absolute z-[50] top-18 right-0 text-center ">
@@ -25,14 +28,14 @@ const Hero = () => {
       <div
         className={` ${saira.className} text-[25vw] lg:text-[20vw] font-extrabold tracking-wide opacity-10 dark:opacity-10  z-[50] relative`}
       >
-        <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[white]/100 dark:to-[#06062a]/80 "></div>
+        <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#eff0f2]/100 dark:to-[#06062a]/80 "></div>
         INDOEX
         {/* <TextChangeEffect/> */}
       </div>
 
       {/* add background image here */}
 
-      <div className="w-full h-full absolute top-0 right-0 bg-white dark:bg-[#06062a] opacity-80 blur-3xls z-[30]"></div>
+      {/* <div className="w-full h-full absolute top-0 right-0 bg-[#eff0f2] dark:bg-[#06062a] opacity-80 blur-3xls z-[30]"></div> */}
 
       <div className="absolute bottom-0 right-0 w-full py-2 z-[40] text-white bg-green-600 dark:bg-green-700 flex justify-center">
         <Marquee>

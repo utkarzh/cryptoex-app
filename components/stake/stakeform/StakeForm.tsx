@@ -67,9 +67,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
   return (
     <div className=" mt-30 sm:mt-0 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-fit">
       {/* conatiner */}
-      <div className="w-full h-fit mx-auto flex flex-col rounded-xl bg-[#eff0f2]  dark:bg-[#1d1f38]">
+      <div className="w-full h-fit mx-auto flex flex-col rounded-xl bg-white  dark:bg-[#1d1f38]">
         {/* heading */}
-        <div className="w-full  bg-[#c6c9cf] dark:bg-[#2d2d47] rounded-t-xl py-2 flex justify-between items-center">
+        <div className="w-full  bg-[#eff0f2] dark:bg-[#2d2d47] rounded-t-xl py-2 flex justify-between items-center">
           <h2 className="text-md ml-4">Staking</h2>
           <IoIosCloseCircleOutline
             className=" text-[20px] mr-4 cursor-pointer opacity-50 hover:opacity-100 transition-all duration-200 "

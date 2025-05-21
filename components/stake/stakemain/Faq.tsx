@@ -1,5 +1,6 @@
 import React from "react";
 import FaqCard from "./FaqCard";
+import { saira } from "@/utils/Font";
 
 // type Props = {}
 
@@ -35,7 +36,7 @@ const Faq = () => {
     <>
       <section className="w-full mt-20 flex flex-col gap-6">
         {/* heading */}
-        <h1 className="text-xl">FAQ</h1>
+        <h1 className={` ${saira.className} text-xl`}>FAQ</h1>
 
         <div className="flex flex-col gap-4">
           {test.map((val, index) => (

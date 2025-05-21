@@ -46,7 +46,7 @@ const HomeCryptoList: FC<Props> = ({ isExpended, title, value, onSelect }) => {
   };
   return (
     <div
-      className={` bg-[#eff0f2] dark:bg-[#161735]  ${
+      className={` bg-white dark:bg-[#161735]  ${
         isExpended
           ? "w-full min-w-none md:min-w-md"
           : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 opacoty-100 md:opacity-35"

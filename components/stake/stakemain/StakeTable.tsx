@@ -1,17 +1,20 @@
 import React from "react";
 import { IoSearch, IoTriangle } from "react-icons/io5";
 import StakeTableRow from "./StakeTableRow";
+import { saira } from "@/utils/Font";
 
 // type Props = {};
 
 const StakeTable = () => {
   return (
-    <div className="w-full bg-[#eff0f2] pb-10 dark:bg-[#161735] mt-20 rounded-xl">
+    <div className="w-full bg-white pb-10 dark:bg-[#161735] shadow shadow-black/40 dark:shadow-white/20 mt-20 rounded-xl">
       <div className="w-full mt-20 items-start justify-center flex flex-col gap-6">
         {/* header */}
         <div className="w-[90%] mt-10 mx-auto  flex gap-2 justify-between">
           {/* title */}
-          <div className="w-fit text-lg font-medium">All products</div>
+          <div className={` ${saira.className} w-fit text-lg font-medium`}>
+            All products
+          </div>
           {/* search and selection */}
           <div className="w-fit flex gap-2 sm:gap-8 items-center flex-wrap sm:flex-nowrap ">
             <div className="flex gap-2">
@@ -20,7 +23,7 @@ const StakeTable = () => {
                 Match available assets
               </label>
             </div>
-            <div className="w-full rounded-md  bg-white  dark:bg-[#06062a] flex gap-2 items-center">
+            <div className="w-full rounded-md  bg-[#eff0f2]  dark:bg-[#06062a] flex gap-2 items-center">
               <IoSearch className="ml-2" />
               <input
                 type="text"

@@ -12,7 +12,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
+  /* light theme colors */
+  --color-bgdark: "green"
    --animate-rotate360: rotate360 20s ease-in-out infinite;
  @keyframes rotate360 {
   0% {
@@ -22,8 +23,6 @@
     transform: rotate(0deg);
   }
 }
-
-
 }
 
 @layer utilities {
@@ -52,6 +51,19 @@
     background: #e5e7eb; /* Gray-200 */
   }
 }
+
+
+/* light background color palate */
+/* background: '#eff0f2',
+        card: '#FFFFFF',
+        border: '#E0E0E0',
+        textPrimary: '#1A1A1A',
+        textSecondary: '#6C757D',
+        buy: '#28A745',
+        sell: '#DC3545',
+        buyHighlight: '#E9F7EF',
+        sellHighlight: '#FDECEA',
+        midPrice: '#007BFF', */
 
 
 

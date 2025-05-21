@@ -3,16 +3,12 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "@/utils/ThemeProvider";
 import Footer from "@/components/footer/Footer";
-import { inter } from '../utils/Font'
-
-
-
+import { inter } from "../utils/Font";
 
 export const metadata: Metadata = {
   title: "Indoex Digital Assets Exchange",
   description: "Indoex Digital Assets Exchange",
 };
-
 
 export default function RootLayout({
   children,
@@ -21,15 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body 
-        className={`${inter.className}  bg-white dark:bg-[#06062a]  `}
-      >
+      <body className={`${inter.className}  bg-[#eff0f2] dark:bg-[#06062a]  `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar/>
-        <div className="w-full mt-[0] overflow-hidden">
-           {children}
-        </div>
-        <Footer/>
+          <Navbar />
+          <div className="w-full mt-[0] overflow-hidden">{children}</div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
