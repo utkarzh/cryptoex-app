@@ -85,7 +85,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               {/* coin selector  */}
               <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
                 {/* label */}
-                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#1d1f38] px-1 ">
+                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
                   Currency
                 </label>
                 <CoinCard
@@ -99,7 +99,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               {/* amount selector */}
               <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
                 {/* label */}
-                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#1d1f38] px-1 ">
+                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
                   Amount
                 </label>
 
@@ -174,7 +174,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
 
             {/* stake button */}
             <div className="w-full  mt-2">
-              <button className="w-full rounded-full py-1 text-center text-black bg-green-500 hover:bg-green-600   dark:bg-green-600 dark:hover:bg-green-700 transition-all duration-200 cursor-pointer">
+              <button className="w-full rounded-full py-1 text-center text-white dark:text-black bg-green-500 hover:bg-green-600   dark:bg-green-600 dark:hover:bg-green-700 transition-all duration-200 cursor-pointer">
                 Stake
               </button>
             </div>

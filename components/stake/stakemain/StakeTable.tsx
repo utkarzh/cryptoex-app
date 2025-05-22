@@ -1,60 +1,176 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { IoSearch, IoTriangle } from "react-icons/io5";
-import StakeTableRow from "./StakeTableRow";
 import { saira } from "@/utils/Font";
+import { FaBitcoin, FaEthereum } from "react-icons/fa";
 
-// type Props = {};
+import { SiBinance, SiPolygon, SiTether } from "react-icons/si";
+import StakeButton from "./StakeButton";
+
+const mockData = [
+  {
+    coin: "BTC",
+    est: "3.10%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+      <SiTether className="text-xl text-green-400" key={2} />,
+    ],
+    icon: <FaBitcoin className="text-xl text-yellow-400" />,
+  },
+  {
+    coin: "ETH",
+    est: "5.67% - 6.58%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <FaEthereum className="text-xl text-blue-400" />,
+  },
+  {
+    coin: "BNB",
+    est: "5.67% - 6.58%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <SiBinance className="text-xl text-yellow-300" />,
+  },
+  {
+    coin: "MATIC",
+    est: "6.704%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <SiPolygon className="text-xl text-purple-400" />,
+  },
+  {
+    coin: "BTC",
+    est: "0.0001%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <FaBitcoin className="text-xl text-yellow-400" />,
+  },
+  {
+    coin: "ETH",
+    est: "5.1%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <FaEthereum className="text-xl text-blue-400" />,
+  },
+  {
+    coin: "BTC",
+    est: "3.2%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <SiTether className="text-xl text-green-400" key={1} />,
+      <FaEthereum className="text-xl text-blue-400" key={2} />,
+    ],
+    icon: <FaBitcoin className="text-xl text-yellow-400" />,
+  },
+  {
+    coin: "USDT",
+    est: "8.6%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <SiTether className="text-xl text-green-400" />,
+  },
+  {
+    coin: "ETH",
+    est: "9.91%",
+    annual: [
+      <FaBitcoin className="text-xl text-yellow-400" key={0} />,
+      <FaEthereum className="text-xl text-blue-400" key={1} />,
+    ],
+    icon: <FaEthereum className="text-xl text-blue-400" />,
+  },
+];
 
 const StakeTable = () => {
+  const [search, setSearch] = useState("");
+  const filteredData = mockData.filter((item) =>
+    item.coin.toLowerCase().includes(search.toLowerCase())
+  );
   return (
-    <div className="w-full bg-white pb-10 dark:bg-[#161735] shadow shadow-black/40 dark:shadow-white/20 mt-20 rounded-xl">
+    <div className="w-full mt-20 rounded-xl">
       <div className="w-full mt-20 items-start justify-center flex flex-col gap-6">
         {/* header */}
-        <div className="w-[90%] mt-10 mx-auto  flex gap-2 justify-between">
+        <div className="w-full mt-10 mx-auto  flex gap-2 justify-between ">
           {/* title */}
-          <div className={` ${saira.className} w-fit text-lg font-medium`}>
+          <h2 className={` ${saira.className} w-fit text-lg font-medium`}>
             All products
-          </div>
+          </h2>
           {/* search and selection */}
-          <div className="w-fit flex gap-2 sm:gap-8 items-center flex-wrap sm:flex-nowrap ">
+          <div className="w-fit flex gap-2 sm:gap-8 items-center flex-wrap sm:flex-nowrap  ">
             <div className="flex gap-2">
               <input type="checkbox" />
               <label className="text-[10px] text-nowrap">
                 Match available assets
               </label>
             </div>
-            <div className="w-full rounded-md  bg-[#eff0f2]  dark:bg-[#06062a] flex gap-2 items-center">
-              <IoSearch className="ml-2" />
+            <div className="relative flex items-center">
               <input
                 type="text"
-                className="w-full max-w-[300px] rounded-md bg-transparent border-none outline-none  py-2 text-[12px] "
                 placeholder="Search"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
               />
+              <IoSearch className="absolute top-2 left-2 opacity-60 " />
             </div>
           </div>
         </div>
         {/* table */}
-        <table className=" w-full table-auto ">
-          <thead>
-            <tr className="text-[12px] text-slate-800 dark:text-slate-300">
-              <th className="  font-extralight py-5">Coins</th>
-              <th className={`   font-extralight py-5`}>
-                <div className="flex w-full gap-1 justify-center items-center ">
+
+        <table className="w-full text-xs text-left">
+          <thead className=" ">
+            <tr className="text-[12px] opacity-90 dark:opacity-60">
+              <th className="py-4 px-2 font-extralight ">Coins</th>
+              <th className="py-4 px-2 font-extralight text-center">
+                <div className="flex w-full gap-1 justify-start items-center ">
                   <span>Est. APR</span>
-                  <span className="flex flex-col items-center justify-center text-[7px] cursor-pointer">
+                  <span className="flex opacity-60 flex-col items-center justify-center text-[7px] cursor-pointer">
                     <IoTriangle />
                     <IoTriangle className="rotate-180" />
                   </span>
                 </div>
               </th>
-              <th className={`  font-extralight py-5`}>Reward Coin</th>
-              <th className={` font-extralight py-5 `}>Action</th>
+              <th className="py-4 px-2 font-extralight  text-center">
+                Reward Coin
+              </th>
+              <th className="py-4 px-2 font-extralight text-right pr-6">
+                Action
+              </th>
             </tr>
           </thead>
-
-          <tbody className="w-full text-center ">
-            {[1, 2, 3, 4, 5].map((val, index) => (
-              <StakeTableRow key={index} />
+          <tbody>
+            {filteredData.map((item, idx) => (
+              <tr
+                key={idx}
+                className="border-b dark:border-slate-200/20 border-slate-600/15"
+              >
+                <td className="py-3 px-2 flex items-center gap-2">
+                  {item.icon}
+                  {item.coin}
+                </td>
+                <td className="py-3 px-2 text-start">{item.est}</td>
+                <td className="py-3 px-2  text-center">
+                  <div className="w-full flex gap-2 justify-center">
+                    {" "}
+                    {item.annual}
+                  </div>
+                </td>
+                <td className="py-3 px-2 text-right">
+                  <StakeButton />
+                </td>
+              </tr>
             ))}
           </tbody>
         </table>

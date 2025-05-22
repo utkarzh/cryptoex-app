@@ -5,7 +5,7 @@ import Overview from "./Overview";
 const StakeHero = () => {
   return (
     <div className="w-full py-10 h-fit bg-white dark:bg-[#151634] shadow-[1px_0px_4px_#48b873] overflow-hidden">
-      <div className="w-[95%] sm:w-[85%] md:w-[80%]  lg::w-[70%] mx-auto  flex gap-2 justify-center items-center">
+      <div className="w-[95%] sm:w-[85%] md:w-[80%]  lg:w-[70%] mx-auto  flex gap-2 justify-center items-center">
         {/* left section */}
         <div className="w-full   flex flex-col gap-8">
           {/* content */}

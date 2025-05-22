@@ -6,10 +6,13 @@ const TradeForm = () => {
   const [activeMode, setActiveMode] = useState<"spot" | "cross" | "isolated">(
     "spot"
   );
-
   const [activeType, setActiveType] = useState<"limit" | "market" | "stop">(
     "limit"
   );
+
+  const [crossModeTypes, setCrossModeTypes] = useState<
+    "normal" | "borrow" | "repay"
+  >("borrow");
 
   const [percentSelected, setPercentSelected] = useState<number>(0);
 
@@ -19,7 +22,7 @@ const TradeForm = () => {
   };
 
   return (
-    <div className="w-full max-w-xs bg-white dark:bg-[#161735] text-gray-700 dark:text-gray-400 p-2 px-3 rounded-xl   text-sm shadow-md flex flex-col gap-4 ">
+    <div className="w-full lg::max-w-xs bg-white dark:bg-[#161735] text-gray-700 dark:text-gray-400 p-3 px-3 rounded-xl   text-sm shadow-md flex flex-col gap-4 h-fit">
       {/* Buy/Sell Tabs */}
       <div className="flex justify-between gap-2  p-1 rounded-full ">
         {["buy", "sell"].map((side) => (
@@ -70,6 +73,25 @@ const TradeForm = () => {
           </button>
         ))}
       </div>
+
+      {/* Normal/borrow/repay */}
+      {activeMode === "cross" && (
+        <div className="flex  px-1 justify-between mt-2">
+          {["normal", "borrow", "repay"].map((type) => (
+            <button
+              key={type}
+              onClick={() => setCrossModeTypes(type as typeof crossModeTypes)}
+              className={`capitalize px-2 py-1 rounded-full text-xs cursor-pointer ${
+                crossModeTypes === type
+                  ? "bg-green-600 text-green-100 dark:bg-green-600/20 dark:text-green-500"
+                  : ""
+              }`}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Input Fields */}
       <div className="space-y-3 mt-2">
@@ -158,6 +180,7 @@ const TradeForm = () => {
       <div className=" text-xs pl-1 font-extralight space-y-1">
         <p>Available: 0 USDT</p>
         <p>Txn Fee: 0 BTC</p>
+        {activeMode === "cross" && <p>Borrowing: 0 USDT</p>}
       </div>
 
       {/* Login/Sign up */}

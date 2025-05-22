@@ -76,7 +76,7 @@ const TradeNavBar = () => {
   }
 
   return (
-    <div className="w-full bg-white dark:bg-[#1d1f38] flex justify-center my-4  h-[40px]  ">
+    <div className="w-full bg-white dark:bg-[#1d1f38] flex justify-center my-4  h-[40px] py-2  ">
       {/* container div */}
       <div className="w-[94%] flex gap-6 items-center  overflow-hidden relative  ">
         {/* effect */}

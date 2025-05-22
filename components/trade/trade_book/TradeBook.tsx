@@ -13,10 +13,10 @@ const MOCK_DATA_BUY = [
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
   { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
-  // { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
-  // { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
-  // { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
-  // { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
 ];
 
 const MOCK_DATA_RECENT = [
@@ -37,33 +37,26 @@ const MOCK_DATA_SELL = [
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
   { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
-  // { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
 ];
 
-export default function OrderBook() {
+const TradeBook = () => {
   const [activeTab, setActiveTab] = useState<"orderbook" | "tradehistory">(
     "orderbook"
   );
   const [filterView, setFilterView] = useState<"both" | "buy" | "sell">("both");
   const [decimalPlaces, setDecimalPlaces] = useState(2);
 
-  // const filteredData = MOCK_DATA.filter((row) => {
-  //   if (row.type === "mid") return true;
-  //   if (filterView === "both") return true;
-  //   return row.type === filterView;
-  // });
-
   return (
-    <div className="bg-transparent border-2 dark:border-white/40 border-[#161735]/40 text-gray-700 dark:text-gray-400 text-sm  w-full  max-w-xs rounded-xl shadow-lg space-y-3 flex flex-col ">
+    <div className=" h-[100%] overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm  w-full  lg:max-w-xs rounded-xl shadow-lg space-y-3 flex flex-col ">
       {/* Tab Header */}
-      <div className="flex justify-around border-b-2 dark:border-white/40 border-[#161735]/40 pt-2  ">
+      <div className="flex justify-around border-b-2 dark:border-white/10 border-[#161735]/10 pt-2  ">
         {["orderbook", "tradehistory"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab as typeof activeTab)}
-            className={`text-sm font-medium capitalize pb-2 cursor-pointer  ${
+            className={`text-[12px] font-medium capitalize pb-2 cursor-pointer  ${
               activeTab === tab
-                ? "text-green-400 border-b-[4px] relative top-[2px]"
+                ? "text-green-400 border-b-2 relative top-[2px]"
                 : ""
             }`}
           >
@@ -124,9 +117,9 @@ export default function OrderBook() {
                 value={decimalPlaces}
                 onChange={(e) => setDecimalPlaces(Number(e.target.value))}
               >
-                {[1, 2, 3].map((d) => (
+                {[1, 2, 3, 4].map((d) => (
                   <option key={d} value={d} className="dark:bg-[#06062a]">
-                    {1 / 10 ** (d + 1)}
+                    {1 / 10 ** d}
                   </option>
                 ))}
               </select>
@@ -143,14 +136,19 @@ export default function OrderBook() {
           </div>
 
           {/* Order Rows */}
-          <div className="h-full  w-full flex flex-col overflow-y-hidden custom-scroll mt-2">
+          <div className="h-full  w-full flex flex-col  custom-scroll mt-2">
             {/* sell rows */}
+            {/* <div className="flex flex-col h-full"> */}
             {filterView !== "buy" && (
-              <div className="h-full overflow-hidden flex flex-col ">
+              <div
+                className={` ${
+                  filterView === "sell" ? "h-fit" : "h-full"
+                }   flex flex-col`}
+              >
                 {MOCK_DATA_SELL.map((row, i) => (
                   <div
                     key={i}
-                    className={`flex justify-between  py-0.5 rounded-sm transition-colors  ${
+                    className={`flex  gap-1 w-full  py-0.5 rounded-sm transition-colors  ${
                       row.type === "buy"
                         ? "text-green-400 text-xs"
                         : row.type === "sell"
@@ -158,30 +156,33 @@ export default function OrderBook() {
                         : "text-bold text-[15px]"
                     }`}
                   >
-                    <span>{Number(row.price).toFixed(decimalPlaces)}</span>
+                    <span className="w-full">
+                      {Number(row.price).toFixed(decimalPlaces)}
+                    </span>
 
                     {row.type === "mid" ? (
                       <span className="font-light">{row.total}</span>
                     ) : (
-                      <span> {row.amount}</span>
+                      <span className="w-full text-end"> {row.amount}</span>
                     )}
 
                     {row.type === "mid" ? (
                       <span>More</span>
                     ) : (
-                      <span>{row.total}</span>
+                      <span className="w-full text-end">{row.total}</span>
                     )}
                   </div>
                 ))}
               </div>
             )}
+            {/* </div> */}
 
             {/* recent activity row */}
             <div className="h-fit flex flex-col ">
               {MOCK_DATA_RECENT.map((row, i) => (
                 <div
                   key={i}
-                  className={`flex justify-between  py-0.5 rounded-sm transition-colors  ${
+                  className={`flex gap-1  py-0.5 rounded-sm transition-colors  ${
                     row.type === "buy"
                       ? "text-green-400 text-xs"
                       : row.type === "sell"
@@ -189,16 +190,22 @@ export default function OrderBook() {
                       : "text-bold text-[15px]"
                   }`}
                 >
-                  <span>{Number(row.price).toFixed(decimalPlaces)}</span>
+                  <span className="w-full text-green-600">
+                    {Number(row.price).toFixed(decimalPlaces + 1)}
+                  </span>
 
                   {row.type === "mid" ? (
-                    <span className="font-light">{row.total}</span>
+                    <span className="w-full text-start font-light">
+                      {row.total}
+                    </span>
                   ) : (
-                    <span> {row.amount}</span>
+                    <span className="w-full text-end"> {row.amount}</span>
                   )}
 
                   {row.type === "mid" ? (
-                    <span>More</span>
+                    <span className="w-full text-end text-[12px] cursor-pointer">
+                      More
+                    </span>
                   ) : (
                     <span>{row.total}</span>
                   )}
@@ -206,12 +213,17 @@ export default function OrderBook() {
               ))}
             </div>
             {/* buy rows */}
+            {/* <div className="flex flex-col h-full"> */}
             {filterView !== "sell" && (
-              <div className="h-full overflow-hidden flex flex-col ">
+              <div
+                className={` ${
+                  filterView === "buy" ? "h-fit" : "h-full"
+                }   flex flex-col`}
+              >
                 {MOCK_DATA_BUY.map((row, i) => (
                   <div
                     key={i}
-                    className={`flex justify-between  py-0.5 rounded-sm transition-colors  ${
+                    className={`flex gap-1 py-0.5 rounded-sm transition-colors  ${
                       row.type === "buy"
                         ? "text-green-400 text-xs"
                         : row.type === "sell"
@@ -219,23 +231,26 @@ export default function OrderBook() {
                         : "text-bold text-[15px]"
                     }`}
                   >
-                    <span>{Number(row.price).toFixed(decimalPlaces)}</span>
+                    <span className="w-full">
+                      {Number(row.price).toFixed(decimalPlaces)}
+                    </span>
 
                     {row.type === "mid" ? (
                       <span className="font-light">{row.total}</span>
                     ) : (
-                      <span> {row.amount}</span>
+                      <span className="w-ful text-end"> {row.amount}</span>
                     )}
 
                     {row.type === "mid" ? (
-                      <span>More</span>
+                      <span className="text-[10px]">More</span>
                     ) : (
-                      <span>{row.total}</span>
+                      <span className="w-full text-end">{row.total}</span>
                     )}
                   </div>
                 ))}
               </div>
             )}
+            {/* </div> */}
           </div>
         </div>
       )}
@@ -247,4 +262,6 @@ export default function OrderBook() {
       )}
     </div>
   );
-}
+};
+
+export default TradeBook;
