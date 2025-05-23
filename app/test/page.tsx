@@ -1,19 +1,15 @@
-// type Props = {};
+// import BorrowTableWithPagination from "@/components/loans/fixed_loan/BorrowTable";
 
-// import OpenOrderAndHistory from "@/components/trade/open_order_n_history/OpenOrderAndHistory";
-import CryptoStats from "@/components/trade/trade_graph/CryptoStats";
-// import TradeStats from "@/components/trade/trade_stats/TradeStats";
-// import OrderBook from "@/components/trade/trade_book/TradeBook";
-// import TradeForm from "@/components/trade/trade_form/TradeForm";
+import AirdropCard from "@/components/airdrop/Aitdrop";
 
 const Page = () => {
   return (
-    <div className="w-full mt-10 ml-10 mb-10 h-full  flex flex-col gap-4">
-      {/* <TradeForm />
-      <OrderBook /> */}
-      {/* <OpenOrderAndHistory />
-      <TradeStats /> */}
-      <CryptoStats />
+    <div className="w-[90%] mt-10 mb-10 h-full">
+      {/* <BorrowTableWithPagination /> */}
+      {/* <AirdropCard /> */}
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+        Gradient Text Example
+      </h1>
     </div>
   );
 };

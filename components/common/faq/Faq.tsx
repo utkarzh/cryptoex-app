@@ -14,7 +14,7 @@ type Props = {
 const Faq: FC<Props> = ({ data }) => {
   return (
     <>
-      <section className="w-full mt-20 flex flex-col gap-6">
+      <section className="w-full mt-10 flex flex-col gap-6">
         {/* heading */}
         <h1 className={` ${saira.className} text-xl`}>FAQ</h1>
 

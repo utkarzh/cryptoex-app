@@ -6,6 +6,7 @@ import { FaBitcoin, FaEthereum } from "react-icons/fa";
 
 import { SiBinance, SiPolygon, SiTether } from "react-icons/si";
 import StakeButton from "./StakeButton";
+import ReactPaginate from "react-paginate";
 
 const mockData = [
   {
@@ -98,6 +99,12 @@ const StakeTable = () => {
   const filteredData = mockData.filter((item) =>
     item.coin.toLowerCase().includes(search.toLowerCase())
   );
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const handlePageChange = (event: { selected: number }) => {
+    setCurrentPage(event.selected);
+  };
+  console.log("Current page", currentPage);
   return (
     <div className="w-full mt-20 rounded-xl">
       <div className="w-full mt-20 items-start justify-center flex flex-col gap-6">
@@ -174,6 +181,24 @@ const StakeTable = () => {
             ))}
           </tbody>
         </table>
+
+        <div className="w-full flex justify-center items-center  mb-4">
+          <ReactPaginate
+            previousLabel="<"
+            nextLabel=">"
+            breakLabel="..."
+            pageCount={10}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageChange}
+            containerClassName="flex justify-center items-center gap-2 text-sm mt-4"
+            pageClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 cursor-pointer" //remaining page number
+            activeClassName="dark:bg-green-600 bg-green-600 text-white dark:text-black" // active page number
+            previousClassName="px-3 py-1 rounded border-slate-600/50 dark:border-slate-200/50 border cursor-pointer" //prev click button
+            nextClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 bg-transparent cursor-pointer" //next click button
+            disabledClassName="opacity-50 cursor-not-allowed"
+          />
+        </div>
       </div>
     </div>
   );

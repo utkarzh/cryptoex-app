@@ -128,7 +128,7 @@ export default function BorrowTable() {
       </div>
 
       <div className="text-center mt-4">
-        <button className="bg-green-600 text-white px-6 py-1 rounded-full hover:bg-green-500 transition cursor-pointer">
+        <button className="bg-green-600 text-white dark:text-black px-6 py-1 rounded-full hover:bg-green-500 transition cursor-pointer">
           View more
         </button>
       </div>
