@@ -1,6 +1,6 @@
 // import BorrowTableWithPagination from "@/components/loans/fixed_loan/BorrowTable";
 
-import AirdropCard from "@/components/airdrop/Aitdrop";
+// import AirdropCard from "@/components/airdrop/Aitdrop";
 
 const Page = () => {
   return (

@@ -51,6 +51,63 @@
   }
 }
 
+.partShadowAirdrop {
+  background:inherit;
+}
+.partShadowAirdrop::after,
+.partShadowAirdrop::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -75deg,
+    transparent 40%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 49.8%;
+  right: 50%;
+  translate: 50% 50%;
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.partShadowAirdrop::before {
+  filter: blur(100px);
+  opacity: 1;
+}
+
+
+.partShadow {
+  background:inherit;
+}
+.partShadow::after,
+.partShadow::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -75deg,
+    transparent 40%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 49%;
+  right: 50%;
+  translate: 50% 50%;
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.partShadow::before {
+  filter: blur(100px);
+  opacity: 1;
+}
+
 
 /* light background color palate */
 /* background: '#eff0f2',

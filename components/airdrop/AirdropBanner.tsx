@@ -8,9 +8,9 @@ import Image from "next/image";
 const AirdropBanner = () => {
   return (
     <div className="mb-10">
-      <div className="w-full h-[50vh] sm:h-[calc(100vh-70px)] flex justify-center items-center relative  shadow-2xl rounded-xl   ">
+      <div className="w-full h-[50vh] sm:h-[calc(100vh-70px)] flex justify-center items-center relative  shadow-2xl rounded-xl partShadowAirdrop  ">
         {/* overlay */}
-        <div className="w-full h-full absolute z-[40] bg-[#eff0f2] dark:bg-[#06062a] opacity-85 dark:opacity-[0.87] top-0 left-0 rounded-xl ">
+        <div className="w-full h-full absolute z-[40] bg-[#eff0f2] dark:bg-[#06062a] opacity-100 dark:opacity-[1] top-0 left-0 rounded-xl ">
           {" "}
         </div>
 

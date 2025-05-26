@@ -15,7 +15,9 @@ const GetStartedHeading = () => {
         <div className="absolute z-[20] top-[10vw]  w-full  h-full  border-t-2 border-green-500 bg-gradient-to-b from-green-400/0 via-[#eff0f2] dark:via-[#06062a] to-[#eff0f2] dark:to-[#06062a] pointer-events-none"></div>
 
         {/*Extra char hide */}
-        <div className="w-full  absolute top-0 right-0 h-[11.5vw] z-[60]  bg-[#eff0f2] dark:bg-[#06062a]"></div>
+        <div className="w-full  absolute top-0 right-0 h-[11.5vw] z-[60]  bg-[#eff0f2] dark:bg-[#06062a]  ">
+          <div className=" w-full h-full  relative partShadow"></div>
+        </div>
       </div>
     </div>
   );

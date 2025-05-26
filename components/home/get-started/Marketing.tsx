@@ -103,7 +103,7 @@ const Marketing = () => {
             </div>
           </div>
           {/* middle div */}
-          <div className=" absolute -bottom-[20px]  left-0 w-[50%] h-[30%] rounded-lg bg-white dark:bg-[#161735] shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green] ">
+          <div className=" absolute -bottom-[20px]  left-0 w-[50%] h-[30%] rounded-lg bg-white dark:bg-[#161735] shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green]   ">
             <div className=" flex gap-4 h-full w-full justify-evenly items-center">
               <div>
                 <h2 className={`text-[16px] font-bold ${saira.className}`}>
