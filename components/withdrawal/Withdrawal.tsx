@@ -1,6 +1,6 @@
 import React from "react";
 import WithdrawalSteps from "./WithdrawalSteps";
-import WithdrawalForm from "./WithdrawForm";
+import WithdrawalForm from "./withdrawal_form/WithdrawForm";
 import WithdrawRecordsTable from "./WithdrawRecordsTable";
 
 const Withdrawal = () => {

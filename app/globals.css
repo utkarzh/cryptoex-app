@@ -30,7 +30,7 @@
   
   .scrollbar-custom {
     scrollbar-width: thin; /* Firefox */
-    scrollbar-color:  #06062a #4d4e69; /* thumb color and track color */
+    /* scrollbar-color:  #06062a #4d4e69; */
   }
 
   .scrollbar-custom::-webkit-scrollbar {
@@ -39,16 +39,17 @@
     border-radius: 10px;
   }
 
-  .scrollbar-custom::-webkit-scrollbar-thumb {
-    background-color: #2b295c; /* Indigo-600 */
-    border-radius: 9999px;
+
+  /* .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
     border: 2px solid transparent;
     background-clip: content-box;
-  }
+  } */
 
-  .scrollbar-custom::-webkit-scrollbar-track {
-    background: #e5e7eb; /* Gray-200 */
-  }
+  /* .scrollbar-custom::-webkit-scrollbar-track {
+    background: #e5e7eb; 
+  } */
 }
 
 .partShadowAirdrop {
@@ -104,7 +105,35 @@
 }
 
 .partShadow::before {
-  filter: blur(100px);
+  filter: blur(50px);
+  opacity: 1;
+}
+
+.partShadow1 {
+  background:inherit;
+}
+.partShadow1::after,
+.partShadow1::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from 75deg,
+    transparent 40%,
+    rgb(181, 52, 17),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 49%;
+  right: 50%;
+  translate: 50% 50%;
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.partShadow::before {
+  filter: blur(50px);
   opacity: 1;
 }
 

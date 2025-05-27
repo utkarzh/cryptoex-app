@@ -13,8 +13,8 @@ const PartnersContent = () => {
         {/* image and effect */}
         <div className="w-full  flex justify-center lg:justify-end">
           <div className=" w-[80vw] h-[80vw] lg:w-[36vw] lg:h-[36vw] relative flex justify-center lg:justify-end  p-6 ">
-            <div className="  border-2 border-[#eff0f2] dark:border-[#161735] bg-transparent rounded-full w-full h-full flex justify-center items-center">
-              <div className="w-[90%] h-[90%] bg-[#eff0f2] dark:bg-[#161735] rounded-full flex justify-center items-center ">
+            <div className="  border-2 border-gray-400/20 dark:border-[#161735] bg-transparent rounded-full w-full h-full flex justify-center items-center">
+              <div className="w-[90%] h-[90%] bg-gray-400/20 dark:bg-[#161735] rounded-full flex justify-center items-center ">
                 <div className="w-[80%] h-[80%] bg-green-400 dark:bg-green-600 animate-pulse duration-1000 rounded-full">
                   <Image
                     width={1000}
