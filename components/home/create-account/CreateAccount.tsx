@@ -77,8 +77,8 @@ const CreateAccount = () => {
 
       {activeState == 1 && (
         <Image
-          width={100}
-          height={100}
+          width={250}
+          height={250}
           src={`/images/computerSignUp.png`}
           className="w-[250px] ml-4"
           alt=""
@@ -87,8 +87,8 @@ const CreateAccount = () => {
 
       {activeState == 2 && (
         <Image
-          width={100}
-          height={100}
+          width={250}
+          height={250}
           src={`/images/computerSignUp.png`}
           className="w-[250px] ml-4"
           alt=""
@@ -97,8 +97,8 @@ const CreateAccount = () => {
 
       {activeState >= 3 && (
         <Image
-          width={100}
-          height={100}
+          width={250}
+          height={250}
           src={`/images/computerSignUp.png`}
           className="w-[250px] ml-4"
           alt=""

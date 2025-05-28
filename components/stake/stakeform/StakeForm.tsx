@@ -1,69 +1,110 @@
+"use client";
 import CoinCard from "@/components/common/CoinCard";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { IoIosArrowDown, IoIosCloseCircleOutline } from "react-icons/io";
 import StakeFormInfoCard from "./StakeFormInfoCard";
 
 type Props = {
   onClose: () => void;
 };
+const testInfoLeft = [
+  {
+    title: "Reference APR",
+    value: "3%",
+    color: "green",
+  },
 
+  {
+    title: "Term",
+    value: "Flexible",
+    color: "",
+  },
+
+  {
+    title: "Funding account",
+    value: "0 BTC",
+    color: "",
+  },
+
+  {
+    title: "Max amount",
+    value: "1,00,00 BTC",
+    color: "",
+  },
+];
+
+const testInfoRight = [
+  {
+    title: "Subscription date",
+    value: "4/22/2025, 15:37",
+    color: "",
+  },
+
+  {
+    title: "Accrual date",
+    value: "4/22/2025, 21:30",
+    color: "",
+  },
+
+  {
+    title: "Profit distribution date",
+    value: "4/24/2025, 17:30",
+    color: "",
+  },
+
+  {
+    title: "Redemption period",
+    value: "14 days",
+    color: "",
+  },
+  {
+    title: "Profit received",
+    value: "Daily",
+    color: "",
+  },
+];
+
+type CoinData = {
+  symbol: string;
+  name: string;
+  icon: string;
+};
+
+const testCoinData: CoinData[] = [
+  {
+    symbol: "SOL",
+    name: "Solana",
+    icon: "/images/coins/solanarounded.png",
+  },
+  {
+    symbol: "ETH",
+    name: "Ethereum",
+    icon: "/images/coins/ethereumrounded.png",
+  },
+  {
+    symbol: "BTC",
+    name: "Bitcoin",
+    icon: "/images/coins/btc.png",
+  },
+  {
+    symbol: "POL",
+    name: "Polygon",
+    icon: "/images/coins/polygonrounded.png",
+  },
+  {
+    symbol: "NLG",
+    name: "Gulden",
+    icon: "/images/coins/btc.png",
+  },
+];
 const StakeForm: FC<Props> = ({ onClose }) => {
-  const testInfoLeft = [
-    {
-      title: "Reference APR",
-      value: "3%",
-      color: "green",
-    },
+  const [isCoinListOpen, setIsCoinListOpen] = useState(false);
+  const [selectedCoin, setSelectedCoin] = useState<CoinData>();
 
-    {
-      title: "Term",
-      value: "Flexible",
-      color: "",
-    },
-
-    {
-      title: "Funding account",
-      value: "0 BTC",
-      color: "",
-    },
-
-    {
-      title: "Max amount",
-      value: "1,00,00 BTC",
-      color: "",
-    },
-  ];
-
-  const testInfoRight = [
-    {
-      title: "Subscription date",
-      value: "4/22/2025, 15:37",
-      color: "",
-    },
-
-    {
-      title: "Accrual date",
-      value: "4/22/2025, 21:30",
-      color: "",
-    },
-
-    {
-      title: "Profit distribution date",
-      value: "4/24/2025, 17:30",
-      color: "",
-    },
-
-    {
-      title: "Redemption period",
-      value: "14 days",
-      color: "",
-    },
-    {
-      title: "Profit received",
-      value: "Daily",
-      color: "",
-    },
-  ];
+  const selectHandler = (data: CoinData) => {
+    setSelectedCoin(data);
+    setIsCoinListOpen(false);
+  };
   return (
     <div className=" mt-30 sm:mt-0 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-fit">
       {/* conatiner */}
@@ -83,16 +124,45 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             {/* inputs */}
             <div className="flex flex-col gap-4">
               {/* coin selector  */}
-              <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
+              <div
+                className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative "
+                onClick={() => setIsCoinListOpen(true)}
+              >
                 {/* label */}
                 <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
                   Currency
                 </label>
-                <CoinCard
-                  cointTitle="Bitcoin (BTC)"
-                  coinImgUrl="/images/coins/btc.png"
-                  isSmall={true}
-                />
+
+                {selectedCoin ? (
+                  <CoinCard
+                    cointTitle={`${selectedCoin.name} (${selectedCoin.symbol})`}
+                    coinImgUrl={selectedCoin.icon}
+                    isSmall={true}
+                  />
+                ) : (
+                  <div className="opacity-70 text-xs">Select Coin</div>
+                )}
+                {/* coin list */}
+                {isCoinListOpen && (
+                  <div className="absolute w-full h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-2">
+                    {testCoinData.map((val) => (
+                      <div
+                        key={val.symbol}
+                        className="p-2 bg-slate-300/30 dark:bg-slate-500/20 rounded-md cursor-pointer"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          selectHandler(val);
+                        }}
+                      >
+                        <CoinCard
+                          cointTitle={`${val.name} (${val.symbol})`}
+                          coinImgUrl={val.icon}
+                          isSmall={true}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <IoIosArrowDown className="mr-4 cursor-pointer" />
               </div>
 
@@ -103,7 +173,20 @@ const StakeForm: FC<Props> = ({ onClose }) => {
                   Amount
                 </label>
 
-                <div className="w-full flex gap-2 justify-between">
+                <input
+                  type="text"
+                  className="outline-none border-none w-full bg-transparent text-[12px]"
+                  placeholder="Min amount 0.0001 BTC"
+                />
+
+                <div className="flex items-center gap-1 mr-1">
+                  <div className="opacity-60 pr-2 mr-1 border-r">BTC</div>
+                  <div className="opacity-60 text-green-600 text-[12px]">
+                    Max
+                  </div>
+                </div>
+
+                {/* <div className="w-full flex gap-2 justify-between">
                   <div className="text-[11px] font-extralight opacity-80 dark:opacity-70">
                     Min amount 0.0001 BTC
                   </div>
@@ -113,7 +196,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
                     <div className="border-l dark:border-white/30 border-black/30"></div>
                     <div className="text-green-700 font-medium">Max</div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             {/* info */}
@@ -168,7 +251,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               <input type="checkbox" className="bg-transparent" />
               <label className="text-[11px] font-normal">
                 I have read and agree to{" "}
-                <span className="text-green-600">Staking User Agreement</span>
+                <span className="text-green-600 cursor-pointer hover:text-green-500 hover:underline">
+                  Staking User Agreement
+                </span>
               </label>
             </div>
 

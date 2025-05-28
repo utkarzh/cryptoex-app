@@ -1,12 +1,14 @@
-// import PendingPopup from "@/components/withdrawal/withdrawal_form/TransactionStatusPopup";
+// import TwoFactorSetupPopup from "@/components/security/TwoFactorSetupPopup";
 
-// import AuthLevel from "@/components/security/AuthLevel";
-import SecurityVerificationPopup from "@/components/security/SecurityVerificationPopup";
+import Footer from "@/components/footer/Footer";
+// import TwoFactorDisablePopupConfirm from "@/components/security/TwoFactorDisableConfirmPopup";
 
 const Page = () => {
   return (
-    <div className="w-[90%] mt-10 mb-10 h-full">
-      <SecurityVerificationPopup />
+    <div className="w-full mt-10 mb-10 h-full">
+      {/* <TwoFactorSetupPopup /> */}
+      {/* <TwoFactorDisablePopupConfirm /> */}
+      <Footer />
     </div>
   );
 };

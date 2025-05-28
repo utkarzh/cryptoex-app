@@ -14,6 +14,46 @@ const records = [
     blockchainRecord: "16asfzv6...hbdu12rex",
     remarks: "-",
   },
+  {
+    datetime: "13/03/24 - 20:54:29",
+    coin: "BTC",
+    amount: 2.3,
+    withdrawTo: "0x412313...hbdu12rex",
+    blockchainRecord: "16asfzv6...hbdu12rex",
+    remarks: "-",
+  },
+  {
+    datetime: "13/03/24 - 20:54:29",
+    coin: "BTC",
+    amount: 2.3,
+    withdrawTo: "0x412313...hbdu12rex",
+    blockchainRecord: "16asfzv6...hbdu12rex",
+    remarks: "-",
+  },
+  {
+    datetime: "13/03/24 - 20:54:29",
+    coin: "BTC",
+    amount: 2.3,
+    withdrawTo: "0x412313...hbdu12rex",
+    blockchainRecord: "16asfzv6...hbdu12rex",
+    remarks: "-",
+  },
+  {
+    datetime: "13/03/24 - 20:54:29",
+    coin: "BTC",
+    amount: 2.3,
+    withdrawTo: "0x412313...hbdu12rex",
+    blockchainRecord: "16asfzv6...hbdu12rex",
+    remarks: "-",
+  },
+  {
+    datetime: "13/03/24 - 20:54:29",
+    coin: "BTC",
+    amount: 2.3,
+    withdrawTo: "0x412313...hbdu12rex",
+    blockchainRecord: "16asfzv6...hbdu12rex",
+    remarks: "-",
+  },
   // More entries as needed
 ];
 
@@ -58,6 +98,9 @@ const WithdrawRecordsTable = () => {
           </thead>
           <tbody>
             {records.map((record, index) => {
+              if (index >= 4) {
+                return;
+              }
               const withdrawKey = `withdraw-${index}`;
               const blockchainKey = `blockchain-${index}`;
 

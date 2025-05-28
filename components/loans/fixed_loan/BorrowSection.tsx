@@ -4,8 +4,6 @@ import { TiClipboard } from "react-icons/ti";
 import FixedBorrowForm from "./FixedBorrowForm";
 import { saira } from "@/utils/Font";
 
-// type Props = {}
-
 const BorrowSection = () => {
   return (
     <div className="mt-16 rounded-lg mx-auto flex flex-col md:flex-row justify-between gap-12">

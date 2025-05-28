@@ -5,6 +5,7 @@ import { BiSort } from "react-icons/bi";
 import { IoCloseSharp } from "react-icons/io5";
 import { MdSearch } from "react-icons/md";
 import { Network } from "./WithdrawForm";
+import { saira } from "@/utils/Font";
 
 type Props = {
   networks: Network[];
@@ -31,7 +32,9 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
     <div className="bg-white flex flex-col gap-4 dark:bg-[#161735] max-w-[450px] rounded-xl p-6 relative">
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
-        <h2 className=" text-sm ">Select Crypto to Withdraw</h2>
+        <h2 className={`${saira.className} text-sm font-semibold `}>
+          Select Crypto to Withdraw
+        </h2>
         <button onClick={onClose}>
           <IoCloseSharp className="text-2xl cursor-pointer hover:scale-110 trasition-all duration-300" />
         </button>
@@ -41,10 +44,10 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
       <div className="w-full border-t border-slate-500/20"></div>
 
       {/* important message */}
-      <div className="text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md">
+      <p className="text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md">
         ⚠️ Make sure your selected crypto and deposit network match, or assets
         may be lost.
-      </div>
+      </p>
 
       {/* search */}
       <div className="w-full relative ">

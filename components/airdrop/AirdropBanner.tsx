@@ -60,7 +60,7 @@ const AirdropBanner = () => {
         />
       </div>
 
-      <div className="w-full mt-12 flex flex-col gap-1 items-center">
+      <div className="w-full mt-12 flex flex-col gap-1 items-center text-center ">
         <h2
           className={`${saira.className} w-fit text-4xl font-bold text-green-600`}
         >

@@ -355,7 +355,7 @@ const WithdrawalForm = () => {
               {/* amount input */}
               <div className={`relative`}>
                 {/* max valued div */}
-                <div className="absolute top-1/2 -translate-y-1/2 right-2 flex gap-2 items-center text-xs">
+                <div className="absolute top-1/2 -translate-y-1/2 right-8 flex gap-2 items-center text-xs">
                   <span>USDT</span>
                   <span className="text-[11px] text-green-600">Max</span>
                 </div>

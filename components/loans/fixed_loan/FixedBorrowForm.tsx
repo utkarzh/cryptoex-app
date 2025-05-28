@@ -3,10 +3,52 @@ import { useState } from "react";
 import Image from "next/image";
 import { IoIosAddCircleOutline, IoIosArrowDown } from "react-icons/io";
 
+type CoinData = {
+  symbol: string;
+  name: string;
+  icon: string;
+};
+
+const testCoinData: CoinData[] = [
+  {
+    symbol: "SOL",
+    name: "Solana",
+    icon: "/images/coins/solanarounded.png",
+  },
+  {
+    symbol: "ETH",
+    name: "Ethereum",
+    icon: "/images/coins/ethereumrounded.png",
+  },
+  {
+    symbol: "BTC",
+    name: "Bitcoin",
+    icon: "/images/coins/btc.png",
+  },
+  {
+    symbol: "POL",
+    name: "Polygon",
+    icon: "/images/coins/polygonrounded.png",
+  },
+  {
+    symbol: "NLG",
+    name: "Gulden",
+    icon: "/images/coins/btc.png",
+  },
+];
+
 export default function FixedBorrowForm() {
   const [tab, setTab] = useState<"borrow" | "supply">("borrow");
   const [duration, setDuration] = useState(30);
   const [autoRepay, setAutoRepay] = useState(true);
+
+  const [borrowCoin, setBorrowCoin] = useState<CoinData>(testCoinData[1]);
+  const [isBorrowSelectionOpen, setIsBorrowSelectionOpen] = useState(false);
+
+  const borrowSelectHandler = (data: CoinData) => {
+    setBorrowCoin(data);
+    setIsBorrowSelectionOpen(false);
+  };
 
   return (
     <div className="w-full mb-8 bg-white/80 dark:bg-[#161735] rounded-2xl  shadow-lg p-4   ">
@@ -37,19 +79,53 @@ export default function FixedBorrowForm() {
           placeholder="Min 0.005 BTC"
         />
         {/* coin selection */}
-        <div className=" ml-2 mr-4  dark:bg-slate-200/15 bg-slate-700/15 rounded-full px-2 py-[2px] flex gap-6 items-center">
+        {/* coin selection */}
+        <div
+          className=" ml-2 mr-4  dark:bg-slate-200/15 bg-slate-700/15 rounded-full px-2 py-[2px] flex gap-6 items-center relative"
+          onClick={() => {
+            setIsBorrowSelectionOpen(true);
+          }}
+        >
           <div className="flex gap-1 items-center">
             {/* coin */}
             <Image
-              src="/images/coins/btc.png"
+              src={borrowCoin.icon}
               width={30}
               height={30}
               alt=""
               className="w-4 h-auto py-1"
             />
             {/* name */}
-            <p className="text-[12px]">BTC</p>
+            <p className="text-[12px]">{borrowCoin.symbol}</p>
           </div>
+
+          {isBorrowSelectionOpen && (
+            <div className="absolute w-full min-w-[100px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
+              {testCoinData.map((val) => (
+                <div
+                  key={val.symbol}
+                  className="p-1 px-2 bg-slate-300/30 dark:bg-slate-500/20 rounded-full cursor-pointer"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    borrowSelectHandler(val);
+                  }}
+                >
+                  <div className="w-full flex gap-1 items-center">
+                    {/* coin */}
+                    <Image
+                      src={val.icon}
+                      width={30}
+                      height={30}
+                      alt=""
+                      className="w-4 h-auto py-1"
+                    />
+                    {/* name */}
+                    <p className="text-[12px]">{val.symbol}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
           <IoIosArrowDown className=" text-xl cursor-pointer" />
         </div>

@@ -6,7 +6,12 @@ import FooterInfo from "./FooterInfo";
 
 const Footer = () => {
   return (
-    <div className="w-full max-w-[100vw]  h-fit  flex justify-center items-center shadow-[1px_0px_4px_#48b873] rounded-md pt-14 pb-6  ">
+    // shadow-[1px_0px_4px_#48b873]
+    <div className="w-full max-w-[100vw]  h-fit  flex justify-center bg-[#eff0f2] dark:bg-[#06062a]/100 items-center rounded-md pt-14 pb-6 relative  ">
+      {/* shadow effect left*/}
+      <div className="partShadowFooterLeft"></div>
+      {/* shadow effect left*/}
+      <div className="partShadowFooterRight"></div>
       {/* footer container */}
       <div className="w-[80%] flex flex-col gap-4 justify-center items-center overflow-hidden">
         {/* content section */}

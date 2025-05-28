@@ -80,12 +80,12 @@
   opacity: 1;
 }
 
-
-.partShadow {
+/* css for root page (getstartedheading) */
+.partShadowGetstarted {
   background:inherit;
 }
-.partShadow::after,
-.partShadow::before {
+.partShadowGetstarted::after,
+.partShadowGetstarted::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -104,39 +104,169 @@
   border-radius: 100px;
 }
 
-.partShadow::before {
+.partShadowGetstarted::before {
   filter: blur(50px);
   opacity: 1;
 }
 
-.partShadow1 {
+/* css for root page (featurepageheading) */
+
+.partShadowFeature {
   background:inherit;
 }
-.partShadow1::after,
-.partShadow1::before {
+.partShadowFeature::after,
+.partShadowFeature::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   background-image: conic-gradient(
-    from 75deg,
+    from 110deg,
     transparent 40%,
-    rgb(181, 52, 17),
+    rgb(70, 199, 70),rgb(70, 199, 70),
     transparent
   );
   opacity: 0.6;
-  bottom: 49%;
+  bottom: 52%;
   right: 50%;
   translate: 50% 50%;
   z-index: -1;
   border-radius: 100px;
 }
-
-.partShadow::before {
+.partShadowFeature::before {
   filter: blur(50px);
   opacity: 1;
 }
 
+/* marketing root */
+.partShadowMarketing1 {
+  background:inherit;
+}
+.partShadowMarketing1::after,
+.partShadowMarketing1::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -140deg,
+    transparent 60%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 0;
+  right: 0;
+  translate: 1px 1px;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.partShadowMarketing2 {
+  background:inherit;
+}
+.partShadowMarketing2::after,
+.partShadowMarketing2::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -180deg,
+    transparent 66%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 0;
+  right: 0;
+  translate: 1px 1px;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Footer */
+.partShadowFooterLeft {
+  background:inherit;
+}
+.partShadowFooterLeft::after,
+.partShadowFooterLeft::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -62deg,
+    transparent 90%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 0;
+  left: 0;
+  translate: -1px -1px;
+  z-index: -1;
+  border-radius: 6px;
+}
+.partShadowFooterLeft::before {
+  filter: blur(180px);
+  opacity: 1;
+}
+.partShadowFooterRight {
+  background:inherit;
+}
+.partShadowFooterRight::after,
+.partShadowFooterRight::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from 92deg,
+    transparent 90%,
+    rgb(70, 199, 70),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 0;
+  right: 0;
+  translate: 1px -1px;
+  z-index: -1;
+  border-radius: 6px;
+}
+.partShadowFooterRight::before {
+  filter: blur(180px);
+  opacity: 1;
+}
+
+
+/* stake */
+.partShadowStake {
+  background:inherit;
+}
+.partShadowStake::after,
+.partShadowStake::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from -110deg,
+    transparent 60%,
+    rgb(70, 199, 70),rgb(38, 171, 38),
+    transparent
+  );
+  opacity: 0.6;
+  bottom: 0%;
+  right: 0%;
+  translate:  0px 1px;
+  z-index: -1;
+  border-radius: 100px;
+}
+.partShadowStake::before {
+  /* filter: blur(50px); */
+  opacity: 1;
+}
 
 /* light background color palate */
 /* background: '#eff0f2',

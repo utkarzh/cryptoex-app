@@ -153,6 +153,23 @@ const FeaturesContent = () => {
               </div>
             </div>
           </div>
+
+          {/* repeated */}
+          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
+            <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
+                <LuDollarSign className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>
+                  Reasonable Commissions
+                </h3>
+                <p className="text-[10px] font-extralight">
+                  Profitable investment opportunities and conditions
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         {/* middle section */}
         <div className=" h-[70%] hidden sm:flex my-auto w-[100px] md:w-[200px] p-4 flex-col items-center justify-center ">
@@ -227,6 +244,23 @@ const FeaturesContent = () => {
                 </h3>
                 <p className="text-[10px] font-extralight">
                   API for crossplatform trading robots
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/*first repeated */}
+          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
+            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
+              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
+                <IoWalletOutline className="text-lg" />
+              </div>
+              <div className="w-full flex flex-col gap-1">
+                <h3 className={` ${saira.className} text-[14px] font-medium`}>
+                  Secure Wallets
+                </h3>
+                <p className="text-[10px] font-extralight">
+                  Keep your digital assets in user wallets
                 </p>
               </div>
             </div>

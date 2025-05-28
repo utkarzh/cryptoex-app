@@ -10,14 +10,14 @@ const AuthLevel = () => {
       <div className="flex flex-col gap-5 mt-4 pb-16 ">
         <div>
           <div className="w-full  flex gap-50 justify-start items-center ">
-            <p className="w-fit text-xs font-light relative ">
+            <p className="hidden sm:block w-fit text-xs font-light relative ">
               Identification Level
               {/*  */}
               <p className="absolute -bottom-10 left-0 text-nowrap">
                 24hours Withdrawal limit
               </p>
             </p>
-            <div className="w-full px-2 max-w-[60%] s flex gap-2 items-center">
+            <div className="w-full px-2 max-w-full sm:max-w-[60%] s flex gap-2 items-center">
               <span className="w-7 h-7 text-xs font-medium flex justify-center items-center rounded-full bg-green-600 relative">
                 L1
                 <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[12px] font-light opacity-60 text-nowrap">

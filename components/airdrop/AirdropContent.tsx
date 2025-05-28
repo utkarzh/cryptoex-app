@@ -86,7 +86,7 @@ const AirdropContent = () => {
     setFilteredData(filteredData);
   }, [selectedTab]);
   return (
-    <div className="w-full h-[100vh] mt-30 mb-10 flex justify-center">
+    <div className="w-full min-h-[100vh] mt-30 mb-10 flex justify-center">
       {/* container */}
       <div>
         {/* header */}

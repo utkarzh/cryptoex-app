@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full h-[70px]">
-        <nav className=" fixed top-0 left-0 z-[999] bg-transparent w-full h-fit text-black dark:text-white">
+        <nav className=" fixed top-0 left-0 z-[999] w-full h-fit text-black dark:text-white bg-[#eff0f2] dark:bg-[#06062a]">
           {/* nav container */}
-          <div className="  w-full relative h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
+          <div className=" w-full relative h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
             {/* logo part */}
             <Link href="/" className="">
               <Image
@@ -36,11 +36,13 @@ const Navbar = () => {
             {/* middle part */}
             <div
               className={`flex-col absolute ${
-                isSidebarOpen ? "flex lg:flex" : "hidden lg:flex"
-              } top-[70px]  pt-3 pb-6  lg:bg-transparent lg:py-0 left-0  z-[100] lg:static lg:flex-row w-[100%] h-fit lg:h-full  items-start pl-4 lg:pl-0 lg:items-center gap-4 transition-all duration-500 lg:transition-none shadow-[-0px_-0px_1px_black] dark:shadow-[-0px_-0px_1px_white] lg:shadow-none lg:dark:shadow-none`}
+                isSidebarOpen
+                  ? "flex xl:flex dark:bg-[#06062a] bg-[#eff0f2] xl:bg-transparent"
+                  : "hidden xl:flex"
+              } top-[70px]  pt-3 pb-6  xl:bg-transparent xl:py-0 left-0  z-[100] xl:static xl:flex-row w-[100%] h-fit xl:h-full  items-start pl-4 xl:pl-0 xl:items-center gap-4 transition-all duration-500 xl:transition-none shadow-[-0px_-0px_1px_black] dark:shadow-[-0px_-0px_1px_white] xl:shadow-none xl:dark:shadow-none `}
             >
               {/* last part after small screen */}
-              <div className="w-full flex lg:hidden flex-col gap-2  ">
+              <div className="w-full flex xl:hidden flex-col gap-2  ">
                 <div className="flex flex-row-reverse gap-2 justify-between pr-4 items-center">
                   <div className="flex gap-1 text-xl items-center ">
                     <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
@@ -90,12 +92,12 @@ const Navbar = () => {
               </div>
 
               {/*  */}
-              <div className="h-[50%] hidden lg:block border-r-2 rounded border-gray-600 my-2 border-2 "></div>
+              <div className="h-[50%] hidden xl:block border-r-2 rounded border-gray-600 my-2 border-2 "></div>
 
               {/* items */}
-              <div className="w-full flex flex-col lg:flex-row  gap-3 text-sm items-start pl-2 lg:pl-0 lg:items-center">
+              <div className="w-full flex flex-col xl:flex-row  gap-3 text-sm items-start pl-2 xl:pl-0 xl:items-center ">
                 {/* trade */}
-                <div className="flex items-center cursor-pointer  relative group group">
+                <div className="flex items-center cursor-pointer  relative group group ">
                   <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">
                     Trade
                   </span>
@@ -166,7 +168,7 @@ const Navbar = () => {
               </div>
 
               {/* signup and login after small screen */}
-              <div className="flex lg:hidden flex-wrap items-center justify-center gap-2 text-sm">
+              <div className="flex xl:hidden flex-wrap items-center justify-center gap-2 text-sm">
                 <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer">
                   Sign in
                 </button>
@@ -176,7 +178,7 @@ const Navbar = () => {
               </div>
             </div>
             {/* last part */}
-            <div className="hidden lg:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
+            <div className="hidden xl:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
               <div className="flex gap-1 text-xl items-center ">
                 <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
                 <span className="relative ">
@@ -221,7 +223,7 @@ const Navbar = () => {
             </div>
 
             {/* sidebar opener and theme buttons*/}
-            <div className="lg:hidden flex items-center gap-3">
+            <div className="xl:hidden flex items-center gap-3">
               <div className="flex gap-3 text-2xl items-center">
                 <ThemeSwitcher size={26} />
                 <MdLanguage className="cursor-pointer" />

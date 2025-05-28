@@ -1,16 +1,22 @@
 "use client";
 
 import { saira } from "@/utils/Font";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, FC } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 
 const CORRECT_CODE = "123456";
 
-const SecurityVerificationPopup = () => {
+type Props = {
+  onClose: () => void;
+  onOTPEntered: (data: string) => void;
+};
+
+const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
   const [code, setCode] = useState<string[]>(Array(6).fill(""));
   const [error, setError] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleChange = (value: string, index: number) => {
     const updatedCode = [...code];
@@ -26,6 +32,8 @@ const SecurityVerificationPopup = () => {
     e: React.KeyboardEvent<HTMLInputElement>,
     index: number
   ) => {
+    setError(false);
+    setErrorMessage("");
     if (e.key === "Backspace" && !code[index] && index > 0) {
       inputRefs.current[index - 1]?.focus();
     }
@@ -35,7 +43,15 @@ const SecurityVerificationPopup = () => {
     const enteredCode = code.join("");
     if (enteredCode !== CORRECT_CODE) {
       setError(true);
-      setTimeout(() => setError(false), 3000);
+      if (enteredCode === "000000") {
+        setErrorMessage(
+          "Verification code has expired. Please request a new code."
+        );
+      } else {
+        setErrorMessage("The OTP you entered is incorrect.");
+      }
+    } else {
+      onOTPEntered(CORRECT_CODE);
     }
   };
 
@@ -51,7 +67,10 @@ const SecurityVerificationPopup = () => {
 
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative">
-      <button className="absolute top-4 right-4 hover:scale-110 transition-all duration-200 cursor-pointer">
+      <button
+        className="absolute top-4 right-4 hover:scale-110 transition-all duration-200 cursor-pointer"
+        onClick={onClose}
+      >
         <IoClose size={24} />
       </button>
 
@@ -90,6 +109,13 @@ const SecurityVerificationPopup = () => {
           Resend verification code
         </button>
       </p>
+
+      {/* error message */}
+      {errorMessage && (
+        <p className="text-[10px] mt-4 font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
+          {errorMessage}
+        </p>
+      )}
 
       <p className="text-green-500 text-xs font-light mt-8 cursor-pointer">
         Having problems with verification?

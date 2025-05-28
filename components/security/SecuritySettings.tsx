@@ -1,12 +1,49 @@
+"use client";
 import { saira } from "@/utils/Font";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { BsShieldLock } from "react-icons/bs";
 import { FaEye } from "react-icons/fa";
 import { IoLockClosedOutline } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
+import Model from "../common/Model";
+import SecurityVerificationPopup from "./SecurityVerificationPopup";
+import TwoFactorSetupPopup from "./TwoFactorSetupPopup";
+import TwoFactorDisableFormPopup from "./TwoFactorDisableFormPopup";
+import TwoFactorDisablePopupConfirm from "./TwoFactorDisableConfirmPopup";
 
 const SecuritySettings = () => {
+  const [twoFASetup, setTwoFASetup] = useState<
+    "otp" | "google-auth" | "disable-form" | "disable-confirmation" | ""
+  >();
+  const [is2FAVerified, setIs2FAVerified] = useState(false);
+
+  const disable2FAHandler = () => {
+    setTwoFASetup("disable-form");
+  };
+  const setup2FAHandler = () => {
+    setTwoFASetup("otp");
+  };
+
+  const onClose2FASetup = () => {
+    setTwoFASetup("");
+  };
+
+  const otpDataHandler = (data: string) => {
+    console.log("Otp data is", data);
+    setTwoFASetup("google-auth");
+  };
+
+  const googleAuthHandler = () => {
+    setIs2FAVerified(true);
+    setTwoFASetup("");
+  };
+
+  const disableSuccessHandler = () => {
+    setIs2FAVerified(false);
+    setTwoFASetup("");
+  };
+
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-lg  mx-auto">
       <h2 className={`${saira.className} text-sm font-semibold `}>Security</h2>
@@ -28,7 +65,7 @@ const SecuritySettings = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 justify-end">
             {true && (
               <>
                 <span className="flex items-center gap-1 text-sm">
@@ -39,11 +76,11 @@ const SecuritySettings = () => {
                     alt=""
                     className="w-3 h-auto"
                   />
-                  <span className="opacity-60 text-[10px] font-light">
+                  <span className="opacity-60 flex gap-1 text-[10px] font-light">
                     kdk***@****
+                    <FaEye className="text-xs cursor-pointer" />
                   </span>
                 </span>
-                <FaEye className="text-gray-400 cursor-pointer" />
               </>
             )}
 
@@ -69,7 +106,7 @@ const SecuritySettings = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-end gap-2">
             {true && (
               <>
                 <span className="flex items-center gap-1 text-sm">
@@ -80,11 +117,11 @@ const SecuritySettings = () => {
                     alt=""
                     className="w-3 h-auto"
                   />
-                  <span className="opacity-60 text-[10px] font-light">
+                  <span className="opacity-60 flex gap-1 text-[10px] font-light">
                     ********
+                    <FaEye className="text-xs cursor-pointer" />
                   </span>
                 </span>
-                <FaEye className="text-gray-400 cursor-pointer" />
               </>
             )}
 
@@ -110,8 +147,8 @@ const SecuritySettings = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
-            {true && (
+          <div className="flex flex-wrap items-center justify-end gap-2">
+            {is2FAVerified && (
               <>
                 <span className="flex items-center gap-1 text-sm">
                   <Image
@@ -128,10 +165,42 @@ const SecuritySettings = () => {
               </>
             )}
 
-            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15">
-              {true ? "Disable" : "Set up"}
+            <button
+              className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
+              onClick={is2FAVerified ? disable2FAHandler : setup2FAHandler}
+            >
+              {is2FAVerified ? "Disable" : "Set up"}
             </button>
           </div>
+
+          {/* 2fa setup popup */}
+          {twoFASetup && (
+            <Model>
+              {twoFASetup === "otp" ? (
+                <SecurityVerificationPopup
+                  onClose={onClose2FASetup}
+                  onOTPEntered={otpDataHandler}
+                />
+              ) : twoFASetup === "google-auth" ? (
+                <TwoFactorSetupPopup
+                  onClose={onClose2FASetup}
+                  onSuccess={googleAuthHandler}
+                />
+              ) : twoFASetup === "disable-form" ? (
+                <TwoFactorDisableFormPopup
+                  onClose={onClose2FASetup}
+                  onSuccess={() => setTwoFASetup("disable-confirmation")}
+                />
+              ) : twoFASetup === "disable-confirmation" ? (
+                <TwoFactorDisablePopupConfirm
+                  onClose={onClose2FASetup}
+                  onSuccess={disableSuccessHandler}
+                />
+              ) : (
+                ""
+              )}
+            </Model>
+          )}
         </div>
         {/* Secondary Pin */}
         <div className="flex justify-between items-center  text-xs ">
@@ -166,7 +235,7 @@ const SecuritySettings = () => {
               </>
             )}
 
-            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15">
+            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap">
               {false ? "Disable" : "Set up"}
             </button>
           </div>
@@ -205,7 +274,7 @@ const SecuritySettings = () => {
               </>
             )}
 
-            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15">
+            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap">
               {false ? "Disable" : "Set up"}
             </button>
           </div>
