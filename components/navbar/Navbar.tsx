@@ -4,11 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { IoMdClose, IoMdSearch } from "react-icons/io";
 import { MdLanguage } from "react-icons/md";
-import { RiArrowDropDownFill } from "react-icons/ri";
+import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri";
 import { GrAnnounce } from "react-icons/gr";
 import { GrAssistListening } from "react-icons/gr";
 import ThemeSwitcher from "@/utils/ThemeSwitcher";
 import { IoMenu } from "react-icons/io5";
+import TradeDropdown from "./nav_dropdown/TradeDropdown";
+import EarnDropdown from "./nav_dropdown/EarnDropdown";
+import EventsDropdown from "./nav_dropdown/EventsDropdown";
 
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
@@ -25,11 +28,20 @@ const Navbar = () => {
           <div className=" w-full relative h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
             {/* logo part */}
             <Link href="/" className="">
+              {/* dark background */}
               <Image
                 width={200}
                 height={100}
-                className="w-auto max-w-[130px]  cursor-pointer p-1 rounded bg-black dark:bg-transparent "
-                src="/images/logo.png"
+                className="w-auto max-w-[130px] dark:block hidden cursor-pointer p-1 rounded "
+                src="/images/logo/logo_indoex_white.svg"
+                alt="logo"
+              />
+              {/* light background */}
+              <Image
+                width={200}
+                height={100}
+                className="w-auto max-w-[130px] block dark:hidden  cursor-pointer p-1 rounded "
+                src="/images/logo/logo_indoex_black.svg"
                 alt="logo"
               />
             </Link>
@@ -97,52 +109,33 @@ const Navbar = () => {
               {/* items */}
               <div className="w-full flex flex-col xl:flex-row  gap-3 text-sm items-start pl-2 xl:pl-0 xl:items-center ">
                 {/* trade */}
-                <div className="flex items-center cursor-pointer  relative group group ">
+                <div className="flex items-center cursor-pointer  relative group ">
                   <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">
                     Trade
                   </span>
-                  <RiArrowDropDownFill className="text-2xl" />
-                  <div className="absolute z-[50] bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block">
-                    <ul className="flex flex-col gap-1 p-2">
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item1
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item2
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item3
-                      </li>
-                    </ul>
-                  </div>
+                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
+                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
+                  <TradeDropdown />
                 </div>
 
                 {/* market */}
-                <div className="flex items-center cursor-pointer group">
+                <Link
+                  href="/markets"
+                  className="flex items-center cursor-pointer group"
+                >
                   <span className="mr-2 group-hover:text-green-600  transition-all duration-300 ease-out">
                     Markets
                   </span>
-                </div>
+                </Link>
 
                 {/* earn */}
                 <div className="flex items-center cursor-pointer  relative group z-[30] group">
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
                     Earn
                   </span>
-                  <RiArrowDropDownFill className="text-2xl" />
-                  <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block">
-                    <ul className="flex flex-col gap-1 p-2">
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item1
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item2
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item3
-                      </li>
-                    </ul>
-                  </div>
+                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
+                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
+                  <EarnDropdown />
                 </div>
 
                 {/* events */}
@@ -150,20 +143,9 @@ const Navbar = () => {
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
                     Events
                   </span>
-                  <RiArrowDropDownFill className="text-2xl" />
-                  <div className="absolute bottom-0 translate-y-[100%] left-1/2 -translate-x-1/2 w-fit  rounded-md bg-slate-300 dark:bg-gray-700 hidden group-hover:block ">
-                    <ul className="flex flex-col gap-1 p-2">
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item1
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item2
-                      </li>
-                      <li className=" w-full hover:bg-gray-500 hover:text-white hover:dark:text-black p-1 px-2 rounded-md text-nowrap">
-                        Item3
-                      </li>
-                    </ul>
-                  </div>
+                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
+                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
+                  <EventsDropdown />
                 </div>
               </div>
 

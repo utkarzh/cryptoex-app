@@ -1,0 +1,50 @@
+"use client";
+import React, { useState } from "react";
+import TopGainers from "./TopGainers";
+import TopTranding from "./TopTrending";
+import NewListings from "./NewListings";
+import TradeTable from "./TradeTable";
+
+const Markets = () => {
+  const [tabType, setTabType] = useState<
+    "Spot" | "Newly listed" | "Top gainers"
+  >("Spot");
+  return (
+    <div className="w-full">
+      {/* tabs */}
+      <div className=" ml-4 mb-2 w-full h-full  bg-transparent  text-gray-700 dark:text-gray-400 text-sm rounded-xl  space-y-3 flex flex-col gap-4 ">
+        {/* loan type and loan data and history Tabs */}
+        <div className="flex">
+          {/* loan type */}
+          <div className="flex gap-10 px-4 border-b-2 dark:border-white/10 border-[#161735]/10 pt-2 ">
+            {["Spot", "Newly listed", "Top gainers"].map((val) => (
+              <button
+                key={val}
+                onClick={() => setTabType(val as typeof tabType)}
+                className={`text-[14px]  pb-2 cursor-pointer top-[2px] relative  ${
+                  val === tabType
+                    ? "text-green-400 border-b-3 "
+                    : "border-b-3 border-transparent"
+                }`}
+              >
+                <span className="flex gap-1 items-center">{val}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* quick look tables:- top gainer, tranding, new listings */}
+      <div className="w-full flex flex-col sm:flex-row gap-4 mt-6">
+        <TopGainers />
+        <TopTranding />
+        <NewListings />
+      </div>
+
+      {/* trade table */}
+      <TradeTable />
+    </div>
+  );
+};
+
+export default Markets;

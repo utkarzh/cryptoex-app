@@ -1,14 +1,17 @@
-// import TwoFactorSetupPopup from "@/components/security/TwoFactorSetupPopup";
+// import Auth from "@/components/auth/Auth";
+// import CryptoConvert from "@/components/convert/ConvertTest1";
+// import LoginForm from "@/components/auth/LoginForm";
 
-import Footer from "@/components/footer/Footer";
-// import TwoFactorDisablePopupConfirm from "@/components/security/TwoFactorDisableConfirmPopup";
+import TradeTable from "@/components/markets/TradeTable";
 
 const Page = () => {
   return (
-    <div className="w-full mt-10 mb-10 h-full">
-      {/* <TwoFactorSetupPopup /> */}
-      {/* <TwoFactorDisablePopupConfirm /> */}
-      <Footer />
+    <div className="w-[90%] mx-auto h-full">
+      {/* <LoginForm /> */}
+      {/* <Auth /> */}
+      {/* <CryptoConvert /> */}
+      {/* <TopGainers /> */}
+      <TradeTable />
     </div>
   );
 };

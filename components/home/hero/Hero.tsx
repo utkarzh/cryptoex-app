@@ -9,7 +9,6 @@ const Hero = () => {
   return (
     <div className="w-full h-[calc(100vh-70px)] flex justify-center items-center relative  ">
       {/* background images*/}
-
       <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover "></div>
       <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover "></div>
       {/* background text */}
@@ -23,7 +22,7 @@ const Hero = () => {
         {" "}
       </div>
 
-      {/* /heading and subheading */}
+      {/*heading and subheading */}
       <div className="w-full absolute z-[50] top-18 right-0 text-center ">
         <h1 className={`${saira.className} text-2xl font-bold`}>
           Enhance your Crypto Trading Experience
@@ -33,22 +32,6 @@ const Hero = () => {
           everything you need.
         </p>
       </div>
-
-      {/* <div
-        className={` ${saira.className} text-[25vw] lg:text-[20vw] font-extrabold tracking-wide opacity-100 dark:opacity-100  z-[50] relative`}
-      > */}
-      {/* <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#eff0f2]/100 dark:to-[#06062a]/80 "></div> */}
-
-      {/* <span className=" bg-gradient-to-b from-white via-slate-600 to-black bg-clip-text text-transparent opacity-20">
-          INDOEX
-        </span> */}
-      {/* INDOEX */}
-      {/* <TextChangeEffect/> */}
-      {/* </div> */}
-
-      {/* add background image here */}
-
-      {/* <div className="w-full h-full absolute top-0 right-0 bg-[#eff0f2] dark:bg-[#06062a] opacity-80 blur-3xls z-[30]"></div> */}
 
       <div className="absolute bottom-0 right-0 w-full py-2 z-[40] text-white bg-green-600 dark:bg-green-700 flex justify-center">
         <Marquee>

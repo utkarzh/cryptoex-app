@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { MdSearch } from "react-icons/md";
-import { RiBtcLine } from "react-icons/ri";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 import Image from "next/image";
 
@@ -109,11 +108,6 @@ const TradeNavBar = () => {
               <div className="text-[12px]">{val.name}</div>
             </div>
           ))}
-          <div className="w-fit px-2 flex gap-1 items-center">
-            {/* name */}
-            <RiBtcLine className="text-[18px] bg-yellow-400 rounded-full" />
-            <div className="text-sm">BTC</div>
-          </div>
         </div>
         {/* scroll button*/}
         <div className="w-fit flex gap-1 text-2xl">

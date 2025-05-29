@@ -226,24 +226,6 @@ export default function BorrowSection() {
 
             <IoIosArrowDown className=" text-xl cursor-pointer" />
           </div>
-          {false && (
-            <div className=" ml-2 mr-4  dark:bg-slate-200/15 bg-slate-700/15 rounded-full px-2 py-[2px] flex gap-6 items-center">
-              <div className="flex gap-1 items-center">
-                {/* coin */}
-                <Image
-                  src="/images/coins/ethereumrounded.png"
-                  width={30}
-                  height={30}
-                  alt=""
-                  className="w-4 h-auto py-1"
-                />
-                {/* name */}
-                <p className="text-[12px]">ETH</p>
-              </div>
-
-              <IoIosArrowDown className=" text-xl cursor-pointer" />
-            </div>
-          )}
         </div>
 
         {/* Details Dropdown - Placeholder */}
