@@ -1,17 +1,32 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { Data_Type } from "./AirdropContent";
+import Link from "next/link";
+
+export type Data_Type = {
+  status: "upcoming" | "ongoing" | "completed";
+  href?: string;
+  statusColor: string;
+  borderColor: string;
+  shadow: string;
+  token: string;
+  disc: string;
+  logo: string;
+  supply: string;
+  start: string;
+  end: string;
+};
 
 type Props = {
   data: Data_Type[];
 };
 
-const AirdropStatusCard: FC<Props> = ({ data }) => {
+const StatusCard: FC<Props> = ({ data }) => {
   return (
     <div className="flex flex-wrap justify-center gap-6 ">
       {data.map((item, idx) => (
-        <div
+        <Link
           key={idx}
+          href={item.href ? item.href : "#"}
           className={`relative w-64 p-4 rounded-xl rounded-tr-3xl bg-white dark:bg-[#161735] ${item.shadow}`}
         >
           {/* status */}
@@ -51,10 +66,10 @@ const AirdropStatusCard: FC<Props> = ({ data }) => {
               <span>{item.end} (UTC)</span>
             </p>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
 };
 
-export default AirdropStatusCard;
+export default StatusCard;

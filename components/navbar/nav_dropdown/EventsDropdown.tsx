@@ -9,19 +9,19 @@ const items = [
     icon: <PiParachuteLight className="text-xl" />,
     title: "Airdrop",
     description: "Hold tokens, claim rewards.",
-    href: "#",
+    href: "/airdrop",
   },
   {
     icon: <RxRocket className="text-xl" />,
     title: "Launch pad",
     description: "Invest early in new tokens.",
-    href: "#",
+    href: "/launchpad",
   },
   {
     icon: <PiChartLine className="text-xl" />,
     title: "Trade competition",
     description: "Show your skills, win prizes.",
-    href: "#",
+    href: "/tradecontest",
   },
 ];
 

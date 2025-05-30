@@ -2,7 +2,8 @@
 // import CryptoConvert from "@/components/convert/ConvertTest1";
 // import LoginForm from "@/components/auth/LoginForm";
 
-import TradeTable from "@/components/markets/TradeTable";
+import AirdropJoinCard from "@/components/airdrop/contest/AirdropJoinCard";
+import ParticipantCard from "@/components/common/ParticipantCard";
 
 const Page = () => {
   return (
@@ -11,7 +12,9 @@ const Page = () => {
       {/* <Auth /> */}
       {/* <CryptoConvert /> */}
       {/* <TopGainers /> */}
-      <TradeTable />
+      {/* <TradeTable /> */}
+      <AirdropJoinCard />
+      <ParticipantCard Participants={6} />
     </div>
   );
 };

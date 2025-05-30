@@ -6,6 +6,7 @@ import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { SiBinance, SiEthereum, SiPolygon, SiTether } from "react-icons/si";
 import ReactPaginate from "react-paginate";
+import MiniGraph from "../home/currency-wedgets/MiniGraph";
 
 const mockData = [
   {
@@ -202,9 +203,11 @@ export default function TradeTable() {
                 key={idx}
                 className="border-b dark:border-slate-200/20 border-slate-600/15"
               >
-                <td className="py-3 px-2 flex items-center gap-2">
-                  {item.icon}
-                  {item.coin}
+                <td className="py-3 px-2 ">
+                  <div className="w-full flex h-full items-center gap-2 ">
+                    {item.icon}
+                    {item.coin}
+                  </div>
                 </td>
                 <td className="py-3 px-2  text-center">{item.last_price}</td>
                 <td
@@ -217,7 +220,9 @@ export default function TradeTable() {
                 <td className="py-3 px-2  text-center">{item.high}</td>
                 <td className="py-3 px-2  text-center">{item.low}</td>
                 <td className="py-3 px-2  text-center">{item.volume}</td>
-                <td className="py-3 px-2  text-center">graph</td>
+                <td className="py-3 px-2  text-center">
+                  <MiniGraph />
+                </td>
                 <td className="py-3 px-2 text-right">
                   <button className="text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300">
                     Borrow

@@ -3,6 +3,7 @@ import { saira } from "@/utils/Font";
 import Image from "next/image";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+import { MdTrendingUp } from "react-icons/md";
 import { TbArrowsDownUp } from "react-icons/tb";
 
 type CoinData = {
@@ -276,6 +277,13 @@ export default function CryptoConvertForm() {
         <button className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer">
           Log in / Sign up
         </button>
+
+        {/* trade spot */}
+
+        <div className="w-fit mx-auto flex gap-2 justify-center items-center mt-4 cursor-pointer text-slate-500 hover:scale-105 transition-all duration-200">
+          <MdTrendingUp />
+          <span className="text-xs ">Trade spot</span>
+        </div>
       </div>
     </div>
   );

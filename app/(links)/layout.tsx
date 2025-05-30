@@ -1,6 +1,6 @@
 import Footer from "@/components/footer/Footer";
 
-export default function AirdropLayout({
+export default function LinksLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

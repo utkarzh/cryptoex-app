@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-// import ConvertBar from "./ConvertBar";
+import ConvertBar from "./ConvertBar";
 import { TbArrowsDownUp } from "react-icons/tb";
 import { LuFileText } from "react-icons/lu";
 import { PiQuestion } from "react-icons/pi";
@@ -54,7 +54,10 @@ const Convert = () => {
 
       {/* convert form */}
       {tabType === "Convert" && <CryptoConvertForm />}
-      {/* <ConvertBar /> */}
+
+      <div className="w-full mb-20">
+        <ConvertBar />
+      </div>
     </div>
   );
 };

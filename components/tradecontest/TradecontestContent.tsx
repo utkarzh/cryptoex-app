@@ -18,8 +18,8 @@ const airdropData: Data_Type[] = [
   },
   {
     status: "ongoing",
+    href: "/tradecontest/contest",
     statusColor: "bg-green-500",
-    href: "/airdrop/contest",
     borderColor: "border-green-500",
     shadow: "shadow-[1px_1px_2px_#00c951]",
     token: "Leeu SPEL (SPL)",
@@ -55,7 +55,7 @@ const airdropData: Data_Type[] = [
   },
 ];
 
-const AirdropContent = () => {
+const TradecontestContent = () => {
   const [selectedTab, setSelectedTab] = useState<
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
@@ -105,4 +105,4 @@ const AirdropContent = () => {
   );
 };
 
-export default AirdropContent;
+export default TradecontestContent;

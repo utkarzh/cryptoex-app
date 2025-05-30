@@ -9,7 +9,7 @@ const financeOptions = [
     icon: <FaHandHoldingUsd className="text-xl" />,
     title: "Loans",
     description: "Unlock funds, keep your crypto.",
-    href: "#",
+    href: "/loans",
   },
   {
     icon: <RiStackLine className=" text-xl" />,
