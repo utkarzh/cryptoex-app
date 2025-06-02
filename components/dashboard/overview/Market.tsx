@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { BsArrowRight } from "react-icons/bs";
-import { saira } from "@/utils/Font";
 import Image from "next/image";
 import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go";
+import { saira } from "@/utils/Font";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 

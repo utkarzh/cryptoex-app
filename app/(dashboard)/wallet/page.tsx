@@ -1,10 +1,10 @@
-import Security from "@/components/dashboard/account/security/Security";
+import Wallet from "@/components/wallet/Wallet";
 import React from "react";
 
 const Page = () => {
   return (
     <div className="w-[98%] mx-auto">
-      <Security />
+      <Wallet />
     </div>
   );
 };

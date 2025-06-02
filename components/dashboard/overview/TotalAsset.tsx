@@ -4,8 +4,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { IoIosArrowDown } from "react-icons/io";
 import { ApexOptions } from "apexcharts";
-import { saira } from "@/utils/Font";
 import { IoEyeOutline } from "react-icons/io5";
+import { saira } from "@/utils/Font";
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -8,99 +7,73 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { HiMiniCodeBracket } from "react-icons/hi2";
-import { IoGiftOutline, IoHomeOutline, IoWalletOutline } from "react-icons/io5";
-import { LuHandCoins } from "react-icons/lu";
+import {
+  IoGiftOutline,
+  IoHomeOutline,
+  IoLayersOutline,
+  IoWalletOutline,
+} from "react-icons/io5";
 import { MdOutlineHistory } from "react-icons/md";
 import { RiShieldUserLine } from "react-icons/ri";
 import { SlBasketLoaded } from "react-icons/sl";
-
-type ChildLinkData = {
-  item: string;
-  link: string;
-};
+import AmountCard from "./AmountCard";
+import { GiMoneyStack } from "react-icons/gi";
 
 type MenuItem = {
   label: string;
   icon: React.ReactNode;
-  children?: ChildLinkData[];
+  children?: string[];
   bottom?: boolean;
-  isProfileDropdown?: boolean;
-  link: string;
 };
 
 const menuItems: MenuItem[] = [
   {
     label: "Overview",
     icon: <IoHomeOutline />,
-    link: "/dashboard",
   },
   {
     label: "Account",
     icon: <RiShieldUserLine />,
-    link: "",
-    children: [
-      { item: "Profile", link: "/profile" },
-      { item: "Settings", link: "/settings" },
-    ],
+    children: ["Profile", "Settings"],
   },
   {
     label: "Wallet",
     icon: <IoWalletOutline />,
-    children: [
-      { item: "Deposit", link: "/deposit" },
-      { item: "Withdraw", link: "/withdraw" },
-    ],
-    link: "",
+    children: ["Deposit", "Withdraw"],
   },
   {
     label: "History",
     icon: <MdOutlineHistory />,
-    children: [
-      { item: "Login History", link: "#" },
-      { item: "Transaction History", link: "#" },
-    ],
-    link: "",
+    children: ["Login History", "Transaction History"],
   },
   {
     label: "Orders",
     icon: <SlBasketLoaded />,
-    children: [
-      { item: "Open Orders", link: "#" },
-      { item: "Order History", link: "#" },
-    ],
-    link: "",
+    children: ["Open Orders", "Order History"],
   },
   {
-    label: "Earn",
-    icon: <LuHandCoins />,
-    children: [
-      { item: "Devices", link: "#" },
-      { item: "IP Logs", link: "#" },
-    ],
-    link: "",
+    label: "Staking",
+    icon: <IoLayersOutline />,
   },
   {
-    label: "Login activity",
-    icon: <AiOutlineLogin />,
-    children: [
-      { item: "Devices", link: "#" },
-      { item: "IP Logs", link: "#" },
-    ],
-    link: "",
+    label: "Loan",
+    icon: <GiMoneyStack />,
   },
   {
     label: "Referrals",
     icon: <IoGiftOutline />,
-    link: "",
+  },
+  {
+    label: "Login Activity",
+    icon: <AiOutlineLogin />,
   },
   {
     label: "API",
     icon: <HiMiniCodeBracket />,
-    link: "",
   },
 ];
 
-export default function DashboardSidebar() {
+export default function ProfileDropdown() {
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
   const [activeMenu, setActiveMenu] = useState<string>("Overview");
 
@@ -112,7 +85,7 @@ export default function DashboardSidebar() {
   console.log("openMenus", openMenus);
 
   return (
-    <aside className="w-fit min-w-[250px]  h-fit dark:bg-[#161735]  bg-white py-4 rounded-lg flex flex-col justify-between">
+    <aside className="w-fit min-w-[250px] bg-gray-50/95 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
       <div>
         {/* Profile Header */}
         <div className="flex mx-4 items-center space-x-3 mb-6">
@@ -132,6 +105,9 @@ export default function DashboardSidebar() {
           </button>
         </div>
 
+        {/* amount card */}
+        <AmountCard />
+
         {/* Top Menu Items */}
         <nav className="space-y-2 ">
           {menuItems.map((item) => (
@@ -143,78 +119,49 @@ export default function DashboardSidebar() {
                   : ""
               }`}
             >
-              {item.children ? (
-                <div
-                  // href={item.href}
-                  className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
-                  onClick={() => {
-                    if (item.children) {
-                      toggleMenu(item.label);
-                    } else {
-                      setActiveMenu(item.label);
-                    }
-                  }}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="">{item.label}</span>
-                  </div>
-                  {item.children && (
-                    <span>
-                      {openMenus[item.label] ? (
-                        <FaChevronUp />
-                      ) : (
-                        <FaChevronDown />
-                      )}
-                    </span>
-                  )}
+              <Link
+                href=""
+                className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
+                onClick={() => {
+                  if (item.children) {
+                    toggleMenu(item.label);
+                  } else {
+                    setActiveMenu(item.label);
+                  }
+                }}
+              >
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">{item.icon}</span>
+                  <span className="">{item.label}</span>
                 </div>
-              ) : (
-                <Link
-                  href={item.link}
-                  className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
-                  onClick={() => {
-                    if (item.children) {
-                      toggleMenu(item.label);
-                    } else {
-                      setActiveMenu(item.label);
-                    }
-                  }}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="">{item.label}</span>
-                  </div>
-                  {item.children && (
-                    <span>
-                      {openMenus[item.label] ? (
-                        <FaChevronUp />
-                      ) : (
-                        <FaChevronDown />
-                      )}
-                    </span>
-                  )}
-                </Link>
-              )}
+                {item.children && (
+                  <span>
+                    {openMenus[item.label] ? (
+                      <FaChevronUp />
+                    ) : (
+                      <FaChevronDown />
+                    )}
+                  </span>
+                )}
+              </Link>
 
               {item.children && openMenus[item.label] && (
                 <div className=" mt-1 mb-1 space-y-2 opacity-80 text-xs font-normal">
                   {item.children.map((sub) => (
-                    <Link
-                      href={sub.link}
+                    <div
                       key={`${item.label}-${sub}`}
                       className={` ${
-                        activeMenu === sub.item
+                        activeMenu === sub
                           ? "border-l-3 border-green-600 bg-gradient-to-r from-green-500/20 via-green-500/20 to-transparent hover:bg-none"
                           : ""
                       } pl-10 cursor-pointer hover:bg-slate-400/20 hover:rounded-md py-2 flex gap-1 items-center`}
                       onClick={() => {
-                        setActiveMenu(sub.item);
+                        setActiveMenu(sub);
                       }}
                     >
                       <GoDotFill />
-                      {sub.item}
-                    </Link>
+                      {sub}
+                    </div>
                   ))}
                 </div>
               )}

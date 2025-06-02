@@ -1,20 +1,16 @@
 // import Auth from "@/components/auth/Auth";
 // import CryptoConvert from "@/components/convert/ConvertTest1";
 // import LoginForm from "@/components/auth/LoginForm";
-
-import AirdropJoinCard from "@/components/airdrop/contest/AirdropJoinCard";
-import ParticipantCard from "@/components/common/ParticipantCard";
+"use client";
+import ModelCard from "@/components/common/ModelCard";
 
 const Page = () => {
+  const test = () => {
+    console.log("Test");
+  };
   return (
-    <div className="w-[90%] mx-auto h-full">
-      {/* <LoginForm /> */}
-      {/* <Auth /> */}
-      {/* <CryptoConvert /> */}
-      {/* <TopGainers /> */}
-      {/* <TradeTable /> */}
-      <AirdropJoinCard />
-      <ParticipantCard Participants={6} />
+    <div className="w-[90%] mx-auto h-full flex justify-end mr-10">
+      <ModelCard onClose={test} />
     </div>
   );
 };
