@@ -23,7 +23,16 @@ const ChangeMailConfirmationPopup: FC<Props> = ({ onSuccess, onClose }) => {
       <h2 className={`${saira.className} text-sm font-semibold `}>
         Are you sure you want to update your linked email address?
       </h2>
-      {/* input */}
+      {/* message */}
+      <div className="p-2 rounded-md border border-slate-500/30 space-y-1">
+        <h4 className="text-xs">Steps to Unlink Your Email</h4>
+        <p className="text-[9px] font-light">
+          For your account&apos;s security, please note that after changing your
+          email address, on-chain withdrawals, internal transfers, fiat
+          withdrawals, card transactions, P2P trading, and advertising
+          activities will be temporarily suspended for 24 hours.
+        </p>
+      </div>
 
       {/* Action buttons */}
       <div className="w-full flex flex-col sm:flex-row gap-4 justify-between mt-2 text-xs">
@@ -36,9 +45,9 @@ const ChangeMailConfirmationPopup: FC<Props> = ({ onSuccess, onClose }) => {
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
                  py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
-          onClick={() => onSuccess("")}
+          onClick={() => onSuccess("next_step")}
         >
-          Confirm
+          Change the Email
         </button>
       </div>
     </div>

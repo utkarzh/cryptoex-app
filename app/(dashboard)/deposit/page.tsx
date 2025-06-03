@@ -1,12 +1,10 @@
-import Withdrawal from "@/components/dashboard/wallet/withdrawal/Withdrawal";
+import Deposit from "@/components/dashboard/wallet/deposit/Deposit";
 import React from "react";
-
-// type Props = {};
 
 const page = () => {
   return (
     <div className="w-[98%] mx-auto">
-      <Withdrawal />
+      <Deposit />
     </div>
   );
 };

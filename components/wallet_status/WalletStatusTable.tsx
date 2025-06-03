@@ -1,5 +1,6 @@
 "use client";
 
+import { saira } from "@/utils/Font";
 // import { saira } from "@/utils/Font";
 import { useState } from "react";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
@@ -81,23 +82,12 @@ const mockData = [
   },
 ];
 
-export default function AssetsTable() {
+export default function WalletStatusTable() {
   const [search, setSearch] = useState("");
 
   const filteredData = mockData.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
-
-  const [selectedTab, setSelectedTab] = useState("all");
-
-  const selectTabHandler = (data: string) => {
-    setSelectedTab(data);
-    // if (data === "all") {
-    //   setSearch("");
-    //   return;
-    // }
-    // setSearch(data);
-  };
 
   const pageCount = 10;
 
@@ -107,29 +97,12 @@ export default function AssetsTable() {
 
   return (
     <div className=" rounded-md bg-white dark:bg-[#161735] p-6">
-      {/* heading */}
-      <h2 className="text-sm mb-4">Total Asset</h2>
       <div className="flex justify-between items-center mb-4">
-        {/* tabs */}
-        <div className="flex items-center gap-4 pt-2 ">
-          {["all", "delisted"].map((val) => (
-            <button
-              key={val}
-              onClick={() => selectTabHandler(val)}
-              className={`text-[14px] font-light cursor-pointer  relative  ${
-                selectedTab === val
-                  ? "text-green-400 border-b-2 "
-                  : "border-b-2 border-transparent"
-              }`}
-            >
-              <div className="flex gap-1 items-center text-sm capitalize">
-                {val}
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <div className="relative flex items-center">
+        {/* heading */}
+        <h2 className={` ${saira.className} text-lg font-medium`}>
+          Wallet Status
+        </h2>
+        <div className="relative flex items-center justify-center">
           <input
             type="text"
             placeholder="Search"

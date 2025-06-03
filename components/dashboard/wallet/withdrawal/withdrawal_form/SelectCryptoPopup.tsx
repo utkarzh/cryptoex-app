@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import React, { FC, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";

@@ -1,7 +1,7 @@
 import React from "react";
 import AssetsTable from "./AssetsTable";
 
-const Wallet = () => {
+const Assets = () => {
   return (
     <div className="w-full">
       <AssetsTable />
@@ -9,4 +9,4 @@ const Wallet = () => {
   );
 };
 
-export default Wallet;
+export default Assets;

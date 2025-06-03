@@ -40,15 +40,16 @@ const menuItems: MenuItem[] = [
     link: "",
     children: [
       { item: "Profile", link: "/profile" },
-      { item: "Settings", link: "/settings" },
+      { item: "Security", link: "/security" },
     ],
   },
   {
     label: "Wallet",
     icon: <IoWalletOutline />,
     children: [
+      { item: "Assets", link: "/assets" },
       { item: "Deposit", link: "/deposit" },
-      { item: "Withdraw", link: "/withdraw" },
+      { item: "Withdraw", link: "/withdrawal" },
     ],
     link: "",
   },
@@ -56,8 +57,8 @@ const menuItems: MenuItem[] = [
     label: "History",
     icon: <MdOutlineHistory />,
     children: [
-      { item: "Login History", link: "#" },
-      { item: "Transaction History", link: "#" },
+      { item: "Deposit history", link: "/deposit-history" },
+      { item: "Withdraw history", link: "/withdraw-history" },
     ],
     link: "",
   },
@@ -65,8 +66,9 @@ const menuItems: MenuItem[] = [
     label: "Orders",
     icon: <SlBasketLoaded />,
     children: [
-      { item: "Open Orders", link: "#" },
-      { item: "Order History", link: "#" },
+      { item: "Open Orders", link: "open-orders" },
+      { item: "Order History", link: "order-history" },
+      { item: "Trade History", link: "trade-history" },
     ],
     link: "",
   },
@@ -74,8 +76,8 @@ const menuItems: MenuItem[] = [
     label: "Earn",
     icon: <LuHandCoins />,
     children: [
-      { item: "Devices", link: "#" },
-      { item: "IP Logs", link: "#" },
+      { item: "Loans", link: "#" },
+      { item: "Staking", link: "#" },
     ],
     link: "",
   },
@@ -83,8 +85,8 @@ const menuItems: MenuItem[] = [
     label: "Login activity",
     icon: <AiOutlineLogin />,
     children: [
-      { item: "Devices", link: "#" },
-      { item: "IP Logs", link: "#" },
+      { item: "Login History", link: "login-history" },
+      { item: "Device management", link: "device-management" },
     ],
     link: "",
   },
@@ -96,7 +98,7 @@ const menuItems: MenuItem[] = [
   {
     label: "API",
     icon: <HiMiniCodeBracket />,
-    link: "",
+    link: "/api",
   },
 ];
 
