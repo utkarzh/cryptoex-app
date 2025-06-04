@@ -15,7 +15,7 @@ const financeOptions = [
     icon: <RiStackLine className=" text-xl" />,
     title: "Staking",
     description: "Stake coins, earn passive income.",
-    href: "#",
+    href: "/staking",
   },
 ];
 

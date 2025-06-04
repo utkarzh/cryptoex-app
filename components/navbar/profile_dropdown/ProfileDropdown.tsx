@@ -7,69 +7,98 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
 import { HiMiniCodeBracket } from "react-icons/hi2";
-import {
-  IoGiftOutline,
-  IoHomeOutline,
-  IoLayersOutline,
-  IoWalletOutline,
-} from "react-icons/io5";
+import { IoGiftOutline, IoHomeOutline, IoWalletOutline } from "react-icons/io5";
 import { MdOutlineHistory } from "react-icons/md";
 import { RiShieldUserLine } from "react-icons/ri";
 import { SlBasketLoaded } from "react-icons/sl";
 import AmountCard from "./AmountCard";
-import { GiMoneyStack } from "react-icons/gi";
+import { LuHandCoins } from "react-icons/lu";
+
+type ChildLinkData = {
+  item: string;
+  link: string;
+};
 
 type MenuItem = {
   label: string;
   icon: React.ReactNode;
-  children?: string[];
+  children?: ChildLinkData[];
   bottom?: boolean;
+  isProfileDropdown?: boolean;
+  link: string;
 };
 
 const menuItems: MenuItem[] = [
   {
     label: "Overview",
     icon: <IoHomeOutline />,
+    link: "/dashboard",
   },
   {
     label: "Account",
     icon: <RiShieldUserLine />,
-    children: ["Profile", "Settings"],
+    link: "",
+    children: [
+      { item: "Profile", link: "/profile" },
+      { item: "Security", link: "/security" },
+    ],
   },
   {
     label: "Wallet",
     icon: <IoWalletOutline />,
-    children: ["Deposit", "Withdraw"],
+    children: [
+      { item: "Assets", link: "/assets" },
+      { item: "Deposit", link: "/deposit" },
+      { item: "Withdraw", link: "/withdrawal" },
+    ],
+    link: "",
   },
   {
     label: "History",
     icon: <MdOutlineHistory />,
-    children: ["Login History", "Transaction History"],
+    children: [
+      { item: "Deposit history", link: "/deposit-history" },
+      { item: "Withdraw history", link: "/withdraw-history" },
+    ],
+    link: "",
   },
   {
     label: "Orders",
     icon: <SlBasketLoaded />,
-    children: ["Open Orders", "Order History"],
+    children: [
+      { item: "Open Orders", link: "open-orders" },
+      { item: "Order History", link: "order-history" },
+      { item: "Trade History", link: "trade-history" },
+    ],
+    link: "",
   },
   {
-    label: "Staking",
-    icon: <IoLayersOutline />,
+    label: "Earn",
+    icon: <LuHandCoins />,
+    children: [
+      { item: "Loans", link: "/loans" },
+      { item: "Staking", link: "/staking" },
+    ],
+    link: "",
   },
   {
-    label: "Loan",
-    icon: <GiMoneyStack />,
+    label: "Login activity",
+    icon: <AiOutlineLogin />,
+    children: [
+      { item: "Login History", link: "login-history" },
+      { item: "Device management", link: "device-management" },
+    ],
+    link: "",
   },
   {
     label: "Referrals",
     icon: <IoGiftOutline />,
-  },
-  {
-    label: "Login Activity",
-    icon: <AiOutlineLogin />,
+    link: "",
   },
   {
     label: "API",
     icon: <HiMiniCodeBracket />,
+    link: "/api",
   },
 ];
 
@@ -85,7 +114,7 @@ export default function ProfileDropdown() {
   console.log("openMenus", openMenus);
 
   return (
-    <aside className="w-fit min-w-[250px] bg-gray-50/95 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
+    <aside className="w-fit max-h-[90vh] overflow-y-auto min-w-[280px] bg-gray-50/95 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
       <div>
         {/* Profile Header */}
         <div className="flex mx-4 items-center space-x-3 mb-6">
@@ -119,49 +148,78 @@ export default function ProfileDropdown() {
                   : ""
               }`}
             >
-              <Link
-                href=""
-                className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
-                onClick={() => {
-                  if (item.children) {
-                    toggleMenu(item.label);
-                  } else {
-                    setActiveMenu(item.label);
-                  }
-                }}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="text-lg">{item.icon}</span>
-                  <span className="">{item.label}</span>
+              {item.children ? (
+                <div
+                  // href={item.href}
+                  className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
+                  onClick={() => {
+                    if (item.children) {
+                      toggleMenu(item.label);
+                    } else {
+                      setActiveMenu(item.label);
+                    }
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="">{item.label}</span>
+                  </div>
+                  {item.children && (
+                    <span>
+                      {openMenus[item.label] ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+                    </span>
+                  )}
                 </div>
-                {item.children && (
-                  <span>
-                    {openMenus[item.label] ? (
-                      <FaChevronUp />
-                    ) : (
-                      <FaChevronDown />
-                    )}
-                  </span>
-                )}
-              </Link>
+              ) : (
+                <Link
+                  href={item.link}
+                  className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
+                  onClick={() => {
+                    if (item.children) {
+                      toggleMenu(item.label);
+                    } else {
+                      setActiveMenu(item.label);
+                    }
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="">{item.label}</span>
+                  </div>
+                  {item.children && (
+                    <span>
+                      {openMenus[item.label] ? (
+                        <FaChevronUp />
+                      ) : (
+                        <FaChevronDown />
+                      )}
+                    </span>
+                  )}
+                </Link>
+              )}
 
               {item.children && openMenus[item.label] && (
                 <div className=" mt-1 mb-1 space-y-2 opacity-80 text-xs font-normal">
                   {item.children.map((sub) => (
-                    <div
+                    <Link
+                      href={sub.link}
                       key={`${item.label}-${sub}`}
                       className={` ${
-                        activeMenu === sub
+                        activeMenu === sub.item
                           ? "border-l-3 border-green-600 bg-gradient-to-r from-green-500/20 via-green-500/20 to-transparent hover:bg-none"
                           : ""
                       } pl-10 cursor-pointer hover:bg-slate-400/20 hover:rounded-md py-2 flex gap-1 items-center`}
                       onClick={() => {
-                        setActiveMenu(sub);
+                        setActiveMenu(sub.item);
                       }}
                     >
                       <GoDotFill />
-                      {sub}
-                    </div>
+                      {sub.item}
+                    </Link>
                   ))}
                 </div>
               )}

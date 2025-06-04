@@ -1,7 +1,7 @@
 "use client";
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
-import StatusCard, { Data_Type } from "../common/StatusCard";
+import StatusCard, { Data_Type } from "../../common/StatusCard";
 
 const airdropData: Data_Type[] = [
   {
@@ -19,7 +19,7 @@ const airdropData: Data_Type[] = [
   {
     status: "ongoing",
     statusColor: "bg-green-500",
-    href: "/airdrop/contest",
+    href: "/launchpad/contest",
     borderColor: "border-green-500",
     shadow: "shadow-[1px_1px_2px_#00c951]",
     token: "Leeu SPEL (SPL)",
@@ -55,7 +55,7 @@ const airdropData: Data_Type[] = [
   },
 ];
 
-const AirdropContent = () => {
+const LaunchpadContent = () => {
   const [selectedTab, setSelectedTab] = useState<
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
@@ -105,4 +105,4 @@ const AirdropContent = () => {
   );
 };
 
-export default AirdropContent;
+export default LaunchpadContent;

@@ -1,4 +1,4 @@
-import Loans from "@/components/loans/Loans";
+import Loans from "@/components/earn/loans/Loans";
 import React from "react";
 
 const Page = () => {

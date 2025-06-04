@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import TradingViewWidget from "../graph/TradingViewWidget";
+import { useTheme } from "next-themes";
 
 const pairs = [
   "BTC/BNB",
@@ -22,11 +24,12 @@ const mockStats = {
 
 const CryptoStats = () => {
   const [activePair, setActivePair] = useState("BTC/BNB");
+  const { theme } = useTheme();
 
   return (
-    <div className=" w-full h-full  overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm rounded-xl shadow-lg space-y-3 flex flex-col ">
+    <div className=" w-full h-full  overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm rounded-xl shadow-lg flex flex-col ">
       {/* Pair Tabs */}
-      <div className="flex flex-wrap pl-6 gap-4 border-b-2 dark:border-white/10 border-[#161735]/10 pt-2  ">
+      <div className="mt-2 flex flex-wrap pl-6 gap-4 border-b-2 dark:border-white/10 border-[#161735]/10 pt-2  ">
         {pairs.map((pair) => (
           <button
             key={pair}
@@ -43,7 +46,7 @@ const CryptoStats = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="flex h-fit flex-wrap items-center gap-6 pl-6 pb-2 text-[10px] border-b-2 dark:border-white/10 border-[#161735]/10">
+      <div className=" mt-2 flex h-fit flex-wrap items-center gap-6 pl-6 pb-2 text-[10px] border-b-2 dark:border-white/10 border-[#161735]/10">
         <div className="text-red-500 text-[12px] font-bold">
           {mockStats.price.toLocaleString()}
           <div className=" dark:text-white/80 text-black font-light">
@@ -84,7 +87,12 @@ const CryptoStats = () => {
       </div>
 
       <div className="h-full w-full flex justify-center items-center min-h-[400px]">
-        Integrate graph here
+        {/* Integrate graph here */}
+        <TradingViewWidget
+          theme={theme as "light" | "dark"}
+          backgroundColor={theme === "dark" ? "#06062a" : "#eff0f2"}
+          symbol="INDEX:BTCUSD"
+        />
       </div>
     </div>
   );

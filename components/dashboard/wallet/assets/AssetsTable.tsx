@@ -244,17 +244,19 @@ export default function AssetsTable() {
                   <td className="py-3 px-2  text-center">{item.avgPrice}</td>
 
                   <td className="py-3 px-2 text-right space-x-1">
-                    <button
-                      className={`text-[12px] px-2 py-1 ${"text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
-                    >
-                      Withdraw
-                    </button>
+                    <div className="flex gap-2 flex-wrap justify-end">
+                      <button
+                        className={`text-[12px] px-2 py-1 ${"text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
+                      >
+                        Withdraw
+                      </button>
 
-                    <button
-                      className={`text-[12px] px-2 py-1 ${"text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
-                    >
-                      Deposit
-                    </button>
+                      <button
+                        className={`text-[12px] px-2 py-1 ${"text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
+                      >
+                        Deposit
+                      </button>
+                    </div>
                   </td>
                 </tr>
               ))}

@@ -1,7 +1,6 @@
-import StakeHero from "@/components/stake/stakehero/StakeHero";
+import StakeHero from "@/components/earn/stake/stakehero/StakeHero";
+import StakeMain from "@/components/earn/stake/stakemain/StakeMain";
 import React from "react";
-import StakeMain from "@/components/stake/stakemain/StakeMain";
-
 const Page = () => {
   return (
     <div className="w-full h-fit ">

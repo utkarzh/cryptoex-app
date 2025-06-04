@@ -1,11 +1,13 @@
 import Image from "next/image";
-import React from "react";
-// import SignupForm from "./SignupForm";
-import LoginForm from "./LoginForm";
+import React, { FC } from "react";
 
-const Auth = () => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Auth: FC<Props> = ({ children }) => {
   return (
-    <div className="w-full flex justify-center items-center relative mt-20  ">
+    <div className="w-full flex justify-center items-center relative pt-20 ">
       {/* background images*/}
       <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover "></div>
       <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover "></div>
@@ -51,10 +53,7 @@ const Auth = () => {
           </div>
         </div>
         {/* form part */}
-        <div className="w-full  ">
-          {/* <SignupForm /> */}
-          <LoginForm />
-        </div>
+        <div className="w-full  ">{children}</div>
       </div>
     </div>
   );

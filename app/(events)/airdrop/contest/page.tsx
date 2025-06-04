@@ -1,4 +1,4 @@
-import AirdropContest from "@/components/airdrop/contest/AirdropContest";
+import AirdropContest from "@/components/events/airdrop/contest/AirdropContest";
 import React from "react";
 
 // type Props = {};

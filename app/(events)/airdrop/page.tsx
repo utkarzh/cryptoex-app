@@ -1,4 +1,4 @@
-import Airdrop from "@/components/airdrop/Airdrop";
+import Airdrop from "@/components/events/airdrop/Airdrop";
 import React from "react";
 
 const Page = () => {

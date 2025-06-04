@@ -9,13 +9,13 @@ const options = [
     icon: <FiTarget className=" text-xl" />,
     title: "Spot trade",
     description: "Buy or sell crypto instantly",
-    href: "#",
+    href: "/trade",
   },
   {
     icon: <FiTrendingUp className=" text-xl" />,
     title: "Margin trade",
     description: "Trade with borrowed funds for bigger moves",
-    href: "#",
+    href: "/trade",
   },
   {
     icon: <FiRepeat className=" text-xl" />,

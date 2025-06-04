@@ -1,4 +1,4 @@
-import Launchpad from "@/components/launchpad/Launchpad";
+import Launchpad from "@/components/events/launchpad/Launchpad";
 import React from "react";
 
 const Page = () => {

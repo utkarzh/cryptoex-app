@@ -12,10 +12,12 @@ import { IoMenu } from "react-icons/io5";
 import TradeDropdown from "./nav_dropdown/TradeDropdown";
 import EarnDropdown from "./nav_dropdown/EarnDropdown";
 import EventsDropdown from "./nav_dropdown/EventsDropdown";
+import ProfileDropdown from "./profile_dropdown/ProfileDropdown";
 
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isAuth] = useState(true);
 
   const sidebarHandler = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -150,14 +152,22 @@ const Navbar = () => {
               </div>
 
               {/* signup and login after small screen */}
-              <div className="flex xl:hidden flex-wrap items-center justify-center gap-2 text-sm">
-                <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer">
-                  Sign in
-                </button>
-                <button className="w-fit text-nowrap p-1 px-3 rounded-full text-white  bg-green-600 dark:bg-green-700 cursor-pointer">
-                  Sign up
-                </button>
-              </div>
+              {!isAuth && (
+                <div className="flex xl:hidden flex-wrap items-center justify-center gap-2 text-sm">
+                  <Link
+                    href="/login"
+                    className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    href="/signup"
+                    className="w-fit text-nowrap p-1 px-3 rounded-full text-white  bg-green-600 dark:bg-green-700 cursor-pointer"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+              )}
             </div>
             {/* last part */}
             <div className="hidden xl:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
@@ -187,14 +197,36 @@ const Navbar = () => {
               </div>
 
               {/* sign in and signup pages */}
-              <div className="flex gap-2 text-sm">
-                <button className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer">
-                  Sign in
-                </button>
-                <button className="w-fit text-nowrap p-1 px-3 rounded-full text-white bg-green-600 dark:bg-green-700 cursor-pointer">
-                  Sign up
-                </button>
-              </div>
+              {!isAuth ? (
+                <div className="flex gap-2 text-sm">
+                  <Link
+                    href="/login"
+                    className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    href="/signup"
+                    className="w-fit text-nowrap p-1 px-3 rounded-full text-white bg-green-600 dark:bg-green-700 cursor-pointer"
+                  >
+                    Sign up
+                  </Link>
+                </div>
+              ) : (
+                <div className="relative  group">
+                  <Image
+                    src="/images/profile.png"
+                    alt="profile"
+                    width={80}
+                    height={80}
+                    className="w-8 h-8 rounded-full cursor-pointer"
+                  />
+
+                  <div className="hidden group-hover:block absolute  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit ">
+                    <ProfileDropdown />
+                  </div>
+                </div>
+              )}
 
               <div className="h-[50%] border-r-2 border-gray-700"></div>
               {/* language and theme buttons */}
@@ -204,8 +236,23 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* sidebar opener and theme buttons*/}
+            {/* profile , sidebar opener and theme buttons*/}
             <div className="xl:hidden flex items-center gap-3">
+              {/* after auth profile pic */}
+              {isAuth && (
+                <div className="w-fit h-full border-r-2 pr-3 border-slate-500/30 relative group">
+                  <Image
+                    src="/images/profile.png"
+                    alt="profile"
+                    width={80}
+                    height={80}
+                    className="w-8 h-8 rounded-full cursor-pointer"
+                  />
+                  <div className="hidden group-hover:block absolute  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit  ">
+                    <ProfileDropdown />
+                  </div>
+                </div>
+              )}
               <div className="flex gap-3 text-2xl items-center">
                 <ThemeSwitcher size={26} />
                 <MdLanguage className="cursor-pointer" />

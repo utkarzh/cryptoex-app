@@ -10,6 +10,7 @@ type Props = {
 
 const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
   const [changedNickname, setChangedNickname] = useState(nickname);
+
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-4">
       {/* close button */}

@@ -9,7 +9,7 @@ export default function DashboardLayout({
   return (
     <div className="w-full ">
       <div className="w-full flex my-6">
-        <div className="w-fit hidden lg:block  pl-2">
+        <div className="w-fit   lg:pl-2 relative ">
           {" "}
           <DashboardSidebar />
         </div>

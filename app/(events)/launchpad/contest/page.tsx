@@ -1,4 +1,4 @@
-import LaunchpadContest from "@/components/launchpad/contest/LaunchpadContest";
+import LaunchpadContest from "@/components/events/launchpad/contest/LaunchpadContest";
 import React from "react";
 
 // type Props = {};

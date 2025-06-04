@@ -1,7 +1,7 @@
 "use client";
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
-import StatusCard, { Data_Type } from "../common/StatusCard";
+import StatusCard, { Data_Type } from "../../common/StatusCard";
 
 const airdropData: Data_Type[] = [
   {

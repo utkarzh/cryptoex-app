@@ -1,4 +1,4 @@
-import TradeCompetition from "@/components/tradecontest/competition/TradeCompetition";
+import TradeCompetition from "@/components/events/tradecontest/competition/TradeCompetition";
 import React from "react";
 
 // type Props = {};

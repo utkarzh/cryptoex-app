@@ -1,4 +1,4 @@
-import Tradecontest from "@/components/tradecontest/Tradecontest";
+import Tradecontest from "@/components/events/tradecontest/Tradecontest";
 import React from "react";
 
 const Page = () => {

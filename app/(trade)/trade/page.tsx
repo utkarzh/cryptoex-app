@@ -1,8 +1,8 @@
-import OpenOrderAndHistory from "@/components/trade/open_order_n_history/OpenOrderAndHistory";
-import TradeBook from "@/components/trade/trade_book/TradeBook";
-import TradeForm from "@/components/trade/trade_form/TradeForm";
-import CryptoStats from "@/components/trade/trade_graph/CryptoStats";
-import TradeStats from "@/components/trade/trade_stats/TradeStats";
+import OpenOrderAndHistory from "@/components/trade/trade/open_order_n_history/OpenOrderAndHistory";
+import TradeBook from "@/components/trade/trade/trade_book/TradeBook";
+import TradeForm from "@/components/trade/trade/trade_form/TradeForm";
+import CryptoStats from "@/components/trade/trade/trade_graph/CryptoStats";
+import TradeStats from "@/components/trade/trade/trade_stats/TradeStats";
 import React from "react";
 const Page = () => {
   return (
