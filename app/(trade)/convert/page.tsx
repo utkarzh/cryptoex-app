@@ -1,4 +1,4 @@
-import Convert from "@/components/convert/Convert";
+import Convert from "@/components/trade/convert/Convert";
 import React from "react";
 
 const Page = () => {
