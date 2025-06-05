@@ -3,29 +3,30 @@
 import { FiTarget, FiTrendingUp, FiRepeat } from "react-icons/fi";
 import DropdownCard from "./DropdownCard";
 import Link from "next/link";
-
-const options = [
-  {
-    icon: <FiTarget className=" text-xl" />,
-    title: "Spot trade",
-    description: "Buy or sell crypto instantly",
-    href: "/trade",
-  },
-  {
-    icon: <FiTrendingUp className=" text-xl" />,
-    title: "Margin trade",
-    description: "Trade with borrowed funds for bigger moves",
-    href: "/trade",
-  },
-  {
-    icon: <FiRepeat className=" text-xl" />,
-    title: "Convert",
-    description: "Swap crypto in seconds—simple and fast",
-    href: "/convert",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function TradeDropdown() {
+  const t = useTranslations("Navbar.NavItems.trade.items");
+  const options = [
+    {
+      icon: <FiTarget className=" text-xl" />,
+      title: t("spot.label"),
+      description: t("spot.desc"),
+      href: "/trade",
+    },
+    {
+      icon: <FiTrendingUp className=" text-xl" />,
+      title: t("margin.label"),
+      description: t("margin.desc"),
+      href: "/trade",
+    },
+    {
+      icon: <FiRepeat className=" text-xl" />,
+      title: t("convert.label"),
+      description: t("convert.desc"),
+      href: "/convert",
+    },
+  ];
   return (
     <DropdownCard>
       <ul className="w-full rounded-2xl p-2  max-w-md">

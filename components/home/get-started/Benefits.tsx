@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { BiDollar, BiStats } from "react-icons/bi";
 import { CiStar } from "react-icons/ci";
@@ -9,10 +10,11 @@ import { RiFocus3Line } from "react-icons/ri";
 
 const Benefits = () => {
   const [isUserBenefits, setIsUserBenifits] = useState(false);
+  const t = useTranslations("homePage.getStarted.benefits");
 
   return (
-    <div className="w-full h-fit   ">
-      <div className="w-[65%] sm:w-[75%] relative rounded-r-md py-8 flex justify-end  ">
+    <div className="w-full  h-fit   ">
+      <div className="w-[65%] sm:w-[75%]  relative rounded-r-md py-8 flex justify-end  ">
         <div className="bg-[url('/images/hexblock.png')] bg-cover bg-center opacity-30  h-full w-full absolute top-0 right-0 bg-transparent rounded-r-md  z-[20] "></div>
         <div
           className={`opacity-80 rounded-r-md  h-full w-full absolute top-0 right-0 ${
@@ -23,7 +25,7 @@ const Benefits = () => {
         ></div>
 
         <div
-          className={`w-[95%] sm:w-[80%] z-[40] ${
+          className={`w-[95%] sm:w-[80%] z-[40]  ${
             isUserBenefits
               ? "bg-yellow-700/50 dark:bg-yellow-600/50"
               : "bg-green-800/50 dark:bg-green-600/50"
@@ -38,11 +40,10 @@ const Benefits = () => {
 
               <div className="flex flex-col gap0">
                 <h2 className={`${saira.className} text-[14px] font-bold`}>
-                  Coin/Token Listings
+                  {t("vendor.ben1.title")}
                 </h2>
                 <p className="font-extralight text-[12px]">
-                  IndoEx is expanding investment access to all qualified
-                  cryptocurrencies worldwide.
+                  {t("vendor.ben1.content")}
                 </p>
               </div>
             </div>
@@ -55,11 +56,10 @@ const Benefits = () => {
 
               <div className="flex flex-col gap0">
                 <h2 className={`${saira.className} text-[14px] font-bold`}>
-                  Trading Contest
+                  {t("vendor.ben2.title")}
                 </h2>
                 <p className="font-extralight text-[12px]">
-                  Our trading contests let users showcase skills. Hold 0.1 BTC
-                  to enter and win rewards!
+                  {t("vendor.ben2.content")}
                 </p>
               </div>
             </div>
@@ -74,11 +74,10 @@ const Benefits = () => {
 
               <div className="flex flex-col gap0">
                 <h2 className={`${saira.className} text-[14px] font-bold`}>
-                  Custom Pairing
+                  {t("vendor.ben3.title")}
                 </h2>
                 <p className="font-extralight text-[12px]">
-                  Unlike other exchanges, IndoEx charges no fees for extra
-                  market pairs.
+                  {t("vendor.ben3.content")}
                 </p>
               </div>
             </div>
@@ -91,11 +90,10 @@ const Benefits = () => {
 
               <div className="flex flex-col gap0">
                 <h2 className={`${saira.className} text-[14px] font-bold`}>
-                  Listing Contest
+                  {t("vendor.ben4.title")}
                 </h2>
                 <p className="font-extralight text-[12px]">
-                  Our listing competition rewards the winner with 3 BTC. More
-                  benefits await.
+                  {t("vendor.ben4.content")}
                 </p>
               </div>
             </div>
@@ -122,7 +120,7 @@ const Benefits = () => {
             } to-[#eff0f2] dark:to-[#06062a] transition-all duration-500 w-fit h-[70%] text-nowrap pl-[50%] z-[20] flex justify-center items-center pr-2 text-[12px] sm:text-[14px] font-medium`}
           >
             <span className="transition-all delay-100 duration-700 ">
-              {isUserBenefits ? "User benefits" : "Vendor benefits"}
+              {isUserBenefits ? t("type_user") : t("type_vendor")}
             </span>
           </div>
 
@@ -136,7 +134,7 @@ const Benefits = () => {
               setIsUserBenifits((prev) => !prev);
             }}
           >
-            {!isUserBenefits ? "User benefits" : "Vendor benefits"}
+            {!isUserBenefits ? t("type_user") : t("type_vendor")}
           </div>
         </div>
       </div>

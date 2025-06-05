@@ -3,29 +3,30 @@ import DropdownCard from "./DropdownCard";
 import Link from "next/link";
 import { PiChartLine, PiParachuteLight } from "react-icons/pi";
 import { RxRocket } from "react-icons/rx";
-
-const items = [
-  {
-    icon: <PiParachuteLight className="text-xl" />,
-    title: "Airdrop",
-    description: "Hold tokens, claim rewards.",
-    href: "/airdrop",
-  },
-  {
-    icon: <RxRocket className="text-xl" />,
-    title: "Launch pad",
-    description: "Invest early in new tokens.",
-    href: "/launchpad",
-  },
-  {
-    icon: <PiChartLine className="text-xl" />,
-    title: "Trade competition",
-    description: "Show your skills, win prizes.",
-    href: "/tradecontest",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const EventsDropdown = () => {
+  const t = useTranslations("Navbar.NavItems.events.items");
+  const items = [
+    {
+      icon: <PiParachuteLight className="text-xl" />,
+      title: t("airdrop.label"),
+      description: t("airdrop.desc"),
+      href: "/airdrop",
+    },
+    {
+      icon: <RxRocket className="text-xl" />,
+      title: t("launchpad.label"),
+      description: t("launchpad.desc"),
+      href: "/launchpad",
+    },
+    {
+      icon: <PiChartLine className="text-xl" />,
+      title: t("tradeCompetition.label"),
+      description: t("tradeCompetition.desc"),
+      href: "/tradecontest",
+    },
+  ];
   return (
     <DropdownCard>
       <ul className="w-full rounded-2xl p-2  max-w-md">

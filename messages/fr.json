@@ -1,0 +1,289 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "Commerce",
+        "items": {
+          "spot": {
+            "label": "Commerce au point",
+            "desc": "Achetez ou vendez la crypto instantanément"
+          },
+          "margin": {
+            "label": "Métier de marge",
+            "desc": "Faire du commerce avec des fonds empruntés pour des mouvements plus importants"
+          },
+          "convert": {
+            "label": "Convertir",
+            "desc": "Échanger la crypto en quelques secondes - simple et rapide"
+          }
+        }
+      },
+      "markets": "Marchés",
+      "earn": {
+        "label": "Gagner",
+        "items": {
+          "loans": {
+            "label": "Prêts",
+            "desc": "Déverrouillez les fonds, gardez votre crypto."
+          },
+          "staking": {
+            "label": "Jalonnement",
+            "desc": "Conneries, gagner un revenu passif."
+          }
+        }
+      },
+      "events": {
+        "label": "Événements",
+        "items": {
+          "airdrop": {
+            "label": "Pub",
+            "desc": "Tenez les jetons, réclame les récompenses."
+          },
+          "launchpad": {
+            "label": "Rampe de lancement",
+            "desc": "Investissez tôt dans de nouveaux jetons."
+          },
+          "tradeCompetition": {
+            "label": "Concours commercial",
+            "desc": "Montrez vos compétences, gagnez des prix."
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "Échange",
+      "web3": "Web3"
+    },
+    "auth": {
+      "signin": "Se connecter",
+      "signup": "S'inscrire",
+      "see_all": "Voir tout",
+      "new_listing": "Nouvelle liste"
+    }
+  },
+
+"homePage": {
+    "heroSection": {
+      "title": "Verbessern Sie Ihre Kryptohandelerfahrung",
+      "subTitle": "Zeuge nahtloser Transaktionen, Echtzeiteinsichten und sichere Handel mit allem, was du brauchst."
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "Stelle",
+        "newlyListed": "Neu gelistet",
+        "topGainers": "Top -Gewinne"
+      },
+      "tableHead": {
+        "coins": "Münzen",
+        "lastPrice": "Letzter Preis",
+        "24hChange": "24H -Veränderung",
+        "markets": "Märkte",
+        "24hVolume": "24H Volumen"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "Erstellen Sie Ihr Konto",
+        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
+        "button": "Fangen an"
+      },
+      "step2": {
+        "heading": "Vervollständige deinen KYC",
+        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
+        "button": "Aktualisieren Sie KYC"
+      },
+      "step3": {
+        "heading": "Handel beginnen",
+        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
+        "button": "Handel beginnen"
+      }
+    },
+    "getStarted": {
+      "heading": "Fangen an",
+      "marketing": {
+        "24hVolume": "24H Volumen (BTC)",
+        "coinsListed": "Münzen aufgeführt",
+        "countries": "Länder",
+        "marketPairs": "Marktpaare"
+      },
+      "benefits": {
+        "type_vendor": "Verkäufer Vorteile",
+        "type_user": "Benutzervorteile",
+        "vendor": {
+          "ben1": {
+            "title": "Münz-/Token -Listings",
+            "content": "INDOEX erweitert den Zugang des Investitions auf alle qualifizierten Kryptowährungen weltweit"
+          },
+          "ben2": {
+            "title": "Handelswettbewerb",
+            "content": "In unseren Handelswettbewerben können Benutzer Fähigkeiten präsentieren. "
+          },
+          "ben3": {
+            "title": "Benutzerdefinierte Paarung",
+            "content": "Im Gegensatz zu anderen Börsen erhebt Indoex keine Gebühren für zusätzliche Marktpaare."
+          },
+          "ben4": {
+            "title": "Auflistungswettbewerb",
+            "content": "Unser Listing -Wettbewerb belohnt den Gewinner mit 3 BTC. "
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "Münz-/Token -Listings",
+            "conent": "INDOEX erweitert den Zugang des Investitions auf alle qualifizierten Kryptowährungen weltweit"
+          },
+          "ben2": {
+            "title": "Handelswettbewerb",
+            "conent": "In unseren Handelswettbewerben können Benutzer Fähigkeiten präsentieren. "
+          },
+          "ben3": {
+            "title": "Benutzerdefinierte Paarung",
+            "conent": "Im Gegensatz zu anderen Börsen erhebt Indoex keine Gebühren für zusätzliche Marktpaare."
+          },
+          "ben4": {
+            "title": "Auflistungswettbewerb",
+            "conent": "Unser Listing -Wettbewerb belohnt den Gewinner mit 3 BTC. "
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "Besonderheit",
+      "leftSection": {
+        "fet1": {
+          "title": "Angemessene Provisionen",
+          "content": "Profitable Investitionsmöglichkeiten und -bedingungen"
+        },
+        "fet2": {
+          "title": "Algorithmischer Handel",
+          "content": "API für CrossPlatform -Handel -Roboter"
+        },
+        "fet3": {
+          "title": "Algorithmischer Handel",
+          "content": "API für CrossPlatform -Handel -Roboter"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "Sichern Brieftaschen",
+          "content": "Behalten Sie Ihre digitalen Assets in Benutzerbrieftaschen"
+        },
+        "fet2": {
+          "title": "Zahlungsoptionen",
+          "content": "Mehr als 10 Möglichkeiten, um ein Konto einzureichen"
+        },
+        "fet3": {
+          "title": "Algorithmischer Handel",
+          "content": "API für CrossPlatform -Handel -Roboter"
+        }
+      }
+    },
+    "partners": {
+      "heading": "Partner",
+      "content": {
+        "title": "Handeln Sie nahtlos über Geräte handeln",
+        "subTitle": "Laden Sie unsere mobile App zum mühelosen Krypto -Handel herunter!",
+        "downloads": {
+          "playStore": {
+            "getIt": "Holen Sie sich an",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "Download auf der",
+            "from": "App Store"
+          }
+        }
+      }
+    }
+  },
+
+   "footer": {
+    "glance": {
+      "text": "Registrieren Sie sich in Minuten - signieren Sie sich mühelos mit Krypto und beginnen Sie mit dem Handel mit dem Handel!",
+      "button": "Fangen an"
+    },
+    "services": {
+      "label": "Dienstleistungen",
+      "items": {
+        "terms": "Nutzungsbedingungen",
+        "policy": "Datenschutzrichtlinie",
+        "status": "Brieftaschenstatus",
+        "announcements": "Ankündigungen",
+        "media": "Medien"
+      }
+    },
+    "legalisation": {
+      "label": "Legalisierung",
+      "items": {
+        "fee": "Gebühren",
+        "legalities": "Legalitäten",
+        "kyc": "AML / KYC -Richtlinie",
+        "protect": "Schützen Sie sich online",
+        "verification": "Überprüfung"
+      }
+    },
+    "others": {
+      "label": "Andere",
+      "items": {
+        "faq": "FAQ",
+        "contact": "Kontaktieren Sie uns",
+        "support": "Kundensupport:",
+        "mails": "Bewerben Sie sich auf Liste:"
+      }
+    },
+    "rights": "© 2025 INDOEX Alle Rechte vorbehalten.",
+    "alert": "Kryptoinvestitionen unterliegen Marktrisiken - investieren mit Bedacht und bleiben auf dem Laufenden."
+  },
+  "sidebar": {
+    "overview": "Aperçu",
+    "account": {
+      "label": "Compte",
+      "children": {
+        "profile": "Profil",
+        "security": "Sécurité"
+      }
+    },
+    "wallet": {
+      "label": "Portefeuille",
+      "children": {
+        "assets": "Actifs",
+        "deposit": "Dépôt",
+        "withdraw": "Retirer"
+      }
+    },
+    "history": {
+      "label": "Histoire",
+      "children": {
+        "depositHistory": "Historique des dépôts",
+        "withdrawHistory": "Retirer l'histoire"
+      }
+    },
+    "orders": {
+      "label": "Ordres",
+      "children": {
+        "openOrders": "Ordres ouverts",
+        "orderHistory": "Historique des commandes",
+        "tradeHistory": "Histoire du commerce"
+      }
+    },
+    "earn": {
+      "label": "Gagner",
+      "children": {
+        "loans": "Prêts",
+        "staking": "Jalonnement"
+      }
+    },
+    "loginActivity": {
+      "label": "Activité de connexion",
+      "children": {
+        "loginHistory": "Historique de connexion",
+        "deviceManagement": "Gestion des appareils"
+      }
+    },
+    "referrals": "Références",
+    "api": "API",
+    "logout": "Déconnecter",
+  "withdraw": "Retirer",
+  "deposit": "Dépôt"
+  }
+}

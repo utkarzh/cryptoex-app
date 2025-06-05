@@ -1,0 +1,291 @@
+{
+  "Navbar": {
+  "NavItems": {
+    "trade": {
+      "label": "Trade",
+      "items": {
+        "spot": {
+          "label": "Spot Trade",
+          "desc":"Buy or sell crypto instantly"
+        },
+        "margin": {
+          "label": "Margin trade",
+          "desc":"Trade with borrowed funds for bigger moves"
+        },
+        "convert":{
+          "label": "Convert",
+          "desc":"Swap crypto in seconds—simple and fast"
+        }
+      }
+    },
+    "markets": "Markets",
+    "earn": {
+      "label": "Earn",
+      "items": {
+        "loans": {
+          "label": "Loans",
+          "desc":"Unlock funds, keep your crypto."
+        },
+        "staking": {
+          "label": "Staking",
+          "desc":"Stake coins, earn passive income."
+        }
+      }
+    },
+    "events": {
+      "label": "Events",
+      "items": {
+        "airdrop": {
+          "label": "Airdrop",
+          "desc":"Hold tokens, claim rewards."
+        },
+        "launchpad": {
+          "label": "Launch pad",
+          "desc":"Invest early in new tokens."
+        },
+        "tradeCompetition": {
+          "label": "Trade competition",
+          "desc":"Show your skills, win prizes."
+        }
+      }
+    }
+  },
+  "toggle": {
+      "exchange": "Exchange",
+      "web3": "Web3"
+    }, 
+    "auth":{
+      "signin":"Sign in",
+      "signup": "Sign up",
+      "see_all":"See All",
+      "new_listing" : "New Listing"
+    }
+},
+
+"homePage":{
+  "heroSection":{
+    "title":"Enhance your Crypto Trading Experience",
+    "subTitle":"Witness seamless transactions, real-time insights, and secure trading everything you need."
+  },
+  "currencyWedgets":{
+    "tableTitle":{
+      "spot":"Spot",
+      "newlyListed":"Newly listed",
+      "topGainers":"Top gainers"
+    },
+    "tableHead":{
+      "coins":"Coins",
+      "lastPrice":"Last price",
+      "24hChange":"24h change",
+      "markets":"Markets",
+      "24hVolume":"24h volume"
+    }
+  },
+  "createAccount": {
+    "step1": {
+      "heading":"Create Your Account",
+      "content":"Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.",
+      "button":"Get started"
+    },
+    "step2": {
+      "heading":"Complete Your KYC",
+      "content":"Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.",
+      "button":"Update KYC"
+    },
+    "step3": {
+      "heading":"Start Trading",
+      "content":"Sign up in minutes with your email, set a secure password, and verify your identity for a safe trading experience.",
+      "button":"Start Trading"
+    }
+  },
+  "getStarted":{
+    "heading":"Get Started",
+    "marketing":{
+      "24hVolume":"24h volume (BTC)",
+      "coinsListed":"Coins listed",
+      "countries" : "Countries",
+      "marketPairs":"Market pairs"
+    },
+    "benefits":{
+      "type_vendor":"Vendor benefits",
+      "type_user":"User benefits",
+      "vendor":{
+         "ben1": {
+          "title":"Coin/Token Listings",
+          "content":"IndoEx is expanding investment access to all qualified cryptocurrencies worldwide"
+         },
+         "ben2": {
+          "title":"Trading Contest",
+          "content":"Our trading contests let users showcase skills. Hold 0.1 BTC to enter and win rewards!"
+         },
+         "ben3": {
+          "title":"Custom Pairing",
+          "content":"Unlike other exchanges, IndoEx charges no fees for extra market pairs."
+         },
+         "ben4": {
+          "title":"Listing Contest",
+          "content":"Our listing competition rewards the winner with 3 BTC. More benefits await."
+         }
+      },
+       "user":{
+         "ben1": {
+          "title":"Coin/Token Listings",
+          "conent":"IndoEx is expanding investment access to all qualified cryptocurrencies worldwide"
+         },
+         "ben2": {
+          "title":"Trading Contest",
+          "conent":"Our trading contests let users showcase skills. Hold 0.1 BTC to enter and win rewards!"
+         },
+         "ben3": {
+          "title":"Custom Pairing",
+          "conent":"Unlike other exchanges, IndoEx charges no fees for extra market pairs."
+         },
+         "ben4": {
+          "title":"Listing Contest",
+          "conent":"Our listing competition rewards the winner with 3 BTC. More benefits await."
+         }
+      }
+    }
+  },
+  "features":{
+    "heading":"Feature",
+    "leftSection":{
+      "fet1":{
+        "title":"Reasonable Commissions",
+        "content":"Profitable investment opportunities and conditions"
+      },
+      "fet2":{
+        "title":"Algorithmic Trading",
+        "content":"API for crossplatform trading robots"
+      },
+      "fet3":{
+        "title":"Algorithmic Trading",
+        "content":"API for crossplatform trading robots"
+      }
+    },
+    "rightSection":{
+       "fet1":{
+        "title":"Secure Wallets",
+        "content":"Keep your digital assets in user wallets"
+      },
+      "fet2":{
+        "title":"Payment Options",
+        "content":"More than 10 ways to deposit to an account"
+      },
+      "fet3":{
+        "title":"Algorithmic Trading",
+        "content":"API for crossplatform trading robots"
+      }
+    }
+  },
+  "partners":{
+    "heading":"Partners",
+    "content":{
+      "title":"Trade seamlessly across devices",
+      "subTitle":"Download our mobile app for effortless crypto trading!",
+      "downloads":{
+        "playStore":{
+          "getIt":"GET IT ON",
+          "from":"Google Play"
+        },
+        "appStore":{
+          "getIt":"Download on the",
+          "from":"App Store"
+        }
+      }
+    }
+  }
+},
+
+"footer":{
+  "glance":{
+    "text":"Register in minutes—sign up, deposit, and start trading crypto effortlessly!",
+    "button":"Get started"
+  },
+  "services":{
+    "label":"Services",
+    "items":{
+      "terms":"Terms of Use",
+      "policy":"Privacy Policy",
+      "status":"Wallet Status",
+      "announcements":"Announcements",
+      "media":"Media"
+    }
+  },
+  "legalisation": {
+    "label":"Legalisation",
+    "items":{
+      "fee":"Fees",
+      "legalities":"Legalities",
+      "kyc":"AML / KYC Policy",
+      "protect":"Protect yourself online",
+      "verification":"Verification"
+    }
+  },
+  "others":{
+    "label":"Others",
+    "items":{
+      "faq":"FAQ",
+      "contact":"Contact us",
+      "support":"Customer Support :",
+      "mails":"Apply to List :"
+
+    }
+  },
+  "rights":"© 2025 INDOEX All rights reserved.",
+  "alert":"Crypto investments are subject to market risks—invest wisely and stay informed."
+}
+,
+"sidebar": {
+    "overview": "Overview",
+    "account": {
+      "label": "Account",
+      "children": {
+        "profile": "Profile",
+        "security": "Security"
+      }
+    },
+    "wallet": {
+      "label": "Wallet",
+      "children": {
+        "assets": "Assets",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw"
+      }
+    },
+    "history": {
+      "label": "History",
+      "children": {
+        "depositHistory": "Deposit History",
+        "withdrawHistory": "Withdraw History"
+      }
+    },
+    "orders": {
+      "label": "Orders",
+      "children": {
+        "openOrders": "Open Orders",
+        "orderHistory": "Order History",
+        "tradeHistory": "Trade History"
+      }
+    },
+    "earn": {
+      "label": "Earn",
+      "children": {
+        "loans": "Loans",
+        "staking": "Staking"
+      }
+    },
+    "loginActivity": {
+      "label": "Login Activity",
+      "children": {
+        "loginHistory": "Login History",
+        "deviceManagement": "Device Management"
+      }
+    },
+    "referrals": "Referrals",
+    "api": "API",
+    "logout": "Log Out",
+    "withdraw":"Withdraw",
+    "deposit":"Deposit"
+  }
+}

@@ -3,120 +3,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineLogin, AiOutlineLogout } from "react-icons/ai";
+import {
+  //  AiOutlineLogin,
+  AiOutlineLogout,
+} from "react-icons/ai";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { FiEdit } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
-import { HiMiniCodeBracket } from "react-icons/hi2";
-import { IoGiftOutline, IoHomeOutline, IoWalletOutline } from "react-icons/io5";
-import { LuHandCoins } from "react-icons/lu";
 import {
-  MdOutlineHistory,
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-import { RiShieldUserLine } from "react-icons/ri";
-import { SlBasketLoaded } from "react-icons/sl";
-
-type ChildLinkData = {
-  item: string;
-  link: string;
-};
-
-type MenuItem = {
-  label: string;
-  icon: React.ReactNode;
-  children?: ChildLinkData[];
-  bottom?: boolean;
-  isProfileDropdown?: boolean;
-  link: string;
-};
-
-const menuItems: MenuItem[] = [
-  {
-    label: "Overview",
-    icon: <IoHomeOutline />,
-    link: "/dashboard",
-  },
-  {
-    label: "Account",
-    icon: <RiShieldUserLine />,
-    link: "",
-    children: [
-      { item: "Profile", link: "/profile" },
-      { item: "Security", link: "/security" },
-    ],
-  },
-  {
-    label: "Wallet",
-    icon: <IoWalletOutline />,
-    children: [
-      { item: "Assets", link: "/assets" },
-      { item: "Deposit", link: "/deposit" },
-      { item: "Withdraw", link: "/withdrawal" },
-    ],
-    link: "",
-  },
-  {
-    label: "History",
-    icon: <MdOutlineHistory />,
-    children: [
-      { item: "Deposit history", link: "/deposit-history" },
-      { item: "Withdraw history", link: "/withdraw-history" },
-    ],
-    link: "",
-  },
-  {
-    label: "Orders",
-    icon: <SlBasketLoaded />,
-    children: [
-      { item: "Open Orders", link: "open-orders" },
-      { item: "Order History", link: "order-history" },
-      { item: "Trade History", link: "trade-history" },
-    ],
-    link: "",
-  },
-  {
-    label: "Earn",
-    icon: <LuHandCoins />,
-    children: [
-      { item: "Loans", link: "/loans" },
-      { item: "Staking", link: "/staking" },
-    ],
-    link: "",
-  },
-  {
-    label: "Login activity",
-    icon: <AiOutlineLogin />,
-    children: [
-      { item: "Login History", link: "login-history" },
-      { item: "Device management", link: "device-management" },
-    ],
-    link: "",
-  },
-  {
-    label: "Referrals",
-    icon: <IoGiftOutline />,
-    link: "",
-  },
-  {
-    label: "API",
-    icon: <HiMiniCodeBracket />,
-    link: "/api",
-  },
-];
+import { useSidebarItems } from "./MenuItems";
+import { useTranslations } from "next-intl";
 
 export default function DashboardSidebar() {
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
   const [activeMenu, setActiveMenu] = useState<string>("Overview");
   const [isSidebar, setIsSidebar] = useState(false);
 
+  const t = useTranslations("sidebar");
+
+  // multi language data
+  const menuItems = useSidebarItems();
+
   const toggleMenu = (label: string) => {
     setOpenMenus((prev) => ({ ...prev, [label]: !prev[label] }));
     // setOpenMenus((prev) => ({ [label]: !prev[label] }));
   };
-
-  console.log("openMenus", openMenus);
 
   return (
     <>
@@ -264,7 +178,7 @@ export default function DashboardSidebar() {
               <span className=" p-2 rounded-full border dark:border-slate-200/40 border-slate-700/20 group-hover:bg-red-500 group-hover:border-transparent group-hover:text-white transition-all duration-300">
                 <AiOutlineLogout className="text-md" />
               </span>
-              <span className="text-sm">Log Out</span>
+              <span className="text-sm">{t("logout")}</span>
             </div>
           </div>
         </div>

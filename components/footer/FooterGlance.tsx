@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,6 +7,7 @@ import { RiThreadsFill, RiTwitterXLine, RiYoutubeLine } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 
 const FooterGlance = () => {
+  const t = useTranslations("footer.glance");
   return (
     <div className="w-full flex flex-col gap-8 justify-between items-start">
       {/* content */}
@@ -29,15 +31,15 @@ const FooterGlance = () => {
           />
         </Link>
         {/* content */}
-        <p className="text-[12px] ">
-          Register in minutes—sign up, deposit, and start trading crypto
-          effortlessly!
-        </p>
+        <p className="text-[12px] ">{t("text")}</p>
         {/* button */}
-        <button className=" w-fit flex text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer">
-          Get Started
+        <Link
+          href="/signup"
+          className=" w-fit flex text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer hover:bg-green-600 transition-all duration-200"
+        >
+          {t("button")}
           <IoIosArrowRoundForward className="text-lg" />
-        </button>
+        </Link>
       </div>
       {/* social icons */}
       <div className="w-fit flex gap-2 items-center">

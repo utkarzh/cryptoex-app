@@ -1,11 +1,13 @@
 import Card from "@/components/common/Card";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import { BiLogoPlayStore } from "react-icons/bi";
 import { IoLogoApple } from "react-icons/io";
 
 const PartnersContent = () => {
+  const t = useTranslations("homePage.partners.content");
   return (
     <div className="w-full h-fit py-20 flex justify-center items-center ">
       {/* container */}
@@ -34,10 +36,10 @@ const PartnersContent = () => {
             <h3
               className={` ${saira.className} text-wrap text-center lg:text-start lg:text-nowrap text-[24px] font-medium`}
             >
-              Trade seamlessly across devices
+              {t("title")}
             </h3>
             <p className=" text-wrap text-center lg:text-start lg:text-nowrap text-[12px] font-extralight">
-              Download our mobile app for effortless crypto trading!
+              {t("subTitle")}
             </p>
           </div>
           <div className="w-fit lg:w-full h-full  flex gap-2  ">

@@ -7,6 +7,7 @@ import { IoMdStats } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
 import CoinCircle from "./CoinCircle";
+import { useTranslations } from "next-intl";
 
 const testCoin = [
   "/images/coins/usdtrounded.png",
@@ -18,6 +19,8 @@ const testCoin = [
 
 const Marketing = () => {
   const [coinRotatingData, setCoinRotatingData] = useState(testCoin);
+
+  const t = useTranslations("homePage.getStarted.marketing");
 
   useEffect(() => {
     setTimeout(() => {
@@ -89,7 +92,7 @@ const Marketing = () => {
               <h2 className={`text-[16px] font-bold ${saira.className}`}>
                 283
               </h2>
-              <p className="text-[10px] font-light">Market Pairs</p>
+              <p className="text-[10px] font-light">{t("marketPairs")}</p>
             </div>
             <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20">
               <IoMdStats className=" text-white dark:text-green-600 text-md" />
@@ -106,7 +109,7 @@ const Marketing = () => {
               {/* content */}
               <div className=" flex gap-4 justify-evenly items-center w-full">
                 <div>
-                  <p className="text-[10px] font-light">24h volume (BTC)</p>
+                  <p className="text-[10px] font-light">{t("24hVolume")}</p>
                   <h2 className={`text-[16px] font-bold ${saira.className}`}>
                     62689.44
                   </h2>
@@ -136,7 +139,7 @@ const Marketing = () => {
                 <h2 className={`text-[16px] font-bold ${saira.className}`}>
                   150
                 </h2>
-                <p className="text-[10px] font-light">Countries</p>
+                <p className="text-[10px] font-light">{t("countries")}</p>
               </div>
               <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20 ">
                 <IoLocationOutline className=" text-white dark:text-green-600 text-md" />
@@ -150,7 +153,7 @@ const Marketing = () => {
                 <h2 className={`text-[16px] font-bold ${saira.className}`}>
                   187
                 </h2>
-                <p className="text-[10px] font-light">Coins listed</p>
+                <p className="text-[10px] font-light">{t("coinsListed")}</p>
               </div>
               <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20">
                 <FaCoins className=" text-white dark:text-green-600 text-ms" />

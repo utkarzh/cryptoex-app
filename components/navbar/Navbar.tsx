@@ -13,11 +13,15 @@ import TradeDropdown from "./nav_dropdown/TradeDropdown";
 import EarnDropdown from "./nav_dropdown/EarnDropdown";
 import EventsDropdown from "./nav_dropdown/EventsDropdown";
 import ProfileDropdown from "./profile_dropdown/ProfileDropdown";
+import LangDropdown from "./lang_dropdown/LangDropdown";
+import { useTranslations } from "next-intl";
 
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isAuth] = useState(true);
+
+  const t = useTranslations("Navbar");
 
   const sidebarHandler = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -70,12 +74,14 @@ const Navbar = () => {
                     <GrAssistListening className="text-3xl bg-yellow-400 p-1 rounded-full text-white" />
 
                     <div className="flex flex-col  text-[12px]">
-                      <span className="text-slate-500">New Listing</span>
+                      <span className="text-slate-500">
+                        {t("auth.new_listing")}
+                      </span>
                       <span>Plath(PLATH)</span>
                     </div>
 
                     <div className="text-green-600 cursor-pointer ">
-                      See All
+                      {t("auth.see_all")}
                     </div>
                   </div>
                 </div>
@@ -91,7 +97,7 @@ const Navbar = () => {
                   }  rounded-full px-2 py-1 cursor-pointer transition-all duration-300`}
                   onClick={() => setIsExchange(true)}
                 >
-                  Exchange
+                  {t("toggle.exchange")}
                 </div>
                 <div
                   className={` w-full ${
@@ -101,7 +107,7 @@ const Navbar = () => {
                   }  rounded-full px-4 py-1 cursor-pointer transition-all duration-300 `}
                   onClick={() => setIsExchange(false)}
                 >
-                  Web3
+                  {t("toggle.web3")}
                 </div>
               </div>
 
@@ -113,7 +119,7 @@ const Navbar = () => {
                 {/* trade */}
                 <div className="flex items-center cursor-pointer  relative group ">
                   <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">
-                    Trade
+                    {t("NavItems.trade.label")}
                   </span>
                   <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
                   <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
@@ -126,14 +132,14 @@ const Navbar = () => {
                   className="flex items-center cursor-pointer group"
                 >
                   <span className="mr-2 group-hover:text-green-600  transition-all duration-300 ease-out">
-                    Markets
+                    {t("NavItems.markets")}
                   </span>
                 </Link>
 
                 {/* earn */}
                 <div className="flex items-center cursor-pointer  relative group z-[30] group">
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
-                    Earn
+                    {t("NavItems.earn.label")}
                   </span>
                   <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
                   <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
@@ -143,7 +149,7 @@ const Navbar = () => {
                 {/* events */}
                 <div className="flex items-center cursor-pointer  relative group">
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
-                    Events
+                    {t("NavItems.events.label")}
                   </span>
                   <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
                   <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
@@ -158,13 +164,13 @@ const Navbar = () => {
                     href="/login"
                     className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer"
                   >
-                    Sign in
+                    {t("auth.signin")}
                   </Link>
                   <Link
                     href="/signup"
                     className="w-fit text-nowrap p-1 px-3 rounded-full text-white  bg-green-600 dark:bg-green-700 cursor-pointer"
                   >
-                    Sign up
+                    {t("auth.signup")}
                   </Link>
                 </div>
               )}
@@ -189,11 +195,15 @@ const Navbar = () => {
                 />
 
                 <div className="flex flex-col  text-[12px]">
-                  <span className="text-slate-500">New Listing</span>
+                  <span className="text-slate-500">
+                    {t("auth.new_listing")}
+                  </span>
                   <span>Plath(PLATH)</span>
                 </div>
 
-                <div className="text-green-600 cursor-pointer ">See All</div>
+                <div className="text-green-600 cursor-pointer ">
+                  {t("auth.see_all")}
+                </div>
               </div>
 
               {/* sign in and signup pages */}
@@ -203,13 +213,13 @@ const Navbar = () => {
                     href="/login"
                     className="w-fit text-nowrap p-1 px-3 rounded-full bg-slate-300 dark:bg-gray-700 cursor-pointer"
                   >
-                    Sign in
+                    {t("auth.signin")}
                   </Link>
                   <Link
                     href="/signup"
                     className="w-fit text-nowrap p-1 px-3 rounded-full text-white bg-green-600 dark:bg-green-700 cursor-pointer"
                   >
-                    Sign up
+                    {t("auth.signup")}
                   </Link>
                 </div>
               ) : (
@@ -232,7 +242,12 @@ const Navbar = () => {
               {/* language and theme buttons */}
               <div className="flex gap-2 text-xl items-center ">
                 <ThemeSwitcher />
-                <MdLanguage className="cursor-pointer" />
+                <div className="group relative ">
+                  <MdLanguage className="cursor-pointer" />
+                  <div className="hidden group-hover:block absolute z-[100]  top-[100%] left-[100%] -translate-x-[100%] pt-4   h-fit w-fit  ">
+                    <LangDropdown />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -255,7 +270,12 @@ const Navbar = () => {
               )}
               <div className="flex gap-3 text-2xl items-center">
                 <ThemeSwitcher size={26} />
-                <MdLanguage className="cursor-pointer" />
+                <div className="group relative ">
+                  <MdLanguage className="cursor-pointer" />
+                  <div className="hidden group-hover:block absolute z-[100]  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit  ">
+                    <LangDropdown />
+                  </div>
+                </div>
               </div>
 
               <div className=" mr-3 " onClick={sidebarHandler}>

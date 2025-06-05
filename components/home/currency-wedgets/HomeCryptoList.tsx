@@ -6,6 +6,7 @@ import { MdSearch } from "react-icons/md";
 import { IoStatsChart } from "react-icons/io5";
 import { VscDiffAdded } from "react-icons/vsc";
 import MiniGraph from "./MiniGraph";
+import { useTranslations } from "next-intl";
 // import SplineChart from "@/components/common/SplineChart";
 
 type Value = "spot" | "newadded" | "topgainer";
@@ -17,6 +18,7 @@ type Props = {
   isExpended: boolean;
 };
 const HomeCryptoList: FC<Props> = ({ isExpended, title, value, onSelect }) => {
+  const t = useTranslations("homePage.currencyWedgets");
   const test = [];
   for (let i = 0; i <= 5; i++) {
     if (i % 3 === 0) {
@@ -84,34 +86,34 @@ const HomeCryptoList: FC<Props> = ({ isExpended, title, value, onSelect }) => {
         <table className=" w-full table-auto">
           <thead>
             <tr className="text-[12px] text-slate-800 dark:text-slate-300 ">
-              <th className="font-extralight pb-4">Coins</th>
+              <th className="font-extralight pb-4">{t("tableHead.coins")}</th>
               <th
                 className={` ${
                   isExpended ? "table-cell" : " table-cell md:hidden"
                 } font-extralight pb-4`}
               >
-                Last Price
+                {t("tableHead.lastPrice")}
               </th>
               <th
                 className={` ${
                   isExpended ? "table-cell" : "table-cell md:hidden"
                 } font-extralight pb-4`}
               >
-                24h change
+                {t("tableHead.24hChange")}
               </th>
               <th
                 className={` ${
                   isExpended ? "table-cell" : "table-cell md:hidden"
                 } font-extralight pb-4`}
               >
-                Markets
+                {t("tableHead.markets")}
               </th>
               <th
                 className={` ${
                   isExpended ? "table-cell" : "table-cell md:hidden"
                 } font-extralight pb-4`}
               >
-                24h volume
+                {t("tableHead.24hVolume")}
               </th>
             </tr>
           </thead>

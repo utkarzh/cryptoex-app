@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useRef, useState } from "react";
 import { IoWalletOutline } from "react-icons/io5";
 import {
@@ -8,9 +9,45 @@ import {
   LuCircleGauge,
   LuDollarSign,
 } from "react-icons/lu";
-import { TbBracketsAngle } from "react-icons/tb";
 
 const FeaturesContent = () => {
+  const t = useTranslations("homePage.features");
+
+  const leftSectionFeatures = [
+    {
+      title: t("leftSection.fet1.title"),
+      content: t("leftSection.fet1.content"),
+      icons: <LuDollarSign className="text-lg" />,
+    },
+    {
+      title: t("leftSection.fet2.title"),
+      content: t("leftSection.fet2.content"),
+      icons: <IoWalletOutline className="text-lg" />,
+    },
+    {
+      title: t("leftSection.fet3.title"),
+      content: t("leftSection.fet3.content"),
+      icons: <IoWalletOutline className="text-lg" />,
+    },
+  ];
+  const rightSectionFeatures = [
+    {
+      title: t("rightSection.fet1.title"),
+      content: t("rightSection.fet1.content"),
+      icons: <LuDollarSign className="text-lg" />,
+    },
+    {
+      title: t("rightSection.fet2.title"),
+      content: t("rightSection.fet2.content"),
+      icons: <IoWalletOutline className="text-lg" />,
+    },
+    {
+      title: t("rightSection.fet3.title"),
+      content: t("rightSection.fet3.content"),
+      icons: <IoWalletOutline className="text-lg" />,
+    },
+  ];
+
   const containerRef1 = useRef<HTMLDivElement>(null);
   const containerRef2 = useRef<HTMLDivElement>(null);
   let scrollInterval1: NodeJS.Timeout | null = null;
@@ -106,70 +143,28 @@ const FeaturesContent = () => {
           className="w-full sm:w-fit max-h-full sm:max-h-[270px]  overflow-hidden flex flex-col gap-2"
           ref={containerRef1}
         >
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <LuDollarSign className="text-lg" />
+          {[...leftSectionFeatures, leftSectionFeatures[0]].map(
+            (val, index) => (
+              <div
+                key={index}
+                className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]"
+              >
+                <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+                  <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
+                    {val.icons}
+                  </div>
+                  <div className="w-full flex flex-col gap-1">
+                    <h3
+                      className={` ${saira.className} text-[14px] font-medium`}
+                    >
+                      {val.title}
+                    </h3>
+                    <p className="text-[10px] font-extralight">{val.content}</p>
+                  </div>
+                </div>
               </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Reasonable Commissions
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  Profitable investment opportunities and conditions
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Algorithmic Trading
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  API for crossplatform trading robots
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Algorithmic Trading
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  API for crossplatform trading robots
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* repeated */}
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <LuDollarSign className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Reasonable Commissions
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  Profitable investment opportunities and conditions
-                </p>
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
         {/* middle section */}
         <div className=" h-[70%] hidden sm:flex my-auto w-[100px] md:w-[200px] p-4 flex-col items-center justify-center ">
@@ -201,70 +196,28 @@ const FeaturesContent = () => {
           className="flex  max-h-[270px] overflow-hidden flex-col gap-2 z-[40]"
           ref={containerRef2}
         >
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
+          {[...rightSectionFeatures, rightSectionFeatures[0]].map(
+            (val, index) => (
+              <div
+                key={index}
+                className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]"
+              >
+                <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+                  <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
+                    {val.icons}
+                  </div>
+                  <div className="w-full flex flex-col gap-1">
+                    <h3
+                      className={` ${saira.className} text-[14px] font-medium`}
+                    >
+                      {val.title}
+                    </h3>
+                    <p className="text-[10px] font-extralight">{val.content}</p>
+                  </div>
+                </div>
               </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Secure Wallets
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  Keep your digital assets in user wallets
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <TbBracketsAngle className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Payment Options
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  More than 10 ways to deposit to an account
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] b-20 p-2 py-4 min-h-[100px]  flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Algorithmic Trading
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  API for crossplatform trading robots
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/*first repeated */}
-          <div className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]">
-            <div className="w-[250px] min-h-[100px] p-2 py-4 flex flex-col gap-3">
-              <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
-                <IoWalletOutline className="text-lg" />
-              </div>
-              <div className="w-full flex flex-col gap-1">
-                <h3 className={` ${saira.className} text-[14px] font-medium`}>
-                  Secure Wallets
-                </h3>
-                <p className="text-[10px] font-extralight">
-                  Keep your digital assets in user wallets
-                </p>
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
       </div>
 

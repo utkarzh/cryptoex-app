@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -7,6 +8,8 @@ import { useInView } from "react-intersection-observer";
 
 const CreateAccount = () => {
   const [activeState, setActiveState] = useState<number>(1);
+
+  const t = useTranslations("homePage.createAccount");
 
   const { ref, inView } = useInView({
     threshold: 1, // Trigger when 10% of the element is visible
@@ -110,16 +113,15 @@ const CreateAccount = () => {
         <div className="flex flex-col sm:justify-start  items-center sm:items-start text-center sm:text-start  w-fit">
           {/* title */}
           <h3 className={`${saira.className} font-bold`}>
-            Create Your Account
+            {t("step1.heading")}
           </h3>
           {/* sub title */}
           <p className="max-w-[320px] text-[12px] font-extralight ">
-            Sign up in minutes with your email, set a secure password, and
-            verify your identity for a safe trading experience.
+            {t("step1.content")}
           </p>
           {/* button */}
           <button className="w-fit flex mt-4 text-[12px] items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer ">
-            Get Started
+            {t("step1.button")}
             <IoIosArrowRoundForward className="text-lg" />
           </button>
         </div>
@@ -128,15 +130,16 @@ const CreateAccount = () => {
       {activeState == 2 && (
         <div className="flex flex-col sm:justify-start  items-center sm:items-start text-center sm:text-start  w-fit">
           {/* title */}
-          <h3 className={`${saira.className} font-bold`}>Complete Your KYC</h3>
+          <h3 className={`${saira.className} font-bold`}>
+            {t("step2.heading")}
+          </h3>
           {/* sub title */}
           <p className="max-w-[320px] text-[12px] font-extralight ">
-            Sign up in minutes with your email, set a secure password, and
-            verify your identity for a safe trading experience.
+            {t("step2.content")}
           </p>
           {/* button */}
           <button className="w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-cyan-700 text-white dark:text-black cursor-pointer ">
-            Update KYC
+            {t("step2.button")}
             <IoIosArrowRoundForward className="text-lg" />
           </button>
         </div>
@@ -145,15 +148,16 @@ const CreateAccount = () => {
       {activeState >= 3 && (
         <div className="flex flex-col sm:justify-start  items-start  sm:items-start text-start sm:text-start  w-fit ml-20 sm:ml-0">
           {/* title */}
-          <h3 className={`${saira.className} font-bold`}>Start Trading</h3>
+          <h3 className={`${saira.className} font-bold`}>
+            {t("step3.heading")}
+          </h3>
           {/* sub title */}
           <p className="max-w-[320px] text-[12px] font-extralight ">
-            Sign up in minutes with your email, set a secure password, and
-            verify your identity for a safe trading experience.
+            {t("step3.content")}
           </p>
           {/* button */}
           <button className="w-fit flex mt-4 text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-yellow-700 text-white dark:text-black cursor-pointer ">
-            Start Trading
+            {t("step3.button")}
             <IoIosArrowRoundForward className="text-lg" />
           </button>
         </div>

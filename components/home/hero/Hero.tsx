@@ -3,9 +3,12 @@ import HeroCurrencyStrip from "./HeroCurrencyStrip";
 import Image from "next/image";
 import { saira } from "@/utils/Font";
 import Marquee from "react-fast-marquee";
+import { useTranslations } from "next-intl";
 // import TextChangeEffect from '@/components/common/TextChangeEffect'
 
 const Hero = () => {
+  const t = useTranslations("homePage.heroSection");
+
   return (
     <div className="w-full h-[calc(100vh-70px)] flex justify-center items-center relative  ">
       {/* background images*/}
@@ -25,12 +28,9 @@ const Hero = () => {
       {/*heading and subheading */}
       <div className="w-full absolute z-[50] top-18 right-0 text-center ">
         <h1 className={`${saira.className} text-2xl font-bold`}>
-          Enhance your Crypto Trading Experience
+          {t("title")}
         </h1>
-        <p className="text-[14px] font-extralight">
-          Witness seamless transactions, real-time insights, and secure trading
-          everything you need.
-        </p>
+        <p className="text-[14px] font-extralight">{t("subTitle")}</p>
       </div>
 
       <div className="absolute bottom-0 right-0 w-full py-2 z-[40] text-white bg-green-600 dark:bg-green-700 flex justify-center">

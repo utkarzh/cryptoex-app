@@ -3,23 +3,26 @@ import DropdownCard from "./DropdownCard";
 import Link from "next/link";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { RiStackLine } from "react-icons/ri";
-
-const financeOptions = [
-  {
-    icon: <FaHandHoldingUsd className="text-xl" />,
-    title: "Loans",
-    description: "Unlock funds, keep your crypto.",
-    href: "/loans",
-  },
-  {
-    icon: <RiStackLine className=" text-xl" />,
-    title: "Staking",
-    description: "Stake coins, earn passive income.",
-    href: "/staking",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const EarnDropdown = () => {
+  const t = useTranslations("Navbar.NavItems.earn.items");
+
+  const financeOptions = [
+    {
+      icon: <FaHandHoldingUsd className="text-xl" />,
+      title: t("loans.label"),
+      description: t("loans.desc"),
+      href: "/loans",
+    },
+    {
+      icon: <RiStackLine className=" text-xl" />,
+      title: t("staking.label"),
+      description: t("staking.desc"),
+      href: "/staking",
+    },
+  ];
+
   return (
     <DropdownCard>
       <ul className="w-full rounded-2xl p-2  max-w-md">
