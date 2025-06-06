@@ -5,40 +5,32 @@ import FixedLoanTable from "./loan_tables/FixedLoanTable";
 import LoanInfo from "./loan_info/LoanInfo";
 import Faq from "@/components/common/faq/Faq";
 import LoanAdvantages from "./loan_advantage/LoanAdvantages";
-
-const testFaq = [
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 type Props = {
   loanValue: LoanValue;
 };
 
 const FixedLoan: FC<Props> = ({ loanValue }) => {
+  const t = useTranslations("loansPage.fixedLoan.faq");
+  const testFaq = [
+    {
+      question: t("faq1.ques"),
+      answer: t("faq1.ans"),
+    },
+    {
+      question: t("faq2.ques"),
+      answer: t("faq2.ans"),
+    },
+    {
+      question: t("faq3.ques"),
+      answer: t("faq3.ans"),
+    },
+    {
+      question: t("faq4.ques"),
+      answer: t("faq4.ans"),
+    },
+  ];
   return (
     <>
       {loanValue === "data" ? (

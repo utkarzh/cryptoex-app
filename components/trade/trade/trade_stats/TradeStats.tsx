@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { GiNetworkBars } from "react-icons/gi";
@@ -22,13 +23,14 @@ export const mockCryptoData = [
 ];
 
 const TradeStats = () => {
+  const t = useTranslations("tradePage");
   return (
     <div className="w-full flex gap-4 items-center">
       {/*connectoin state*/}
       <div className="w-fit flex gap-1 items-center text-green-600 text-[12px]">
         <GiNetworkBars className=" tracking-widest" />
         <div className="font-medium  text-wrap sm:text-nowrap text-green-600">
-          Stable Connection
+          {t("connection")}
         </div>
       </div>
       {/* stats */}

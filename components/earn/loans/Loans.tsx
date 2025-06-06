@@ -2,11 +2,14 @@
 import React, { useState } from "react";
 import FlexibleLoan from "./flexible_loan/FlexibleLoan";
 import FixedLoan from "./fixed_loan/FixedLoan";
+import { useTranslations } from "next-intl";
 
 type LoanType = "fixed" | "flexible";
 export type LoanValue = "history" | "data" | "";
 
 const Loans = () => {
+  const t = useTranslations("loansPage");
+
   const [loanType, setLoanType] = useState<LoanType>("flexible");
   const [loanValue, setLoanValue] = useState<LoanValue>("");
 
@@ -32,8 +35,9 @@ const Loans = () => {
                     : "border-b-3 border-transparent"
                 }`}
               >
-                <span className="capitalize">{pair}</span>
-                <span> rate loan</span>
+                {/* <span className="capitalize">{pair}</span>
+                <span> rate loan</span> */}
+                {t(`tabs.${pair}`)}
               </button>
             ))}
           </div>
@@ -49,8 +53,9 @@ const Loans = () => {
                     : "border-b-3 border-transparent"
                 }`}
               >
-                <span>Loan </span>
-                <span>{pair}</span>
+                {/* <span>Loan </span>
+                <span>{pair}</span> */}
+                {t(`tabs.${pair}`)}
               </button>
             ))}
           </div>

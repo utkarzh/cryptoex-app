@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import TradingViewWidget from "../graph/TradingViewWidget";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 const pairs = [
   "BTC/BNB",
@@ -25,6 +26,7 @@ const mockStats = {
 const CryptoStats = () => {
   const [activePair, setActivePair] = useState("BTC/BNB");
   const { theme } = useTheme();
+  const t = useTranslations("tradePage.cryptoStats.stats");
 
   return (
     <div className=" w-full h-full  overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm rounded-xl shadow-lg flex flex-col ">
@@ -55,31 +57,31 @@ const CryptoStats = () => {
         </div>
 
         <div>
-          <div>24h Change</div>
+          <div>{t("24hChange")}</div>
           <div className="text-green-500">
             {mockStats.changeAmount} +{mockStats.changePercent}%
           </div>
         </div>
 
         <div>
-          <div>24h High</div>
+          <div>{t("24hHigh")}</div>
           <div className="dark:text-white/80 text-black">{mockStats.high}</div>
         </div>
 
         <div>
-          <div>24h Low</div>
+          <div>{t("24hLow")}</div>
           <div className="dark:text-white/80 text-black">{mockStats.low}</div>
         </div>
 
         <div>
-          <div>24h Volume(BTC)</div>
+          <div>{t("24hVolumeBtc")}</div>
           <div className="dark:text-white/80 text-black">
             {mockStats.volumeBTC}
           </div>
         </div>
 
         <div>
-          <div>24h Volume(USDT)</div>
+          <div>{t("24hVolumeUsdc")}</div>
           <div className="dark:text-white/80 text-black">
             {mockStats.volumeUSDT}
           </div>

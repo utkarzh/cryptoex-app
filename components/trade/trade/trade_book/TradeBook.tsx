@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { BiDotsVertical } from "react-icons/bi";
@@ -40,6 +41,8 @@ const MOCK_DATA_SELL = [
 ];
 
 const TradeBook = () => {
+  const t = useTranslations("tradePage.tradeBook");
+
   const [activeTab, setActiveTab] = useState<"orderbook" | "tradehistory">(
     "orderbook"
   );
@@ -60,14 +63,12 @@ const TradeBook = () => {
                 : ""
             }`}
           >
-            {tab
-              .replace("orderbook", "Order book")
-              .replace("tradehistory", "Trade history")}
+            {t(`tabs.${tab}`)}
           </button>
         ))}
       </div>
 
-      {activeTab === "orderbook" && (
+      {(activeTab === "orderbook" || activeTab === "tradehistory") && (
         <div className="mx-4 h-[100%] flex flex-col ">
           {/*Filter & Decimal Selector */}
           <div className="h-fit flex justify-between  items-center text-xs">
@@ -130,9 +131,9 @@ const TradeBook = () => {
 
           {/* Table Header */}
           <div className=" h-fit flex justify-between   text-xs  pt-4  ">
-            <span>Price(USDT)</span>
-            <span>Amount(BTC)</span>
-            <span>Total</span>
+            <span>{t("tHead.price")}</span>
+            <span>{t("tHead.amount")}</span>
+            <span>{t("tHead.total")}</span>
           </div>
 
           {/* Order Rows */}
@@ -167,7 +168,7 @@ const TradeBook = () => {
                     )}
 
                     {row.type === "mid" ? (
-                      <span>More</span>
+                      <span>{t("more")}</span>
                     ) : (
                       <span className="w-full text-end">{row.total}</span>
                     )}
@@ -204,7 +205,7 @@ const TradeBook = () => {
 
                   {row.type === "mid" ? (
                     <span className="w-full text-end text-[12px] cursor-pointer">
-                      More
+                      {t("more")}
                     </span>
                   ) : (
                     <span>{row.total}</span>
@@ -242,7 +243,7 @@ const TradeBook = () => {
                     )}
 
                     {row.type === "mid" ? (
-                      <span className="text-[10px]">More</span>
+                      <span className="text-[10px]">{t("more")}</span>
                     ) : (
                       <span className="w-full text-end">{row.total}</span>
                     )}
@@ -255,11 +256,11 @@ const TradeBook = () => {
         </div>
       )}
 
-      {activeTab === "tradehistory" && (
+      {/* {activeTab === "tradehistory" && (
         <div className="text-gray-400 text-sm p-4">
           Trade history content here...
         </div>
-      )}
+      )} */}
     </div>
   );
 };

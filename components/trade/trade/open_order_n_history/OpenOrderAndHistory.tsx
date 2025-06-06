@@ -1,10 +1,12 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React, { useState } from "react";
 
 // type Props = {}
 
 const OpenOrderAndHistory = () => {
+  const t = useTranslations("tradePage.orderAndHist");
   const [activeTab, setActiveTab] = useState<"openorders" | "orderhistory">(
     "openorders"
   );
@@ -23,9 +25,10 @@ const OpenOrderAndHistory = () => {
                   : ""
               }`}
             >
-              {tab
+              {/* {tab
                 .replace("openorders", "Open Orders")
-                .replace("orderhistory", "Order History")}
+                .replace("orderhistory", "Order History")} */}
+              {t(`tabs.${tab}`)}
             </button>
           ))}
         </div>
@@ -35,13 +38,13 @@ const OpenOrderAndHistory = () => {
           {/* login and singup div */}
           <div className="text-[12px]">
             <Link href="#" className="text-green-600 ">
-              Log in
+              {t("message.part1")}
             </Link>{" "}
-            or{" "}
+            {t("message.part2")}{" "}
             <Link href="#" className="text-green-600">
-              Sign up
+              {t("message.part3")}
             </Link>{" "}
-            to trade
+            {t("message.part4")}
           </div>
         </div>
       </div>

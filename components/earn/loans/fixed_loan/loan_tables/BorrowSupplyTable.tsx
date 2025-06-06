@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import { FC, useState } from "react";
 import ReactPaginate from "react-paginate";
 
@@ -15,6 +16,7 @@ type Props = {
 };
 
 const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
+  const t = useTranslations("loansPage.fixedLoan.BandStable");
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 8;
 
@@ -32,16 +34,23 @@ const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
     <div className="mt-14">
       <div className="flex justify-between items-center mb-6">
         <h2 className={` ${saira.className} text-lg font-semibold`}>
-          I Want to {isSupply ? "Supply" : "Borrow"}
+          {/* I Want to {isSupply ? "Supply" : "Borrow"} */}
+          {isSupply ? t("title2") : t("title1")}
         </h2>
         <div className="border dark:border-slate-200/20 border-slate-600/20 px-2 py-1 rounded-md flex gap-1 justify-center items-center">
           <span className="opacity-70 text-[12px] font-extralight">
-            Duration
+            {t("terms.duration")}
           </span>
           <select className="text-xs border-none outline-none">
-            <option className="bg-white dark:bg-[#06062a]">All</option>
-            <option className="bg-white dark:bg-[#06062a]">30 days</option>
-            <option className="bg-white dark:bg-[#06062a]">40 days</option>
+            <option className="bg-white dark:bg-[#06062a]">
+              {t("terms.all")}
+            </option>
+            <option className="bg-white dark:bg-[#06062a]">
+              30 {t("terms.days")}
+            </option>
+            <option className="bg-white dark:bg-[#06062a]">
+              40 {t("terms.days")}
+            </option>
           </select>
         </div>
       </div>
@@ -52,14 +61,22 @@ const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
           <thead className=" ">
             <tr className="text-[12px] opacity-90 dark:opacity-60">
               <th className="py-3 px-4 text-left font-extralight">
-                {isSupply ? "Supply APR (Fixed)" : "Borrow rate (Fixed)"}
-              </th>
-              <th className="py-3 px-4 text-left font-extralight">Duration</th>
-              <th className="py-3 px-4 text-left font-extralight">
-                {isSupply ? "Est. Interest" : "Min borrow amount"}
+                {isSupply
+                  ? t("supplyTableHead.supplyApr")
+                  : t("borrowTableHead.bRate")}
               </th>
               <th className="py-3 px-4 text-left font-extralight">
-                {isSupply ? "Total amount" : "Borrowable amount"}
+                {t("terms.duration")}
+              </th>
+              <th className="py-3 px-4 text-left font-extralight">
+                {isSupply
+                  ? t("supplyTableHead.estInt")
+                  : t("borrowTableHead.minBAmount")}
+              </th>
+              <th className="py-3 px-4 text-left font-extralight">
+                {isSupply
+                  ? t("supplyTableHead.tAmount")
+                  : t("borrowTableHead.bAbleAmount")}
               </th>
             </tr>
           </thead>

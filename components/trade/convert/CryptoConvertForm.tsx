@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
@@ -59,6 +60,7 @@ const testCoinData: CoinData[] = [
 ];
 
 export default function CryptoConvertForm() {
+  const t = useTranslations("convertPage.convertForm");
   const [fromCoin, setFromCoin] = useState<CoinData>(testCoinData[2]);
   const [toCoin, setToCoin] = useState<CoinData>(testCoinData[1]);
 
@@ -87,12 +89,9 @@ export default function CryptoConvertForm() {
       {/* heading */}
       <div className="flex flex-col justify-center items-center text-center max-w-[300px]">
         <h2 className={` ${saira.className} text-2xl font-semibold mb-1`}>
-          Convert
+          {t("title")}
         </h2>
-        <p className="text-xs">
-          Quickly and easily convert hundreds of cryptocurrencies with instant
-          execution.
-        </p>
+        <p className="text-xs">{t("subTitle")}</p>
       </div>
 
       {/* Conversion Box */}
@@ -103,7 +102,7 @@ export default function CryptoConvertForm() {
           <div className="w-full  ">
             {/* available balance */}
             <p className="text-nowrap text-[10px] dark:text-slate-400">
-              Available balance : {fromCoin.avl_bal}
+              {t("terms.availBalance")} : {fromCoin.avl_bal}
             </p>
             <input
               type="text"
@@ -120,9 +119,11 @@ export default function CryptoConvertForm() {
           <div className="w-full flex  justify-end ">
             {/* right:- coin selection section */}
             <div className="w-fit flex flex-col items-end gap-2  ">
-              <p className="text-[10px] dark:text-slate-400 pr-2">From</p>
+              <p className="text-[10px] dark:text-slate-400 pr-2">
+                {t("terms.from")}
+              </p>
               <div className="flex gap-1 items-center">
-                <div className="text-green-600 text-xs">Max</div>
+                <div className="text-green-600 text-xs">{t("terms.max")}</div>
                 {/* coin selection */}
                 <div
                   className="  dark:bg-slate-200/15 bg-slate-700/15 rounded-full px-2 py-[2px] flex gap-6 items-center relative"
@@ -194,7 +195,7 @@ export default function CryptoConvertForm() {
           <div className="w-full  ">
             {/* available balance */}
             <p className="text-nowrap text-[10px] dark:text-slate-400">
-              Available balance : {toCoin.avl_bal}
+              {t("terms.availBalance")} : {toCoin.avl_bal}
             </p>
             <input
               type="text"
@@ -211,7 +212,9 @@ export default function CryptoConvertForm() {
           <div className="w-full flex  justify-end ">
             {/* right:- coin selection section */}
             <div className="w-fit flex flex-col items-end gap-2  ">
-              <p className="text-[10px] dark:text-slate-400 pr-2">From</p>
+              <p className="text-[10px] dark:text-slate-400 pr-2">
+                {t("terms.to")}
+              </p>
               <div className="flex gap-1 items-center">
                 {/* coin selection */}
                 <div
@@ -270,19 +273,19 @@ export default function CryptoConvertForm() {
 
         {/* Rate */}
         <p className="text-start text-xs text-gray-500 my-3">
-          Rate : 1 ETH ≈ 0.01886 BTC
+          {t("terms.rate")} : 1 ETH ≈ 0.01886 BTC
         </p>
 
         {/* Action Button */}
         <button className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer">
-          Log in / Sign up
+          {t("terms.button")}
         </button>
 
         {/* trade spot */}
 
         <div className="w-fit mx-auto flex gap-2 justify-center items-center mt-4 cursor-pointer text-slate-500 hover:scale-105 transition-all duration-200">
           <MdTrendingUp />
-          <span className="text-xs ">Trade spot</span>
+          <span className="text-xs ">{t("terms.tradeSpot")}</span>
         </div>
       </div>
     </div>

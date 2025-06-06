@@ -1,7 +1,10 @@
 "use client";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 const TradeForm = () => {
+  const t = useTranslations("tradePage.tradeForm");
+
   const [activeSide, setActiveSide] = useState<"buy" | "sell">("buy");
   const [activeMode, setActiveMode] = useState<"spot" | "cross" | "isolated">(
     "spot"
@@ -37,7 +40,7 @@ const TradeForm = () => {
                 : " bg-[#eff0f2] dark:bg-[#222248] text-black dark:text-gray-400 "
             }`}
           >
-            {side}
+            {t(`${side}`)}
           </button>
         ))}
       </div>
@@ -52,7 +55,7 @@ const TradeForm = () => {
               activeMode === mode ? "text-green-600 border-b-2 " : ""
             } `}
           >
-            {mode}
+            {t(`${mode}`)}
           </button>
         ))}
       </div>
@@ -69,7 +72,7 @@ const TradeForm = () => {
                 : ""
             }`}
           >
-            {type === "stop" ? "Stop limit" : type}
+            {t(`${type}`)}
           </button>
         ))}
       </div>
@@ -87,7 +90,7 @@ const TradeForm = () => {
                   : ""
               }`}
             >
-              {type}
+              {t(`${type}`)}
             </button>
           ))}
         </div>
@@ -97,7 +100,7 @@ const TradeForm = () => {
       <div className="space-y-3 mt-2">
         <div className="bg-[#eff0f2] dark:bg-[#222248] rounded-md px-3 py-2 flex justify-between items-center">
           <input
-            placeholder="Price"
+            placeholder={t(`price`)}
             className="bg-transparent outline-none w-full placeholder-gray-400 dark:placeholder-gray-500 "
           />
           <span className="text-gray-600 dark:text-gray-400 text-xs font-medium ml-2">
@@ -106,7 +109,7 @@ const TradeForm = () => {
         </div>
         <div className="bg-[#eff0f2] dark:bg-[#222248] rounded-md px-3 py-2 flex justify-between items-center">
           <input
-            placeholder="Amount"
+            placeholder={t(`amount`)}
             className="bg-transparent outline-none w-full placeholder-gray-400 dark:placeholder-gray-500 "
           />
           <span className="text-gray-600 dark:text-gray-400 text-xs font-medium ml-2">
@@ -168,7 +171,7 @@ const TradeForm = () => {
       {/* Total */}
       <div className="bg-[#eff0f2] dark:bg-[#222248] rounded-md px-3 py-2 flex justify-between items-center mt-2">
         <input
-          placeholder="Total"
+          placeholder={t(`total`)}
           className="bg-transparent outline-none w-full placeholder-gray-400 dark:placeholder-gray-500 "
         />
         <span className="text-gray-600 dark:text-gray-400 text-xs font-medium ml-2">
@@ -178,14 +181,14 @@ const TradeForm = () => {
 
       {/* Info */}
       <div className=" text-xs pl-1 font-extralight space-y-1">
-        <p>Available: 0 USDT</p>
-        <p>Txn Fee: 0 BTC</p>
-        {activeMode === "cross" && <p>Borrowing: 0 USDT</p>}
+        <p>{t(`available`)}: 0 USDT</p>
+        <p>{t("txnFee")}: 0 BTC</p>
+        {activeMode === "cross" && <p>{t("borrowing")}: 0 USDT</p>}
       </div>
 
       {/* Login/Sign up */}
       <button className="w-full bg-green-500 hover:bg-green-600  text-white dark:text-black font-medium py-2 rounded-full mb-2 cursor-pointer transition-all duration-300">
-        Log in / Sign up
+        {t("button")}
       </button>
     </div>
   );

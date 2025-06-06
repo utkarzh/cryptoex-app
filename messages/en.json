@@ -62,6 +62,59 @@
     }
 },
 
+"sidebar": {
+    "overview": "Overview",
+    "account": {
+      "label": "Account",
+      "children": {
+        "profile": "Profile",
+        "security": "Security"
+      }
+    },
+    "wallet": {
+      "label": "Wallet",
+      "children": {
+        "assets": "Assets",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw"
+      }
+    },
+    "history": {
+      "label": "History",
+      "children": {
+        "depositHistory": "Deposit History",
+        "withdrawHistory": "Withdraw History"
+      }
+    },
+    "orders": {
+      "label": "Orders",
+      "children": {
+        "openOrders": "Open Orders",
+        "orderHistory": "Order History",
+        "tradeHistory": "Trade History"
+      }
+    },
+    "earn": {
+      "label": "Earn",
+      "children": {
+        "loans": "Loans",
+        "staking": "Staking"
+      }
+    },
+    "loginActivity": {
+      "label": "Login Activity",
+      "children": {
+        "loginHistory": "Login History",
+        "deviceManagement": "Device Management"
+      }
+    },
+    "referrals": "Referrals",
+    "api": "API",
+    "logout": "Log Out",
+    "withdraw":"Withdraw",
+    "deposit":"Deposit"
+  },
+
 "homePage":{
   "heroSection":{
     "title":"Enhance your Crypto Trading Experience",
@@ -197,6 +250,71 @@
   }
 },
 
+"auth": {
+  "signin":{
+    "title":"Log in to your account",
+    "items":{
+      "email":{
+        "label":"Email",
+        "holder":"Enter email"
+      },
+       "password":{
+        "label":"Password",
+        "holder":"Enter password"
+      }
+    },
+    "button":"Log In",
+    "signinOption": "Or Log In with",
+    "noAcc": {
+      "part1":"Don’t have an account?",
+      "part2":"Create account"
+    }
+  },
+  "signup":{
+    "title":"Create your account",
+    "items":{
+      "email":{
+        "label":"Email",
+        "holder":"Enter email"
+      },
+      "username":{
+        "label":"Username",
+        "holder":"Enter username"
+      },
+       "password":{
+        "label":"Password",
+        "holder":"Enter password"
+      },
+      "country":{
+        "label":"Country",
+        "holder":"Select your country",
+        "options":{
+          "op1":"USA",
+          "op2":"India",
+          "op3":"UK",
+          "op4":"Germany"
+
+        }
+      },
+      "referrals":{
+        "label":"Referral code (Optional)",
+        "holder":"Enter referral code"
+      }
+
+    },
+    "terms":{
+      "part1":"I Accept",
+      "part2":"Terms & Conditions"
+    },
+    "button":"Sign Up",
+    "signupOption": "Or Sign up with",
+    "haveAcc": {
+      "part1":"Already have an account?",
+      "part2":"Log in"
+    }
+  }
+},
+
 "footer":{
   "glance":{
     "text":"Register in minutes—sign up, deposit, and start trading crypto effortlessly!",
@@ -234,58 +352,298 @@
   },
   "rights":"© 2025 INDOEX All rights reserved.",
   "alert":"Crypto investments are subject to market risks—invest wisely and stay informed."
-}
-,
-"sidebar": {
-    "overview": "Overview",
-    "account": {
-      "label": "Account",
-      "children": {
-        "profile": "Profile",
-        "security": "Security"
+},
+
+"tradePage":{
+  "tradeBook":{
+    "tabs":{
+      "orderbook": "Order book",
+      "tradehistory": "Trade history"
+    },
+    "tHead":{
+      "price":"Price(USDT)",
+      "amount":"Amount(BTC)",
+      "total":"Total"
+    },
+    "more":"More"
+  },
+  "cryptoStats":{
+    "stats":{
+      "24hChange":"24h Change",
+      "24hHigh":"24h High",
+      "24hLow":"24h Low",
+      "24hVolumeBtc":"24h Volume(BTC)",
+      "24hVolumeUsdc":"24h Volume(USDT)"
+    }
+  },
+  "tradeForm":{
+    "buy":"Buy",
+    "sell":"Sell",
+    "spot":"Spot",
+    "cross":"Cross",
+    "isolated":"Isolated",
+    "limit":"Limit",
+    "market":"Market",
+    "stop":"Stop Limit",
+    "normal":"Normal",
+    "borrow":"Borrow",
+    "repay":"repay",
+    "price":"Price",
+    "amount":"Amount",
+    "total":"Total",
+    "available":"Available",
+    "txnFee":"Txn Fee",
+    "borrowing":"Borrowing",
+    "button":"Log in / Sign up"
+  },
+  "orderAndHist":{
+    "tabs":{
+      "openorders":"Open Orders",
+      "orderhistory":"Order History"
+    },
+    "message":{
+      "part1":"Log in",
+      "part2":"or",
+      "part3":"Sign up",
+      "part4":"to trade"
+    }
+  },
+  "connection":"Stable Connection"
+},
+
+"convertPage":{
+   "tabs":{
+    "faq":"FAQ",
+    "convert":"Convert",
+    "history":"History"
+   },
+   "convertForm":{
+    "title":"Convert",
+    "subTitle":"Quickly and easily convert hundreds of cryptocurrencies with instant execution.",
+    "terms":{
+    "availBalance":"Available balance",
+    "from":"From",
+    "to":"To",
+    "max":"Max",
+    "rate":"Rate",
+    "button":"Log in / Sign up",
+    "tradeSpot" :"Trade spot"
+   }
+   },
+   "convertBar":{
+      "barTitle":"Convert BTC (Bitcoin) to other coins"
+    }
+
+},
+
+"loansPage":{
+  "tabs":{
+    "flexible":"Flexible rate loan",
+    "fixed":"Fixed rate loan",
+    "history":"Loan history",
+    "data":"Loan data"
+  },
+  "flexibleLoan":{
+    "borrowSection":{
+      "title":"Borrow with Flexible Rates to Trade or Stake and Maximize Returns.",
+      "features":{
+        "f1":"Repay at any time",
+        "f2":"No transaction fee"
+      },
+      "buttons":{
+        "b1":"Ongoing Orders",
+        "b2":"Asset overview"
+      },
+      "borrowForm":{
+        "terms":{
+          "collateral":"Collateral",
+          "enterAmount":"Enter Amount",
+          "wantBorrow":"I want to borrow",
+          "max":"Max",
+          "details":"Details"
+        },
+        "button":"Log in / Sign up"
+      }
+    }, 
+    "borrowTable":{
+      "title":"Borrow Market",
+      "search":"Search",
+      "viewMore":"View More",
+      "tHead":{
+        "coin":"Loanable Coin",
+        "hIntRate":"Hourly Interest Rate",
+        "aIntRate":"Annual Interest Rate",
+        "action":{
+          "label":"Action",
+          "button":"Borrow"
+        }
       }
     },
-    "wallet": {
-      "label": "Wallet",
-      "children": {
-        "assets": "Assets",
-        "deposit": "Deposit",
-        "withdraw": "Withdraw"
+    "faq":{
+        "item1":{
+          "ques":"What is crypto staking and how does it work?",
+          "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+        },
+         "item2":{
+          "ques":"What is crypto staking and how does it work?",
+          "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+        },
+         "item3":{
+          "ques":"What is crypto staking and how does it work?",
+          "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+        },
+         "item4":{
+          "ques":"What is crypto staking and how does it work?",
+          "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+        },
+        "item5":{
+          "ques":"What is crypto staking and how does it work?",
+          "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+        }
+    }
+  },
+  "fixedLoan":{
+    "borrowSection":{
+      "title":"Borrow or Lend at a Fixed Interest Rate You Choose",
+      "stats":{
+        "totalBorrowed":"Total borrowed",
+        "currentOrders":"Current orders",
+        "rate":{
+          "label":"Customized interest rate",
+          "content":"Multi-Asset Collateral Supported"
+        }
+      },
+      "myOrder":{
+        "label":"My order",
+        "pOrders":{
+          "label":"Pending orders",
+          "content":"Check and manage unmatched orders"
+        },
+         "oOrders":{
+          "label":"Ongoing Orders",
+          "content":"Check, adjust LTV, and repay matched orders"
+        }
+      }
+    }, 
+    "borrowForm":{
+      "borrow":{
+        "label":"Borrow",
+        "terms":{
+          "bAmount":"Borrow Amount",
+          "min":"Min 0.005 BTC",
+          "expRate":"Expected interest rate",
+          "intRate":"Enter interest rate",
+          "refMarket":"Reference market supply rate",
+          "duration":"Duration",
+          "collateral":"Collateral",
+          "setUp":"Set up collateral",
+          "autoRepay":"Auto-Repay"
+        }
+      },
+      "supply":{
+        "label":"Supply",
+        "terms":{
+          "bAmount":"Borrow Amount",
+          "min":"Min 0.005 BTC",
+          "expRate":"Expected interest rate",
+          "intRate":"Enter interest rate",
+          "refMarket":"Reference market supply rate: 5.04%",
+          "duration":"Duration",
+          "collateral":"Collateral",
+          "setUp":"Set up collateral",
+          "autoRepay":"Auto-Repay"
+        }
+      },
+      "button":"Log in / Sign up"
+    },
+    "BandStable":{
+      "title1":"I Want to Borrow",
+      "title2":"I Want to Supply",
+      "terms":{
+        "days":"Days",
+        "all":"All",
+        "duration":"Duration"
+      },
+      "borrowTableHead":{
+        "bRate":"Borrow rate (Fixed)",
+        "duration":"Duration",
+        "minBAmount":"Min borrow amount",
+        "bAbleAmount":"Borrowable amount"
+      },
+      "supplyTableHead":{
+        "supplyApr":"Supply APR (Fixed)",
+        "duration":"Duration",
+        "estInt":"Est. Interest",
+        "tAmount":"Total amount"
+      }
+    }, 
+    "howItWorks":{
+      "title":"How Do Fixed Rate Loans Work?",
+      "tabs":{
+        "borrower":"As a borrower",
+        "supplier":"As a supplier"
+      },
+      "step1":{
+        "title":"1. Order placing",
+        "content":"Place a Borrow Order or select an existing order from the Borrow Market."
+      },
+      "step2":{
+        "title":"2. Select Collateral",
+        "content":"Select collateral asset(s) from the list of your spot wallet assets. The Loan-to-Value (LTV) should be lower than the Initial LTV."
+      },
+      "step3":{
+        "title":"3. Confirm Order",
+        "content":"Confirm the order details, including the estimated interest, terms, Margin Call LTV, etc. Your collateral assets will be frozen in your spot wallet once the order is placed."
+      },
+      "step4":{
+        "title":"4. Order Matchedg",
+        "content":"Once matched, your collateral moves to Binance custody, and you receive the borrowed amount (minus interest) in your spot wallet. Monitor LTV to avoid liquidation."
+      },
+      "step5":{
+        "title":"5. Repayment",
+        "content":"Repay by the expiry date to avoid penalties. After expiry, a 3x interest penalty applies hourly for 24 hours, then your collateral may be liquidated."
       }
     },
-    "history": {
-      "label": "History",
-      "children": {
-        "depositHistory": "Deposit History",
-        "withdrawHistory": "Withdraw History"
+    "advantages":{
+      "title":"Fixed Rate Loans Advantages",
+      "adv1":{
+        "title":"Stable and Predictable Costs for Borrowers",
+        "content":"Lock in a fixed APR for a set duration, eliminating fluctuations and unexpected costs."
+      },
+      "adv2":{
+        "title":"Efficient Automated Process",
+        "content":"Enjoy easy, and automated borrowing and lending experience with auto-repay and auto-renew options available."
+      },
+      "adv3":{
+        "title":"Attractive Fixed APR for Suppliers",
+        "content":"Supply your assets for a customizable and fixed APR."
+      },
+      "adv4":{
+        "title":"Multi-Asset Collateral",
+        "content":"Borrowers can set multiple assets as collateral to reduce the risk of liquidation."
       }
-    },
-    "orders": {
-      "label": "Orders",
-      "children": {
-        "openOrders": "Open Orders",
-        "orderHistory": "Order History",
-        "tradeHistory": "Trade History"
+    }, 
+    "faq":{
+      "title":"FAQ",
+      "faq1":{
+        "ques":"What is crypto staking and how does it work?",
+        "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+      },
+      "faq2":{
+        "ques":"Can I unstake my crypto anytime?",
+        "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+      },
+      "faq3":{
+        "ques":"Do I earn rewards during the redemption period?",
+        "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+      },
+      "faq4":{
+        "ques":"Is staking safe?",
+        "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
       }
-    },
-    "earn": {
-      "label": "Earn",
-      "children": {
-        "loans": "Loans",
-        "staking": "Staking"
-      }
-    },
-    "loginActivity": {
-      "label": "Login Activity",
-      "children": {
-        "loginHistory": "Login History",
-        "deviceManagement": "Device Management"
-      }
-    },
-    "referrals": "Referrals",
-    "api": "API",
-    "logout": "Log Out",
-    "withdraw":"Withdraw",
-    "deposit":"Deposit"
+
+    }
   }
+}
+
 }

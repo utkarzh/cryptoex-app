@@ -197,6 +197,69 @@
     }
   },
 
+  "auth": {
+    "signin": {
+      "title": "Melden Sie sich in Ihrem Konto an",
+      "items": {
+        "email": {
+          "label": "E-Mail",
+          "holder": "E -Mail eingeben"
+        },
+        "password": {
+          "label": "Passwort",
+          "holder": "Kennwort eingeben"
+        }
+      },
+      "button": "Einloggen",
+      "signinOption": "Oder anmelden mit",
+      "noAcc": {
+        "part1": "Sie haben kein Konto?",
+        "part2": "Benutzerkonto erstellen"
+      }
+    },
+    "signup": {
+      "title": "Erstellen Sie Ihr Konto",
+      "items": {
+        "email": {
+          "label": "E-Mail",
+          "holder": "E -Mail eingeben"
+        },
+        "username": {
+          "label": "Benutzername",
+          "holder": "Benutzername eingeben"
+        },
+        "password": {
+          "label": "Passwort",
+          "holder": "Kennwort eingeben"
+        },
+        "country": {
+          "label": "Land",
+          "holder": "Wählen Sie Ihr Land aus",
+          "options": {
+            "op1": "USA",
+            "op2": "Indien",
+            "op3": "Vereinigtes Königreich",
+            "op4": "Deutschland"
+          }
+        },
+        "referrals": {
+          "label": "Empfehlungscode (optional)",
+          "holder": "Geben Sie den Empfehlungscode ein"
+        }
+      },
+      "terms": {
+        "part1": "Ich akzeptiere",
+        "part2": "Allgemeine Geschäftsbedingungen"
+      },
+      "button": "Melden Sie sich an",
+      "signupOption": "Oder anmelden mit",
+      "haveAcc": {
+        "part1": "Haben Sie bereits ein Konto?",
+        "part2": "Einloggen"
+      }
+    }
+  },
+
    "footer": {
     "glance": {
       "text": "Registrieren Sie sich in Minuten - signieren Sie sich mühelos mit Krypto und beginnen Sie mit dem Handel mit dem Handel!",
@@ -285,5 +348,292 @@
     "logout": "Déconnecter",
   "withdraw": "Retirer",
   "deposit": "Dépôt"
+  },
+   "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "Auftragsbuch",
+        "tradehistory": "Handelsgeschichte"
+      },
+      "tHead": {
+        "price": "Preis (USDT)",
+        "amount": "Betrag (BTC)",
+        "total": "Gesamt"
+      },
+      "more": "Mehr"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24H -Veränderung",
+        "24hHigh": "24H hoch",
+        "24hLow": "24h niedrig",
+        "24hVolumeBtc": "24H Volumen (BTC)",
+        "24hVolumeUsdc": "24H Volumen (USDT)"
+      }
+    },
+    "tradeForm": {
+      "buy": "Kaufen",
+      "sell": "Verkaufen",
+      "spot": "Stelle",
+      "cross": "Kreuzen",
+      "isolated": "Isoliert",
+      "limit": "Limit",
+      "market": "Markt",
+      "stop": "Stop -Limit",
+      "normal": "Normal",
+      "borrow": "Ausleihen",
+      "repay": "zurückzahlen",
+      "price": "Preis",
+      "amount": "Menge",
+      "total": "Gesamt",
+      "available": "Verfügbar",
+      "txnFee": "TXN -Gebühr",
+      "borrowing": "Ausleihen",
+      "button": "Melden Sie sich an / melden Sie sich an"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "Aufträge offen",
+        "orderhistory": "Auftragsgeschichte"
+      },
+      "message": {
+        "part1": "Einloggen",
+        "part2": "oder",
+        "part3": "Melden Sie sich an",
+        "part4": "Handel"
+      }
+    },
+    "connection": "Stabile Verbindung"
+  },
+   "convertPage": {
+    "tabs": {
+      "faq": "FAQ",
+      "convert": "Konvertieren",
+      "history": "Geschichte"
+    },
+    "convertForm": {
+      "title": "Konvertieren",
+      "subTitle": "Schnell und einfach Hunderte von Kryptowährungen mit sofortiger Ausführung konvertieren.",
+      "terms": {
+        "availBalance": "Verfügbarer Gleichgewicht",
+        "from": "Aus",
+        "to": "Zu",
+        "max": "Max",
+        "rate": "Rate",
+        "button": "Melden Sie sich an / melden Sie sich an",
+        "tradeSpot": "Handelspunkt"
+      }
+    },
+    "convertBar": {
+      "barTitle": "BTC (Bitcoin) in andere Münzen konvertieren"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "Flexibler Zinsdarlehen",
+      "fixed": "Kredite fester Zinssatz",
+      "history": "Kreditgeschichte",
+      "data": "Darlehensdaten"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "Kredite mit flexiblen Zinssätzen ausleihen, um zu handeln oder zu beteiligen und die Renditen zu maximieren.",
+        "features": {
+          "f1": "Jederzeit zurückzahlen",
+          "f2": "Keine Transaktionsgebühr"
+        },
+        "buttons": {
+          "b1": "Laufende Bestellungen",
+          "b2": "Asset -Übersicht"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "Sicherheit",
+            "enterAmount": "Betrag eingeben",
+            "wantBorrow": "Ich möchte ausleihen",
+            "max": "Max",
+            "details": "Details"
+          },
+          "button": "Melden Sie sich an / melden Sie sich an"
+        }
+      },
+      "borrowTable": {
+        "title": "Markt ausleihen",
+        "search": "Suchen",
+        "viewMore": "Mehr anzeigen",
+        "tHead": {
+          "coin": "Leihbare Münze",
+          "hIntRate": "Stündlicher Zinssatz",
+          "aIntRate": "Jährlicher Zinssatz",
+          "action": {
+            "label": "Aktion",
+            "button": "Ausleihen"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "item2": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "item3": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "item4": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "item5": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "Ausleihen oder leihen Sie einen festen Zinssatz aus, den Sie wählen",
+        "stats": {
+          "totalBorrowed": "Total ausgeliehen",
+          "currentOrders": "Aktuelle Bestellungen",
+          "rate": {
+            "label": "Angepasster Zinssatz",
+            "content": "Multi-Asset-Sicherheiten unterstützt"
+          }
+        },
+        "myOrder": {
+          "label": "Meine Bestellung",
+          "pOrders": {
+            "label": "Ausstehende Bestellungen",
+            "content": "Überprüfen und verwalten Sie unübertroffene Bestellungen"
+          },
+          "oOrders": {
+            "label": "Laufende Bestellungen",
+            "content": "Überprüfen Sie LTV, prüfen Sie LTV und zahlen Sie übereinstimmende Bestellungen zurück"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "Ausleihen",
+          "terms": {
+            "bAmount": "Betrag ausleihen",
+            "min": "Min 0,005 BTC",
+            "expRate": "Erwarteter Zinssatz",
+            "intRate": "Zinsen eingeben",
+            "refMarket": "Referenzmarktversorgungsrate",
+            "duration": "Dauer",
+            "collateral": "Sicherheit",
+            "setUp": "Kollateral einrichten",
+            "autoRepay": "Auto-Repay"
+          }
+        },
+        "supply": {
+          "label": "Liefern",
+          "terms": {
+            "bAmount": "Betrag ausleihen",
+            "min": "Min 0,005 BTC",
+            "expRate": "Erwarteter Zinssatz",
+            "intRate": "Zinsen eingeben",
+            "refMarket": "Referenzmarktversorgungsrate: 5,04%",
+            "duration": "Dauer",
+            "collateral": "Sicherheit",
+            "setUp": "Kollateral einrichten",
+            "autoRepay": "Auto-Repay"
+          }
+        },
+        "button": "Melden Sie sich an / melden Sie sich an"
+      },
+      "BandStable": {
+        "title1": "Ich möchte ausleihen",
+        "title2": "Ich möchte liefern",
+        "terms": {
+          "days": "Tage",
+          "all": "Alle",
+          "duration": "Dauer"
+        },
+        "borrowTableHead": {
+          "bRate": "Ausleihe Zinssatz (fest)",
+          "duration": "Dauer",
+          "minBAmount": "Min ausleihen Betrag",
+          "bAbleAmount": "Ausleihbetrag"
+        },
+        "supplyTableHead": {
+          "supplyApr": "Versorgung APR (fest)",
+          "duration": "Dauer",
+          "estInt": "Est. ",
+          "tAmount": "Gesamtbetrag"
+        }
+      },
+      "howItWorks": {
+        "title": "Wie funktionieren Kredite mit festen Zinsen?",
+        "tabs": {
+          "borrower": "Als Kreditnehmer",
+          "supplier": "Als Lieferant"
+        },
+        "step1": {
+          "title": "1. Platzieren",
+          "content": "Geben Sie eine Ausleihenbestellung auf oder wählen Sie eine bestehende Bestellung aus dem Kreditmarkt aus."
+        },
+        "step2": {
+          "title": "2. Wählen Sie Sicherheiten",
+          "content": "Wählen Sie aus der Liste Ihres Spot Wallet -Assets die Kollateral Asset (en) aus. "
+        },
+        "step3": {
+          "title": "3. Bestätigen Sie die Bestellung",
+          "content": "Bestätigen Sie die Auftragsdetails, einschließlich der geschätzten Zinsen, der Begriffe, des Margin Call LTV usw. Ihre Sicherheitenvermögen werden nach Aufgabe der Bestellung in Ihrer Spot -Brieftasche eingefroren."
+        },
+        "step4": {
+          "title": "4.. Order Matchedg",
+          "content": "Sobald Sie angepasst sind, wechselt Ihre Sicherheiten in Binance, und Sie erhalten den geliehenen Betrag (minus Zinsen) in Ihrer Spot -Brieftasche. "
+        },
+        "step5": {
+          "title": "5. Rückzahlung",
+          "content": "Rückzahlung bis zum Ablaufdatum, um Strafen zu vermeiden. "
+        }
+      },
+      "advantages": {
+        "title": "Kredite festgelegte Kredite Vorteile",
+        "adv1": {
+          "title": "Stabile und vorhersehbare Kosten für Kreditnehmer",
+          "content": "Legen Sie einen festen APR für eine festgelegte Dauer ein und beseitigen Sie Schwankungen und unerwartete Kosten."
+        },
+        "adv2": {
+          "title": "Effizienter automatisierter Prozess",
+          "content": "Genießen Sie einfache und automatisierte Kredit- und Krediterlebnisse mit automatischen Repay- und automatischen Optionen zur Verfügung."
+        },
+        "adv3": {
+          "title": "Attraktiver fester APR für Lieferanten",
+          "content": "Geben Sie Ihr Vermögen für einen anpassbaren und festen APR an."
+        },
+        "adv4": {
+          "title": "Multi-Asset-Sicherheiten",
+          "content": "Kreditnehmer können mehrere Vermögenswerte als Sicherheiten einstellen, um das Liquidationsrisiko zu verringern."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "faq1": {
+          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "faq2": {
+          "ques": "Kann ich meine Krypto jederzeit auflösen?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "faq3": {
+          "ques": "Verdiene ich während der Erlösungszeit Belohnungen?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        },
+        "faq4": {
+          "ques": "Ist das sichere Verpflegung?",
+          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+        }
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { IoIosAddCircleOutline, IoIosArrowDown } from "react-icons/io";
+import { useTranslations } from "next-intl";
 
 type CoinData = {
   symbol: string;
@@ -38,6 +39,7 @@ const testCoinData: CoinData[] = [
 ];
 
 export default function FixedBorrowForm() {
+  const t = useTranslations("loansPage.fixedLoan.borrowForm");
   const [tab, setTab] = useState<"borrow" | "supply">("borrow");
   const [duration, setDuration] = useState(30);
   const [autoRepay, setAutoRepay] = useState(true);
@@ -54,15 +56,15 @@ export default function FixedBorrowForm() {
     <div className="w-full mb-8 bg-white/80 dark:bg-[#161735] rounded-2xl  shadow-lg p-4   ">
       {/* Tabs */}
       <div className="flex text-[14px] justify-evenly mb-6">
-        {["borrow", "supply"].map((t) => (
+        {["borrow", "supply"].map((val) => (
           <button
-            key={t}
+            key={val}
             className={`pb-1 capitalize cursor-pointer ${
-              tab === t ? "text-green-400 border-b-2 border-green-400" : ""
+              tab === val ? "text-green-400 border-b-2 border-green-400" : ""
             }`}
-            onClick={() => setTab(t as "borrow" | "supply")}
+            onClick={() => setTab(val as "borrow" | "supply")}
           >
-            {t}
+            {t(`${val}.label`)}
           </button>
         ))}
       </div>
@@ -71,12 +73,12 @@ export default function FixedBorrowForm() {
       <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
         <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-          Borrow Amount
+          {t("borrow.terms.bAmount")}
         </label>
         <input
           type="text"
           className="outline-none border-none w-full bg-transparent text-[12px]"
-          placeholder="Min 0.005 BTC"
+          placeholder={t("borrow.terms.min")}
         />
         {/* coin selection */}
         {/* coin selection */}
@@ -135,12 +137,12 @@ export default function FixedBorrowForm() {
       <div className="w-full mt-6 border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
         <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-          Expected interest rate
+          {t("borrow.terms.expRate")}
         </label>
         <input
           type="text"
           className="outline-none border-none w-full bg-transparent text-[12px]"
-          placeholder="Enter interest rate"
+          placeholder={t("borrow.terms.intRate")}
         />
         {/* coin selection */}
         <div className=" ml-2 mr-4  px-2 py-[2px] flex gap-6 items-center">
@@ -148,13 +150,15 @@ export default function FixedBorrowForm() {
         </div>
 
         <p className="absolute -bottom-5 left-3 text-[10px] font-extralight dark:opacity-60 opacity-100">
-          Reference market supply rate: 5.04%
+          {t("borrow.terms.refMarket")}: 5.04%
         </p>
       </div>
 
       {/* Duration */}
       <div className="ml-2 mt-10">
-        <label className="block text-xs ml-2 mb-2">Duration</label>
+        <label className="block text-xs ml-2 mb-2">
+          {t("borrow.terms.duration")}
+        </label>
         <div className="flex gap-3">
           {[30, 90, 180].map((d) => (
             <button
@@ -176,18 +180,18 @@ export default function FixedBorrowForm() {
       <div className="w-full mt-6 border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
         <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-          Collateral
+          {t("borrow.terms.collateral")}
         </label>
 
         <div className="w-full flex gap-1 justify-center items-center text-[12px] font-extralight opacity-70 dark:opacity-40">
           <IoIosAddCircleOutline className="text-lg" />
-          <span>Set up collateral</span>
+          <span>{t("borrow.terms.setUp")}</span>
         </div>
       </div>
 
       {/* Auto-Repay */}
       <div className="flex mt-6 items-center justify-between ">
-        <span className="text-xs ml-2 ">Auto-Repay</span>
+        <span className="text-xs ml-2 ">{t("borrow.terms.autoRepay")}</span>
         {/* Custom Toggle */}
         <div
           onClick={() => setAutoRepay(!autoRepay)}
@@ -205,7 +209,7 @@ export default function FixedBorrowForm() {
 
       {/* Button */}
       <button className="w-full mt-6 text-[14px] bg-green-600 hover:bg-green-700 text-white dark:text-black  font-semibold py-2 rounded-full cursor-pointer transition-all duration-300">
-        Log in / Sign up
+        {t("button")}
       </button>
     </div>
   );

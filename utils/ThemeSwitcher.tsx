@@ -11,8 +11,8 @@ const ThemeSwitcher: FC<Props> = ({ size }) => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
-  const savedTheme = localStorage.getItem("theme");
-  console.log("Saved theme is:- ", savedTheme);
+  // const savedTheme = localStorage.getItem("theme");
+  // console.log("Saved theme is:- ", savedTheme);
 
   useEffect(() => {
     setMounted(true);

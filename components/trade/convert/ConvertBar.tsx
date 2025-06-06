@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
@@ -37,11 +38,10 @@ for (let i = 0; i < 8; i++) {
 }
 
 const ConvertBar = () => {
+  const t = useTranslations("convertPage.convertBar");
   return (
     <div className="w-full flex gap-2 items-center ">
-      <p className="text-xs text-nowrap ml-10">
-        Convert BTC (Bitcoin) to other coins :{" "}
-      </p>
+      <p className="text-xs text-nowrap ml-10">{t("barTitle")} : </p>
 
       <div className="w-full relative">
         {/* effect left entering point */}

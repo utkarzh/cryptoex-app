@@ -1,17 +1,19 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FaApple, FaTelegramPlane } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
 
 export default function LoginForm() {
+  const t = useTranslations("auth.signin");
   return (
     <div className="w-full  flex flex-col items-center justify-center px-4">
       <div className="w-full max-w-sm p-6 rounded-2xl bg-white dark:bg-[#161735] shadow-2xl">
         <div className="w-full flex justify-between">
           {/* heading */}
           <h2 className={` ${saira.className} text-sm font-semibold mb-6`}>
-            Log in to your account
+            {t("title")}
           </h2>
           {/* qr */}
           <IoQrCodeOutline className="text-green-600 cursor-pointer" />
@@ -22,12 +24,12 @@ export default function LoginForm() {
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
             <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-              Email
+              {t("items.email.label")}
             </label>
             <input
               type="text"
               className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
-              placeholder="Enter email"
+              placeholder={t("items.email.holder")}
             />
           </div>
 
@@ -35,12 +37,12 @@ export default function LoginForm() {
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
             <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-              Password
+              {t("items.password.label")}
             </label>
             <input
               type="password"
               className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
-              placeholder="Enter password"
+              placeholder={t("items.password.holder")}
             />
           </div>
 
@@ -48,14 +50,14 @@ export default function LoginForm() {
             type="submit"
             className="w-full mt-2 py-2 bg-green-500 rounded-full text-black font-semibold hover:bg-green-600 transition text-xs cursor-pointer"
           >
-            Log in
+            {t("button")}
           </button>
         </form>
       </div>
 
       <div className="mb-4">
         <div className="text-center text-[10px] text-slate-500 dark:text-gray-400 mt-4">
-          Or Log in with
+          {t("signinOption")}
         </div>
 
         <div className="flex justify-center gap-4 mt-2">
@@ -78,9 +80,9 @@ export default function LoginForm() {
         </div>
 
         <div className="text-center text-[10px]  mt-4">
-          Don’t have an account?{" "}
+          {t("noAcc.part1")}{" "}
           <span className="text-green-400 hover:underline cursor-pointer">
-            Create account
+            {t("noAcc.part2")}
           </span>
         </div>
       </div>

@@ -5,25 +5,27 @@ import { TbArrowsDownUp } from "react-icons/tb";
 import { LuFileText } from "react-icons/lu";
 import { PiQuestion } from "react-icons/pi";
 import CryptoConvertForm from "./CryptoConvertForm";
+import { useTranslations } from "next-intl";
 
 export const tabItem = [
   {
     icon: <TbArrowsDownUp />,
-    title: "Convert",
+    title: "convert",
   },
   {
     icon: <LuFileText />,
-    title: "History",
+    title: "history",
   },
   {
     icon: <PiQuestion />,
-    title: "FAQ",
+    title: "faq",
   },
 ];
 
 const Convert = () => {
-  const [tabType, setTabType] = useState<"FAQ" | "Convert" | "History">(
-    "Convert"
+  const t = useTranslations("convertPage");
+  const [tabType, setTabType] = useState<"faq" | "convert" | "history">(
+    "convert"
   );
   return (
     <div className="w-full flex flex-col justify-center">
@@ -44,7 +46,8 @@ const Convert = () => {
                 }`}
               >
                 <span className="capitalize flex gap-1 items-center">
-                  {pair.icon} {pair.title}
+                  {pair.icon}
+                  {t(`tabs.${pair.title}`)}
                 </span>
               </button>
             ))}
@@ -53,7 +56,7 @@ const Convert = () => {
       </div>
 
       {/* convert form */}
-      {tabType === "Convert" && <CryptoConvertForm />}
+      {tabType === "convert" && <CryptoConvertForm />}
 
       <div className="w-full mb-20">
         <ConvertBar />

@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
@@ -64,6 +65,7 @@ const mockData = [
 ];
 
 export default function BorrowTable() {
+  const t = useTranslations("loansPage.flexibleLoan.borrowTable");
   const [search, setSearch] = useState("");
 
   const filteredData = mockData.filter((item) =>
@@ -74,12 +76,12 @@ export default function BorrowTable() {
     <div className="mt-20">
       <div className="flex justify-between items-center mb-4">
         <h2 className={` ${saira.className} text-lg font-semibold`}>
-          Borrow Market
+          {t("title")}
         </h2>
         <div className="relative flex items-center">
           <input
             type="text"
-            placeholder="Search"
+            placeholder={t("search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -92,15 +94,15 @@ export default function BorrowTable() {
         <table className="w-full text-xs text-left">
           <thead className=" ">
             <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-3 px-2 font-extralight">Loanable Coin</th>
+              <th className="py-3 px-2 font-extralight">{t("tHead.coin")}</th>
               <th className="py-3 px-2 font-extralight text-center">
-                Hourly Interest Rate
+                {t("tHead.hIntRate")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                Annual Interest Rate
+                {t("tHead.aIntRate")}
               </th>
               <th className="py-3 px-2 font-extralight text-right pr-6">
-                Action
+                {t("tHead.action.label")}
               </th>
             </tr>
           </thead>
@@ -118,7 +120,7 @@ export default function BorrowTable() {
                 <td className="py-3 px-2  text-center">{item.annual}</td>
                 <td className="py-3 px-2 text-right">
                   <button className="text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300">
-                    Borrow
+                    {t("tHead.action.button")}
                   </button>
                 </td>
               </tr>
@@ -129,7 +131,7 @@ export default function BorrowTable() {
 
       <div className="text-center mt-4">
         <button className="bg-green-600 text-white dark:text-black px-6 py-1 rounded-full hover:bg-green-500 transition cursor-pointer">
-          View more
+          {t("viewMore")}
         </button>
       </div>
     </div>
