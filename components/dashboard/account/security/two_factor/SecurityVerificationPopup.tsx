@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useState, useRef, useEffect, FC } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
@@ -13,6 +14,10 @@ type Props = {
 };
 
 const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.twofactor.addPopUp1"
+  );
+
   const [code, setCode] = useState<string[]>(Array(6).fill(""));
   const [error, setError] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -44,11 +49,9 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
     if (enteredCode !== CORRECT_CODE) {
       setError(true);
       if (enteredCode === "000000") {
-        setErrorMessage(
-          "Verification code has expired. Please request a new code."
-        );
+        setErrorMessage(t("error.expOtp"));
       } else {
-        setErrorMessage("The OTP you entered is incorrect.");
+        setErrorMessage(t("error.wrongOtp"));
       }
     } else {
       onOTPEntered(CORRECT_CODE);
@@ -75,10 +78,10 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
       </button>
 
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Security Verification
+        {t("title")}
       </h2>
       <p className="mt-6 opacity-60 text-xs font-light mb-4">
-        A verification code will be sent to kdk****fx@gmail.com
+        {t("codeAt")} kdk****fx@gmail.com
       </p>
 
       {/* box */}
@@ -102,11 +105,9 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
       </div>
 
       <p className="flex text-[11px] gap-[2px] font-light ">
-        <span className="opacity-60">
-          Not able to receive verification code?
-        </span>
+        <span className="opacity-60">{t("noCode.part1")}</span>
         <button className="text-green-500 hover:underline cursor-pointer">
-          Resend verification code
+          {t("noCode.part2")}
         </button>
       </p>
 
@@ -118,7 +119,7 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
       )}
 
       <p className="text-green-500 text-xs font-light mt-8 cursor-pointer">
-        Having problems with verification?
+        {t("havingProb")}
       </p>
     </div>
   );

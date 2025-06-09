@@ -7,6 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import { SiBinance, SiEthereum, SiPolygon, SiTether } from "react-icons/si";
 import ReactPaginate from "react-paginate";
 import MiniGraph from "../home/currency-wedgets/MiniGraph";
+import { useTranslations } from "next-intl";
 
 const mockData = [
   {
@@ -100,6 +101,7 @@ const tokenTabs = [
 ];
 
 export default function TradeTable() {
+  const t = useTranslations("marketPage.table");
   const [search, setSearch] = useState("");
 
   const filteredData = mockData.filter((item) =>
@@ -136,7 +138,9 @@ export default function TradeTable() {
                 : "border-b-2 border-transparent"
             }`}
           >
-            <div className="flex gap-1 items-center text-sm">All</div>
+            <div className="flex gap-1 items-center text-sm">
+              {t("terms.all")}
+            </div>
           </button>
 
           {tokenTabs.map(({ label, icon }) => (
@@ -160,7 +164,7 @@ export default function TradeTable() {
         <div className="relative flex items-center">
           <input
             type="text"
-            placeholder="Search"
+            placeholder={t("terms.search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -173,27 +177,27 @@ export default function TradeTable() {
         <table className="w-full text-xs text-left">
           <thead className=" ">
             <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-3 px-2 font-extralight">Coins</th>
+              <th className="py-3 px-2 font-extralight">{t("tHead.coin")}</th>
               <th className="py-3 px-2 font-extralight text-center">
-                Last price
+                {t("tHead.lPrice")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                24h change
+                {t("tHead.24hChange")}
               </th>
               <th className="py-3 px-2 font-extralight text-center pr-6">
-                24h high
+                {t("tHead.24hHigh")}
               </th>
               <th className="py-3 px-2 font-extralight text-center pr-6">
-                24h low
+                {t("tHead.24hLow")}
               </th>
               <th className="py-3 px-2 font-extralight text-center pr-6">
-                24h volume
+                {t("tHead.24hVol")}
               </th>
               <th className="py-3 px-2 font-extralight text-center pr-6">
-                Charts
+                {t("tHead.chart")}
               </th>
               <th className="py-3 px-2 font-extralight text-right pr-6">
-                Trade
+                {t("tHead.trade")}
               </th>
             </tr>
           </thead>
@@ -225,7 +229,7 @@ export default function TradeTable() {
                 </td>
                 <td className="py-3 px-2 text-right">
                   <button className="text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300">
-                    Borrow
+                    {t("button")}
                   </button>
                 </td>
               </tr>

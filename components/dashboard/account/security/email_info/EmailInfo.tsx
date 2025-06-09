@@ -7,10 +7,12 @@ import ChangeMailConfirmationPopup from "./ChangeMailConfirmationPopup";
 import SecurityConfirmationPopup from "./SecurityConfirmationPopup";
 import ChangeMailSubmitPopup from "./ChangeMailSubmitPopup";
 import { IoMdClose } from "react-icons/io";
+import { useTranslations } from "next-intl";
 
 export type PopupData = "change_mail" | "next_step" | "confirm" | "";
 
 const EmailInfo = () => {
+  const t = useTranslations("dashboard.security.securitySetting.emailInfo");
   const [popupStatus, setPopupStatus] = useState<PopupData>("");
   const [error, setError] = useState<string>("");
 
@@ -41,12 +43,9 @@ const EmailInfo = () => {
             <MdOutlineEmail className=" text-[17px]" />
           </div>
           <div>
-            <div className="font-xs font-light opacity-90">
-              Email authentication
-            </div>
+            <div className="font-xs font-light opacity-90">{t("label")}</div>
             <div className="text-[11px] font-light opacity-60">
-              Use email authentication for login and transaction confirmations
-              to enhance account security
+              {t("content")}
             </div>
           </div>
         </div>
@@ -74,7 +73,7 @@ const EmailInfo = () => {
             className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
             onClick={() => setPopupStatus("change_mail")}
           >
-            Change email
+            {t("button")}
           </button>
         </div>
 

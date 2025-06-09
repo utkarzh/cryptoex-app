@@ -2,8 +2,10 @@ import { saira } from "@/utils/Font";
 import React from "react";
 import Overview from "./Overview";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const StakeHero = () => {
+  const t = useTranslations("stakingPage.stakeHero");
   return (
     <div className="w-full pb-4 h-fit bg-white dark:bg-[#151634]  relative  ">
       <div className="partShadowStake"></div>
@@ -13,12 +15,9 @@ const StakeHero = () => {
           {/* content */}
           <div className="flex flex-col ">
             <h1 className={`${saira.className} text-2xl font-bold`}>
-              Stake with Flexible Terms for Maximum Earnings
+              {t("title")}
             </h1>
-            <p className="text-[14px] font-extralight">
-              Earn passive income on your terms with flexible, high-yield
-              staking options.
-            </p>
+            <p className="text-[14px] font-extralight">{t("content")}</p>
           </div>
           {/* overview */}
           <Overview />

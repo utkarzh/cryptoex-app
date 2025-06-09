@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 // import { saira } from "@/utils/Font";
 import { useState } from "react";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
@@ -17,7 +18,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Active",
+    status: "active",
     icon: <FaBitcoin className="text-xl text-yellow-400" />,
   },
   {
@@ -27,7 +28,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Active",
+    status: "active",
     icon: <FaEthereum className="text-xl text-blue-400" />,
   },
   {
@@ -37,7 +38,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Maintenance",
+    status: "maintenance",
     icon: <SiCardano className="text-xl text-sky-400" />,
   },
   {
@@ -47,7 +48,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Active",
+    status: "active",
     icon: <FaTruckRampBox className="text-xl text-red-500" />,
   },
   {
@@ -57,7 +58,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Maintenance",
+    status: "maintenance",
     icon: <SiDogecoin className="text-xl text-yellow-500" />,
   },
   {
@@ -67,7 +68,7 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Active",
+    status: "active",
     icon: <FaEthereum className="text-xl text-blue-400" />,
   },
   {
@@ -77,12 +78,13 @@ const mockData = [
     currentSupply: "17,786,937",
     buyFee: "0.0015",
     sellFee: "0.0015",
-    status: "Maintenance",
+    status: "maintenance",
     icon: <SiCardano className="text-xl text-sky-400" />,
   },
 ];
 
 export default function WalletStatusTable() {
+  const t = useTranslations("walletStatus");
   const [search, setSearch] = useState("");
 
   const filteredData = mockData.filter((item) =>
@@ -100,12 +102,12 @@ export default function WalletStatusTable() {
       <div className="flex justify-between items-center mb-4">
         {/* heading */}
         <h2 className={` ${saira.className} text-lg font-medium`}>
-          Wallet Status
+          {t("title")}
         </h2>
         <div className="relative flex items-center justify-center">
           <input
             type="text"
-            placeholder="Search"
+            placeholder={t("terms.search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -119,21 +121,21 @@ export default function WalletStatusTable() {
           <table className="w-full text-xs text-left">
             <thead className=" ">
               <tr className="text-[12px] opacity-90 dark:opacity-60">
-                <th className="py-3 px-2 font-extralight">Name</th>
+                <th className="py-3 px-2 font-extralight">{t("tHead.name")}</th>
                 <th className="py-3 px-2 font-extralight text-center">
-                  Total Supply
+                  {t("tHead.tSupply")}
                 </th>
                 <th className="py-3 px-2 font-extralight  text-center">
-                  Curr. Supply
+                  {t("tHead.cSupply")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-center pr-6">
-                  Buy Fee
+                  {t("tHead.buyFee")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-center pr-6">
-                  Sell Fee
+                  {t("tHead.sellFee")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-right pr-6">
-                  Status
+                  {t("tHead.status")}
                 </th>
               </tr>
             </thead>
@@ -159,12 +161,12 @@ export default function WalletStatusTable() {
                   <td className="py-3 px-2 text-right">
                     <button
                       className={`text-[12px] w-[100px] py-1 ${
-                        item.status === "Active"
+                        item.status === "active"
                           ? "text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"
                           : "text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"
                       }   rounded-full  cursor-pointer  transition-all duration-300`}
                     >
-                      {item.status}
+                      {t(`tHead.buttons.${item.status}`)}
                     </button>
                   </td>
                 </tr>

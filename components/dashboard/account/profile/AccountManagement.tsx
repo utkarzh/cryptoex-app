@@ -5,14 +5,16 @@ import React, { useState } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { RiUserForbidLine } from "react-icons/ri";
 import DeletionRequestPopup from "./DeletionRequestPopup";
+import { useTranslations } from "next-intl";
 
 const AccountManagement = () => {
+  const t = useTranslations("dashboard.profile.accManagement");
   const [isDeleteRequest, setIsDeleteRequest] = useState(false);
 
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-lg  mx-auto">
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Account management
+        {t("title")}
       </h2>
       <div className="flex flex-col gap-6 mt-4">
         {/* nickname */}
@@ -22,10 +24,11 @@ const AccountManagement = () => {
               <RiUserForbidLine className=" text-[17px]" />
             </div>
             <div>
-              <div className="font-xs font-light opacity-90">Close Account</div>
+              <div className="font-xs font-light opacity-90">
+                {t("closeAcc.label")}
+              </div>
               <div className="text-[11px] font-light opacity-60">
-                Once you close your account, it is permanent and can&apos;t be
-                restored
+                {t("closeAcc.content")}
               </div>
             </div>
           </div>

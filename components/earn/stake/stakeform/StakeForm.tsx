@@ -3,66 +3,11 @@ import CoinCard from "@/components/common/CoinCard";
 import React, { FC, useState } from "react";
 import { IoIosArrowDown, IoIosCloseCircleOutline } from "react-icons/io";
 import StakeFormInfoCard from "./StakeFormInfoCard";
+import { useTranslations } from "next-intl";
 
 type Props = {
   onClose: () => void;
 };
-const testInfoLeft = [
-  {
-    title: "Reference APR",
-    value: "3%",
-    color: "green",
-  },
-
-  {
-    title: "Term",
-    value: "Flexible",
-    color: "",
-  },
-
-  {
-    title: "Funding account",
-    value: "0 BTC",
-    color: "",
-  },
-
-  {
-    title: "Max amount",
-    value: "1,00,00 BTC",
-    color: "",
-  },
-];
-
-const testInfoRight = [
-  {
-    title: "Subscription date",
-    value: "4/22/2025, 15:37",
-    color: "",
-  },
-
-  {
-    title: "Accrual date",
-    value: "4/22/2025, 21:30",
-    color: "",
-  },
-
-  {
-    title: "Profit distribution date",
-    value: "4/24/2025, 17:30",
-    color: "",
-  },
-
-  {
-    title: "Redemption period",
-    value: "14 days",
-    color: "",
-  },
-  {
-    title: "Profit received",
-    value: "Daily",
-    color: "",
-  },
-];
 
 type CoinData = {
   symbol: string;
@@ -98,6 +43,65 @@ const testCoinData: CoinData[] = [
   },
 ];
 const StakeForm: FC<Props> = ({ onClose }) => {
+  const t = useTranslations("stakingPage.stakeForm");
+
+  const testInfoLeft = [
+    {
+      title: t("form.terms.currency"),
+      value: "3%",
+      color: "green",
+    },
+
+    {
+      title: t("form.terms.terms"),
+      value: t("form.terms.flexible"),
+      color: "",
+    },
+
+    {
+      title: t("form.terms.fundAcc"),
+      value: "0 BTC",
+      color: "",
+    },
+
+    {
+      title: t("form.terms.maxAmount"),
+      value: "1,00,00 BTC",
+      color: "",
+    },
+  ];
+
+  const testInfoRight = [
+    {
+      title: t("preview.terms.subDate"),
+      value: "4/22/2025, 15:37",
+      color: "",
+    },
+
+    {
+      title: t("preview.terms.accDate"),
+      value: "4/22/2025, 21:30",
+      color: "",
+    },
+
+    {
+      title: t("preview.terms.profitDisDate"),
+      value: "4/24/2025, 17:30",
+      color: "",
+    },
+
+    {
+      title: t("preview.terms.redPeriod"),
+      value: `14 ${t("preview.terms.days")}`,
+      color: "",
+    },
+    {
+      title: t("preview.terms.profitRec"),
+      value: t("preview.terms.daily"),
+      color: "",
+    },
+  ];
+
   const [isCoinListOpen, setIsCoinListOpen] = useState(false);
   const [selectedCoin, setSelectedCoin] = useState<CoinData>();
 
@@ -111,7 +115,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
       <div className="w-full h-fit mx-auto flex flex-col rounded-xl bg-white  dark:bg-[#1d1f38]">
         {/* heading */}
         <div className="w-full  bg-[#eff0f2] dark:bg-[#2d2d47] rounded-t-xl py-2 flex justify-between items-center">
-          <h2 className="text-md ml-4">Staking</h2>
+          <h2 className="text-md ml-4">{t("title")}</h2>
           <IoIosCloseCircleOutline
             className=" text-[20px] mr-4 cursor-pointer opacity-50 hover:opacity-100 transition-all duration-200 "
             onClick={onClose}
@@ -130,7 +134,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               >
                 {/* label */}
                 <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
-                  Currency
+                  {t("form.terms.currency")}
                 </label>
 
                 {selectedCoin ? (
@@ -140,7 +144,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
                     isSmall={true}
                   />
                 ) : (
-                  <div className="opacity-70 text-xs">Select Coin</div>
+                  <div className="opacity-70 text-xs">
+                    {t("form.terms.selAmount")}
+                  </div>
                 )}
                 {/* coin list */}
                 {isCoinListOpen && (
@@ -170,13 +176,13 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
                 {/* label */}
                 <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
-                  Amount
+                  {t("form.terms.amount")}
                 </label>
 
                 <input
                   type="text"
                   className="outline-none border-none w-full bg-transparent text-[12px]"
-                  placeholder="Min amount 0.0001 BTC"
+                  placeholder={t("form.terms.minAmount")}
                 />
 
                 <div className="flex items-center gap-1 mr-1">
@@ -185,18 +191,6 @@ const StakeForm: FC<Props> = ({ onClose }) => {
                     Max
                   </div>
                 </div>
-
-                {/* <div className="w-full flex gap-2 justify-between">
-                  <div className="text-[11px] font-extralight opacity-80 dark:opacity-70">
-                    Min amount 0.0001 BTC
-                  </div>
-
-                  <div className="flex gap-[6px] opacity-80 dark:opacity-70 text-[11px] font-extralight mr-4">
-                    <div className="">BTC</div>
-                    <div className="border-l dark:border-white/30 border-black/30"></div>
-                    <div className="text-green-700 font-medium">Max</div>
-                  </div>
-                </div> */}
               </div>
             </div>
             {/* info */}
@@ -218,7 +212,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             {/* preview */}
             <div className="w-full flex flex-col gap-3">
               {/* heading */}
-              <div className="text-[12px] text-start font-medium">Preview</div>
+              <div className="text-[12px] text-start font-medium">
+                {t("preview.lable")}
+              </div>
               <div className="border-b opacity-30"></div>
               {/* info */}
               <div>
@@ -237,12 +233,15 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             <div className="w-full flex flex-col gap-3">
               {/* heading */}
               <div className="text-[12px] text-start font-medium">
-                Estimated returns
+                {t("estimated.label")}
               </div>
               <div className="border-b opacity-30"></div>
               {/* info */}
               <div>
-                <StakeFormInfoCard title="BTC earnings" value="" />
+                <StakeFormInfoCard
+                  title={t("estimated.terms.earning")}
+                  value=""
+                />
               </div>
             </div>
 
@@ -250,9 +249,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             <div className="w-full flex gap-1 items-center mt-2">
               <input type="checkbox" className="bg-transparent" />
               <label className="text-[11px] font-normal">
-                I have read and agree to{" "}
+                {t("estimated.terms.agg.part1")}{" "}
                 <span className="text-green-600 cursor-pointer hover:text-green-500 hover:underline">
-                  Staking User Agreement
+                  {t("estimated.terms.agg.part2")}
                 </span>
               </label>
             </div>
@@ -260,7 +259,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             {/* stake button */}
             <div className="w-full  mt-2">
               <button className="w-full rounded-full py-1 text-center text-white dark:text-black bg-green-500 hover:bg-green-600   dark:bg-green-600 dark:hover:bg-green-700 transition-all duration-200 cursor-pointer">
-                Stake
+                {t("button")}
               </button>
             </div>
           </div>

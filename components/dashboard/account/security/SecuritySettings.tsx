@@ -6,11 +6,15 @@ import EmailInfo from "./email_info/EmailInfo";
 import PasswordInfo from "./password_info/PasswordInfo";
 import SecondaryPin from "./secondary_pin/SecondaryPin";
 import AntiPhishing from "./anti_phishing/AntiPhishing";
+import { useTranslations } from "next-intl";
 
 const SecuritySettings = () => {
+  const t = useTranslations("dashboard.security.securitySetting");
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-lg  mx-auto relative">
-      <h2 className={`${saira.className} text-sm font-semibold `}>Security</h2>
+      <h2 className={`${saira.className} text-sm font-semibold `}>
+        {t("title")}
+      </h2>
       <div className="flex flex-col gap-5 mt-4">
         {/* email */}
         <EmailInfo />

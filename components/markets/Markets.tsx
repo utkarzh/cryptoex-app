@@ -4,11 +4,13 @@ import TopGainers from "./TopGainers";
 import TopTranding from "./TopTrending";
 import NewListings from "./NewListings";
 import TradeTable from "./TradeTable";
+import { useTranslations } from "next-intl";
 
 const Markets = () => {
-  const [tabType, setTabType] = useState<
-    "Spot" | "Newly listed" | "Top gainers"
-  >("Spot");
+  const t = useTranslations("marketPage.tabs");
+  const [tabType, setTabType] = useState<"spot" | "newListed" | "topGainer">(
+    "spot"
+  );
   return (
     <div className="w-full">
       {/* tabs */}
@@ -17,7 +19,7 @@ const Markets = () => {
         <div className="flex">
           {/* loan type */}
           <div className="flex gap-10 px-4 border-b-2 dark:border-white/10 border-[#161735]/10 pt-2 ">
-            {["Spot", "Newly listed", "Top gainers"].map((val) => (
+            {["spot", "newListed", "topGainer"].map((val) => (
               <button
                 key={val}
                 onClick={() => setTabType(val as typeof tabType)}
@@ -27,7 +29,7 @@ const Markets = () => {
                     : "border-b-3 border-transparent"
                 }`}
               >
-                <span className="flex gap-1 items-center">{val}</span>
+                <span className="flex gap-1 items-center">{t(`${val}`)}</span>
               </button>
             ))}
           </div>

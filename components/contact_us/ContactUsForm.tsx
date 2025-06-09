@@ -1,19 +1,19 @@
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 
 const ContactUsForm = () => {
+  const t = useTranslations("contactPage");
   return (
     <div className="w-full flex flex-col md:flex-row  gap-6 bg-white  dark:bg-[#161735] rounded-xl p-6   relative shadow-xl">
       {/* left section */}
       <section className="w-full flex flex-col gap-6">
         {/* heading */}
         <div className="w-full space-y-1">
-          <h2 className={`${saira.className} text-xl`}>Contact us</h2>
-          <p className="text-[10px] ">
-            Get in touch with the Track INDOEX team if you have any questions.
-          </p>
+          <h2 className={`${saira.className} text-xl`}>{t("title")}</h2>
+          <p className="text-[10px] ">{t("subTitle")}</p>
         </div>
 
         {/* form */}
@@ -22,12 +22,12 @@ const ContactUsForm = () => {
           <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
             {/* label */}
             <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-              Email
+              {t("terms.email")}
             </label>
             <input
               type="text"
               className="outline-none border-none w-full bg-transparent text-[12px]"
-              placeholder="Enter your email"
+              placeholder={t("terms.enterEmail")}
             />
           </div>
 
@@ -35,12 +35,12 @@ const ContactUsForm = () => {
           <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
             {/* label */}
             <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-              Category
+              {t("terms.category")}
             </label>
 
             <select className="outline-none border-none w-full bg-transparent text-[12px] mr-2">
               <option className="dark:bg-[#06062a] bg-slate-50 px-2 py-1.5 ">
-                Select your enquiry type
+                {t("terms.selectType")}
               </option>
               <option className="dark:bg-[#06062a] bg-slate-50 px-2 py-1.5  ">
                 item1
@@ -58,19 +58,19 @@ const ContactUsForm = () => {
           <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
             {/* label */}
             <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
-              Message
+              {t("terms.message")}
             </label>
             <textarea
               rows={5}
               cols={5}
               className="outline-none border-none w-full bg-transparent text-[12px]"
-              placeholder="Message here..."
+              placeholder={t("terms.messageHere")}
             />
           </div>
 
           {/* submit */}
           <button className="w-full bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-3 rounded-full transition text-xs cursor-pointer">
-            Submit
+            {t("terms.button")}
           </button>
         </form>
 
@@ -83,7 +83,7 @@ const ContactUsForm = () => {
               <FiPhoneCall className="text-xs opacity-70" />
             </span>
             <div className="text-[8px]">
-              <p>PHONE</p>
+              <p> {t("terms.phone")}</p>
               <p className="font-light">03 5432 1234</p>
             </div>
           </div>
@@ -95,7 +95,7 @@ const ContactUsForm = () => {
               <MdOutlineEmail className="text-xs opacity-70" />
             </span>
             <div className="text-[8px]">
-              <p>EMAIL</p>
+              <p> {t("terms.emailBot")}</p>
               <p className="font-light">info@marcc.com.au</p>
             </div>
           </div>

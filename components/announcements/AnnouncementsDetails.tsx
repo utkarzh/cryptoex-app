@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
@@ -12,11 +13,12 @@ const announcementsDetails = [
 ];
 
 const AnnouncementsDetails = () => {
+  const t = useTranslations("announcementsPage");
   return (
     <div className=" ml-2 h-full w-full dark:bg-[#161735]  bg-white rounded-md px-4 py-6">
       {/* link details */}
       <div className="text-sm fonr-bold pb-4 opacity-50 flex  items-center">
-        Annoucements <MdOutlineKeyboardArrowRight className="text-lg" />
+        {t("title")} <MdOutlineKeyboardArrowRight className="text-lg" />
       </div>
 
       <div className="w-full flex flex-col gap-1  ">

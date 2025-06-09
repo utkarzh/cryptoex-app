@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -75,15 +76,16 @@ const trades: Trade[] = [
 ];
 
 const TradeHistoryTable = () => {
+  const t = useTranslations("dashboard.overviewPage.tradeTable");
   return (
     <div className=" bg-white dark:bg-[#161735]  p-6 rounded-xl">
       <div className="flex justify-between items-center mb-4">
         <h2 className={`${saira.className} text-sm font-semibold `}>
-          Trade History
+          {t("title")}
         </h2>
         {/* view all button */}
         <button className="border text-xs border-green-500 text-green-50 bg-green-600 dark:text-green-400 dark:bg-green-700/30 hover:scale-105  px-3 py-1.5 rounded-full  flex items-center gap-1   transition cursor-pointer">
-          View All <BsArrowRight />
+          {t("button")} <BsArrowRight />
         </button>
       </div>
 
@@ -91,14 +93,37 @@ const TradeHistoryTable = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">Filled Time</th>
-              <th className="px-4 py-3 text-[11px] font-light">Pair</th>
-              <th className="px-4 py-3 text-[11px] font-light">Buy or Sell</th>
-              <th className="px-4 py-3 text-[11px] font-light">Order Type</th>
-              <th className="px-4 py-3 text-[11px] font-light">Fill Price</th>
-              <th className="px-4 py-3 text-[11px] font-light">Amount</th>
-              <th className="px-4 py-3 text-[11px] font-light">Volume</th>
-              <th className="px-4 py-3 text-[11px] font-light">Fee</th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.filledTime")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.pair")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.bOrS")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.orderType")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.fillPrice")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.amount")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.vol")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {" "}
+                {t("tHead.fee")}
+              </th>
             </tr>
           </thead>
           <tbody>

@@ -1,4 +1,5 @@
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { FC, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -9,6 +10,7 @@ type Props = {
 };
 
 const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
+  const t = useTranslations("dashboard.profile.profile.nickName.popUp");
   const [changedNickname, setChangedNickname] = useState(nickname);
 
   return (
@@ -23,20 +25,22 @@ const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Change Nickname
+        {t("title")}
       </h2>
       {/* input */}
       <div>
-        <label className="block mb-2 text-[10px] font-light">Nickname</label>
+        <label className="block mb-2 text-[10px] font-light">
+          {t("nickname")}
+        </label>
         <input
           type="text"
           value={changedNickname}
-          placeholder="Enter nickname"
+          placeholder={t("enterNickname")}
           className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-xs"
           onChange={(e) => setChangedNickname(e.target.value)}
         />
         <p className="text-[9px] font-light mt-1 text-red-600">
-          5-20 characters. Special characters not allowed.
+          {t("message")}
         </p>
       </div>
 
@@ -46,14 +50,14 @@ const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
           className="w-full border border-slate-500/30 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={onClose}
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
                py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={() => onSuccess(changedNickname)}
         >
-          Confirm
+          {t("buttons.confirm")}
         </button>
       </div>
     </div>

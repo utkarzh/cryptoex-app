@@ -61,242 +61,6 @@
       "new_listing": "Nouvelle liste"
     }
   },
-
-"homePage": {
-    "heroSection": {
-      "title": "Verbessern Sie Ihre Kryptohandelerfahrung",
-      "subTitle": "Zeuge nahtloser Transaktionen, Echtzeiteinsichten und sichere Handel mit allem, was du brauchst."
-    },
-    "currencyWedgets": {
-      "tableTitle": {
-        "spot": "Stelle",
-        "newlyListed": "Neu gelistet",
-        "topGainers": "Top -Gewinne"
-      },
-      "tableHead": {
-        "coins": "Münzen",
-        "lastPrice": "Letzter Preis",
-        "24hChange": "24H -Veränderung",
-        "markets": "Märkte",
-        "24hVolume": "24H Volumen"
-      }
-    },
-    "createAccount": {
-      "step1": {
-        "heading": "Erstellen Sie Ihr Konto",
-        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
-        "button": "Fangen an"
-      },
-      "step2": {
-        "heading": "Vervollständige deinen KYC",
-        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
-        "button": "Aktualisieren Sie KYC"
-      },
-      "step3": {
-        "heading": "Handel beginnen",
-        "content": "Melden Sie sich in wenigen Minuten mit Ihrer E -Mail an, legen Sie ein sicheres Passwort fest und überprüfen Sie Ihre Identität für ein sicheres Handelserlebnis.",
-        "button": "Handel beginnen"
-      }
-    },
-    "getStarted": {
-      "heading": "Fangen an",
-      "marketing": {
-        "24hVolume": "24H Volumen (BTC)",
-        "coinsListed": "Münzen aufgeführt",
-        "countries": "Länder",
-        "marketPairs": "Marktpaare"
-      },
-      "benefits": {
-        "type_vendor": "Verkäufer Vorteile",
-        "type_user": "Benutzervorteile",
-        "vendor": {
-          "ben1": {
-            "title": "Münz-/Token -Listings",
-            "content": "INDOEX erweitert den Zugang des Investitions auf alle qualifizierten Kryptowährungen weltweit"
-          },
-          "ben2": {
-            "title": "Handelswettbewerb",
-            "content": "In unseren Handelswettbewerben können Benutzer Fähigkeiten präsentieren. "
-          },
-          "ben3": {
-            "title": "Benutzerdefinierte Paarung",
-            "content": "Im Gegensatz zu anderen Börsen erhebt Indoex keine Gebühren für zusätzliche Marktpaare."
-          },
-          "ben4": {
-            "title": "Auflistungswettbewerb",
-            "content": "Unser Listing -Wettbewerb belohnt den Gewinner mit 3 BTC. "
-          }
-        },
-        "user": {
-          "ben1": {
-            "title": "Münz-/Token -Listings",
-            "conent": "INDOEX erweitert den Zugang des Investitions auf alle qualifizierten Kryptowährungen weltweit"
-          },
-          "ben2": {
-            "title": "Handelswettbewerb",
-            "conent": "In unseren Handelswettbewerben können Benutzer Fähigkeiten präsentieren. "
-          },
-          "ben3": {
-            "title": "Benutzerdefinierte Paarung",
-            "conent": "Im Gegensatz zu anderen Börsen erhebt Indoex keine Gebühren für zusätzliche Marktpaare."
-          },
-          "ben4": {
-            "title": "Auflistungswettbewerb",
-            "conent": "Unser Listing -Wettbewerb belohnt den Gewinner mit 3 BTC. "
-          }
-        }
-      }
-    },
-    "features": {
-      "heading": "Besonderheit",
-      "leftSection": {
-        "fet1": {
-          "title": "Angemessene Provisionen",
-          "content": "Profitable Investitionsmöglichkeiten und -bedingungen"
-        },
-        "fet2": {
-          "title": "Algorithmischer Handel",
-          "content": "API für CrossPlatform -Handel -Roboter"
-        },
-        "fet3": {
-          "title": "Algorithmischer Handel",
-          "content": "API für CrossPlatform -Handel -Roboter"
-        }
-      },
-      "rightSection": {
-        "fet1": {
-          "title": "Sichern Brieftaschen",
-          "content": "Behalten Sie Ihre digitalen Assets in Benutzerbrieftaschen"
-        },
-        "fet2": {
-          "title": "Zahlungsoptionen",
-          "content": "Mehr als 10 Möglichkeiten, um ein Konto einzureichen"
-        },
-        "fet3": {
-          "title": "Algorithmischer Handel",
-          "content": "API für CrossPlatform -Handel -Roboter"
-        }
-      }
-    },
-    "partners": {
-      "heading": "Partner",
-      "content": {
-        "title": "Handeln Sie nahtlos über Geräte handeln",
-        "subTitle": "Laden Sie unsere mobile App zum mühelosen Krypto -Handel herunter!",
-        "downloads": {
-          "playStore": {
-            "getIt": "Holen Sie sich an",
-            "from": "Google Play"
-          },
-          "appStore": {
-            "getIt": "Download auf der",
-            "from": "App Store"
-          }
-        }
-      }
-    }
-  },
-
-  "auth": {
-    "signin": {
-      "title": "Melden Sie sich in Ihrem Konto an",
-      "items": {
-        "email": {
-          "label": "E-Mail",
-          "holder": "E -Mail eingeben"
-        },
-        "password": {
-          "label": "Passwort",
-          "holder": "Kennwort eingeben"
-        }
-      },
-      "button": "Einloggen",
-      "signinOption": "Oder anmelden mit",
-      "noAcc": {
-        "part1": "Sie haben kein Konto?",
-        "part2": "Benutzerkonto erstellen"
-      }
-    },
-    "signup": {
-      "title": "Erstellen Sie Ihr Konto",
-      "items": {
-        "email": {
-          "label": "E-Mail",
-          "holder": "E -Mail eingeben"
-        },
-        "username": {
-          "label": "Benutzername",
-          "holder": "Benutzername eingeben"
-        },
-        "password": {
-          "label": "Passwort",
-          "holder": "Kennwort eingeben"
-        },
-        "country": {
-          "label": "Land",
-          "holder": "Wählen Sie Ihr Land aus",
-          "options": {
-            "op1": "USA",
-            "op2": "Indien",
-            "op3": "Vereinigtes Königreich",
-            "op4": "Deutschland"
-          }
-        },
-        "referrals": {
-          "label": "Empfehlungscode (optional)",
-          "holder": "Geben Sie den Empfehlungscode ein"
-        }
-      },
-      "terms": {
-        "part1": "Ich akzeptiere",
-        "part2": "Allgemeine Geschäftsbedingungen"
-      },
-      "button": "Melden Sie sich an",
-      "signupOption": "Oder anmelden mit",
-      "haveAcc": {
-        "part1": "Haben Sie bereits ein Konto?",
-        "part2": "Einloggen"
-      }
-    }
-  },
-
-   "footer": {
-    "glance": {
-      "text": "Registrieren Sie sich in Minuten - signieren Sie sich mühelos mit Krypto und beginnen Sie mit dem Handel mit dem Handel!",
-      "button": "Fangen an"
-    },
-    "services": {
-      "label": "Dienstleistungen",
-      "items": {
-        "terms": "Nutzungsbedingungen",
-        "policy": "Datenschutzrichtlinie",
-        "status": "Brieftaschenstatus",
-        "announcements": "Ankündigungen",
-        "media": "Medien"
-      }
-    },
-    "legalisation": {
-      "label": "Legalisierung",
-      "items": {
-        "fee": "Gebühren",
-        "legalities": "Legalitäten",
-        "kyc": "AML / KYC -Richtlinie",
-        "protect": "Schützen Sie sich online",
-        "verification": "Überprüfung"
-      }
-    },
-    "others": {
-      "label": "Andere",
-      "items": {
-        "faq": "FAQ",
-        "contact": "Kontaktieren Sie uns",
-        "support": "Kundensupport:",
-        "mails": "Bewerben Sie sich auf Liste:"
-      }
-    },
-    "rights": "© 2025 INDOEX Alle Rechte vorbehalten.",
-    "alert": "Kryptoinvestitionen unterliegen Marktrisiken - investieren mit Bedacht und bleiben auf dem Laufenden."
-  },
   "sidebar": {
     "overview": "Aperçu",
     "account": {
@@ -346,294 +110,1100 @@
     "referrals": "Références",
     "api": "API",
     "logout": "Déconnecter",
-  "withdraw": "Retirer",
-  "deposit": "Dépôt"
+    "withdraw": "Retirer",
+    "deposit": "Dépôt"
   },
-   "tradePage": {
+  "homePage": {
+    "heroSection": {
+      "title": "Améliorez votre expérience de trading de crypto",
+      "subTitle": "Témoigner les transactions transparentes, les informations en temps réel et sécuriser le trading de tout ce dont vous avez besoin."
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "Place",
+        "newlyListed": "Nouvellement répertorié",
+        "topGainers": "Top gagneurs"
+      },
+      "tableHead": {
+        "coins": "Pièces",
+        "lastPrice": "Dernier prix",
+        "24hChange": "Changement 24h",
+        "markets": "Marchés",
+        "24hVolume": "Volume 24h"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "Créez votre compte",
+        "content": "Inscrivez-vous en quelques minutes avec votre e-mail, définissez un mot de passe sécurisé et vérifiez votre identité pour une expérience de négociation sûre.",
+        "button": "Commencer"
+      },
+      "step2": {
+        "heading": "Complétez votre kyc",
+        "content": "Inscrivez-vous en quelques minutes avec votre e-mail, définissez un mot de passe sécurisé et vérifiez votre identité pour une expérience de négociation sûre.",
+        "button": "Mettre à jour KYC"
+      },
+      "step3": {
+        "heading": "Commencer à échanger",
+        "content": "Inscrivez-vous en quelques minutes avec votre e-mail, définissez un mot de passe sécurisé et vérifiez votre identité pour une expérience de négociation sûre.",
+        "button": "Commencer à échanger"
+      }
+    },
+    "getStarted": {
+      "heading": "Commencer",
+      "marketing": {
+        "24hVolume": "Volume 24h (BTC)",
+        "coinsListed": "Pièces répertoriées",
+        "countries": "Pays",
+        "marketPairs": "Paires de marché"
+      },
+      "benefits": {
+        "type_vendor": "Avantages sociaux",
+        "type_user": "Avantages sociaux",
+        "vendor": {
+          "ben1": {
+            "title": "Listes de pièces / jetons",
+            "content": "Indoex élargit l'accès aux investissements à toutes les crypto-monnaies qualifiées dans le monde"
+          },
+          "ben2": {
+            "title": "Concours de trading",
+            "content": "Nos concours de trading permettent aux utilisateurs de présenter les compétences. "
+          },
+          "ben3": {
+            "title": "Appariement personnalisé",
+            "content": "Contrairement à d'autres échanges, Indoex ne facture aucun frais pour des paires de marché supplémentaires."
+          },
+          "ben4": {
+            "title": "Concours d'inscription",
+            "content": "Notre compétition d'inscription récompense le gagnant avec 3 BTC. "
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "Listes de pièces / jetons",
+            "conent": "Indoex élargit l'accès aux investissements à toutes les crypto-monnaies qualifiées dans le monde"
+          },
+          "ben2": {
+            "title": "Concours de trading",
+            "conent": "Nos concours de trading permettent aux utilisateurs de présenter les compétences. "
+          },
+          "ben3": {
+            "title": "Appariement personnalisé",
+            "conent": "Contrairement à d'autres échanges, Indoex ne facture aucun frais pour des paires de marché supplémentaires."
+          },
+          "ben4": {
+            "title": "Concours d'inscription",
+            "conent": "Notre compétition d'inscription récompense le gagnant avec 3 BTC. "
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "Fonctionnalité",
+      "leftSection": {
+        "fet1": {
+          "title": "Commissions raisonnables",
+          "content": "Opportunités et conditions d'investissement rentables"
+        },
+        "fet2": {
+          "title": "Trading algorithmique",
+          "content": "API pour les robots de trading croisé"
+        },
+        "fet3": {
+          "title": "Trading algorithmique",
+          "content": "API pour les robots de trading croisé"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "Portefeuilles sécurisés",
+          "content": "Gardez vos actifs numériques dans les portefeuilles d'utilisateurs"
+        },
+        "fet2": {
+          "title": "Options de paiement",
+          "content": "Plus de 10 façons de déposer sur un compte"
+        },
+        "fet3": {
+          "title": "Trading algorithmique",
+          "content": "API pour les robots de trading croisé"
+        }
+      }
+    },
+    "partners": {
+      "heading": "Partenaires",
+      "content": {
+        "title": "Échangez sans couture entre les appareils",
+        "subTitle": "Téléchargez notre application mobile pour le trading de cryptographie sans effort!",
+        "downloads": {
+          "playStore": {
+            "getIt": "Mettre en place",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "Télécharger sur le",
+            "from": "App Store"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Connectez-vous à votre compte",
+      "items": {
+        "email": {
+          "label": "E-mail",
+          "holder": "Entrer le courrier électronique"
+        },
+        "password": {
+          "label": "Mot de passe",
+          "holder": "Entrez le mot de passe"
+        }
+      },
+      "button": "Se connecter",
+      "signinOption": "Ou se connecter avec",
+      "noAcc": {
+        "part1": "Vous n'avez pas de compte?",
+        "part2": "Créer un compte"
+      }
+    },
+    "signup": {
+      "title": "Créez votre compte",
+      "items": {
+        "email": {
+          "label": "E-mail",
+          "holder": "Entrer le courrier électronique"
+        },
+        "username": {
+          "label": "Nom d'utilisateur",
+          "holder": "Entrez le nom d'utilisateur"
+        },
+        "password": {
+          "label": "Mot de passe",
+          "holder": "Entrez le mot de passe"
+        },
+        "country": {
+          "label": "Pays",
+          "holder": "Sélectionnez votre pays",
+          "options": {
+            "op1": "USA",
+            "op2": "Inde",
+            "op3": "ROYAUME-UNI",
+            "op4": "Allemagne"
+          }
+        },
+        "referrals": {
+          "label": "Code de référence (facultatif)",
+          "holder": "Entrez le code de référence"
+        }
+      },
+      "terms": {
+        "part1": "J'accepte",
+        "part2": "Conditions générales"
+      },
+      "button": "S'inscrire",
+      "signupOption": "Ou s'inscrire avec",
+      "haveAcc": {
+        "part1": "Vous avez déjà un compte?",
+        "part2": "Se connecter"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "Inscrivez-vous en quelques minutes - signez, déposez et commencez à échanger une cryptographie sans effort!",
+      "button": "Commencer"
+    },
+    "services": {
+      "label": "Services",
+      "items": {
+        "terms": "Conditions d'utilisation",
+        "policy": "politique de confidentialité",
+        "status": "Statut de portefeuille",
+        "announcements": "Annonces",
+        "media": "Médias"
+      }
+    },
+    "legalisation": {
+      "label": "Légalisation",
+      "items": {
+        "fee": "Frais",
+        "legalities": "Légalité",
+        "kyc": "Politique AML / KYC",
+        "protect": "Protégez-vous en ligne",
+        "verification": "Vérification"
+      }
+    },
+    "others": {
+      "label": "Autres",
+      "items": {
+        "faq": "FAQ",
+        "contact": "Contactez-nous",
+        "support": "Support client:",
+        "mails": "Postuler à la liste:"
+      }
+    },
+    "rights": "© 2025 Indoex Tous droits réservés.",
+    "alert": "Les investissements cryptographiques sont soumis à des risques sur le marché - investissent judicieusement et restent informés."
+  },
+  "tradePage": {
     "tradeBook": {
       "tabs": {
-        "orderbook": "Auftragsbuch",
-        "tradehistory": "Handelsgeschichte"
+        "orderbook": "Carnet de commandes",
+        "tradehistory": "Histoire du commerce"
       },
       "tHead": {
-        "price": "Preis (USDT)",
-        "amount": "Betrag (BTC)",
-        "total": "Gesamt"
+        "price": "Prix ​​(USDT)",
+        "amount": "Montant (BTC)",
+        "total": "Total"
       },
-      "more": "Mehr"
+      "more": "Plus"
     },
     "cryptoStats": {
       "stats": {
-        "24hChange": "24H -Veränderung",
-        "24hHigh": "24H hoch",
-        "24hLow": "24h niedrig",
-        "24hVolumeBtc": "24H Volumen (BTC)",
-        "24hVolumeUsdc": "24H Volumen (USDT)"
+        "24hChange": "Changement 24h",
+        "24hHigh": "24 h de haut",
+        "24hLow": "24h bas",
+        "24hVolumeBtc": "Volume 24h (BTC)",
+        "24hVolumeUsdc": "Volume 24h (USDT)"
       }
     },
     "tradeForm": {
-      "buy": "Kaufen",
-      "sell": "Verkaufen",
-      "spot": "Stelle",
-      "cross": "Kreuzen",
-      "isolated": "Isoliert",
-      "limit": "Limit",
-      "market": "Markt",
-      "stop": "Stop -Limit",
-      "normal": "Normal",
-      "borrow": "Ausleihen",
-      "repay": "zurückzahlen",
-      "price": "Preis",
-      "amount": "Menge",
-      "total": "Gesamt",
-      "available": "Verfügbar",
-      "txnFee": "TXN -Gebühr",
-      "borrowing": "Ausleihen",
-      "button": "Melden Sie sich an / melden Sie sich an"
+      "buy": "Acheter",
+      "sell": "Vendre",
+      "spot": "Place",
+      "cross": "Croix",
+      "isolated": "Isolé",
+      "limit": "Limite",
+      "market": "Marché",
+      "stop": "Limite d'arrêt",
+      "normal": "Normale",
+      "borrow": "Emprunter",
+      "repay": "rembourser",
+      "price": "Prix",
+      "amount": "Montant",
+      "total": "Total",
+      "available": "Disponible",
+      "txnFee": "Frais de TXN",
+      "borrowing": "Emprunt",
+      "button": "Connectez-vous / inscrivez-vous"
     },
     "orderAndHist": {
       "tabs": {
-        "openorders": "Aufträge offen",
-        "orderhistory": "Auftragsgeschichte"
+        "openorders": "Ordres ouverts",
+        "orderhistory": "Historique des commandes"
       },
       "message": {
-        "part1": "Einloggen",
-        "part2": "oder",
-        "part3": "Melden Sie sich an",
-        "part4": "Handel"
+        "part1": "Se connecter",
+        "part2": "ou",
+        "part3": "S'inscrire",
+        "part4": "pour échanger"
       }
     },
-    "connection": "Stabile Verbindung"
+    "connection": "Connexion stable"
   },
-   "convertPage": {
+  "convertPage": {
     "tabs": {
       "faq": "FAQ",
-      "convert": "Konvertieren",
-      "history": "Geschichte"
+      "convert": "Convertir",
+      "history": "Histoire"
     },
     "convertForm": {
-      "title": "Konvertieren",
-      "subTitle": "Schnell und einfach Hunderte von Kryptowährungen mit sofortiger Ausführung konvertieren.",
+      "title": "Convertir",
+      "subTitle": "Convertir rapidement et facilement des centaines de crypto-monnaies avec une exécution instantanée.",
       "terms": {
-        "availBalance": "Verfügbarer Gleichgewicht",
-        "from": "Aus",
-        "to": "Zu",
+        "availBalance": "Solde disponible",
+        "from": "Depuis",
+        "to": "À",
         "max": "Max",
-        "rate": "Rate",
-        "button": "Melden Sie sich an / melden Sie sich an",
-        "tradeSpot": "Handelspunkt"
+        "rate": "Taux",
+        "button": "Connectez-vous / inscrivez-vous",
+        "tradeSpot": "Trottoir"
       }
     },
     "convertBar": {
-      "barTitle": "BTC (Bitcoin) in andere Münzen konvertieren"
+      "barTitle": "Convertir BTC (Bitcoin) en autres pièces"
     }
   },
   "loansPage": {
     "tabs": {
-      "flexible": "Flexibler Zinsdarlehen",
-      "fixed": "Kredite fester Zinssatz",
-      "history": "Kreditgeschichte",
-      "data": "Darlehensdaten"
+      "flexible": "Prêt à taux flexible",
+      "fixed": "Prêt à taux fixe",
+      "history": "Historique des prêts",
+      "data": "Données de prêt"
     },
     "flexibleLoan": {
       "borrowSection": {
-        "title": "Kredite mit flexiblen Zinssätzen ausleihen, um zu handeln oder zu beteiligen und die Renditen zu maximieren.",
+        "title": "Emprunter avec des tarifs flexibles pour échanger ou prendre en charge et maximiser les rendements.",
         "features": {
-          "f1": "Jederzeit zurückzahlen",
-          "f2": "Keine Transaktionsgebühr"
+          "f1": "Rembourser à tout moment",
+          "f2": "Aucun frais de transaction"
         },
         "buttons": {
-          "b1": "Laufende Bestellungen",
-          "b2": "Asset -Übersicht"
+          "b1": "Ordres en cours",
+          "b2": "Présentation des actifs"
         },
         "borrowForm": {
           "terms": {
-            "collateral": "Sicherheit",
-            "enterAmount": "Betrag eingeben",
-            "wantBorrow": "Ich möchte ausleihen",
+            "collateral": "Collatéral",
+            "enterAmount": "Entrer le montant",
+            "wantBorrow": "Je veux emprunter",
             "max": "Max",
-            "details": "Details"
+            "details": "Détails"
           },
-          "button": "Melden Sie sich an / melden Sie sich an"
+          "button": "Connectez-vous / inscrivez-vous"
         }
       },
       "borrowTable": {
-        "title": "Markt ausleihen",
-        "search": "Suchen",
-        "viewMore": "Mehr anzeigen",
+        "title": "Marché d'emprunter",
+        "search": "Recherche",
+        "viewMore": "Voir plus",
         "tHead": {
-          "coin": "Leihbare Münze",
-          "hIntRate": "Stündlicher Zinssatz",
-          "aIntRate": "Jährlicher Zinssatz",
+          "coin": "Pièce de pièce prêtée",
+          "hIntRate": "Taux d'intérêt horaire",
+          "aIntRate": "Taux d'intérêt annuel",
           "action": {
-            "label": "Aktion",
-            "button": "Ausleihen"
+            "label": "Action",
+            "button": "Emprunter"
           }
         }
       },
       "faq": {
         "item1": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "item2": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "item3": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "item4": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "item5": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         }
       }
     },
     "fixedLoan": {
       "borrowSection": {
-        "title": "Ausleihen oder leihen Sie einen festen Zinssatz aus, den Sie wählen",
+        "title": "Emprunter ou prêter à un taux d'intérêt fixe que vous choisissez",
         "stats": {
-          "totalBorrowed": "Total ausgeliehen",
-          "currentOrders": "Aktuelle Bestellungen",
+          "totalBorrowed": "Total emprunté",
+          "currentOrders": "Commandes actuelles",
           "rate": {
-            "label": "Angepasster Zinssatz",
-            "content": "Multi-Asset-Sicherheiten unterstützt"
+            "label": "Taux d'intérêt personnalisé",
+            "content": "Support de garantie multi-actifs"
           }
         },
         "myOrder": {
-          "label": "Meine Bestellung",
+          "label": "Ma commande",
           "pOrders": {
-            "label": "Ausstehende Bestellungen",
-            "content": "Überprüfen und verwalten Sie unübertroffene Bestellungen"
+            "label": "Ordres en attente",
+            "content": "Vérifiez et gérez les commandes inégalées"
           },
           "oOrders": {
-            "label": "Laufende Bestellungen",
-            "content": "Überprüfen Sie LTV, prüfen Sie LTV und zahlen Sie übereinstimmende Bestellungen zurück"
+            "label": "Ordres en cours",
+            "content": "Vérifiez, ajustez LTV et remboursez les commandes appariées"
           }
         }
       },
       "borrowForm": {
         "borrow": {
-          "label": "Ausleihen",
+          "label": "Emprunter",
           "terms": {
-            "bAmount": "Betrag ausleihen",
-            "min": "Min 0,005 BTC",
-            "expRate": "Erwarteter Zinssatz",
-            "intRate": "Zinsen eingeben",
-            "refMarket": "Referenzmarktversorgungsrate",
-            "duration": "Dauer",
-            "collateral": "Sicherheit",
-            "setUp": "Kollateral einrichten",
-            "autoRepay": "Auto-Repay"
+            "bAmount": "Emprunter le montant",
+            "min": "Min 0,005 btc",
+            "expRate": "Taux d'intérêt attendu",
+            "intRate": "Entrez le taux d'intérêt",
+            "refMarket": "Taux d'approvisionnement du marché de référence",
+            "duration": "Durée",
+            "collateral": "Collatéral",
+            "setUp": "Mettre en place",
+            "autoRepay": "Réparation automatique"
           }
         },
         "supply": {
-          "label": "Liefern",
+          "label": "Fournir",
           "terms": {
-            "bAmount": "Betrag ausleihen",
-            "min": "Min 0,005 BTC",
-            "expRate": "Erwarteter Zinssatz",
-            "intRate": "Zinsen eingeben",
-            "refMarket": "Referenzmarktversorgungsrate: 5,04%",
-            "duration": "Dauer",
-            "collateral": "Sicherheit",
-            "setUp": "Kollateral einrichten",
-            "autoRepay": "Auto-Repay"
+            "bAmount": "Emprunter le montant",
+            "min": "Min 0,005 btc",
+            "expRate": "Taux d'intérêt attendu",
+            "intRate": "Entrez le taux d'intérêt",
+            "refMarket": "Taux d'approvisionnement du marché de référence: 5,04%",
+            "duration": "Durée",
+            "collateral": "Collatéral",
+            "setUp": "Mettre en place",
+            "autoRepay": "Réparation automatique"
           }
         },
-        "button": "Melden Sie sich an / melden Sie sich an"
+        "button": "Connectez-vous / inscrivez-vous"
       },
       "BandStable": {
-        "title1": "Ich möchte ausleihen",
-        "title2": "Ich möchte liefern",
+        "title1": "Je veux emprunter",
+        "title2": "Je veux fournir",
         "terms": {
-          "days": "Tage",
-          "all": "Alle",
-          "duration": "Dauer"
+          "days": "Jours",
+          "all": "Tous",
+          "duration": "Durée"
         },
         "borrowTableHead": {
-          "bRate": "Ausleihe Zinssatz (fest)",
-          "duration": "Dauer",
-          "minBAmount": "Min ausleihen Betrag",
-          "bAbleAmount": "Ausleihbetrag"
+          "bRate": "Taux d'emprunt (fixe)",
+          "duration": "Durée",
+          "minBAmount": "Min d'emprunt",
+          "bAbleAmount": "Montant emprunable"
         },
         "supplyTableHead": {
-          "supplyApr": "Versorgung APR (fest)",
-          "duration": "Dauer",
-          "estInt": "Est. ",
-          "tAmount": "Gesamtbetrag"
+          "supplyApr": "APR de fourniture (fixe)",
+          "duration": "Durée",
+          "estInt": "HNE. ",
+          "tAmount": "Montant total"
         }
       },
       "howItWorks": {
-        "title": "Wie funktionieren Kredite mit festen Zinsen?",
+        "title": "Comment fonctionnent les prêts à taux fixe?",
         "tabs": {
-          "borrower": "Als Kreditnehmer",
-          "supplier": "Als Lieferant"
+          "borrower": "Comme emprunteur",
+          "supplier": "En tant que fournisseur"
         },
         "step1": {
-          "title": "1. Platzieren",
-          "content": "Geben Sie eine Ausleihenbestellung auf oder wählen Sie eine bestehende Bestellung aus dem Kreditmarkt aus."
+          "title": "1. Placer la commande",
+          "content": "Passez une commande d'emprunt ou sélectionnez une commande existante sur le marché d'emprunt."
         },
         "step2": {
-          "title": "2. Wählen Sie Sicherheiten",
-          "content": "Wählen Sie aus der Liste Ihres Spot Wallet -Assets die Kollateral Asset (en) aus. "
+          "title": "2. Sélectionnez les garanties",
+          "content": "Sélectionnez des actifs collatéraux dans la liste de vos actifs de portefeuille. "
         },
         "step3": {
-          "title": "3. Bestätigen Sie die Bestellung",
-          "content": "Bestätigen Sie die Auftragsdetails, einschließlich der geschätzten Zinsen, der Begriffe, des Margin Call LTV usw. Ihre Sicherheitenvermögen werden nach Aufgabe der Bestellung in Ihrer Spot -Brieftasche eingefroren."
+          "title": "3. Confirmer la commande",
+          "content": "Confirmez les détails de la commande, y compris l'intérêt estimé, les conditions, l'appel de marge LTV, etc. Vos actifs collatéraux seront figés dans votre portefeuille de votre place une fois la commande passée."
         },
         "step4": {
-          "title": "4.. Order Matchedg",
-          "content": "Sobald Sie angepasst sind, wechselt Ihre Sicherheiten in Binance, und Sie erhalten den geliehenen Betrag (minus Zinsen) in Ihrer Spot -Brieftasche. "
+          "title": "4. Ordre Matchedg",
+          "content": "Une fois apparié, votre garantie passe à la garde à vue et vous recevez le montant emprunté (moins d'intérêt) dans votre portefeuille. "
         },
         "step5": {
-          "title": "5. Rückzahlung",
-          "content": "Rückzahlung bis zum Ablaufdatum, um Strafen zu vermeiden. "
+          "title": "5. Rechange",
+          "content": "Rembourser par la date d'expiration pour éviter les pénalités. "
         }
       },
       "advantages": {
-        "title": "Kredite festgelegte Kredite Vorteile",
+        "title": "Avantages des prêts à taux fixe",
         "adv1": {
-          "title": "Stabile und vorhersehbare Kosten für Kreditnehmer",
-          "content": "Legen Sie einen festen APR für eine festgelegte Dauer ein und beseitigen Sie Schwankungen und unerwartete Kosten."
+          "title": "Coûts stables et prévisibles pour les emprunteurs",
+          "content": "Verrouillez un APR fixe pour une durée définie, éliminant les fluctuations et les coûts inattendus."
         },
         "adv2": {
-          "title": "Effizienter automatisierter Prozess",
-          "content": "Genießen Sie einfache und automatisierte Kredit- und Krediterlebnisse mit automatischen Repay- und automatischen Optionen zur Verfügung."
+          "title": "Processus automatisé efficace",
+          "content": "Profitez d'une expérience d'emprunt et de prêt facile et automatisée avec des options de réévolution automatique et de renouvellement automatique disponibles."
         },
         "adv3": {
-          "title": "Attraktiver fester APR für Lieferanten",
-          "content": "Geben Sie Ihr Vermögen für einen anpassbaren und festen APR an."
+          "title": "APR fixe attrayant pour les fournisseurs",
+          "content": "Fournissez vos actifs pour un APR personnalisable et fixe."
         },
         "adv4": {
-          "title": "Multi-Asset-Sicherheiten",
-          "content": "Kreditnehmer können mehrere Vermögenswerte als Sicherheiten einstellen, um das Liquidationsrisiko zu verringern."
+          "title": "Garantie multi-actifs",
+          "content": "Les emprunteurs peuvent définir plusieurs actifs en garantie pour réduire le risque de liquidation."
         }
       },
       "faq": {
         "title": "FAQ",
         "faq1": {
-          "ques": "Was ist Crypto -Stakel und wie funktioniert es?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "faq2": {
-          "ques": "Kann ich meine Krypto jederzeit auflösen?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Puis-je déranger ma crypto à tout moment?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "faq3": {
-          "ques": "Verdiene ich während der Erlösungszeit Belohnungen?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Est-ce que je gagne des récompenses pendant la période de rachat?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
         },
         "faq4": {
-          "ques": "Ist das sichere Verpflegung?",
-          "ans": "Durch das Absetzen wird Ihre Kryptowährung eingesperrt, um die Operationen eines Blockchain -Netzwerks zu unterstützen. "
+          "ques": "Est-ce que le stimulation est sûre?",
+          "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "ENCORE DE CONDUCTIONS FLEXIBLE POUR MAXIMUM",
+      "content": "Gagnez un revenu passif selon vos conditions avec des options de mise en place flexibles et à haut rendement.",
+      "overview": {
+        "label": "Aperçu",
+        "terms": {
+          "assets": "Actifs (USDT)",
+          "yesProfit": "Profit d'hier (USDT)",
+          "totalProfit": "Bénéfice total (USDT)"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "Jalonnement",
+        "content": "Le jalonnement vous permet de gagner des récompenses sur votre crypto. "
+      },
+      "info2": {
+        "title": "Terme",
+        "content": "Votre période de détention pour le produit détermine le rendement. "
+      },
+      "info3": {
+        "title": "Période de rachat",
+        "content": "Ceci est défini par le protocole de mise en place. "
+      }
+    },
+    "table": {
+      "title": "Tous les produits",
+      "terms": {
+        "matchAssets": "Correspondre aux actifs disponibles",
+        "search": "Recherche"
+      },
+      "tHead": {
+        "coin": "Pièce de monnaie",
+        "estApr": "HNE. ",
+        "reward": "RÉCOMPENDRE COIN",
+        "action": {
+          "label": "Action",
+          "button": "Miser"
+        }
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "faq1": {
+        "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+        "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+      },
+      "faq2": {
+        "ques": "Puis-je déranger ma crypto à tout moment?",
+        "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+      },
+      "faq3": {
+        "ques": "Est-ce que je gagne des récompenses pendant la période de rachat?",
+        "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+      },
+      "faq4": {
+        "ques": "Est-ce que le stimulation est sûre?",
+        "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+      }
+    },
+    "stakeForm": {
+      "title": "Jalonnement",
+      "form": {
+        "terms": {
+          "currency": "Devise",
+          "selAmount": "Sélectionner la pièce",
+          "amount": "Montant",
+          "minAmount": "Minming Montant 0,0001 BTC",
+          "refAPR": "Référence avril",
+          "terms": "Terme",
+          "fundAcc": "Compte de financement",
+          "maxAmount": "Montant maximal",
+          "flexible": "Flexible"
+        }
+      },
+      "preview": {
+        "lable": "Prévisualisation",
+        "terms": {
+          "subDate": "Date d'abonnement",
+          "accDate": "Date d'accumulation",
+          "profitDisDate": "Date de distribution des bénéfices",
+          "redPeriod": "Période de rachat",
+          "profitRec": "Bénéfice reçu",
+          "days": "Jours",
+          "daily": "Tous les jours"
+        }
+      },
+      "estimated": {
+        "label": "Retours estimés",
+        "terms": {
+          "earning": "Genuations de la BTC",
+          "agg": {
+            "part1": "J'ai lu et accepté",
+            "part2": "Joueur des accords d'utilisateurs"
+          }
+        }
+      },
+      "button": "Miser"
+    }
+  },
+
+   "marketPage": {
+    "tabs": {
+      "spot": "Place",
+      "newListed": "Nouvellement répertorié",
+      "topGainer": "Top gagneurs"
+    },
+    "quickViewTable": {
+      "tGainer": "Top gagneurs",
+      "tranding": "Tendance",
+      "newListing": "Nouvelles annonces",
+      "tHead": {
+        "pairs": "Couple",
+        "price": "Prix",
+        "24hChange": "Changement 24h"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "Tous",
+        "search": "Recherche"
+      },
+      "tHead": {
+        "coin": "Pièce de monnaie",
+        "lPrice": "Dernier prix",
+        "24hChange": "Changement 24h",
+        "24hHigh": "24 h de haut",
+        "24hLow": "24h bas",
+        "24hVol": "Volume 24h",
+        "chart": "Graphiques",
+        "trade": "Commerce"
+      },
+      "button": "Commerce"
+    }
+  },
+  "airDrop": {
+    "title": "Réclamez votre crypto gratuite!",
+    "subTitle": "Rejoignez les dernières campagnes AirDrop Indoex et gagnez instantanément.",
+    "tabs": {
+      "all": "Tous",
+      "ongoing": "En cours",
+      "upcoming": "Prochain",
+      "completed": "Complété"
+    },
+    "terms": {
+      "airSupply": "Alimentation aérienne",
+      "start": "Commencer",
+      "end": "Fin",
+      "cardContent": "Le LaunchPad sera la caractéristique utilitaire de base du jeton CAT APE. "
+    },
+    "contest": {
+      "terms": {
+        "about": "À propos",
+        "howToJoin": "Comment rejoindre le",
+        "tokenPerAir": "Jeton par platelle aérienne",
+        "upTo": "jusqu'à",
+        "referral": "Renvoi",
+        "kyc": "Kyc",
+        "kycNoReq": "KYC n'est pas une exigence",
+        "guide": "Guide étape par étape pour",
+        "doNotForgot": "N'oubliez pas de rejoindre notre chaîne Telegram, suivez-nous sur Twitter et abonnez-vous à notre newsletter pour recevoir de nouveaux Airdrops!",
+        "overview": "Aperçu",
+        "web": "Site web",
+        "exp": "Explorateur",
+        "git": "Github",
+        "wPaper": "Du papier blanc",
+        "ann": "Annonce",
+        "sMedia": "Réseaux sociaux",
+        "join": "Rejoignez l'événement AirDrop",
+        "sDate": "Date de début",
+        "eDate": "Date de fin",
+        "participants": "Participants actifs",
+        "button": "Participer à AirDrop"
+      }
+    }
+  },
+   "launchPad": {
+    "title": "Réclamez votre crypto gratuite!",
+    "subTitle": " Lancez votre jeton crypto avec Indoex Launchpad",
+    "tabs": {
+      "all": "Tous",
+      "ongoing": "En cours",
+      "upcoming": "Prochain",
+      "completed": "Complété"
+    },
+    "terms": {
+      "airSupply": "Alimentation aérienne",
+      "start": "Commencer",
+      "end": "Fin",
+      "cardContent": "Le LaunchPad sera la caractéristique utilitaire de base du jeton CAT APE. "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "Compte à rebours",
+        "days": "Jours",
+        "hours": "Heures",
+        "minutes": "Minutes",
+        "seconds": "Secondes",
+        "sPrice": "Prix ​​de vente IEO",
+        "about": "À propos",
+        "details": "Détails",
+        "fName": "Nom et prénom",
+        "web": "Site web",
+        "tName": "Nom de ticker",
+        "sSupply": "Session Supply",
+        "tSupply": "Approvisionnement total",
+        "ieoPrice": "Ieo Price",
+        "ieoSDate": "Date de début IEO",
+        "ieoEDate": "IEO Date de fin",
+        "bonus": "Prime",
+        "tecFou": "Fondation technologique",
+        "docu": "Documents",
+        "wPaper": "Du papier blanc",
+        "team": "Équipe",
+        "sMedia": "Réseaux sociaux"
+      },
+      "form": {
+        "terms": {
+          "cBal": "Solde actuel",
+          "details": "Détails",
+          "sDate": "Date de début",
+          "eDate": "Date de fin",
+          "tPrice": "Prix ​​de jeton",
+          "minPrice": "Prix ​​minimum",
+          "ord": "Ordres",
+          "bar": "bar",
+          "buy": "Acheter",
+          "rec": "Recevoir",
+          "button": "Connectez-vous / inscrivez-vous"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "Réclamez votre crypto gratuite!",
+    "subTitle": "Plus vous échangez, plus vous gagnez!",
+    "tabs": {
+      "all": "Tous",
+      "ongoing": "En cours",
+      "upcoming": "Prochain",
+      "completed": "Complété"
+    },
+    "terms": {
+      "airSupply": "Alimentation aérienne",
+      "start": "Commencer",
+      "end": "Fin",
+      "cardContent": "Le LaunchPad sera la caractéristique utilitaire de base du jeton CAT APE. "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "Concurrence commerciale",
+        "moreTrade": "Plus vous échangez",
+        "moreWin": "Plus vos chances sont élevées de gagner un prix.",
+        "details": "Détails",
+        "1st": "1er",
+        "2nd": "2e",
+        "3rd": "3e",
+        "4th": "4e",
+        "5th": "5e",
+        "6th": "6e",
+        "7th": "7e",
+        "8th": "8e",
+        "9th": "9e",
+        "10th": "10e",
+        "11th-15th": "11e-15",
+        "16th-20th": "16-20e",
+        "pOverview": "Aperçu de la participation",
+        "position": "Position",
+        "user": "Utilisateur",
+        "vol": "Volume",
+        "join": "Rejoignez le concours commercial",
+        "ieoSDate": "Date de début IEO",
+        "ieoEDate": "IEO Date de fin",
+        "button": "Faire du commerce",
+        "participants": "Participants actifs"
+      }
+    }
+  },
+   "walletStatus": {
+    "title": "Statut de portefeuille",
+    "terms": {
+      "search": "Recherche"
+    },
+    "tHead": {
+      "name": "Nom",
+      "tSupply": "Approvisionnement total",
+      "cSupply": "Curr. ",
+      "buyFee": "Frais d'achat",
+      "sellFee": "Frais de vente",
+      "status": "statut",
+      "buttons": {
+        "active": "Actif",
+        "maintenance": "Entretien"
+      }
+    }
+  },
+   "termsOfUse": {
+    "title": "Conditions d'utilisation",
+    "subTitle": "Indices d'échange Indoex",
+    "content": "Ces conditions d'utilisation prescrivent les droits et les obligations entre les membres (comme décrit à l'article 2, et y compris les personnes qui étaient membres dans le passé) et Fisco Crypto-monrs Exchange Inc. («nous» ou «société») en relation avec les services en ligne «Indoex Exchange» et «Indoex Instant Exchange» que nous fournissons (chez le domaine https: //indoex.io/; les «services»). ",
+    "arti1": {
+      "title": "Article 1 Étendue de l'application des conditions d'utilisation",
+      "content": {
+        "point1": "Ces conditions d'utilisation s'appliquent à nous et aux membres (dans cet article 1, y compris les personnes qui étaient membres dans le passé) et prescrivent toutes les questions concernant les droits et obligations de la Société et des membres en relation avec les services.",
+        "point2": "Il s'agit d'une condition précédente de l'utilisation des services que chaque membre comprend le contenu du texte intégral de l'explication sur les questions importantes et ces conditions d'utilisation et convient que ces conditions d'utilisation prescrivent toutes les questions concernant les droits et obligations de la Société et des membres en relation avec les services.",
+        "point3": " Si le membre est mineur, le membre doit obtenir le consentement de son tuteur légal avant d'utiliser les services.",
+        "point4": " Si le membre utilise les services, il sera considéré que le membre a convenu que ces conditions d'utilisation prescrivent toutes les questions concernant les droits et obligations de la Société et du membre en relation avec les services."
+      }
+    },
+    "arti2": {
+      "title": "Membres de l'article 2",
+      "content": {
+        "point1": "Une personne qui souhaite devenir membre doit soumettre une demande d'enregistrement d'adhésion conformément à nos procédures prescrites. ",
+        "ponit2": "Une fois qu'un membre a terminé l'enregistrement des services, nous pouvons demander au membre de soumettre à nouveau les documents nécessaires que nous avons désignés s'il est nécessaire d'effectuer une vérification de l'identité au moment d'une transaction comme prescrite par la loi et l'ordonnance pertinentes ou nous le jugeons autrement nécessaire ...",
+        "point3": "Si le membre souhaite annuler son inscription en tant que membre, le membre peut annuler son enregistrement de membre conformément à nos procédures prescrites."
+      }
+    },
+    "arti3": {
+      "title": "Article 3 Gestion de l'ID de connexion et du mot de passe",
+      "content": {
+        "point1": "Le membre doit gérer son identifiant de connexion et son mot de passe enregistrés à sa propre responsabilité, et ne doit pas prêter, affecter, vendre ou disposer autrement de ces informations à un tiers.",
+        "point2": "Nous vérifierons l'identité du membre en confirmant que l'ID de connexion et le mot de passe entrés lorsque l'utilisateur se connecte à notre site Web ou utilise les services correspond à l'ID de connexion et au mot de passe prédéfinis. ",
+        "point3": "Le membre supporte toute responsabilité pour les dommages causés par (i) l'identification de fuite ou le mot de passe en raison de la raison attribuable au membre et (ii) une utilisation non autorisée ou similaire de son compte par un tiers en utilisant un tel identifiant de connexion divulgué et nous ne supporterons aucune responsabilité pour de tels dommages.",
+        "point4": "Si le membre prend conscience que l'ID de connexion ou le mot de passe a été volé ou est utilisé par un tiers, le membre doit nous informer immédiatement de cet effet et suivre nos instructions."
+      }
+    },
+    "arti4": {
+      "title": "Article 4 Changement d'informations d'enregistrement",
+      "content": {
+        "point1": "S'il y a une modification des informations d'enregistrement d'un membre, le membre doit nous en informer par notre méthode prescrite sans délai concernant les informations modifiées et soumettre les documents nécessaires que nous demandons."
+      }
+    }
+  },
+   "announcementsPage": {
+    "title": "Annonces",
+    "terms": {
+      "search": "Recherche",
+      "annu": "Indoex Memebox a un jeton initial répertorié"
+    },
+    "sidebar": {
+      "all": "tous",
+      "news": {
+        "label": "Nouvelles",
+        "item1": "Mises à jour Indoex",
+        "item2": "Nouvelles publiques"
+      },
+      "newListing": "Nouvelles annonces",
+      "events": {
+        "label": "Événements",
+        "item1": "point1",
+        "item2": "item2"
+      },
+      "web3": "Web3",
+      "api": "API",
+      "dListing": "Dlistage"
+    }
+  },
+  "mediaKitPage": {
+    "title": "Kit média",
+    "content": "Suivez ces lignes directrices pour assurer la cohérence et la précision lors de la promotion des communications marketing, y compris la publicité, les articles, les sites Web et les documents imprimés",
+    "terms": {
+      "downloadHeading": "Téléchargez le guide d'utilisation du logo de la marque Indoex Brand",
+      "guideHeading": "Lignes directrices de marque",
+      "buttons": {
+        "downloadPdf": "Télécharger PDF",
+        "download": "Télécharger"
+      },
+      "brandAssets": "Actifs de la marque",
+      "logos": "Logos",
+      "logosContent": "Obtenez des logos Indoex officiels ici. ",
+      "sairaBold": "Saira Bold",
+      "inter": "Inter régulier et médium",
+      "typeFace": "Police",
+      "typeFaceContent": "Obtenez une copie de notre police d'entreprise, Saira et Inter.",
+      "colors": "Couleurs",
+      "colorsContent": "Vous trouverez ci-dessous les couleurs de marque primaire et secondaire pour Indoex",
+      "green": "Légumes verts",
+      "dBlue": "Bleu foncé"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "Qu'est-ce que la cryptographie et comment cela fonctionne-t-il?",
+      "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+    },
+    "faq2": {
+      "ques": "Puis-je déranger ma crypto à tout moment?",
+      "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+    },
+    "faq3": {
+      "ques": "Est-ce que je gagne des récompenses pendant la période de rachat?",
+      "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+    },
+    "faq4": {
+      "ques": "Est-ce que le stimulation est sûre?",
+      "ans": "Le jalonnement est le processus de verrouillage de votre crypto-monnaie pour soutenir les opérations d'un réseau de blockchain. "
+    }
+  },
+  "feePage": {
+    "title": "Structure des frais",
+    "terms": {
+      "search": "Recherche"
+    },
+    "tHead": {
+      "name": "Nom",
+      "minDeposit": "Min. ",
+      "minWithdraw": "Min. ",
+      "withdrawFee": "Retirer les frais",
+      "makerFee": "Frais de fabricant",
+      "takerFee": "Frais de preuve"
+    }
+  },
+   "contactPage": {
+    "title": "Contactez-nous",
+    "subTitle": "Contactez l'équipe Indoex Track si vous avez des questions.",
+    "terms": {
+      "email": "E-mail",
+      "enterEmail": "Entrez votre e-mail",
+      "category": "Catégorie",
+      "selectType": "Sélectionnez votre type de demande",
+      "message": "Message",
+      "messageHere": "Message ici",
+      "button": "Soumettre",
+      "phone": "TÉLÉPHONE",
+      "emailBot": "E-MAIL"
+    }
+  },
+   "indoexVerify": {
+    "title": "Indoex vérifie",
+    "content": "Nous avons créé une page pour vérifier les canaux Indoex et les comptes d'entreprise pour prévenir la fraude. ",
+    "terms": {
+      "platform": "Plate-forme",
+      "enterUrl": "Entrez l'URL",
+      "web": "Site web",
+      "button": "Recherche",
+      "message": "Veuillez utiliser Indoex Vérifier pour vérifier si la source représente officiellement Indoex. ",
+      "notice": "Avis",
+      "noticeMessage": {
+        "part1": "Veuillez ne pas contacter de sources non officielles / non vérifiées ou de leur révéler les détails de votre compte. ",
+        "part2": "Aide Indoex"
+      }
+    }
+  },
+
+  "dashboard": {
+    "overviewPage": {
+      "assets": "Actif total",
+      "wallet": {
+        "label": "Résumé du portefeuille",
+        "terms": {
+          "tDeposit": "Dépôt total",
+          "tBuyOrders": "Commandes d'achat total",
+          "tWithdraw": "Retrait total",
+          "tSellOrders": "Commandes de vente totale",
+          "deposit": "Dépôt",
+          "withdraw": "Retirer",
+          "myAssets": "Mes actifs"
+        }
+      },
+      "security": {
+        "label": "Sécurité",
+        "content": "Augmentez la force de sécurité de votre compte",
+        "terms": {
+          "strength": "Force",
+          "goToSPage": "Aller à la page de sécurité",
+          "passkey": "Touche passante",
+          "2fa": "Vérification en 2 étapes",
+          "antiPhi": "Code antiphishing",
+          "button": "Actif"
+        }
+      },
+      "market": {
+        "label": "Marché",
+        "tabs": {
+          "trending": "Tendance",
+          "topVolume": "Top volume",
+          "favorite": "Préféré"
+        },
+        "terms": {
+          "price": "Prix"
+        },
+        "button": "Afficher tous"
+      },
+      "tradeTable": {
+        "title": "Histoire du commerce",
+        "button": "Afficher tous",
+        "tHead": {
+          "filledTime": "Temps rempli",
+          "pair": "Paire",
+          "bOrS": "Acheter ou vendre",
+          "orderType": "Type de commande",
+          "fillPrice": "Remplir les prix",
+          "amount": "Montant",
+          "vol": "Volume",
+          "fee": "Frais"
+        }
+      }
+    },
+    "profile": {
+    "profile": {
+      "title": "Profil",
+      "nickName": {
+        "label": "Surnom",
+        "content": "Ceci est votre nom d'affichage qui apparaîtra aux autres sur la plate-forme",
+        "button": "Changer de surnom",
+        "popUp": {
+          "title": "Changer de surnom",
+          "nickname": "Surnom",
+          "enterNickname": "Entrer le surnom",
+          "message": "5-20 caractères. ",
+          "buttons": {
+            "cancel": "Annuler",
+            "confirm": "Confirmer"
+          },
+          "successMessage": "Le surnom a changé avec succès"
+        }
+      },
+      "photo": {
+        "label": "photo",
+        "content": "Téléchargez une photo de profil pour personnaliser votre compte et le rendre reconnaissable",
+        "buttons": {
+          "upload": "Télécharger",
+          "delete": "Supprimer"
+        },
+        "popUp": {
+          "title": "Changez votre photo de profil",
+          "avatar": "Avatar",
+          "system_upload": "Télécharger à partir de cet appareil",
+          "clickSelect": "Cliquez pour sélectionner",
+          "buttons": {
+            "cancel": "Annuler",
+            "confirm": "Confirmer"
+          },
+          "successMessage": "L'image de profil a changé avec succès"
+        }
+      },
+      "profileChangeSucMessage": "L'image de profil a changé avec succès",
+  "nameChangeSucMessage": "Le surnom a changé avec succès"
+    },
+    "accManagement": {
+      "title": "Gestion des comptes",
+      "closeAcc": {
+        "label": "Compte rendu",
+        "content": "Une fois que vous avez fermé votre compte, il est permanent et ne peut pas être restauré",
+        "popUp": {
+          "title": "Demande de suppression du compte",
+          "content": {
+            "part1": "Cher client précieux, si vous souhaitez supprimer définitivement votre compte avec Indoex, veuillez envoyer un e-mail via",
+            "part2": "support@indoex.io.",
+            "part3": "La demande doit être envoyée à partir de la même adresse e-mail utilisée pour enregistrer votre compte."
+          },
+          "notice": "Avis",
+          "noticePoints": {
+            "point1": "Sachez que la suppression du compte est permanente. ",
+            "point2": "Si vous avez des actifs dans votre compte, assurez-vous de les régler. ",
+            "point3": {
+              "part1": "Bien que Indoex puisse supprimer votre compte en permanence conformément à la demande, veuillez noter que nous devons conserver certaines données personnelles pendant une période spécifiée après la suppression. ",
+              "part2": "Termes et conditions"
+            },
+            "point4": {
+              "part1": "Des informations supplémentaires sur la façon dont nous stockons vos données personnelles peuvent être trouvées dans notre",
+              "part2": "Politique de confidentialité."
+            }
+          }
         }
       }
     }
   }
+  }
+  
+
 }

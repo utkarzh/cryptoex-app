@@ -2,54 +2,43 @@ import React from "react";
 import ContentCard from "./ContentCard";
 import StakeTable from "./StakeTable";
 import Faq from "@/components/common/faq/Faq";
-
-const test = [
-  {
-    title: "Staking",
-    content:
-      "Staking lets you earn rewards on your crypto. You can stake or redeem anytime, Most assets have a redemption period with no rewards during that time.",
-  },
-  {
-    title: "Term",
-    content:
-      "Your holding period for the product determines the yield. Flexible-term products allow you to access your investments as needed.",
-  },
-  {
-    title: "Redemption period",
-    content:
-      "This is set by the staking protocol. Each cryptocurrency has its own waiting period for unstaking assets. No rewards or yield accrue during this time.",
-  },
-];
-
-const testFaq = [
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const StakeMain = () => {
+  const t = useTranslations("stakingPage");
+  const test = [
+    {
+      title: t("info.info1.title"),
+      content: t("info.info1.content"),
+    },
+    {
+      title: t("info.info2.title"),
+      content: t("info.info2.content"),
+    },
+    {
+      title: t("info.info3.title"),
+      content: t("info.info3.content"),
+    },
+  ];
+
+  const testFaq = [
+    {
+      question: t("faq.faq1.ques"),
+      answer: t("faq.faq1.ans"),
+    },
+    {
+      question: t("faq.faq2.ques"),
+      answer: t("faq.faq2.ans"),
+    },
+    {
+      question: t("faq.faq3.ques"),
+      answer: t("faq.faq3.ans"),
+    },
+    {
+      question: t("faq.faq4.ques"),
+      answer: t("faq.faq4.ans"),
+    },
+  ];
   return (
     <div className="w-[95%] sm:w-[85%] md:w-[80%]  lg:w-[70%] mx-auto py-20 h-full">
       {/* content cards */}

@@ -3,6 +3,7 @@ import { saira } from "@/utils/Font";
 import React, { FC, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { PopupData } from "./EmailInfo";
+import { useTranslations } from "next-intl";
 
 type Props = {
   onClose: () => void;
@@ -10,6 +11,9 @@ type Props = {
 };
 
 const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.emailInfo.popUp2"
+  );
   const [emailCode, setEmailCode] = useState<string>("");
   const [twoFaCode, setTwoFaCode] = useState<string>("");
   const [error, setError] = useState("");
@@ -33,25 +37,25 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Security Verification
+        {t("title")}
       </h2>
       {/* inputs */}
       <div className="w-full space-y-3">
         {/* verification code */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            A verification code will be sent to kdk****fx@gmail.com
+            {t("codeSentAt")} kdk****fx@gmail.com
           </label>
           <div className="flex gap-1">
             <input
               type="text"
               value={emailCode}
-              placeholder="Please enter the email verification code"
+              placeholder={t("enterCode")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px]"
               onChange={(e) => setEmailCode(e.target.value)}
             />
             <button className="text-[10px] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
-              Send Code
+              {t("buttons.sendCode")}
             </button>
           </div>
         </div>
@@ -59,12 +63,12 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/*google 2fa*/}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Google 2FA Code
+            {t("2faCode")}
           </label>
           <input
             type="text"
             value={twoFaCode}
-            placeholder="Please enter the 2FA Code"
+            placeholder={t("enter2fa")}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
             onChange={(e) => setTwoFaCode(e.target.value)}
           />
@@ -79,13 +83,13 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
                      py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={() => verificationHandler("confirm")}
         >
-          Next Step
+          {t("buttons.nextStep")}
         </button>
         <a
           href="#"
           className="text-xs font-light text-green-600 cursor-pointer"
         >
-          Having Problems with verification?
+          {t("havingProb")}
         </a>
       </div>
     </div>

@@ -1,8 +1,11 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 
 const LaunchpadBanner = () => {
+  const t = useTranslations("launchPad");
+
   return (
     <div className="mb-10">
       <div className="w-full h-[50vh] sm:h-[calc(100vh-70px)] flex justify-center items-center relative  shadow-2xl rounded-xl partShadowAirdrop  ">
@@ -30,12 +33,9 @@ const LaunchpadBanner = () => {
         <h2
           className={`${saira.className} w-fit text-4xl font-bold text-green-600`}
         >
-          Claim Your Free Crypto!
+          {t("title")}
         </h2>
-
-        <p className="w-fit text-xl font-light">
-          Launch Your Crypto Token with IndoEx Launchpad
-        </p>
+        <p className="w-fit text-xl font-light">{t("subTitle")}</p>
       </div>
     </div>
   );

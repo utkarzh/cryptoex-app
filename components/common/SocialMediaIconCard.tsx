@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -14,9 +15,10 @@ const socialIcons = [
 ];
 
 const SocialMediaIconCard = () => {
+  const t = useTranslations("airDrop.contest.terms");
   return (
     <div className="w-full p-6 space-y-4">
-      <h4 className="text-xs">Social Media</h4>
+      <h4 className="text-xs">{t("sMedia")}</h4>
       <div className="w-full flex gap-1">
         {socialIcons.map((link, index) => (
           <a className="" key={index} href="#">

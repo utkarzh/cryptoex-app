@@ -6,6 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import Image from "next/image";
 import { GoArrowDownRight, GoArrowUpRight } from "react-icons/go";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
@@ -18,7 +19,7 @@ type TokenData = {
   icon: string;
 };
 
-const tabs = ["Trending", "Top Volume", "Favorite"];
+const tabs = ["trending", "topVolume", "favorite"];
 
 const mockData: TokenData[] = [
   {
@@ -56,7 +57,8 @@ const mockData: TokenData[] = [
 ];
 
 const Market = () => {
-  const [selectedTab, setSelectedTab] = useState("Trending");
+  const t = useTranslations("dashboard.overviewPage.market");
+  const [selectedTab, setSelectedTab] = useState("trending");
 
   return (
     <div className=" bg-white dark:bg-[#161735] p-6 rounded-xl w-full">
@@ -64,7 +66,7 @@ const Market = () => {
         {/* heading */}
         <div>
           <h2 className={`${saira.className} text-sm font-semibold `}>
-            Market
+            {t("label")}
           </h2>
           {/* tabs */}
           <div className="flex gap-6 mt-4 text-xs">
@@ -76,7 +78,7 @@ const Market = () => {
                   selectedTab === tab ? "text-green-400 " : ""
                 }`}
               >
-                {tab}
+                {t(`tabs.${tab}`)}
                 {selectedTab === tab && (
                   <span className="absolute left-0 bottom-0 h-0.5 w-full bg-green-400 rounded"></span>
                 )}
@@ -86,7 +88,7 @@ const Market = () => {
         </div>
         {/* view all button */}
         <button className="border text-xs border-green-500 text-green-50 bg-green-600 dark:text-green-400 dark:bg-green-700/30 hover:scale-105  px-3 py-1.5 rounded-full  flex items-center gap-1   transition cursor-pointer">
-          View All <BsArrowRight />
+          {t("button")} <BsArrowRight />
         </button>
       </div>
 
@@ -110,7 +112,9 @@ const Market = () => {
             </div>
             <div className="mt-2 flex justify-between">
               <div className="flex gap-1 items-center">
-                <p className="text-[10px] font-light opacity-70">Price</p>
+                <p className="text-[10px] font-light opacity-70">
+                  {t("terms.price")}
+                </p>
                 <p className="text-xl font-semibold">{token.price}</p>
               </div>
               <span

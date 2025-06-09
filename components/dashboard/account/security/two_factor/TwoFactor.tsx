@@ -6,10 +6,12 @@ import SecurityVerificationPopup from "./SecurityVerificationPopup";
 import TwoFactorSetupPopup from "./TwoFactorSetupPopup";
 import TwoFactorDisableFormPopup from "./TwoFactorDisableFormPopup";
 import TwoFactorDisablePopupConfirm from "./TwoFactorDisableConfirmPopup";
+import { useTranslations } from "next-intl";
 
 // type Props = {};
 
 const TwoFactor = () => {
+  const t = useTranslations("dashboard.security.securitySetting.twofactor");
   const [twoFASetup, setTwoFASetup] = useState<
     "otp" | "google-auth" | "disable-form" | "disable-confirmation" | ""
   >();
@@ -47,12 +49,9 @@ const TwoFactor = () => {
           <BsShieldLock className="text-[17px]" />
         </div>
         <div>
-          <div className="font-xs font-light opacity-90">
-            Two Factor Authentication
-          </div>
+          <div className="font-xs font-light opacity-90">{t("label")}</div>
           <div className="text-[11px] font-light opacity-60">
-            Link an authenticator app for secure two-factor authentication when
-            accessing your account
+            {t("content")}
           </div>
         </div>
       </div>
@@ -77,7 +76,7 @@ const TwoFactor = () => {
           className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
           onClick={is2FAVerified ? disable2FAHandler : setup2FAHandler}
         >
-          {is2FAVerified ? "Disable" : "Set up"}
+          {is2FAVerified ? t("buttons.disable") : t("buttons.setUp")}
         </button>
       </div>
 

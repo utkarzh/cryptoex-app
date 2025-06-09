@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const tradingCompetitionRules = [
@@ -36,16 +37,17 @@ const userVolumes = [
 ];
 
 export default function TradeCompetitionInfo() {
+  const t = useTranslations("tradeContest.contest.terms");
   return (
     <div className="w-full flex flex-col gap-6 p-6 pt-0">
       {/* top section */}
       <section className="space-y-2">
         <div>
           <h2 className="text-2xl font-semibold text-green-500">
-            RougeCoin (XRGE) Trading Competition
+            RougeCoin (XRGE) {t("tradingCom")}
           </h2>
           <p className="text-[10px] font-light">
-            The more you trade XRGE, the higher your chances are to win a prize.
+            {t("moreTrade")} XRGE, {t("moreWin")}.
           </p>
         </div>
 
@@ -72,7 +74,7 @@ export default function TradeCompetitionInfo() {
 
       {/* details */}
       <section className="space-y-4 pt-2">
-        <h6 className="text-xs font-normal ">Details</h6>
+        <h6 className="text-xs font-normal ">{t("details")}</h6>
         <div className="w-full border rounded-md p-4  border-slate-500">
           {rewards.map((val, index) => (
             <div
@@ -81,7 +83,9 @@ export default function TradeCompetitionInfo() {
               } flex justify-between  border-slate-500  `}
               key={index}
             >
-              <span className="text-[10px] opacity-70">{val.label}</span>
+              <span className="text-[10px] opacity-70">
+                {t(`${val.label}`)}
+              </span>
               <span className="text-[11px]">{val.value}</span>
             </div>
           ))}
@@ -90,17 +94,17 @@ export default function TradeCompetitionInfo() {
 
       {/* Participation Overview */}
       <section className="space-y-4 pt-2">
-        <h6 className="text-xs font-normal ">Details</h6>
+        <h6 className="text-xs font-normal ">{t("pOverview")}</h6>
         <div className="w-full  rounded-md p-4 bg-white dark:bg-[#161735]">
           {/* header */}
           <div
             className={`w-full mt-1 pb-3 flex justify-between text-center  `}
           >
             <span className="w-full text-[10px] opacity-70 text-left">
-              Position
+              {t("position")}
             </span>
-            <span className="w-full text-[10px] opacity-70 ">User</span>
-            <span className="w-full text-[11px] text-right ">Volume</span>
+            <span className="w-full text-[10px] opacity-70 ">{t("user")}</span>
+            <span className="w-full text-[11px] text-right ">{t("vol")}</span>
           </div>
           {userVolumes.map((val, index) => (
             <div

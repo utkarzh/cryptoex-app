@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -11,33 +12,34 @@ type MenuItem = {
   bottom?: boolean;
 };
 
-const menuItems: MenuItem[] = [
-  {
-    label: "All",
-  },
-  {
-    label: "News",
-    children: ["Indoex updates", "Public news"],
-  },
-  {
-    label: "New Listings",
-  },
-  {
-    label: "Events",
-    children: ["Event1", "Events2"],
-  },
-  {
-    label: "Web3",
-  },
-  {
-    label: "API",
-  },
-  {
-    label: "Dlisting",
-  },
-];
-
 export default function AnnouncementsSidebar() {
+  const t = useTranslations("announcementsPage.sidebar");
+  const menuItems: MenuItem[] = [
+    {
+      label: t("all"),
+    },
+    {
+      label: t("news.label"),
+      children: [t("news.item1"), t("news.item2")],
+    },
+    {
+      label: t("newListing"),
+    },
+    {
+      label: t("events.label"),
+      children: [t("events.item1"), t("events.item2")],
+    },
+    {
+      label: t("web3"),
+    },
+    {
+      label: t("api"),
+    },
+    {
+      label: t("dListing"),
+    },
+  ];
+
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
   const [activeMenu, setActiveMenu] = useState<string>("Overview");
 

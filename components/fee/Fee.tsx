@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
@@ -101,6 +102,7 @@ const mockData = [
 ];
 
 export default function Fee() {
+  const t = useTranslations("feePage");
   const [search, setSearch] = useState("");
 
   const filteredData = mockData.filter((item) =>
@@ -118,12 +120,12 @@ export default function Fee() {
       {/* heading */}
       <div className="flex justify-between items-center mb-4">
         <h2 className={` ${saira.className} text-lg font-semibold`}>
-          Fee Structure
+          {t("title")}
         </h2>
         <div className="relative flex items-center">
           <input
             type="text"
-            placeholder="Search"
+            placeholder={t("terms.search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="dark:bg-[#202344] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -136,21 +138,21 @@ export default function Fee() {
         <table className="w-full text-xs text-left">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-3 px-2 font-extralight">name</th>
+              <th className="py-3 px-2 font-extralight">{t("tHead.name")}</th>
               <th className="py-3 px-2 font-extralight text-center">
-                Min. Deposit
+                {t("tHead.minDeposit")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                Min. Withdraw
+                {t("tHead.minWithdraw")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                Withdraw Fee
+                {t("tHead.withdrawFee")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                Maker Fee
+                {t("tHead.makerFee")}
               </th>
               <th className="py-3 px-2 font-extralight  text-center">
-                Taker Fee
+                {t("tHead.takerFee")}
               </th>
             </tr>
           </thead>

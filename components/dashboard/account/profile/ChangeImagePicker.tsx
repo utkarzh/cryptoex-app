@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FC, useState } from "react";
 const predefinedAvatars = [
@@ -34,6 +35,7 @@ type Props = {
 };
 
 const ChangeImagePicker: FC<Props> = ({ onUpload }) => {
+  const t = useTranslations("dashboard.profile.profile.photo.popUp");
   const [selectedAvatar, setSelectedAvatar] = useState<string | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [tab, setTab] = useState<"avatar" | "system_upload">("avatar");
@@ -61,7 +63,8 @@ const ChangeImagePicker: FC<Props> = ({ onUpload }) => {
                 : "border-transparent text-inherit"
             } pb-1 text-[10px] font-normal`}
           >
-            {val === "avatar" ? "Avatar" : "Upload from this device"}
+            {/* {val === "avatar" ? "Avatar" : "Upload from this device"} */}
+            {t(`${val}`)}
           </div>
         ))}
       </div>
@@ -108,7 +111,7 @@ const ChangeImagePicker: FC<Props> = ({ onUpload }) => {
             </div>
           )}
           <label className="cursor-pointer text-gray-300 hover:text-white ">
-            <span className=" text-xs font-normal">Click To Select</span>
+            <span className=" text-xs font-normal">{t("clickSelect")}</span>
             <input
               type="file"
               accept="image/*"

@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { BiTrendingUp } from "react-icons/bi";
 
 const topGainers = [
@@ -18,18 +19,21 @@ const topGainers = [
 ];
 
 export default function NewListings() {
+  const t = useTranslations("marketPage.quickViewTable");
   return (
     <div className="rounded-xl border border-slate-300 dark:border-[#1c1f3a] p-4 w-full ">
       <h3 className="text-sm mb-2 border-b border-slate-300 dark:border-[#1c1f3a] pb-3">
-        New Listings
+        {t("newListing")}
       </h3>
 
       <table className="w-full text-sm text-left">
         <thead className="text-xs dark:text-slate-500 text-slate-600">
           <tr>
-            <th className="font-light py-2">Pairs</th>
-            <th className="font-light py-2">Price</th>
-            <th className="font-light py-2 text-center ">24h Change</th>
+            <th className="font-light py-2">{t("tHead.pairs")}</th>
+            <th className="font-light py-2">{t("tHead.price")}</th>
+            <th className="font-light py-2 text-center ">
+              {t("tHead.24hChange")}
+            </th>
           </tr>
         </thead>
         <tbody>

@@ -1,11 +1,13 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 // import Image from "next/image";
 
 const AirdropBanner = () => {
+  const t = useTranslations("airDrop");
   return (
     <div className="mb-10">
       <div className="w-full h-[50vh] sm:h-[calc(100vh-70px)] flex justify-center items-center relative  shadow-2xl rounded-xl partShadowAirdrop  ">
@@ -64,12 +66,10 @@ const AirdropBanner = () => {
         <h2
           className={`${saira.className} w-fit text-4xl font-bold text-green-600`}
         >
-          Claim Your Free Crypto!
+          {t("title")}
         </h2>
 
-        <p className="w-fit text-xl font-light">
-          Join the Latest IndoEx Airdrop Campaigns & Earn Instantly.
-        </p>
+        <p className="w-fit text-xl font-light">{t("subTitle")}</p>
       </div>
     </div>
   );

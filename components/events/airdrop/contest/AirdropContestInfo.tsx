@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function AirdropContestInfo() {
+  const t = useTranslations("airDrop.contest.terms");
+
   return (
     <div className=" flex flex-col gap-6 p-6 pt-0">
       {/* heading */}
@@ -20,7 +23,7 @@ export default function AirdropContestInfo() {
           MyTurnCrypto Solutions (MTCS) Completed
         </h2>
 
-        <h4 className="text-lg">About MyTurnCrypto Solutions</h4>
+        <h4 className="text-lg">{t("about")} MyTurnCrypto Solutions</h4>
         <p className="text-[10px] font-normal opacity-80">
           awkit is a next-generation meme cryptocurrency designed to address the
           challenges of scalability, security, and user adoption in the Ethereum
@@ -48,23 +51,23 @@ export default function AirdropContestInfo() {
       {/* how to join */}
       <section className="space-y-4 pt-2">
         <h3 className="text-xs font-normal ">
-          How to join the MyTurnCrypto Solutions Airdrop?
+          {t("howToJoin")} MyTurnCrypto Solutions Airdrop?
         </h3>
 
         <div className="w-full border rounded-md p-4  border-slate-500">
           <div className="w-full flex justify-between border-b border-slate-500 pb-3 mt-1">
-            <span className="text-[10px] opacity-80">Token Per Airdrop</span>
-            <span className="text-[11px]">up to 100000000 MTCS</span>
+            <span className="text-[10px] opacity-80">{t("tokenPerAir")}</span>
+            <span className="text-[11px]">{t("upTo")} 100000000 MTCS</span>
           </div>
 
           <div className="w-full flex justify-between border-b border-slate-500 pb-3 mt-3">
-            <span className="text-[10px] opacity-80">Referral</span>
+            <span className="text-[10px] opacity-80">{t("referral")}</span>
             <span className="text-[11px]">10000 MTCS</span>
           </div>
 
           <div className="w-full flex justify-between  pb-0 mt-3">
-            <span className="text-[10px] opacity-80">KYC</span>
-            <span className="text-[11px]">KYC is not a requirement</span>
+            <span className="text-[10px] opacity-80">{t("kyc")}</span>
+            <span className="text-[11px]">{t("kycNoReq")}</span>
           </div>
         </div>
       </section>
@@ -72,7 +75,7 @@ export default function AirdropContestInfo() {
       {/* guide */}
       <section className="space-y-4 pt-2">
         <h3 className="text-xs font-normal ">
-          Step-by-step Guide for MyTurnCrypto Solutions Airdrop
+          {t("guide")} MyTurnCrypto Solutions Airdrop
         </h3>
 
         <div className="w-full">
@@ -84,20 +87,20 @@ export default function AirdropContestInfo() {
             Rawkit aims to redefine digital transactions and decentralized
             finance (DeFi)
           </p>
+          <br />
           <p className="text-[10px] font-normal opacity-80">
-            Don&apos;t forgot to join our Telegram Channel, follow us on Twitter
-            and subscribe our newsletter to receive new airdrops!
+            {t("doNotForgot")}
           </p>
         </div>
       </section>
 
       {/* overview */}
       <section className="space-y-4 pt-2">
-        <h3 className="text-xs font-normal ">Overview</h3>
+        <h3 className="text-xs font-normal ">{t("overview")}</h3>
 
         <div className="w-full space-y-1">
           <p className="text-[10px] font-normal opacity-80">
-            <span>Website: </span>
+            <span>{t("web")}: </span>
             <a
               href="https://mtcs.myturncrypto.com"
               target="_blank"
@@ -107,7 +110,7 @@ export default function AirdropContestInfo() {
             </a>
           </p>
           <p className="text-[10px] font-normal opacity-80">
-            <span>Explorer: </span>
+            <span>{t("exp")}: </span>
             <a
               href="https://bscscan.com/token/0xDeD23b0C81E2a08D07f26E33347590adA801dc53"
               target="_blank"
@@ -117,7 +120,7 @@ export default function AirdropContestInfo() {
             </a>
           </p>
           <p className="text-[10px] font-normal opacity-80">
-            <span>Github: </span>
+            <span>{t("git")}: </span>
             <a
               href="#"
               target="_blank"
@@ -125,7 +128,7 @@ export default function AirdropContestInfo() {
             ></a>
           </p>
           <p className="text-[10px] font-normal opacity-80">
-            <span>White Paper: </span>
+            <span>{t("wPaper")}: </span>
             <a
               href="https://rawkit.xyz/whitepaper"
               target="_blank"
@@ -135,7 +138,7 @@ export default function AirdropContestInfo() {
             </a>
           </p>
           <p className="text-[10px] font-normal opacity-80">
-            <span>Announcement: </span>
+            <span>{t("ann")}: </span>
             <a
               href="https://rawkit.xyz/"
               target="_blank"

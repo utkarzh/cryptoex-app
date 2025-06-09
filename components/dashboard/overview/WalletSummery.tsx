@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import { FaShoppingBag } from "react-icons/fa";
 import {
   LuArrowDownFromLine,
@@ -13,10 +14,11 @@ import { MdShoppingCartCheckout, MdShoppingCart } from "react-icons/md";
 // import { FaRegCircleDown, FaRegCircleUp } from "react-icons/fa6";
 
 const WalletSummary = () => {
+  const t = useTranslations("dashboard.overviewPage.wallet");
   return (
     <div className="h-full flex flex-col justify-between dark:bg-[#161735] bg-white  p-6 rounded-xl w-full shadow-lg">
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Wallet summary
+        {t("label")}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -28,7 +30,9 @@ const WalletSummary = () => {
             </span>
             <div>
               <p className="text-xs font-medium">$50,135.12</p>
-              <p className="text-[11px] font-extralight">Total Deposit</p>
+              <p className="text-[11px] font-extralight">
+                {t("terms.tDeposit")}
+              </p>
             </div>
           </div>
 
@@ -39,7 +43,9 @@ const WalletSummary = () => {
 
             <div>
               <p className="text-xs font-medium">$26,135.24</p>
-              <p className="text-[11px] font-extralight">Total Withdraw</p>
+              <p className="text-[11px] font-extralight">
+                {t("terms.tWithdraw")}
+              </p>
             </div>
           </div>
         </div>
@@ -52,7 +58,9 @@ const WalletSummary = () => {
             </span>
             <div>
               <p className="text-xs font-medium">$12,135.20</p>
-              <p className="text-[11px] font-extralight">Total Buy Orders</p>
+              <p className="text-[11px] font-extralight">
+                {t("terms.tBuyOrders")}
+              </p>
             </div>
           </div>
 
@@ -62,7 +70,9 @@ const WalletSummary = () => {
             </span>
             <div>
               <p className="text-xs font-medium">$23,490.11</p>
-              <p className="text-[11px] font-extralight">Total Sell Orders</p>
+              <p className="text-[11px] font-extralight">
+                {t("terms.tSellOrders")}
+              </p>
             </div>
           </div>
         </div>
@@ -72,13 +82,13 @@ const WalletSummary = () => {
 
       <div className="flex flex-wrap gap-4 justify-center md:justify-start font-light">
         <button className="bg-slate-400/20 px-5 py-2 rounded-full text-xs flex items-center gap-2 hover:bg-slate-400/40 transition">
-          <LuSquareArrowDown /> Deposit
+          <LuSquareArrowDown /> {t("terms.deposit")}
         </button>
         <button className="bg-slate-400/20 px-5 py-2 rounded-full text-xs flex items-center gap-2 hover:bg-slate-400/40 transition">
-          <LuSquareArrowUp /> Withdraw
+          <LuSquareArrowUp /> {t("terms.withdraw")}
         </button>
         <button className="bg-slate-400/20  px-5 py-2 rounded-full text-xs flex items-center gap-2 hover:bg-slate-400/40 transition">
-          <FaShoppingBag /> My Assets
+          <FaShoppingBag /> {t("terms.myAssets")}
         </button>
       </div>
     </div>

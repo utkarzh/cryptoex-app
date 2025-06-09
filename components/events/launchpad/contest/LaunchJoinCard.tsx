@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { FaBitcoin } from "react-icons/fa";
 import { SiBinance, SiEthereum, SiPolygon } from "react-icons/si";
@@ -10,13 +11,16 @@ const tokenTabs = [
   { label: "MATIC", icon: <SiPolygon className="text-lg text-purple-400" /> },
 ];
 
-const coinDetails = [
-  { label: "Start Date", value: "19-05-2023o" },
-  { label: "End Date", value: "26-11-2023" },
-  { label: "Token Price", value: "1 AGT ≈ 0.006000 $ ≈ 0.005998 USDTe" },
-  { label: "Minimum Price", value: "10000 AGT =59.9805 USDT" },
-];
 const LaunchJoinCard = () => {
+  const t = useTranslations("launchPad.contest.form.terms");
+
+  const coinDetails = [
+    { label: t("sDate"), value: "19-05-2023o" },
+    { label: t("eDate"), value: "26-11-2023" },
+    { label: t("tPrice"), value: "1 AGT ≈ 0.006000 $ ≈ 0.005998 USDTe" },
+    { label: t("minPrice"), value: "10000 AGT =59.9805 USDT" },
+  ];
+
   const [selectedTab, setSelectedTab] = useState("all");
 
   const selectTabHandler = (data: string) => {
@@ -47,14 +51,14 @@ const LaunchJoinCard = () => {
       {/* current balance */}
       <div className="w-full flex justify-between">
         <div className=" text-xs font-normal dark:text-slate-500 text-slate-600">
-          Current Balance
+          {t("cBal")}
         </div>
         <div className="text-xs">0 USDT</div>
       </div>
 
       {/* table */}
       <section className="space-y-4 pt-2">
-        <h6 className="text-xs font-normal ">Details</h6>
+        <h6 className="text-xs font-normal ">{t("details")}</h6>
         <div className="w-full border rounded-md p-4  border-slate-500/40">
           {coinDetails.map((val, index) => (
             <div
@@ -70,8 +74,8 @@ const LaunchJoinCard = () => {
 
           {/* order bar row */}
           <div className={`w-full  mt-3 flex justify-between items-center `}>
-            <span className="text-[10px] opacity-80">Orders</span>
-            <span className="text-[11px]"> bar</span>
+            <span className="text-[10px] opacity-80">{t("ord")}</span>
+            <span className="text-[11px]"> {t("bar")}</span>
             <span className="text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-2 py-1 border border-green-600 rounded-md hover:bg-green-700 dark:hover:bg-green-500/30 text-xs font-light">
               10000
             </span>
@@ -82,20 +86,20 @@ const LaunchJoinCard = () => {
       {/*buy*/}
       <div className="w-full flex justify-between">
         <div className=" text-xs font-normal dark:text-slate-500 text-slate-600">
-          Buy
+          {t("buy")}
         </div>
         <div className="text-xs ">0 USDT</div>
       </div>
       {/*received*/}
       <div className="w-full flex justify-between">
         <div className=" text-xs font-normal dark:text-slate-500 text-slate-600">
-          Receive
+          {t("rec")}
         </div>
         <div className="text-xs ">59.9805 USDT</div>
       </div>
       {/* button */}
       <button className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer">
-        Login / Sign Up
+        {t("button")}
       </button>
     </div>
   );

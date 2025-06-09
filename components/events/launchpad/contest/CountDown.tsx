@@ -1,7 +1,9 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 function Countdown() {
+  const t = useTranslations("launchPad.contest.terms");
   const calculateTimeLeft = () => {
     const difference = +new Date("2025-06-02T00:00:00") - +new Date();
     let timeLeft = {
@@ -48,7 +50,8 @@ function Countdown() {
             {value}
           </span>
           <span className=" text-xs mt-1">
-            {unit.charAt(0).toUpperCase() + unit.slice(1)}
+            {/* {unit.charAt(0).toUpperCase() + unit.slice(1)} */}
+            {t(`${unit}`)}
           </span>
         </div>
       ))}

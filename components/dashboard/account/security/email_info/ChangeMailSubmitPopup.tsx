@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { FC, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -9,6 +10,10 @@ type Props = {
 };
 
 const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.emailInfo.popUp3"
+  );
+
   const [newEmail, setNewEmail] = useState<string>("");
   const [code, setCode] = useState<string>("");
   const [error, setError] = useState("");
@@ -34,23 +39,25 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Change Email
+        {t("title")}
       </h2>
       {/* inputs */}
       <div className="w-full space-y-3">
         {/* new email */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">New Email</label>
+          <label className="block mb-1 text-[10px] font-light">
+            {t("newEmail")}
+          </label>
           <div className="flex gap-1">
             <input
               type="text"
               value={newEmail}
-              placeholder="Please enter the email verification code"
+              placeholder={t("enterEmail")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px]"
               onChange={(e) => setNewEmail(e.target.value)}
             />
             <button className="text-[10px] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
-              Send Code
+              {t("buttons.sendCode")}
             </button>
           </div>
         </div>
@@ -58,24 +65,22 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/*varification code*/}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            New Email Verification Code
+            {t("veriCode")}
           </label>
 
           <input
             type="text"
             value={code}
-            placeholder="Please enter the 2FA Code"
+            placeholder={t("enterveriCode")}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
             onChange={(e) => setCode(e.target.value)}
           />
 
           <p className="text-[10px] hover:text=-green-500 cursor-pointer mt-2 relative group flex flex-col gap-1">
             <span className="hidden group-hover:block p-1 px-2 rounded-md bg-white dark:bg-slate-700 absolute bottom-4 -left-1">
-              Please check your Spam folder for this email
+              {t("checkSpam")}
             </span>
-            <span className="text-green-600 ">
-              Didn&apos;t receive the verification code?
-            </span>
+            <span className="text-green-600 ">{t("noCode")}</span>
           </p>
         </div>
       </div>
@@ -87,14 +92,14 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
           className="w-full border border-slate-500/30 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={onClose}
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
                      py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={changeMailHandler}
         >
-          Submit
+          {t("buttons.submit")}
         </button>
       </div>
     </div>

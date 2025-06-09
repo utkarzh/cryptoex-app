@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FC, useState } from "react";
 import { FiAlertTriangle, FiCopy } from "react-icons/fi";
@@ -10,6 +11,9 @@ type Props = {
   onSuccess: () => void;
 };
 const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.twofactor.addPopUp2"
+  );
   const [copySuccess, setCopySuccess] = useState(false);
   const key = "ZHQAWF5MMVWV2MYUI";
   const [enteredCode, setEnteredCode] = useState<string>("");
@@ -32,7 +36,7 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
         <h2 className={`${saira.className} text-sm font-semibold `}>
-          Set Up Google Two-Factor Authentication
+          {t("title")}
         </h2>
         <button onClick={onClose}>
           <IoCloseSharp className="text-2xl cursor-pointer hover:scale-110 trasition-all duration-300" />
@@ -46,12 +50,9 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           <div className="w-7 h-7 text-xs rounded-full dark:bg-green-700/20 dark:text-green-600 bg-green-600 text-green-50 border border-green-600 flex items-center justify-center font-bold">
             1
           </div>
-          <p className="text-xs font-light mt-2">
-            Download Google Authenticator (Android / iOS)
-          </p>
+          <p className="text-xs font-light mt-2">{t("downloadMsgTitle")}</p>
           <p className="text-[9px] font-extralight opacity-80 dark:opacity-60">
-            Search for “Google Authenticator” on the App Store or Google Play
-            and download the app.
+            {t("downloadMsgContent")}
           </p>
         </div>
         {/* border */}
@@ -61,13 +62,9 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           <div className="w-7 h-7 text-xs rounded-full dark:bg-green-700/20 dark:text-green-600 bg-green-600 text-green-50 border border-green-600 flex items-center justify-center font-bold">
             2
           </div>
-          <p className="text-xs font-light mt-2">
-            Add the Key Phrase to Google Authenticator
-          </p>
+          <p className="text-xs font-light mt-2">{t("addKeyTitle")}</p>
           <p className="text-[9px] font-extralight opacity-80 dark:opacity-60">
-            You can download Google Authenticator from the App Store or Google
-            Play. Simply search for &quot;Google Authenticator&quot; and install
-            the app.
+            {t("addKeyContent")}
           </p>
         </div>
       </div>
@@ -75,20 +72,16 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       {/* Alert */}
       <div className="flex gap-2 text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
         <FiAlertTriangle className="text-5xl dark:text-[#c97b26] text-[#bc8d5b]" />
-        <p>
-          The key phrase is essential for recovering your Google Authenticator
-          if you lose or change your device. please store it safely before
-          completing the setup.
-        </p>
+        <p>{t("alertMsg")}</p>
       </div>
 
       {/* Input */}
       <div>
-        <label className="block mb-2 text-xs font-light">Google 2FA Code</label>
+        <label className="block mb-2 text-xs font-light">{t("2faCode")}</label>
         <input
           type="text"
           value={enteredCode}
-          placeholder="Please enter the 2FA Code"
+          placeholder={t("enter2faCode")}
           className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 mb-4 focus:outline-none  placeholder:text-xs"
           onChange={(e) => setEnteredCode(e.target.value)}
         />
@@ -106,7 +99,9 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           />
         </div>
         <div className="w-full">
-          <div className="text-[11px] font-light opacity-80 mb-1">Copy key</div>
+          <div className="text-[11px] font-light opacity-80 mb-1">
+            {t("copyKey")}
+          </div>
           <div className="w-full flex flex-wrap items-center gap-2  rounded">
             <span className="font-light flex text-wrap w-fit">{key}</span>
             <button
@@ -118,7 +113,7 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           </div>
           {copySuccess && (
             <span className="text-green-400 text-xs font-light mt-1 block">
-              Copied!
+              {t("copied")}
             </span>
           )}
         </div>
@@ -130,14 +125,14 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           className="w-full border border-slate-500/30 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={onClose}
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
          py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={google2FAVerificationhandler}
         >
-          Confirm
+          {t("buttons.confirm")}
         </button>
       </div>
     </div>

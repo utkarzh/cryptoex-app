@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { FC, useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
@@ -10,6 +11,9 @@ type Props = {
 };
 
 const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.passInfo.popUp"
+  );
   const [oldPassword, setOldPassword] = useState({
     oldPassword: "",
     isVisible: false,
@@ -44,31 +48,26 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Change Password
+        {t("title")}
       </h2>
 
       {/* notice */}
       <div className="border border-slate-500/30 bg-slate-500/10 rounded-md p-2 space-y-1">
-        <h5 className="text-[10px] font-medium">Notice:</h5>
-        <p className="text-[10px] font-light">
-          For your account’s security, after removing Google Two-Factor
-          Authentication, actions such as on-chain withdrawals, internal
-          transfers, fiat withdrawals, P2P trading, and other transactions will
-          be temporarily suspended for 24 hours.
-        </p>
+        <h5 className="text-[10px] font-medium">{t("notice")}:</h5>
+        <p className="text-[10px] font-light">{t("noticeMessage")}</p>
       </div>
       {/* inputs */}
       <div className="w-full space-y-4">
         {/* old password */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Old Password
+            {t("oldPass")}
           </label>
           <div className=" relative">
             <input
               type={oldPassword.isVisible ? "text" : "password"}
               value={oldPassword.oldPassword}
-              placeholder="Please enter your current password"
+              placeholder={t("oldPassHolder")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
               onChange={(e) =>
                 setOldPassword((prev) => {
@@ -96,13 +95,13 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/* New password */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            New Password
+            {t("newPass")}
           </label>
           <div className=" relative">
             <input
               type={newPassword.isVisible ? "text" : "password"}
               value={newPassword.newPassword}
-              placeholder="Please enter new password"
+              placeholder={t("newPassHolder")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
               onChange={(e) =>
                 setNewPassword((prev) => {
@@ -130,13 +129,13 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/* confirm New password */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Confirm New Password
+            {t("confirmPass")}
           </label>
           <div className=" relative">
             <input
               type={confirmPassword.isVisible ? "text" : "password"}
               value={confirmPassword.confirmPassword}
-              placeholder="Please enter new password"
+              placeholder={t("confirmPassHolder")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
               onChange={(e) =>
                 setConfirmPassword((prev) => {
@@ -164,18 +163,18 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/* 2FA verification code */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            2FA Verification Code
+            {t("2faCode")}
           </label>
           <div className=" relative">
             <input
               type="text"
               value={twoFaCode}
-              placeholder="Please enter 2FA Code"
+              placeholder={t("2faCodeHolder")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
               onChange={(e) => setTwoFaCode(e.target.value)}
             />
             <p className="text-xs font-light text-green-600 mt-2">
-              Having Problems with verification?
+              {t("havingIssue")}
             </p>
           </div>
         </div>
@@ -188,7 +187,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
                      py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={() => verificationHandler("success")}
         >
-          Submit
+          {t("button")}
         </button>
       </div>
     </div>

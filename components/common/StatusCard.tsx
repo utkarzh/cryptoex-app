@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export type Data_Type = {
-  status: "upcoming" | "ongoing" | "completed";
+  key: "upcoming" | "ongoing" | "completed";
+  status: string;
   href?: string;
   statusColor: string;
   borderColor: string;
@@ -21,6 +23,7 @@ type Props = {
 };
 
 const StatusCard: FC<Props> = ({ data }) => {
+  const t = useTranslations("airDrop.terms");
   return (
     <div className="flex flex-wrap justify-center gap-6 ">
       {data.map((item, idx) => (
@@ -50,7 +53,7 @@ const StatusCard: FC<Props> = ({ data }) => {
           <p className="text-[12px] font-extralight mb-4">{item.disc}</p>
 
           <div className="text-xs font-light my-10 flex justify-between">
-            <span className="">Airdrop supply:</span>
+            <span className="">{t("airSupply")}:</span>
             <span className="ml-2 font-medium">{item.supply}</span>
           </div>
 
@@ -58,11 +61,11 @@ const StatusCard: FC<Props> = ({ data }) => {
 
           <div className="text-xs font-light flex flex-col gap-3 mt-8 mb-2">
             <p className="text-xs font-light  flex justify-between">
-              <span>Start:</span>
+              <span>{t("start")}:</span>
               <span>{item.start} (UTC)</span>
             </p>
             <p className="text-xs font-light  flex justify-between">
-              <span>End:</span>
+              <span>{t("end")}:</span>
               <span>{item.end} (UTC)</span>
             </p>
           </div>

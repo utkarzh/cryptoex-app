@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -10,9 +11,10 @@ const teamImgUrl = [
 ];
 
 const ContestTeam = () => {
+  const t = useTranslations("launchPad.contest.terms");
   return (
     <div className="w-full p-6 space-y-4">
-      <h4 className="text-xs">Team</h4>
+      <h4 className="text-xs">{t("team")}</h4>
       <div className="w-full flex gap-4">
         {teamImgUrl.map((link, index) => (
           <a className="" key={index} href="#">

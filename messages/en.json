@@ -641,9 +641,745 @@
         "ques":"Is staking safe?",
         "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
       }
-
     }
   }
-}
+},
 
+"stakingPage":{
+  "stakeHero":{
+    "title":"Stake with Flexible Terms for Maximum Earnings",
+    "content":"Earn passive income on your terms with flexible, high-yield staking options.",
+    "overview":{
+      "label":"Overview",
+      "terms":{
+        "assets":"Assets (USDT)",
+        "yesProfit":"Yesterday's Profit (USDT)",
+        "totalProfit":"Total Profit (USDT)"
+      }
+    }
+  },
+  "info":{
+    "info1":{
+      "title":"Staking",
+      "content":"Staking lets you earn rewards on your crypto. You can stake or redeem anytime, Most assets have a redemption period with no rewards during that time."
+    },
+    "info2":{
+      "title":"Term",
+      "content":"Your holding period for the product determines the yield. Flexible-term products allow you to access your investments as needed."
+    },
+     "info3":{
+      "title":"Redemption period",
+      "content":"This is set by the staking protocol. Each cryptocurrency has its own waiting period for unstaking assets. No rewards or yield accrue during this time."
+    }
+  },
+  "table":{
+    "title":"All products",
+    "terms":{
+      "matchAssets":"Match available assets",
+      "search":"Search"
+    },
+    "tHead":{
+      "coin":"Coin",
+      "estApr":"Est. APR",
+      "reward":"Reward coin",
+      "action":{
+        "label":"Action",
+        "button":"Stake"
+      }
+    }
+  },
+  "faq":{
+    "label":"FAQ",
+    "faq1":{
+      "ques":"What is crypto staking and how does it work?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+     "faq2":{
+      "ques":"Can I unstake my crypto anytime?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+     "faq3":{
+      "ques":"Do I earn rewards during the redemption period?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+     "faq4":{
+      "ques":"Is staking safe?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    }
+  },
+  "stakeForm":{
+    "title":"Staking",
+    "form":{
+      "terms":{
+        "currency":"Currency",
+        "selAmount":"Select Coin",
+        "amount":"Amount",
+        "minAmount":"Min amount 0.0001 BTC",
+        "refAPR":"Reference APR",
+        "terms":"Term",
+        "fundAcc":"Funding account",
+        "maxAmount":"Max amount",
+        "flexible":"Flexible"
+      }
+    },
+    "preview":{
+      "lable":"Preview",
+      "terms":{
+        "subDate":"Subscription date",
+        "accDate":"Accrual date",
+        "profitDisDate":"Profit distribution date",
+        "redPeriod":"Redemption period",
+        "profitRec":"Profit received",
+        "days":"Days",
+        "daily":"Daily"
+
+      }
+    },
+    "estimated":{
+      "label":"Estimated returns",
+      "terms":{
+        "earning":"BTC earnings",
+        "agg":{
+          "part1":"I have read and agree to",
+          "part2":"Staking User Agreemen"
+        }
+      }
+    },
+    "button":"Stake"
+  }
+},
+
+"marketPage":{
+  "tabs":{
+    "spot":"Spot",
+    "newListed":"Newly listed",
+    "topGainer":"Top gainers"
+  },
+  "quickViewTable":{
+    "tGainer":"Top Gainers",
+    "tranding":"Trending",
+    "newListing":"New listings",
+    "tHead":{
+      "pairs":"Pairs",
+      "price":"Price",
+      "24hChange":"24h Change"
+    }
+
+  },
+  "table":{
+    "terms":{
+      "all":"All",
+      "search":"Search"
+    },
+    "tHead":{
+      "coin":"Coin",
+      "lPrice":"Last Price",
+      "24hChange":"24h Change",
+      "24hHigh":"24h High",
+      "24hLow":"24h Low",
+      "24hVol":"24h Volume",
+      "chart":"Charts",
+      "trade":"Trade"
+    },
+    "button":"Trade"
+  }
+},
+
+"airDrop":{
+  "title":"Claim Your Free Crypto!",
+  "subTitle":"Join the Latest IndoEx Airdrop Campaigns & Earn Instantly.",
+  "tabs":{
+    "all":"All",
+    "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
+  },
+  "terms":{
+    "airSupply":"Airdrop supply",
+    "start":"Start",
+    "end":"End",
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+  },
+  "contest":{
+    "terms":{
+      "about":"About",
+      "howToJoin": "How to join the",
+      "tokenPerAir":"Token Per Airdrop",
+      "upTo":"up to",
+      "referral":"Referral",
+      "kyc":"KYC",
+      "kycNoReq":"KYC is not a requirement",
+      "guide":"Step-by-step Guide for",
+      "doNotForgot":"Don't forgot to join our Telegram Channel, follow us on Twitter and subscribe our newsletter to receive new airdrops!",
+      "overview":"Overview",
+      "web":"Website",
+      "exp":"Explorer",
+      "git":"GitHub",
+      "wPaper":"White Paper",
+      "ann":"Announcement",
+      "sMedia":"Social Media",
+      "join":"Join on Airdrop Event",
+      "sDate":"Start Date",
+      "eDate":"End Date",
+      "participants":"Active Participants",
+      "button":"Participate in Airdrop"
+    }
+    
+  }
+},
+
+"launchPad":{
+   "title":"Claim Your Free Crypto!",
+  "subTitle":" Launch Your Crypto Token with IndoEx Launchpad",
+  "tabs":{
+    "all":"All",
+    "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
+  },
+  "terms":{
+    "airSupply":"Airdrop supply",
+    "start":"Start",
+    "end":"End",
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+  },
+  "contest":{
+    "terms":{
+      "countDown":"Countdown",
+      "days":"Days",
+      "hours":"Hours",
+      "minutes":"Minutes",
+      "seconds":"Seconds",
+      "sPrice":"IEO Sale Price",
+      "about":"About",
+      "details":"Details",
+      "fName":"Full Name",
+      "web":"Website",
+      "tName":"Ticker name",
+      "sSupply":"Session Supply",
+      "tSupply":"Total Supply",
+      "ieoPrice":"IEO Price",
+      "ieoSDate":"IEO Start Date",
+      "ieoEDate":"IEO End Date",
+      "bonus":"Bonus",
+      "tecFou":"Technological foundation",
+      "docu":"Documents",
+      "wPaper":"White Paper",
+      "team":"Team",
+      "sMedia":"Social Media"
+
+    },
+    "form":{
+      "terms":{
+        "cBal":"Current Balance",
+        "details":"Details",
+        "sDate":"Start Date",
+        "eDate":"End Date",
+        "tPrice":"Token Price",
+        "minPrice":"Minimum Price",
+        "ord":"Orders",
+        "bar":"bar",
+        "buy":"Buy",
+        "rec":"Receive",
+        "button":"Log in / Sign up"
+      }
+    }
+  }
+},
+
+"tradeContest":{
+   "title":"Claim Your Free Crypto!",
+  "subTitle":"The More You Trade, The More You Win!",
+  "tabs":{
+    "all":"All",
+    "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
+  },
+  "terms":{
+    "airSupply":"Airdrop supply",
+    "start":"Start",
+    "end":"End",
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+  },
+  "contest":{
+    "terms":{
+      "tradingCom":"Trading Competition",
+      "moreTrade":"The more you trade",
+      "moreWin":"the higher your chances are to win a prize.",
+      "details":"Details",
+      "1st":"1st",
+      "2nd":"2nd",
+      "3rd":"3rd",
+      "4th":"4th",
+      "5th":"5th",
+      "6th":"6th",
+      "7th":"7th",
+      "8th":"8th",
+      "9th":"9th",
+      "10th":"10th",
+      "11th-15th":"11th-15th",
+      "16th-20th":"16th-20th",
+      "pOverview":"Participation Overview",
+      "position":"Position",
+      "user":"User",
+      "vol": "Volume",
+      "join":"Join on Trade Contest",
+      "ieoSDate":"IEO Start Date",
+      "ieoEDate":"IEO End Date",
+      "button":"Go Trade",
+      "participants":"Active Participants"
+    }
+  }
+},
+
+"walletStatus": {
+  "title":"Wallet status",
+  "terms":{
+    "search":"Search"
+  },
+  "tHead":{
+    "name":"Name",
+    "tSupply":"Total Supply",
+    "cSupply":"Curr. Supply",
+    "buyFee":"Buy Fee",
+    "sellFee":"Sell Fee",
+    "status":"status",
+    "buttons":{
+      "active":"Active",
+      "maintenance":"Maintenance"
+    }
+  }
+},
+"termsOfUse":{
+  "title":"Terms Of Use",
+  "subTitle":"IndoEx Exchange Terms of Use",
+  "content":"These Terms of Use prescribe the rights and obligations between Members (as described in Article 2, and including persons who were Members in the past) and Fisco Cryptocurrency Exchange Inc. (“we” or the “Company”) in connection with the online services “IndoEx Exchange” and “IndoEx Instant Exchange” that we provide (at the domain https: //Indoex.io/; the “Services”). Before using the Services, please read the “Explanation on Important Matters” and the full text of these Terms of Use (which includes all rules, explanatory documents, and other various regulations, etc. relating to the Services and posted from time to time on our website; the same hereinafter).",
+  "arti1":{
+    "title":"Article 1 Scope of application of Terms of Use",
+    "content":{
+      "point1":"These Terms of Use apply to us and the Members (in this Article 1, including persons who were Members in the past) and prescribe all matters concerning the rights and obligations of the Company and the Members in relation to the Services.",
+      "point2":"It is a condition precedent of using the Services that each Member understands the content of the full text of the Explanation on Important Matters and these Terms of Use and agrees that these Terms of Use prescribe all matters concerning the rights and obligations of the Company and the Members in relation to the Services.",
+      "point3":" If the Member is a minor, the Member must obtain the consent of his or her legal guardian before using the Services.",
+      "point4":" If the Member uses the Services, it will be deemed that the Member has agreed that these Terms of Use prescribe all matters concerning the rights and obligations of the Company and the Member in relation to the Services."
+    }
+  },
+  "arti2":{
+    "title":"Article 2 Members",
+    "content":{
+      "point1":"A person who wishes to become a Member must submit a membership registration application in accordance with our prescribed procedures. We may decide to refuse a membership registration application at our discretion, and only a person who has been accepted by us may become a Member.",
+      "ponit2": "After a Member completes registration for the Services, we may ask the Member to again submit necessary documents designated by us if it is necessary to perform identity verification at the time of a transaction as prescribed by relevant law and ordinance or we otherwise deem it necessary...",
+      "point3":  "If the Member wishes to cancel his or her registration as a Member, the Member may cancel his or her Member registration in accordance with our prescribed procedures."
+    }
+  },
+   "arti3":{
+    "title": "Article 3 Management of login ID and password",
+    "content":{
+      "point1":"The Member must manage his or her registered login ID and password at his or her own responsibility, and must not lend, assign, sell, or otherwise dispose of such information to a third party.",
+      "point2":"We will verify the identity of the Member by confirming that the login ID and password entered when the user logs in to our website or uses the Services matches the pre-set login ID and password. If we treat the user as a genuine user as a result of such verification, transactions executed on the basis of such verification will be treated as valid unless the misidentification of the Member is due to reasons attributable to us.",
+      "point3": "The Member bears all liability for damage caused by (i) leakage ID or password due to the reason attributable to the Member and (ii) unauthorized use or the like of his/her account by a third party using such leaked login ID and we will not bear any liability for such damage.",
+      "point4": "If the Member becomes aware that the login ID or password has been stolen or is being used by a third party, the Member must immediately notify us to that effect and follow our instructions."
+    }
+  },
+   "arti4":{
+    "title":"Article 4 Change of registration information",
+    "content":{
+      "point1":  "If there is any change to the registration information of a Member, the Member must notify us by our prescribed method without delay regarding the changed information, and submit the necessary documents requested by us."
+    }
+  }
+
+},
+"announcementsPage":{
+  "title":"Announcements",
+  "terms":{
+    "search":"Search",
+    "annu":"Indoex MemeBox has Initial Listed Token"
+  },
+  "sidebar":{
+    "all":"all",
+    "news":{
+      "label":"News",
+      "item1":"Indoex updates",
+      "item2":"Public news"
+    },
+    "newListing":"New Listings",
+    "events":{
+      "label":"Events",
+      "item1":"item1",
+      "item2":"item2"
+    },
+    "web3":"Web3",
+    "api":"API",
+    "dListing":"Dlisting"
+  }
+},
+"mediaKitPage":{
+  "title":"Media Kit",
+  "content":"Follow these guidelines to ensure consistency and accuracy when promotingIndoex in marketing communications, including advertising, articles, websites, and printed materials",
+  "terms":{
+    "downloadHeading":"Download the IndoEx brand logo usage guide",
+    "guideHeading":"Brand Guidelines",
+    "buttons":{
+      "downloadPdf":"Download PDF",
+      "download":"Download"
+    },
+    "brandAssets":"Brand Assets",
+      "logos":"Logos",
+      "logosContent":"Get official indoex logos here. Our logo represents the Indoex's brand so we ask that you use them without any alterations.",
+      "sairaBold":"Saira Bold",
+      "inter":"Inter Regular & Medium",
+      "typeFace":"Typeface",
+      "typeFaceContent":"Get a copy of our corporate font, Saira and Inter.",
+      "colors":"Colors",
+      "colorsContent":"Below are the primary and secondary brand colors for Indoex",
+      "green":"Greens",
+      "dBlue":"Dark Blue"
+  }
+},
+"faqPage":{
+    "faq1":{
+      "ques":"What is crypto staking and how does it work?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+     "faq2":{
+      "ques":"Can I unstake my crypto anytime?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+    "faq3":{
+      "ques":"Do I earn rewards during the redemption period?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    },
+    "faq4":{
+      "ques":"Is staking safe?",
+      "ans":"Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions."
+    }
+  },
+"feePage":{
+  "title":"Fee Structure",
+  "terms":{
+    "search":"Search"
+  },
+  "tHead":{
+    "name":"Name",
+    "minDeposit":"Min. Deposit",
+    "minWithdraw":"Min. Withdraw",
+    "withdrawFee":"Withdraw Fee",
+    "makerFee":"Maker Fee",
+    "takerFee":"Taker Fee"
+  }
+},
+ "contactPage":{
+    "title":"Contact us",
+    "subTitle":"Get in touch with the Track INDOEX team if you have any questions.",
+    "terms":{
+      "email":"Email",
+      "enterEmail":"Enter your email",
+      "category":"Category",
+      "selectType":"Select your enquiry type",
+      "message":"Message",
+      "messageHere":"Message Here",
+      "button":"Submit",
+      "phone":"PHONE",
+      "emailBot":"EMAIL"
+    }
+  },
+  "indoexVerify":{
+    "title":"IndoEx Verify",
+    "content":"We have created a page to verify Indoex channels and business accounts to prevent fraud. Below, you can check all official communication channels: social media groups, websites, email addresses, and business accounts.",
+    "terms":{
+      "platform":"Platform",
+      "enterUrl":"Enter URL",
+      "web":"Website",
+      "button":"Search",
+      "message":"Please use Indoex Verify to check whether the source officially represents Indoex. email address, Twitter, Instagram, Facebook or Telegram ID.",
+      "notice":"Notice",
+      "noticeMessage":{
+        "part1":"Please do not contact any unofficial/non-verified sources or reveal your account details to them. For further queries, please contact",
+        "part2":"Indoex Support"
+      }
+    }
+  },
+
+  "dashboard":{
+    "overviewPage":{
+      "assets":"Total Asset",
+      "wallet":{
+        "label":"Wallet summary",
+        "terms":{
+        "tDeposit":"Total Deposit",
+        "tBuyOrders":"Total Buy Orders",
+        "tWithdraw":"Total Withdraw",
+        "tSellOrders":"Total Sell Orders",
+        "deposit":"Deposit",
+        "withdraw":"Withdraw",
+        "myAssets":"My Assets"
+        }
+      },
+      "security":{
+        "label":"Security",
+        "content":"Increase your account security strength",
+        "terms":{
+          "strength" :"Strength",
+          "goToSPage":"Go to Security page",
+          "passkey":"Passkey",
+          "2fa":"2-Step Verification",
+          "antiPhi":"Anti-phishing code",
+          "button":"Active"
+        }
+      },
+      "market":{
+        "label":"Market",
+        "tabs":{
+          "trending":"Trending",
+          "topVolume":"Top Volumne",
+          "favorite":"Favorite"
+        },
+        "terms":{
+          "price":"Price"
+        },
+        "button":"View All"
+      },
+      "tradeTable":{
+        "title":"Trade History",
+        "button":"view All",
+        "tHead":{
+          "filledTime":"Filled Time",
+          "pair":"Pair",
+          "bOrS":"Buy Or Sell",
+          "orderType":"Order Type",
+          "fillPrice":"Fill Price",
+          "amount":"Amount",
+          "vol":"Volume",
+          "fee":"Fee"
+        }
+      }
+    },
+    "profile":{
+      "profile":{
+        "title":"Profile",
+        "nickName":{
+          "label":"Nickname",
+          "content":"This is your display name that will appear to others on the platform",
+          "button":"Change Nickname",
+          "popUp":{
+            "title":"Change Nickname",
+            "nickname":"Nickname",
+            "enterNickname":"Enter Nickname",
+            "message":"5-20 characters. Special characters not allowed.",
+            "buttons":{
+              "cancel":"Cancel",
+              "confirm":"Confirm"
+            },
+            "successMessage":"Nickname Successfully Changed"
+          }
+        },
+        "photo":{
+          "label":"photo",
+          "content":"Upload a profile picture to personalize your account and make it recognizable",
+          "buttons":{
+            "upload":"Upload",
+            "delete":"Delete"
+          },
+          "popUp":{
+            "title":"Change your profile picture",
+            "avatar":"Avatar",
+            "system_upload":"upload from this device",
+            "clickSelect":"Click to Select",
+            "buttons":{
+              "cancel":"Cancel",
+              "confirm": "Confirm"
+            },
+             "successMessage":"Profile Picture Successfully Changed"
+          }
+        },
+        "profileChangeSucMessage":"Profile Picture Successfully Changed",
+        "nameChangeSucMessage":"Nickname Successfully Changed"
+        
+      },
+      "accManagement":{
+        "title":"Account management",
+        "closeAcc":{
+          "label":"Close Account",
+          "content":"Once you close your account, it is permanent and can't be restored",
+          "popUp":{
+            "title":"Request for Deletion of Account",
+            "content":{
+              "part1":"Dear Valued Client, If you wish to permanently delete your account with IndoEx, please send an email through",
+              "part2":"support@indoex.io.",
+              "part3":"The request must be sent from the same email address used to register your account."
+            },
+            "notice":"Notice",
+            "noticePoints":{
+              "point1":"Be aware that account deletion is permanent. After your account is deleted, you will lose access to it, including any transaction history or data.",
+
+              "point2":"If you have any assets remaining in your account, please make sure to settle them. Otherwise, these assets will be lost and cannot be recovered after the deletion of account.",
+
+              "point3":{
+                "part1":"Although IndoEx can delete your account permanently as per request, please note that we must retain certain personal data for a specified period after deletion. This retention is required by law, such as AML/CFT regulations, or as may be necessary for handling any future disputes or claims. Your personal data will be deleted once the legally required retention period has elapsed. For reference, please see IndoEx",
+                "part2":"Terms and Conditions"
+              },
+
+              "point4":{
+                "part1":"Additional information about how we store your personal data can be found in our",
+                "part2":"Privacy Policy."
+              }
+            }
+          }
+        }
+      }
+    },
+    "security":{
+      "securitySetting":{
+        "title":"Security",
+        "emailInfo":{
+          "label":"Email authentication",
+          "content":"Use email authentication for login and transaction confirmations to enhance account security",
+          "button":"Change email",
+          "popUp1":{
+            "title":"Are you sure you want to update your linked email address?",
+            "message":{
+              "title":"Steps to Unlink Your Email",
+              "content":"For your account's security, please note that after changing your email address, on-chain withdrawals, internal transfers, fiat withdrawals, card transactions, P2P trading, and advertising activities will be temporarily suspended for 24 hours."
+            },
+            "buttons":{
+              "cancel":"Cancel",
+              "changeEmail":"Change the Email"
+            }
+          },
+          "popUp2":{
+            "title":"Security Verification",
+            "codeSentAt":"A verification code will be sent to",
+            "enterCode":"Please enter the email verification code",
+            "2faCode":"Google 2FA Code",
+            "enter2fa":"Please enter the 2FA code",
+            "havingProb":"Having Problems with verification?",
+            "buttons":{
+              "sendCode":"Send Code",
+              "nextStep":"Next Step"
+            }
+          }, 
+          "popUp3":{
+             "title":"Change Email",
+            "newEmail":"New Email",
+            "enterEmail":"Please enter your new email",
+            "veriCode":"New Email Verification Code",
+            "enterveriCode":"Please enter the email verification code",
+            "noCode":"Didn't receive the verification code?",
+            "checkSpam":"Please check your Spam folder for this email",
+            "buttons":{
+              "sendCode":"Send Code",
+              "cancel":"Cancel",
+              "submit":"Submit"
+            }
+          }
+        },
+        "passInfo":{
+          "label":"Login password",
+          "content":"Set a strong password to protect your account from unauthorized access",
+          "button":"Change Password",
+          "popUp":{
+            "title":"Change Password",
+            "notice":"Notice",
+            "noticeMessage":"For your account’s security, after removing Google Two-Factor Authentication, actions such as on-chain withdrawals, internal transfers, fiat withdrawals, P2P trading, and other transactions will be temporarily suspended for 24 hours.",
+            "oldPass":"Old Password",
+            "oldPassHolder":"Please enter your current password",
+            "newPass":"New Password",
+            "newPassHolder":"Please enter new password",
+            "confirmPass":"Confirm New Password",
+            "confirmPassHolder":"Please enter new password again",
+            "2faCode":"2FA Verification Code",
+            "2faCodeHolder":"Please enter 2FA Code",
+            "havingIssue":"Having Problems with verification?",
+            "button":"Next Step"
+          }
+        },
+        "twofactor":{
+          "label":"Two Factor Authentication",
+          "content":"Link an authenticator app for secure two-factor authentication when accessing your account",
+          "buttons":{
+            "setUp":"Set Up",
+            "disable":"Disable"
+          },
+          "addPopUp1":{
+            "title":"Security Verification",
+            "codeAt":"A verification code will be sent to",
+            "noCode":{
+              "part1":"Not able to receive verification code?",
+              "part2":"Resend verification code"
+            },
+            "havingProb":"Having problems with verification?",
+            "error":{
+              "wrongOtp":"The OTP you entered is incorrect.",
+              "expOtp":"Verification code has expired. Please request a new code."
+            }
+          },
+          "addPopUp2":{
+            "title":"Set Up Google Two-Factor Authentication",
+            "downloadMsgTitle":"Download Google Authenticator (Android / iOS)",
+            "downloadMsgContent":"Search for “Google Authenticator” on the App Store or Google Play and download the app.",
+            "addKeyTitle":"Add the Key Phrase to Google Authenticator",
+            "addKeyContent":"You can download Google Authenticator from the App Store or Google Play. Simply search for 'Google Authenticator' and install the app.",
+            "alertMsg":"The key phrase is essential for recovering your Google Authenticator if you lose or change your device. please store it safely before completing the setup.",
+            "2faCode":"Google 2FA Code",
+            "enter2faCode":"Please enter the 2FA Code ",
+            "copyKey":"Copy key",
+            "copied":" Copied!",
+            "buttons":{
+              "cancel":"Cancel",
+              "confirm":"Confirm"
+            }
+          },
+          "removePopUp1":{
+            "title":"Security Verification",
+            "loginPass":"Login Password",
+            "enterPass":"Please enter password ",
+            "2faCode":"Google 2FA Code",
+            "enter2faCode":"Please enter 2FA code",
+            "button":"Next Step"
+          },
+          "removePopUp2":{
+            "title":"Confirm Removal of Google 2FA Authentication",
+            "notice":"Notice",
+            "noticeMess":"For your account`s security, after removing Google Two-Factor Authentication, actions such as on-chain withdrawals, internal transfers, fiat withdrawals, P2P trading, and other transactions will be temporarily suspended for 24 hours.",
+            "buttons":{
+              "cancel":"Cnacel",
+              "remove":"Remove"
+            }
+          }
+        },
+        "secondaryPin":{
+          "label":"Secondary Pin",
+          "content":"Set up a personalized code to ensure emails from the platform are authentic and not phishing attempts",
+          "buttons":{
+            "forgot":"Forgot",
+            "change":"Change"
+          },
+          "forgotPopUp":{
+            "title":"Security Verification",
+            "enter2fa":"Enter 2FA Code",
+            "havingProb":"Having problems with verification?",
+            "error":{
+              "wrongOtp":"",
+              "expOtp":""
+            }
+          },
+          "changepopUp":{
+            "title":"Update pin",
+            "currentPin":"Current Pin",
+            "enterCurrentPin":"Please enter current pin",
+            "newPin":"New Pin",
+            "enterNewPin":"Please enter new pin",
+            "confirmPin":"Confirm Pin",
+            "enterCofirmPin":"Please enter new pin again",
+            "buttons":{
+              "cancel":"Cancel",
+              "confirm":"Confirm"
+            }
+          }
+        }
+
+      }
+    }
+
+  }
 }

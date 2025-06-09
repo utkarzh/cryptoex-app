@@ -1,4 +1,5 @@
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React, { FC } from "react";
 import { IoCloseOutline } from "react-icons/io5";
@@ -7,6 +8,7 @@ type Props = {
   onClose: () => void;
 };
 const DeletionRequestPopup: FC<Props> = ({ onClose }) => {
+  const t = useTranslations("dashboard.profile.accManagement.closeAcc.popUp");
   return (
     <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-4">
       {/* close button */}
@@ -19,52 +21,39 @@ const DeletionRequestPopup: FC<Props> = ({ onClose }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Request for Deletion of Account
+        {t("title")}
       </h2>
       {/* message */}
       <p className="text-[10px] font-light opacity-100 dark:opacity-80">
-        Dear Valued Client, If you wish to permanently delete your account with
-        IndoEx, please send an email through{" "}
+        {t("content.part1")}{" "}
         <a
           href="mailto:support@indoex.io"
           className="text-green-600 no-underline  "
         >
-          support@indoex.io
+          {t("content.part2")}
         </a>
-        . The request must be sent from the same email address used to register
-        your account.
+        . {t("content.part3")}
       </p>
 
       {/* notice*/}
       <div className="rounded-md bg-slate-200 dark:bg-[#24243c] p-3 space-y-4">
-        <h5 className="text-[11px] font-light">Notice:</h5>
+        <h5 className="text-[11px] font-light"> {t("notice")}:</h5>
         <p className="text-[10px] font-light opacity-100 dark:opacity-80">
-          Be aware that account deletion is permanent. After your account is
-          deleted, you will lose access to it, including any transaction history
-          or data.
+          {t("noticePoints.point1")}
         </p>
         <p className="text-[10px] font-light opacity-100 dark:opacity-80">
-          If you have any assets remaining in your account, please make sure to
-          settle them. Otherwise, these assets will be lost and cannot be
-          recovered after the deletion of account.
+          {t("noticePoints.point2")}
         </p>
         <p className="text-[10px] font-light opacity-100 dark:opacity-80">
-          Although IndoEx can delete your account permanently as per request,
-          please note that we must retain certain personal data for a specified
-          period after deletion. This retention is required by law, such as
-          AML/CFT regulations, or as may be necessary for handling any future
-          disputes or claims. Your personal data will be deleted once the
-          legally required retention period has elapsed. For reference, please
-          see IndoEx{" "}
+          {t("noticePoints.point3.part1")}{" "}
           <Link href="#" className="text-green-600">
-            Terms and Conditions
+            {t("noticePoints.point3.part2")}
           </Link>
         </p>
         <p className="text-[10px] font-light opacity-100 dark:opacity-80">
-          Additional information about how we store your personal data can be
-          found in our{" "}
+          {t("noticePoints.point4.part1")}{" "}
           <Link href="#" className="text-green-600">
-            Privacy Policy.
+            {t("noticePoints.point4.part2")}
           </Link>
         </p>
       </div>

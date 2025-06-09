@@ -5,8 +5,10 @@ import { FaEye } from "react-icons/fa";
 import { IoLockClosedOutline } from "react-icons/io5";
 import PassChangePopup from "./PassChangePopup";
 import { PiSealCheckFill } from "react-icons/pi";
+import { useTranslations } from "next-intl";
 
 const PasswordInfo = () => {
+  const t = useTranslations("dashboard.security.securitySetting.passInfo");
   const [isPassPopup, setIsPassPopup] = useState(false);
   const [success, setSuccess] = useState("");
   console.log("Success", success);
@@ -29,10 +31,9 @@ const PasswordInfo = () => {
             <IoLockClosedOutline className="text-[17px]" />
           </div>
           <div>
-            <div className="font-xs font-light opacity-90">Login password</div>
+            <div className="font-xs font-light opacity-90">{t("label")}</div>
             <div className="text-[11px] font-light opacity-60">
-              Set a strong password to protect your account from unauthorized
-              access
+              {t("content")}
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@ const PasswordInfo = () => {
             className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
             onClick={() => setIsPassPopup(true)}
           >
-            Change password
+            {t("button")}
           </button>
         </div>
 

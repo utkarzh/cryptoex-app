@@ -2,60 +2,67 @@
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
 import StatusCard, { Data_Type } from "../../common/StatusCard";
-
-const airdropData: Data_Type[] = [
-  {
-    status: "upcoming",
-    statusColor: "bg-yellow-500",
-    borderColor: "border-yellow-500",
-    shadow: "shadow-[1px_1px_2px_#f0b101]",
-    token: "Leeu SPEL (SPL)",
-    disc: " The LaunchPad will be the core utility feature of the Cat Ape Token.",
-    logo: "/images/airdrop/noded.png",
-    supply: "100,000,000",
-    start: "03-02-2025",
-    end: "20-02-2025",
-  },
-  {
-    status: "ongoing",
-    statusColor: "bg-green-500",
-    href: "/airdrop/contest",
-    borderColor: "border-green-500",
-    shadow: "shadow-[1px_1px_2px_#00c951]",
-    token: "Leeu SPEL (SPL)",
-    disc: " The LaunchPad will be the core utility feature of the Cat Ape Token.",
-    logo: "/images/airdrop/leeu.png",
-    supply: "100,000,000",
-    start: "03-02-2025",
-    end: "20-02-2025",
-  },
-  {
-    status: "completed",
-    statusColor: "bg-gray-500",
-    borderColor: "border-gray-500",
-    shadow: "shadow-[1px_1px_2px_#6a7181]",
-    token: "VIEW (VIEW)",
-    disc: " The LaunchPad will be the core utility feature of the Cat Ape Token.",
-    logo: "/images/airdrop/view.png",
-    supply: "100,000,000",
-    start: "03-02-2025",
-    end: "20-02-2025",
-  },
-  {
-    status: "completed",
-    statusColor: "bg-gray-500",
-    borderColor: "border-gray-500",
-    shadow: "shadow-[1px_1px_2px_#6a7181]",
-    token: "VIEW (VIEW)",
-    disc: " The LaunchPad will be the core utility feature of the Cat Ape Token.",
-    logo: "/images/airdrop/view.png",
-    supply: "100,000,000",
-    start: "03-02-2025",
-    end: "20-02-2025",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const AirdropContent = () => {
+  const t = useTranslations("airDrop");
+
+  const airdropData: Data_Type[] = [
+    {
+      key: "upcoming",
+      status: t("tabs.upcoming"),
+      statusColor: "bg-yellow-500",
+      borderColor: "border-yellow-500",
+      shadow: "shadow-[1px_1px_2px_#f0b101]",
+      token: "Leeu SPEL (SPL)",
+      disc: t("terms.cardContent"),
+      logo: "/images/airdrop/noded.png",
+      supply: "100,000,000",
+      start: "03-02-2025",
+      end: "20-02-2025",
+    },
+    {
+      key: "ongoing",
+      status: t("tabs.ongoing"),
+      statusColor: "bg-green-500",
+      href: "/airdrop/contest",
+      borderColor: "border-green-500",
+      shadow: "shadow-[1px_1px_2px_#00c951]",
+      token: "Leeu SPEL (SPL)",
+      disc: t("terms.cardContent"),
+      logo: "/images/airdrop/leeu.png",
+      supply: "100,000,000",
+      start: "03-02-2025",
+      end: "20-02-2025",
+    },
+    {
+      key: "completed",
+      status: t("tabs.completed"),
+      statusColor: "bg-gray-500",
+      borderColor: "border-gray-500",
+      shadow: "shadow-[1px_1px_2px_#6a7181]",
+      token: "VIEW (VIEW)",
+      disc: t("terms.cardContent"),
+      logo: "/images/airdrop/view.png",
+      supply: "100,000,000",
+      start: "03-02-2025",
+      end: "20-02-2025",
+    },
+    {
+      key: "completed",
+      status: t("tabs.completed"),
+      statusColor: "bg-gray-500",
+      borderColor: "border-gray-500",
+      shadow: "shadow-[1px_1px_2px_#6a7181]",
+      token: "VIEW (VIEW)",
+      disc: t("terms.cardContent"),
+      logo: "/images/airdrop/view.png",
+      supply: "100,000,000",
+      start: "03-02-2025",
+      end: "20-02-2025",
+    },
+  ];
+
   const [selectedTab, setSelectedTab] = useState<
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
@@ -67,7 +74,7 @@ const AirdropContent = () => {
       if (selectedTab === "all") {
         return true;
       } else {
-        return val.status === selectedTab;
+        return val.key === selectedTab;
       }
     });
 
@@ -90,7 +97,7 @@ const AirdropContent = () => {
               }`}
             >
               <span className={`${saira.className} text-[20px] capitalize`}>
-                {tab}
+                {t(`tabs.${tab}`)}
               </span>
             </button>
           ))}

@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import StakeForm from "../stakeform/StakeForm";
 import Model from "@/components/common/Model";
+import { useTranslations } from "next-intl";
 
 // type Props = {}
 
 const StakeButton = () => {
+  const t = useTranslations("stakingPage.table.tHead.action");
   const [isModel, setIsModel] = useState(false);
   const modelOpenhandler = () => {
     setIsModel((prev) => !prev);
@@ -16,7 +18,7 @@ const StakeButton = () => {
         className="px-4 p-1 text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 rounded-full cursor-pointer "
         onClick={modelOpenhandler}
       >
-        Stake
+        {t("button")}
       </button>
       {isModel && (
         <Model>

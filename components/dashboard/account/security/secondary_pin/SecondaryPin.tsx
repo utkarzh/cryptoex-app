@@ -4,16 +4,18 @@ import { IoLockClosedOutline } from "react-icons/io5";
 import PinForgotPopup from "./PinForgotPopup";
 import { PiSealCheckFill } from "react-icons/pi";
 import ChangePinPopup from "./ChangePinPopup";
+import { useTranslations } from "next-intl";
 
 export type PopupValue = "fotgot" | "change" | "";
 
 const SecondaryPin = () => {
+  const t = useTranslations("dashboard.security.securitySetting.secondaryPin");
+
   const [popup, setPopup] = useState<PopupValue>("");
   const [success, setSuccess] = useState("");
   const forgotSuccessHandler = () => {
     setPopup("");
     setSuccess("Your secondary pin sent to registered mail address");
-
     setTimeout(() => {
       setSuccess("");
     }, 5000);
@@ -35,10 +37,9 @@ const SecondaryPin = () => {
             <IoLockClosedOutline className="text-[17px]" />
           </div>
           <div>
-            <div className="font-xs font-light opacity-90">Secondary Pin</div>
+            <div className="font-xs font-light opacity-90">{t("label")}</div>
             <div className="text-[11px] font-light opacity-60">
-              Set up a personalized code to ensure emails from the platform are
-              authentic and not phishing attempts
+              {t("content")}
             </div>
           </div>
         </div>
@@ -50,13 +51,13 @@ const SecondaryPin = () => {
                 className="  cursor-pointer text-[10px] px-2 py-1 text-sm rounded text-nowrap"
                 onClick={() => setPopup("fotgot")}
               >
-                Forgot
+                {t("buttons.forgot")}
               </button>
               <button
                 className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap"
                 onClick={() => setPopup("change")}
               >
-                Change
+                {t("buttons.change")}
               </button>
             </div>
           ) : (

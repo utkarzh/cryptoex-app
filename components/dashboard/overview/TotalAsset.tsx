@@ -6,12 +6,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import { ApexOptions } from "apexcharts";
 import { IoEyeOutline } from "react-icons/io5";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
 const TotalAsset = () => {
+  const t = useTranslations("dashboard.overviewPage");
   const chartOptions: ApexOptions = {
     chart: {
       type: "line",
@@ -72,7 +74,7 @@ const TotalAsset = () => {
       {/* header */}
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2 font-semibold">
-          <span className={`${saira.className} text-sm `}>Total Asset</span>
+          <span className={`${saira.className} text-sm `}>{t("assets")}</span>
           <IoEyeOutline className="text-gray-400 cursor-pointer" />
         </div>
         <button className="flex items-center gap-1 text-[10px] font-normal bg-slate-400/20 px-2 py-1 rounded-full">

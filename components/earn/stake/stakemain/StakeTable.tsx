@@ -7,6 +7,7 @@ import { FaBitcoin, FaEthereum } from "react-icons/fa";
 import { SiBinance, SiPolygon, SiTether } from "react-icons/si";
 import StakeButton from "./StakeButton";
 import ReactPaginate from "react-paginate";
+import { useTranslations } from "next-intl";
 
 const mockData = [
   {
@@ -95,6 +96,7 @@ const mockData = [
 ];
 
 const StakeTable = () => {
+  const t = useTranslations("stakingPage.table");
   const [search, setSearch] = useState("");
   const filteredData = mockData.filter((item) =>
     item.coin.toLowerCase().includes(search.toLowerCase())
@@ -112,20 +114,20 @@ const StakeTable = () => {
         <div className="w-full mt-10 mx-auto  flex gap-2 justify-between ">
           {/* title */}
           <h2 className={` ${saira.className} w-fit text-lg font-medium`}>
-            All products
+            {t("title")}
           </h2>
           {/* search and selection */}
           <div className="w-fit flex gap-2 sm:gap-8 items-center flex-wrap sm:flex-nowrap  ">
             <div className="flex gap-2">
               <input type="checkbox" />
               <label className="text-[10px] text-nowrap">
-                Match available assets
+                {t("terms.matchAssets")}
               </label>
             </div>
             <div className="relative flex items-center">
               <input
                 type="text"
-                placeholder="Search"
+                placeholder={t("terms.search")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -139,10 +141,10 @@ const StakeTable = () => {
         <table className="w-full text-xs text-left">
           <thead className=" ">
             <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-4 px-2 font-extralight ">Coins</th>
+              <th className="py-4 px-2 font-extralight ">{t("tHead.coin")}</th>
               <th className="py-4 px-2 font-extralight text-center">
                 <div className="flex w-full gap-1 justify-start items-center ">
-                  <span>Est. APR</span>
+                  <span>{t("tHead.estApr")}</span>
                   <span className="flex opacity-60 flex-col items-center justify-center text-[7px] cursor-pointer">
                     <IoTriangle />
                     <IoTriangle className="rotate-180" />
@@ -150,10 +152,10 @@ const StakeTable = () => {
                 </div>
               </th>
               <th className="py-4 px-2 font-extralight  text-center">
-                Reward Coin
+                {t("tHead.reward")}
               </th>
               <th className="py-4 px-2 font-extralight text-right pr-6">
-                Action
+                {t("tHead.action.label")}
               </th>
             </tr>
           </thead>

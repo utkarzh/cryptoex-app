@@ -1,74 +1,59 @@
 import React from "react";
 import Faq from "../common/faq/Faq";
-const stakingFaq = [
-  {
-    question: "What is crypto staking and how does it work?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Can I unstake my crypto anytime?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Do I earn rewards during the redemption period?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Is staking safe?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Can I unstake my crypto anytime?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Do I earn rewards during the redemption period?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Is staking safe?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Can I unstake my crypto anytime?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Do I earn rewards during the redemption period?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Is staking safe?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Can I unstake my crypto anytime?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Do I earn rewards during the redemption period?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-  {
-    question: "Is staking safe?",
-    answer:
-      "Staking is the process of locking up your cryptocurrency to support the operations of a blockchain network. In return, you earn rewards—similar to earning interest. By staking your assets, you're helping validate transactions and secure the network. The longer you stake, the more rewards you can accumulate, depending on the token and network conditions.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const MainFaq = () => {
+  const t = useTranslations("faqPage");
+  const stakingFaq = [
+    {
+      question: t("faq1.ques"),
+      answer: t("faq1.ans"),
+    },
+    {
+      question: t("faq2.ques"),
+      answer: t("faq2.ans"),
+    },
+    {
+      question: t("faq3.ques"),
+      answer: t("faq3.ans"),
+    },
+    {
+      question: t("faq4.ques"),
+      answer: t("faq4.ans"),
+    },
+    {
+      question: t("faq1.ques"),
+      answer: t("faq1.ans"),
+    },
+    {
+      question: t("faq2.ques"),
+      answer: t("faq2.ans"),
+    },
+    {
+      question: t("faq3.ques"),
+      answer: t("faq3.ans"),
+    },
+    {
+      question: t("faq4.ques"),
+      answer: t("faq4.ans"),
+    },
+    {
+      question: t("faq1.ques"),
+      answer: t("faq1.ans"),
+    },
+    {
+      question: t("faq2.ques"),
+      answer: t("faq2.ans"),
+    },
+    {
+      question: t("faq3.ques"),
+      answer: t("faq3.ans"),
+    },
+    {
+      question: t("faq4.ques"),
+      answer: t("faq4.ans"),
+    },
+  ];
   return (
     <div>
       <Faq data={stakingFaq} />
