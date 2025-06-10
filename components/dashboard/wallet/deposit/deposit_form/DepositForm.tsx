@@ -16,12 +16,7 @@ import DepositSelectCryptoPopup from "./DepositSelectCryptoPopup";
 import { CiServer } from "react-icons/ci";
 import DepositSelectCryptoNetwork from "./DepositSelectNetworkPopup";
 import CryptoDepositAddress from "./CryptoDepositAddress";
-
-const FaqArray = [
-  "How to deposit on FalconX?",
-  "What is a crypto network?",
-  "What network should I use?",
-];
+import { useTranslations } from "next-intl";
 
 export interface Crypto_Deposit {
   symbol: string;
@@ -122,6 +117,9 @@ const networks: Network_Deposit[] = [
 ];
 
 const DepositForm = () => {
+  const t = useTranslations("dashboard.depositPage.form");
+  const FaqArray = [t("faq.faq1.ques"), t("faq.faq2.ques"), t("faq.faq3.ques")];
+
   const [selectedCrypto, setSelectedCrypto] = useState<Crypto_Deposit>();
   const [isCryptoFormOpne, setIsCryptoFormOpen] = useState(false);
   const [selectedNetwork, setSelectedNetwork] = useState<Network_Deposit>();
@@ -141,6 +139,8 @@ const DepositForm = () => {
     setSelectedNetwork(data);
     setIsNetworkFormOpen(false);
   };
+
+  console.log("isNetworkFormOpen", isNetworkFormOpen);
 
   useEffect(() => {
     if (selectedNetwork) {
@@ -179,7 +179,7 @@ const DepositForm = () => {
           </div>
 
           <label className="text-xs font-light flex items-center gap-2 mb-2">
-            Select Crypto
+            {t("terms.selectCrypto")}
           </label>
           {/* slection input of coin */}
           <div
@@ -206,7 +206,7 @@ const DepositForm = () => {
               </div>
             ) : (
               <div className="flex gap-1 items-center text-xs font-light opacity-50">
-                Select Crypto
+                {t("terms.selectCrypto")}
               </div>
             )}
             <MdOutlineKeyboardArrowDown className=" text-xl cursor-pointer" />
@@ -251,7 +251,7 @@ const DepositForm = () => {
               selectedNetwork ? "opacity-100" : "opacity-50"
             } text-xs font-light flex items-center gap-2 mb-2`}
           >
-            Select Network
+            {t("terms.selectNet")}
           </label>
           <div className="">
             {/* network input */}
@@ -267,7 +267,7 @@ const DepositForm = () => {
                 <span className="text-xs ">{selectedNetwork.code}</span>
               ) : (
                 <span className="text-xs opacity-50 font-light indent-1.5">
-                  Select Network you want to deposit through
+                  {t("terms.selectNetHolder")}
                 </span>
               )}
               <MdOutlineKeyboardArrowDown className=" text-xl cursor-pointer" />
@@ -305,7 +305,7 @@ const DepositForm = () => {
               depositAddress ? "opacity-100" : "opacity-50"
             } text-xs font-light flex items-center gap-2 mb-2`}
           >
-            Copy Wallet Address
+            {t("terms.copyAdd")}
           </label>
 
           {/* inputs */}
@@ -325,16 +325,13 @@ const DepositForm = () => {
           {/* heading */}
           <h3 className="text-sm font-normal flex items-center gap-2">
             <MdOutlineTipsAndUpdates className="text-lg" />
-            Tips
+            {t("tips.label")}
           </h3>
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
           <div className="space-y-1 text-[10px] font-light opacity-70 dark:opacity-50">
-            <p className=" ">
-              For the safety of your funds, our customer support team may
-              contact you by phone to confirm your withdrawal
-            </p>
+            <p className=" ">{t("tips.content")}</p>
           </div>
         </div>
 
@@ -343,9 +340,9 @@ const DepositForm = () => {
           {/* heading */}
           <h3 className="text-sm font-normal flex items-center gap-2">
             <MdOutlineHelpOutline className="text-lg" />
-            FAQs
+            {t("faq.label")}
             <span className="ml-auto text-xs font-light hover:scale-105 transition-all duration-200 opacity-50  cursor-pointer flex  items-center">
-              View more
+              {t("faq.button")}
               <RiArrowRightSLine className="text-lg" />
             </span>
           </h3>

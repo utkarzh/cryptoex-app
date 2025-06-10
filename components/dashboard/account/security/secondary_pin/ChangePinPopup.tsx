@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { FC, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -9,6 +10,9 @@ type Props = {
 };
 
 const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.secondaryPin.changepopUp"
+  );
   const [data, setData] = useState({
     currentPin: "",
     newPin: "",
@@ -49,20 +53,20 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Update pin
+        {t("title")}
       </h2>
       {/* inputs */}
       <div className="w-full space-y-3">
         {/*current pin*/}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Current Pin
+            {t("currentPin")}
           </label>
           <input
             type="text"
             value={data.currentPin}
             name="currentPin"
-            placeholder="Please enter current pin "
+            placeholder={t("enterCurrentPin")}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
             onChange={inputChangeHandler}
           />
@@ -70,12 +74,14 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/*New  pin*/}
         <div>
-          <label className="block mb-1 text-[10px] font-light">New Pin</label>
+          <label className="block mb-1 text-[10px] font-light">
+            {t("newPin")}
+          </label>
           <input
             type="text"
             value={data.newPin}
             name="newPin"
-            placeholder="Please enter new pin "
+            placeholder={t("enterNewPin")}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
             onChange={inputChangeHandler}
           />
@@ -84,13 +90,13 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
         {/*confirm  pin*/}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Confirm Pin
+            {t("confirmPin")}
           </label>
           <input
             type="text"
             value={data.confirmPin}
             name="confirmPin"
-            placeholder="Please enter new pin again"
+            placeholder={t("enterCofirmPin")}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
             onChange={inputChangeHandler}
           />
@@ -104,14 +110,14 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
           className="w-full border border-slate-500/30 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={onClose}
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
                      py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={changeMailHandler}
         >
-          Confirm
+          {t("buttons.confirm")}
         </button>
       </div>
     </div>

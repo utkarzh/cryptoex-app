@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import { IoLockClosedOutline } from "react-icons/io5";
 import AntiPhiSetupPopup from "./AnitPhiSetupPopup";
 import AntiPhiSecurityPopup from "./AntiPhiSecurityPopup";
+import { useTranslations } from "next-intl";
 
 const AntiPhishing = () => {
+  const t = useTranslations("dashboard.security.securitySetting.antiPhishing");
   const [popup, setPopup] = useState<"open" | "security" | "">("");
   const [isVerified, setIsVerified] = useState(false);
 
@@ -28,10 +30,9 @@ const AntiPhishing = () => {
           <IoLockClosedOutline className="text-[17px]" />
         </div>
         <div>
-          <div className="font-xs font-light opacity-90">Anti phishing</div>
+          <div className="font-xs font-light opacity-90">{t("label")}</div>
           <div className="text-[11px] font-light opacity-60">
-            The email sent to you by the platform will contain the anti-phishing
-            code to distinguish from fake mail
+            {t("content")}
           </div>
         </div>
       </div>
@@ -56,7 +57,7 @@ const AntiPhishing = () => {
           className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap"
           onClick={() => setPopup("open")}
         >
-          Set up
+          {t("button")}
         </button>
       </div>
 

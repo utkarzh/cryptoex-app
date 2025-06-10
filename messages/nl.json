@@ -1,0 +1,1787 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "Handel",
+        "items": {
+          "spot": {
+            "label": "Spothandel",
+            "desc": "Koop of verkoop onmiddellijk crypto"
+          },
+          "margin": {
+            "label": "Marge -handel",
+            "desc": "Handel met geleende fondsen voor grotere bewegingen"
+          },
+          "convert": {
+            "label": "Overzetten",
+            "desc": "Swap crypto in seconden - eenvoudig en snel"
+          }
+        }
+      },
+      "markets": "Markten",
+      "earn": {
+        "label": "Verdienen",
+        "items": {
+          "loans": {
+            "label": "Leningen",
+            "desc": "Ontgrendel fondsen, houd je crypto."
+          },
+          "staking": {
+            "label": "Inzet",
+            "desc": "Inzet munten, verdien passief inkomen."
+          }
+        }
+      },
+      "events": {
+        "label": "Evenementen",
+        "items": {
+          "airdrop": {
+            "label": "Airdrop",
+            "desc": "Houd tokens vast, claim beloningen."
+          },
+          "launchpad": {
+            "label": "Lanceerplatform",
+            "desc": "Investeer vroeg in nieuwe tokens."
+          },
+          "tradeCompetition": {
+            "label": "Handelsconcurrentie",
+            "desc": "Toon je vaardigheden, win prijzen."
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "Aandelenbeurs",
+      "web3": "Web3"
+    },
+    "auth": {
+      "signin": "Inloggen",
+      "signup": "Zich aanmelden",
+      "see_all": "Zie alles",
+      "new_listing": "Nieuwe aanbieding"
+    }
+  },
+  "sidebar": {
+    "overview": "Overzicht",
+    "account": {
+      "label": "Rekening",
+      "children": {
+        "profile": "Profiel",
+        "security": "Beveiliging"
+      }
+    },
+    "wallet": {
+      "label": "Portemonnee",
+      "children": {
+        "assets": "Activa",
+        "deposit": "Borg",
+        "withdraw": "Terugtrekken"
+      }
+    },
+    "history": {
+      "label": "Geschiedenis",
+      "children": {
+        "depositHistory": "Depositogeschiedenis",
+        "withdrawHistory": "De geschiedenis intrekken"
+      }
+    },
+    "orders": {
+      "label": "Bevelen",
+      "children": {
+        "openOrders": "Open bestellingen",
+        "orderHistory": "Bestelgeschiedenis",
+        "tradeHistory": "Handelsgeschiedenis"
+      }
+    },
+    "earn": {
+      "label": "Verdienen",
+      "children": {
+        "loans": "Leningen",
+        "staking": "Inzet"
+      }
+    },
+    "loginActivity": {
+      "label": "Inlogactiviteit",
+      "children": {
+        "loginHistory": "Logingeschiedenis",
+        "deviceManagement": "Apparaatbeheer"
+      }
+    },
+    "referrals": "Verwijzingen",
+    "api": "API",
+    "logout": "Uitloggen",
+    "withdraw": "Terugtrekken",
+    "deposit": "Borg"
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Verbeter uw crypto -handelservaring",
+      "subTitle": "Wees getuige naadloze transacties, realtime inzichten en veilig handelen van alles wat u nodig heeft."
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "Plek",
+        "newlyListed": "Nieuw vermeld",
+        "topGainers": "Top gainers"
+      },
+      "tableHead": {
+        "coins": "Munten",
+        "lastPrice": "Laatste prijs",
+        "24hChange": "24h verandering",
+        "markets": "Markten",
+        "24hVolume": "24 uur volume"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "Maak uw account aan",
+        "content": "Meld u binnen enkele minuten aan met uw e -mail, stel een beveiligd wachtwoord in en verifieer uw identiteit voor een veilige handelservaring.",
+        "button": "Aan de slag gaan"
+      },
+      "step2": {
+        "heading": "Voltooi uw KYC",
+        "content": "Meld u binnen enkele minuten aan met uw e -mail, stel een beveiligd wachtwoord in en verifieer uw identiteit voor een veilige handelservaring.",
+        "button": "Update KYC"
+      },
+      "step3": {
+        "heading": "Begin met handelen",
+        "content": "Meld u binnen enkele minuten aan met uw e -mail, stel een beveiligd wachtwoord in en verifieer uw identiteit voor een veilige handelservaring.",
+        "button": "Begin met handelen"
+      }
+    },
+    "getStarted": {
+      "heading": "Aan de slag gaan",
+      "marketing": {
+        "24hVolume": "24 uur volume (BTC)",
+        "coinsListed": "Munten vermeld",
+        "countries": "Landen",
+        "marketPairs": "Marktparen"
+      },
+      "benefits": {
+        "type_vendor": "Verkopersvoordelen",
+        "type_user": "Gebruikersvoordelen",
+        "vendor": {
+          "ben1": {
+            "title": "Munt/token -vermeldingen",
+            "content": "Indoex breidt de toegang tot investering uit tot alle gekwalificeerde cryptocurrencies wereldwijd"
+          },
+          "ben2": {
+            "title": "Handelswedstrijd",
+            "content": "Onze handelswedstrijden laten gebruikers vaardigheden laten zien. "
+          },
+          "ben3": {
+            "title": "Aangepaste koppeling",
+            "content": "In tegenstelling tot andere beurzen brengt Indoex geen kosten in rekening voor extra marktparen."
+          },
+          "ben4": {
+            "title": "Noteringswedstrijd",
+            "content": "Onze lijstcompetitie beloont de winnaar met 3 BTC. "
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "Munt/token -vermeldingen",
+            "conent": "Indoex breidt de toegang tot investering uit tot alle gekwalificeerde cryptocurrencies wereldwijd"
+          },
+          "ben2": {
+            "title": "Handelswedstrijd",
+            "conent": "Onze handelswedstrijden laten gebruikers vaardigheden laten zien. "
+          },
+          "ben3": {
+            "title": "Aangepaste koppeling",
+            "conent": "In tegenstelling tot andere beurzen brengt Indoex geen kosten in rekening voor extra marktparen."
+          },
+          "ben4": {
+            "title": "Noteringswedstrijd",
+            "conent": "Onze lijstcompetitie beloont de winnaar met 3 BTC. "
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "Functie",
+      "leftSection": {
+        "fet1": {
+          "title": "Redelijke commissies",
+          "content": "Winstgevende investeringsmogelijkheden en voorwaarden"
+        },
+        "fet2": {
+          "title": "Algoritmische handel",
+          "content": "API voor Crossplatform Trading Robots"
+        },
+        "fet3": {
+          "title": "Algoritmische handel",
+          "content": "API voor Crossplatform Trading Robots"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "Beveilig portemonnee",
+          "content": "Houd uw digitale activa in gebruikersportefeuilles"
+        },
+        "fet2": {
+          "title": "Betalingsopties",
+          "content": "Meer dan 10 manieren om op een rekening te storten"
+        },
+        "fet3": {
+          "title": "Algoritmische handel",
+          "content": "API voor Crossplatform Trading Robots"
+        }
+      }
+    },
+    "partners": {
+      "heading": "Partners",
+      "content": {
+        "title": "Ruil naadloos over apparaten",
+        "subTitle": "Download onze mobiele app voor moeiteloze crypto -handel!",
+        "downloads": {
+          "playStore": {
+            "getIt": "Krijg het op",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "Download op de",
+            "from": "Appartement"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Log in op uw account",
+      "items": {
+        "email": {
+          "label": "E -mail",
+          "holder": "Voer e -mail in"
+        },
+        "password": {
+          "label": "Wachtwoord",
+          "holder": "Voer het wachtwoord in"
+        }
+      },
+      "button": "Inloggen",
+      "signinOption": "Of log in met",
+      "noAcc": {
+        "part1": "Heb je geen account?",
+        "part2": "Account aanmaken"
+      }
+    },
+    "signup": {
+      "title": "Maak uw account aan",
+      "items": {
+        "email": {
+          "label": "E -mail",
+          "holder": "Voer e -mail in"
+        },
+        "username": {
+          "label": "Gebruikersnaam",
+          "holder": "Voer de gebruikersnaam in"
+        },
+        "password": {
+          "label": "Wachtwoord",
+          "holder": "Voer het wachtwoord in"
+        },
+        "country": {
+          "label": "Land",
+          "holder": "Selecteer uw land",
+          "options": {
+            "op1": "VS",
+            "op2": "India",
+            "op3": "Uk",
+            "op4": "Duitsland"
+          }
+        },
+        "referrals": {
+          "label": "Verwijzingscode (optioneel)",
+          "holder": "Voer de verwijzingscode in"
+        }
+      },
+      "terms": {
+        "part1": "Ik accepteer",
+        "part2": "Algemene voorwaarden"
+      },
+      "button": "Zich aanmelden",
+      "signupOption": "Of meld je aan bij",
+      "haveAcc": {
+        "part1": "Heb je al een account?",
+        "part2": "Inloggen"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "Registreer binnen enkele minuten - Sign Up, Deposit en begin moeiteloos te handelen op crypto!",
+      "button": "Aan de slag gaan"
+    },
+    "services": {
+      "label": "Diensten",
+      "items": {
+        "terms": "Gebruiksvoorwaarden",
+        "policy": "Privacybeleid",
+        "status": "Portemonnee status",
+        "announcements": "Aankondigingen",
+        "media": "Media"
+      }
+    },
+    "legalisation": {
+      "label": "Legalisatie",
+      "items": {
+        "fee": "Vergoedingen",
+        "legalities": "Wettigheid",
+        "kyc": "AML / KYC -beleid",
+        "protect": "Bescherm uzelf online",
+        "verification": "Verificatie"
+      }
+    },
+    "others": {
+      "label": "Anderen",
+      "items": {
+        "faq": "FAQ",
+        "contact": "Neem contact met ons op",
+        "support": "Klantenservice:",
+        "mails": "Toepassen op de lijst:"
+      }
+    },
+    "rights": "© 2025 Indoex Alle rechten voorbehouden.",
+    "alert": "Crypto -investeringen zijn onderworpen aan marktrisico's - investeer verstandig en blijf geïnformeerd."
+  },
+  "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "Orderboek",
+        "tradehistory": "Handelsgeschiedenis"
+      },
+      "tHead": {
+        "price": "Prijs (USDT)",
+        "amount": "Bedrag (BTC)",
+        "total": "Totaal"
+      },
+      "more": "Meer"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24h verandering",
+        "24hHigh": "24 uur hoog",
+        "24hLow": "24 uur laag",
+        "24hVolumeBtc": "24 uur volume (BTC)",
+        "24hVolumeUsdc": "24 uur volume (USDT)"
+      }
+    },
+    "tradeForm": {
+      "buy": "Kopen",
+      "sell": "Verkopen",
+      "spot": "Plek",
+      "cross": "Kruis",
+      "isolated": "Geïsoleerd",
+      "limit": "Beperken",
+      "market": "Markt",
+      "stop": "Stoplimiet",
+      "normal": "Normaal",
+      "borrow": "Lenen",
+      "repay": "terugbetalen",
+      "price": "Prijs",
+      "amount": "Hoeveelheid",
+      "total": "Totaal",
+      "available": "Beschikbaar",
+      "txnFee": "TXN -kosten",
+      "borrowing": "Het lenen",
+      "button": "Log in / meld je aan"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "Open bestellingen",
+        "orderhistory": "Bestelgeschiedenis"
+      },
+      "message": {
+        "part1": "Inloggen",
+        "part2": "of",
+        "part3": "Zich aanmelden",
+        "part4": "om te verhandelen"
+      }
+    },
+    "connection": "Stabiele verbinding"
+  },
+  "convertPage": {
+    "tabs": {
+      "faq": "FAQ",
+      "convert": "Overzetten",
+      "history": "Geschiedenis"
+    },
+    "convertForm": {
+      "title": "Overzetten",
+      "subTitle": "Snel en gemakkelijk om te zetten in honderden cryptocurrencies met onmiddellijke uitvoering.",
+      "terms": {
+        "availBalance": "Beschikbare balans",
+        "from": "Van",
+        "to": "Naar",
+        "max": "Maximaal",
+        "rate": "Tarief",
+        "button": "Log in / meld je aan",
+        "tradeSpot": "Handelsplek"
+      }
+    },
+    "convertBar": {
+      "barTitle": "Convert BTC (bitcoin) naar andere munten"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "Flexibele tarieflening",
+      "fixed": "Lening voor vaste tarief",
+      "history": "Leengeschiedenis",
+      "data": "Leengegevens"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "Leen met flexibele tarieven om te handelen of in te zetten en het rendement te maximaliseren.",
+        "features": {
+          "f1": "Terugbetalen op elk moment",
+          "f2": "Geen transactiekosten"
+        },
+        "buttons": {
+          "b1": "Doorlopende bestellingen",
+          "b2": "Overzicht van activa"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "Zekerheid",
+            "enterAmount": "Voer het bedrag in",
+            "wantBorrow": "Ik wil lenen",
+            "max": "Maximaal",
+            "details": "Details"
+          },
+          "button": "Log in / meld je aan"
+        }
+      },
+      "borrowTable": {
+        "title": "Leenmarkt",
+        "search": "Zoekopdracht",
+        "viewMore": "Bekijk meer",
+        "tHead": {
+          "coin": "Leenmunt",
+          "hIntRate": "Uurrente",
+          "aIntRate": "Jaarlijkse rentevoet",
+          "action": {
+            "label": "Actie",
+            "button": "Lenen"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "item2": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "item3": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "item4": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "item5": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "Lenen of lenen tegen een vaste rente die u kiest",
+        "stats": {
+          "totalBorrowed": "Totaal geleend",
+          "currentOrders": "Huidige bestellingen",
+          "rate": {
+            "label": "Aangepaste rentevoet",
+            "content": "Multi-asset onderpand ondersteund"
+          }
+        },
+        "myOrder": {
+          "label": "Mijn bestelling",
+          "pOrders": {
+            "label": "In afwachting van bestellingen",
+            "content": "Controleer en beheert ongeëvenaarde bestellingen"
+          },
+          "oOrders": {
+            "label": "Doorlopende bestellingen",
+            "content": "Controleer, pas LTV aan en betaal gematchte bestellingen terug"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "Lenen",
+          "terms": {
+            "bAmount": "Leenbedrag",
+            "min": "Min 0.005 BTC",
+            "expRate": "Verwachte rentevoet",
+            "intRate": "Rentevoet invoeren",
+            "refMarket": "Referentiemarktvoorziening",
+            "duration": "Duur",
+            "collateral": "Zekerheid",
+            "setUp": "Opgezet onderpand",
+            "autoRepay": "Auto-herstel"
+          }
+        },
+        "supply": {
+          "label": "Levering",
+          "terms": {
+            "bAmount": "Leenbedrag",
+            "min": "Min 0.005 BTC",
+            "expRate": "Verwachte rentevoet",
+            "intRate": "Rentevoet invoeren",
+            "refMarket": "Referentiemarkttoevoerpercentage: 5,04%",
+            "duration": "Duur",
+            "collateral": "Zekerheid",
+            "setUp": "Opgezet onderpand",
+            "autoRepay": "Auto-herstel"
+          }
+        },
+        "button": "Log in / meld je aan"
+      },
+      "BandStable": {
+        "title1": "Ik wil lenen",
+        "title2": "Ik wil leveren",
+        "terms": {
+          "days": "Dagen",
+          "all": "Alle",
+          "duration": "Duur"
+        },
+        "borrowTableHead": {
+          "bRate": "Leen tarief (vast)",
+          "duration": "Duur",
+          "minBAmount": "Min leenbedrag",
+          "bAbleAmount": "Leenbaar bedrag"
+        },
+        "supplyTableHead": {
+          "supplyApr": "Levering APR (opgelost)",
+          "duration": "Duur",
+          "estInt": "EST. ",
+          "tAmount": "Totaal bedrag"
+        }
+      },
+      "howItWorks": {
+        "title": "Hoe werken vaste tariefleningen?",
+        "tabs": {
+          "borrower": "Als een lener",
+          "supplier": "Als leverancier"
+        },
+        "step1": {
+          "title": "1. Bestel plaatsen",
+          "content": "Plaats een leenopdracht of selecteer een bestaande bestelling in de leenmarkt."
+        },
+        "step2": {
+          "title": "2. Selecteer onderpand",
+          "content": "Selecteer onderpand activa (s) uit de lijst van uw spotportemonnee -activa. "
+        },
+        "step3": {
+          "title": "3. Bevestig de bestelling",
+          "content": "Bevestig de bestelgegevens, inclusief de geschatte rente, voorwaarden, margin call LTV, enz. Uw onderpandactiva worden ingevroren in uw spot -portemonnee zodra de bestelling is geplaatst."
+        },
+        "step4": {
+          "title": "4. Bestel matchedg",
+          "content": "Eenmaal geëvenaard, gaat uw onderpand naar de voogdij van Binance en ontvangt u het geleende bedrag (minus rente) in uw spot -portemonnee. "
+        },
+        "step5": {
+          "title": "5. terugbetaling",
+          "content": "Terugbetalen op de vervaldatum om boetes te voorkomen. "
+        }
+      },
+      "advantages": {
+        "title": "Voordelen met vaste tarief",
+        "adv1": {
+          "title": "Stabiele en voorspelbare kosten voor leners",
+          "content": "Vergrendel een vaste APR voor een ingestelde duur, waardoor schommelingen en onverwachte kosten worden geëlimineerd."
+        },
+        "adv2": {
+          "title": "Efficiënt geautomatiseerd proces",
+          "content": "Geniet van eenvoudige, en geautomatiseerde leningen en leenervaring met automatische herstel- en automatisch vernieuwde opties beschikbaar."
+        },
+        "adv3": {
+          "title": "Aantrekkelijke vaste APR voor leveranciers",
+          "content": "Levering van uw activa voor een aanpasbare en vaste april."
+        },
+        "adv4": {
+          "title": "Multi-asset onderpand",
+          "content": "Leners kunnen meerdere activa instellen als onderpand om het risico op liquidatie te verminderen."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "faq1": {
+          "ques": "Wat is crypto -uitzet en hoe werkt het?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "faq2": {
+          "ques": "Kan ik mijn crypto op elk moment losmaken?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "faq3": {
+          "ques": "Verdien ik beloningen tijdens de aflossingsperiode?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        },
+        "faq4": {
+          "ques": "Is uitzetten veilig?",
+          "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "Inzet met flexibele voorwaarden voor maximale inkomsten",
+      "content": "Verdien passief inkomen op uw voorwaarden met flexibele, hoogrentende inzetopties.",
+      "overview": {
+        "label": "Overzicht",
+        "terms": {
+          "assets": "Activa (USDT)",
+          "yesProfit": "De winst van gisteren (USDT)",
+          "totalProfit": "Totale winst (USDT)"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "Inzet",
+        "content": "Door te maken kun je beloningen verdienen op je crypto. "
+      },
+      "info2": {
+        "title": "Termijn",
+        "content": "Uw vasthoudperiode voor het product bepaalt de opbrengst. "
+      },
+      "info3": {
+        "title": "Aflossingsperiode",
+        "content": "Dit wordt ingesteld door het uitzetprotocol. "
+      }
+    },
+    "table": {
+      "title": "Alle producten",
+      "terms": {
+        "matchAssets": "Match beschikbare activa",
+        "search": "Zoekopdracht"
+      },
+      "tHead": {
+        "coin": "Munt",
+        "estApr": "EST. ",
+        "reward": "Beloning munt",
+        "action": {
+          "label": "Actie",
+          "button": "Inzet"
+        }
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "faq1": {
+        "ques": "Wat is crypto -uitzet en hoe werkt het?",
+        "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+      },
+      "faq2": {
+        "ques": "Kan ik mijn crypto op elk moment losmaken?",
+        "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+      },
+      "faq3": {
+        "ques": "Verdien ik beloningen tijdens de aflossingsperiode?",
+        "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+      },
+      "faq4": {
+        "ques": "Is uitzetten veilig?",
+        "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+      }
+    },
+    "stakeForm": {
+      "title": "Inzet",
+      "form": {
+        "terms": {
+          "currency": "Munteenheid",
+          "selAmount": "Selecteer munt",
+          "amount": "Hoeveelheid",
+          "minAmount": "Min bedrag 0,0001 BTC",
+          "refAPR": "Referentie APR",
+          "terms": "Termijn",
+          "fundAcc": "Financieringsaccount",
+          "maxAmount": "Maximale hoeveelheid",
+          "flexible": "Flexibele"
+        }
+      },
+      "preview": {
+        "lable": "Voorbeeld",
+        "terms": {
+          "subDate": "Abonnementdatum",
+          "accDate": "Opbouwdatum",
+          "profitDisDate": "Winstdistributiedatum",
+          "redPeriod": "Aflossingsperiode",
+          "profitRec": "Ontvangen winst",
+          "days": "Dagen",
+          "daily": "Dagelijks"
+        }
+      },
+      "estimated": {
+        "label": "Geschatte rendementen",
+        "terms": {
+          "earning": "BTC -inkomsten",
+          "agg": {
+            "part1": "Ik heb gelezen en akkoord",
+            "part2": "Gebruikers van de gebruiker Agreemen"
+          }
+        }
+      },
+      "button": "Inzet"
+    }
+  },
+  "marketPage": {
+    "tabs": {
+      "spot": "Plek",
+      "newListed": "Nieuw vermeld",
+      "topGainer": "Top gainers"
+    },
+    "quickViewTable": {
+      "tGainer": "Top gainers",
+      "tranding": "Trending",
+      "newListing": "Nieuwe aanbiedingen",
+      "tHead": {
+        "pairs": "Paren",
+        "price": "Prijs",
+        "24hChange": "24h verandering"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "Alle",
+        "search": "Zoekopdracht"
+      },
+      "tHead": {
+        "coin": "Munt",
+        "lPrice": "Laatste prijs",
+        "24hChange": "24h verandering",
+        "24hHigh": "24 uur hoog",
+        "24hLow": "24 uur laag",
+        "24hVol": "24 uur volume",
+        "chart": "Kaarten",
+        "trade": "Handel"
+      },
+      "button": "Handel"
+    }
+  },
+  "airDrop": {
+    "title": "Claim je gratis crypto!",
+    "subTitle": "Word lid van de nieuwste Indoex AirDrop -campagnes en verdien onmiddellijk.",
+    "tabs": {
+      "all": "Alle",
+      "ongoing": "Doorlopend",
+      "upcoming": "Aankomend",
+      "completed": "Voltooid"
+    },
+    "terms": {
+      "airSupply": "AirDrop Supply",
+      "start": "Begin",
+      "end": "Einde",
+      "cardContent": "De LaunchPad is de kernhulpprogramma van het CAT APE -token. "
+    },
+    "contest": {
+      "terms": {
+        "about": "Over",
+        "howToJoin": "Hoe u lid kunt worden van de",
+        "tokenPerAir": "Token per airdrop",
+        "upTo": "tot aan",
+        "referral": "Verwijzing",
+        "kyc": "KYC",
+        "kycNoReq": "KYC is geen vereiste",
+        "guide": "Stapsgewijze gids voor",
+        "doNotForgot": "Vergeet niet om bij ons Telegram -kanaal deel te nemen, volg ons op Twitter en abonneer onze nieuwsbrief om nieuwe AirDrops te ontvangen!",
+        "overview": "Overzicht",
+        "web": "Website",
+        "exp": "Ontdekkingsreiziger",
+        "git": "Gitub",
+        "wPaper": "Wit papier",
+        "ann": "Aankondiging",
+        "sMedia": "Sociale media",
+        "join": "Doe mee met AirDrop -evenement",
+        "sDate": "Startdatum",
+        "eDate": "Einddatum",
+        "participants": "Actieve deelnemers",
+        "button": "Deelnemen aan AirDrop"
+      }
+    }
+  },
+  "launchPad": {
+    "title": "Claim je gratis crypto!",
+    "subTitle": " Start je crypto -token met Indoex Launchpad",
+    "tabs": {
+      "all": "Alle",
+      "ongoing": "Doorlopend",
+      "upcoming": "Aankomend",
+      "completed": "Voltooid"
+    },
+    "terms": {
+      "airSupply": "AirDrop Supply",
+      "start": "Begin",
+      "end": "Einde",
+      "cardContent": "De LaunchPad is de kernhulpprogramma van het CAT APE -token. "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "Aftellen",
+        "days": "Dagen",
+        "hours": "Uren",
+        "minutes": "Notulen",
+        "seconds": "Seconden",
+        "sPrice": "IEO verkoopprijs",
+        "about": "Over",
+        "details": "Details",
+        "fName": "Volledige naam",
+        "web": "Website",
+        "tName": "Ticker naam",
+        "sSupply": "Session Session",
+        "tSupply": "Totaal aanbod",
+        "ieoPrice": "IEO -prijs",
+        "ieoSDate": "IEO startdatum",
+        "ieoEDate": "IEO einddatum",
+        "bonus": "Bonus",
+        "tecFou": "Technological Foundation",
+        "docu": "Documenten",
+        "wPaper": "Wit papier",
+        "team": "Team",
+        "sMedia": "Sociale media"
+      },
+      "form": {
+        "terms": {
+          "cBal": "Huidige balans",
+          "details": "Details",
+          "sDate": "Startdatum",
+          "eDate": "Einddatum",
+          "tPrice": "Tokenprijs",
+          "minPrice": "Minimale prijs",
+          "ord": "Bevelen",
+          "bar": "bar",
+          "buy": "Kopen",
+          "rec": "Ontvangen",
+          "button": "Log in / meld je aan"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "Claim je gratis crypto!",
+    "subTitle": "Hoe meer je ruilt, hoe meer je wint!",
+    "tabs": {
+      "all": "Alle",
+      "ongoing": "Doorlopend",
+      "upcoming": "Aankomend",
+      "completed": "Voltooid"
+    },
+    "terms": {
+      "airSupply": "AirDrop Supply",
+      "start": "Begin",
+      "end": "Einde",
+      "cardContent": "De LaunchPad is de kernhulpprogramma van het CAT APE -token. "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "Handelsconcurrentie",
+        "moreTrade": "Hoe meer u ruilt",
+        "moreWin": "Hoe hoger je kansen zijn om een ​​prijs te winnen.",
+        "details": "Details",
+        "1st": "1e",
+        "2nd": "2e",
+        "3rd": "3e",
+        "4th": "4e",
+        "5th": "5e",
+        "6th": "6e",
+        "7th": "7e",
+        "8th": "8e",
+        "9th": "9e",
+        "10th": "10e",
+        "11th-15th": "11e-15e",
+        "16th-20th": "16e-20e",
+        "pOverview": "Deelname overzicht",
+        "position": "Positie",
+        "user": "Gebruiker",
+        "vol": "Volume",
+        "join": "Doe mee met handelswedstrijd",
+        "ieoSDate": "IEO startdatum",
+        "ieoEDate": "IEO einddatum",
+        "button": "Gaan ruilen",
+        "participants": "Actieve deelnemers"
+      }
+    }
+  },
+  "walletStatus": {
+    "title": "Portemonnee status",
+    "terms": {
+      "search": "Zoekopdracht"
+    },
+    "tHead": {
+      "name": "Naam",
+      "tSupply": "Totaal aanbod",
+      "cSupply": "Curr. ",
+      "buyFee": "Koop kosten",
+      "sellFee": "Verkoopkosten verkopen",
+      "status": "status",
+      "buttons": {
+        "active": "Actief",
+        "maintenance": "Onderhoud"
+      }
+    }
+  },
+  "termsOfUse": {
+    "title": "Gebruiksvoorwaarden",
+    "subTitle": "Indoex Exchange -gebruiksvoorwaarden",
+    "content": "Deze gebruiksvoorwaarden schrijven de rechten en verplichtingen voor tussen leden voor (zoals beschreven in artikel 2, en inclusief personen die in het verleden lid waren) en Fisco Cryptocurrency Exchange Inc. (\"wij\" of het \"bedrijf\") in verband met de online diensten \"Indoex Exchange\" en \"Indoex Instant Exchange\" die we bieden (bij de domein HTTPS: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoes: //indoex.io/; de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"de\" de \"diensten\"). ",
+    "arti1": {
+      "title": "Artikel 1 Toepassingsbereik van gebruiksvoorwaarden",
+      "content": {
+        "point1": "Deze gebruiksvoorwaarden zijn van toepassing op ons en de leden (in dit artikel 1, inclusief personen die in het verleden lid waren) en het voorschrijven van alle zaken met betrekking tot de rechten en verplichtingen van de Vennootschap en de leden met betrekking tot de Services.",
+        "point2": "Het is een voorwaarde dat het gebruik van de diensten die elk lid begrijpt de inhoud van de volledige tekst van de uitleg over belangrijke zaken en deze gebruiksvoorwaarden en is het ermee eens dat deze gebruiksvoorwaarden alle aangelegenheden voorschrijven met betrekking tot de rechten en verplichtingen van het bedrijf en de leden met betrekking tot de diensten.",
+        "point3": " Als het lid minderjarig is, moet het lid de toestemming van zijn of haar wettelijke voogd verkrijgen voordat hij de diensten gebruikt.",
+        "point4": " Als het lid de Services gebruikt, wordt geacht dat het lid is overeengekomen dat deze gebruiksvoorwaarden alle zaken voorschrijven met betrekking tot de rechten en verplichtingen van de Vennootschap en het lid met betrekking tot de Services."
+      }
+    },
+    "arti2": {
+      "title": "Artikel 2 leden",
+      "content": {
+        "point1": "Een persoon die lid wil worden, moet een aanvraag voor lidmaatschapsregistratie indienen in overeenstemming met onze voorgeschreven procedures. ",
+        "ponit2": "Nadat een lid de registratie voor de Services heeft voltooid, kunnen we het lid vragen om opnieuw de door ons aangewezen documenten in te dienen als het nodig is om identiteitsverificatie uit te voeren op het moment van een transactie zoals voorgeschreven door relevante wetgeving en verordening of wij anders het noodzakelijk achten ...",
+        "point3": "Als het lid zijn of haar registratie als lid wil annuleren, kan het lid zijn of haar ledenregistratie annuleren in overeenstemming met onze voorgeschreven procedures."
+      }
+    },
+    "arti3": {
+      "title": "Artikel 3 Beheer van inlog -ID en wachtwoord",
+      "content": {
+        "point1": "Het lid moet zijn of haar geregistreerde inlog -ID en wachtwoord beheren op zijn of haar eigen verantwoordelijkheid en mag dergelijke informatie niet lenen, toewijzen, verkopen of anderszins weggooien aan een derde partij.",
+        "point2": "We zullen de identiteit van het lid verifiëren door te bevestigen dat de inlog-ID en het wachtwoord zijn ingevoerd wanneer de gebruiker zich aanmeldt bij onze website of de services gebruikt, overeenkomt met het vooraf ingestelde inlog-ID en het wachtwoord. ",
+        "point3": "Het lid draagt ​​alle aansprakelijkheid voor schade veroorzaakt door (i) lekkage -ID of wachtwoord vanwege de reden die toe te schrijven is aan het lid en (ii) ongeoorloofd gebruik of dergelijke van zijn/haar account door een derde partij die een dergelijke gelekte inlog -ID gebruikt en we zullen geen aansprakelijkheid voor dergelijke schade dragen.",
+        "point4": "Als het lid zich ervan bewust wordt dat het inlog -ID of het wachtwoord is gestolen of door een derde wordt gebruikt, moet het lid ons onmiddellijk op de hoogte stellen van dat effect en onze instructies volgen."
+      }
+    },
+    "arti4": {
+      "title": "Artikel 4 Wijziging van registratie -informatie",
+      "content": {
+        "point1": "Als er een wijziging is in de registratie -informatie van een lid, moet het lid ons zonder vertraging op de hoogte stellen van onze voorgeschreven methode met betrekking tot de gewijzigde informatie en de benodigde documenten indienen die door ons zijn gevraagd."
+      }
+    }
+  },
+  "announcementsPage": {
+    "title": "Aankondigingen",
+    "terms": {
+      "search": "Zoekopdracht",
+      "annu": "Indoex -memebox heeft een eerste beursgenoteerd token"
+    },
+    "sidebar": {
+      "all": "alle",
+      "news": {
+        "label": "Nieuws",
+        "item1": "Indoex -updates",
+        "item2": "Nieuw nieuws"
+      },
+      "newListing": "Nieuwe aanbiedingen",
+      "events": {
+        "label": "Evenementen",
+        "item1": "Item1",
+        "item2": "Item2"
+      },
+      "web3": "Web3",
+      "api": "API",
+      "dListing": "Dijpend"
+    }
+  },
+  "mediaKitPage": {
+    "title": "Mediakit",
+    "content": "Volg deze richtlijnen om consistentie en nauwkeurigheid te waarborgen bij het promoten vanInDoex in marketingcommunicatie, waaronder advertenties, artikelen, websites en gedrukte materialen",
+    "terms": {
+      "downloadHeading": "Download de Guide Guide in Indoex Brand Logo",
+      "guideHeading": "Merkrichtlijnen",
+      "buttons": {
+        "downloadPdf": "Download PDF",
+        "download": "Downloaden"
+      },
+      "brandAssets": "Merkactiva",
+      "logos": "Logo's",
+      "logosContent": "Ontvang hier officiële Indoex -logo's. ",
+      "sairaBold": "Saira Bold",
+      "inter": "Inter Regular & Medium",
+      "typeFace": "Lettertype",
+      "typeFaceContent": "Ontvang een kopie van ons zakelijke lettertype, Saira en Inter.",
+      "colors": "Kleuren",
+      "colorsContent": "Hieronder staan ​​de primaire en secundaire merkkleuren voor Indoex",
+      "green": "Greens",
+      "dBlue": "Donkerblauw"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "Wat is crypto -uitzet en hoe werkt het?",
+      "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+    },
+    "faq2": {
+      "ques": "Kan ik mijn crypto op elk moment losmaken?",
+      "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+    },
+    "faq3": {
+      "ques": "Verdien ik beloningen tijdens de aflossingsperiode?",
+      "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+    },
+    "faq4": {
+      "ques": "Is uitzetten veilig?",
+      "ans": "Het instellen is het proces van het vergrendelen van uw cryptocurrency om de bewerkingen van een blockchain -netwerk te ondersteunen. "
+    }
+  },
+  "feePage": {
+    "title": "Vergoedingsstructuur",
+    "terms": {
+      "search": "Zoekopdracht"
+    },
+    "tHead": {
+      "name": "Naam",
+      "minDeposit": "Min. ",
+      "minWithdraw": "Min. ",
+      "withdrawFee": "Vergoedingen opnemen",
+      "makerFee": "Maker fee",
+      "takerFee": "Temer Fee"
+    }
+  },
+  "contactPage": {
+    "title": "Neem contact met ons op",
+    "subTitle": "Neem contact op met het track Indoex -team als u vragen heeft.",
+    "terms": {
+      "email": "E -mail",
+      "enterEmail": "Voer uw e -mail in",
+      "category": "Categorie",
+      "selectType": "Selecteer uw aanvraagtype",
+      "message": "Bericht",
+      "messageHere": "Bericht hier",
+      "button": "Indienen",
+      "phone": "TELEFOON",
+      "emailBot": "E -mail"
+    }
+  },
+  "indoexVerify": {
+    "title": "Indoex verifiëren",
+    "content": "We hebben een pagina gemaakt om Indoex -kanalen en zakelijke accounts te verifiëren om fraude te voorkomen. ",
+    "terms": {
+      "platform": "Platform",
+      "enterUrl": "Voer URL in",
+      "web": "Website",
+      "button": "Zoekopdracht",
+      "message": "Gebruik Indoex verifiëren om te controleren of de bron officieel Indoex vertegenwoordigt. ",
+      "notice": "Kennisgeving",
+      "noticeMessage": {
+        "part1": "Neem geen onofficiële/niet-geverifieerde bronnen in contact of onthul uw accountgegevens aan hen. ",
+        "part2": "Indoex -ondersteuning"
+      }
+    }
+  },
+  "dashboard": {
+    "overviewPage": {
+      "assets": "Totale bezit",
+      "wallet": {
+        "label": "Portemonnee samenvatting",
+        "terms": {
+          "tDeposit": "Totale storting",
+          "tBuyOrders": "Totale kooporders",
+          "tWithdraw": "Totaal terugtrekken",
+          "tSellOrders": "Totaal verkooporders",
+          "deposit": "Borg",
+          "withdraw": "Terugtrekken",
+          "myAssets": "Mijn bezittingen"
+        }
+      },
+      "security": {
+        "label": "Beveiliging",
+        "content": "Verhoog uw accountbeveiligingssterkte",
+        "terms": {
+          "strength": "Kracht",
+          "goToSPage": "Ga naar de beveiligingspagina",
+          "passkey": "Sleutel",
+          "2fa": "Tweestaps verificatie",
+          "antiPhi": "Anti-phishing code",
+          "button": "Actief"
+        }
+      },
+      "market": {
+        "label": "Markt",
+        "tabs": {
+          "trending": "Trending",
+          "topVolume": "Topvolumne",
+          "favorite": "Favoriet"
+        },
+        "terms": {
+          "price": "Prijs"
+        },
+        "button": "Bekijk alles"
+      },
+      "tradeTable": {
+        "title": "Handelsgeschiedenis",
+        "button": "Bekijk alles",
+        "tHead": {
+          "filledTime": "Gevulde tijd",
+          "pair": "Paar",
+          "bOrS": "Kopen of verkopen",
+          "orderType": "Besteltype",
+          "fillPrice": "Vulprijs",
+          "amount": "Hoeveelheid",
+          "vol": "Volume",
+          "fee": "Tarief"
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "title": "Profiel",
+        "nickName": {
+          "label": "Bijnaam",
+          "content": "Dit is uw weergavenaam die aan anderen op het platform verschijnt",
+          "button": "Verander de bijnaam",
+          "popUp": {
+            "title": "Verander de bijnaam",
+            "nickname": "Bijnaam",
+            "enterNickname": "Voer de bijnaam in",
+            "message": "5-20 tekens. ",
+            "buttons": {
+              "cancel": "Annuleren",
+              "confirm": "Bevestigen"
+            },
+            "successMessage": "De bijnaam is succesvol veranderd"
+          }
+        },
+        "photo": {
+          "label": "foto",
+          "content": "Upload een profielfoto om uw account te personaliseren en erkenbaar te maken",
+          "buttons": {
+            "upload": "Uploaden",
+            "delete": "Verwijderen"
+          },
+          "popUp": {
+            "title": "Verander uw profielfoto",
+            "avatar": "Avatar",
+            "system_upload": "Upload van dit apparaat",
+            "clickSelect": "Klik om te selecteren",
+            "buttons": {
+              "cancel": "Annuleren",
+              "confirm": "Bevestigen"
+            },
+            "successMessage": "Profielfoto met succes gewijzigd"
+          }
+        },
+        "profileChangeSucMessage": "Profielfoto met succes gewijzigd",
+        "nameChangeSucMessage": "De bijnaam is succesvol veranderd"
+      },
+      "accManagement": {
+        "title": "Accountbeheer",
+        "closeAcc": {
+          "label": "Close Account",
+          "content": "Zodra u uw account hebt gesloten, is deze permanent en kan niet worden hersteld",
+          "popUp": {
+            "title": "Verzoek om rekening te houden",
+            "content": {
+              "part1": "Beste gewaardeerde klant, als u uw account permanent wilt verwijderen bij Indoex, stuur dan een e -mail door",
+              "part2": "support@indoex.io.",
+              "part3": "Het verzoek moet worden verzonden vanuit hetzelfde e -mailadres dat wordt gebruikt om uw account te registreren."
+            },
+            "notice": "Kennisgeving",
+            "noticePoints": {
+              "point1": "Houd er rekening mee dat het verwijderen van accounts permanent is. ",
+              "point2": "Als u nog meer activa in uw account hebt, zorg er dan voor dat u ze regelt. ",
+              "point3": {
+                "part1": "Hoewel Indoex uw account per verzoek per aanvraag permanent kan verwijderen, moet u er rekening mee houden dat we bepaalde persoonlijke gegevens voor een bepaalde periode na verwijdering moeten bewaren. ",
+                "part2": "Algemene voorwaarden"
+              },
+              "point4": {
+                "part1": "Aanvullende informatie over hoe we uw persoonlijke gegevens opslaan, is te vinden in onze",
+                "part2": "Privacybeleid."
+              }
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "securitySetting": {
+        "title": "Beveiliging",
+        "emailInfo": {
+          "label": "E -mailauthenticatie",
+          "content": "Gebruik e -mailauthenticatie voor inlog- en transactiebevestigingen om de accountbeveiliging te verbeteren",
+          "button": "Wijzig e -mail",
+          "popUp1": {
+            "title": "Weet u zeker dat u uw gekoppelde e -mailadres wilt bijwerken?",
+            "message": {
+              "title": "Stappen om uw e -mail te ontkoppelen",
+              "content": "Houd er voor de beveiliging van uw account rekening mee dat na het wijzigen van uw e-mailadres, opnames op ketens, interne transfers, FIAT-opnames, kaarttransacties, P2P-handel en advertentieactiviteiten voor 24 uur tijdelijk worden opgeschort."
+            },
+            "buttons": {
+              "cancel": "Annuleren",
+              "changeEmail": "Wijzig de e -mail"
+            }
+          },
+          "popUp2": {
+            "title": "Beveiliging verificatie",
+            "codeSentAt": "Er wordt een verificatiecode verzonden naar",
+            "enterCode": "Voer de e -mailverificatiecode in",
+            "2faCode": "Google 2FA -code",
+            "enter2fa": "Voer de 2FA -code in",
+            "havingProb": "Problemen hebben met verificatie?",
+            "buttons": {
+              "sendCode": "Stuur code",
+              "nextStep": "Volgende stap"
+            }
+          },
+          "popUp3": {
+            "title": "Wijzig e -mail",
+            "newEmail": "Nieuwe e -mail",
+            "enterEmail": "Voer uw nieuwe e -mail in",
+            "veriCode": "Nieuwe e -mailverificatiecode",
+            "enterveriCode": "Voer de e -mailverificatiecode in",
+            "noCode": "De verificatiecode niet ontvangen?",
+            "checkSpam": "Controleer uw spammap voor deze e -mail",
+            "buttons": {
+              "sendCode": "Stuur code",
+              "cancel": "Annuleren",
+              "submit": "Indienen"
+            }
+          }
+        },
+        "passInfo": {
+          "label": "Login wachtwoord",
+          "content": "Stel een sterk wachtwoord in om uw account te beschermen tegen ongeautoriseerde toegang",
+          "button": "Wijzig het wachtwoord",
+          "popUp": {
+            "title": "Wijzig het wachtwoord",
+            "notice": "Kennisgeving",
+            "noticeMessage": "Voor de beveiliging van uw account, na het verwijderen van Google Two-factor authenticatie, worden acties zoals opnames op ketens, interne overdrachten, FIAT-opnames, P2P-handel en andere transacties gedurende 24 uur tijdelijk opgeschort.",
+            "oldPass": "Oud wachtwoord",
+            "oldPassHolder": "Voer uw huidige wachtwoord in",
+            "newPass": "Nieuw wachtwoord",
+            "newPassHolder": "Voer een nieuw wachtwoord in",
+            "confirmPass": "Bevestig nieuw wachtwoord",
+            "confirmPassHolder": "Voer opnieuw een nieuw wachtwoord in",
+            "2faCode": "2FA Verificatiecode",
+            "2faCodeHolder": "Voer 2FA -code in",
+            "havingIssue": "Problemen hebben met verificatie?",
+            "button": "Volgende stap"
+          }
+        },
+        "twofactor": {
+          "label": "Twee factor authenticatie",
+          "content": "Lek een authenticator-app aan voor beveiligde tweefactor-authenticatie bij toegang tot uw account",
+          "buttons": {
+            "setUp": "Instellen",
+            "disable": "Uitzetten"
+          },
+          "addPopUp1": {
+            "title": "Beveiliging verificatie",
+            "codeAt": "Er wordt een verificatiecode verzonden naar",
+            "noCode": {
+              "part1": "Niet in staat om verificatiecode te ontvangen?",
+              "part2": "Verificeer de verificatiecode opnieuw"
+            },
+            "havingProb": "Problemen hebben met verificatie?",
+            "error": {
+              "wrongOtp": "De OTP die u hebt ingevoerd, is onjuist.",
+              "expOtp": "Verificatiecode is verlopen. "
+            }
+          },
+          "addPopUp2": {
+            "title": "Stel Google Two-factor authenticatie in",
+            "downloadMsgTitle": "Download Google Authenticator (Android / iOS)",
+            "downloadMsgContent": "Zoek naar \"Google Authenticator\" in de App Store of Google Play en download de app.",
+            "addKeyTitle": "Voeg de sleutelzin toe aan Google Authenticator",
+            "addKeyContent": "U kunt Google Authenticator downloaden van de App Store of Google Play. ",
+            "alertMsg": "De belangrijkste zin is essentieel voor het herstellen van uw Google -authenticator als u uw apparaat verliest of wijzigt. ",
+            "2faCode": "Google 2FA -code",
+            "enter2faCode": "Voer de 2FA -code in ",
+            "copyKey": "Kopieersleutel",
+            "copied": " Gekopieerd!",
+            "buttons": {
+              "cancel": "Annuleren",
+              "confirm": "Bevestigen"
+            }
+          },
+          "removePopUp1": {
+            "title": "Beveiliging verificatie",
+            "loginPass": "Login wachtwoord",
+            "enterPass": "Voer het wachtwoord in ",
+            "2faCode": "Google 2FA -code",
+            "enter2faCode": "Voer 2FA -code in",
+            "button": "Volgende stap"
+          },
+          "removePopUp2": {
+            "title": "Bevestig de verwijdering van Google 2FA -authenticatie",
+            "notice": "Kennisgeving",
+            "noticeMess": "Voor de beveiliging van uw account, na het verwijderen van Google Two-factor-authenticatie, worden acties zoals opnames op ketens, interne overdrachten, FIAT-opnames, P2P-handel en andere transacties gedurende 24 uur tijdelijk opgeschort.",
+            "buttons": {
+              "cancel": "Cnacel",
+              "remove": "Verwijderen"
+            }
+          }
+        },
+        "secondaryPin": {
+          "label": "Secundaire pin",
+          "content": "Stel een gepersonaliseerde code in om ervoor te zorgen dat e -mails van het platform authentiek zijn en geen phishing -pogingen zijn",
+          "buttons": {
+            "forgot": "Vergeten",
+            "change": "Wijziging"
+          },
+          "forgotPopUp": {
+            "title": "Beveiliging verificatie",
+            "enter2fa": "Voer 2FA -code in",
+            "havingProb": "Problemen hebben met verificatie?",
+            "error": {
+              "wrongOtp": "De OTP die u hebt ingevoerd, is onjuist.",
+              "expOtp": "Verificatiecode is verlopen. "
+            }
+          },
+          "changepopUp": {
+            "title": "Update pin",
+            "currentPin": "Huidige pin",
+            "enterCurrentPin": "Voer de huidige pin in",
+            "newPin": "Nieuwe pin",
+            "enterNewPin": "Voer een nieuwe pincode in",
+            "confirmPin": "Bevestig pin",
+            "enterCofirmPin": "Voer opnieuw een nieuwe pincode in",
+            "buttons": {
+              "cancel": "Annuleren",
+              "confirm": "Bevestigen"
+            }
+          },
+          "forgotSuccessMessage": "Uw secundaire pin verzonden naar geregistreerde e -mailadres",
+          "changeSuccessMessage": "Uw secundaire pincode Suceessvol bijgewerkt"
+        },
+        "antiPhishing": {
+          "label": "Anti -phishing",
+          "content": "De e-mail die door het platform naar u wordt verzonden, bevat de anti-phishing-code om te onderscheiden van nep-e-mail",
+          "button": "Instellen",
+          "popUp1": {
+            "title": "Stel anti-phishing code in",
+            "alert": "Geef uw anti-phishing-code niet aan iemand, inclusief Indoex-medewerkers.",
+            "antiPhiCode": "Anti-phishing code",
+            "enterCode": "Voer 4 tot 20 tekens in",
+            "message": "Voer 4 tot 20 tekens in die alleen letters, nummers en onderstrepingstekens bevatten. ",
+            "whatIsIt": "Wat is anti-phishing-code?",
+            "whatIsItContent": "Uw anti-phishing-code verschijnt in alle Indoex-e-mails, waardoor u echte communicatie kunt zien en oplichting kunt voorkomen.",
+            "buttons": {
+              "cancel": "Annuleren",
+              "confirm": "Bevestigen"
+            },
+            "error": "Er is een fout opgetreden"
+          },
+          "popUp2": {
+            "title": "Beveiliging verificatie",
+            "enter2fa": "Voer 2FA -code in",
+            "havingProb": "Problemen hebben met verificatie?",
+            "error": {
+              "wrongOtp": "De OTP die u hebt ingevoerd, is onjuist.",
+              "expOtp": "Verificatiecode is verlopen. "
+            }
+          }
+        }
+      },
+      "authLevel": {
+        "title": "Authenticatieniveau",
+        "terms": {
+          "idLevel": "Identificatieniveau",
+          "limit": "24 uur De limiet",
+          "unlimited": "Onbeperkt"
+        }
+      }
+    },
+    "assetsPage": {
+      "title": "Totale bezit",
+      "tabs": {
+        "all": "alle",
+        "delisted": "Schrapping"
+      },
+      "terms": {
+        "hideLabel": "Verberg nul balansactiva",
+        "search": "Zoekopdracht"
+      },
+      "tHead": {
+        "crypto": "Crypto",
+        "tBal": "Totaal saldo",
+        "avl": "Beschikbaar",
+        "inOrders": "In bestellingen",
+        "avgPrice": "AVG. ",
+        "action": "Actie",
+        "buttons": {
+          "withdraw": "Terugtrekken",
+          "deposit": "Borg"
+        }
+      }
+    },
+    "depositPage": {
+      "steps": {
+        "title": "Stappen afzetten",
+        "step1": {
+          "title": "Kopieer het portemonnee -adres",
+          "content": "Selecteer Crypto-, netwerk- en kopie -adres."
+        },
+        "step2": {
+          "title": "Bevestig adres",
+          "content": "Paste gekopieerde intrekkingsadres"
+        },
+        "step3": {
+          "title": "Overdrachtsbevestiging",
+          "content": "Wacht op blockchain -overdrachtsbevestiging"
+        },
+        "step4": {
+          "title": "Succesvolle storting",
+          "content": "Indoex stuurt activa naar Wallet."
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "Selecteer Crypto",
+          "selectNet": "Selecteer netwerk",
+          "selectNetHolder": "Selecteer het netwerk dat u door wilt storten",
+          "copyAdd": "Kopieer portemonnee -adres",
+          "addPub": "Adres is gepubliceerd!",
+          "addPubContent": "Gebruik het onderstaande adres om uw cryptocurrency te storten met behulp van het Toncoin -netwerk. ",
+          "copy": "kopiëren",
+          "copied": "Gekopieerd"
+        },
+        "tips": {
+          "label": "Tips",
+          "content": "Voor de veiligheid van uw fondsen kan ons klantenondersteuningsteam telefonisch contact met u opnemen om uw opname te bevestigen"
+        },
+        "faq": {
+          "label": "FAQ's",
+          "button": "Bekijk meer",
+          "faq1": {
+            "ques": "Hoe stort je op Falconx?"
+          },
+          "faq2": {
+            "ques": "Wat is een crypto -netwerk?"
+          },
+          "faq3": {
+            "ques": "Welk netwerk moet ik gebruiken?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "Selecteer Crypto om zich terug te trekken",
+          "searchCrypto": "Zoek crypto",
+          "tabs": {
+            "recent": "Recentelijk",
+            "all": "Alle",
+            "favorite": "Favoriet"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "Selecteer Crypto om zich terug te trekken",
+          "alert": "Zorg ervoor dat uw geselecteerde crypto- en stortingsnetwerk match of activa verloren kunnen gaan.",
+          "searchNet": "Zoeknetwerk",
+          "sortBy": "Sorteren",
+          "tabs": {
+            "mostPop": "Het meest populair",
+            "fastest": "Snelst",
+            "lessConfirm": "Minder bevestigingen"
+          },
+          "fee": "Tarief",
+          "expArr": "Verwachte aankomst"
+        }
+      },
+      "table": {
+        "title": "Laatste 4 depositores",
+        "button": "Depositogeschiedenis",
+        "tHead": {
+          "dNt": "Datum/tijd",
+          "coin": "Munt",
+          "amount": "Hoeveelheid",
+          "bRecords": "Blockchain -record",
+          "remark": "Opmerkingen",
+          "action": "Actie",
+          "button": "Details"
+        }
+      }
+    },
+    "withdrawPage": {
+      "steps": {
+        "title": "Terugtrekkingstappen",
+        "step1": {
+          "title": "Selecteer de crypto",
+          "content": "Selecteer crypto en netwerk om terug te trekken"
+        },
+        "step2": {
+          "title": "Bevestig adres",
+          "content": "Paste gekopieerde intrekkingsadres"
+        },
+        "step3": {
+          "title": "Overdrachtsbevestiging",
+          "content": "Wacht op blockchain -overdrachtsbevestiging"
+        },
+        "step4": {
+          "title": "Succesvolle terugtrekking",
+          "content": "Indoex stuurt activa naar portemonnee"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "Selecteer Crypto",
+          "withTo": "Zich terugtrekken",
+          "net": "Netwerk",
+          "selectNet": "Selecteer Intrekkingsnetwerk",
+          "add": "Adres",
+          "enterAdd": "Voer uw intrekkingsadres in",
+          "withAmount": "Intrekkingsbedrag",
+          "amount": "Hoeveelheid",
+          "avalBal": "Beschikbare balans",
+          "minWithAmount": "Minimaal opnamevergelijkingsbedrag is",
+          "remark": "Opmerkingen (optioneel)",
+          "remarkHolder": "Bijv. ",
+          "rAmount": "Ontvang bedrag",
+          "netFee": "Netwerkkosten",
+          "button": "Terugtrekken"
+        },
+        "tips": {
+          "label": "Tips",
+          "content": {
+            "point1": "Voor de veiligheid van uw fondsen kan ons klantenondersteuningsteam telefonisch contact met u opnemen om uw opname te bevestigen.",
+            "point2": "Voor de veiligheid van uw fondsen kan ons klantenondersteuningsteam telefonisch contact met u opnemen om uw opname te bevestigen."
+          }
+        },
+        "faq": {
+          "label": "FAQ's",
+          "button": "Bekijk meer",
+          "faq1": {
+            "ques": "Hoe lang duren de opnames?"
+          },
+          "faq2": {
+            "ques": "Waarom werd mijn terugtrekking afgewezen?"
+          },
+          "faq3": {
+            "ques": "Kan ik een opname annuleren?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "Selecteer Crypto om zich terug te trekken",
+          "searchCrypto": "Zoek crypto",
+          "tabs": {
+            "recent": "Recentelijk",
+            "all": "Alle",
+            "favorite": "Favoriet"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "Selecteer Crypto om zich terug te trekken",
+          "alert": "Zorg ervoor dat uw geselecteerde crypto- en stortingsnetwerk match of activa verloren kunnen gaan.",
+          "searchNet": "Zoeknetwerk",
+          "sortBy": "Sorteren",
+          "tabs": {
+            "mostPop": "Het meest populair",
+            "fastest": "Snelst",
+            "lessConfirm": "Minder bevestigingen"
+          },
+          "fee": "Tarief",
+          "expArr": "Verwachte aankomst"
+        },
+        "popUpTransactionStatus": {
+          "pending": {
+            "title": "In afwachting van terugtrekking",
+            "content": "Uw intrekkingsverzoek wordt beoordeeld en duurt ongeveer 12 uur. "
+          },
+          "failed": {
+            "title": "Mislukte terugtrekking",
+            "content": "Er was een probleemverwerking van deze terugtrekking. "
+          },
+          "successful": {
+            "title": "Succesvolle terugtrekking",
+            "content": "Uw intrekkingsverzoek is met succes ingediend. "
+          },
+          "buttons": {
+            "viewHIstory": "Bekijk geschiedenis",
+            "checkDetails": "Controleer details"
+          }
+        }
+      },
+      "table": {
+        "title": "Laatste 4 records opnemen",
+        "button": "De geschiedenis intrekken",
+        "tHead": {
+          "dNt": "Datum/tijd",
+          "coin": "Munt",
+          "amount": "Hoeveelheid",
+          "withTo": "Zich terugtrekken",
+          "bRecords": "Blockchain -record",
+          "remark": "Opmerkingen",
+          "action": "Actie",
+          "button": "Details"
+        }
+      }
+    },
+    "depositHisPage": {
+      "title": "Depositogeschiedenis",
+      "terms": {
+        "allStatu": "Alle statussen",
+        "allCoins": "Alle munten"
+      },
+      "button": "Downloaden",
+      "tHead": {
+        "cOrT": "Munt/token",
+        "amount": "Hoeveelheid",
+        "time": "Tijd",
+        "bRecords": "Blockchain -record",
+        "remark": "Opmerkingen",
+        "status": "Status",
+        "successful": "Succesvol"
+      }
+    },
+    "withdrawHisPage": {
+      "title": "Intrekkingsgeschiedenis",
+      "terms": {
+        "allStatu": "Alle statussen",
+        "allCoins": "Alle munten"
+      },
+      "button": "Downloaden",
+      "tHead": {
+        "cOrT": "Munt/token",
+        "amount": "Hoeveelheid",
+        "time": "Tijd",
+        "withTo": "Zich terugtrekken",
+        "bRecords": "Blockchain -record",
+        "remark": "Opmerkingen",
+        "orderId": "Bestel -ID",
+        "status": "Status",
+        "successful": "Succesvol"
+      }
+    },
+    "openOrdersPage": {
+      "title": "Open bestellingen",
+      "terms": {
+        "allPairs": "Alle paren",
+        "bNsOrders": "Koop, verkoop bestellingen",
+        "orderType": "Besteltype"
+      },
+      "tHead": {
+        "time": "Tijd",
+        "pair": "Paar",
+        "bOrS": "Kopen of verkopen",
+        "type": "Type",
+        "orderPrice": "Bestelprijs",
+        "amount": "Hoeveelheid",
+        "filled": "Gevuld",
+        "unexecuted": "Onverdraaglijk",
+        "action": "Actie"
+      }
+    },
+    "ordersHisPage": {
+      "title": "Bestelgeschiedenis",
+      "button": "Downloaden",
+      "terms": {
+        "month": "maand",
+        "allPairs": "Alle paren",
+        "bNsOrders": "Koop, verkoop bestellingen",
+        "orderType": "Besteltype",
+        "status": "Status"
+      },
+      "tHead": {
+        "time": "Tijd",
+        "pair": "Paar",
+        "bOrS": "Kopen of verkopen",
+        "type": "Type",
+        "tCondition": "Trigger conditie",
+        "orderPrice": "Bestelprijs",
+        "amount": "Hoeveelheid",
+        "filled": "Gevuld",
+        "avgPrice": "AVG.PRICE",
+        "status": "Status"
+      }
+    },
+    "tradeHisPage": {
+      "title": "Handelsgeschiedenis",
+      "button": "Downloaden",
+      "terms": {
+        "month": "maand",
+        "allPairs": "Alle paren",
+        "bNsOrders": "Koop, verkoop bestellingen",
+        "orderType": "Besteltype"
+      },
+      "tHead": {
+        "filledTime": "Gevulde tijd",
+        "pair": "Paar",
+        "bOrS": "Kopen of verkopen",
+        "type": "Type",
+        "fillPrice": "Bestelprijs",
+        "amount": "Hoeveelheid",
+        "vol": "Volume",
+        "fee": "Tarief"
+      }
+    },
+    "loginHisPage": {
+      "title": "Logingeschiedenis",
+      "terms": {
+        "lSuccess": "Log in succes",
+        "lFailed": "Inloggen mislukt vanwege verkeerde referenties"
+      },
+      "tHead": {
+        "dateTime": "Datumtijd",
+        "action": "Actie",
+        "ip": "IP -adres"
+      }
+    },
+    "deviceManagement": {
+      "title": "Apparaatbeheer",
+      "tHead": {
+        "dateTime": "Datumtijd",
+        "location": "Locatie",
+        "ip": "IP -adres",
+        "action": "Actie",
+        "button": "Verwijderen"
+      }
+    },
+    "apiPage": {
+      "apiManagement": {
+        "title": "API -management",
+        "subTitle": "Maak een API -sleutel",
+        "terms": {
+          "notes": "Aantekeningen",
+          "notesHolder": "Voer de notities in",
+          "preSetting": {
+            "part1": "Toestemmingsinstellingen",
+            "part2": "(Meerkeuze)"
+          },
+          "accBalance": "Rekeningsaldo",
+          "addOrder": "Voeg bestelling toe",
+          "getOrder": "Bestelling krijgen",
+          "closeOrder": "Nauwe bestelling",
+          "bindIp": {
+            "part1": "Bind IP -adres",
+            "part2": "(Optioneel)"
+          },
+          "expDate": "Vervaldatum van de sleutel ongebonden naar IP -adres is 100 dagen",
+          "button": "creëren"
+        },
+        "note": {
+          "label": "Opmerking",
+          "point1": "Wij bieden u een sterke rust- en websocket -API, waarmee u kunt genieten van diensten zoals marktquery, automatische handel, enz. Bekijk het API -document.",
+          "point2": "Eén account kan maximaal 5 API -geheime toetsen maken.",
+          "point3": {
+            "part1": "Om verlies van activa te voorkomen, laat u uw API -sleutel niet aan iemand vrij. ",
+            "part2": "Als er meer dan één IP -adressen zijn, moet u ze scheiden met komma (bijv. 192.168.1.1,192.168.1.2,192.168.1.3)."
+          },
+          "point4": "Voor het handelen van API beperkt een enkele IP 100 verzoeken per minuut.",
+          "point5": "Elke API -toets is 100 dagen geldig en indien gekruist wordt deze automatisch gewijzigd in de inactieve modus.",
+          "point6": {
+            "part1": "Als u een vraag heeft, bereik dan ons dan",
+            "part2": "support@indoex.io"
+          }
+        }
+      },
+      "apiList": {
+        "title": "API -toetsen gemaakt",
+        "tHead": {
+          "createDate": "Creëer datum",
+          "notes": "Aantekeningen",
+          "permission": "Toestemming",
+          "accKey": "Toegangsleutel",
+          "ip": "Bind IP -adres",
+          "expire": "Vervallen in (dagen)",
+          "action": "Actie"
+        }
+      }
+    }
+  }
+}

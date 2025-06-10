@@ -1,0 +1,1787 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "貿易",
+        "items": {
+          "spot": {
+            "label": "現貨交易",
+            "desc": "立即購買或出售加密貨幣"
+          },
+          "margin": {
+            "label": "保證金貿易",
+            "desc": "用借入資金進行交易以進行更大的舉動"
+          },
+          "convert": {
+            "label": "轉變",
+            "desc": "在幾秒鐘內交換加密 - 簡單而快速"
+          }
+        }
+      },
+      "markets": "市場",
+      "earn": {
+        "label": "賺",
+        "items": {
+          "loans": {
+            "label": "貸款",
+            "desc": "解鎖資金，保留加密貨幣。"
+          },
+          "staking": {
+            "label": "賭注",
+            "desc": "賭注硬幣，賺取被動收入。"
+          }
+        }
+      },
+      "events": {
+        "label": "事件",
+        "items": {
+          "airdrop": {
+            "label": "空投",
+            "desc": "持有令牌，要求獎勵。"
+          },
+          "launchpad": {
+            "label": "發射台",
+            "desc": "在新令牌上進行投資。"
+          },
+          "tradeCompetition": {
+            "label": "貿易競賽",
+            "desc": "展示您的技能，獲獎。"
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "交換",
+      "web3": "Web3"
+    },
+    "auth": {
+      "signin": "登入",
+      "signup": "報名",
+      "see_all": "看看全部",
+      "new_listing": "新清單"
+    }
+  },
+  "sidebar": {
+    "overview": "概述",
+    "account": {
+      "label": "帳戶",
+      "children": {
+        "profile": "輪廓",
+        "security": "安全"
+      }
+    },
+    "wallet": {
+      "label": "錢包",
+      "children": {
+        "assets": "資產",
+        "deposit": "訂金",
+        "withdraw": "提取"
+      }
+    },
+    "history": {
+      "label": "歷史",
+      "children": {
+        "depositHistory": "存款歷史",
+        "withdrawHistory": "提取歷史"
+      }
+    },
+    "orders": {
+      "label": "訂單",
+      "children": {
+        "openOrders": "公開訂單",
+        "orderHistory": "訂購歷史記錄",
+        "tradeHistory": "貿易歷史"
+      }
+    },
+    "earn": {
+      "label": "賺",
+      "children": {
+        "loans": "貸款",
+        "staking": "賭注"
+      }
+    },
+    "loginActivity": {
+      "label": "登錄活動",
+      "children": {
+        "loginHistory": "登錄歷史記錄",
+        "deviceManagement": "設備管理"
+      }
+    },
+    "referrals": "推薦",
+    "api": "API",
+    "logout": "註銷",
+    "withdraw": "提取",
+    "deposit": "訂金"
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "增強您的加密交易經驗",
+      "subTitle": "見證無縫交易，實時見解並確保您需要的一切。"
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "點",
+        "newlyListed": "新列出",
+        "topGainers": "最高獎金"
+      },
+      "tableHead": {
+        "coins": "硬幣",
+        "lastPrice": "最後價格",
+        "24hChange": "24小時變化",
+        "markets": "市場",
+        "24hVolume": "24h卷"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "創建您的帳戶",
+        "content": "通過電子郵件在幾分鐘內註冊，設置安全密碼，並驗證您的身份以獲得安全的交易體驗。",
+        "button": "開始"
+      },
+      "step2": {
+        "heading": "完成您的KYC",
+        "content": "通過電子郵件在幾分鐘內註冊，設置安全密碼，並驗證您的身份以獲得安全的交易體驗。",
+        "button": "更新KYC"
+      },
+      "step3": {
+        "heading": "開始交易",
+        "content": "通過電子郵件在幾分鐘內註冊，設置安全密碼，並驗證您的身份以獲得安全的交易體驗。",
+        "button": "開始交易"
+      }
+    },
+    "getStarted": {
+      "heading": "開始",
+      "marketing": {
+        "24hVolume": "24h卷（BTC）",
+        "coinsListed": "列出了硬幣",
+        "countries": "國家",
+        "marketPairs": "市場對"
+      },
+      "benefits": {
+        "type_vendor": "供應商的好處",
+        "type_user": "用戶利益",
+        "vendor": {
+          "ben1": {
+            "title": "硬幣/令牌清單",
+            "content": "Indoex正在擴大投資訪問權限到全球所有合格的加密貨幣"
+          },
+          "ben2": {
+            "title": "貿易競賽",
+            "content": "我們的交易競賽使用戶展示了技能。持有0.1 BTC進入並贏得獎勵！"
+          },
+          "ben3": {
+            "title": "自定義配對",
+            "content": "與其他交易所不同，Indoex對額外的市場對收取無費用。"
+          },
+          "ben4": {
+            "title": "上市比賽",
+            "content": "我們的上市比賽以3 BTC獎勵獲勝者。等待更多的好處。"
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "硬幣/令牌清單",
+            "conent": "Indoex正在擴大投資訪問權限到全球所有合格的加密貨幣"
+          },
+          "ben2": {
+            "title": "貿易競賽",
+            "conent": "我們的交易競賽使用戶展示了技能。持有0.1 BTC進入並贏得獎勵！"
+          },
+          "ben3": {
+            "title": "自定義配對",
+            "conent": "與其他交易所不同，Indoex對額外的市場對收取無費用。"
+          },
+          "ben4": {
+            "title": "上市比賽",
+            "conent": "我們的上市比賽以3 BTC獎勵獲勝者。等待更多的好處。"
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "特徵",
+      "leftSection": {
+        "fet1": {
+          "title": "合理的佣金",
+          "content": "盈利的投資機會和條件"
+        },
+        "fet2": {
+          "title": "算法交易",
+          "content": "API用於交叉貿易機器人"
+        },
+        "fet3": {
+          "title": "算法交易",
+          "content": "API用於交叉貿易機器人"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "固定錢包",
+          "content": "將您的數字資產放在用戶錢包中"
+        },
+        "fet2": {
+          "title": "付款選項",
+          "content": "超過10種存入帳戶的方法"
+        },
+        "fet3": {
+          "title": "算法交易",
+          "content": "API用於交叉貿易機器人"
+        }
+      }
+    },
+    "partners": {
+      "heading": "合作夥伴",
+      "content": {
+        "title": "跨設備無縫貿易",
+        "subTitle": "下載我們的移動應用程序進行輕鬆的加密交易！",
+        "downloads": {
+          "playStore": {
+            "getIt": "繼續",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "下載",
+            "from": "應用商店"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "登錄到您的帳戶",
+      "items": {
+        "email": {
+          "label": "電子郵件",
+          "holder": "輸入電子郵件"
+        },
+        "password": {
+          "label": "密碼",
+          "holder": "輸入密碼"
+        }
+      },
+      "button": "登入",
+      "signinOption": "或登錄",
+      "noAcc": {
+        "part1": "沒有帳戶？",
+        "part2": "創建賬戶"
+      }
+    },
+    "signup": {
+      "title": "創建您的帳戶",
+      "items": {
+        "email": {
+          "label": "電子郵件",
+          "holder": "輸入電子郵件"
+        },
+        "username": {
+          "label": "使用者名稱",
+          "holder": "輸入用戶名"
+        },
+        "password": {
+          "label": "密碼",
+          "holder": "輸入密碼"
+        },
+        "country": {
+          "label": "國家",
+          "holder": "選擇您的國家",
+          "options": {
+            "op1": "美國",
+            "op2": "印度",
+            "op3": "英國",
+            "op4": "德國"
+          }
+        },
+        "referrals": {
+          "label": "推薦代碼（可選）",
+          "holder": "輸入推薦代碼"
+        }
+      },
+      "terms": {
+        "part1": "我接受",
+        "part2": "條款和條件"
+      },
+      "button": "報名",
+      "signupOption": "或註冊",
+      "haveAcc": {
+        "part1": "已經有一個帳戶？",
+        "part2": "登入"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "在幾分鐘內註冊 - 簽名，存入並開始輕鬆地交易加密貨幣！",
+      "button": "開始"
+    },
+    "services": {
+      "label": "服務",
+      "items": {
+        "terms": "使用條款",
+        "policy": "隱私政策",
+        "status": "錢包狀態",
+        "announcements": "公告",
+        "media": "媒體"
+      }
+    },
+    "legalisation": {
+      "label": "合法化",
+      "items": {
+        "fee": "費用",
+        "legalities": "合法",
+        "kyc": "AML / KYC政策",
+        "protect": "在線保護自己",
+        "verification": "確認"
+      }
+    },
+    "others": {
+      "label": "其他的",
+      "items": {
+        "faq": "常問問題",
+        "contact": "聯繫我們",
+        "support": "客戶支持：",
+        "mails": "申請列表："
+      }
+    },
+    "rights": "©2025 IDOEX保留所有權利。",
+    "alert": "加密貨幣投資受到市場風險的影響 - 明智地進行投資並保持知情。"
+  },
+  "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "訂單書",
+        "tradehistory": "貿易歷史"
+      },
+      "tHead": {
+        "price": "價格（USDT）",
+        "amount": "金額（BTC）",
+        "total": "全部的"
+      },
+      "more": "更多的"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24小時變化",
+        "24hHigh": "高24小時",
+        "24hLow": "低24小時",
+        "24hVolumeBtc": "24h卷（BTC）",
+        "24hVolumeUsdc": "24小時（USDT）"
+      }
+    },
+    "tradeForm": {
+      "buy": "買",
+      "sell": "賣",
+      "spot": "點",
+      "cross": "叉",
+      "isolated": "孤立",
+      "limit": "限制",
+      "market": "市場",
+      "stop": "停止限制",
+      "normal": "普通的",
+      "borrow": "借",
+      "repay": "償還",
+      "price": "價格",
+      "amount": "數量",
+      "total": "全部的",
+      "available": "可用的",
+      "txnFee": "TXN費用",
+      "borrowing": "借用",
+      "button": "登錄 /註冊"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "公開訂單",
+        "orderhistory": "訂購歷史記錄"
+      },
+      "message": {
+        "part1": "登入",
+        "part2": "或者",
+        "part3": "報名",
+        "part4": "交易"
+      }
+    },
+    "connection": "穩定連接"
+  },
+  "convertPage": {
+    "tabs": {
+      "faq": "常問問題",
+      "convert": "轉變",
+      "history": "歷史"
+    },
+    "convertForm": {
+      "title": "轉變",
+      "subTitle": "快速，輕鬆地通過即時執行來轉換數百個加密貨幣。",
+      "terms": {
+        "availBalance": "可用的餘額",
+        "from": "從",
+        "to": "到",
+        "max": "最大限度",
+        "rate": "速度",
+        "button": "登錄 /註冊",
+        "tradeSpot": "貿易點"
+      }
+    },
+    "convertBar": {
+      "barTitle": "將BTC（比特幣）轉換為其他硬幣"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "靈活利率貸款",
+      "fixed": "固定利率貸款",
+      "history": "貸款歷史",
+      "data": "貸款數據"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "以靈活的價格借用交易或股份，並最大程度地提高回報。",
+        "features": {
+          "f1": "隨時償還",
+          "f2": "無交易費"
+        },
+        "buttons": {
+          "b1": "正在進行的訂單",
+          "b2": "資產概述"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "抵押品",
+            "enterAmount": "輸入金額",
+            "wantBorrow": "我想藉",
+            "max": "最大限度",
+            "details": "細節"
+          },
+          "button": "登錄 /註冊"
+        }
+      },
+      "borrowTable": {
+        "title": "借入市場",
+        "search": "搜尋",
+        "viewMore": "查看更多",
+        "tHead": {
+          "coin": "可貸硬幣",
+          "hIntRate": "小時的利率",
+          "aIntRate": "年利率",
+          "action": {
+            "label": "行動",
+            "button": "借"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "item2": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "item3": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "item4": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "item5": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "您選擇的固定利率借用或貸款",
+        "stats": {
+          "totalBorrowed": "總借",
+          "currentOrders": "當前訂單",
+          "rate": {
+            "label": "定制利率",
+            "content": "支持多資產抵押"
+          }
+        },
+        "myOrder": {
+          "label": "我的訂單",
+          "pOrders": {
+            "label": "等待訂單",
+            "content": "檢查並管理無與倫比的訂單"
+          },
+          "oOrders": {
+            "label": "正在進行的訂單",
+            "content": "檢查，調整LTV和還款匹配的訂單"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "借",
+          "terms": {
+            "bAmount": "借入金額",
+            "min": "最小0.005 BTC",
+            "expRate": "預期利率",
+            "intRate": "輸入利率",
+            "refMarket": "參考市場供應率",
+            "duration": "期間",
+            "collateral": "抵押品",
+            "setUp": "建立抵押品",
+            "autoRepay": "自動修復"
+          }
+        },
+        "supply": {
+          "label": "供應",
+          "terms": {
+            "bAmount": "借入金額",
+            "min": "最小0.005 BTC",
+            "expRate": "預期利率",
+            "intRate": "輸入利率",
+            "refMarket": "參考市場供應率：5.04％",
+            "duration": "期間",
+            "collateral": "抵押品",
+            "setUp": "建立抵押品",
+            "autoRepay": "自動修復"
+          }
+        },
+        "button": "登錄 /註冊"
+      },
+      "BandStable": {
+        "title1": "我想藉",
+        "title2": "我想提供",
+        "terms": {
+          "days": "天",
+          "all": "全部",
+          "duration": "期間"
+        },
+        "borrowTableHead": {
+          "bRate": "借入利率（固定）",
+          "duration": "期間",
+          "minBAmount": "最小借入金額",
+          "bAbleAmount": "可藉用的金額"
+        },
+        "supplyTableHead": {
+          "supplyApr": "供應APR（固定）",
+          "duration": "期間",
+          "estInt": "Est。興趣",
+          "tAmount": "總金額"
+        }
+      },
+      "howItWorks": {
+        "title": "固定利率貸款如何工作？",
+        "tabs": {
+          "borrower": "作為藉款人",
+          "supplier": "作為供應商"
+        },
+        "step1": {
+          "title": "1。訂單放置",
+          "content": "下借訂單或從借貸市場中選擇現有訂單。"
+        },
+        "step2": {
+          "title": "2。選擇抵押品",
+          "content": "從您的現貨錢包資產列表中選擇抵押資產。貸款到價值（LTV）應低於初始LTV。"
+        },
+        "step3": {
+          "title": "3。確認訂單",
+          "content": "確認訂單詳細信息，包括估計的利息，條款，保證金呼叫LTV等。下訂單後，您的抵押品資產將被凍結在您的現貨錢包中。"
+        },
+        "step4": {
+          "title": "4。訂單匹配",
+          "content": "一旦匹配，您的抵押品就會搬運到義務保管，您會收到現貨錢包中的借入金額（減去利息）。監視LTV以避免清算。"
+        },
+        "step5": {
+          "title": "5。還款",
+          "content": "償還到期日期以避免罰款。到期後，每小時適用於24小時的3倍利息罰款，然後您的抵押品可以清算。"
+        }
+      },
+      "advantages": {
+        "title": "固定利率貸款優勢",
+        "adv1": {
+          "title": "借款人的穩定成本",
+          "content": "鎖定固定的持續時間，鎖定固定的APR，消除波動和意外的成本。"
+        },
+        "adv2": {
+          "title": "有效的自動化過程",
+          "content": "享受輕鬆，自動借貸和借貸經驗，可提供自動修復和自動續訂選項。"
+        },
+        "adv3": {
+          "title": "供應商有吸引力的固定APR",
+          "content": "為您的資產提供可自定義和固定的APR的資產。"
+        },
+        "adv4": {
+          "title": "多資產抵押",
+          "content": "借款人可以將多個資產設置為抵押，以降低清算風險。"
+        }
+      },
+      "faq": {
+        "title": "常問問題",
+        "faq1": {
+          "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "faq2": {
+          "ques": "我可以隨時取消我的加密貨幣嗎？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "faq3": {
+          "ques": "在贖回期內，我會贏得獎勵嗎？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        },
+        "faq4": {
+          "ques": "堆放安全嗎？",
+          "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "帶有靈活條款的股份可獲得最高收入",
+      "content": "通過您的條款賺取被動收入，並使用靈活的高收益放入選擇。",
+      "overview": {
+        "label": "概述",
+        "terms": {
+          "assets": "資產（USDT）",
+          "yesProfit": "昨天的利潤（USDT）",
+          "totalProfit": "總利潤（USDT）"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "賭注",
+        "content": "Staking可以讓您獲得加密貨幣的獎勵。您可以隨時使用或兌換，大多數資產在此期間沒有獎勵。"
+      },
+      "info2": {
+        "title": "學期",
+        "content": "您對產品的持有期確定收益率。靈活的期限產品可讓您根據需要訪問投資。"
+      },
+      "info3": {
+        "title": "贖回期",
+        "content": "這是由Staking協議設置的。每個加密貨幣都有自己的等待期，以取消資產。在此期間，沒有獎勵或收益率。"
+      }
+    },
+    "table": {
+      "title": "所有產品",
+      "terms": {
+        "matchAssets": "匹配可用資產",
+        "search": "搜尋"
+      },
+      "tHead": {
+        "coin": "硬幣",
+        "estApr": "Est。 4月",
+        "reward": "獎勵硬幣",
+        "action": {
+          "label": "行動",
+          "button": "賭注"
+        }
+      }
+    },
+    "faq": {
+      "label": "常問問題",
+      "faq1": {
+        "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+        "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+      },
+      "faq2": {
+        "ques": "我可以隨時取消我的加密貨幣嗎？",
+        "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+      },
+      "faq3": {
+        "ques": "在贖回期內，我會贏得獎勵嗎？",
+        "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+      },
+      "faq4": {
+        "ques": "堆放安全嗎？",
+        "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+      }
+    },
+    "stakeForm": {
+      "title": "賭注",
+      "form": {
+        "terms": {
+          "currency": "貨幣",
+          "selAmount": "選擇硬幣",
+          "amount": "數量",
+          "minAmount": "最小金額0.0001 BTC",
+          "refAPR": "參考APR",
+          "terms": "學期",
+          "fundAcc": "資金帳戶",
+          "maxAmount": "最大金額",
+          "flexible": "靈活的"
+        }
+      },
+      "preview": {
+        "lable": "預覽",
+        "terms": {
+          "subDate": "訂閱日期",
+          "accDate": "應計日期",
+          "profitDisDate": "利潤分配日期",
+          "redPeriod": "贖回期",
+          "profitRec": "收到的利潤",
+          "days": "天",
+          "daily": "日常的"
+        }
+      },
+      "estimated": {
+        "label": "估計回報",
+        "terms": {
+          "earning": "BTC收益",
+          "agg": {
+            "part1": "我已經閱讀並同意",
+            "part2": "用戶同意人"
+          }
+        }
+      },
+      "button": "賭注"
+    }
+  },
+  "marketPage": {
+    "tabs": {
+      "spot": "點",
+      "newListed": "新列出",
+      "topGainer": "最高獎金"
+    },
+    "quickViewTable": {
+      "tGainer": "最高獎金",
+      "tranding": "趨勢",
+      "newListing": "新列表",
+      "tHead": {
+        "pairs": "成對",
+        "price": "價格",
+        "24hChange": "24小時變化"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "全部",
+        "search": "搜尋"
+      },
+      "tHead": {
+        "coin": "硬幣",
+        "lPrice": "最後價格",
+        "24hChange": "24小時變化",
+        "24hHigh": "高24小時",
+        "24hLow": "低24小時",
+        "24hVol": "24h卷",
+        "chart": "圖表",
+        "trade": "貿易"
+      },
+      "button": "貿易"
+    }
+  },
+  "airDrop": {
+    "title": "要求您免費的加密貨幣！",
+    "subTitle": "加入最新的Indoex Airdrop活動並立即賺取。",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在進行",
+      "upcoming": "即將到來",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "氣流供應",
+      "start": "開始",
+      "end": "結尾",
+      "cardContent": "啟動板將是貓猿令牌的核心實用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "about": "關於",
+        "howToJoin": "如何加入",
+        "tokenPerAir": "每個空投的令牌",
+        "upTo": "到",
+        "referral": "推薦",
+        "kyc": "kyc",
+        "kycNoReq": "KYC不是必需的",
+        "guide": "分步指南",
+        "doNotForgot": "不要忘記加入我們的電報頻道，在Twitter上關注我們，並訂閱我們的新聞通訊以接收新的Airdrops！",
+        "overview": "概述",
+        "web": "網站",
+        "exp": "資源管理器",
+        "git": "github",
+        "wPaper": "白皮書",
+        "ann": "公告",
+        "sMedia": "社交媒體",
+        "join": "參加Airdrop活動",
+        "sDate": "開始日期",
+        "eDate": "結束日期",
+        "participants": "活躍的參與者",
+        "button": "參與空調"
+      }
+    }
+  },
+  "launchPad": {
+    "title": "要求您免費的加密貨幣！",
+    "subTitle": " 使用Indoex LaunchPad啟動您的加密代幣",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在進行",
+      "upcoming": "即將到來",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "氣流供應",
+      "start": "開始",
+      "end": "結尾",
+      "cardContent": "啟動板將是貓猿令牌的核心實用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "倒數",
+        "days": "天",
+        "hours": "小時",
+        "minutes": "分鐘",
+        "seconds": "秒",
+        "sPrice": "IEO銷售價格",
+        "about": "關於",
+        "details": "細節",
+        "fName": "姓名",
+        "web": "網站",
+        "tName": "股票名稱",
+        "sSupply": "會話供應",
+        "tSupply": "總供應",
+        "ieoPrice": "IEO價格",
+        "ieoSDate": "IEO開始日期",
+        "ieoEDate": "IEO結束日期",
+        "bonus": "獎金",
+        "tecFou": "技術基礎",
+        "docu": "文件",
+        "wPaper": "白皮書",
+        "team": "團隊",
+        "sMedia": "社交媒體"
+      },
+      "form": {
+        "terms": {
+          "cBal": "當前平衡",
+          "details": "細節",
+          "sDate": "開始日期",
+          "eDate": "結束日期",
+          "tPrice": "令牌價格",
+          "minPrice": "最低價格",
+          "ord": "訂單",
+          "bar": "酒吧",
+          "buy": "買",
+          "rec": "收到",
+          "button": "登錄 /註冊"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "要求您免費的加密貨幣！",
+    "subTitle": "交易越多，贏得越多！",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在進行",
+      "upcoming": "即將到來",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "氣流供應",
+      "start": "開始",
+      "end": "結尾",
+      "cardContent": "啟動板將是貓猿令牌的核心實用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "貿易競賽",
+        "moreTrade": "您交易越多",
+        "moreWin": "您的機會越高。",
+        "details": "細節",
+        "1st": "第一",
+        "2nd": "第二",
+        "3rd": "第三",
+        "4th": "第四",
+        "5th": "第五",
+        "6th": "第六",
+        "7th": "第七",
+        "8th": "第八",
+        "9th": "第9",
+        "10th": "第十",
+        "11th-15th": "第11-15號",
+        "16th-20th": "第16-20號",
+        "pOverview": "參與概述",
+        "position": "位置",
+        "user": "用戶",
+        "vol": "體積",
+        "join": "參加貿易競賽",
+        "ieoSDate": "IEO開始日期",
+        "ieoEDate": "IEO結束日期",
+        "button": "去貿易",
+        "participants": "活躍的參與者"
+      }
+    }
+  },
+  "walletStatus": {
+    "title": "錢包狀態",
+    "terms": {
+      "search": "搜尋"
+    },
+    "tHead": {
+      "name": "姓名",
+      "tSupply": "總供應",
+      "cSupply": "Curr。供應",
+      "buyFee": "購買費",
+      "sellFee": "出售費",
+      "status": "地位",
+      "buttons": {
+        "active": "積極的",
+        "maintenance": "維護"
+      }
+    }
+  },
+  "termsOfUse": {
+    "title": "使用條款",
+    "subTitle": "INDOEX交換條款",
+    "content": "這些使用條款規定了成員之間的權利和義務（如第2條所述，包括過去成員的人）和與在線服務“ Indoex交換”和“ Indoex Instant Instant Exchange”有關的Fisco Cryptocurrency Exchange Inc.（“我們”或“ Company”），我們提供了（在Domain https https https https https：//indoex.ioex.ios.ios.io of Service of of of Service”）在使用服務之前，請閱讀“有關重要事項的解釋”和這些使用條款的全文（包括所有規則，解釋性文件和其他各種規定等。與服務有關，並不時發佈在我們的網站上；此處相同）。",
+    "arti1": {
+      "title": "第1條使用條款的應用範圍",
+      "content": {
+        "point1": "這些使用條款適用於我們和成員（在本第1條中，包括過去成員的人），並規定了有關公司的權利和義務以及與服務有關的所有權利和義務。",
+        "point2": "這是使用每個成員了解重要事項解釋的全文的內容的條件，以及這些使用條款，並同意這些使用條款規定了有關公司和成員與服務有關的所有權利和義務的所有事項。",
+        "point3": " 如果成員是未成年人，則成員必須在使用服務之前獲得其法定監護人的同意。",
+        "point4": " 如果成員使用該服務，則將認為該成員同意這些使用條款規定了有關公司和成員與服務的權利和義務的所有事項。"
+      }
+    },
+    "arti2": {
+      "title": "第2條成員",
+      "content": {
+        "point1": "希望成為會員的人必鬚根據我們的規定程序提交會員註冊申請。我們可以決定酌情拒絕會員註冊申請，只有我們被我們接受的人才能成為會員。",
+        "ponit2": "成員完成服務的註冊後，我們可能會要求成員再次提交我們指定的必要文件，如果有必要在交易時執行身份驗證，則相關法律和條例規定，否則我們認為有必要...",
+        "point3": "如果成員希望取消他或她作為成員的註冊，則該成員可以根據我們的規定程序取消其成員註冊。"
+      }
+    },
+    "arti3": {
+      "title": "第3條登錄ID和密碼管理",
+      "content": {
+        "point1": "成員必須按照自己的責任管理其註冊的登錄ID和密碼，並且不得借給，分配，出售或以其他方式將此類信息貸款給第三方。",
+        "point2": "我們將通過確認用戶登錄到我們的網站或使用服務匹配預設的登錄ID和密碼時輸入的登錄ID和密碼來驗證會員的身份。如果由於這種驗證，我們將用戶視為真實用戶，則除非成員的錯誤識別是由於我們歸因於我們的原因，否則根據該驗證執行的交易將被視為有效。",
+        "point3": "由於成員可歸因的原因和（ii）未經授權的使用或使用此類洩漏的登錄ID造成的洩漏ID或密碼造成的損害承擔全部責任。",
+        "point4": "如果成員意識到登錄ID或密碼已被盜或已被第三方使用，則成員必須立即通知我們該效果並遵循我們的說明。"
+      }
+    },
+    "arti4": {
+      "title": "第4條註冊信息的變更",
+      "content": {
+        "point1": "如果會員的註冊信息有任何更改，則成員必須通過我們的規定方法通知我們，而無需延遲信息，並提交我們要求的必要文件。"
+      }
+    }
+  },
+  "announcementsPage": {
+    "title": "公告",
+    "terms": {
+      "search": "搜尋",
+      "annu": "Indoex Memebox具有初始列出的令牌"
+    },
+    "sidebar": {
+      "all": "全部",
+      "news": {
+        "label": "消息",
+        "item1": "Indoex更新",
+        "item2": "公共新聞"
+      },
+      "newListing": "新列表",
+      "events": {
+        "label": "事件",
+        "item1": "項目1",
+        "item2": "項目2"
+      },
+      "web3": "Web3",
+      "api": "API",
+      "dListing": "列入"
+    }
+  },
+  "mediaKitPage": {
+    "title": "媒體套件",
+    "content": "遵循這些準則，以確保在營銷傳播中促進indoex（包括廣告，文章，網站和印刷材料）時的一致性和準確性",
+    "terms": {
+      "downloadHeading": "下載Indoex品牌徽標使用指南",
+      "guideHeading": "品牌準則",
+      "buttons": {
+        "downloadPdf": "下載PDF",
+        "download": "下載"
+      },
+      "brandAssets": "品牌資產",
+      "logos": "徽標",
+      "logosContent": "在此處獲取官方的IDOEX徽標。我們的徽標代表了Indoex的品牌，因此我們要求您使用它們而沒有任何更改。",
+      "sairaBold": "Saira Bold",
+      "inter": "常規和中等",
+      "typeFace": "字體",
+      "typeFaceContent": "獲取我們公司字體，賽拉和國際媒介的副本。",
+      "colors": "顏色",
+      "colorsContent": "以下是Indoex的主要和次要品牌顏色",
+      "green": "青菜",
+      "dBlue": "深藍色"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "什麼是加密貨幣堆積，它是如何工作的？",
+      "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+    },
+    "faq2": {
+      "ques": "我可以隨時取消我的加密貨幣嗎？",
+      "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+    },
+    "faq3": {
+      "ques": "在贖回期內，我會贏得獎勵嗎？",
+      "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+    },
+    "faq4": {
+      "ques": "堆放安全嗎？",
+      "ans": "放置是鎖定您的加密貨幣以支持區塊鍊網絡的操作的過程。作為回報，您獲得了獎勵 - 類似於賺取利息。通過存放資產，您將幫助驗證交易並確保網絡。您的利益越長，取決於令牌和網絡條件，您可以積累的獎勵越多。"
+    }
+  },
+  "feePage": {
+    "title": "費用結構",
+    "terms": {
+      "search": "搜尋"
+    },
+    "tHead": {
+      "name": "姓名",
+      "minDeposit": "最小。訂金",
+      "minWithdraw": "最小。提取",
+      "withdrawFee": "提取費",
+      "makerFee": "製造商費",
+      "takerFee": "收費者費用"
+    }
+  },
+  "contactPage": {
+    "title": "聯繫我們",
+    "subTitle": "如果您有任何疑問，請與賽道Indoex團隊聯繫。",
+    "terms": {
+      "email": "電子郵件",
+      "enterEmail": "輸入您的電子郵件",
+      "category": "類別",
+      "selectType": "選擇您的查詢類型",
+      "message": "訊息",
+      "messageHere": "消息在這裡",
+      "button": "提交",
+      "phone": "電話",
+      "emailBot": "電子郵件"
+    }
+  },
+  "indoexVerify": {
+    "title": "IDAEX驗證",
+    "content": "我們創建了一個頁面來驗證Indoex渠道和業務帳戶以防止欺詐。下面，您可以檢查所有官方通信渠道：社交媒體組，網站，電子郵件地址和業務帳戶。",
+    "terms": {
+      "platform": "平台",
+      "enterUrl": "輸入URL",
+      "web": "網站",
+      "button": "搜尋",
+      "message": "請使用Indoex驗證檢查源是否正式代表Indoex。 電子郵件地址，Twitter，Instagram，Facebook或Telegram ID。",
+      "notice": "注意",
+      "noticeMessage": {
+        "part1": "請不要聯繫任何非官方/未驗證的來源，也不要向他們透露您的帳戶詳細信息。有關更多查詢，請聯繫",
+        "part2": "INDOEX支持"
+      }
+    }
+  },
+  "dashboard": {
+    "overviewPage": {
+      "assets": "總資產",
+      "wallet": {
+        "label": "錢包摘要",
+        "terms": {
+          "tDeposit": "總存款",
+          "tBuyOrders": "總購買訂單",
+          "tWithdraw": "總撤回",
+          "tSellOrders": "總賣出訂單",
+          "deposit": "訂金",
+          "withdraw": "提取",
+          "myAssets": "我的資產"
+        }
+      },
+      "security": {
+        "label": "安全",
+        "content": "提高您的帳戶安全強度",
+        "terms": {
+          "strength": "力量",
+          "goToSPage": "轉到安全頁面",
+          "passkey": "Passkey",
+          "2fa": "2步驗證",
+          "antiPhi": "反釣魚代碼",
+          "button": "積極的"
+        }
+      },
+      "market": {
+        "label": "市場",
+        "tabs": {
+          "trending": "趨勢",
+          "topVolume": "頂量",
+          "favorite": "最喜歡的"
+        },
+        "terms": {
+          "price": "價格"
+        },
+        "button": "查看全部"
+      },
+      "tradeTable": {
+        "title": "貿易歷史",
+        "button": "查看全部",
+        "tHead": {
+          "filledTime": "填充時間",
+          "pair": "一對",
+          "bOrS": "買賣",
+          "orderType": "訂單類型",
+          "fillPrice": "填充價格",
+          "amount": "數量",
+          "vol": "體積",
+          "fee": "費用"
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "title": "輪廓",
+        "nickName": {
+          "label": "暱稱",
+          "content": "這是您的顯示名稱，將在平台上顯示給其他人",
+          "button": "更改暱稱",
+          "popUp": {
+            "title": "更改暱稱",
+            "nickname": "暱稱",
+            "enterNickname": "輸入暱稱",
+            "message": "5-20個字符。不允許特殊字符。",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "確認"
+            },
+            "successMessage": "暱稱成功改變了"
+          }
+        },
+        "photo": {
+          "label": "照片",
+          "content": "上傳個人資料圖片以個性化您的帳戶並使其可識別",
+          "buttons": {
+            "upload": "上傳",
+            "delete": "刪除"
+          },
+          "popUp": {
+            "title": "更改您的個人資料圖片",
+            "avatar": "頭像",
+            "system_upload": "從此設備上傳",
+            "clickSelect": "單擊以選擇",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "確認"
+            },
+            "successMessage": "個人資料圖片成功更改了"
+          }
+        },
+        "profileChangeSucMessage": "個人資料圖片成功更改了",
+        "nameChangeSucMessage": "暱稱成功改變了"
+      },
+      "accManagement": {
+        "title": "帳戶管理",
+        "closeAcc": {
+          "label": "關閉帳戶",
+          "content": "關閉帳戶後，它是永久的，無法恢復",
+          "popUp": {
+            "title": "要求刪除帳戶",
+            "content": {
+              "part1": "親愛的有價值的客戶，如果您想通過IDOEX永久刪除您的帳戶，請發送電子郵件",
+              "part2": "support@indoex.io。",
+              "part3": "該請求必須從用於註冊您的帳戶的相同電子郵件地址發送。"
+            },
+            "notice": "注意",
+            "noticePoints": {
+              "point1": "請注意，帳戶刪除是永久的。刪除帳戶後，您將無法訪問該帳戶，包括任何交易歷史記錄或數據。",
+              "point2": "如果您的帳戶中剩下任何資產，請確保解決這些資產。否則，這些資產將被丟失，並且在刪除帳戶後將無法收回。",
+              "point3": {
+                "part1": "儘管Indoex可以根據請求永久刪除您的帳戶，但請注意，我們必須在刪除後指定的期限內保留某些個人數據。該保留是法律要求的，例如AML/CFT法規，或者是處理未來任何爭議或索賠所必需的。一旦法律要求的保留期經過，您的個人數據將被刪除。供參考，請參閱Indoex",
+                "part2": "條款和條件"
+              },
+              "point4": {
+                "part1": "有關我們如何存儲您的個人數據的其他信息可以在我們的",
+                "part2": "隱私政策。"
+              }
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "securitySetting": {
+        "title": "安全",
+        "emailInfo": {
+          "label": "電子郵件身份驗證",
+          "content": "使用電子郵件身份驗證登錄和交易確認來增強帳戶安全性",
+          "button": "更改電子郵件",
+          "popUp1": {
+            "title": "您確定要更新鏈接的電子郵件地址嗎？",
+            "message": {
+              "title": "取消鏈接電子郵件的步驟",
+              "content": "為了獲得您的帳戶的安全性，請注意，更改了您的電子郵件地址，鏈上提款，內部轉移，菲亞特提款，卡交易，P2P交易和廣告活動將暫時暫停24小時。"
+            },
+            "buttons": {
+              "cancel": "取消",
+              "changeEmail": "更改電子郵件"
+            }
+          },
+          "popUp2": {
+            "title": "安全驗證",
+            "codeSentAt": "驗證代碼將發送到",
+            "enterCode": "請輸入電子郵件驗證代碼",
+            "2faCode": "Google 2FA代碼",
+            "enter2fa": "請輸入2FA代碼",
+            "havingProb": "驗證有問題嗎？",
+            "buttons": {
+              "sendCode": "發送代碼",
+              "nextStep": "下一步"
+            }
+          },
+          "popUp3": {
+            "title": "更改電子郵件",
+            "newEmail": "新電子郵件",
+            "enterEmail": "請輸入您的新電子郵件",
+            "veriCode": "新的電子郵件驗證代碼",
+            "enterveriCode": "請輸入電子郵件驗證代碼",
+            "noCode": "沒有收到驗證代碼？",
+            "checkSpam": "請檢查您的垃圾郵件文件夾以獲取此電子郵件",
+            "buttons": {
+              "sendCode": "發送代碼",
+              "cancel": "取消",
+              "submit": "提交"
+            }
+          }
+        },
+        "passInfo": {
+          "label": "登錄密碼",
+          "content": "設置強密碼以保護您的帳戶免受未經授權的訪問",
+          "button": "更改密碼",
+          "popUp": {
+            "title": "更改密碼",
+            "notice": "注意",
+            "noticeMessage": "為了獲得您的帳戶的安全性，在刪除了Google兩因素身份驗證後，諸如鍊上取款，內部轉移，FIAT提款，P2P交易和其他交易等措施將暫時暫停24小時。",
+            "oldPass": "舊密碼",
+            "oldPassHolder": "請輸入您當前的密碼",
+            "newPass": "新密碼",
+            "newPassHolder": "請輸入新密碼",
+            "confirmPass": "確認新密碼",
+            "confirmPassHolder": "請再次輸入新密碼",
+            "2faCode": "2FA驗證代碼",
+            "2faCodeHolder": "請輸入2FA代碼",
+            "havingIssue": "驗證有問題嗎？",
+            "button": "下一步"
+          }
+        },
+        "twofactor": {
+          "label": "兩個因素身份驗證",
+          "content": "在訪問帳戶時鏈接用於安全的兩因素身份驗證的身份驗證器應用程序",
+          "buttons": {
+            "setUp": "設定",
+            "disable": "禁用"
+          },
+          "addPopUp1": {
+            "title": "安全驗證",
+            "codeAt": "驗證代碼將發送到",
+            "noCode": {
+              "part1": "無法收到驗證代碼？",
+              "part2": "重新發出驗證代碼"
+            },
+            "havingProb": "驗證有問題嗎？",
+            "error": {
+              "wrongOtp": "您輸入的OTP不正確。",
+              "expOtp": "驗證代碼已過期。請請求新代碼。"
+            }
+          },
+          "addPopUp2": {
+            "title": "設置Google兩因素身份驗證",
+            "downloadMsgTitle": "下載Google Authenticator（Android / ios）",
+            "downloadMsgContent": "在App Store或Google Play上搜索“ Google Authenticator”並下載應用程序。",
+            "addKeyTitle": "將密鑰短語添加到Google Authenticator",
+            "addKeyContent": "您可以從App Store或Google Play下載Google Authenticator。只需搜索“ Google Authenticator”並安裝應用程序。",
+            "alertMsg": "如果您丟失或更換設備，那麼關鍵短語對於恢復Google Authenticator至關重要。請在完成設置之前安全地存儲它。",
+            "2faCode": "Google 2FA代碼",
+            "enter2faCode": "請輸入2FA代碼 ",
+            "copyKey": "複製密鑰",
+            "copied": " 複製！",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "確認"
+            }
+          },
+          "removePopUp1": {
+            "title": "安全驗證",
+            "loginPass": "登錄密碼",
+            "enterPass": "請輸入密碼 ",
+            "2faCode": "Google 2FA代碼",
+            "enter2faCode": "請輸入2FA代碼",
+            "button": "下一步"
+          },
+          "removePopUp2": {
+            "title": "確認刪除Google 2FA身份驗證",
+            "notice": "注意",
+            "noticeMess": "對於您的帳戶的安全性，在刪除了Google兩因素身份驗證之後，諸如鍊上取款，內部轉移，法定提款，P2P交易和其他交易等措施將暫時暫停24小時。",
+            "buttons": {
+              "cancel": "cnacel",
+              "remove": "消除"
+            }
+          }
+        },
+        "secondaryPin": {
+          "label": "次要別針",
+          "content": "設置個性化代碼，以確保平台的電子郵件是真實的，而不是網絡釣魚的嘗試",
+          "buttons": {
+            "forgot": "忘了",
+            "change": "改變"
+          },
+          "forgotPopUp": {
+            "title": "安全驗證",
+            "enter2fa": "輸入2FA代碼",
+            "havingProb": "驗證有問題嗎？",
+            "error": {
+              "wrongOtp": "您輸入的OTP不正確。",
+              "expOtp": "驗證代碼已過期。請請求新代碼。"
+            }
+          },
+          "changepopUp": {
+            "title": "更新PIN",
+            "currentPin": "當前銷",
+            "enterCurrentPin": "請輸入當前的別針",
+            "newPin": "新別針",
+            "enterNewPin": "請輸入新的別針",
+            "confirmPin": "確認PIN",
+            "enterCofirmPin": "請再次輸入新的別針",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "確認"
+            }
+          },
+          "forgotSuccessMessage": "您的次要別針發送到註冊郵件地址",
+          "changeSuccessMessage": "您的次要別針更新"
+        },
+        "antiPhishing": {
+          "label": "反網絡釣魚",
+          "content": "平台發送給您的電子郵件將包含反向釣魚代碼，以區分假郵件",
+          "button": "設定",
+          "popUp1": {
+            "title": "設置反捕撈代碼",
+            "alert": "請不要向包括Indoex員工在內的任何人披露您的反釣魚代碼。",
+            "antiPhiCode": "反釣魚代碼",
+            "enterCode": "請輸入4至20個字符",
+            "message": "請輸入僅包含字母，數字和強調的4至20個字符。請不要將您經常使用的密碼設置為反向釣魚代碼。",
+            "whatIsIt": "什麼是反向電話代碼？",
+            "whatIsItContent": "您的反向播種代碼將出現在所有Indoex電子郵件中，可幫助您發現真正的溝通並避免騙局。",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "確認"
+            },
+            "error": "發生錯誤"
+          },
+          "popUp2": {
+            "title": "安全驗證",
+            "enter2fa": "輸入2FA代碼",
+            "havingProb": "驗證有問題嗎？",
+            "error": {
+              "wrongOtp": "您輸入的OTP不正確。",
+              "expOtp": "驗證代碼已過期。請請求新代碼。"
+            }
+          }
+        }
+      },
+      "authLevel": {
+        "title": "身份驗證級別",
+        "terms": {
+          "idLevel": "識別水平",
+          "limit": "24小時提取限制",
+          "unlimited": "無限"
+        }
+      }
+    },
+    "assetsPage": {
+      "title": "總資產",
+      "tabs": {
+        "all": "全部",
+        "delisted": "精神錯亂"
+      },
+      "terms": {
+        "hideLabel": "隱藏零餘額資產",
+        "search": "搜尋"
+      },
+      "tHead": {
+        "crypto": "加密",
+        "tBal": "總餘額",
+        "avl": "可用的",
+        "inOrders": "在訂單中",
+        "avgPrice": "avg。價格",
+        "action": "行動",
+        "buttons": {
+          "withdraw": "提取",
+          "deposit": "訂金"
+        }
+      }
+    },
+    "depositPage": {
+      "steps": {
+        "title": "存款步驟",
+        "step1": {
+          "title": "複製錢包地址",
+          "content": "選擇加密，網絡和復制地址。"
+        },
+        "step2": {
+          "title": "確認地址",
+          "content": "粘貼複製的提款地址"
+        },
+        "step3": {
+          "title": "轉移確認",
+          "content": "等待區塊鏈轉移確認"
+        },
+        "step4": {
+          "title": "成功存款",
+          "content": "Indoex將將資產發送到錢包。"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "選擇加密",
+          "selectNet": "選擇網絡",
+          "selectNetHolder": "選擇要存入的網絡",
+          "copyAdd": "複製錢包地址",
+          "addPub": "地址已發布！",
+          "addPubContent": "請使用下面的地址使用噸幣網絡存放您的加密貨幣。為了方便起見，您可以復制地址或掃描QR碼。",
+          "copy": "複製",
+          "copied": "複製"
+        },
+        "tips": {
+          "label": "尖端",
+          "content": "為了確保您的資金，我們的客戶支持團隊可以通過電話與您聯繫以確認您的提款"
+        },
+        "faq": {
+          "label": "常見問題解答",
+          "button": "查看更多",
+          "faq1": {
+            "ques": "如何存入Falconx？"
+          },
+          "faq2": {
+            "ques": "什麼是加密網絡？"
+          },
+          "faq3": {
+            "ques": "我應該使用什麼網絡？"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "選擇加密提取",
+          "searchCrypto": "搜索加密",
+          "tabs": {
+            "recent": "最近的",
+            "all": "全部",
+            "favorite": "最喜歡的"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "選擇加密提取",
+          "alert": "確保您選擇的加密貨幣和存款網絡匹配，否則資產可能會丟失。",
+          "searchNet": "搜索網絡",
+          "sortBy": "排序方式",
+          "tabs": {
+            "mostPop": "最受歡迎",
+            "fastest": "最快",
+            "lessConfirm": "較少的確認"
+          },
+          "fee": "費用",
+          "expArr": "預計到達"
+        }
+      },
+      "table": {
+        "title": "最後4個存款記錄",
+        "button": "存款歷史",
+        "tHead": {
+          "dNt": "日期/時間",
+          "coin": "硬幣",
+          "amount": "數量",
+          "bRecords": "區塊鏈記錄",
+          "remark": "評論",
+          "action": "行動",
+          "button": "細節"
+        }
+      }
+    },
+    "withdrawPage": {
+      "steps": {
+        "title": "提款步驟",
+        "step1": {
+          "title": "選擇加密",
+          "content": "選擇加密和網絡撤回"
+        },
+        "step2": {
+          "title": "確認地址",
+          "content": "粘貼複製的提款地址"
+        },
+        "step3": {
+          "title": "轉移確認",
+          "content": "等待區塊鏈轉移確認"
+        },
+        "step4": {
+          "title": "成功退出",
+          "content": "Indoex會將資產發送到錢包"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "選擇加密",
+          "withTo": "撤回",
+          "net": "網絡",
+          "selectNet": "選擇提款網絡",
+          "add": "地址",
+          "enterAdd": "輸入您的提款地址",
+          "withAmount": "提款金額",
+          "amount": "數量",
+          "avalBal": "可用的餘額",
+          "minWithAmount": "最低提款金額為",
+          "remark": "備註（可選）",
+          "remarkHolder": "例如。退出的目的",
+          "rAmount": "收到金額",
+          "netFee": "網絡費",
+          "button": "提取"
+        },
+        "tips": {
+          "label": "尖端",
+          "content": {
+            "point1": "為了確保您的資金安全，我們的客戶支持團隊可以通過電話與您聯繫以確認您的提款。",
+            "point2": "為了確保您的資金安全，我們的客戶支持團隊可以通過電話與您聯繫以確認您的提款。"
+          }
+        },
+        "faq": {
+          "label": "常見問題解答",
+          "button": "查看更多",
+          "faq1": {
+            "ques": "提款需要多長時間？"
+          },
+          "faq2": {
+            "ques": "為什麼我的撤軍被拒絕？"
+          },
+          "faq3": {
+            "ques": "我可以取消提款嗎？"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "選擇加密提取",
+          "searchCrypto": "搜索加密",
+          "tabs": {
+            "recent": "最近的",
+            "all": "全部",
+            "favorite": "最喜歡的"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "選擇加密提取",
+          "alert": "確保您選擇的加密貨幣和存款網絡匹配，否則資產可能會丟失。",
+          "searchNet": "搜索網絡",
+          "sortBy": "排序方式",
+          "tabs": {
+            "mostPop": "最受歡迎",
+            "fastest": "最快",
+            "lessConfirm": "較少的確認"
+          },
+          "fee": "費用",
+          "expArr": "預計到達"
+        },
+        "popUpTransactionStatus": {
+          "pending": {
+            "title": "等待撤離",
+            "content": "您的提款請求正在審查，大約需要12個小時。您可以在“歷史”頁面中查看狀態。"
+          },
+          "failed": {
+            "title": "退出失敗",
+            "content": "處理此撤離時存在問題。請仔細檢查提交的詳細信息，然後重試。"
+          },
+          "successful": {
+            "title": "成功退出",
+            "content": "您的提款請求已成功提交。您可以在“歷史”頁面中查看狀態。"
+          },
+          "buttons": {
+            "viewHIstory": "查看歷史",
+            "checkDetails": "檢查詳細信息"
+          }
+        }
+      },
+      "table": {
+        "title": "最後4個提取記錄",
+        "button": "提取歷史",
+        "tHead": {
+          "dNt": "日期/時間",
+          "coin": "硬幣",
+          "amount": "數量",
+          "withTo": "撤回",
+          "bRecords": "區塊鏈記錄",
+          "remark": "評論",
+          "action": "行動",
+          "button": "細節"
+        }
+      }
+    },
+    "depositHisPage": {
+      "title": "存款歷史",
+      "terms": {
+        "allStatu": "所有狀態",
+        "allCoins": "所有硬幣"
+      },
+      "button": "下載",
+      "tHead": {
+        "cOrT": "硬幣/令牌",
+        "amount": "數量",
+        "time": "時間",
+        "bRecords": "區塊鏈記錄",
+        "remark": "評論",
+        "status": "地位",
+        "successful": "成功的"
+      }
+    },
+    "withdrawHisPage": {
+      "title": "戒斷歷史",
+      "terms": {
+        "allStatu": "所有狀態",
+        "allCoins": "所有硬幣"
+      },
+      "button": "下載",
+      "tHead": {
+        "cOrT": "硬幣/令牌",
+        "amount": "數量",
+        "time": "時間",
+        "withTo": "撤回",
+        "bRecords": "區塊鏈記錄",
+        "remark": "評論",
+        "orderId": "訂購ID",
+        "status": "地位",
+        "successful": "成功的"
+      }
+    },
+    "openOrdersPage": {
+      "title": "公開訂單",
+      "terms": {
+        "allPairs": "所有對",
+        "bNsOrders": "購買，出售訂單",
+        "orderType": "訂單類型"
+      },
+      "tHead": {
+        "time": "時間",
+        "pair": "一對",
+        "bOrS": "買賣",
+        "type": "類型",
+        "orderPrice": "訂單價格",
+        "amount": "數量",
+        "filled": "充滿",
+        "unexecuted": "未執行",
+        "action": "行動"
+      }
+    },
+    "ordersHisPage": {
+      "title": "訂購歷史記錄",
+      "button": "下載",
+      "terms": {
+        "month": "月",
+        "allPairs": "所有對",
+        "bNsOrders": "購買，出售訂單",
+        "orderType": "訂單類型",
+        "status": "地位"
+      },
+      "tHead": {
+        "time": "時間",
+        "pair": "一對",
+        "bOrS": "買賣",
+        "type": "類型",
+        "tCondition": "觸發條件",
+        "orderPrice": "訂單價格",
+        "amount": "數量",
+        "filled": "充滿",
+        "avgPrice": "avg.price",
+        "status": "地位"
+      }
+    },
+    "tradeHisPage": {
+      "title": "貿易歷史",
+      "button": "下載",
+      "terms": {
+        "month": "月",
+        "allPairs": "所有對",
+        "bNsOrders": "購買，出售訂單",
+        "orderType": "訂單類型"
+      },
+      "tHead": {
+        "filledTime": "填充時間",
+        "pair": "一對",
+        "bOrS": "買賣",
+        "type": "類型",
+        "fillPrice": "訂單價格",
+        "amount": "數量",
+        "vol": "體積",
+        "fee": "費用"
+      }
+    },
+    "loginHisPage": {
+      "title": "登錄歷史記錄",
+      "terms": {
+        "lSuccess": "登錄成功",
+        "lFailed": "由於憑據錯誤，登錄失敗"
+      },
+      "tHead": {
+        "dateTime": "日期時間",
+        "action": "行動",
+        "ip": "IP地址"
+      }
+    },
+    "deviceManagement": {
+      "title": "設備管理",
+      "tHead": {
+        "dateTime": "日期時間",
+        "location": "地點",
+        "ip": "IP地址",
+        "action": "行動",
+        "button": "刪除"
+      }
+    },
+    "apiPage": {
+      "apiManagement": {
+        "title": "API管理",
+        "subTitle": "創建API密鑰",
+        "terms": {
+          "notes": "筆記",
+          "notesHolder": "輸入筆記",
+          "preSetting": {
+            "part1": "權限設置",
+            "part2": "（多項選擇）"
+          },
+          "accBalance": "帳戶餘額",
+          "addOrder": "添加訂單",
+          "getOrder": "獲取訂單",
+          "closeOrder": "關閉訂單",
+          "bindIp": {
+            "part1": "綁定IP地址",
+            "part2": "（選修的）"
+          },
+          "expDate": "密鑰不限制的IP地址的到期日期為100天",
+          "button": "創造"
+        },
+        "note": {
+          "label": "筆記",
+          "point1": "我們為您提供強大的休息和WebSocket API，您可以通過這些API訪問市場查詢，自動交易等服務。請查看API文檔。",
+          "point2": "一個帳戶最多可以創建5個API秘密密鑰。",
+          "point3": {
+            "part1": "為了避免資產損失，請不要向任何人透露您的API密鑰。出於安全原因，我們建議每個API密鑰最多應綁定5個IP地址。如果只有一個IP地址，則可以直接輸入它。",
+            "part2": "如果有一個以上的IP地址，則應使用逗號分開它們（例如192.168.1.1.1,192.168.1.2，192.168.1.3）。"
+          },
+          "point4": "對於交易API，單個IP限制了每分鐘100個請求。",
+          "point5": "每個API鍵有效期為100天，如果越過，它將自動更改為非活動模式。",
+          "point6": {
+            "part1": "如果您有任何疑問，請聯繫我們",
+            "part2": "support@indoex.io"
+          }
+        }
+      },
+      "apiList": {
+        "title": "創建的API鍵",
+        "tHead": {
+          "createDate": "創建日期",
+          "notes": "筆記",
+          "permission": "允許",
+          "accKey": "訪問密鑰",
+          "ip": "綁定IP地址",
+          "expire": "在（天）中過期",
+          "action": "行動"
+        }
+      }
+    }
+  }
+}

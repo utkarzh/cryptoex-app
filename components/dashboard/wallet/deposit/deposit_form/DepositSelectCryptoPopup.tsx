@@ -4,6 +4,7 @@ import React, { FC, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { MdSearch } from "react-icons/md";
 import { Crypto_Deposit } from "./DepositForm";
+import { useTranslations } from "next-intl";
 
 type Props = {
   cryptoList: Crypto_Deposit[];
@@ -16,6 +17,8 @@ const DepositSelectCryptoPopup: FC<Props> = ({
   onClose,
   onSelect,
 }) => {
+  const t = useTranslations("dashboard.depositPage.form.popUpSelectCrypto");
+
   const [search, setSearch] = useState("");
   const [tab, setTab] = useState<"recent" | "all" | "favorite">("recent");
 
@@ -29,7 +32,7 @@ const DepositSelectCryptoPopup: FC<Props> = ({
     <div className="bg-white flex flex-col gap-4 dark:bg-[#161735] w-[400px] rounded-xl p-6 relative">
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
-        <h2 className=" text-sm ">Select Crypto to Withdraw</h2>
+        <h2 className=" text-sm ">{t("title")}</h2>
         <button onClick={onClose} className="">
           <IoCloseSharp className="text-2xl cursor-pointer hover:scale-110 trasition-all duration-300" />
         </button>
@@ -45,24 +48,24 @@ const DepositSelectCryptoPopup: FC<Props> = ({
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search crypto"
+          placeholder={t("searchCrypto")}
           className="w-full indent-3 px-4 py-2 rounded-md  bg-slate-500/20 text-sm placeholder:font-extralight  outline-none"
         />
       </div>
 
       {/* tabs */}
       <div className="flex justify-start gap-4 text-xs font-light items-center ">
-        {["recent", "all", "favorite"].map((t) => (
+        {["recent", "all", "favorite"].map((val) => (
           <button
-            key={t}
-            onClick={() => setTab(t as "recent" | "all" | "favorite")}
+            key={val}
+            onClick={() => setTab(val as "recent" | "all" | "favorite")}
             className={`capitalize px-2 py-1 rounded-md cursor-pointer border ${
-              tab === t
+              tab === val
                 ? "bg-slate-500/20 border-transparent"
                 : "dark:border-slate-500/20 border-slate-400/20"
             }`}
           >
-            {t}
+            {t(`tabs.${val}`)}
           </button>
         ))}
       </div>

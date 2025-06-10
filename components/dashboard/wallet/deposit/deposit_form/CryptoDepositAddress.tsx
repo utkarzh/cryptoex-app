@@ -3,12 +3,14 @@
 import { FC, useState } from "react";
 import { FiCopy, FiCheck } from "react-icons/fi";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 type Props = {
   address: string;
 };
 
 const CryptoDepositAddress: FC<Props> = ({ address }) => {
+  const t = useTranslations("dashboard.depositPage.form");
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -22,12 +24,10 @@ const CryptoDepositAddress: FC<Props> = ({ address }) => {
       <div className="flex gap-2">
         <div>
           <h2 className="text-xs font-light mb-1">
-            USDT(Tether) address is published!
+            USDT(Tether) {t("terms.addPub")}
           </h2>
           <p className="text-[10px] mt-2 opacity-90 dark:opacity-70">
-            Please use the address below to deposit your cryptocurrency using
-            the TONCOIN network. You can either copy the address or scan the QR
-            code for convenience.
+            {t("terms.addPubContent")}
           </p>
         </div>
 
@@ -50,7 +50,9 @@ const CryptoDepositAddress: FC<Props> = ({ address }) => {
         >
           <div className="flex items-center p-1 px-2 rounded-md bg-slate-300/70 dark:bg-slate-500/40 gap-1">
             {copied ? <FiCheck className="text-green-400" /> : <FiCopy />}
-            <span className="">{copied ? "Copied" : "Copy"}</span>
+            <span className="">
+              {copied ? t("terms.copied") : t("terms.copy")}
+            </span>
           </div>
         </button>
       </div>

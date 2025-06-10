@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import { RxValueNone } from "react-icons/rx";
@@ -16,33 +17,34 @@ type MockData = {
 const mockData: MockData[] = [];
 
 const OrderHistory = () => {
+  const t = useTranslations("dashboard.ordersHisPage");
   return (
     <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Order History
+        {t("title")}
       </h2>
       {/* filter tab */}
       <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] mt-2">
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>1 Month</option>
+          <option>1 {t("terms.month")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>All Pairs</option>
+          <option>{t("terms.allPairs")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>Buy, Sell Orders</option>
+          <option>{t("terms.bNsOrders")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>Order Type</option>
+          <option>{t("terms.orderType")}</option>
         </select>
 
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>Status</option>
+          <option>{t("terms.status")}</option>
         </select>
 
         <button className="bg-green-500 text-white dark:text-black px-2 py-1 rounded-full hover:bg-green-600 cursor-pointer">
-          Download
+          {t("button")}
         </button>
       </div>
 
@@ -51,19 +53,37 @@ const OrderHistory = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">Time</th>
-              <th className="px-4 py-3 text-[9px] font-light">Pair</th>
-              <th className="px-4 py-3 text-[9px] font-light">Buy or Sell</th>
-
-              <th className="px-4 py-3 text-[9px] font-light">Type</th>
               <th className="px-4 py-3 text-[9px] font-light">
-                Trigger Condition
+                {t("tHead.time")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">Order Price</th>
-              <th className="px-4 py-3 text-[9px] font-light">Amount</th>
-              <th className="px-4 py-3 text-[9px] font-light">Filled</th>
-              <th className="px-4 py-3 text-[9px] font-light">Avg.Price</th>
-              <th className="px-4 py-3 text-[9px] font-light">Status</th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.pair")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.bOrS")}
+              </th>
+
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.type")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.tCondition")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.orderPrice")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.amount")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.filled")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.avgPrice")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.status")}
+              </th>
             </tr>
           </thead>
           {mockData.length > 0 && (

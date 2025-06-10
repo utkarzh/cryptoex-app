@@ -1,0 +1,1787 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "거래",
+        "items": {
+          "spot": {
+            "label": "스팟 트레이드",
+            "desc": "암호화를 즉시 구매하거나 판매하십시오"
+          },
+          "margin": {
+            "label": "여백 거래",
+            "desc": "더 큰 움직임을 위해 빌린 자금과 거래"
+          },
+          "convert": {
+            "label": "전환하다",
+            "desc": "암호화를 몇 초 만에 교체하십시오"
+          }
+        }
+      },
+      "markets": "시장",
+      "earn": {
+        "label": "벌다",
+        "items": {
+          "loans": {
+            "label": "대출",
+            "desc": "자금 잠금을 해제하고 암호를 유지하십시오."
+          },
+          "staking": {
+            "label": "스테이 킹",
+            "desc": "스테이크 동전, 수동적 소득을 얻습니다."
+          }
+        }
+      },
+      "events": {
+        "label": "이벤트",
+        "items": {
+          "airdrop": {
+            "label": "공중 투하",
+            "desc": "토큰을 잡고 보상을 청구하십시오."
+          },
+          "launchpad": {
+            "label": "런치 패드",
+            "desc": "새로운 토큰에 일찍 투자하십시오."
+          },
+          "tradeCompetition": {
+            "label": "무역 경쟁",
+            "desc": "기술을 보여주고 상을 받으십시오."
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "교환",
+      "web3": "web3"
+    },
+    "auth": {
+      "signin": "로그인",
+      "signup": "가입하십시오",
+      "see_all": "모두보기",
+      "new_listing": "새로운 목록"
+    }
+  },
+  "sidebar": {
+    "overview": "개요",
+    "account": {
+      "label": "계정",
+      "children": {
+        "profile": "윤곽",
+        "security": "보안"
+      }
+    },
+    "wallet": {
+      "label": "지갑",
+      "children": {
+        "assets": "자산",
+        "deposit": "보증금",
+        "withdraw": "철회하다"
+      }
+    },
+    "history": {
+      "label": "역사",
+      "children": {
+        "depositHistory": "입금 기록",
+        "withdrawHistory": "역사를 철회하십시오"
+      }
+    },
+    "orders": {
+      "label": "명령",
+      "children": {
+        "openOrders": "오픈 주문",
+        "orderHistory": "주문 기록",
+        "tradeHistory": "무역 역사"
+      }
+    },
+    "earn": {
+      "label": "벌다",
+      "children": {
+        "loans": "대출",
+        "staking": "스테이 킹"
+      }
+    },
+    "loginActivity": {
+      "label": "로그인 활동",
+      "children": {
+        "loginHistory": "로그인 기록",
+        "deviceManagement": "장치 관리"
+      }
+    },
+    "referrals": "추천",
+    "api": "API",
+    "logout": "로그 아웃하십시오",
+    "withdraw": "철회하다",
+    "deposit": "보증금"
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "암호화 거래 경험을 향상시킵니다",
+      "subTitle": "원활한 거래, 실시간 통찰력을 목격하고 필요한 모든 것을 안전하게 거래하십시오."
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "점",
+        "newlyListed": "새로 나열된",
+        "topGainers": "최고 이익"
+      },
+      "tableHead": {
+        "coins": "동전",
+        "lastPrice": "마지막 가격",
+        "24hChange": "24 시간 변화",
+        "markets": "시장",
+        "24hVolume": "24 시간 볼륨"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "계정을 만듭니다",
+        "content": "이메일과 몇 분 안에 가입하고 안전한 비밀번호를 설정하고 안전한 거래 경험을 위해 신원을 확인하십시오.",
+        "button": "시작하세요"
+      },
+      "step2": {
+        "heading": "KYC를 완료하십시오",
+        "content": "이메일과 몇 분 안에 가입하고 안전한 비밀번호를 설정하고 안전한 거래 경험을 위해 신원을 확인하십시오.",
+        "button": "KYC 업데이트"
+      },
+      "step3": {
+        "heading": "거래를 시작하십시오",
+        "content": "이메일과 몇 분 안에 가입하고 안전한 비밀번호를 설정하고 안전한 거래 경험을 위해 신원을 확인하십시오.",
+        "button": "거래를 시작하십시오"
+      }
+    },
+    "getStarted": {
+      "heading": "시작하세요",
+      "marketing": {
+        "24hVolume": "24 시간 볼륨 (BTC)",
+        "coinsListed": "동전이 나열되어 있습니다",
+        "countries": "국가",
+        "marketPairs": "시장 쌍"
+      },
+      "benefits": {
+        "type_vendor": "공급 업체 혜택",
+        "type_user": "사용자 혜택",
+        "vendor": {
+          "ben1": {
+            "title": "코인/토큰 목록",
+            "content": "Indoex는 전 세계적으로 모든 자격을 갖춘 암호 화폐에 대한 투자 액세스를 확대하고 있습니다."
+          },
+          "ben2": {
+            "title": "거래 경연 대회",
+            "content": "우리의 거래 콘테스트를 통해 사용자는 기술을 보여줄 수 있습니다. "
+          },
+          "ben3": {
+            "title": "맞춤형 페어링",
+            "content": "다른 거래소와 달리 Indoex는 추가 시장 쌍에 대한 수수료를 청구하지 않습니다."
+          },
+          "ben4": {
+            "title": "상장 콘테스트",
+            "content": "우리의 상장 경쟁은 3 BTC로 우승자에게 보상합니다. "
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "코인/토큰 목록",
+            "conent": "Indoex는 전 세계적으로 모든 자격을 갖춘 암호 화폐에 대한 투자 액세스를 확대하고 있습니다."
+          },
+          "ben2": {
+            "title": "거래 경연 대회",
+            "conent": "우리의 거래 콘테스트를 통해 사용자는 기술을 보여줄 수 있습니다. "
+          },
+          "ben3": {
+            "title": "맞춤형 페어링",
+            "conent": "다른 거래소와 달리 Indoex는 추가 시장 쌍에 대한 수수료를 청구하지 않습니다."
+          },
+          "ben4": {
+            "title": "상장 콘테스트",
+            "conent": "우리의 상장 경쟁은 3 BTC로 우승자에게 보상합니다. "
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "특징",
+      "leftSection": {
+        "fet1": {
+          "title": "합리적인 커미션",
+          "content": "수익성있는 투자 기회 및 조건"
+        },
+        "fet2": {
+          "title": "알고리즘 거래",
+          "content": "CrossPlatform 거래 로봇의 API"
+        },
+        "fet3": {
+          "title": "알고리즘 거래",
+          "content": "CrossPlatform 거래 로봇의 API"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "안전 지갑",
+          "content": "디지털 자산을 사용자 지갑에 보관하십시오"
+        },
+        "fet2": {
+          "title": "지불 옵션",
+          "content": "계정에 입금하는 10 가지 이상의 방법"
+        },
+        "fet3": {
+          "title": "알고리즘 거래",
+          "content": "CrossPlatform 거래 로봇의 API"
+        }
+      }
+    },
+    "partners": {
+      "heading": "파트너",
+      "content": {
+        "title": "장치를 통해 원활하게 거래합니다",
+        "subTitle": "손쉬운 암호화 거래를 위해 모바일 앱을 다운로드하십시오!",
+        "downloads": {
+          "playStore": {
+            "getIt": "그것을 입력하십시오",
+            "from": "Google 플레이"
+          },
+          "appStore": {
+            "getIt": "다운로드",
+            "from": "앱 스토어"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "계정에 로그인하십시오",
+      "items": {
+        "email": {
+          "label": "이메일",
+          "holder": "이메일을 입력하십시오"
+        },
+        "password": {
+          "label": "비밀번호",
+          "holder": "비밀번호를 입력하십시오"
+        }
+      },
+      "button": "로그인하십시오",
+      "signinOption": "또는 로그인하십시오",
+      "noAcc": {
+        "part1": "계정이 없습니까?",
+        "part2": "계정을 만듭니다"
+      }
+    },
+    "signup": {
+      "title": "계정을 만듭니다",
+      "items": {
+        "email": {
+          "label": "이메일",
+          "holder": "이메일을 입력하십시오"
+        },
+        "username": {
+          "label": "사용자 이름",
+          "holder": "사용자 이름을 입력하십시오"
+        },
+        "password": {
+          "label": "비밀번호",
+          "holder": "비밀번호를 입력하십시오"
+        },
+        "country": {
+          "label": "국가",
+          "holder": "국가를 선택하십시오",
+          "options": {
+            "op1": "미국",
+            "op2": "인도",
+            "op3": "영국",
+            "op4": "독일"
+          }
+        },
+        "referrals": {
+          "label": "추천 코드 (선택 사항)",
+          "holder": "추천 코드를 입력하십시오"
+        }
+      },
+      "terms": {
+        "part1": "나는 받아들이다",
+        "part2": "이용 약관"
+      },
+      "button": "가입하십시오",
+      "signupOption": "또는 가입하십시오",
+      "haveAcc": {
+        "part1": "이미 계정이 있습니까?",
+        "part2": "로그인하십시오"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "몇 분 안에 등록하십시오 - 크립토를 쉽게 설계하고, 입금하고, 쉽게 거래하십시오!",
+      "button": "시작하세요"
+    },
+    "services": {
+      "label": "서비스",
+      "items": {
+        "terms": "이용 약관",
+        "policy": "개인 정보 보호 정책",
+        "status": "지갑 상태",
+        "announcements": "공지 사항",
+        "media": "메디아"
+      }
+    },
+    "legalisation": {
+      "label": "합법화",
+      "items": {
+        "fee": "수수료",
+        "legalities": "합법성",
+        "kyc": "AML / KYC 정책",
+        "protect": "온라인으로 자신을 보호하십시오",
+        "verification": "확인"
+      }
+    },
+    "others": {
+      "label": "기타",
+      "items": {
+        "faq": "FAQ",
+        "contact": "저희에게 연락하십시오",
+        "support": "고객 지원 :",
+        "mails": "목록에 신청 :"
+      }
+    },
+    "rights": "© 2025 Indoex All Rights Reserved.",
+    "alert": "암호화 투자는 시장 위험의 대상이됩니다. 현명하게 투자하고 정보를 유지합니다."
+  },
+  "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "주문서",
+        "tradehistory": "무역 역사"
+      },
+      "tHead": {
+        "price": "가격 (USDT)",
+        "amount": "금액 (BTC)",
+        "total": "총"
+      },
+      "more": "더"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24 시간 변화",
+        "24hHigh": "24 시간 높이",
+        "24hLow": "24h 낮음",
+        "24hVolumeBtc": "24 시간 볼륨 (BTC)",
+        "24hVolumeUsdc": "24 시간 볼륨 (USDT)"
+      }
+    },
+    "tradeForm": {
+      "buy": "구입하다",
+      "sell": "팔다",
+      "spot": "점",
+      "cross": "십자가",
+      "isolated": "외딴",
+      "limit": "한계",
+      "market": "시장",
+      "stop": "제한을 정지하십시오",
+      "normal": "정상",
+      "borrow": "빌리다",
+      "repay": "갚다",
+      "price": "가격",
+      "amount": "양",
+      "total": "총",
+      "available": "사용 가능",
+      "txnFee": "TXN 수수료",
+      "borrowing": "차용",
+      "button": "로그인 / 가입"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "오픈 주문",
+        "orderhistory": "주문 기록"
+      },
+      "message": {
+        "part1": "로그인하십시오",
+        "part2": "또는",
+        "part3": "가입하십시오",
+        "part4": "거래하기 위해"
+      }
+    },
+    "connection": "안정적인 연결"
+  },
+  "convertPage": {
+    "tabs": {
+      "faq": "FAQ",
+      "convert": "전환하다",
+      "history": "역사"
+    },
+    "convertForm": {
+      "title": "전환하다",
+      "subTitle": "수백 개의 암호 화폐를 즉각적인 실행으로 빠르고 쉽게 변환합니다.",
+      "terms": {
+        "availBalance": "사용 가능한 잔액",
+        "from": "에서",
+        "to": "에게",
+        "max": "맥스",
+        "rate": "비율",
+        "button": "로그인 / 가입",
+        "tradeSpot": "거래 장소"
+      }
+    },
+    "convertBar": {
+      "barTitle": "BTC (비트 코인)를 다른 동전으로 변환하십시오"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "유연한 요금 대출",
+      "fixed": "고정 금리 대출",
+      "history": "대출 이력",
+      "data": "대출 데이터"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "거래 또는 스테이크를 위해 유연한 요금으로 차용하고 수익을 극대화합니다.",
+        "features": {
+          "f1": "언제든지 상환하십시오",
+          "f2": "거래 수수료 없음"
+        },
+        "buttons": {
+          "b1": "진행중인 주문",
+          "b2": "자산 개요"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "방계친",
+            "enterAmount": "금액을 입력하십시오",
+            "wantBorrow": "나는 빌리고 싶다",
+            "max": "맥스",
+            "details": "세부"
+          },
+          "button": "로그인 / 가입"
+        }
+      },
+      "borrowTable": {
+        "title": "차용 시장",
+        "search": "찾다",
+        "viewMore": "더보기",
+        "tHead": {
+          "coin": "대출 가능한 동전",
+          "hIntRate": "시간당 이자율",
+          "aIntRate": "연간 이자율",
+          "action": {
+            "label": "행동",
+            "button": "빌리다"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "item2": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "item3": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "item4": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "item5": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "선택한 고정 이자율로 빌리거나 빌려줍니다.",
+        "stats": {
+          "totalBorrowed": "총 차입",
+          "currentOrders": "현재 주문",
+          "rate": {
+            "label": "맞춤형 이자율",
+            "content": "다중 자산 담보 지원"
+          }
+        },
+        "myOrder": {
+          "label": "내 주문",
+          "pOrders": {
+            "label": "보류중인 주문",
+            "content": "타의 추종을 불허하는 주문을 확인하고 관리합니다"
+          },
+          "oOrders": {
+            "label": "진행중인 주문",
+            "content": "확인, LTV 조정 및 일치하는 주문을 상환합니다"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "빌리다",
+          "terms": {
+            "bAmount": "차용 금액",
+            "min": "최소 0.005 BTC",
+            "expRate": "예상 이자율",
+            "intRate": "이자율을 입력하십시오",
+            "refMarket": "참조 시장 공급률",
+            "duration": "지속",
+            "collateral": "방계친",
+            "setUp": "담보를 설정하십시오",
+            "autoRepay": "자동 요금"
+          }
+        },
+        "supply": {
+          "label": "공급",
+          "terms": {
+            "bAmount": "차용 금액",
+            "min": "최소 0.005 BTC",
+            "expRate": "예상 이자율",
+            "intRate": "이자율을 입력하십시오",
+            "refMarket": "참조 시장 공급률 : 5.04%",
+            "duration": "지속",
+            "collateral": "방계친",
+            "setUp": "담보를 설정하십시오",
+            "autoRepay": "자동 요금"
+          }
+        },
+        "button": "로그인 / 가입"
+      },
+      "BandStable": {
+        "title1": "나는 빌리고 싶다",
+        "title2": "공급하고 싶습니다",
+        "terms": {
+          "days": "날",
+          "all": "모두",
+          "duration": "지속"
+        },
+        "borrowTableHead": {
+          "bRate": "차용 요금 (고정)",
+          "duration": "지속",
+          "minBAmount": "최소 차용 금액",
+          "bAbleAmount": "차용 가능한 금액"
+        },
+        "supplyTableHead": {
+          "supplyApr": "APR 공급 (고정)",
+          "duration": "지속",
+          "estInt": "est. ",
+          "tAmount": "총액"
+        }
+      },
+      "howItWorks": {
+        "title": "고정 금리 대출은 어떻게 작동합니까?",
+        "tabs": {
+          "borrower": "차용자로서",
+          "supplier": "공급 업체로"
+        },
+        "step1": {
+          "title": "1. 주문 배치",
+          "content": "차용 주문을하거나 차용 시장에서 기존 주문을 선택하십시오."
+        },
+        "step2": {
+          "title": "2. 담보를 선택하십시오",
+          "content": "스팟 월렛 자산 목록에서 담보 자산을 선택하십시오. "
+        },
+        "step3": {
+          "title": "3. 주문 확인",
+          "content": "예상이자, 약관, 마진 호출 LTV 등을 포함한 주문 세부 정보를 확인하십시오. 주문이 배치되면 스팟 지갑에서 담보 자산이 동결됩니다."
+        },
+        "step4": {
+          "title": "4. 주문 matchedg",
+          "content": "일단 일치하면, 담보는 Binance 양육권으로 이동하고, 당신은 당신의 스팟 지갑에서 빌린 금액 (마이너스이자)을받습니다. "
+        },
+        "step5": {
+          "title": "5. 상환",
+          "content": "만료 날짜까지 상환하여 처벌을 피하십시오. "
+        }
+      },
+      "advantages": {
+        "title": "고정 금리 대출 이점",
+        "adv1": {
+          "title": "차용자에 대한 안정되고 예측 가능한 비용",
+          "content": "정해진 기간 동안 고정 된 APR을 잠그고 변동과 예기치 않은 비용을 제거하십시오."
+        },
+        "adv2": {
+          "title": "효율적인 자동화 프로세스",
+          "content": "Auto-Repay 및 Auto-Renew 옵션을 사용하여 쉽고 자동 차입 및 대출 경험을 즐기십시오."
+        },
+        "adv3": {
+          "title": "공급 업체를위한 매력적인 고정 APR",
+          "content": "사용자 정의 가능하고 고정 된 APR에 자산을 공급하십시오."
+        },
+        "adv4": {
+          "title": "다중 자산 담보",
+          "content": "차용자는 청산의 위험을 줄이기 위해 여러 자산을 담보로 설정할 수 있습니다."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "faq1": {
+          "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "faq2": {
+          "ques": "언제든지 암호화를 해제 할 수 있습니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "faq3": {
+          "ques": "상환 기간 동안 보상을 받습니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        },
+        "faq4": {
+          "ques": "스테이 킹은 안전합니까?",
+          "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "최대 수입을 위해 유연한 조건으로 말뚝을 지정합니다",
+      "content": "유연한 고수익 스테이 즈 옵션으로 조건에서 수동적 소득을 얻으십시오.",
+      "overview": {
+        "label": "개요",
+        "terms": {
+          "assets": "자산 (USDT)",
+          "yesProfit": "어제 이익 (USDT)",
+          "totalProfit": "총 이익 (USDT)"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "스테이 킹",
+        "content": "스테이 킹을 통해 암호화에 대한 보상을받을 수 있습니다. "
+      },
+      "info2": {
+        "title": "용어",
+        "content": "제품에 대한 보유 기간은 수율을 결정합니다. "
+      },
+      "info3": {
+        "title": "상환 기간",
+        "content": "이것은 스테이 킹 프로토콜에 의해 설정됩니다. "
+      }
+    },
+    "table": {
+      "title": "모든 제품",
+      "terms": {
+        "matchAssets": "사용 가능한 자산 일치",
+        "search": "찾다"
+      },
+      "tHead": {
+        "coin": "동전",
+        "estApr": "est. ",
+        "reward": "보상 동전",
+        "action": {
+          "label": "행동",
+          "button": "말뚝"
+        }
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "faq1": {
+        "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+        "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+      },
+      "faq2": {
+        "ques": "언제든지 암호화를 해제 할 수 있습니까?",
+        "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+      },
+      "faq3": {
+        "ques": "상환 기간 동안 보상을 받습니까?",
+        "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+      },
+      "faq4": {
+        "ques": "스테이 킹은 안전합니까?",
+        "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+      }
+    },
+    "stakeForm": {
+      "title": "스테이 킹",
+      "form": {
+        "terms": {
+          "currency": "통화",
+          "selAmount": "코인을 선택하십시오",
+          "amount": "양",
+          "minAmount": "최소 금액 0.0001 BTC",
+          "refAPR": "참조 apr",
+          "terms": "용어",
+          "fundAcc": "자금 계정",
+          "maxAmount": "최대 금액",
+          "flexible": "유연한"
+        }
+      },
+      "preview": {
+        "lable": "시사",
+        "terms": {
+          "subDate": "구독 날짜",
+          "accDate": "발생 날짜",
+          "profitDisDate": "이익 분배 날짜",
+          "redPeriod": "상환 기간",
+          "profitRec": "받은 이익",
+          "days": "날",
+          "daily": "일일"
+        }
+      },
+      "estimated": {
+        "label": "예상 수익",
+        "terms": {
+          "earning": "BTC 수입",
+          "agg": {
+            "part1": "나는 읽고 동의했다",
+            "part2": "스테이 킹 사용자 합의"
+          }
+        }
+      },
+      "button": "말뚝"
+    }
+  },
+  "marketPage": {
+    "tabs": {
+      "spot": "점",
+      "newListed": "새로 나열된",
+      "topGainer": "최고 이익"
+    },
+    "quickViewTable": {
+      "tGainer": "최고 이익",
+      "tranding": "트렌드",
+      "newListing": "새로운 목록",
+      "tHead": {
+        "pairs": "한 쌍",
+        "price": "가격",
+        "24hChange": "24 시간 변화"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "모두",
+        "search": "찾다"
+      },
+      "tHead": {
+        "coin": "동전",
+        "lPrice": "마지막 가격",
+        "24hChange": "24 시간 변화",
+        "24hHigh": "24 시간 높이",
+        "24hLow": "24h 낮음",
+        "24hVol": "24 시간 볼륨",
+        "chart": "차트",
+        "trade": "거래"
+      },
+      "button": "거래"
+    }
+  },
+  "airDrop": {
+    "title": "무료 암호화를 주장하십시오!",
+    "subTitle": "최신 Indoex Airdrop 캠페인에 가입하고 즉시 적립하십시오.",
+    "tabs": {
+      "all": "모두",
+      "ongoing": "전진",
+      "upcoming": "다가오는",
+      "completed": "완전한"
+    },
+    "terms": {
+      "airSupply": "에어 드롭 공급",
+      "start": "시작",
+      "end": "끝",
+      "cardContent": "런치 패드는 Cat Ape 토큰의 핵심 유틸리티 기능이 될 것입니다. "
+    },
+    "contest": {
+      "terms": {
+        "about": "에 대한",
+        "howToJoin": "가입하는 방법",
+        "tokenPerAir": "에어 드롭 당 토큰",
+        "upTo": "최대",
+        "referral": "추천",
+        "kyc": "KYC",
+        "kycNoReq": "KYC는 요구 사항이 아닙니다",
+        "guide": "단계별 안내서",
+        "doNotForgot": "Telegram 채널에 가입하는 것을 잊지 말고 트위터에서 우리를 팔로우하고 뉴스 레터를 구독하여 새로운 에어 드롭을 받으십시오!",
+        "overview": "개요",
+        "web": "웹 사이트",
+        "exp": "탐침",
+        "git": "github",
+        "wPaper": "백",
+        "ann": "발표",
+        "sMedia": "소셜 미디어",
+        "join": "에어 드롭 이벤트에 가입하십시오",
+        "sDate": "시작 날짜",
+        "eDate": "종료 날짜",
+        "participants": "적극적인 참가자",
+        "button": "에어 드롭에 참여하십시오"
+      }
+    }
+  },
+  "launchPad": {
+    "title": "무료 암호화를 주장하십시오!",
+    "subTitle": " Indoex Launchpad를 사용하여 암호화 토큰을 시작하십시오",
+    "tabs": {
+      "all": "모두",
+      "ongoing": "전진",
+      "upcoming": "다가오는",
+      "completed": "완전한"
+    },
+    "terms": {
+      "airSupply": "에어 드롭 공급",
+      "start": "시작",
+      "end": "끝",
+      "cardContent": "런치 패드는 Cat Ape 토큰의 핵심 유틸리티 기능이 될 것입니다. "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "카운트 다운",
+        "days": "날",
+        "hours": "시간",
+        "minutes": "분",
+        "seconds": "초",
+        "sPrice": "IEO 판매 가격",
+        "about": "에 대한",
+        "details": "세부",
+        "fName": "전체 이름",
+        "web": "웹 사이트",
+        "tName": "티커 이름",
+        "sSupply": "세션 공급",
+        "tSupply": "총 공급",
+        "ieoPrice": "IEO 가격",
+        "ieoSDate": "IEO 시작 날짜",
+        "ieoEDate": "IEO 종료 날짜",
+        "bonus": "보너스",
+        "tecFou": "기술 재단",
+        "docu": "서류",
+        "wPaper": "백",
+        "team": "팀",
+        "sMedia": "소셜 미디어"
+      },
+      "form": {
+        "terms": {
+          "cBal": "현재 균형",
+          "details": "세부",
+          "sDate": "시작 날짜",
+          "eDate": "종료 날짜",
+          "tPrice": "토큰 가격",
+          "minPrice": "최소 가격",
+          "ord": "명령",
+          "bar": "술집",
+          "buy": "구입하다",
+          "rec": "받다",
+          "button": "로그인 / 가입"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "무료 암호화를 주장하십시오!",
+    "subTitle": "당신이 더 많이 거래할수록 더 많은 승리를 얻습니다!",
+    "tabs": {
+      "all": "모두",
+      "ongoing": "전진",
+      "upcoming": "다가오는",
+      "completed": "완전한"
+    },
+    "terms": {
+      "airSupply": "에어 드롭 공급",
+      "start": "시작",
+      "end": "끝",
+      "cardContent": "런치 패드는 Cat Ape 토큰의 핵심 유틸리티 기능이 될 것입니다. "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "거래 경쟁",
+        "moreTrade": "더 많은 거래",
+        "moreWin": "당신의 기회가 높을수록 상을받을 수 있습니다.",
+        "details": "세부",
+        "1st": "첫 번째",
+        "2nd": "둘째",
+        "3rd": "세 번째",
+        "4th": "4 일",
+        "5th": "5 일",
+        "6th": "6 일",
+        "7th": "7 일",
+        "8th": "8 일",
+        "9th": "9 일",
+        "10th": "10 일",
+        "11th-15th": "11-15 일",
+        "16th-20th": "16-20 일",
+        "pOverview": "참여 개요",
+        "position": "위치",
+        "user": "사용자",
+        "vol": "용량",
+        "join": "무역 경연 대회에 참여하십시오",
+        "ieoSDate": "IEO 시작 날짜",
+        "ieoEDate": "IEO 종료 날짜",
+        "button": "거래",
+        "participants": "적극적인 참가자"
+      }
+    }
+  },
+  "walletStatus": {
+    "title": "지갑 상태",
+    "terms": {
+      "search": "찾다"
+    },
+    "tHead": {
+      "name": "이름",
+      "tSupply": "총 공급",
+      "cSupply": "커 ",
+      "buyFee": "수수료를 구매하십시오",
+      "sellFee": "판매 수수료",
+      "status": "상태",
+      "buttons": {
+        "active": "활동적인",
+        "maintenance": "유지"
+      }
+    }
+  },
+  "termsOfUse": {
+    "title": "이용 약관",
+    "subTitle": "인도 - 이용 이용 약관",
+    "content": "본 이용 약관은 회원 간의 권리와 의무 (제 2 조에 설명 된 바와 같이, 과거의 회원 인 사람을 포함하여)와 Fisco Cryptocurrency Exchange Inc. (“We”또는“Company”) (“Indoex Exchange”및“Indoex Instant Exchange”(도메인 HTTPS : //indoex.io/; ",
+    "arti1": {
+      "title": "제 1 조 이용 약관의 적용 범위",
+      "content": {
+        "point1": "본 이용 약관은 당사와 회원에게 적용되며 (이 제 1 조, 과거 회원 인 사람을 포함하여) 서비스와 관련하여 회사 및 구성원의 권리와 의무에 관한 모든 문제를 규정합니다.",
+        "point2": "각 회원이 중요한 문제에 대한 설명의 전체 텍스트 내용과 본 이용 약관의 내용을 이해하는 것은 서비스를 사용하는 조건이며, 본 이용 약관은 서비스와 관련하여 회사 및 구성원의 권리와 의무에 관한 모든 문제를 처방한다는 데 동의합니다.",
+        "point3": " 회원이 미성년자 인 경우, 회원은 서비스를 사용하기 전에 자신의 법적 보호자의 동의를 얻어야합니다.",
+        "point4": " 회원이 서비스를 사용하는 경우, 회원은 본 이용 약관이 서비스와 관련하여 회사 및 회원의 권리와 의무에 관한 모든 문제를 처방한다는 데 동의 한 것으로 간주됩니다."
+      }
+    },
+    "arti2": {
+      "title": "제 2 조 회원",
+      "content": {
+        "point1": "회원이 되고자하는 사람은 규정 된 절차에 따라 회원 등록 신청서를 제출해야합니다. ",
+        "ponit2": "회원이 서비스에 대한 등록을 완료 한 후, 우리는 관련 법률 및 조례에 의해 규정 된 거래 시점에 신원 확인을 수행 해야하는 경우 회원에게 다시 당사에 의해 지정된 필요한 문서를 다시 제출하도록 요청할 수 있습니다.",
+        "point3": "회원이 회원으로 등록을 취소하려는 경우, 회원은 규정 된 절차에 따라 회원 등록을 취소 할 수 있습니다."
+      }
+    },
+    "arti3": {
+      "title": "제 3 조 로그인 ID 및 비밀번호 관리",
+      "content": {
+        "point1": "회원은 자신의 책임으로 등록 된 로그인 ID 및 비밀번호를 관리해야하며, 그러한 정보를 제 3 자에게 빌려주, 할당, 판매 또는 다른 방식으로 폐기해서는 안됩니다.",
+        "point2": "사용자가 당사 웹 사이트에 로그인 할 때 로그인 ID와 비밀번호가 입력되거나 서비스가 사전 설정된 로그인 ID 및 비밀번호와 일치 할 때 로그인 ID와 비밀번호가 입력되었음을 확인하여 멤버의 신원을 확인합니다. ",
+        "point3": "회원은 회원에게 기인 한 이유와 (ii) 그러한 유출 된 로그인 ID를 사용하여 제 3자가 자신의 계정의 사용 등으로 인해 (i) 누출 ID 또는 비밀번호로 인한 피해에 대한 모든 책임을지고 있으며, 우리는 그러한 손해에 대한 책임을지지 않습니다.",
+        "point4": "회원이 로그인 ID 또는 비밀번호가 도난 당하거나 제 3자가 사용하고 있음을 알게되면, 회원은 즉시 해당 효과에 대해 우리에게 통지하고 지침을 준수해야합니다."
+      }
+    },
+    "arti4": {
+      "title": "제 4 조 등록 정보 변경",
+      "content": {
+        "point1": "회원의 등록 정보가 변경된 경우, 회원은 변경된 정보와 관련하여 지체없이 규정 된 방법으로 당사에 통지하고 당사가 요청한 필요한 문서를 제출해야합니다."
+      }
+    }
+  },
+  "announcementsPage": {
+    "title": "공지 사항",
+    "terms": {
+      "search": "찾다",
+      "annu": "Indoex Memebox에는 초기 토큰이 있습니다"
+    },
+    "sidebar": {
+      "all": "모두",
+      "news": {
+        "label": "소식",
+        "item1": "인도 ex 업데이트",
+        "item2": "공개 뉴스"
+      },
+      "newListing": "새로운 목록",
+      "events": {
+        "label": "이벤트",
+        "item1": "항목 1",
+        "item2": "항목 2"
+      },
+      "web3": "web3",
+      "api": "API",
+      "dListing": "dlisting"
+    }
+  },
+  "mediaKitPage": {
+    "title": "미디어 키트",
+    "content": "이 지침을 따라 광고, 기사, 웹 사이트 및 인쇄 자료를 포함하여 마케팅 커뮤니케이션에서 인디 도렉스를 홍보 할 때 일관성과 정확성을 보장하십시오.",
+    "terms": {
+      "downloadHeading": "Indoex 브랜드 로고 사용 안내서를 다운로드하십시오",
+      "guideHeading": "브랜드 지침",
+      "buttons": {
+        "downloadPdf": "PDF를 다운로드하십시오",
+        "download": "다운로드"
+      },
+      "brandAssets": "브랜드 자산",
+      "logos": "로고",
+      "logosContent": "공식 인도 고스 로고를 여기에서 받으십시오. ",
+      "sairaBold": "Saira Bold",
+      "inter": "인터 규칙 및 매체",
+      "typeFace": "서체",
+      "typeFaceContent": "회사 글꼴 인 Saira 및 Inter의 사본을 받으십시오.",
+      "colors": "그림 물감",
+      "colorsContent": "다음은 인도의 기본 및 보조 브랜드 색상입니다.",
+      "green": "푸성귀",
+      "dBlue": "진한 파란색"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "암호화 스테이 킹이란 무엇이며 어떻게 작동합니까?",
+      "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+    },
+    "faq2": {
+      "ques": "언제든지 암호화를 해제 할 수 있습니까?",
+      "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+    },
+    "faq3": {
+      "ques": "상환 기간 동안 보상을 받습니까?",
+      "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+    },
+    "faq4": {
+      "ques": "스테이 킹은 안전합니까?",
+      "ans": "스테이 킹은 블록 체인 네트워크의 작동을 지원하기 위해 암호 화폐를 잠그는 과정입니다. "
+    }
+  },
+  "feePage": {
+    "title": "수수료 구조",
+    "terms": {
+      "search": "찾다"
+    },
+    "tHead": {
+      "name": "이름",
+      "minDeposit": "최소 ",
+      "minWithdraw": "최소 ",
+      "withdrawFee": "요금 인출",
+      "makerFee": "제작자 수수료",
+      "takerFee": "테이커 요금"
+    }
+  },
+  "contactPage": {
+    "title": "저희에게 연락하십시오",
+    "subTitle": "궁금한 점이 있으면 Indoex 팀 트랙과 연락하십시오.",
+    "terms": {
+      "email": "이메일",
+      "enterEmail": "이메일을 입력하십시오",
+      "category": "범주",
+      "selectType": "문의 유형을 선택하십시오",
+      "message": "메시지",
+      "messageHere": "여기 메시지",
+      "button": "제출하다",
+      "phone": "핸드폰",
+      "emailBot": "이메일"
+    }
+  },
+  "indoexVerify": {
+    "title": "인도의 확인",
+    "content": "우리는 사기를 방지하기 위해 Indoex 채널 및 비즈니스 계정을 확인하기위한 페이지를 만들었습니다. ",
+    "terms": {
+      "platform": "플랫폼",
+      "enterUrl": "URL을 입력하십시오",
+      "web": "웹 사이트",
+      "button": "찾다",
+      "message": "소스가 공식적으로 Indoex를 대표하는지 확인하려면 Indoex를 사용하십시오. ",
+      "notice": "알아채다",
+      "noticeMessage": {
+        "part1": "비공식/비 검사 소스에 연락하거나 계정 세부 정보를 공개하지 마십시오. ",
+        "part2": "인도의 지원"
+      }
+    }
+  },
+  "dashboard": {
+    "overviewPage": {
+      "assets": "총 자산",
+      "wallet": {
+        "label": "지갑 요약",
+        "terms": {
+          "tDeposit": "총 예금",
+          "tBuyOrders": "총 구매 주문",
+          "tWithdraw": "총 철수",
+          "tSellOrders": "총 판매 주문",
+          "deposit": "보증금",
+          "withdraw": "철회하다",
+          "myAssets": "내 자산"
+        }
+      },
+      "security": {
+        "label": "보안",
+        "content": "계정 보안 강도를 높이십시오",
+        "terms": {
+          "strength": "힘",
+          "goToSPage": "보안 페이지로 이동하십시오",
+          "passkey": "곁쇠",
+          "2fa": "2 단계 확인",
+          "antiPhi": "피싱 코드",
+          "button": "활동적인"
+        }
+      },
+      "market": {
+        "label": "시장",
+        "tabs": {
+          "trending": "트렌드",
+          "topVolume": "최고 볼륨",
+          "favorite": "가장 좋아하는"
+        },
+        "terms": {
+          "price": "가격"
+        },
+        "button": "모두보기"
+      },
+      "tradeTable": {
+        "title": "무역 역사",
+        "button": "모두보기",
+        "tHead": {
+          "filledTime": "채워진 시간",
+          "pair": "쌍",
+          "bOrS": "구매 또는 판매",
+          "orderType": "주문 유형",
+          "fillPrice": "가격을 채우십시오",
+          "amount": "양",
+          "vol": "용량",
+          "fee": "요금"
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "title": "윤곽",
+        "nickName": {
+          "label": "별명",
+          "content": "이것은 플랫폼의 다른 사람들에게 나타나는 디스플레이 이름입니다.",
+          "button": "별명을 변경하십시오",
+          "popUp": {
+            "title": "별명을 변경하십시오",
+            "nickname": "별명",
+            "enterNickname": "별명을 입력하십시오",
+            "message": "5-20 자. ",
+            "buttons": {
+              "cancel": "취소",
+              "confirm": "확인하다"
+            },
+            "successMessage": "별명이 성공적으로 변경되었습니다"
+          }
+        },
+        "photo": {
+          "label": "사진",
+          "content": "계정을 개인화하고 인식 가능하게하는 프로필 사진을 업로드하십시오.",
+          "buttons": {
+            "upload": "업로드",
+            "delete": "삭제"
+          },
+          "popUp": {
+            "title": "프로필 사진을 변경하십시오",
+            "avatar": "화신",
+            "system_upload": "이 장치에서 업로드하십시오",
+            "clickSelect": "선택하려면 클릭하십시오",
+            "buttons": {
+              "cancel": "취소",
+              "confirm": "확인하다"
+            },
+            "successMessage": "프로필 사진이 성공적으로 변경되었습니다"
+          }
+        },
+        "profileChangeSucMessage": "프로필 사진이 성공적으로 변경되었습니다",
+        "nameChangeSucMessage": "별명이 성공적으로 변경되었습니다"
+      },
+      "accManagement": {
+        "title": "계정 관리",
+        "closeAcc": {
+          "label": "닫기 계정",
+          "content": "계정을 닫으면 영구적이며 복원 할 수 없습니다.",
+          "popUp": {
+            "title": "계정 삭제 요청",
+            "content": {
+              "part1": "Dear Valid Client, Indoex로 계정을 영구적으로 삭제하려면 이메일을 보내주십시오.",
+              "part2": "support@indoex.io.",
+              "part3": "요청은 계정을 등록하는 데 사용되는 동일한 이메일 주소에서 보내야합니다."
+            },
+            "notice": "알아채다",
+            "noticePoints": {
+              "point1": "계정 삭제는 영구적이라는 점에 유의하십시오. ",
+              "point2": "귀하의 계정에 남은 자산이 있으면 정착하십시오. ",
+              "point3": {
+                "part1": "Indoex는 요청에 따라 계정을 영구적으로 삭제할 수 있지만 삭제 후 특정 기간 동안 특정 개인 데이터를 유지해야합니다. ",
+                "part2": "이용 약관"
+              },
+              "point4": {
+                "part1": "귀하의 개인 데이터를 저장하는 방법에 대한 추가 정보는",
+                "part2": "개인 정보 보호 정책."
+              }
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "securitySetting": {
+        "title": "보안",
+        "emailInfo": {
+          "label": "이메일 인증",
+          "content": "로그인 및 거래 확인을 위해 이메일 인증을 사용하여 계정 보안을 향상시킵니다.",
+          "button": "이메일 변경",
+          "popUp1": {
+            "title": "링크 된 이메일 주소를 업데이트 하시겠습니까?",
+            "message": {
+              "title": "이메일을 해제하는 단계",
+              "content": "계정의 보안에 대해서는 이메일 주소, 온 체인 철수, 내부 전송, 피아트 철수, 카드 거래, P2P 거래 및 광고 활동을 24 시간 동안 일시적으로 중단 할 것입니다."
+            },
+            "buttons": {
+              "cancel": "취소",
+              "changeEmail": "이메일을 변경하십시오"
+            }
+          },
+          "popUp2": {
+            "title": "보안 검증",
+            "codeSentAt": "확인 코드가 전송됩니다",
+            "enterCode": "이메일 확인 코드를 입력하십시오",
+            "2faCode": "Google 2FA 코드",
+            "enter2fa": "2FA 코드를 입력하십시오",
+            "havingProb": "검증에 문제가 있습니까?",
+            "buttons": {
+              "sendCode": "코드를 보내십시오",
+              "nextStep": "다음 단계"
+            }
+          },
+          "popUp3": {
+            "title": "이메일 변경",
+            "newEmail": "새 이메일",
+            "enterEmail": "새 이메일을 입력하십시오",
+            "veriCode": "새 이메일 확인 코드",
+            "enterveriCode": "이메일 확인 코드를 입력하십시오",
+            "noCode": "확인 코드를받지 못했습니까?",
+            "checkSpam": "이 이메일은 스팸 폴더를 확인하십시오",
+            "buttons": {
+              "sendCode": "코드를 보내십시오",
+              "cancel": "취소",
+              "submit": "제출하다"
+            }
+          }
+        },
+        "passInfo": {
+          "label": "로그인 비밀번호",
+          "content": "무단 액세스로부터 계정을 보호하기 위해 강력한 암호를 설정하십시오.",
+          "button": "비밀번호를 변경하십시오",
+          "popUp": {
+            "title": "비밀번호를 변경하십시오",
+            "notice": "알아채다",
+            "noticeMessage": "계정의 보안을 위해 Google 2 요인 인증을 제거한 후 온 체인 철수, 내부 전송, 피아트 철수, P2P 거래 및 기타 거래와 같은 조치는 24 시간 동안 일시적으로 중단됩니다.",
+            "oldPass": "오래된 비밀번호",
+            "oldPassHolder": "현재 비밀번호를 입력하십시오",
+            "newPass": "새 비밀번호",
+            "newPassHolder": "새 비밀번호를 입력하십시오",
+            "confirmPass": "새 비밀번호를 확인하십시오",
+            "confirmPassHolder": "새 비밀번호를 다시 입력하십시오",
+            "2faCode": "2FA 확인 코드",
+            "2faCodeHolder": "2FA 코드를 입력하십시오",
+            "havingIssue": "검증에 문제가 있습니까?",
+            "button": "다음 단계"
+          }
+        },
+        "twofactor": {
+          "label": "두 가지 요소 인증",
+          "content": "계정에 액세스 할 때 보안 2 단계 인증을 위해 인증기 앱을 연결하십시오.",
+          "buttons": {
+            "setUp": "설정",
+            "disable": "장애를 입히다"
+          },
+          "addPopUp1": {
+            "title": "보안 검증",
+            "codeAt": "확인 코드가 전송됩니다",
+            "noCode": {
+              "part1": "확인 코드를받을 수 없습니까?",
+              "part2": "검증 코드를 재현하십시오"
+            },
+            "havingProb": "검증에 문제가 있습니까?",
+            "error": {
+              "wrongOtp": "입력 한 OTP가 잘못되었습니다.",
+              "expOtp": "확인 코드가 만료되었습니다. "
+            }
+          },
+          "addPopUp2": {
+            "title": "Google 2 요소 인증을 설정하십시오",
+            "downloadMsgTitle": "Google Authenticator (Android / iOS) 다운로드",
+            "downloadMsgContent": "App Store 또는 Google Play에서 \"Google Authenticator\"를 검색하고 앱을 다운로드하십시오.",
+            "addKeyTitle": "Google Authenticator에 핵심 문구를 추가하십시오",
+            "addKeyContent": "App Store 또는 Google Play에서 Google Authenticator를 다운로드 할 수 있습니다. ",
+            "alertMsg": "기기를 잃거나 변경하면 Google 인증기를 복구하는 데 핵심 문구가 필수적입니다. ",
+            "2faCode": "Google 2FA 코드",
+            "enter2faCode": "2FA 코드를 입력하십시오 ",
+            "copyKey": "사본 키",
+            "copied": " 복사!",
+            "buttons": {
+              "cancel": "취소",
+              "confirm": "확인하다"
+            }
+          },
+          "removePopUp1": {
+            "title": "보안 검증",
+            "loginPass": "로그인 비밀번호",
+            "enterPass": "비밀번호를 입력하십시오 ",
+            "2faCode": "Google 2FA 코드",
+            "enter2faCode": "2FA 코드를 입력하십시오",
+            "button": "다음 단계"
+          },
+          "removePopUp2": {
+            "title": "Google 2FA 인증 제거를 확인하십시오",
+            "notice": "알아채다",
+            "noticeMess": "계정 보안의 경우 Google 2 요인 인증을 제거한 후 온 체인 철수, 내부 전송, 피아트 인출, P2P 거래 및 기타 거래와 같은 조치는 24 시간 동안 일시적으로 중단됩니다.",
+            "buttons": {
+              "cancel": "cnacel",
+              "remove": "제거하다"
+            }
+          }
+        },
+        "secondaryPin": {
+          "label": "보조 핀",
+          "content": "플랫폼의 이메일이 정통하고 피싱 시도가 아닌지 확인하기 위해 개인화 된 코드를 설정합니다.",
+          "buttons": {
+            "forgot": "잊어버렸다",
+            "change": "변화"
+          },
+          "forgotPopUp": {
+            "title": "보안 검증",
+            "enter2fa": "2FA 코드를 입력하십시오",
+            "havingProb": "검증에 문제가 있습니까?",
+            "error": {
+              "wrongOtp": "입력 한 OTP가 잘못되었습니다.",
+              "expOtp": "확인 코드가 만료되었습니다. "
+            }
+          },
+          "changepopUp": {
+            "title": "업데이트 핀",
+            "currentPin": "현재 핀",
+            "enterCurrentPin": "현재 핀을 입력하십시오",
+            "newPin": "새로운 핀",
+            "enterNewPin": "새 핀을 입력하십시오",
+            "confirmPin": "핀 확인",
+            "enterCofirmPin": "새 핀을 다시 입력하십시오",
+            "buttons": {
+              "cancel": "취소",
+              "confirm": "확인하다"
+            }
+          },
+          "forgotSuccessMessage": "보조 핀이 등록 된 메일 주소로 보냈습니다",
+          "changeSuccessMessage": "보조 PIN이 부드럽게 업데이트되었습니다"
+        },
+        "antiPhishing": {
+          "label": "안티 피싱",
+          "content": "플랫폼에서 귀하에게 보낸 이메일에는 가짜 메일과 구별하기위한 피싱 방지 코드가 포함됩니다.",
+          "button": "설정",
+          "popUp1": {
+            "title": "반입 코드를 설정하십시오",
+            "alert": "반입 방지 코드를 인도 직원을 포함한 사람에게 공개하지 마십시오.",
+            "antiPhiCode": "피싱 코드",
+            "enterCode": "4 ~ 20자를 입력하십시오",
+            "message": "문자, 숫자 및 밑줄 만 포함 된 4 ~ 20자를 입력하십시오. ",
+            "whatIsIt": "반입 코드 란 무엇입니까?",
+            "whatIsItContent": "반입 방지 코드는 모든 Indoex 이메일에 표시되므로 진정한 커뮤니케이션을 발견하고 사기를 피할 수 있습니다.",
+            "buttons": {
+              "cancel": "취소",
+              "confirm": "확인하다"
+            },
+            "error": "오류가 발생했습니다"
+          },
+          "popUp2": {
+            "title": "보안 검증",
+            "enter2fa": "2FA 코드를 입력하십시오",
+            "havingProb": "검증에 문제가 있습니까?",
+            "error": {
+              "wrongOtp": "입력 한 OTP가 잘못되었습니다.",
+              "expOtp": "확인 코드가 만료되었습니다. "
+            }
+          }
+        }
+      },
+      "authLevel": {
+        "title": "인증 수준",
+        "terms": {
+          "idLevel": "식별 수준",
+          "limit": "24 시간 철수 한도",
+          "unlimited": "제한 없는"
+        }
+      }
+    },
+    "assetsPage": {
+      "title": "총 자산",
+      "tabs": {
+        "all": "모두",
+        "delisted": "상장했다"
+      },
+      "terms": {
+        "hideLabel": "제로 대차 대조표 자산을 숨 깁니다",
+        "search": "찾다"
+      },
+      "tHead": {
+        "crypto": "암호화",
+        "tBal": "총 잔액",
+        "avl": "사용 가능",
+        "inOrders": "명령으로",
+        "avgPrice": "avg. ",
+        "action": "행동",
+        "buttons": {
+          "withdraw": "철회하다",
+          "deposit": "보증금"
+        }
+      }
+    },
+    "depositPage": {
+      "steps": {
+        "title": "예금 단계",
+        "step1": {
+          "title": "지갑 주소를 복사하십시오",
+          "content": "암호화, 네트워크 및 복사 주소를 선택하십시오."
+        },
+        "step2": {
+          "title": "주소 확인",
+          "content": "복사 된 철수 주소를 붙여 넣으십시오"
+        },
+        "step3": {
+          "title": "전송 확인",
+          "content": "블록 체인 전송 확인을 기다립니다"
+        },
+        "step4": {
+          "title": "성공적인 예금",
+          "content": "Indoex는 자산을 지갑으로 보냅니다."
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "암호를 선택하십시오",
+          "selectNet": "네트워크를 선택하십시오",
+          "selectNetHolder": "입금하려는 네트워크를 선택하십시오",
+          "copyAdd": "지갑 주소를 복사하십시오",
+          "addPub": "주소가 게시되었습니다!",
+          "addPubContent": "아래 주소를 사용하여 Toncoin 네트워크를 사용하여 cryptocurrency를 입금하십시오. ",
+          "copy": "복사",
+          "copied": "복사"
+        },
+        "tips": {
+          "label": "팁",
+          "content": "자금의 안전을 위해 고객 지원 팀이 전화로 연락하여 철수를 확인할 수 있습니다."
+        },
+        "faq": {
+          "label": "FAQ",
+          "button": "더보기",
+          "faq1": {
+            "ques": "Falconx에 입금하는 방법?"
+          },
+          "faq2": {
+            "ques": "암호화 네트워크 란 무엇입니까?"
+          },
+          "faq3": {
+            "ques": "어떤 네트워크를 사용해야합니까?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "철회 할 암호를 선택하십시오",
+          "searchCrypto": "암호 검색",
+          "tabs": {
+            "recent": "최근의",
+            "all": "모두",
+            "favorite": "가장 좋아하는"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "철회 할 암호를 선택하십시오",
+          "alert": "선택한 암호화 및 예금 네트워크 일치 또는 자산이 손실 될 수 있는지 확인하십시오.",
+          "searchNet": "검색 네트워크",
+          "sortBy": "정렬",
+          "tabs": {
+            "mostPop": "가장 인기가 있습니다",
+            "fastest": "가장 빠른",
+            "lessConfirm": "확인이 적습니다"
+          },
+          "fee": "요금",
+          "expArr": "예상 도착"
+        }
+      },
+      "table": {
+        "title": "마지막 4 개의 예금 기록",
+        "button": "입금 기록",
+        "tHead": {
+          "dNt": "날짜/시간",
+          "coin": "동전",
+          "amount": "양",
+          "bRecords": "블록 체인 기록",
+          "remark": "발언",
+          "action": "행동",
+          "button": "세부"
+        }
+      }
+    },
+    "withdrawPage": {
+      "steps": {
+        "title": "철수 단계",
+        "step1": {
+          "title": "암호를 선택하십시오",
+          "content": "철회를 위해 암호화 및 네트워크를 선택하십시오"
+        },
+        "step2": {
+          "title": "주소 확인",
+          "content": "복사 된 철수 주소를 붙여 넣으십시오"
+        },
+        "step3": {
+          "title": "전송 확인",
+          "content": "블록 체인 전송 확인을 기다립니다"
+        },
+        "step4": {
+          "title": "성공적인 철수",
+          "content": "Indoex는 자산을 지갑으로 보냅니다"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "암호를 선택하십시오",
+          "withTo": "철수하십시오",
+          "net": "회로망",
+          "selectNet": "철수 네트워크를 선택하십시오",
+          "add": "주소",
+          "enterAdd": "철수 주소를 입력하십시오",
+          "withAmount": "철수 금액",
+          "amount": "양",
+          "avalBal": "사용 가능한 잔액",
+          "minWithAmount": "최소 인출 금액입니다",
+          "remark": "비고 (선택 사항)",
+          "remarkHolder": "예를 들어 ",
+          "rAmount": "금액을받습니다",
+          "netFee": "네트워크 요금",
+          "button": "철회하다"
+        },
+        "tips": {
+          "label": "팁",
+          "content": {
+            "point1": "자금의 안전을 위해 고객 지원 팀이 전화로 연락하여 철수를 확인할 수 있습니다.",
+            "point2": "자금의 안전을 위해 고객 지원 팀이 전화로 연락하여 철수를 확인할 수 있습니다."
+          }
+        },
+        "faq": {
+          "label": "FAQ",
+          "button": "더보기",
+          "faq1": {
+            "ques": "인출은 얼마나 걸립니까?"
+          },
+          "faq2": {
+            "ques": "철수가 거부 된 이유는 무엇입니까?"
+          },
+          "faq3": {
+            "ques": "인출을 취소 할 수 있습니까?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "철회 할 암호를 선택하십시오",
+          "searchCrypto": "암호 검색",
+          "tabs": {
+            "recent": "최근의",
+            "all": "모두",
+            "favorite": "가장 좋아하는"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "철회 할 암호를 선택하십시오",
+          "alert": "선택한 암호화 및 예금 네트워크 일치 또는 자산이 손실 될 수 있는지 확인하십시오.",
+          "searchNet": "검색 네트워크",
+          "sortBy": "정렬",
+          "tabs": {
+            "mostPop": "가장 인기가 있습니다",
+            "fastest": "가장 빠른",
+            "lessConfirm": "확인이 적습니다"
+          },
+          "fee": "요금",
+          "expArr": "예상 도착"
+        },
+        "popUpTransactionStatus": {
+          "pending": {
+            "title": "보류중인 철수",
+            "content": "철수 요청이 검토되고 있으며 약 12 ​​시간이 걸립니다. "
+          },
+          "failed": {
+            "title": "철수 실패",
+            "content": "이 철수를 처리하는 데 문제가있었습니다. "
+          },
+          "successful": {
+            "title": "성공적인 철수",
+            "content": "철수 요청이 성공적으로 제출되었습니다. "
+          },
+          "buttons": {
+            "viewHIstory": "역사를 봅니다",
+            "checkDetails": "세부 사항을 확인하십시오"
+          }
+        }
+      },
+      "table": {
+        "title": "지난 4 번의 기록을 철회했습니다",
+        "button": "역사를 철회하십시오",
+        "tHead": {
+          "dNt": "날짜/시간",
+          "coin": "동전",
+          "amount": "양",
+          "withTo": "철수하십시오",
+          "bRecords": "블록 체인 기록",
+          "remark": "발언",
+          "action": "행동",
+          "button": "세부"
+        }
+      }
+    },
+    "depositHisPage": {
+      "title": "입금 기록",
+      "terms": {
+        "allStatu": "모든 상태",
+        "allCoins": "모든 동전"
+      },
+      "button": "다운로드",
+      "tHead": {
+        "cOrT": "동전/토큰",
+        "amount": "양",
+        "time": "시간",
+        "bRecords": "블록 체인 기록",
+        "remark": "발언",
+        "status": "상태",
+        "successful": "성공적인"
+      }
+    },
+    "withdrawHisPage": {
+      "title": "철수 기록",
+      "terms": {
+        "allStatu": "모든 상태",
+        "allCoins": "모든 동전"
+      },
+      "button": "다운로드",
+      "tHead": {
+        "cOrT": "동전/토큰",
+        "amount": "양",
+        "time": "시간",
+        "withTo": "철수하십시오",
+        "bRecords": "블록 체인 기록",
+        "remark": "발언",
+        "orderId": "주문 ID",
+        "status": "상태",
+        "successful": "성공적인"
+      }
+    },
+    "openOrdersPage": {
+      "title": "오픈 주문",
+      "terms": {
+        "allPairs": "모든 쌍",
+        "bNsOrders": "구매, 판매 주문",
+        "orderType": "주문 유형"
+      },
+      "tHead": {
+        "time": "시간",
+        "pair": "쌍",
+        "bOrS": "구매 또는 판매",
+        "type": "유형",
+        "orderPrice": "주문 가격",
+        "amount": "양",
+        "filled": "채우는",
+        "unexecuted": "비정규",
+        "action": "행동"
+      }
+    },
+    "ordersHisPage": {
+      "title": "주문 기록",
+      "button": "다운로드",
+      "terms": {
+        "month": "월",
+        "allPairs": "모든 쌍",
+        "bNsOrders": "구매, 판매 주문",
+        "orderType": "주문 유형",
+        "status": "상태"
+      },
+      "tHead": {
+        "time": "시간",
+        "pair": "쌍",
+        "bOrS": "구매 또는 판매",
+        "type": "유형",
+        "tCondition": "트리거 조건",
+        "orderPrice": "주문 가격",
+        "amount": "양",
+        "filled": "채우는",
+        "avgPrice": "avg.price",
+        "status": "상태"
+      }
+    },
+    "tradeHisPage": {
+      "title": "무역 역사",
+      "button": "다운로드",
+      "terms": {
+        "month": "월",
+        "allPairs": "모든 쌍",
+        "bNsOrders": "구매, 판매 주문",
+        "orderType": "주문 유형"
+      },
+      "tHead": {
+        "filledTime": "채워진 시간",
+        "pair": "쌍",
+        "bOrS": "구매 또는 판매",
+        "type": "유형",
+        "fillPrice": "주문 가격",
+        "amount": "양",
+        "vol": "용량",
+        "fee": "요금"
+      }
+    },
+    "loginHisPage": {
+      "title": "로그인 기록",
+      "terms": {
+        "lSuccess": "로그인 성공",
+        "lFailed": "잘못된 자격 증명으로 인해 로그인이 실패했습니다"
+      },
+      "tHead": {
+        "dateTime": "날짜 시간",
+        "action": "행동",
+        "ip": "IP 주소"
+      }
+    },
+    "deviceManagement": {
+      "title": "장치 관리",
+      "tHead": {
+        "dateTime": "날짜 시간",
+        "location": "위치",
+        "ip": "IP 주소",
+        "action": "행동",
+        "button": "삭제"
+      }
+    },
+    "apiPage": {
+      "apiManagement": {
+        "title": "API 관리",
+        "subTitle": "API 키를 만듭니다",
+        "terms": {
+          "notes": "메모",
+          "notesHolder": "메모를 입력하십시오",
+          "preSetting": {
+            "part1": "권한 설정",
+            "part2": "(객관식)"
+          },
+          "accBalance": "계정 잔액",
+          "addOrder": "순서를 추가하십시오",
+          "getOrder": "주문을 받으십시오",
+          "closeOrder": "닫기 주문",
+          "bindIp": {
+            "part1": "바인드 IP 주소",
+            "part2": "(선택 과목)"
+          },
+          "expDate": "비 동시에 IP 주소로의 유기 날짜는 100 일입니다.",
+          "button": "만들다"
+        },
+        "note": {
+          "label": "메모",
+          "point1": "우리는 당신에게 강력한 휴식과 WebSocket API를 제공합니다.이를 통해 시장 쿼리, 자동 거래 등과 같은 서비스를 즐길 수 있습니다. API 문서를 참조하십시오.",
+          "point2": "하나의 계정은 최대 5 개의 API 비밀 키를 생성 할 수 있습니다.",
+          "point3": {
+            "part1": "자산 손실을 피하려면 API 키를 다른 사람에게 공개하지 마십시오. ",
+            "part2": "둘 이상의 IP 주소가있는 경우 쉼표로 분리해야합니다 (예 : 192.168.1.1,192.168.1.2,192.168.1.3)."
+          },
+          "point4": "API 거래의 경우 단일 IP가 분당 100 개의 요청을 제한합니다.",
+          "point5": "각 API 키는 100 일 동안 유효하며 교차하면 자동으로 비활성 모드로 변경됩니다.",
+          "point6": {
+            "part1": "질문이 있으시면 저희에게 연락하십시오",
+            "part2": "support@indoex.io"
+          }
+        }
+      },
+      "apiList": {
+        "title": "API 키를 만들었습니다",
+        "tHead": {
+          "createDate": "날짜를 만듭니다",
+          "notes": "메모",
+          "permission": "허가",
+          "accKey": "액세스 키",
+          "ip": "바인드 IP 주소",
+          "expire": "만료 (일)",
+          "action": "행동"
+        }
+      }
+    }
+  }
+}

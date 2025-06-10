@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import { RxValueNone } from "react-icons/rx";
@@ -54,11 +55,13 @@ export const mockData: MockData[] = [
 ];
 
 const DeviceManagement = () => {
+  const t = useTranslations("dashboard.deviceManagement");
+
   return (
     <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold mb-10`}>
-        Device management
+        {t("title")}
       </h2>
 
       {/* table */}
@@ -66,10 +69,21 @@ const DeviceManagement = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">Date Time</th>
-              <th className="px-4 py-3 text-[9px] font-light">Location</th>
-              <th className="px-4 py-3 text-[9px] font-light">IP Address</th>
-              <th className="px-4 py-3 text-[9px] font-light">Action</th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.dateTime")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {" "}
+                {t("tHead.location")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {" "}
+                {t("tHead.ip")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {" "}
+                {t("tHead.action")}
+              </th>
             </tr>
           </thead>
           {mockData.length > 0 && (
@@ -85,7 +99,7 @@ const DeviceManagement = () => {
                     <td className="py-3 px-4">{item.ipAddress}</td>
                     <td className="py-3 px-4">
                       <button className="px-2 p-1 rounded-full text-red-100 bg-red-500 dark:text-red-500 dark:bg-red-700/20 dark:hover:bg-red-700/10 cursor-pointer border border-red-500 hover:bg-red-600 transition-all duration-200">
-                        Delete
+                        {t("tHead.button")}
                       </button>
                     </td>
                   </tr>

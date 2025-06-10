@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import { RxValueNone } from "react-icons/rx";
@@ -16,22 +17,24 @@ type MockData = {
 const mockData: MockData[] = [];
 
 const OpenOrders = () => {
+  const t = useTranslations("dashboard.openOrdersPage");
+
   return (
     <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Open Orders
+        {t("title")}
       </h2>
       {/* filter tab */}
       <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] mt-2">
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>All Pairs</option>
+          <option>{t("terms.allPairs")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>Buy, Sell Orders</option>
+          <option>{t("terms.bNsOrders")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>Order Type</option>
+          <option>{t("terms.orderType")}</option>
         </select>
       </div>
 
@@ -40,16 +43,35 @@ const OpenOrders = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">Time</th>
-              <th className="px-4 py-3 text-[9px] font-light">Pair</th>
-              <th className="px-4 py-3 text-[9px] font-light">Buy or Sell</th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.time")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.pair")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.bOrS")}
+              </th>
 
-              <th className="px-4 py-3 text-[9px] font-light">Type</th>
-              <th className="px-4 py-3 text-[9px] font-light">Order Price</th>
-              <th className="px-4 py-3 text-[9px] font-light">Amount</th>
-              <th className="px-4 py-3 text-[9px] font-light">Filled</th>
-              <th className="px-4 py-3 text-[9px] font-light">Unexecuted</th>
-              <th className="px-4 py-3 text-[9px] font-light">Action</th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.type")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.orderPrice")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.amount")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.filled")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.unexecuted")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {" "}
+                {t("tHead.action")}
+              </th>
             </tr>
           </thead>
           {mockData.length > 0 && (

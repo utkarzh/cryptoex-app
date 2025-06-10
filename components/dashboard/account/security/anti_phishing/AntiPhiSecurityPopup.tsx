@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useState, useRef, useEffect, FC } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
@@ -13,6 +14,10 @@ type Props = {
 };
 
 const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.antiPhishing.popUp2"
+  );
+
   const [code, setCode] = useState<string[]>(Array(6).fill(""));
   const [error, setError] = useState(false);
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
@@ -44,11 +49,10 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
     if (enteredCode !== CORRECT_CODE) {
       setError(true);
       if (enteredCode === "000000") {
-        setErrorMessage(
-          "Verification code has expired. Please request a new code."
-        );
+        setErrorMessage(t("error.expOtp"));
       } else {
-        setErrorMessage("The OTP you entered is incorrect.");
+        setErrorMessage(t("error.wrongOtp"));
+        // setErrorMessage("asdasdas");
       }
     } else {
       onSuccess(CORRECT_CODE);
@@ -75,9 +79,9 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
       </button>
 
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Security Verification
+        {t("title")}
       </h2>
-      <p className="mt-6 opacity-60 text-xs font-light mb-4">Enter 2FA Code</p>
+      <p className="mt-6 opacity-60 text-xs font-light mb-4">{t("enter2fa")}</p>
 
       {/* box */}
       <div className="flex justify-between mb-4">
@@ -116,7 +120,7 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
       )}
 
       <p className="text-green-500 text-xs font-light mt-2 cursor-pointer">
-        Having problems with verification?
+        {t("havingProb")}
       </p>
     </div>
   );

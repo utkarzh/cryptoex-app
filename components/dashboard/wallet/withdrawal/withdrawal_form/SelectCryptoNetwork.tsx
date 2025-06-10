@@ -6,6 +6,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { MdSearch } from "react-icons/md";
 import { Network } from "./WithdrawForm";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 
 type Props = {
   networks: Network[];
@@ -14,8 +15,9 @@ type Props = {
 };
 
 const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
+  const t = useTranslations("dashboard.withdrawPage.form.popUpSelectNet");
   const [search, setSearch] = useState("");
-  const [sort, setSort] = useState("most");
+  const [sort, setSort] = useState("mostPop");
 
   if (!networks) {
     return;
@@ -33,7 +35,7 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
         <h2 className={`${saira.className} text-sm font-semibold `}>
-          Select Crypto to Withdraw
+          {t("title")}
         </h2>
         <button onClick={onClose}>
           <IoCloseSharp className="text-2xl cursor-pointer hover:scale-110 trasition-all duration-300" />
@@ -45,8 +47,7 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
 
       {/* important message */}
       <p className="text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md">
-        ⚠️ Make sure your selected crypto and deposit network match, or assets
-        may be lost.
+        ⚠️ {t("alert")}
       </p>
 
       {/* search */}
@@ -56,7 +57,7 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search crypto"
+          placeholder={t("searchNet")}
           className="w-full indent-3 px-4 py-2 rounded-md  bg-slate-500/20 text-sm placeholder:font-extralight  outline-none"
         />
       </div>
@@ -66,9 +67,9 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
         {/* sortby */}
         <div className="text-[10px] font-light flex items-center opacity-60">
           <BiSort />
-          Sort by:
+          {t("sortBy")}:
         </div>
-        {["Most popular", "Fastest", "Less confirmations"].map((label) => (
+        {["mostPop", "fastest", "lessConfirm"].map((label) => (
           <button
             key={label}
             onClick={() => setSort(label.toLowerCase())}
@@ -78,7 +79,7 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
                 : "dark:border-slate-500/20 border-slate-400/20"
             }`}
           >
-            {label}
+            {t(`tabs.${label}`)}
           </button>
         ))}
       </div>
@@ -99,13 +100,13 @@ const SelectCryptoNetwork: FC<Props> = ({ networks, onClose, onSelect }) => {
             </div>
             <div className="text-right text-xs">
               <div className=" text-[10px] text-gray-300 font-light">
-                Expected Arrival ≈{" "}
+                {t("expArr")} ≈{" "}
                 <span className="font-medium text-xs dark:text-white text-black">
                   {n.arrival}
                 </span>
               </div>
               <div className="text-gray-300 text-[10px] font-light">
-                Fee:{" "}
+                {t("fee")}:{" "}
                 <span className="text-xs font-medium dark:text-white text-black">
                   {n.fee} ({n.usdFee})
                 </span>

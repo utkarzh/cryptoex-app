@@ -1,0 +1,1787 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "贸易",
+        "items": {
+          "spot": {
+            "label": "现货交易",
+            "desc": "立即购买或出售加密货币"
+          },
+          "margin": {
+            "label": "保证金贸易",
+            "desc": "用借入资金进行交易以进行更大的举动"
+          },
+          "convert": {
+            "label": "转变",
+            "desc": "在几秒钟内交换加密 - 简单而快速"
+          }
+        }
+      },
+      "markets": "市场",
+      "earn": {
+        "label": "赚",
+        "items": {
+          "loans": {
+            "label": "贷款",
+            "desc": "解锁资金，保留加密货币。"
+          },
+          "staking": {
+            "label": "赌注",
+            "desc": "赌注硬币，赚取被动收入。"
+          }
+        }
+      },
+      "events": {
+        "label": "事件",
+        "items": {
+          "airdrop": {
+            "label": "空投",
+            "desc": "持有令牌，要求奖励。"
+          },
+          "launchpad": {
+            "label": "发射台",
+            "desc": "在新令牌上进行投资。"
+          },
+          "tradeCompetition": {
+            "label": "贸易竞赛",
+            "desc": "展示您的技能，获奖。"
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "交换",
+      "web3": "Web3"
+    },
+    "auth": {
+      "signin": "登入",
+      "signup": "报名",
+      "see_all": "看看全部",
+      "new_listing": "新清单"
+    }
+  },
+  "sidebar": {
+    "overview": "概述",
+    "account": {
+      "label": "帐户",
+      "children": {
+        "profile": "轮廓",
+        "security": "安全"
+      }
+    },
+    "wallet": {
+      "label": "钱包",
+      "children": {
+        "assets": "资产",
+        "deposit": "订金",
+        "withdraw": "提取"
+      }
+    },
+    "history": {
+      "label": "历史",
+      "children": {
+        "depositHistory": "存款历史",
+        "withdrawHistory": "提取历史"
+      }
+    },
+    "orders": {
+      "label": "订单",
+      "children": {
+        "openOrders": "公开订单",
+        "orderHistory": "订购历史记录",
+        "tradeHistory": "贸易历史"
+      }
+    },
+    "earn": {
+      "label": "赚",
+      "children": {
+        "loans": "贷款",
+        "staking": "赌注"
+      }
+    },
+    "loginActivity": {
+      "label": "登录活动",
+      "children": {
+        "loginHistory": "登录历史记录",
+        "deviceManagement": "设备管理"
+      }
+    },
+    "referrals": "推荐",
+    "api": "API",
+    "logout": "注销",
+    "withdraw": "提取",
+    "deposit": "订金"
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "增强您的加密交易经验",
+      "subTitle": "见证无缝交易，实时见解并确保您需要的一切。"
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "点",
+        "newlyListed": "新列出",
+        "topGainers": "最高奖金"
+      },
+      "tableHead": {
+        "coins": "硬币",
+        "lastPrice": "最后价格",
+        "24hChange": "24小时变化",
+        "markets": "市场",
+        "24hVolume": "24h卷"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "创建您的帐户",
+        "content": "通过电子邮件在几分钟内注册，设置安全密码，并验证您的身份以获得安全的交易体验。",
+        "button": "开始"
+      },
+      "step2": {
+        "heading": "完成您的KYC",
+        "content": "通过电子邮件在几分钟内注册，设置安全密码，并验证您的身份以获得安全的交易体验。",
+        "button": "更新KYC"
+      },
+      "step3": {
+        "heading": "开始交易",
+        "content": "通过电子邮件在几分钟内注册，设置安全密码，并验证您的身份以获得安全的交易体验。",
+        "button": "开始交易"
+      }
+    },
+    "getStarted": {
+      "heading": "开始",
+      "marketing": {
+        "24hVolume": "24h卷（BTC）",
+        "coinsListed": "列出了硬币",
+        "countries": "国家",
+        "marketPairs": "市场对"
+      },
+      "benefits": {
+        "type_vendor": "供应商的好处",
+        "type_user": "用户利益",
+        "vendor": {
+          "ben1": {
+            "title": "硬币/令牌清单",
+            "content": "Indoex正在扩大投资访问权限到全球所有合格的加密货币"
+          },
+          "ben2": {
+            "title": "贸易竞赛",
+            "content": "我们的交易竞赛使用户展示了技能。"
+          },
+          "ben3": {
+            "title": "自定义配对",
+            "content": "与其他交易所不同，Indoex对额外的市场对收取无费用。"
+          },
+          "ben4": {
+            "title": "上市比赛",
+            "content": "我们的上市比赛以3 BTC奖励获胜者。"
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "硬币/令牌清单",
+            "conent": "Indoex正在扩大投资访问权限到全球所有合格的加密货币"
+          },
+          "ben2": {
+            "title": "贸易竞赛",
+            "conent": "我们的交易竞赛使用户展示了技能。"
+          },
+          "ben3": {
+            "title": "自定义配对",
+            "conent": "与其他交易所不同，Indoex对额外的市场对收取无费用。"
+          },
+          "ben4": {
+            "title": "上市比赛",
+            "conent": "我们的上市比赛以3 BTC奖励获胜者。"
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "特征",
+      "leftSection": {
+        "fet1": {
+          "title": "合理的佣金",
+          "content": "盈利的投资机会和条件"
+        },
+        "fet2": {
+          "title": "算法交易",
+          "content": "API用于交叉贸易机器人"
+        },
+        "fet3": {
+          "title": "算法交易",
+          "content": "API用于交叉贸易机器人"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "固定钱包",
+          "content": "将您的数字资产放在用户钱包中"
+        },
+        "fet2": {
+          "title": "付款选项",
+          "content": "超过10种存入帐户的方法"
+        },
+        "fet3": {
+          "title": "算法交易",
+          "content": "API用于交叉贸易机器人"
+        }
+      }
+    },
+    "partners": {
+      "heading": "合作伙伴",
+      "content": {
+        "title": "跨设备无缝贸易",
+        "subTitle": "下载我们的移动应用程序进行轻松的加密交易！",
+        "downloads": {
+          "playStore": {
+            "getIt": "继续",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "下载",
+            "from": "应用商店"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "登录到您的帐户",
+      "items": {
+        "email": {
+          "label": "电子邮件",
+          "holder": "输入电子邮件"
+        },
+        "password": {
+          "label": "密码",
+          "holder": "输入密码"
+        }
+      },
+      "button": "登录",
+      "signinOption": "或登录",
+      "noAcc": {
+        "part1": "没有帐户？",
+        "part2": "创建账户"
+      }
+    },
+    "signup": {
+      "title": "创建您的帐户",
+      "items": {
+        "email": {
+          "label": "电子邮件",
+          "holder": "输入电子邮件"
+        },
+        "username": {
+          "label": "用户名",
+          "holder": "输入用户名"
+        },
+        "password": {
+          "label": "密码",
+          "holder": "输入密码"
+        },
+        "country": {
+          "label": "国家",
+          "holder": "选择您的国家",
+          "options": {
+            "op1": "美国",
+            "op2": "印度",
+            "op3": "英国",
+            "op4": "德国"
+          }
+        },
+        "referrals": {
+          "label": "推荐代码（可选）",
+          "holder": "输入推荐代码"
+        }
+      },
+      "terms": {
+        "part1": "我接受",
+        "part2": "条款和条件"
+      },
+      "button": "报名",
+      "signupOption": "或注册",
+      "haveAcc": {
+        "part1": "已经有一个帐户？",
+        "part2": "登录"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "在几分钟内注册 - 签名，存入并开始轻松地交易加密货币！",
+      "button": "开始"
+    },
+    "services": {
+      "label": "服务",
+      "items": {
+        "terms": "使用条款",
+        "policy": "隐私政策",
+        "status": "钱包状态",
+        "announcements": "公告",
+        "media": "媒体"
+      }
+    },
+    "legalisation": {
+      "label": "合法化",
+      "items": {
+        "fee": "费用",
+        "legalities": "合法",
+        "kyc": "AML / KYC政策",
+        "protect": "在线保护自己",
+        "verification": "确认"
+      }
+    },
+    "others": {
+      "label": "其他的",
+      "items": {
+        "faq": "常问问题",
+        "contact": "联系我们",
+        "support": "客户支持：",
+        "mails": "申请列表："
+      }
+    },
+    "rights": "©2025 IDOEX保留所有权利。",
+    "alert": "加密货币投资受到市场风险的影响 - 明智地进行投资并保持知情。"
+  },
+  "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "订单书",
+        "tradehistory": "贸易历史"
+      },
+      "tHead": {
+        "price": "价格（USDT）",
+        "amount": "金额（BTC）",
+        "total": "全部的"
+      },
+      "more": "更多的"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24小时变化",
+        "24hHigh": "高24小时",
+        "24hLow": "低24小时",
+        "24hVolumeBtc": "24h卷（BTC）",
+        "24hVolumeUsdc": "24小时（USDT）"
+      }
+    },
+    "tradeForm": {
+      "buy": "买",
+      "sell": "卖",
+      "spot": "点",
+      "cross": "叉",
+      "isolated": "孤立",
+      "limit": "限制",
+      "market": "市场",
+      "stop": "停止限制",
+      "normal": "普通的",
+      "borrow": "借",
+      "repay": "偿还",
+      "price": "价格",
+      "amount": "数量",
+      "total": "全部的",
+      "available": "可用的",
+      "txnFee": "TXN费用",
+      "borrowing": "借用",
+      "button": "登录 /注册"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "公开订单",
+        "orderhistory": "订购历史记录"
+      },
+      "message": {
+        "part1": "登录",
+        "part2": "或者",
+        "part3": "报名",
+        "part4": "交易"
+      }
+    },
+    "connection": "稳定连接"
+  },
+  "convertPage": {
+    "tabs": {
+      "faq": "常问问题",
+      "convert": "转变",
+      "history": "历史"
+    },
+    "convertForm": {
+      "title": "转变",
+      "subTitle": "快速，轻松地通过即时执行来转换数百个加密货币。",
+      "terms": {
+        "availBalance": "可用的余额",
+        "from": "从",
+        "to": "到",
+        "max": "最大限度",
+        "rate": "速度",
+        "button": "登录 /注册",
+        "tradeSpot": "贸易点"
+      }
+    },
+    "convertBar": {
+      "barTitle": "将BTC（比特币）转换为其他硬币"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "灵活利率贷款",
+      "fixed": "固定利率贷款",
+      "history": "贷款历史",
+      "data": "贷款数据"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "以灵活的价格借用交易或股份，并最大程度地提高回报。",
+        "features": {
+          "f1": "随时偿还",
+          "f2": "无交易费"
+        },
+        "buttons": {
+          "b1": "正在进行的订单",
+          "b2": "资产概述"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "抵押品",
+            "enterAmount": "输入金额",
+            "wantBorrow": "我想借",
+            "max": "最大限度",
+            "details": "细节"
+          },
+          "button": "登录 /注册"
+        }
+      },
+      "borrowTable": {
+        "title": "借入市场",
+        "search": "搜索",
+        "viewMore": "查看更多",
+        "tHead": {
+          "coin": "可贷硬币",
+          "hIntRate": "小时的利率",
+          "aIntRate": "年利率",
+          "action": {
+            "label": "行动",
+            "button": "借"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "item2": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "item3": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "item4": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "item5": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "您选择的固定利率借用或贷款",
+        "stats": {
+          "totalBorrowed": "总借",
+          "currentOrders": "当前订单",
+          "rate": {
+            "label": "定制利率",
+            "content": "支持多资产抵押"
+          }
+        },
+        "myOrder": {
+          "label": "我的订单",
+          "pOrders": {
+            "label": "等待订单",
+            "content": "检查并管理无与伦比的订单"
+          },
+          "oOrders": {
+            "label": "正在进行的订单",
+            "content": "检查，调整LTV和还款匹配的订单"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "借",
+          "terms": {
+            "bAmount": "借入金额",
+            "min": "最小0.005 BTC",
+            "expRate": "预期利率",
+            "intRate": "输入利率",
+            "refMarket": "参考市场供应率",
+            "duration": "期间",
+            "collateral": "抵押品",
+            "setUp": "建立抵押品",
+            "autoRepay": "自动修复"
+          }
+        },
+        "supply": {
+          "label": "供应",
+          "terms": {
+            "bAmount": "借入金额",
+            "min": "最小0.005 BTC",
+            "expRate": "预期利率",
+            "intRate": "输入利率",
+            "refMarket": "参考市场供应率：5.04％",
+            "duration": "期间",
+            "collateral": "抵押品",
+            "setUp": "建立抵押品",
+            "autoRepay": "自动修复"
+          }
+        },
+        "button": "登录 /注册"
+      },
+      "BandStable": {
+        "title1": "我想借",
+        "title2": "我想提供",
+        "terms": {
+          "days": "天",
+          "all": "全部",
+          "duration": "期间"
+        },
+        "borrowTableHead": {
+          "bRate": "借入利率（固定）",
+          "duration": "期间",
+          "minBAmount": "最小借入金额",
+          "bAbleAmount": "可借用的金额"
+        },
+        "supplyTableHead": {
+          "supplyApr": "供应APR（固定）",
+          "duration": "期间",
+          "estInt": "Est。",
+          "tAmount": "总金额"
+        }
+      },
+      "howItWorks": {
+        "title": "固定利率贷款如何工作？",
+        "tabs": {
+          "borrower": "作为借款人",
+          "supplier": "作为供应商"
+        },
+        "step1": {
+          "title": "1。订单放置",
+          "content": "下借订单或从借贷市场中选择现有订单。"
+        },
+        "step2": {
+          "title": "2。选择抵押品",
+          "content": "从您的现货钱包资产列表中选择抵押资产。"
+        },
+        "step3": {
+          "title": "3。确认订单",
+          "content": "确认订单详细信息，包括估计的利息，条款，保证金呼叫LTV等。下订单后，您的抵押品资产将被冻结在您的现货钱包中。"
+        },
+        "step4": {
+          "title": "4。订单匹配",
+          "content": "一旦匹配，您的抵押品就会搬运到义务保管，您会收到现货钱包中的借入金额（减去利息）。"
+        },
+        "step5": {
+          "title": "5。还款",
+          "content": "偿还到期日期以避免罚款。"
+        }
+      },
+      "advantages": {
+        "title": "固定利率贷款优势",
+        "adv1": {
+          "title": "借款人的稳定成本",
+          "content": "锁定固定的持续时间，锁定固定的APR，消除波动和意外的成本。"
+        },
+        "adv2": {
+          "title": "有效的自动化过程",
+          "content": "享受轻松，自动借贷和借贷经验，可提供自动修复和自动续订选项。"
+        },
+        "adv3": {
+          "title": "供应商有吸引力的固定APR",
+          "content": "为您的资产提供可自定义和固定的APR的资产。"
+        },
+        "adv4": {
+          "title": "多资产抵押",
+          "content": "借款人可以将多个资产设置为抵押，以降低清算风险。"
+        }
+      },
+      "faq": {
+        "title": "常问问题",
+        "faq1": {
+          "ques": "什么是加密货币堆积，它是如何工作的？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "faq2": {
+          "ques": "我可以随时取消我的加密货币吗？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "faq3": {
+          "ques": "在赎回期内，我会赢得奖励吗？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        },
+        "faq4": {
+          "ques": "堆放安全吗？",
+          "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "带有灵活条款的股份可获得最高收入",
+      "content": "通过您的条款赚取被动收入，并使用灵活的高收益放入选择。",
+      "overview": {
+        "label": "概述",
+        "terms": {
+          "assets": "资产（USDT）",
+          "yesProfit": "昨天的利润（USDT）",
+          "totalProfit": "总利润（USDT）"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "赌注",
+        "content": "Staking可以让您获得加密货币的奖励。"
+      },
+      "info2": {
+        "title": "学期",
+        "content": "您对产品的持有期确定收益率。"
+      },
+      "info3": {
+        "title": "赎回期",
+        "content": "这是由Staking协议设置的。"
+      }
+    },
+    "table": {
+      "title": "所有产品",
+      "terms": {
+        "matchAssets": "匹配可用资产",
+        "search": "搜索"
+      },
+      "tHead": {
+        "coin": "硬币",
+        "estApr": "Est。 ",
+        "reward": "奖励硬币",
+        "action": {
+          "label": "行动",
+          "button": "赌注"
+        }
+      }
+    },
+    "faq": {
+      "label": "常问问题",
+      "faq1": {
+        "ques": "什么是加密货币堆积，它是如何工作的？",
+        "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+      },
+      "faq2": {
+        "ques": "我可以随时取消我的加密货币吗？",
+        "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+      },
+      "faq3": {
+        "ques": "在赎回期内，我会赢得奖励吗？",
+        "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+      },
+      "faq4": {
+        "ques": "堆放安全吗？",
+        "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+      }
+    },
+    "stakeForm": {
+      "title": "赌注",
+      "form": {
+        "terms": {
+          "currency": "货币",
+          "selAmount": "选择硬币",
+          "amount": "数量",
+          "minAmount": "最小金额0.0001 BTC",
+          "refAPR": "参考APR",
+          "terms": "学期",
+          "fundAcc": "资金帐户",
+          "maxAmount": "最大金额",
+          "flexible": "灵活的"
+        }
+      },
+      "preview": {
+        "lable": "预览",
+        "terms": {
+          "subDate": "订阅日期",
+          "accDate": "应计日期",
+          "profitDisDate": "利润分配日期",
+          "redPeriod": "赎回期",
+          "profitRec": "收到的利润",
+          "days": "天",
+          "daily": "日常的"
+        }
+      },
+      "estimated": {
+        "label": "估计回报",
+        "terms": {
+          "earning": "BTC收益",
+          "agg": {
+            "part1": "我已经阅读并同意",
+            "part2": "用户同意人"
+          }
+        }
+      },
+      "button": "赌注"
+    }
+  },
+  "marketPage": {
+    "tabs": {
+      "spot": "点",
+      "newListed": "新列出",
+      "topGainer": "最高奖金"
+    },
+    "quickViewTable": {
+      "tGainer": "最高奖金",
+      "tranding": "趋势",
+      "newListing": "新列表",
+      "tHead": {
+        "pairs": "成对",
+        "price": "价格",
+        "24hChange": "24小时变化"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "全部",
+        "search": "搜索"
+      },
+      "tHead": {
+        "coin": "硬币",
+        "lPrice": "最后价格",
+        "24hChange": "24小时变化",
+        "24hHigh": "高24小时",
+        "24hLow": "低24小时",
+        "24hVol": "24h卷",
+        "chart": "图表",
+        "trade": "贸易"
+      },
+      "button": "贸易"
+    }
+  },
+  "airDrop": {
+    "title": "要求您免费的加密货币！",
+    "subTitle": "加入最新的Indoex Airdrop活动并立即赚取。",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在进行",
+      "upcoming": "即将到来",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "气流供应",
+      "start": "开始",
+      "end": "结尾",
+      "cardContent": "启动板将是猫猿令牌的核心实用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "about": "关于",
+        "howToJoin": "如何加入",
+        "tokenPerAir": "每个空投的令牌",
+        "upTo": "到",
+        "referral": "推荐",
+        "kyc": "kyc",
+        "kycNoReq": "KYC不是必需的",
+        "guide": "分步指南",
+        "doNotForgot": "不要忘记加入我们的电报频道，在Twitter上关注我们，并订阅我们的新闻通讯以接收新的Airdrops！",
+        "overview": "概述",
+        "web": "网站",
+        "exp": "资源管理器",
+        "git": "github",
+        "wPaper": "白皮书",
+        "ann": "公告",
+        "sMedia": "社交媒体",
+        "join": "参加Airdrop活动",
+        "sDate": "开始日期",
+        "eDate": "结束日期",
+        "participants": "活跃的参与者",
+        "button": "参与空调"
+      }
+    }
+  },
+  "launchPad": {
+    "title": "要求您免费的加密货币！",
+    "subTitle": " 使用Indoex LaunchPad启动您的加密代币",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在进行",
+      "upcoming": "即将到来",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "气流供应",
+      "start": "开始",
+      "end": "结尾",
+      "cardContent": "启动板将是猫猿令牌的核心实用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "倒数",
+        "days": "天",
+        "hours": "小时",
+        "minutes": "分钟",
+        "seconds": "秒",
+        "sPrice": "IEO销售价格",
+        "about": "关于",
+        "details": "细节",
+        "fName": "姓名",
+        "web": "网站",
+        "tName": "股票名称",
+        "sSupply": "会话供应",
+        "tSupply": "总供应",
+        "ieoPrice": "IEO价格",
+        "ieoSDate": "IEO开始日期",
+        "ieoEDate": "IEO结束日期",
+        "bonus": "奖金",
+        "tecFou": "技术基础",
+        "docu": "文件",
+        "wPaper": "白皮书",
+        "team": "团队",
+        "sMedia": "社交媒体"
+      },
+      "form": {
+        "terms": {
+          "cBal": "当前平衡",
+          "details": "细节",
+          "sDate": "开始日期",
+          "eDate": "结束日期",
+          "tPrice": "令牌价格",
+          "minPrice": "最低价格",
+          "ord": "订单",
+          "bar": "酒吧",
+          "buy": "买",
+          "rec": "收到",
+          "button": "登录 /注册"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "要求您免费的加密货币！",
+    "subTitle": "交易越多，赢得越多！",
+    "tabs": {
+      "all": "全部",
+      "ongoing": "正在进行",
+      "upcoming": "即将到来",
+      "completed": "完全的"
+    },
+    "terms": {
+      "airSupply": "气流供应",
+      "start": "开始",
+      "end": "结尾",
+      "cardContent": "启动板将是猫猿令牌的核心实用功能。 "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "贸易竞赛",
+        "moreTrade": "您交易越多",
+        "moreWin": "您的机会越高。",
+        "details": "细节",
+        "1st": "第一",
+        "2nd": "第二",
+        "3rd": "第三",
+        "4th": "第四",
+        "5th": "第五",
+        "6th": "第六",
+        "7th": "第七",
+        "8th": "第八",
+        "9th": "第9",
+        "10th": "第十",
+        "11th-15th": "第11-15号",
+        "16th-20th": "第16-20号",
+        "pOverview": "参与概述",
+        "position": "位置",
+        "user": "用户",
+        "vol": "体积",
+        "join": "参加贸易竞赛",
+        "ieoSDate": "IEO开始日期",
+        "ieoEDate": "IEO结束日期",
+        "button": "去贸易",
+        "participants": "活跃的参与者"
+      }
+    }
+  },
+  "walletStatus": {
+    "title": "钱包状态",
+    "terms": {
+      "search": "搜索"
+    },
+    "tHead": {
+      "name": "姓名",
+      "tSupply": "总供应",
+      "cSupply": "Curr。",
+      "buyFee": "购买费",
+      "sellFee": "出售费",
+      "status": "地位",
+      "buttons": {
+        "active": "积极的",
+        "maintenance": "维护"
+      }
+    }
+  },
+  "termsOfUse": {
+    "title": "使用条款",
+    "subTitle": "INDOEX交换条款",
+    "content": "这些使用条款规定了成员之间的权利和义务（如第2条所述，包括过去成员的人）和与在线服务“ Indoex交换”和“ Indoex Instant Instant Exchange”有关的Fisco Cryptocurrency Exchange Inc.（“我们”或“ Company”），我们提供了（在Domain https https https https https：//indoex.ioex.ios.ios.io of Service of of of Service”）",
+    "arti1": {
+      "title": "第1条使用条款的应用范围",
+      "content": {
+        "point1": "这些使用条款适用于我们和成员（在本第1条中，包括过去成员的人），并规定了有关公司的权利和义务以及与服务有关的所有权利和义务。",
+        "point2": "这是使用每个成员了解重要事项解释的全文的内容的条件，以及这些使用条款，并同意这些使用条款规定了有关公司和成员与服务有关的所有权利和义务的所有事项。",
+        "point3": " 如果成员是未成年人，则成员必须在使用服务之前获得其法定监护人的同意。",
+        "point4": " 如果成员使用该服务，则将认为该成员同意这些使用条款规定了有关公司和成员与服务的权利和义务的所有事项。"
+      }
+    },
+    "arti2": {
+      "title": "第2条成员",
+      "content": {
+        "point1": "希望成为会员的人必须根据我们的规定程序提交会员注册申请。",
+        "ponit2": "成员完成服务的注册后，我们可能会要求成员再次提交我们指定的必要文件，如果有必要在交易时执行身份验证，则相关法律和条例规定，否则我们认为有必要...",
+        "point3": "如果成员希望取消他或她作为成员的注册，则该成员可以根据我们的规定程序取消其成员注册。"
+      }
+    },
+    "arti3": {
+      "title": "第3条登录ID和密码管理",
+      "content": {
+        "point1": "成员必须按照自己的责任管理其注册的登录ID和密码，并且不得借给，分配，出售或以其他方式将此类信息贷款给第三方。",
+        "point2": "我们将通过确认用户登录到我们的网站或使用服务匹配预设的登录ID和密码时输入的登录ID和密码来验证会员的身份。",
+        "point3": "由于成员可归因的原因和（ii）未经授权的使用或使用此类泄漏的登录ID造成的泄漏ID或密码造成的损害承担全部责任。",
+        "point4": "如果成员意识到登录ID或密码已被盗或已被第三方使用，则成员必须立即通知我们该效果并遵循我们的说明。"
+      }
+    },
+    "arti4": {
+      "title": "第4条注册信息的变更",
+      "content": {
+        "point1": "如果会员的注册信息有任何更改，则成员必须通过我们的规定方法通知我们，而无需延迟信息，并提交我们要求的必要文件。"
+      }
+    }
+  },
+  "announcementsPage": {
+    "title": "公告",
+    "terms": {
+      "search": "搜索",
+      "annu": "Indoex Memebox具有初始列出的令牌"
+    },
+    "sidebar": {
+      "all": "全部",
+      "news": {
+        "label": "消息",
+        "item1": "Indoex更新",
+        "item2": "公共新闻"
+      },
+      "newListing": "新列表",
+      "events": {
+        "label": "事件",
+        "item1": "项目1",
+        "item2": "项目2"
+      },
+      "web3": "Web3",
+      "api": "API",
+      "dListing": "列入"
+    }
+  },
+  "mediaKitPage": {
+    "title": "媒体套件",
+    "content": "遵循这些准则，以确保在营销传播中促进indoex（包括广告，文章，网站和印刷材料）时的一致性和准确性",
+    "terms": {
+      "downloadHeading": "下载Indoex品牌徽标使用指南",
+      "guideHeading": "品牌准则",
+      "buttons": {
+        "downloadPdf": "下载PDF",
+        "download": "下载"
+      },
+      "brandAssets": "品牌资产",
+      "logos": "徽标",
+      "logosContent": "在此处获取官方的IDOEX徽标。",
+      "sairaBold": "Saira Bold",
+      "inter": "常规和中等",
+      "typeFace": "字体",
+      "typeFaceContent": "获取我们公司字体，赛拉和国际媒介的副本。",
+      "colors": "颜色",
+      "colorsContent": "以下是Indoex的主要和次要品牌颜色",
+      "green": "青菜",
+      "dBlue": "深蓝色"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "什么是加密货币堆积，它是如何工作的？",
+      "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+    },
+    "faq2": {
+      "ques": "我可以随时取消我的加密货币吗？",
+      "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+    },
+    "faq3": {
+      "ques": "在赎回期内，我会赢得奖励吗？",
+      "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+    },
+    "faq4": {
+      "ques": "堆放安全吗？",
+      "ans": "放置是锁定您的加密货币以支持区块链网络的操作的过程。"
+    }
+  },
+  "feePage": {
+    "title": "费用结构",
+    "terms": {
+      "search": "搜索"
+    },
+    "tHead": {
+      "name": "姓名",
+      "minDeposit": "最小。",
+      "minWithdraw": "最小。",
+      "withdrawFee": "提取费",
+      "makerFee": "制造商费",
+      "takerFee": "收费者费用"
+    }
+  },
+  "contactPage": {
+    "title": "联系我们",
+    "subTitle": "如果您有任何疑问，请与赛道Indoex团队联系。",
+    "terms": {
+      "email": "电子邮件",
+      "enterEmail": "输入您的电子邮件",
+      "category": "类别",
+      "selectType": "选择您的查询类型",
+      "message": "信息",
+      "messageHere": "消息在这里",
+      "button": "提交",
+      "phone": "电话",
+      "emailBot": "电子邮件"
+    }
+  },
+  "indoexVerify": {
+    "title": "IDAEX验证",
+    "content": "我们创建了一个页面来验证Indoex渠道和业务帐户以防止欺诈。",
+    "terms": {
+      "platform": "平台",
+      "enterUrl": "输入URL",
+      "web": "网站",
+      "button": "搜索",
+      "message": "请使用Indoex验证检查源是否正式代表Indoex。 ",
+      "notice": "注意",
+      "noticeMessage": {
+        "part1": "请不要联系任何非官方/未验证的来源，也不要向他们透露您的帐户详细信息。",
+        "part2": "INDOEX支持"
+      }
+    }
+  },
+  "dashboard": {
+    "overviewPage": {
+      "assets": "总资产",
+      "wallet": {
+        "label": "钱包摘要",
+        "terms": {
+          "tDeposit": "总存款",
+          "tBuyOrders": "总购买订单",
+          "tWithdraw": "总撤回",
+          "tSellOrders": "总卖出订单",
+          "deposit": "订金",
+          "withdraw": "提取",
+          "myAssets": "我的资产"
+        }
+      },
+      "security": {
+        "label": "安全",
+        "content": "提高您的帐户安全强度",
+        "terms": {
+          "strength": "力量",
+          "goToSPage": "转到安全页面",
+          "passkey": "Passkey",
+          "2fa": "2步验证",
+          "antiPhi": "反钓鱼代码",
+          "button": "积极的"
+        }
+      },
+      "market": {
+        "label": "市场",
+        "tabs": {
+          "trending": "趋势",
+          "topVolume": "顶量",
+          "favorite": "最喜欢的"
+        },
+        "terms": {
+          "price": "价格"
+        },
+        "button": "查看全部"
+      },
+      "tradeTable": {
+        "title": "贸易历史",
+        "button": "查看全部",
+        "tHead": {
+          "filledTime": "填充时间",
+          "pair": "一对",
+          "bOrS": "买卖",
+          "orderType": "订单类型",
+          "fillPrice": "填充价格",
+          "amount": "数量",
+          "vol": "体积",
+          "fee": "费用"
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "title": "轮廓",
+        "nickName": {
+          "label": "昵称",
+          "content": "这是您的显示名称，将在平台上显示给其他人",
+          "button": "更改昵称",
+          "popUp": {
+            "title": "更改昵称",
+            "nickname": "昵称",
+            "enterNickname": "输入昵称",
+            "message": "5-20个字符。",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "确认"
+            },
+            "successMessage": "昵称成功改变了"
+          }
+        },
+        "photo": {
+          "label": "照片",
+          "content": "上传个人资料图片以个性化您的帐户并使其可识别",
+          "buttons": {
+            "upload": "上传",
+            "delete": "删除"
+          },
+          "popUp": {
+            "title": "更改您的个人资料图片",
+            "avatar": "头像",
+            "system_upload": "从此设备上传",
+            "clickSelect": "单击以选择",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "确认"
+            },
+            "successMessage": "个人资料图片成功更改了"
+          }
+        },
+        "profileChangeSucMessage": "个人资料图片成功更改了",
+        "nameChangeSucMessage": "昵称成功改变了"
+      },
+      "accManagement": {
+        "title": "帐户管理",
+        "closeAcc": {
+          "label": "关闭帐户",
+          "content": "关闭帐户后，它是永久的，无法恢复",
+          "popUp": {
+            "title": "要求删除帐户",
+            "content": {
+              "part1": "亲爱的有价值的客户，如果您想通过IDOEX永久删除您的帐户，请发送电子邮件",
+              "part2": "support@indoex.io。",
+              "part3": "该请求必须从用于注册您的帐户的相同电子邮件地址发送。"
+            },
+            "notice": "注意",
+            "noticePoints": {
+              "point1": "请注意，帐户删除是永久的。",
+              "point2": "如果您的帐户中剩下任何资产，请确保解决这些资产。",
+              "point3": {
+                "part1": "尽管Indoex可以根据请求永久删除您的帐户，但请注意，我们必须在删除后指定的期限内保留某些个人数据。",
+                "part2": "条款和条件"
+              },
+              "point4": {
+                "part1": "有关我们如何存储您的个人数据的其他信息可以在我们的",
+                "part2": "隐私政策。"
+              }
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "securitySetting": {
+        "title": "安全",
+        "emailInfo": {
+          "label": "电子邮件身份验证",
+          "content": "使用电子邮件身份验证登录和交易确认来增强帐户安全性",
+          "button": "更改电子邮件",
+          "popUp1": {
+            "title": "您确定要更新链接的电子邮件地址吗？",
+            "message": {
+              "title": "取消链接电子邮件的步骤",
+              "content": "为了获得您的帐户的安全性，请注意，更改了您的电子邮件地址，链上提款，内部转移，菲亚特提款，卡交易，P2P交易和广告活动将暂时暂停24小时。"
+            },
+            "buttons": {
+              "cancel": "取消",
+              "changeEmail": "更改电子邮件"
+            }
+          },
+          "popUp2": {
+            "title": "安全验证",
+            "codeSentAt": "验证代码将发送到",
+            "enterCode": "请输入电子邮件验证代码",
+            "2faCode": "Google 2FA代码",
+            "enter2fa": "请输入2FA代码",
+            "havingProb": "验证有问题吗？",
+            "buttons": {
+              "sendCode": "发送代码",
+              "nextStep": "下一步"
+            }
+          },
+          "popUp3": {
+            "title": "更改电子邮件",
+            "newEmail": "新电子邮件",
+            "enterEmail": "请输入您的新电子邮件",
+            "veriCode": "新的电子邮件验证代码",
+            "enterveriCode": "请输入电子邮件验证代码",
+            "noCode": "没有收到验证代码？",
+            "checkSpam": "请检查您的垃圾邮件文件夹以获取此电子邮件",
+            "buttons": {
+              "sendCode": "发送代码",
+              "cancel": "取消",
+              "submit": "提交"
+            }
+          }
+        },
+        "passInfo": {
+          "label": "登录密码",
+          "content": "设置强密码以保护您的帐户免受未经授权的访问",
+          "button": "更改密码",
+          "popUp": {
+            "title": "更改密码",
+            "notice": "注意",
+            "noticeMessage": "为了获得您的帐户的安全性，在删除了Google两因素身份验证后，诸如链上取款，内部转移，FIAT提款，P2P交易和其他交易等措施将暂时暂停24小时。",
+            "oldPass": "旧密码",
+            "oldPassHolder": "请输入您当前的密码",
+            "newPass": "新密码",
+            "newPassHolder": "请输入新密码",
+            "confirmPass": "确认新密码",
+            "confirmPassHolder": "请再次输入新密码",
+            "2faCode": "2FA验证代码",
+            "2faCodeHolder": "请输入2FA代码",
+            "havingIssue": "验证有问题吗？",
+            "button": "下一步"
+          }
+        },
+        "twofactor": {
+          "label": "两个因素身份验证",
+          "content": "在访问帐户时链接用于安全的两因素身份验证的身份验证器应用程序",
+          "buttons": {
+            "setUp": "设置",
+            "disable": "禁用"
+          },
+          "addPopUp1": {
+            "title": "安全验证",
+            "codeAt": "验证代码将发送到",
+            "noCode": {
+              "part1": "无法收到验证代码？",
+              "part2": "重新发出验证代码"
+            },
+            "havingProb": "验证有问题吗？",
+            "error": {
+              "wrongOtp": "您输入的OTP不正确。",
+              "expOtp": "验证代码已过期。"
+            }
+          },
+          "addPopUp2": {
+            "title": "设置Google两因素身份验证",
+            "downloadMsgTitle": "下载Google Authenticator（Android / ios）",
+            "downloadMsgContent": "在App Store或Google Play上搜索“ Google Authenticator”并下载应用程序。",
+            "addKeyTitle": "将密钥短语添加到Google Authenticator",
+            "addKeyContent": "您可以从App Store或Google Play下载Google Authenticator。",
+            "alertMsg": "如果您丢失或更换设备，那么关键短语对于恢复Google Authenticator至关重要。",
+            "2faCode": "Google 2FA代码",
+            "enter2faCode": "请输入2FA代码 ",
+            "copyKey": "复制密钥",
+            "copied": " 复制！",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "确认"
+            }
+          },
+          "removePopUp1": {
+            "title": "安全验证",
+            "loginPass": "登录密码",
+            "enterPass": "请输入密码 ",
+            "2faCode": "Google 2FA代码",
+            "enter2faCode": "请输入2FA代码",
+            "button": "下一步"
+          },
+          "removePopUp2": {
+            "title": "确认删除Google 2FA身份验证",
+            "notice": "注意",
+            "noticeMess": "对于您的帐户的安全性，在删除了Google两因素身份验证之后，诸如链上取款，内部转移，法定提款，P2P交易和其他交易等措施将暂时暂停24小时。",
+            "buttons": {
+              "cancel": "cnacel",
+              "remove": "消除"
+            }
+          }
+        },
+        "secondaryPin": {
+          "label": "次要别针",
+          "content": "设置个性化代码，以确保平台的电子邮件是真实的，而不是网络钓鱼的尝试",
+          "buttons": {
+            "forgot": "忘了",
+            "change": "改变"
+          },
+          "forgotPopUp": {
+            "title": "安全验证",
+            "enter2fa": "输入2FA代码",
+            "havingProb": "验证有问题吗？",
+            "error": {
+              "wrongOtp": "您输入的OTP不正确。",
+              "expOtp": "验证代码已过期。"
+            }
+          },
+          "changepopUp": {
+            "title": "更新PIN",
+            "currentPin": "当前销",
+            "enterCurrentPin": "请输入当前的别针",
+            "newPin": "新别针",
+            "enterNewPin": "请输入新的别针",
+            "confirmPin": "确认PIN",
+            "enterCofirmPin": "请再次输入新的别针",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "确认"
+            }
+          },
+          "forgotSuccessMessage": "您的次要别针发送到注册邮件地址",
+          "changeSuccessMessage": "您的次要别针更新"
+        },
+        "antiPhishing": {
+          "label": "反网络钓鱼",
+          "content": "平台发送给您的电子邮件将包含反向钓鱼代码，以区分假邮件",
+          "button": "设置",
+          "popUp1": {
+            "title": "设置反捕捞代码",
+            "alert": "请不要向包括Indoex员工在内的任何人披露您的反钓鱼代码。",
+            "antiPhiCode": "反钓鱼代码",
+            "enterCode": "请输入4至20个字符",
+            "message": "请输入仅包含字母，数字和强调的4至20个字符。",
+            "whatIsIt": "什么是反向电话代码？",
+            "whatIsItContent": "您的反向播种代码将出现在所有Indoex电子邮件中，可帮助您发现真正的沟通并避免骗局。",
+            "buttons": {
+              "cancel": "取消",
+              "confirm": "确认"
+            },
+            "error": "发生错误"
+          },
+          "popUp2": {
+            "title": "安全验证",
+            "enter2fa": "输入2FA代码",
+            "havingProb": "验证有问题吗？",
+            "error": {
+              "wrongOtp": "您输入的OTP不正确。",
+              "expOtp": "验证代码已过期。"
+            }
+          }
+        }
+      },
+      "authLevel": {
+        "title": "身份验证级别",
+        "terms": {
+          "idLevel": "识别水平",
+          "limit": "24小时提取限制",
+          "unlimited": "无限"
+        }
+      }
+    },
+    "assetsPage": {
+      "title": "总资产",
+      "tabs": {
+        "all": "全部",
+        "delisted": "精神错乱"
+      },
+      "terms": {
+        "hideLabel": "隐藏零余额资产",
+        "search": "搜索"
+      },
+      "tHead": {
+        "crypto": "加密",
+        "tBal": "总余额",
+        "avl": "可用的",
+        "inOrders": "在订单中",
+        "avgPrice": "avg。",
+        "action": "行动",
+        "buttons": {
+          "withdraw": "提取",
+          "deposit": "订金"
+        }
+      }
+    },
+    "depositPage": {
+      "steps": {
+        "title": "存款步骤",
+        "step1": {
+          "title": "复制钱包地址",
+          "content": "选择加密，网络和复制地址。"
+        },
+        "step2": {
+          "title": "确认地址",
+          "content": "粘贴复制的提款地址"
+        },
+        "step3": {
+          "title": "转移确认",
+          "content": "等待区块链转移确认"
+        },
+        "step4": {
+          "title": "成功存款",
+          "content": "Indoex将将资产发送到钱包。"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "选择加密",
+          "selectNet": "选择网络",
+          "selectNetHolder": "选择要存入的网络",
+          "copyAdd": "复制钱包地址",
+          "addPub": "地址已发布！",
+          "addPubContent": "请使用下面的地址使用吨币网络存放您的加密货币。",
+          "copy": "复制",
+          "copied": "复制"
+        },
+        "tips": {
+          "label": "尖端",
+          "content": "为了确保您的资金，我们的客户支持团队可以通过电话与您联系以确认您的提款"
+        },
+        "faq": {
+          "label": "常见问题解答",
+          "button": "查看更多",
+          "faq1": {
+            "ques": "如何存入Falconx？"
+          },
+          "faq2": {
+            "ques": "什么是加密网络？"
+          },
+          "faq3": {
+            "ques": "我应该使用什么网络？"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "选择加密提取",
+          "searchCrypto": "搜索加密",
+          "tabs": {
+            "recent": "最近的",
+            "all": "全部",
+            "favorite": "最喜欢的"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "选择加密提取",
+          "alert": "确保您选择的加密货币和存款网络匹配，否则资产可能会丢失。",
+          "searchNet": "搜索网络",
+          "sortBy": "排序方式",
+          "tabs": {
+            "mostPop": "最受欢迎",
+            "fastest": "最快",
+            "lessConfirm": "较少的确认"
+          },
+          "fee": "费用",
+          "expArr": "预计到达"
+        }
+      },
+      "table": {
+        "title": "最后4个存款记录",
+        "button": "存款历史",
+        "tHead": {
+          "dNt": "日期/时间",
+          "coin": "硬币",
+          "amount": "数量",
+          "bRecords": "区块链记录",
+          "remark": "评论",
+          "action": "行动",
+          "button": "细节"
+        }
+      }
+    },
+    "withdrawPage": {
+      "steps": {
+        "title": "提款步骤",
+        "step1": {
+          "title": "选择加密",
+          "content": "选择加密和网络撤回"
+        },
+        "step2": {
+          "title": "确认地址",
+          "content": "粘贴复制的提款地址"
+        },
+        "step3": {
+          "title": "转移确认",
+          "content": "等待区块链转移确认"
+        },
+        "step4": {
+          "title": "成功退出",
+          "content": "Indoex会将资产发送到钱包"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "选择加密",
+          "withTo": "撤回",
+          "net": "网络",
+          "selectNet": "选择提款网络",
+          "add": "地址",
+          "enterAdd": "输入您的提款地址",
+          "withAmount": "提款金额",
+          "amount": "数量",
+          "avalBal": "可用的余额",
+          "minWithAmount": "最低提款金额为",
+          "remark": "备注（可选）",
+          "remarkHolder": "例如。",
+          "rAmount": "收到金额",
+          "netFee": "网络费",
+          "button": "提取"
+        },
+        "tips": {
+          "label": "尖端",
+          "content": {
+            "point1": "为了确保您的资金安全，我们的客户支持团队可以通过电话与您联系以确认您的提款。",
+            "point2": "为了确保您的资金安全，我们的客户支持团队可以通过电话与您联系以确认您的提款。"
+          }
+        },
+        "faq": {
+          "label": "常见问题解答",
+          "button": "查看更多",
+          "faq1": {
+            "ques": "提款需要多长时间？"
+          },
+          "faq2": {
+            "ques": "为什么我的撤军被拒绝？"
+          },
+          "faq3": {
+            "ques": "我可以取消提款吗？"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "选择加密提取",
+          "searchCrypto": "搜索加密",
+          "tabs": {
+            "recent": "最近的",
+            "all": "全部",
+            "favorite": "最喜欢的"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "选择加密提取",
+          "alert": "确保您选择的加密货币和存款网络匹配，否则资产可能会丢失。",
+          "searchNet": "搜索网络",
+          "sortBy": "排序方式",
+          "tabs": {
+            "mostPop": "最受欢迎",
+            "fastest": "最快",
+            "lessConfirm": "较少的确认"
+          },
+          "fee": "费用",
+          "expArr": "预计到达"
+        },
+        "popUpTransactionStatus": {
+          "pending": {
+            "title": "等待撤离",
+            "content": "您的提款请求正在审查，大约需要12个小时。"
+          },
+          "failed": {
+            "title": "退出失败",
+            "content": "处理此撤离时存在问题。"
+          },
+          "successful": {
+            "title": "成功退出",
+            "content": "您的提款请求已成功提交。"
+          },
+          "buttons": {
+            "viewHIstory": "查看历史",
+            "checkDetails": "检查详细信息"
+          }
+        }
+      },
+      "table": {
+        "title": "最后4个提取记录",
+        "button": "提取历史",
+        "tHead": {
+          "dNt": "日期/时间",
+          "coin": "硬币",
+          "amount": "数量",
+          "withTo": "撤回",
+          "bRecords": "区块链记录",
+          "remark": "评论",
+          "action": "行动",
+          "button": "细节"
+        }
+      }
+    },
+    "depositHisPage": {
+      "title": "存款历史",
+      "terms": {
+        "allStatu": "所有状态",
+        "allCoins": "所有硬币"
+      },
+      "button": "下载",
+      "tHead": {
+        "cOrT": "硬币/令牌",
+        "amount": "数量",
+        "time": "时间",
+        "bRecords": "区块链记录",
+        "remark": "评论",
+        "status": "地位",
+        "successful": "成功的"
+      }
+    },
+    "withdrawHisPage": {
+      "title": "戒断历史",
+      "terms": {
+        "allStatu": "所有状态",
+        "allCoins": "所有硬币"
+      },
+      "button": "下载",
+      "tHead": {
+        "cOrT": "硬币/令牌",
+        "amount": "数量",
+        "time": "时间",
+        "withTo": "撤回",
+        "bRecords": "区块链记录",
+        "remark": "评论",
+        "orderId": "订购ID",
+        "status": "地位",
+        "successful": "成功的"
+      }
+    },
+    "openOrdersPage": {
+      "title": "公开订单",
+      "terms": {
+        "allPairs": "所有对",
+        "bNsOrders": "购买，出售订单",
+        "orderType": "订单类型"
+      },
+      "tHead": {
+        "time": "时间",
+        "pair": "一对",
+        "bOrS": "买卖",
+        "type": "类型",
+        "orderPrice": "订单价格",
+        "amount": "数量",
+        "filled": "充满",
+        "unexecuted": "未执行",
+        "action": "行动"
+      }
+    },
+    "ordersHisPage": {
+      "title": "订购历史记录",
+      "button": "下载",
+      "terms": {
+        "month": "月",
+        "allPairs": "所有对",
+        "bNsOrders": "购买，出售订单",
+        "orderType": "订单类型",
+        "status": "地位"
+      },
+      "tHead": {
+        "time": "时间",
+        "pair": "一对",
+        "bOrS": "买卖",
+        "type": "类型",
+        "tCondition": "触发条件",
+        "orderPrice": "订单价格",
+        "amount": "数量",
+        "filled": "充满",
+        "avgPrice": "avg.price",
+        "status": "地位"
+      }
+    },
+    "tradeHisPage": {
+      "title": "贸易历史",
+      "button": "下载",
+      "terms": {
+        "month": "月",
+        "allPairs": "所有对",
+        "bNsOrders": "购买，出售订单",
+        "orderType": "订单类型"
+      },
+      "tHead": {
+        "filledTime": "填充时间",
+        "pair": "一对",
+        "bOrS": "买卖",
+        "type": "类型",
+        "fillPrice": "订单价格",
+        "amount": "数量",
+        "vol": "体积",
+        "fee": "费用"
+      }
+    },
+    "loginHisPage": {
+      "title": "登录历史记录",
+      "terms": {
+        "lSuccess": "登录成功",
+        "lFailed": "由于凭据错误，登录失败"
+      },
+      "tHead": {
+        "dateTime": "日期时间",
+        "action": "行动",
+        "ip": "IP地址"
+      }
+    },
+    "deviceManagement": {
+      "title": "设备管理",
+      "tHead": {
+        "dateTime": "日期时间",
+        "location": "地点",
+        "ip": "IP地址",
+        "action": "行动",
+        "button": "删除"
+      }
+    },
+    "apiPage": {
+      "apiManagement": {
+        "title": "API管理",
+        "subTitle": "创建API密钥",
+        "terms": {
+          "notes": "笔记",
+          "notesHolder": "输入笔记",
+          "preSetting": {
+            "part1": "权限设置",
+            "part2": "（多项选择）"
+          },
+          "accBalance": "帐户余额",
+          "addOrder": "添加订单",
+          "getOrder": "获取订单",
+          "closeOrder": "关闭订单",
+          "bindIp": {
+            "part1": "绑定IP地址",
+            "part2": "（选修的）"
+          },
+          "expDate": "密钥不限制的IP地址的到期日期为100天",
+          "button": "创造"
+        },
+        "note": {
+          "label": "笔记",
+          "point1": "我们为您提供强大的休息和WebSocket API，您可以通过这些API访问市场查询，自动交易等服务。请查看API文档。",
+          "point2": "一个帐户最多可以创建5个API秘密密钥。",
+          "point3": {
+            "part1": "为了避免资产损失，请不要向任何人透露您的API密钥。",
+            "part2": "如果有一个以上的IP地址，则应使用逗号分开它们（例如192.168.1.1.1,192.168.1.2，192.168.1.3）。"
+          },
+          "point4": "对于交易API，单个IP限制了每分钟100个请求。",
+          "point5": "每个API键有效期为100天，如果越过，它将自动更改为非活动模式。",
+          "point6": {
+            "part1": "如果您有任何疑问，请联系我们",
+            "part2": "support@indoex.io"
+          }
+        }
+      },
+      "apiList": {
+        "title": "创建的API键",
+        "tHead": {
+          "createDate": "创建日期",
+          "notes": "笔记",
+          "permission": "允许",
+          "accKey": "访问密钥",
+          "ip": "绑定IP地址",
+          "expire": "在（天）中过期",
+          "action": "行动"
+        }
+      }
+    }
+  }
+}

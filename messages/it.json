@@ -1,0 +1,1787 @@
+{
+  "Navbar": {
+    "NavItems": {
+      "trade": {
+        "label": "Commercio",
+        "items": {
+          "spot": {
+            "label": "Trade a punti",
+            "desc": "Acquista o vendi Crypto all'istante"
+          },
+          "margin": {
+            "label": "Commercio di margine",
+            "desc": "Scambia con fondi presi in prestito per mosse più grandi"
+          },
+          "convert": {
+            "label": "Convertire",
+            "desc": "Scambiare cripto in pochi secondi: semplice e veloce"
+          }
+        }
+      },
+      "markets": "Mercati",
+      "earn": {
+        "label": "Guadagnare",
+        "items": {
+          "loans": {
+            "label": "Prestiti",
+            "desc": "Sblocca i fondi, mantieni la tua cripto."
+          },
+          "staking": {
+            "label": "Picchettamento",
+            "desc": "Monete di palo, guadagnare reddito passivo."
+          }
+        }
+      },
+      "events": {
+        "label": "Eventi",
+        "items": {
+          "airdrop": {
+            "label": "Airdrop",
+            "desc": "Tenere i token, richiedere ricompense."
+          },
+          "launchpad": {
+            "label": "Pad di lancio",
+            "desc": "Investi all'inizio di nuovi gettoni."
+          },
+          "tradeCompetition": {
+            "label": "Competizione commerciale",
+            "desc": "Mostra le tue abilità, vinci premi."
+          }
+        }
+      }
+    },
+    "toggle": {
+      "exchange": "Scambio",
+      "web3": "Web3"
+    },
+    "auth": {
+      "signin": "Registrazione",
+      "signup": "Iscrizione",
+      "see_all": "Vedi tutto",
+      "new_listing": "Nuovo elenco"
+    }
+  },
+  "sidebar": {
+    "overview": "Panoramica",
+    "account": {
+      "label": "Account",
+      "children": {
+        "profile": "Profilo",
+        "security": "Sicurezza"
+      }
+    },
+    "wallet": {
+      "label": "Portafoglio",
+      "children": {
+        "assets": "Attività",
+        "deposit": "Depositare",
+        "withdraw": "Ritirare"
+      }
+    },
+    "history": {
+      "label": "Storia",
+      "children": {
+        "depositHistory": "Storia dei depositi",
+        "withdrawHistory": "Ritirare la storia"
+      }
+    },
+    "orders": {
+      "label": "Ordini",
+      "children": {
+        "openOrders": "Ordini aperti",
+        "orderHistory": "Ordina storia",
+        "tradeHistory": "Storia commerciale"
+      }
+    },
+    "earn": {
+      "label": "Guadagnare",
+      "children": {
+        "loans": "Prestiti",
+        "staking": "Picchettamento"
+      }
+    },
+    "loginActivity": {
+      "label": "Attività di accesso",
+      "children": {
+        "loginHistory": "Cronologia di accesso",
+        "deviceManagement": "Gestione dei dispositivi"
+      }
+    },
+    "referrals": "Referral",
+    "api": "API",
+    "logout": "Disconnettersi",
+    "withdraw": "Ritirare",
+    "deposit": "Depositare"
+  },
+  "homePage": {
+    "heroSection": {
+      "title": "Migliora la tua esperienza di trading di criptovalute",
+      "subTitle": "Testimoni di transazioni senza soluzione di continuità, approfondimenti in tempo reale e negoziazione di tutto ciò di cui hai bisogno."
+    },
+    "currencyWedgets": {
+      "tableTitle": {
+        "spot": "Macchiare",
+        "newlyListed": "Appena elencato",
+        "topGainers": "I migliori guadagni"
+      },
+      "tableHead": {
+        "coins": "Monete",
+        "lastPrice": "Ultimo prezzo",
+        "24hChange": "24 ore di cambiamento",
+        "markets": "Mercati",
+        "24hVolume": "Volume 24h"
+      }
+    },
+    "createAccount": {
+      "step1": {
+        "heading": "Crea il tuo account",
+        "content": "Iscriviti in pochi minuti con la tua e -mail, imposta una password sicura e verifica la tua identità per un'esperienza di trading sicura.",
+        "button": "Inizia"
+      },
+      "step2": {
+        "heading": "Completa il tuo KYC",
+        "content": "Iscriviti in pochi minuti con la tua e -mail, imposta una password sicura e verifica la tua identità per un'esperienza di trading sicura.",
+        "button": "Aggiorna KYC"
+      },
+      "step3": {
+        "heading": "Inizia a trading",
+        "content": "Iscriviti in pochi minuti con la tua e -mail, imposta una password sicura e verifica la tua identità per un'esperienza di trading sicura.",
+        "button": "Inizia a trading"
+      }
+    },
+    "getStarted": {
+      "heading": "Inizia",
+      "marketing": {
+        "24hVolume": "Volume 24H (BTC)",
+        "coinsListed": "Monete elencate",
+        "countries": "Paesi",
+        "marketPairs": "Coppie di mercato"
+      },
+      "benefits": {
+        "type_vendor": "Vantaggi del fornitore",
+        "type_user": "Vantaggi dell'utente",
+        "vendor": {
+          "ben1": {
+            "title": "Elenchi di monete/token",
+            "content": "Indoex sta espandendo l'accesso agli investimenti a tutte le criptovalute qualificate in tutto il mondo"
+          },
+          "ben2": {
+            "title": "Contest di trading",
+            "content": "I nostri concorsi di trading consentono agli utenti di mostrare le competenze. "
+          },
+          "ben3": {
+            "title": "Abbinamento personalizzato",
+            "content": "A differenza di altri scambi, Indoex non addebita commissioni per coppie di mercato extra."
+          },
+          "ben4": {
+            "title": "Concorso di quotazione",
+            "content": "La nostra competizione di quotazione premia il vincitore con 3 BTC. "
+          }
+        },
+        "user": {
+          "ben1": {
+            "title": "Elenchi di monete/token",
+            "conent": "Indoex sta espandendo l'accesso agli investimenti a tutte le criptovalute qualificate in tutto il mondo"
+          },
+          "ben2": {
+            "title": "Contest di trading",
+            "conent": "I nostri concorsi di trading consentono agli utenti di mostrare le competenze. "
+          },
+          "ben3": {
+            "title": "Abbinamento personalizzato",
+            "conent": "A differenza di altri scambi, Indoex non addebita commissioni per coppie di mercato extra."
+          },
+          "ben4": {
+            "title": "Concorso di quotazione",
+            "conent": "La nostra competizione di quotazione premia il vincitore con 3 BTC. "
+          }
+        }
+      }
+    },
+    "features": {
+      "heading": "Caratteristica",
+      "leftSection": {
+        "fet1": {
+          "title": "Commissioni ragionevoli",
+          "content": "Opportunità e condizioni di investimento redditizie"
+        },
+        "fet2": {
+          "title": "Trading algoritmico",
+          "content": "API per robot commerciali a piattaforma cross"
+        },
+        "fet3": {
+          "title": "Trading algoritmico",
+          "content": "API per robot commerciali a piattaforma cross"
+        }
+      },
+      "rightSection": {
+        "fet1": {
+          "title": "Portafogli sicuri",
+          "content": "Mantieni le tue risorse digitali nei portafogli utente"
+        },
+        "fet2": {
+          "title": "Opzioni di pagamento",
+          "content": "Più di 10 modi per depositare su un conto"
+        },
+        "fet3": {
+          "title": "Trading algoritmico",
+          "content": "API per robot commerciali a piattaforma cross"
+        }
+      }
+    },
+    "partners": {
+      "heading": "Partner",
+      "content": {
+        "title": "Scambia perfettamente attraverso i dispositivi",
+        "subTitle": "Scarica la nostra app mobile per il trading di criptovalute senza sforzo!",
+        "downloads": {
+          "playStore": {
+            "getIt": "Mettilo avanti",
+            "from": "Google Play"
+          },
+          "appStore": {
+            "getIt": "Scarica sul",
+            "from": "App store"
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "signin": {
+      "title": "Accedi al tuo account",
+      "items": {
+        "email": {
+          "label": "E-mail",
+          "holder": "Inserisci e -mail"
+        },
+        "password": {
+          "label": "Password",
+          "holder": "Immettere la password"
+        }
+      },
+      "button": "Login",
+      "signinOption": "O accedere a",
+      "noAcc": {
+        "part1": "Non hai un account?",
+        "part2": "Creare un account"
+      }
+    },
+    "signup": {
+      "title": "Crea il tuo account",
+      "items": {
+        "email": {
+          "label": "E-mail",
+          "holder": "Inserisci e -mail"
+        },
+        "username": {
+          "label": "Nome utente",
+          "holder": "Inserisci il nome utente"
+        },
+        "password": {
+          "label": "Password",
+          "holder": "Immettere la password"
+        },
+        "country": {
+          "label": "Paese",
+          "holder": "Seleziona il tuo paese",
+          "options": {
+            "op1": "U.S.A.",
+            "op2": "India",
+            "op3": "Regno Unito",
+            "op4": "Germania"
+          }
+        },
+        "referrals": {
+          "label": "Codice di riferimento (facoltativo)",
+          "holder": "Immettere il codice di riferimento"
+        }
+      },
+      "terms": {
+        "part1": "Accetto",
+        "part2": "Termini e condizioni"
+      },
+      "button": "Iscrizione",
+      "signupOption": "O iscriverti a",
+      "haveAcc": {
+        "part1": "Hai già un account?",
+        "part2": "Login"
+      }
+    }
+  },
+  "footer": {
+    "glance": {
+      "text": "Registrati in pochi minuti: segnala, deposita e inizia a scambiare criptovaluta senza sforzo!",
+      "button": "Inizia"
+    },
+    "services": {
+      "label": "Servizi",
+      "items": {
+        "terms": "Termini di utilizzo",
+        "policy": "politica sulla riservatezza",
+        "status": "Stato del portafoglio",
+        "announcements": "Annunci",
+        "media": "Media"
+      }
+    },
+    "legalisation": {
+      "label": "Legalizzazione",
+      "items": {
+        "fee": "Commissioni",
+        "legalities": "Legalilità",
+        "kyc": "Politica AML / KYC",
+        "protect": "Proteggiti online",
+        "verification": "Verifica"
+      }
+    },
+    "others": {
+      "label": "Altri",
+      "items": {
+        "faq": "FAQ",
+        "contact": "Contattaci",
+        "support": "Assistenza clienti:",
+        "mails": "Fare domanda per l'elenco:"
+      }
+    },
+    "rights": "© 2025 Indoex Tutti i diritti riservati.",
+    "alert": "Gli investimenti crittografici sono soggetti a rischi di mercato, investite saggiamente e rimangono informati."
+  },
+  "tradePage": {
+    "tradeBook": {
+      "tabs": {
+        "orderbook": "Libro degli ordini",
+        "tradehistory": "Storia commerciale"
+      },
+      "tHead": {
+        "price": "Price (USDT)",
+        "amount": "Importo (BTC)",
+        "total": "Totale"
+      },
+      "more": "Di più"
+    },
+    "cryptoStats": {
+      "stats": {
+        "24hChange": "24 ore di cambiamento",
+        "24hHigh": "24h di altezza",
+        "24hLow": "24 ore di basso",
+        "24hVolumeBtc": "Volume 24H (BTC)",
+        "24hVolumeUsdc": "Volume 24h (USDT)"
+      }
+    },
+    "tradeForm": {
+      "buy": "Acquistare",
+      "sell": "Vendere",
+      "spot": "Macchiare",
+      "cross": "Attraverso",
+      "isolated": "Isolato",
+      "limit": "Limite",
+      "market": "Mercato",
+      "stop": "Limite di arresto",
+      "normal": "Normale",
+      "borrow": "Prestito",
+      "repay": "rimborsare",
+      "price": "Prezzo",
+      "amount": "Quantità",
+      "total": "Totale",
+      "available": "Disponibile",
+      "txnFee": "Tassa TXN",
+      "borrowing": "Prestito",
+      "button": "Accedi / Iscriviti"
+    },
+    "orderAndHist": {
+      "tabs": {
+        "openorders": "Ordini aperti",
+        "orderhistory": "Ordina storia"
+      },
+      "message": {
+        "part1": "Login",
+        "part2": "O",
+        "part3": "Iscrizione",
+        "part4": "al commercio"
+      }
+    },
+    "connection": "Connessione stabile"
+  },
+  "convertPage": {
+    "tabs": {
+      "faq": "FAQ",
+      "convert": "Convertire",
+      "history": "Storia"
+    },
+    "convertForm": {
+      "title": "Convertire",
+      "subTitle": "Convertire rapidamente e facilmente centinaia di criptovalute con esecuzione istantanea.",
+      "terms": {
+        "availBalance": "Equilibrio disponibile",
+        "from": "Da",
+        "to": "A",
+        "max": "Max",
+        "rate": "Valutare",
+        "button": "Accedi / Iscriviti",
+        "tradeSpot": "Spot commerciale"
+      }
+    },
+    "convertBar": {
+      "barTitle": "Converti BTC (Bitcoin) in altre monete"
+    }
+  },
+  "loansPage": {
+    "tabs": {
+      "flexible": "Prestito a tariffa flessibile",
+      "fixed": "Prestito a tasso fisso",
+      "history": "Storia del prestito",
+      "data": "Dati di prestito"
+    },
+    "flexibleLoan": {
+      "borrowSection": {
+        "title": "Prendi in prestito con tassi flessibili per commerciare o quote e massimizzare i rendimenti.",
+        "features": {
+          "f1": "Rimborsare in qualsiasi momento",
+          "f2": "Nessuna commissione di transazione"
+        },
+        "buttons": {
+          "b1": "Ordini in corso",
+          "b2": "Panoramica delle risorse"
+        },
+        "borrowForm": {
+          "terms": {
+            "collateral": "Collaterale",
+            "enterAmount": "Immettere l'importo",
+            "wantBorrow": "Voglio prendere in prestito",
+            "max": "Max",
+            "details": "Dettagli"
+          },
+          "button": "Accedi / Iscriviti"
+        }
+      },
+      "borrowTable": {
+        "title": "Mercato dei prestiti",
+        "search": "Ricerca",
+        "viewMore": "Visualizza di più",
+        "tHead": {
+          "coin": "Moneta maliziosa",
+          "hIntRate": "Tasso di interesse orario",
+          "aIntRate": "Tasso di interesse annuale",
+          "action": {
+            "label": "Azione",
+            "button": "Prestito"
+          }
+        }
+      },
+      "faq": {
+        "item1": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "item2": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "item3": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "item4": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "item5": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        }
+      }
+    },
+    "fixedLoan": {
+      "borrowSection": {
+        "title": "Prendi in prestito o presta a un tasso di interesse fisso che scegli",
+        "stats": {
+          "totalBorrowed": "Totale preso in prestito",
+          "currentOrders": "Ordini attuali",
+          "rate": {
+            "label": "Tasso di interesse personalizzato",
+            "content": "Garanzia multi-asset supportata"
+          }
+        },
+        "myOrder": {
+          "label": "Il mio ordine",
+          "pOrders": {
+            "label": "In attesa di ordini",
+            "content": "Controlla e gestisci gli ordini senza pari"
+          },
+          "oOrders": {
+            "label": "Ordini in corso",
+            "content": "Controllare, regolare LTV e rimborsare gli ordini abbinati"
+          }
+        }
+      },
+      "borrowForm": {
+        "borrow": {
+          "label": "Prestito",
+          "terms": {
+            "bAmount": "Importo di prestito",
+            "min": "Min 0,005 BTC",
+            "expRate": "Tasso di interesse previsto",
+            "intRate": "Immettere il tasso di interesse",
+            "refMarket": "Tasso di approvvigionamento del mercato di riferimento",
+            "duration": "Durata",
+            "collateral": "Collaterale",
+            "setUp": "Impostare garanzie",
+            "autoRepay": "Ripasso automatico"
+          }
+        },
+        "supply": {
+          "label": "Fornitura",
+          "terms": {
+            "bAmount": "Importo di prestito",
+            "min": "Min 0,005 BTC",
+            "expRate": "Tasso di interesse previsto",
+            "intRate": "Immettere il tasso di interesse",
+            "refMarket": "Tasso di approvvigionamento del mercato di riferimento: 5,04%",
+            "duration": "Durata",
+            "collateral": "Collaterale",
+            "setUp": "Impostare garanzie",
+            "autoRepay": "Ripasso automatico"
+          }
+        },
+        "button": "Accedi / Iscriviti"
+      },
+      "BandStable": {
+        "title1": "Voglio prendere in prestito",
+        "title2": "Voglio fornire",
+        "terms": {
+          "days": "Giorni",
+          "all": "Tutto",
+          "duration": "Durata"
+        },
+        "borrowTableHead": {
+          "bRate": "Tasso di prestito (fisso)",
+          "duration": "Durata",
+          "minBAmount": "Min Prendi in prestito l'importo",
+          "bAbleAmount": "Importo premorizzabile"
+        },
+        "supplyTableHead": {
+          "supplyApr": "Fornitura APR (fisso)",
+          "duration": "Durata",
+          "estInt": "Est. ",
+          "tAmount": "Importo totale"
+        }
+      },
+      "howItWorks": {
+        "title": "Come funzionano i prestiti a tasso fisso?",
+        "tabs": {
+          "borrower": "Come mutuatario",
+          "supplier": "Come fornitore"
+        },
+        "step1": {
+          "title": "1. Posizionamento dell'ordine",
+          "content": "Effettuare un ordine di prestito o selezionare un ordine esistente dal mercato dei prestiti."
+        },
+        "step2": {
+          "title": "2. Selezionare garanzia",
+          "content": "Seleziona risorse collaterali dall'elenco delle risorse del portafoglio spot. "
+        },
+        "step3": {
+          "title": "3. Conferma l'ordine",
+          "content": "Conferma i dettagli dell'ordine, inclusi gli interessi stimati, i termini, il margine Call LTV, ecc. Le attività di garanzia verranno congelate nel portafoglio spot una volta effettuato l'ordine."
+        },
+        "step4": {
+          "title": "4. Ordine matchedg",
+          "content": "Una volta abbinata, le tue garanzie si spostano alla custodia del binance e ricevi l'importo preso in prestito (meno interesse) nel portafoglio spot. "
+        },
+        "step5": {
+          "title": "5. Rimborso",
+          "content": "Rimborsare entro la data di scadenza per evitare sanzioni. "
+        }
+      },
+      "advantages": {
+        "title": "Vantaggi dei prestiti a tasso fisso",
+        "adv1": {
+          "title": "Costi stabili e prevedibili per i mutuatari",
+          "content": "Bloccare un APR fisso per una durata prestabilita, eliminando fluttuazioni e costi inaspettati."
+        },
+        "adv2": {
+          "title": "Processo automatizzato efficiente",
+          "content": "Goditi un'esperienza di prestito e prestito e prestiti automatizzati con opzioni automatiche e di rinnovo automatico disponibili."
+        },
+        "adv3": {
+          "title": "APT fisso attraente per i fornitori",
+          "content": "Fornire le tue attività per un APR personalizzabile e fisso."
+        },
+        "adv4": {
+          "title": "Garanzia multi-asset",
+          "content": "I mutuatari possono impostare più attività come garanzia per ridurre il rischio di liquidazione."
+        }
+      },
+      "faq": {
+        "title": "FAQ",
+        "faq1": {
+          "ques": "Che cos'è la colpa crittografica e come funziona?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "faq2": {
+          "ques": "Posso scendere la mia cripto in qualsiasi momento?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "faq3": {
+          "ques": "Guadagno premi durante il periodo di rimborso?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        },
+        "faq4": {
+          "ques": "La punta è sicura?",
+          "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+        }
+      }
+    }
+  },
+  "stakingPage": {
+    "stakeHero": {
+      "title": "Palo con termini flessibili per i guadagni massimi",
+      "content": "Guadagna reddito passivo ai tuoi termini con opzioni flessibili e ad alto rendimento.",
+      "overview": {
+        "label": "Panoramica",
+        "terms": {
+          "assets": "Attività (USDT)",
+          "yesProfit": "Profitto di ieri (USDT)",
+          "totalProfit": "Profitto totale (USDT)"
+        }
+      }
+    },
+    "info": {
+      "info1": {
+        "title": "Picchettamento",
+        "content": "Il picchettamento ti consente di guadagnare premi sulla tua criptovaluta. "
+      },
+      "info2": {
+        "title": "Termine",
+        "content": "Il periodo di detenzione per il prodotto determina la resa. "
+      },
+      "info3": {
+        "title": "Periodo di redenzione",
+        "content": "Questo è impostato dal protocollo di picchettamento. "
+      }
+    },
+    "table": {
+      "title": "Tutti i prodotti",
+      "terms": {
+        "matchAssets": "Corrispondenza delle risorse disponibili",
+        "search": "Ricerca"
+      },
+      "tHead": {
+        "coin": "Coniare",
+        "estApr": "Est. ",
+        "reward": "Ricompensa moneta",
+        "action": {
+          "label": "Azione",
+          "button": "Palo"
+        }
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "faq1": {
+        "ques": "Che cos'è la colpa crittografica e come funziona?",
+        "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+      },
+      "faq2": {
+        "ques": "Posso scendere la mia cripto in qualsiasi momento?",
+        "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+      },
+      "faq3": {
+        "ques": "Guadagno premi durante il periodo di rimborso?",
+        "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+      },
+      "faq4": {
+        "ques": "La punta è sicura?",
+        "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+      }
+    },
+    "stakeForm": {
+      "title": "Picchettamento",
+      "form": {
+        "terms": {
+          "currency": "Valuta",
+          "selAmount": "Seleziona moneta",
+          "amount": "Quantità",
+          "minAmount": "Importo min 0,0001 BTC",
+          "refAPR": "Riferimento apr",
+          "terms": "Termine",
+          "fundAcc": "Conto di finanziamento",
+          "maxAmount": "Importo massimo",
+          "flexible": "Flessibile"
+        }
+      },
+      "preview": {
+        "lable": "Anteprima",
+        "terms": {
+          "subDate": "Data di abbonamento",
+          "accDate": "Data di competenza",
+          "profitDisDate": "Data di distribuzione degli utili",
+          "redPeriod": "Periodo di redenzione",
+          "profitRec": "Profitto ricevuto",
+          "days": "Giorni",
+          "daily": "Quotidiano"
+        }
+      },
+      "estimated": {
+        "label": "Rendimenti stimati",
+        "terms": {
+          "earning": "Guadagni BTC",
+          "agg": {
+            "part1": "Ho letto e accetto",
+            "part2": "Puntura degli accordi degli utenti"
+          }
+        }
+      },
+      "button": "Palo"
+    }
+  },
+  "marketPage": {
+    "tabs": {
+      "spot": "Macchiare",
+      "newListed": "Appena elencato",
+      "topGainer": "I migliori guadagni"
+    },
+    "quickViewTable": {
+      "tGainer": "I migliori guadagni",
+      "tranding": "Tendenza",
+      "newListing": "Nuovi elenchi",
+      "tHead": {
+        "pairs": "Coppie",
+        "price": "Prezzo",
+        "24hChange": "24 ore di cambiamento"
+      }
+    },
+    "table": {
+      "terms": {
+        "all": "Tutto",
+        "search": "Ricerca"
+      },
+      "tHead": {
+        "coin": "Coniare",
+        "lPrice": "Ultimo prezzo",
+        "24hChange": "24 ore di cambiamento",
+        "24hHigh": "24h di altezza",
+        "24hLow": "24 ore di basso",
+        "24hVol": "Volume 24h",
+        "chart": "Grafici",
+        "trade": "Commercio"
+      },
+      "button": "Commercio"
+    }
+  },
+  "airDrop": {
+    "title": "Richiedi la tua criptovaluta gratuita!",
+    "subTitle": "Unisciti alle ultime campagne Indoex AirDrop e guadagna all'istante.",
+    "tabs": {
+      "all": "Tutto",
+      "ongoing": "In corso",
+      "upcoming": "Imminente",
+      "completed": "Completato"
+    },
+    "terms": {
+      "airSupply": "Fornitura di airdrop",
+      "start": "Inizio",
+      "end": "FINE",
+      "cardContent": "Il LaunchPad sarà la caratteristica dell'utilità principale del token di Ape Cat. "
+    },
+    "contest": {
+      "terms": {
+        "about": "Di",
+        "howToJoin": "Come unirsi al",
+        "tokenPerAir": "Token per airdrop",
+        "upTo": "fino a",
+        "referral": "Referral",
+        "kyc": "Kyc",
+        "kycNoReq": "KYC non è un requisito",
+        "guide": "Guida passo-passo per",
+        "doNotForgot": "Non dimenticare di unirti al nostro canale Telegram, seguici su Twitter e iscriviti alla nostra newsletter per ricevere nuovi aerei!",
+        "overview": "Panoramica",
+        "web": "Sito web",
+        "exp": "Esploratore",
+        "git": "Github",
+        "wPaper": "Libro bianco",
+        "ann": "Annuncio",
+        "sMedia": "Social media",
+        "join": "Unisciti all'evento AirDrop",
+        "sDate": "Data di inizio",
+        "eDate": "Data di fine",
+        "participants": "Partecipanti attivi",
+        "button": "Partecipa ad AirDrop"
+      }
+    }
+  },
+  "launchPad": {
+    "title": "Richiedi la tua criptovaluta gratuita!",
+    "subTitle": " Avvia il tuo token Crypto con Indoex Launchpad",
+    "tabs": {
+      "all": "Tutto",
+      "ongoing": "In corso",
+      "upcoming": "Imminente",
+      "completed": "Completato"
+    },
+    "terms": {
+      "airSupply": "Fornitura di airdrop",
+      "start": "Inizio",
+      "end": "FINE",
+      "cardContent": "Il LaunchPad sarà la caratteristica dell'utilità principale del token di Ape Cat. "
+    },
+    "contest": {
+      "terms": {
+        "countDown": "Conto alla rovescia",
+        "days": "Giorni",
+        "hours": "Ore",
+        "minutes": "Minuti",
+        "seconds": "Secondi",
+        "sPrice": "Prezzo di vendita IEO",
+        "about": "Di",
+        "details": "Dettagli",
+        "fName": "Nome e cognome",
+        "web": "Sito web",
+        "tName": "Nome ticker",
+        "sSupply": "Fornitura di sessione",
+        "tSupply": "Fornitura totale",
+        "ieoPrice": "IEO PREZZO",
+        "ieoSDate": "Data di inizio IEO",
+        "ieoEDate": "Data di fine ieo",
+        "bonus": "Bonus",
+        "tecFou": "Fondazione tecnologica",
+        "docu": "Documenti",
+        "wPaper": "Libro bianco",
+        "team": "Squadra",
+        "sMedia": "Social media"
+      },
+      "form": {
+        "terms": {
+          "cBal": "Equilibrio attuale",
+          "details": "Dettagli",
+          "sDate": "Data di inizio",
+          "eDate": "Data di fine",
+          "tPrice": "Prezzo simbolico",
+          "minPrice": "Prezzo minimo",
+          "ord": "Ordini",
+          "bar": "sbarra",
+          "buy": "Acquistare",
+          "rec": "Ricevere",
+          "button": "Accedi / Iscriviti"
+        }
+      }
+    }
+  },
+  "tradeContest": {
+    "title": "Richiedi la tua criptovaluta gratuita!",
+    "subTitle": "Più scambia, più vinci!",
+    "tabs": {
+      "all": "Tutto",
+      "ongoing": "In corso",
+      "upcoming": "Imminente",
+      "completed": "Completato"
+    },
+    "terms": {
+      "airSupply": "Fornitura di airdrop",
+      "start": "Inizio",
+      "end": "FINE",
+      "cardContent": "Il LaunchPad sarà la caratteristica dell'utilità principale del token di Ape Cat. "
+    },
+    "contest": {
+      "terms": {
+        "tradingCom": "Concorrenza commerciale",
+        "moreTrade": "Più scambiate",
+        "moreWin": "Maggiore è la possibilità di vincere un premio.",
+        "details": "Dettagli",
+        "1st": "1 °",
+        "2nd": "2 °",
+        "3rd": "3 °",
+        "4th": "4 °",
+        "5th": "5 °",
+        "6th": "6 °",
+        "7th": "7 °",
+        "8th": "8 °",
+        "9th": "9 °",
+        "10th": "10 °",
+        "11th-15th": "11-15 °",
+        "16th-20th": "16-20 °",
+        "pOverview": "Panoramica della partecipazione",
+        "position": "Posizione",
+        "user": "Utente",
+        "vol": "Volume",
+        "join": "Unisciti al concorso commerciale",
+        "ieoSDate": "Data di inizio IEO",
+        "ieoEDate": "Data di fine ieo",
+        "button": "Vai a commerciare",
+        "participants": "Partecipanti attivi"
+      }
+    }
+  },
+  "walletStatus": {
+    "title": "Stato del portafoglio",
+    "terms": {
+      "search": "Ricerca"
+    },
+    "tHead": {
+      "name": "Nome",
+      "tSupply": "Fornitura totale",
+      "cSupply": "Curr. ",
+      "buyFee": "Acquista la tassa",
+      "sellFee": "Vendi una tassa",
+      "status": "stato",
+      "buttons": {
+        "active": "Attivo",
+        "maintenance": "Manutenzione"
+      }
+    }
+  },
+  "termsOfUse": {
+    "title": "Termini di utilizzo",
+    "subTitle": "Termini d'uso di scambio indox",
+    "content": "Le presenti Condizioni di utilizzo prescrivono i diritti e gli obblighi tra i membri (come descritto nell'articolo 2, e comprese le persone che erano membri in passato) e Fisco Cryptourrency Exchange Inc. (\"noi\" o la \"società\") in relazione ai servizi online \"Indoex Exchange\" e \"Indoex Instant Exchange\" che forniamo (nel dominio HTTPS: //indoex.io/; The \"Servizi\"). ",
+    "arti1": {
+      "title": "Articolo 1 Ambito di applicazione delle condizioni di utilizzo",
+      "content": {
+        "point1": "Le presenti Condizioni d'uso si applicano agli Stati Uniti e ai membri (in questo articolo 1, comprese le persone che erano membri in passato) e prescrivono tutte le questioni relative ai diritti e agli obblighi della Società e dei membri in relazione ai Servizi.",
+        "point2": "È una condizione precedente dell'utilizzo dei servizi che ciascun membro comprende il contenuto del testo completo della spiegazione su questioni importanti e questi termini di utilizzo e concorda sul fatto che le presenti Condizioni di utilizzo prescrivono tutte le questioni relative ai diritti e agli obblighi della Società e dei membri in relazione ai Servizi.",
+        "point3": " Se il membro è minorenne, il membro deve ottenere il consenso del suo tutore legale prima di utilizzare i servizi.",
+        "point4": " Se il membro utilizza i Servizi, si ritiene che il membro abbia concordato che le presenti Condizioni di utilizzo prescrivono tutte le questioni relative ai diritti e agli obblighi della Società e del Membro in relazione ai Servizi."
+      }
+    },
+    "arti2": {
+      "title": "Membri dell'articolo 2",
+      "content": {
+        "point1": "Una persona che desidera diventare membro deve presentare una domanda di registrazione dell'adesione in conformità con le nostre procedure prescritte. ",
+        "ponit2": "Dopo che un membro ha completato la registrazione per i servizi, potremmo chiedere al membro di presentare nuovamente i documenti necessari da noi se è necessario eseguire la verifica dell'identità al momento di una transazione prescritta dalla legge e dall'ordinanza pertinenti o altrimenti riteniamo necessaria ...",
+        "point3": "Se il membro desidera annullare la propria registrazione come membro, il membro può annullare la registrazione del proprio membro in conformità con le nostre procedure prescritte."
+      }
+    },
+    "arti3": {
+      "title": "Articolo 3 Gestione dell'ID di accesso e della password",
+      "content": {
+        "point1": "Il membro deve gestire il proprio ID di accesso registrato e password a proposito della propria responsabilità e non deve prestare, assegnare, vendere o in altro modo smaltire tali informazioni a terzi.",
+        "point2": "Verificheremo l'identità del membro confermando che l'ID di accesso e la password inseriti quando l'utente accede al nostro sito Web o utilizza i servizi corrispondono all'ID di accesso pre-set e alla password. ",
+        "point3": "Il membro ha ogni responsabilità per danni causati da (i) ID di perdita o password a causa del motivo attribuibile al membro e (ii) uso non autorizzato o simili al suo account da una terza parte utilizzando tale ID di accesso trapelato e non assumeremo alcuna responsabilità per tale danno.",
+        "point4": "Se il membro viene a conoscenza del fatto che l'ID o la password di accesso è stato rubato o viene utilizzato da una terza parte, il membro deve immediatamente avvisarci di tal senso e seguire le nostre istruzioni."
+      }
+    },
+    "arti4": {
+      "title": "Articolo 4 Modifica delle informazioni di registrazione",
+      "content": {
+        "point1": "In caso di modifiche alle informazioni di registrazione di un membro, il membro deve avvisarci con il nostro metodo prescritto senza indugio in merito alle informazioni modificate e inviare i documenti necessari da noi richiesti."
+      }
+    }
+  },
+  "announcementsPage": {
+    "title": "Annunci",
+    "terms": {
+      "search": "Ricerca",
+      "annu": "Indoex MemeBox ha un token elencato iniziale"
+    },
+    "sidebar": {
+      "all": "Tutto",
+      "news": {
+        "label": "Notizia",
+        "item1": "Aggiornamenti Indoex",
+        "item2": "Notizie pubbliche"
+      },
+      "newListing": "Nuovi elenchi",
+      "events": {
+        "label": "Eventi",
+        "item1": "Item1",
+        "item2": "Item2"
+      },
+      "web3": "Web3",
+      "api": "API",
+      "dListing": "Dlisting"
+    }
+  },
+  "mediaKitPage": {
+    "title": "Kit multimediale",
+    "content": "Segui queste linee guida per garantire coerenza e accuratezza quando si promuove l'indice nelle comunicazioni di marketing, inclusi pubblicità, articoli, siti Web e materiali stampati",
+    "terms": {
+      "downloadHeading": "Scarica la Guida all'utilizzo del logo del marchio Indoex",
+      "guideHeading": "Linee guida del marchio",
+      "buttons": {
+        "downloadPdf": "Scarica PDF",
+        "download": "Scaricamento"
+      },
+      "brandAssets": "Asset del marchio",
+      "logos": "Loghi",
+      "logosContent": "Ottieni loghi indox ufficiali qui. ",
+      "sairaBold": "Saira Bold",
+      "inter": "Inter regolare e medio",
+      "typeFace": "Carattere tipografico",
+      "typeFaceContent": "Ottieni una copia del nostro carattere aziendale, Saira e Inter.",
+      "colors": "Colori",
+      "colorsContent": "Di seguito sono riportati i colori del marchio primario e secondario per Indoex",
+      "green": "Verdi",
+      "dBlue": "Blu scuro"
+    }
+  },
+  "faqPage": {
+    "faq1": {
+      "ques": "Che cos'è la colpa crittografica e come funziona?",
+      "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+    },
+    "faq2": {
+      "ques": "Posso scendere la mia cripto in qualsiasi momento?",
+      "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+    },
+    "faq3": {
+      "ques": "Guadagno premi durante il periodo di rimborso?",
+      "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+    },
+    "faq4": {
+      "ques": "La punta è sicura?",
+      "ans": "Il picchettamento è il processo di blocco della criptovaluta per supportare le operazioni di una rete blockchain. "
+    }
+  },
+  "feePage": {
+    "title": "Struttura delle commissioni",
+    "terms": {
+      "search": "Ricerca"
+    },
+    "tHead": {
+      "name": "Nome",
+      "minDeposit": "Min. ",
+      "minWithdraw": "Min. ",
+      "withdrawFee": "Prelievo",
+      "makerFee": "Commissione per il creatore",
+      "takerFee": "Commissione per i taker"
+    }
+  },
+  "contactPage": {
+    "title": "Contattaci",
+    "subTitle": "Mettiti in contatto con il team Indoex se hai domande.",
+    "terms": {
+      "email": "E-mail",
+      "enterEmail": "Inserisci la tua email",
+      "category": "Categoria",
+      "selectType": "Seleziona il tuo tipo di richiesta",
+      "message": "Messaggio",
+      "messageHere": "Messaggio qui",
+      "button": "Invia",
+      "phone": "TELEFONO",
+      "emailBot": "E-MAIL"
+    }
+  },
+  "indoexVerify": {
+    "title": "Verificare Indoex",
+    "content": "Abbiamo creato una pagina per verificare i canali Indoex e gli account aziendali per prevenire le frodi. ",
+    "terms": {
+      "platform": "Piattaforma",
+      "enterUrl": "Inserisci l'URL",
+      "web": "Sito web",
+      "button": "Ricerca",
+      "message": "Si prega di utilizzare Indoex Verifica per verificare se la fonte rappresenta ufficialmente Indoex. ",
+      "notice": "Avviso",
+      "noticeMessage": {
+        "part1": "Non contattare alcuna fonte non ufficiali/non verificate o rivelare loro i dettagli del tuo account. ",
+        "part2": "Supporto indoex"
+      }
+    }
+  },
+  "dashboard": {
+    "overviewPage": {
+      "assets": "Attività totale",
+      "wallet": {
+        "label": "Riepilogo del portafoglio",
+        "terms": {
+          "tDeposit": "Deposito totale",
+          "tBuyOrders": "Ordini di acquisto totale",
+          "tWithdraw": "Prelievo totale",
+          "tSellOrders": "Ordini di vendita totali",
+          "deposit": "Depositare",
+          "withdraw": "Ritirare",
+          "myAssets": "I miei beni"
+        }
+      },
+      "security": {
+        "label": "Sicurezza",
+        "content": "Aumenta la forza di sicurezza dell'account",
+        "terms": {
+          "strength": "Forza",
+          "goToSPage": "Vai alla pagina di sicurezza",
+          "passkey": "Passkey",
+          "2fa": "Verifica in 2 fasi",
+          "antiPhi": "Codice anti-phishing",
+          "button": "Attivo"
+        }
+      },
+      "market": {
+        "label": "Mercato",
+        "tabs": {
+          "trending": "Tendenza",
+          "topVolume": "Top Volumne",
+          "favorite": "Preferito"
+        },
+        "terms": {
+          "price": "Prezzo"
+        },
+        "button": "Visualizza tutto"
+      },
+      "tradeTable": {
+        "title": "Storia commerciale",
+        "button": "Visualizza tutto",
+        "tHead": {
+          "filledTime": "Tempo pieno",
+          "pair": "Paio",
+          "bOrS": "Comprare o vendere",
+          "orderType": "Tipo d'ordine",
+          "fillPrice": "Riempire il prezzo",
+          "amount": "Quantità",
+          "vol": "Volume",
+          "fee": "Tassa"
+        }
+      }
+    },
+    "profile": {
+      "profile": {
+        "title": "Profilo",
+        "nickName": {
+          "label": "Soprannome",
+          "content": "Questo è il tuo nome visualizzato che apparirà agli altri sulla piattaforma",
+          "button": "Cambia soprannome",
+          "popUp": {
+            "title": "Cambia soprannome",
+            "nickname": "Soprannome",
+            "enterNickname": "Immettere il soprannome",
+            "message": "5-20 caratteri. ",
+            "buttons": {
+              "cancel": "Cancellare",
+              "confirm": "Confermare"
+            },
+            "successMessage": "Il soprannome è cambiato con successo"
+          }
+        },
+        "photo": {
+          "label": "foto",
+          "content": "Carica un'immagine del profilo per personalizzare il tuo account e renderlo riconoscibile",
+          "buttons": {
+            "upload": "Caricamento",
+            "delete": "Eliminare"
+          },
+          "popUp": {
+            "title": "Cambia l'immagine del tuo profilo",
+            "avatar": "Avatar",
+            "system_upload": "Carica da questo dispositivo",
+            "clickSelect": "Fare clic per selezionare",
+            "buttons": {
+              "cancel": "Cancellare",
+              "confirm": "Confermare"
+            },
+            "successMessage": "L'immagine del profilo è cambiata correttamente"
+          }
+        },
+        "profileChangeSucMessage": "L'immagine del profilo è cambiata correttamente",
+        "nameChangeSucMessage": "Il soprannome è cambiato con successo"
+      },
+      "accManagement": {
+        "title": "Gestione dell'account",
+        "closeAcc": {
+          "label": "Close Account",
+          "content": "Una volta chiuso il tuo account, è permanente e non può essere ripristinato",
+          "popUp": {
+            "title": "Richiesta di eliminazione dell'account",
+            "content": {
+              "part1": "Caro cliente stimato, se desideri eliminare permanentemente il tuo account con indox, ti preghiamo di inviare un'e -mail",
+              "part2": "support@indoex.io.",
+              "part3": "La richiesta deve essere inviata dallo stesso indirizzo e -mail utilizzato per registrare il tuo account."
+            },
+            "notice": "Avviso",
+            "noticePoints": {
+              "point1": "Tieni presente che la cancellazione dell'account è permanente. ",
+              "point2": "Se hai delle risorse rimanenti nel tuo account, assicurati di risolverli. ",
+              "point3": {
+                "part1": "Sebbene Indoex possa eliminare il tuo account in modo permanente secondo la richiesta, si prega di notare che dobbiamo conservare determinati dati personali per un periodo specificato dopo la cancellazione. ",
+                "part2": "Termini e Condizioni"
+              },
+              "point4": {
+                "part1": "Ulteriori informazioni su come archiviamo i tuoi dati personali possono essere trovate nel nostro",
+                "part2": "Politica sulla riservatezza."
+              }
+            }
+          }
+        }
+      }
+    },
+    "security": {
+      "securitySetting": {
+        "title": "Sicurezza",
+        "emailInfo": {
+          "label": "Autenticazione e -mail",
+          "content": "Utilizzare l'autenticazione e -mail per le conferme di accesso e transazioni per migliorare la sicurezza dell'account",
+          "button": "Cambia email",
+          "popUp1": {
+            "title": "Sei sicuro di voler aggiornare il tuo indirizzo email collegato?",
+            "message": {
+              "title": "Passaggi per sbriciore la tua email",
+              "content": "Per la sicurezza del tuo account, si prega di notare che dopo aver modificato l'indirizzo e-mail, i prelievi in ​​catena, i trasferimenti interni, i prelievi Fiat, le transazioni con le carte, le attività commerciali P2P e le attività pubblicitarie saranno temporaneamente sospese per 24 ore."
+            },
+            "buttons": {
+              "cancel": "Cancellare",
+              "changeEmail": "Cambia l'email"
+            }
+          },
+          "popUp2": {
+            "title": "Verifica di sicurezza",
+            "codeSentAt": "Verrà inviato un codice di verifica",
+            "enterCode": "Inserisci il codice di verifica e -mail",
+            "2faCode": "Codice Google 2FA",
+            "enter2fa": "Inserisci il codice 2FA",
+            "havingProb": "Hai problemi con la verifica?",
+            "buttons": {
+              "sendCode": "Invia codice",
+              "nextStep": "Passaggio successivo"
+            }
+          },
+          "popUp3": {
+            "title": "Cambia email",
+            "newEmail": "Nuova e -mail",
+            "enterEmail": "Inserisci la tua nuova email",
+            "veriCode": "Nuovo codice di verifica e -mail",
+            "enterveriCode": "Inserisci il codice di verifica e -mail",
+            "noCode": "Non hai ricevuto il codice di verifica?",
+            "checkSpam": "Controlla la cartella SPAM per questa email",
+            "buttons": {
+              "sendCode": "Invia codice",
+              "cancel": "Cancellare",
+              "submit": "Invia"
+            }
+          }
+        },
+        "passInfo": {
+          "label": "Password di accesso",
+          "content": "Imposta una password forte per proteggere il tuo account dall'accesso non autorizzato",
+          "button": "Cambiare la password",
+          "popUp": {
+            "title": "Cambiare la password",
+            "notice": "Avviso",
+            "noticeMessage": "Per la sicurezza del tuo account, dopo aver rimosso l'autenticazione a due fattori di Google, azioni come prelievi su catena, trasferimenti interni, prelievi Fiat, trading P2P e altre transazioni saranno temporaneamente sospese per 24 ore.",
+            "oldPass": "Vecchia password",
+            "oldPassHolder": "Inserisci la tua password corrente",
+            "newPass": "Nuova password",
+            "newPassHolder": "Inserisci nuova password",
+            "confirmPass": "Conferma nuova password",
+            "confirmPassHolder": "Inserisci nuovamente la nuova password",
+            "2faCode": "Codice di verifica 2FA",
+            "2faCodeHolder": "Immettere il codice 2FA",
+            "havingIssue": "Hai problemi con la verifica?",
+            "button": "Passaggio successivo"
+          }
+        },
+        "twofactor": {
+          "label": "Autenticazione a due fattori",
+          "content": "Collega un'app di autenticatore per l'autenticazione sicura a due fattori quando si accede al tuo account",
+          "buttons": {
+            "setUp": "Impostare",
+            "disable": "Disabilitare"
+          },
+          "addPopUp1": {
+            "title": "Verifica di sicurezza",
+            "codeAt": "Verrà inviato un codice di verifica",
+            "noCode": {
+              "part1": "Non sei in grado di ricevere il codice di verifica?",
+              "part2": "Codice di verifica a riposo"
+            },
+            "havingProb": "Hai problemi con la verifica?",
+            "error": {
+              "wrongOtp": "L'OTP che hai inserito non è corretto.",
+              "expOtp": "Il codice di verifica è scaduto. "
+            }
+          },
+          "addPopUp2": {
+            "title": "Imposta autenticazione a due fattori di Google",
+            "downloadMsgTitle": "Scarica Google Authenticator (Android / iOS)",
+            "downloadMsgContent": "Cerca \"Google Authenticator\" sull'App Store o Google Play e scarica l'app.",
+            "addKeyTitle": "Aggiungi la frase chiave a Google Authenticator",
+            "addKeyContent": "Puoi scaricare Google Authenticator dall'App Store o Google Play. ",
+            "alertMsg": "La frase chiave è essenziale per il recupero del tuo Autenticatore di Google se perdi o si modifica il dispositivo. ",
+            "2faCode": "Codice Google 2FA",
+            "enter2faCode": "Inserisci il codice 2FA ",
+            "copyKey": "Copia chiave",
+            "copied": " Copiato!",
+            "buttons": {
+              "cancel": "Cancellare",
+              "confirm": "Confermare"
+            }
+          },
+          "removePopUp1": {
+            "title": "Verifica di sicurezza",
+            "loginPass": "Password di accesso",
+            "enterPass": "Inserisci la password ",
+            "2faCode": "Codice Google 2FA",
+            "enter2faCode": "Immettere il codice 2FA",
+            "button": "Passaggio successivo"
+          },
+          "removePopUp2": {
+            "title": "Conferma la rimozione dell'autenticazione di Google 2FA",
+            "notice": "Avviso",
+            "noticeMess": "Per la sicurezza del tuo account, dopo aver rimosso l'autenticazione a due fattori di Google, azioni come prelievi su catena, trasferimenti interni, prelievi Fiat, negoziazione P2P e altre transazioni saranno temporaneamente sospese per 24 ore.",
+            "buttons": {
+              "cancel": "Cnacel",
+              "remove": "Rimuovere"
+            }
+          }
+        },
+        "secondaryPin": {
+          "label": "Pin secondario",
+          "content": "Impostare un codice personalizzato per garantire che le e -mail dalla piattaforma siano autentiche e non phishing.",
+          "buttons": {
+            "forgot": "Dimenticato",
+            "change": "Modifica"
+          },
+          "forgotPopUp": {
+            "title": "Verifica di sicurezza",
+            "enter2fa": "Immettere il codice 2FA",
+            "havingProb": "Hai problemi con la verifica?",
+            "error": {
+              "wrongOtp": "L'OTP che hai inserito non è corretto.",
+              "expOtp": "Il codice di verifica è scaduto. "
+            }
+          },
+          "changepopUp": {
+            "title": "Aggiorna il pin",
+            "currentPin": "PIN corrente",
+            "enterCurrentPin": "Inserisci il pin corrente",
+            "newPin": "Nuovo pin",
+            "enterNewPin": "Inserisci un nuovo pin",
+            "confirmPin": "Conferma il pin",
+            "enterCofirmPin": "Si prega di inserire di nuovo un nuovo pin",
+            "buttons": {
+              "cancel": "Cancellare",
+              "confirm": "Confermare"
+            }
+          },
+          "forgotSuccessMessage": "Il tuo pin secondario inviato all'indirizzo della posta raccomandata",
+          "changeSuccessMessage": "Il tuo pin secondario aggiornato succuranti"
+        },
+        "antiPhishing": {
+          "label": "Anti -phishing",
+          "content": "L'e-mail inviata dalla piattaforma conterrà il codice anti-phishing per distinguere dalla posta falsa",
+          "button": "Impostare",
+          "popUp1": {
+            "title": "Imposta codice anti-phishing",
+            "alert": "Si prega di non divulgare il tuo codice anti-phishing a chiunque, compresi i dipendenti Indoex.",
+            "antiPhiCode": "Codice anti-phishing",
+            "enterCode": "Inserisci da 4 a 20 caratteri",
+            "message": "Inserisci da 4 a 20 caratteri che contengono lettere, numeri e sottolineate. ",
+            "whatIsIt": "Cos'è il codice anti-phishing?",
+            "whatIsItContent": "Il tuo codice anti-phishing apparirà in tutte le e-mail indox, aiutandoti a individuare comunicazioni autentiche ed evitare truffe.",
+            "buttons": {
+              "cancel": "Cancellare",
+              "confirm": "Confermare"
+            },
+            "error": "Si è verificato un errore"
+          },
+          "popUp2": {
+            "title": "Verifica di sicurezza",
+            "enter2fa": "Immettere il codice 2FA",
+            "havingProb": "Hai problemi con la verifica?",
+            "error": {
+              "wrongOtp": "L'OTP che hai inserito non è corretto.",
+              "expOtp": "Il codice di verifica è scaduto. "
+            }
+          }
+        }
+      },
+      "authLevel": {
+        "title": "Livello di autenticazione",
+        "terms": {
+          "idLevel": "Livello di identificazione",
+          "limit": "24 ore limite di prelievo",
+          "unlimited": "Illimitato"
+        }
+      }
+    },
+    "assetsPage": {
+      "title": "Attività totale",
+      "tabs": {
+        "all": "Tutto",
+        "delisted": "Cancellato"
+      },
+      "terms": {
+        "hideLabel": "Nascondi zero beni di bilanciamento",
+        "search": "Ricerca"
+      },
+      "tHead": {
+        "crypto": "Cripto",
+        "tBal": "Equilibrio totale",
+        "avl": "Disponibile",
+        "inOrders": "In ordini",
+        "avgPrice": "Avg. ",
+        "action": "Azione",
+        "buttons": {
+          "withdraw": "Ritirare",
+          "deposit": "Depositare"
+        }
+      }
+    },
+    "depositPage": {
+      "steps": {
+        "title": "Passi di deposito",
+        "step1": {
+          "title": "Copia l'indirizzo del portafoglio",
+          "content": "Seleziona l'indirizzo Crypto, Network & Copy."
+        },
+        "step2": {
+          "title": "Conferma l'indirizzo",
+          "content": "Indirizzo di prelievo copiato in pasta"
+        },
+        "step3": {
+          "title": "Conferma la conferma",
+          "content": "Attendi la conferma del trasferimento blockchain"
+        },
+        "step4": {
+          "title": "Deposito riuscito",
+          "content": "Indoex invierà attività al portafoglio."
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "Seleziona Crypto",
+          "selectNet": "Seleziona la rete",
+          "selectNetHolder": "Seleziona la rete che si desidera depositare tramite",
+          "copyAdd": "Copia l'indirizzo del portafoglio",
+          "addPub": "l'indirizzo è pubblicato!",
+          "addPubContent": "Si prega di utilizzare l'indirizzo di seguito per depositare la criptovaluta utilizzando la rete Toncoin. ",
+          "copy": "copia",
+          "copied": "Copiato"
+        },
+        "tips": {
+          "label": "Suggerimenti",
+          "content": "Per la sicurezza dei tuoi fondi, il nostro team di assistenza clienti può contattarti per telefono per confermare il prelievo"
+        },
+        "faq": {
+          "label": "FAQ",
+          "button": "Visualizza di più",
+          "faq1": {
+            "ques": "Come depositare su Falconx?"
+          },
+          "faq2": {
+            "ques": "Cos'è una rete crittografica?"
+          },
+          "faq3": {
+            "ques": "Quale rete dovrei usare?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "Seleziona Crypto per ritirarsi",
+          "searchCrypto": "Cerca cripto",
+          "tabs": {
+            "recent": "Recente",
+            "all": "Tutto",
+            "favorite": "Preferito"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "Seleziona Crypto per ritirarsi",
+          "alert": "Assicurati che la tua corrispondenza di criptovaluta e la rete di depositi selezionate possano essere perse.",
+          "searchNet": "Rete di ricerca",
+          "sortBy": "Ordinare da",
+          "tabs": {
+            "mostPop": "Più popolare",
+            "fastest": "Più veloce",
+            "lessConfirm": "Meno conferme"
+          },
+          "fee": "Tassa",
+          "expArr": "Arrivo previsto"
+        }
+      },
+      "table": {
+        "title": "Ultimi 4 record di deposito",
+        "button": "Storia dei depositi",
+        "tHead": {
+          "dNt": "Data/ora",
+          "coin": "Coniare",
+          "amount": "Quantità",
+          "bRecords": "Record blockchain",
+          "remark": "Osservazioni",
+          "action": "Azione",
+          "button": "Dettagli"
+        }
+      }
+    },
+    "withdrawPage": {
+      "steps": {
+        "title": "Passi di ritiro",
+        "step1": {
+          "title": "Seleziona la cripto",
+          "content": "Seleziona Crypto e Network per il ritiro"
+        },
+        "step2": {
+          "title": "Conferma l'indirizzo",
+          "content": "Indirizzo di prelievo copiato in pasta"
+        },
+        "step3": {
+          "title": "Conferma la conferma",
+          "content": "Attendi la conferma del trasferimento blockchain"
+        },
+        "step4": {
+          "title": "Ritiro di successo",
+          "content": "Indoex invierà attività al portafoglio"
+        }
+      },
+      "form": {
+        "terms": {
+          "selectCrypto": "Seleziona Crypto",
+          "withTo": "Ritirarsi a",
+          "net": "Rete",
+          "selectNet": "Seleziona la rete di prelievo",
+          "add": "Indirizzo",
+          "enterAdd": "Inserisci il tuo indirizzo di prelievo",
+          "withAmount": "Importo di prelievo",
+          "amount": "Quantità",
+          "avalBal": "Equilibrio disponibile",
+          "minWithAmount": "L'importo del prelievo minimo è",
+          "remark": "Osservazioni (opzionale)",
+          "remarkHolder": "Per esempio. ",
+          "rAmount": "Ricevi importo",
+          "netFee": "Commissione di rete",
+          "button": "Ritirare"
+        },
+        "tips": {
+          "label": "Suggerimenti",
+          "content": {
+            "point1": "Per la sicurezza dei tuoi fondi, il nostro team di assistenza clienti può contattarti per telefono per confermare il prelievo.",
+            "point2": "Per la sicurezza dei tuoi fondi, il nostro team di assistenza clienti può contattarti per telefono per confermare il prelievo."
+          }
+        },
+        "faq": {
+          "label": "FAQ",
+          "button": "Visualizza di più",
+          "faq1": {
+            "ques": "Quanto tempo impiegano i prelievi?"
+          },
+          "faq2": {
+            "ques": "Perché il mio ritiro è stato respinto?"
+          },
+          "faq3": {
+            "ques": "Posso annullare un ritiro?"
+          }
+        },
+        "popUpSelectCrypto": {
+          "title": "Seleziona Crypto per ritirarsi",
+          "searchCrypto": "Cerca cripto",
+          "tabs": {
+            "recent": "Recente",
+            "all": "Tutto",
+            "favorite": "Preferito"
+          }
+        },
+        "popUpSelectNet": {
+          "title": "Seleziona Crypto per ritirarsi",
+          "alert": "Assicurati che la tua corrispondenza di criptovaluta e la rete di depositi selezionate possano essere perse.",
+          "searchNet": "Rete di ricerca",
+          "sortBy": "Ordinare da",
+          "tabs": {
+            "mostPop": "Più popolare",
+            "fastest": "Più veloce",
+            "lessConfirm": "Meno conferme"
+          },
+          "fee": "Tassa",
+          "expArr": "Arrivo previsto"
+        },
+        "popUpTransactionStatus": {
+          "pending": {
+            "title": "In attesa di ritiro",
+            "content": "La tua richiesta di prelievo viene rivista e richiederà circa 12 ore. "
+          },
+          "failed": {
+            "title": "Ritiro non riuscito",
+            "content": "C'è stato un problema a elaborare questo ritiro. "
+          },
+          "successful": {
+            "title": "Ritiro di successo",
+            "content": "La tua richiesta di prelievo è stata presentata con successo. "
+          },
+          "buttons": {
+            "viewHIstory": "Visualizza la storia",
+            "checkDetails": "Controlla i dettagli"
+          }
+        }
+      },
+      "table": {
+        "title": "Ultimi 4 record di prelievo",
+        "button": "Ritirare la storia",
+        "tHead": {
+          "dNt": "Data/ora",
+          "coin": "Coniare",
+          "amount": "Quantità",
+          "withTo": "Ritirarsi a",
+          "bRecords": "Record blockchain",
+          "remark": "Osservazioni",
+          "action": "Azione",
+          "button": "Dettagli"
+        }
+      }
+    },
+    "depositHisPage": {
+      "title": "Storia dei depositi",
+      "terms": {
+        "allStatu": "Tutti gli stati",
+        "allCoins": "Tutte le monete"
+      },
+      "button": "Scaricamento",
+      "tHead": {
+        "cOrT": "Moneta/token",
+        "amount": "Quantità",
+        "time": "Tempo",
+        "bRecords": "Record blockchain",
+        "remark": "Osservazioni",
+        "status": "Stato",
+        "successful": "Riuscito"
+      }
+    },
+    "withdrawHisPage": {
+      "title": "Storia di ritiro",
+      "terms": {
+        "allStatu": "Tutti gli stati",
+        "allCoins": "Tutte le monete"
+      },
+      "button": "Scaricamento",
+      "tHead": {
+        "cOrT": "Moneta/token",
+        "amount": "Quantità",
+        "time": "Tempo",
+        "withTo": "Ritirarsi a",
+        "bRecords": "Record blockchain",
+        "remark": "Osservazioni",
+        "orderId": "Ordine ID",
+        "status": "Stato",
+        "successful": "Riuscito"
+      }
+    },
+    "openOrdersPage": {
+      "title": "Ordini aperti",
+      "terms": {
+        "allPairs": "Tutte le coppie",
+        "bNsOrders": "Acquista, vende ordini",
+        "orderType": "Tipo d'ordine"
+      },
+      "tHead": {
+        "time": "Tempo",
+        "pair": "Paio",
+        "bOrS": "Comprare o vendere",
+        "type": "Tipo",
+        "orderPrice": "Prezzo dell'ordine",
+        "amount": "Quantità",
+        "filled": "Riempito",
+        "unexecuted": "Inasecinato",
+        "action": "Azione"
+      }
+    },
+    "ordersHisPage": {
+      "title": "Ordina storia",
+      "button": "Scaricamento",
+      "terms": {
+        "month": "mese",
+        "allPairs": "Tutte le coppie",
+        "bNsOrders": "Acquista, vende ordini",
+        "orderType": "Tipo d'ordine",
+        "status": "Stato"
+      },
+      "tHead": {
+        "time": "Tempo",
+        "pair": "Paio",
+        "bOrS": "Comprare o vendere",
+        "type": "Tipo",
+        "tCondition": "Condizione di innesco",
+        "orderPrice": "Prezzo dell'ordine",
+        "amount": "Quantità",
+        "filled": "Riempito",
+        "avgPrice": "Avg.price",
+        "status": "Stato"
+      }
+    },
+    "tradeHisPage": {
+      "title": "Storia commerciale",
+      "button": "Scaricamento",
+      "terms": {
+        "month": "mese",
+        "allPairs": "Tutte le coppie",
+        "bNsOrders": "Acquista, vende ordini",
+        "orderType": "Tipo d'ordine"
+      },
+      "tHead": {
+        "filledTime": "Tempo pieno",
+        "pair": "Paio",
+        "bOrS": "Comprare o vendere",
+        "type": "Tipo",
+        "fillPrice": "Prezzo dell'ordine",
+        "amount": "Quantità",
+        "vol": "Volume",
+        "fee": "Tassa"
+      }
+    },
+    "loginHisPage": {
+      "title": "Cronologia di accesso",
+      "terms": {
+        "lSuccess": "Accedi al successo",
+        "lFailed": "Accesso non riuscito a causa di credenziali errate"
+      },
+      "tHead": {
+        "dateTime": "Ora di data",
+        "action": "Azione",
+        "ip": "Indirizzo IP"
+      }
+    },
+    "deviceManagement": {
+      "title": "Gestione dei dispositivi",
+      "tHead": {
+        "dateTime": "Ora di data",
+        "location": "Posizione",
+        "ip": "Indirizzo IP",
+        "action": "Azione",
+        "button": "Eliminare"
+      }
+    },
+    "apiPage": {
+      "apiManagement": {
+        "title": "Gestione API",
+        "subTitle": "Crea chiave API",
+        "terms": {
+          "notes": "Note",
+          "notesHolder": "Immettere le note",
+          "preSetting": {
+            "part1": "Impostazioni di autorizzazione",
+            "part2": "(Scelta multipla)"
+          },
+          "accBalance": "Saldo del conto",
+          "addOrder": "Aggiungi ordine",
+          "getOrder": "Ottieni l'ordine",
+          "closeOrder": "Close Order",
+          "bindIp": {
+            "part1": "Indirizzo IP di associazione",
+            "part2": "(opzionale)"
+          },
+          "expDate": "La data di scadenza della chiave non legata all'indirizzo IP è di 100 giorni",
+          "button": "creare"
+        },
+        "note": {
+          "label": "Nota",
+          "point1": "Ti forniamo una forte API REST e WebSocket, attraverso la quale puoi godere di servizi come query di mercato, trading automatico, ecc. Per favore, visualizza il documento API.",
+          "point2": "Un account può creare fino a 5 chiavi segrete API.",
+          "point3": {
+            "part1": "Per evitare la perdita di attività, non divulgare la chiave API a nessuno. ",
+            "part2": "Se ci sono più di un indirizzi IP, è necessario separarli con la virgola (ad esempio 192.168.1.1.192.168.1.2.192.168.1.3)."
+          },
+          "point4": "Per l'API di trading, un singolo IP limita 100 richieste al minuto.",
+          "point5": "Ogni chiave API è valida per 100 giorni e se attraversato cambierà automaticamente in modalità inattiva.",
+          "point6": {
+            "part1": "Se hai qualche domanda, contattaci",
+            "part2": "support@indoex.io"
+          }
+        }
+      },
+      "apiList": {
+        "title": "Tasti API creati",
+        "tHead": {
+          "createDate": "Crea data",
+          "notes": "Note",
+          "permission": "Autorizzazione",
+          "accKey": "Chiave di accesso",
+          "ip": "Indirizzo IP di associazione",
+          "expire": "Scadere in (giorni)",
+          "action": "Azione"
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
@@ -52,6 +53,7 @@ const records = [
 ];
 
 const DepositRecordsTable = () => {
+  const t = useTranslations("dashboard.depositPage.table");
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   const handleCopy = async (value: string, identifier: string) => {
@@ -68,10 +70,10 @@ const DepositRecordsTable = () => {
     <div className=" bg-white dark:bg-[#161735]  rounded-xl p-6 w-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className={`${saira.className} text-sm font-semibold `}>
-          Last 4 Deposit Records
+          {t("title")}
         </h2>
         <button className="bg-green-500 hover:bg-green-600 transition-all duration-200 text-white dark:text-black text-xs px-4 py-2 rounded-full cursor-pointer">
-          Deposit History
+          {t("button")}
         </button>
       </div>
 
@@ -79,14 +81,24 @@ const DepositRecordsTable = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">Date/Time</th>
-              <th className="px-4 py-3 text-[11px] font-light">Coin</th>
-              <th className="px-4 py-3 text-[11px] font-light">Amount</th>
               <th className="px-4 py-3 text-[11px] font-light">
-                Blockchain Record
+                {t("tHead.dNt")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">Remarks</th>
-              <th className="px-4 py-3 text-[11px] font-light">Action</th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.coin")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.amount")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.bRecords")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.remark")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.action")}
+              </th>
             </tr>
           </thead>
           <tbody>

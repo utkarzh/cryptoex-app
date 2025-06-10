@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React, { FC } from "react";
@@ -11,6 +12,9 @@ type Props = {
 };
 
 const TransactionStatusPopup: FC<Props> = ({ status }) => {
+  const t = useTranslations(
+    "dashboard.withdrawPage.form.popUpTransactionStatus"
+  );
   // const [status] = useState<"pending" | "failed" | "successful">("successful");
   return (
     <div className="bg-white dark:bg-[#161735] rounded-xl p-4 max-w-60 text-center relative shadow-xl">
@@ -44,30 +48,17 @@ const TransactionStatusPopup: FC<Props> = ({ status }) => {
       </div>
 
       <h2 className="text-xs font-medium mb-6">
-        <span className="capitalize">{status}</span> Withdrawal
+        {/* <span className="capitalize">{status}</span> Withdrawal */}
+        {t(`${status}.title`)}
       </h2>
-      {status === "pending" && (
-        <p className="text-[11px] font-light mb-6 opacity-80 dark:opacity-50">
-          Your withdrawal request is being reviewed and will take approximately
-          12 hours. You can view the status in history page.
-        </p>
-      )}
-      {status === "failed" && (
-        <p className="text-[11px] font-light mb-6 opacity-80 dark:opacity-50">
-          There was a problem processing this Withdrawal. Please double check
-          the submitted details and try again.
-        </p>
-      )}
-      {status === "successful" && (
-        <p className="text-[11px] font-light mb-6 opacity-80 dark:opacity-50">
-          Your withdrawal request has been successfully submitted. You can view
-          the status in history page.
-        </p>
-      )}
+
+      <p className="text-[11px] font-light mb-6 opacity-80 dark:opacity-50">
+        {t(`${status}.content`)}
+      </p>
 
       <div className="w-full flex justify-between gap-2">
         <Link
-          href="/withdrawal/history"
+          href="/withdraw-history"
           // onClick={onClose}
           className={`w-full ${
             status === "failed"
@@ -75,7 +66,7 @@ const TransactionStatusPopup: FC<Props> = ({ status }) => {
               : "bg-green-500 hover:bg-green-600 text-white dark:text-black "
           }   py-1.5 px-2 rounded-full transition text-xs cursor-pointer`}
         >
-          View History
+          {t("buttons.viewHIstory")}
         </Link>
 
         {status === "failed" && (
@@ -83,7 +74,7 @@ const TransactionStatusPopup: FC<Props> = ({ status }) => {
             href="#"
             className=" w-full bg-green-500 hover:bg-green-600 text-white dark:text-black  py-1.5 px-2 rounded-full transition text-xs cursor-pointer"
           >
-            Check Details
+            {t("buttons.checkDetails")}
           </Link>
         )}
       </div>

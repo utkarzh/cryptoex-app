@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { FC, useState } from "react";
 import { FiAlertTriangle } from "react-icons/fi";
@@ -12,6 +13,9 @@ type Props = {
 };
 
 const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
+  const t = useTranslations(
+    "dashboard.security.securitySetting.antiPhishing.popUp1"
+  );
   const [error, setError] = useState("");
 
   const [antiPhiCode, setAntiPhiCode] = useState({
@@ -24,7 +28,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       onSuccess("error");
       return;
     }
-    setError("Error occured");
+    setError(t("error"));
     setTimeout(() => setError(""), 2000);
   };
   return (
@@ -39,29 +43,26 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* heading and close button*/}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Set Up Anti-phishing Code
+        {t("title")}
       </h2>
 
       {/* warning message */}
       <div className="flex gap-2 text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
         <FiAlertTriangle className="text-5xl dark:text-[#c97b26] text-[#bc8d5b]" />
-        <p>
-          Please do not disclose your anti-phishing code to anyone, including
-          IndoEx employees.
-        </p>
+        <p>{t("alert")}</p>
       </div>
       {/* inputs */}
       <div className="w-full space-y-3 border-b-2 pb-4 border-slate-500/30">
         {/* anit-phishing code input */}
         <div>
           <label className="block mb-1 text-[10px] font-light">
-            Anti-phishing Code
+            {t("antiPhiCode")}
           </label>
           <div className=" relative">
             <input
               type={antiPhiCode.isVisible ? "text" : "password"}
               value={antiPhiCode.antiPhiCode}
-              placeholder="Please enter 4 to 20 characters"
+              placeholder={t("enterCode")}
               className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
               onChange={(e) =>
                 setAntiPhiCode((prev) => {
@@ -87,9 +88,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
         </div>
 
         <p className="text-[10px] font-light opacity-90 dark:opacity-70">
-          Please enter 4 to 20 characters that contain letters, numbers and
-          underscores only. Please do not set your frequently used password as
-          the anti-phishing code.
+          {t("message")}
         </p>
       </div>
       {error && <p className="text-[10px] font-light text-red-700">{error}</p>}
@@ -97,12 +96,9 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       {/* what is anti-phishing code */}
       <div className="space-y-3 mb-10">
         <div className="space-y-1">
-          <h4 className="text-[11px] font-light">
-            What Is Anti-Phishing Code?
-          </h4>
+          <h4 className="text-[11px] font-light">{t("whatIsIt")}</h4>
           <p className="text-[10px] font-light opacity-90 dark:opacity-70">
-            Your anti-phishing code will appear in all IndoEx emails, helping
-            you spot genuine communications and avoid scams.
+            {t("whatIsItContent")}
           </p>
         </div>
 
@@ -121,14 +117,14 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           className="w-full border border-slate-500/30 py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={onClose}
         >
-          Cancel
+          {t("buttons.cancel")}
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white
                      py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200"
           onClick={addAnitPhiHandler}
         >
-          Confirm
+          {t("buttons.confirm")}
         </button>
       </div>
     </div>

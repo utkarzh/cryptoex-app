@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 // import { saira } from "@/utils/Font";
 import { useState } from "react";
 import { FaBitcoin, FaEthereum } from "react-icons/fa";
@@ -88,6 +89,7 @@ const mockData = [
 ];
 
 export default function AssetsTable() {
+  const t = useTranslations("dashboard.assetsPage");
   const [search, setSearch] = useState("");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -114,7 +116,7 @@ export default function AssetsTable() {
         {/* heading left */}
         <div className="flex flex-col gap-2 ">
           <div className="flex gap-2 items-center">
-            <h2 className="text-sm ">Total Asset</h2>
+            <h2 className="text-sm ">{t("title")}</h2>
             <span
               className="cursor-pointer hover:scale-105 transition-all duration-200"
               onClick={() => setIsVisible((prev) => !prev)}
@@ -155,7 +157,7 @@ export default function AssetsTable() {
               }`}
             >
               <div className="flex gap-1 items-center text-xs capitalize">
-                {val}
+                {t(`tabs.${val}`)}
               </div>
             </button>
           ))}
@@ -167,13 +169,13 @@ export default function AssetsTable() {
               type="checkbox"
               className="w-fit h-auto bg-tranparent border-md border-slate-500"
             />
-            <label className="text-[10px]">Hide Zero Balance Assets</label>
+            <label className="text-[10px]">{t("terms.hideLabel")}</label>
           </div>
 
           <div className="relative flex-wrap gap-2 flex items-center ">
             <input
               type="text"
-              placeholder="Search"
+              placeholder={t("terms.search")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
@@ -188,21 +190,23 @@ export default function AssetsTable() {
           <table className="w-full text-xs text-left">
             <thead className=" ">
               <tr className="text-[12px] opacity-90 dark:opacity-60">
-                <th className="py-3 px-2 font-extralight">Crypto</th>
+                <th className="py-3 px-2 font-extralight">
+                  {t("tHead.crypto")}
+                </th>
                 <th className="py-3 px-2 font-extralight text-center">
-                  Total Balance
+                  {t("tHead.tBal")}
                 </th>
                 <th className="py-3 px-2 font-extralight  text-center">
-                  Available
+                  {t("tHead.avl")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-center pr-6">
-                  In Orders
+                  {t("tHead.inOrders")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-center pr-6">
-                  Avg. Price
+                  {t("tHead.avgPrice")}
                 </th>
                 <th className="py-3 px-2 font-extralight text-right pr-6">
-                  Action
+                  {t("tHead.action")}
                 </th>
               </tr>
             </thead>
@@ -248,13 +252,13 @@ export default function AssetsTable() {
                       <button
                         className={`text-[12px] px-2 py-1 ${"text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
                       >
-                        Withdraw
+                        {t("tHead.buttons.withdraw")}
                       </button>
 
                       <button
                         className={`text-[12px] px-2 py-1 ${"text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
                       >
-                        Deposit
+                        {t("tHead.buttons.deposit")}
                       </button>
                     </div>
                   </td>

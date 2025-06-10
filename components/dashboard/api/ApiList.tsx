@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 import { RxValueNone } from "react-icons/rx";
@@ -27,11 +28,12 @@ export const mockData: MockData[] = [
 ];
 
 const ApiList = () => {
+  const t = useTranslations("dashboard.apiPage.apiList");
   return (
     <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold mb-10`}>
-        Created API Keys
+        {t("title")}
       </h2>
 
       {/* table */}
@@ -39,17 +41,27 @@ const ApiList = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">Create Date</th>
-              <th className="px-4 py-3 text-[9px] font-light">Notes</th>
-              <th className="px-4 py-3 text-[9px] font-light">Permission</th>
-              <th className="px-4 py-3 text-[9px] font-light">Access Key</th>
               <th className="px-4 py-3 text-[9px] font-light">
-                Bind IP Address
+                {t("tHead.createDate")}
               </th>
               <th className="px-4 py-3 text-[9px] font-light">
-                Expire in(days)
+                {t("tHead.notes")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">Action</th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.permission")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.accKey")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.ip")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.expire")}
+              </th>
+              <th className="px-4 py-3 text-[9px] font-light">
+                {t("tHead.action")}
+              </th>
             </tr>
           </thead>
           {mockData.length > 0 && (

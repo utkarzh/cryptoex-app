@@ -15,7 +15,7 @@ const SecondaryPin = () => {
   const [success, setSuccess] = useState("");
   const forgotSuccessHandler = () => {
     setPopup("");
-    setSuccess("Your secondary pin sent to registered mail address");
+    setSuccess(t("forgotSuccessMessage"));
     setTimeout(() => {
       setSuccess("");
     }, 5000);
@@ -23,8 +23,7 @@ const SecondaryPin = () => {
 
   const changePinSuccessHandler = () => {
     setPopup("");
-    setSuccess("Your secondary pin updated suceessfully");
-
+    setSuccess(t("changeSuccessMessage"));
     setTimeout(() => {
       setSuccess("");
     }, 5000);

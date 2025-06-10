@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React from "react";
 import { IoMdClose } from "react-icons/io";
 
@@ -9,36 +10,36 @@ type Step = {
   description: string;
 };
 
-const steps: Step[] = [
-  {
-    number: 1,
-    title: "Select the crypto",
-    description: "Select crypto and network for withdraw",
-  },
-  {
-    number: 2,
-    title: "Confirm Address",
-    description: "Paste Copied withdrawal address",
-  },
-  {
-    number: 3,
-    title: "Transfer Confirmation",
-    description: "Await blockchain transfer confirmation",
-  },
-  {
-    number: 4,
-    title: "Successful Withdrawal",
-    description: "Indexx will send assets to wallet",
-  },
-];
-
 const WithdrawalSteps = () => {
+  const t = useTranslations("dashboard.withdrawPage.steps");
+  const steps: Step[] = [
+    {
+      number: 1,
+      title: t("step1.title"),
+      description: t("step1.content"),
+    },
+    {
+      number: 2,
+      title: t("step2.title"),
+      description: t("step2.content"),
+    },
+    {
+      number: 3,
+      title: t("step3.title"),
+      description: t("step3.content"),
+    },
+    {
+      number: 4,
+      title: t("step4.title"),
+      description: t("step4.content"),
+    },
+  ];
   return (
     <div className="bg-white dark:bg-[#161735] p-6 rounded-xl">
       {/* heading */}
       <div className="flex justify-between items-center mb-4">
         <h2 className={`${saira.className} text-sm font-semibold `}>
-          Withdrawal Steps
+          {t("title")}
         </h2>
         <button className="text-xl hover:scale-110  transition-all duration-200 cursor-pointer">
           <IoMdClose />

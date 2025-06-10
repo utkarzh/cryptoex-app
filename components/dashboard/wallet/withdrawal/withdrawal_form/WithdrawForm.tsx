@@ -15,12 +15,7 @@ import SelectCryptoPopup from "./SelectCryptoPopup";
 import SelectCryptoNetwork from "./SelectCryptoNetwork";
 import TransactionStatusPopup from "./TransactionStatusPopup";
 import { IoIosCalculator } from "react-icons/io";
-
-const FaqArray = [
-  "How long do withdrawals take?",
-  "Why was my withdrawal rejected?",
-  "Can I cancel a withdrawal?",
-];
+import { useTranslations } from "next-intl";
 
 export interface Crypto {
   symbol: string;
@@ -121,6 +116,9 @@ const networks: Network[] = [
 ];
 
 const WithdrawalForm = () => {
+  const t = useTranslations("dashboard.withdrawPage.form");
+  const FaqArray = [t("faq.faq1.ques"), t("faq.faq2.ques"), t("faq.faq3.ques")];
+
   const [selectedCrypto, setSelectedCrypto] = useState<Crypto>();
   const [isCryptoFormOpne, setIsCryptoFormOpen] = useState(false);
 
@@ -148,7 +146,7 @@ const WithdrawalForm = () => {
   };
 
   const withdrawalSubmitHandler = () => {
-    setTransactionStatus("failed");
+    setTransactionStatus("pending");
   };
   return (
     <div className="bg-white dark:bg-[#161735] p-6 rounded-xl flex flex-col md:flex-row gap-10">
@@ -178,7 +176,7 @@ const WithdrawalForm = () => {
           </div>
 
           <label className="text-xs font-light flex items-center gap-2 mb-2">
-            Select Crypto
+            {t("terms.selectCrypto")}
           </label>
           {/* slection input of coin */}
           <div
@@ -205,7 +203,7 @@ const WithdrawalForm = () => {
               </div>
             ) : (
               <div className="flex gap-1 items-center text-xs font-light opacity-50">
-                Select Crypto
+                {t("terms.selectCrypto")}
               </div>
             )}
             <MdOutlineKeyboardArrowDown className=" text-xl cursor-pointer" />
@@ -250,12 +248,12 @@ const WithdrawalForm = () => {
               selectedNetwork ? "opacity-100" : "opacity-50"
             } text-xs font-light flex items-center gap-2 mb-2`}
           >
-            Withdraw to
+            {t("terms.withTo")}
           </label>
           <div className="">
             {selectedNetwork && (
               <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1">
-                Network
+                {t("terms.net")}
               </label>
             )}
             {/* network input */}
@@ -271,7 +269,7 @@ const WithdrawalForm = () => {
                 <span className="text-xs ">{selectedNetwork.code}</span>
               ) : (
                 <span className="text-xs opacity-50 font-light indent-1.5">
-                  Select withdrawal Network
+                  {t("terms.selectNet")}
                 </span>
               )}
               <MdOutlineKeyboardArrowDown className=" text-xl cursor-pointer" />
@@ -279,7 +277,7 @@ const WithdrawalForm = () => {
 
             {selectedNetwork && withdrawalAddress && (
               <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1 mt-4">
-                Address
+                {t("terms.add")}
               </label>
             )}
             {/* withdraw address input */}
@@ -299,7 +297,7 @@ const WithdrawalForm = () => {
               <input
                 type="text"
                 value={withdrawalAddress}
-                placeholder="Enter your withdrawal address"
+                placeholder={t("terms.enterAdd")}
                 className="w-full dark:bg-slate-500/20 bg-slate-500/15 rounded-md px-4 py-3 text-xs font-light  placeholder-gray-400 outline-none"
                 onChange={(e) => setWithdrawalAddress(e.target.value)}
               />
@@ -337,7 +335,7 @@ const WithdrawalForm = () => {
               withdrawalAmount ? "opacity-100" : "opacity-50"
             } text-xs font-light flex items-center gap-2 mb-2`}
           >
-            Withdrawal Amount
+            {t("terms.withAmount")}
           </label>
 
           {/* inputs */}
@@ -345,11 +343,11 @@ const WithdrawalForm = () => {
             <div className="">
               <div className="w-full flex justify-between items-center">
                 <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1">
-                  Amount
+                  {t("terms.amount")}
                 </label>
 
                 <span className="text-[10px]  ">
-                  Available balance: 530 USDT
+                  {t("terms.avalBal")}: 530 USDT
                 </span>
               </div>
               {/* amount input */}
@@ -362,21 +360,21 @@ const WithdrawalForm = () => {
                 <input
                   type="number"
                   value={withdrawalAmount}
-                  placeholder="Minimum withdrawal amount is 0.8 USDT"
+                  placeholder={`${t("minWithAmount")} 0.8 USDT`}
                   className="w-full dark:bg-slate-500/20 bg-slate-500/15 rounded-md px-4 py-3 text-xs font-light  placeholder-gray-400 outline-none control"
                   onChange={(e) => setWithdrawalAmount(e.target.value)}
                 />
               </div>
 
               <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1 mt-4">
-                Remarks(optional)
+                {t("terms.remark")}
               </label>
               {/* remark optional */}
               <div>
                 <input
                   type="text"
                   value={remark}
-                  placeholder="E.g. Purpose of withdrawal"
+                  placeholder={t("terms.remarkHolder")}
                   className="w-full dark:bg-slate-500/20 bg-slate-500/15 rounded-md px-4 py-3 text-xs font-light  placeholder-gray-400 outline-none"
                   onChange={(e) => setRemark(e.target.value)}
                 />
@@ -388,14 +386,14 @@ const WithdrawalForm = () => {
                 <div className="w-full flex justify-between items-center">
                   <span className="flex gap-1 w-fit text-[10px] items-center">
                     <span className="opacity-80 dark:opacity-50 text-[10px] font-light">
-                      Receive amount:
+                      {t("terms.rAmount")}:
                     </span>
                     <span> 0 USDT</span>
                   </span>
 
                   <span className="flex gap-1 w-fit text-[10px] items-center">
                     <span className="opacity-80 dark:opacity-50 text-[10px] font-light">
-                      Network fee:
+                      {t("terms.netFee")}:
                     </span>
                     <span> 0 ETH</span>
                   </span>
@@ -411,7 +409,7 @@ const WithdrawalForm = () => {
                     withdrawalAmount ? withdrawalSubmitHandler : () => {}
                   }
                 >
-                  Withdraw
+                  {t("terms.button")}
                 </button>
               </div>
             </div>
@@ -426,20 +424,14 @@ const WithdrawalForm = () => {
           {/* heading */}
           <h3 className="text-sm font-normal flex items-center gap-2">
             <MdOutlineTipsAndUpdates className="text-lg" />
-            Tips
+            {t("tips.label")}
           </h3>
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
           <div className="space-y-1 text-[10px] font-light opacity-70 dark:opacity-50">
-            <p className=" ">
-              For the safety of your funds, our customer support team may
-              contact you by phone to confirm your withdrawal.
-            </p>
-            <p className="">
-              For the safety of your funds, our customer support team may
-              contact you by phone to confirm your withdrawal.
-            </p>
+            <p className=" ">{t("tips.content.point1")}</p>
+            <p className="">{t("tips.content.point2")}</p>
           </div>
         </div>
 
@@ -448,9 +440,9 @@ const WithdrawalForm = () => {
           {/* heading */}
           <h3 className="text-sm font-normal flex items-center gap-2">
             <MdOutlineHelpOutline className="text-lg" />
-            FAQs
+            {t("faq.label")}
             <span className="ml-auto text-xs font-light hover:scale-105 transition-all duration-200 opacity-50  cursor-pointer flex  items-center">
-              View more
+              {t("faq.button")}
               <RiArrowRightSLine className="text-lg" />
             </span>
           </h3>

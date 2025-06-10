@@ -1202,6 +1202,588 @@
         }
       }
     }
+  },
+  "security": {
+    "securitySetting": {
+      "title": "Sécurité",
+      "emailInfo": {
+        "label": "Authentification par e-mail",
+        "content": "Utilisez l'authentification par e-mail pour les confirmations de connexion et de transaction pour améliorer la sécurité du compte",
+        "button": "Modifier le courrier électronique",
+        "popUp1": {
+          "title": "Êtes-vous sûr de souhaiter mettre à jour votre adresse e-mail liée?",
+          "message": {
+            "title": "Étapes pour dissocier votre e-mail",
+            "content": "Pour la sécurité de votre compte, veuillez noter qu'après avoir modifié votre adresse e-mail, vos retraits sur la chaîne, les transferts internes, les retraits Fiat, les transactions par carte, le trading P2P et les activités publicitaires seront temporairement suspendus pendant 24 heures."
+          },
+          "buttons": {
+            "cancel": "Annuler",
+            "changeEmail": "Changer l'e-mail"
+          }
+        },
+        "popUp2": {
+          "title": "Vérification de la sécurité",
+          "codeSentAt": "Un code de vérification sera envoyé à",
+          "enterCode": "Veuillez saisir le code de vérification des e-mails",
+          "2faCode": "Code Google 2FA",
+          "enter2fa": "Veuillez saisir le code 2FA",
+          "havingProb": "Vous avez des problèmes de vérification?",
+          "buttons": {
+            "sendCode": "Envoyer un code",
+            "nextStep": "Prochaine étape"
+          }
+        },
+        "popUp3": {
+          "title": "Modifier le courrier électronique",
+          "newEmail": "Nouveau e-mail",
+          "enterEmail": "Veuillez saisir votre nouvel e-mail",
+          "veriCode": "Nouveau code de vérification par e-mail",
+          "enterveriCode": "Veuillez saisir le code de vérification des e-mails",
+          "noCode": "Vous n'avez pas reçu le code de vérification?",
+          "checkSpam": "Veuillez vérifier votre dossier de spam pour cet e-mail",
+          "buttons": {
+            "sendCode": "Envoyer un code",
+            "cancel": "Annuler",
+            "submit": "Soumettre"
+          }
+        }
+      },
+      "passInfo": {
+        "label": "Mot de passe de connexion",
+        "content": "Définissez un mot de passe fort pour protéger votre compte contre l'accès non autorisé",
+        "button": "Changer le mot de passe",
+        "popUp": {
+          "title": "Changer le mot de passe",
+          "notice": "Avis",
+          "noticeMessage": "Pour la sécurité de votre compte, après avoir supprimé l'authentification à deux facteurs Google, des actions telles que les retraits sur chaîne, les transferts internes, les retraits Fiat, le trading P2P et d'autres transactions seront temporairement suspendus pendant 24 heures.",
+          "oldPass": "Ancien mot de passe",
+          "oldPassHolder": "Veuillez saisir votre mot de passe actuel",
+          "newPass": "Nouveau mot de passe",
+          "newPassHolder": "Veuillez saisir un nouveau mot de passe",
+          "confirmPass": "Confirmer un nouveau mot de passe",
+          "confirmPassHolder": "Veuillez saisir à nouveau le nouveau mot de passe",
+          "2faCode": "Code de vérification 2FA",
+          "2faCodeHolder": "Veuillez saisir le code 2FA",
+          "havingIssue": "Vous avez des problèmes de vérification?",
+          "button": "Prochaine étape"
+        }
+      },
+      "twofactor": {
+        "label": "Authentification à deux facteurs",
+        "content": "Lier une application Authenticator pour une authentification sécurisée à deux facteurs lors de l'accès à votre compte",
+        "buttons": {
+          "setUp": "Installation",
+          "disable": "Désactiver"
+        },
+        "addPopUp1": {
+          "title": "Vérification de la sécurité",
+          "codeAt": "Un code de vérification sera envoyé à",
+          "noCode": {
+            "part1": "Impossible de recevoir du code de vérification?",
+            "part2": "Rensenter le code de vérification"
+          },
+          "havingProb": "Vous avez des problèmes de vérification?",
+          "error": {
+            "wrongOtp": "L'OTP que vous avez entré est incorrect.",
+            "expOtp": "Le code de vérification a expiré. "
+          }
+        },
+        "addPopUp2": {
+          "title": "Configurer l'authentification Google à deux facteurs",
+          "downloadMsgTitle": "Télécharger Google Authenticator (Android / iOS)",
+          "downloadMsgContent": "Recherchez «Google Authenticator» sur l'App Store ou Google Play et téléchargez l'application.",
+          "addKeyTitle": "Ajoutez la phrase clé à Google Authenticator",
+          "addKeyContent": "Vous pouvez télécharger Google Authenticator sur l'App Store ou Google Play. ",
+          "alertMsg": "La phrase clé est essentielle pour récupérer votre authentificateur Google si vous perdez ou modifiez votre appareil. ",
+          "2faCode": "Code Google 2FA",
+          "enter2faCode": "Veuillez saisir le code 2FA ",
+          "copyKey": "Clé de copie",
+          "copied": " Copié!",
+          "buttons": {
+            "cancel": "Annuler",
+            "confirm": "Confirmer"
+          }
+        },
+        "removePopUp1": {
+          "title": "Vérification de la sécurité",
+          "loginPass": "Mot de passe de connexion",
+          "enterPass": "Veuillez saisir le mot de passe ",
+          "2faCode": "Code Google 2FA",
+          "enter2faCode": "Veuillez saisir le code 2FA",
+          "button": "Prochaine étape"
+        },
+        "removePopUp2": {
+          "title": "Confirmer la suppression de l'authentification Google 2FA",
+          "notice": "Avis",
+          "noticeMess": "Pour la sécurité de votre compte, après avoir supprimé l'authentification à deux facteurs Google, des actions telles que les retraits sur chaîne, les transferts internes, les retraits Fiat, le trading P2P et d'autres transactions seront temporairement suspendus pendant 24 heures.",
+          "buttons": {
+            "cancel": "Cnacel",
+            "remove": "Retirer"
+          }
+        }
+      },
+      "secondaryPin": {
+        "label": "Épingle secondaire",
+        "content": "Configurez un code personnalisé pour s'assurer que les e-mails de la plate-forme sont authentiques et non des tentatives de phishing",
+        "buttons": {
+          "forgot": "Oublié",
+          "change": "Changement"
+        },
+        "forgotPopUp": {
+          "title": "Vérification de la sécurité",
+          "enter2fa": "Entrez le code 2fa",
+          "havingProb": "Vous avez des problèmes de vérification?",
+          "error": {
+            "wrongOtp": "L'OTP que vous avez entré est incorrect.",
+            "expOtp": "Le code de vérification a expiré. "
+          }
+        },
+        "changepopUp": {
+          "title": "Mettre à jour la broche",
+          "currentPin": "Épingle",
+          "enterCurrentPin": "Veuillez saisir la broche actuelle",
+          "newPin": "Nouvelle épingle",
+          "enterNewPin": "Veuillez saisir la nouvelle épingle",
+          "confirmPin": "Confirmer la broche",
+          "enterCofirmPin": "Veuillez saisir à nouveau la nouvelle épingle",
+          "buttons": {
+            "cancel": "Annuler",
+            "confirm": "Confirmer"
+          }
+        },
+        "forgotSuccessMessage": "Votre broche secondaire envoyée à l'adresse du courrier enregistrée",
+        "changeSuccessMessage": "Votre épingle secondaire a mis à jour avec respect"
+      },
+      "antiPhishing": {
+        "label": "Anti-phishing",
+        "content": "L'e-mail qui vous envoie par la plate-forme contiendra le code anti-phishing pour distinguer du faux courrier",
+        "button": "Installation",
+        "popUp1": {
+          "title": "Configurer le code anti-phishing",
+          "alert": "Veuillez ne pas divulguer votre code anti-phishing à personne, y compris les employés d'Indoex.",
+          "antiPhiCode": "Code antiphishing",
+          "enterCode": "Veuillez entrer 4 à 20 caractères",
+          "message": "Veuillez saisir 4 à 20 caractères contenant des lettres, des chiffres et des soulignements uniquement. ",
+          "whatIsIt": "Qu'est-ce que le code anti-phishing?",
+          "whatIsItContent": "Votre code anti-phishing apparaîtra dans tous les e-mails Indoex, vous aidant à repérer des communications authentiques et à éviter les escroqueries.",
+          "buttons": {
+            "cancel": "Annuler",
+            "confirm": "Confirmer"
+          },
+          "error": "Erreur s'est produite"
+        },
+        "popUp2": {
+          "title": "Vérification de la sécurité",
+          "enter2fa": "Entrez le code 2fa",
+          "havingProb": "Vous avez des problèmes de vérification?",
+          "error": {
+            "wrongOtp": "L'OTP que vous avez entré est incorrect.",
+            "expOtp": "Le code de vérification a expiré. "
+          }
+        }
+      }
+    },
+    "authLevel": {
+      "title": "Niveau d'authentification",
+      "terms": {
+        "idLevel": "Niveau d'identification",
+        "limit": "Limite de retrait 24h / 24",
+        "unlimited": "Illimité"
+      }
+    }
+  },
+  "assetsPage": {
+    "title": "Actif total",
+    "tabs": {
+      "all": "tous",
+      "delisted": "Radié"
+    },
+    "terms": {
+      "hideLabel": "Masquer les actifs zéro",
+      "search": "Recherche"
+    },
+    "tHead": {
+      "crypto": "Crypto",
+      "tBal": "Solde total",
+      "avl": "Disponible",
+      "inOrders": "Par ordres",
+      "avgPrice": "Avg. ",
+      "action": "Action",
+      "buttons": {
+        "withdraw": "Retirer",
+        "deposit": "Dépôt"
+      }
+    }
+  },
+  "depositPage": {
+    "steps": {
+      "title": "Étapes de dépôt",
+      "step1": {
+        "title": "Copier l'adresse du portefeuille",
+        "content": "Sélectionnez une adresse Crypto, réseau et copie."
+      },
+      "step2": {
+        "title": "Confirmer l'adresse",
+        "content": "Adresse de retrait copiée en coller"
+      },
+      "step3": {
+        "title": "Confirmation de transfert",
+        "content": "Attendre la confirmation de transfert de blockchain"
+      },
+      "step4": {
+        "title": "Dépôt réussi",
+        "content": "Indoex enverra des actifs au portefeuille."
+      }
+    },
+    "form": {
+      "terms": {
+        "selectCrypto": "Sélectionner la crypto",
+        "selectNet": "Sélectionner le réseau",
+        "selectNetHolder": "Sélectionnez le réseau que vous souhaitez déposer via",
+        "copyAdd": "Copier l'adresse du portefeuille",
+        "addPub": "L'adresse est publiée!",
+        "addPubContent": "Veuillez utiliser l'adresse ci-dessous pour déposer votre crypto-monnaie à l'aide du réseau Toncoin. ",
+        "copy": "copie",
+        "copied": "Copié"
+      },
+      "tips": {
+        "label": "Conseils",
+        "content": "Pour la sécurité de vos fonds, notre équipe de support client peut vous contacter par téléphone pour confirmer votre retrait"
+      },
+      "faq": {
+        "label": "FAQ",
+        "button": "Voir plus",
+        "faq1": {
+          "ques": "Comment déposer sur Falconx?"
+        },
+        "faq2": {
+          "ques": "Qu'est-ce qu'un réseau crypto?"
+        },
+        "faq3": {
+          "ques": "Quel réseau dois-je utiliser?"
+        }
+      },
+      "popUpSelectCrypto": {
+        "title": "Sélectionnez la crypto pour se retirer",
+        "searchCrypto": "Rechercher la crypto",
+        "tabs": {
+          "recent": "Récent",
+          "all": "Tous",
+          "favorite": "Préféré"
+        }
+      },
+      "popUpSelectNet": {
+        "title": "Sélectionnez la crypto pour se retirer",
+        "alert": "Assurez-vous que votre correspondance de réseaux de crypto et de dépôt sélectionnée peut être perdue.",
+        "searchNet": "Réseau de recherche",
+        "sortBy": "Trier par",
+        "tabs": {
+          "mostPop": "Le plus populaire",
+          "fastest": "Le plus rapide",
+          "lessConfirm": "Moins de confirmations"
+        },
+        "fee": "Frais",
+        "expArr": "Arrivée attendue"
+      }
+    },
+    "table": {
+      "title": "4 derniers dossiers de dépôt",
+      "button": "Historique des dépôts",
+      "tHead": {
+        "dNt": "Date / heure",
+        "coin": "Pièce de monnaie",
+        "amount": "Montant",
+        "bRecords": "Blockchain Record",
+        "remark": "Remarques",
+        "action": "Action",
+        "button": "Détails"
+      }
+    }
+  },
+  "withdrawPage": {
+    "steps": {
+      "title": "Étapes de retrait",
+      "step1": {
+        "title": "Sélectionnez la crypto",
+        "content": "Sélectionnez la cryptographie et le réseau pour se retirer"
+      },
+      "step2": {
+        "title": "Confirmer l'adresse",
+        "content": "Adresse de retrait copiée en coller"
+      },
+      "step3": {
+        "title": "Confirmation de transfert",
+        "content": "Attendre la confirmation de transfert de blockchain"
+      },
+      "step4": {
+        "title": "Retrait réussi",
+        "content": "Indoex enverra des actifs au portefeuille"
+      }
+    },
+    "form": {
+      "terms": {
+        "selectCrypto": "Sélectionner la crypto",
+        "withTo": "Se retirer",
+        "net": "Réseau",
+        "selectNet": "Sélectionnez le réseau de retrait",
+        "add": "Adresse",
+        "enterAdd": "Entrez votre adresse de retrait",
+        "withAmount": "Montant du retrait",
+        "amount": "Montant",
+        "avalBal": "Solde disponible",
+        "minWithAmount": "Le montant du retrait minimum est",
+        "remark": "Remarques (facultative)",
+        "remarkHolder": "Par exemple ",
+        "rAmount": "Recevoir le montant",
+        "netFee": "Frais de réseau",
+        "button": "Retirer"
+      },
+      "tips": {
+        "label": "Conseils",
+        "content": {
+          "point1": "Pour la sécurité de vos fonds, notre équipe de support client peut vous contacter par téléphone pour confirmer votre retrait.",
+          "point2": "Pour la sécurité de vos fonds, notre équipe de support client peut vous contacter par téléphone pour confirmer votre retrait."
+        }
+      },
+      "faq": {
+        "label": "FAQ",
+        "button": "Voir plus",
+        "faq1": {
+          "ques": "Combien de temps durent les retraits?"
+        },
+        "faq2": {
+          "ques": "Pourquoi mon retrait a-t-il été rejeté?"
+        },
+        "faq3": {
+          "ques": "Puis-je annuler un retrait?"
+        }
+      },
+      "popUpSelectCrypto": {
+        "title": "Sélectionnez la crypto pour se retirer",
+        "searchCrypto": "Rechercher la crypto",
+        "tabs": {
+          "recent": "Récent",
+          "all": "Tous",
+          "favorite": "Préféré"
+        }
+      },
+      "popUpSelectNet": {
+        "title": "Sélectionnez la crypto pour se retirer",
+        "alert": "Assurez-vous que votre correspondance de réseaux de crypto et de dépôt sélectionnée peut être perdue.",
+        "searchNet": "Réseau de recherche",
+        "sortBy": "Trier par",
+        "tabs": {
+          "mostPop": "Le plus populaire",
+          "fastest": "Le plus rapide",
+          "lessConfirm": "Moins de confirmations"
+        },
+        "fee": "Frais",
+        "expArr": "Arrivée attendue"
+      },
+      "popUpTransactionStatus": {
+        "pending": {
+          "title": "Retrait en attente",
+          "content": "Votre demande de retrait est en cours d'examen et prendra environ 12 heures. "
+        },
+        "failed": {
+          "title": "Retrait défaillant",
+          "content": "Il y a eu un problème de traitement de ce retrait. "
+        },
+        "successful": {
+          "title": "Retrait réussi",
+          "content": "Votre demande de retrait a été soumise avec succès. "
+        },
+        "buttons": {
+          "viewHIstory": "Voir l'histoire",
+          "checkDetails": "Vérifier les détails"
+        }
+      }
+    },
+    "table": {
+      "title": "4 derniers enregistrements de retrait",
+      "button": "Retirer l'histoire",
+      "tHead": {
+        "dNt": "Date / heure",
+        "coin": "Pièce de monnaie",
+        "amount": "Montant",
+        "withTo": "Se retirer",
+        "bRecords": "Blockchain Record",
+        "remark": "Remarques",
+        "action": "Action",
+        "button": "Détails"
+      }
+    }
+  },
+  "depositHisPage": {
+    "title": "Historique des dépôts",
+    "terms": {
+      "allStatu": "Tous les statuts",
+      "allCoins": "Toutes les pièces"
+    },
+    "button": "Télécharger",
+    "tHead": {
+      "cOrT": "Pièce de monnaie / jeton",
+      "amount": "Montant",
+      "time": "Temps",
+      "bRecords": "Blockchain Record",
+      "remark": "Remarques",
+      "status": "Statut",
+      "successful": "Réussi"
+    }
+  },
+  "withdrawHisPage": {
+    "title": "Historique de sevrage",
+    "terms": {
+      "allStatu": "Tous les statuts",
+      "allCoins": "Toutes les pièces"
+    },
+    "button": "Télécharger",
+    "tHead": {
+      "cOrT": "Pièce de monnaie / jeton",
+      "amount": "Montant",
+      "time": "Temps",
+      "withTo": "Se retirer",
+      "bRecords": "Blockchain Record",
+      "remark": "Remarques",
+      "orderId": "ID de commande",
+      "status": "Statut",
+      "successful": "Réussi"
+    }
+  },
+  "openOrdersPage": {
+    "title": "Ordres ouverts",
+    "terms": {
+      "allPairs": "Toutes les paires",
+      "bNsOrders": "Acheter, vendre des commandes",
+      "orderType": "Type de commande"
+    },
+    "tHead": {
+      "time": "Temps",
+      "pair": "Paire",
+      "bOrS": "Acheter ou vendre",
+      "type": "Taper",
+      "orderPrice": "Prix ​​de commande",
+      "amount": "Montant",
+      "filled": "Rempli",
+      "unexecuted": "Non exécuté",
+      "action": "Action"
+    }
+  },
+  "ordersHisPage": {
+    "title": "Historique des commandes",
+    "button": "Télécharger",
+    "terms": {
+      "month": "mois",
+      "allPairs": "Toutes les paires",
+      "bNsOrders": "Acheter, vendre des commandes",
+      "orderType": "Type de commande",
+      "status": "Statut"
+    },
+    "tHead": {
+      "time": "Temps",
+      "pair": "Paire",
+      "bOrS": "Acheter ou vendre",
+      "type": "Taper",
+      "tCondition": "Déclencheur",
+      "orderPrice": "Prix ​​de commande",
+      "amount": "Montant",
+      "filled": "Rempli",
+      "avgPrice": "Avg.Price",
+      "status": "Statut"
+    }
+  },
+  "tradeHisPage": {
+    "title": "Histoire du commerce",
+    "button": "Télécharger",
+    "terms": {
+      "month": "mois",
+      "allPairs": "Toutes les paires",
+      "bNsOrders": "Acheter, vendre des commandes",
+      "orderType": "Type de commande"
+    },
+    "tHead": {
+      "filledTime": "Temps rempli",
+      "pair": "Paire",
+      "bOrS": "Acheter ou vendre",
+      "type": "Taper",
+      "fillPrice": "Prix ​​de commande",
+      "amount": "Montant",
+      "vol": "Volume",
+      "fee": "Frais"
+    }
+  },
+  "loginHisPage": {
+    "title": "Historique de connexion",
+    "terms": {
+      "lSuccess": "Succès de connexion",
+      "lFailed": "La connexion a échoué en raison de mauvaises références"
+    },
+    "tHead": {
+      "dateTime": "Date",
+      "action": "Action",
+      "ip": "Adresse IP"
+    }
+  },
+  "deviceManagement": {
+    "title": "Gestion des appareils",
+    "tHead": {
+      "dateTime": "Date",
+      "location": "Emplacement",
+      "ip": "Adresse IP",
+      "action": "Action",
+      "button": "Supprimer"
+    }
+  },
+  "apiPage": {
+    "apiManagement": {
+      "title": "Gestion de l'API",
+      "subTitle": "Créer une clé API",
+      "terms": {
+        "notes": "Notes",
+        "notesHolder": "Entrez dans les notes",
+        "preSetting": {
+          "part1": "Paramètres d'autorisation",
+          "part2": "(Choix multiple)"
+        },
+        "accBalance": "Solde du compte",
+        "addOrder": "Ajouter la commande",
+        "getOrder": "Passer la commande",
+        "closeOrder": "Commande fermée",
+        "bindIp": {
+          "part1": "Lier l'adresse IP",
+          "part2": "(facultatif)"
+        },
+        "expDate": "La date d'expiration de la clé non liée à l'adresse IP est de 100 jours",
+        "button": "créer"
+      },
+      "note": {
+        "label": "Note",
+        "point1": "Nous vous fournissons une solide API de repos et WebSocket, à travers laquelle vous pouvez profiter de services tels que les requêtes du marché, le trading automatique, etc., veuillez consulter le document API.",
+        "point2": "Un compte peut créer jusqu'à 5 clés secrètes API.",
+        "point3": {
+          "part1": "Pour éviter la perte d'actifs, ne divulguez pas votre clé API à personne. ",
+          "part2": "S'il y a plusieurs adresses IP, vous devez les séparer avec des virgules (par exemple 192.168.1.1,192.168.1.2,192.168.1.3)."
+        },
+        "point4": "Pour les API commerciaux, un seul IP restreint 100 demandes par minute.",
+        "point5": "Chaque clé API est valable pendant 100 jours et si elle est croisée, elle passera automatiquement en mode inactif.",
+        "point6": {
+          "part1": "Si vous avez une question, veuillez nous joindre",
+          "part2": "support@indoex.io"
+        }
+      }
+    },
+    "apiList": {
+      "title": "Clés API créées",
+      "tHead": {
+        "createDate": "Créer une date",
+        "notes": "Notes",
+        "permission": "Autorisation",
+        "accKey": "Clé d'accès",
+        "ip": "Lier l'adresse IP",
+        "expire": "Expirer en (jours)",
+        "action": "Action"
+      }
+    }
   }
   }
   

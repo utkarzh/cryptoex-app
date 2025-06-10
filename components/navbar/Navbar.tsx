@@ -90,7 +90,7 @@ const Navbar = () => {
               {/* toggle button */}
               <div className=" w-fit text-sm bg-slate-300 text-black dark:text-white dark:bg-gray-700 rounded-full flex items-center ">
                 <div
-                  className={`w-full ${
+                  className={`w-full text-nowrap ${
                     isExchange
                       ? "bg-green-600 dark:bg-green-700 text-white "
                       : "bg-transparent "
@@ -104,7 +104,7 @@ const Navbar = () => {
                     !isExchange
                       ? "bg-green-600 dark:bg-green-700 text-white"
                       : "bg-transparent "
-                  }  rounded-full px-4 py-1 cursor-pointer transition-all duration-300 `}
+                  }  rounded-full px-4 py-1 cursor-pointer transition-all duration-300 text-nowrap `}
                   onClick={() => setIsExchange(false)}
                 >
                   {t("toggle.web3")}

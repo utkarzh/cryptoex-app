@@ -1,5 +1,6 @@
 "use client";
 import { saira } from "@/utils/Font";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { MdContentCopy } from "react-icons/md";
@@ -11,7 +12,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -19,7 +20,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -27,7 +28,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -35,7 +36,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -43,7 +44,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -51,7 +52,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -59,7 +60,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -67,7 +68,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -75,7 +76,7 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
   {
     coin: "BTC",
@@ -83,11 +84,13 @@ const mockData = [
     time: "2023/12/13 12:16",
     record: "asfzv6...hbdu1",
     remarks: "-",
-    status: "Successful",
+    status: "successful",
   },
 ];
 
 const DepositHistory = () => {
+  const t = useTranslations("dashboard.depositHisPage");
+
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const handleCopy = async (value: string, identifier: string) => {
     try {
@@ -103,7 +106,7 @@ const DepositHistory = () => {
     <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold `}>
-        Withdrawal History
+        {t("title")}
       </h2>
       {/* filter tab */}
       <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] mt-2">
@@ -112,13 +115,13 @@ const DepositHistory = () => {
           className="border border-slate-500/40 p-1 px-2 rounded "
         />
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>All Statuses</option>
+          <option>{t("terms.allStatu")}</option>
         </select>
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
-          <option>All Coins</option>
+          <option>{t("terms.allCoins")}</option>
         </select>
         <button className="bg-green-500 text-white dark:text-black px-2 py-1 rounded-full hover:bg-green-600 cursor-pointer">
-          Download
+          {t("button")}
         </button>
       </div>
 
@@ -127,15 +130,25 @@ const DepositHistory = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">Coin/Token</th>
-              <th className="px-4 py-3 text-[11px] font-light">Amount</th>
-              <th className="px-4 py-3 text-[11px] font-light">Time</th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.cOrT")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.amount")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.time")}
+              </th>
 
               <th className="px-4 py-3 text-[11px] font-light">
-                Blockchain Record
+                {t("tHead.bRecords")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">Remarks</th>
-              <th className="px-4 py-3 text-[11px] font-light">Status</th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.remark")}
+              </th>
+              <th className="px-4 py-3 text-[11px] font-light">
+                {t("tHead.status")}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -170,7 +183,9 @@ const DepositHistory = () => {
                   </td>
                   <td className="py-3 px-4">{item.remarks}</td>
 
-                  <td className="py-3 px-4 text-green-400">{item.status}</td>
+                  <td className="py-3 px-4 text-green-400">
+                    {t(`tHead.${item.status}`)}
+                  </td>
                 </tr>
               );
             })}
