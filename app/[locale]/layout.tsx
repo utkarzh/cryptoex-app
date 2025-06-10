@@ -22,11 +22,13 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+
+  const dir = routing.getDirection(locale);
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={dir}>
       <body className={`${inter.className}  bg-[#eff0f2] dark:bg-[#06062a]  `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ReduxProvider>

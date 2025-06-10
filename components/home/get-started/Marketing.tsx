@@ -43,6 +43,7 @@ const Marketing = () => {
           {/* part shadow effect */}
           <div className="partShadowMarketing1"></div>
           {/* coins */}
+
           <div className="w-[50%] sm:w-[90%] mx-auto   flex justify-center items-center absolute top-[12%] left-0 translate-x-0 sm:left-1/2 sm:-translate-x-1/2 ">
             <Image
               src={coinRotatingData[0]}
@@ -66,7 +67,7 @@ const Marketing = () => {
               alt=""
               width={100}
               height={100}
-              className="w-[25%] p-[6px] bg-[#eff0f2] dark:bg-[#161735] rounded-full  h-auto z-[50] animate-pulse duration-100"
+              className="w-[25%] p-[6px] bg-[#eff0f2] dark:bg-[#161735] rounded-full  h-auto z-[50] "
             />
 
             <Image

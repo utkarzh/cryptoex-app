@@ -3,14 +3,16 @@
 // import LoginForm from "@/components/auth/LoginForm";
 "use client";
 
-import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
+// import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
+import ImageCarousel from "./Test";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
 
 const Page = () => {
   return (
-    <div className="w-[90%] mx-auto flex justify-end mr-10 relative border">
+    <div className="w-[90%] mx-auto flex justify-end mr-10 relative ">
       {/* <LangDropdown /> */}
-      <LangDropdown />
+      {/* <LangDropdown /> */}
+      <ImageCarousel />
     </div>
   );
 };

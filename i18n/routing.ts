@@ -7,12 +7,16 @@ export const localeObjects = [
   {code: 'ru', label: 'русский (ru)'},
   {code: 'ch', label: '中国人 (ch)'},
   {code: 'tw', label: '中國人 (tw)'},
-  {code: 'it', label: 'italiano (it)'},
+  {code: 'it', label: 'Italiano (it)'},
+  {code: 'ar', label: 'Arbic (ar)'},
 ];
 
 export const defaultLocale = 'en';
 
 export const routing = {
   locales: localeObjects.map((l) => l.code),
-  defaultLocale
+  defaultLocale,
+  getDirection(locale: string) {
+    return ['ar', 'he', 'fa', 'ur'].includes(locale) ? 'rtl' : 'ltr';
+  }
 };
