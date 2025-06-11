@@ -38,7 +38,7 @@ const Navbar = () => {
               <Image
                 width={200}
                 height={100}
-                className="w-auto max-w-[10vw] 2xl:max-w-[10vw] 2xl:min-w-[10vw] dark:block hidden cursor-pointer p-1 rounded "
+                className="w-auto max-w-[130px] 2xl:max-w-[10vw] 2xl:min-w-[10vw] dark:block hidden cursor-pointer p-1 rounded "
                 src="/images/logo/logo_indoex_white.svg"
                 alt="logo"
               />
@@ -46,7 +46,7 @@ const Navbar = () => {
               <Image
                 width={200}
                 height={100}
-                className="w-auto max-w-[130px] lg:max-w-[180px] 2xl:max-w-[10vw] 2xl:min-w-[10vw] block dark:hidden  cursor-pointer p-1 rounded "
+                className="w-auto max-w-[130px]  2xl:max-w-[10vw] 2xl:min-w-[10vw] block dark:hidden  cursor-pointer p-1 rounded "
                 src="/images/logo/logo_indoex_black.svg"
                 alt="logo"
               />

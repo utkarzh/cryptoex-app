@@ -31,7 +31,7 @@ export default async function RootLayout({
     <html
       lang={locale}
       dir={dir}
-      className="text-[16px] xl:text-[18px] 2xl:text-[1.4vw]"
+      className="text-[16px] xl:text-[16px] 2xl:text-[1.2vw]"
     >
       <body className={`${inter.className}  bg-[#eff0f2] dark:bg-[#06062a]  `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
