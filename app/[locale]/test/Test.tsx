@@ -2,14 +2,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-// const images = [
-//   "/image1.jpg",
-//   "/image2.jpg",
-//   "/image3.jpg",
-//   "/image4.jpg",
-//   "/image5.jpg",
-// ];
-
 const images = [
   "/images/coins/usdtrounded.png",
   "/images/coins/binancerounded.png",

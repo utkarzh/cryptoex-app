@@ -9,6 +9,7 @@ export const localeObjects = [
   {code: 'tw', label: '中國人 (tw)'},
   {code: 'it', label: 'Italiano (it)'},
   {code: 'ar', label: 'Arbic (ar)'},
+  {code: 'pt', label: 'Português (pt)'},
 ];
 
 export const defaultLocale = 'en';

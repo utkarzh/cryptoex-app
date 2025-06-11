@@ -10,27 +10,27 @@ const Hero = () => {
   const t = useTranslations("homePage.heroSection");
 
   return (
-    <div className="w-full h-[calc(100vh-70px)] flex justify-center items-center relative  ">
+    <div className="w-full h-[600px] flex justify-center items-center relative overflow-hidden   ">
       {/* background images*/}
-      <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover "></div>
-      <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover "></div>
+      <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover scale-125 "></div>
+      <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover scale-125"></div>
       {/* background text */}
       <span
-        className={`z-[40] ${saira.className} text-[25vw] lg:text-[18vw] font-bold tracking-wide bg-gradient-to-b  via-slate-700 to-white dark:from-white dark:via-[#5b719c] dark:to-[#021e55] bg-clip-text text-transparent opacity-100`}
+        className={`z-[40] ${saira.className} text-[24vw] lg:text-[17.8vw] font-bold tracking-wide bg-gradient-to-b  via-slate-700 to-white dark:from-white dark:via-[#5b719c] dark:to-[#021e55] bg-clip-text text-transparent opacity-100 relative -top-5`}
       >
         INDOEX
       </span>
       {/* overlay */}
-      <div className="w-full h-full absolute z-[40] bg-[#eff0f2] dark:bg-[#06062a] opacity-85 dark:opacity-[0.87] top-0 left-0 ">
+      <div className="w-full h-full absolute z-[40] bg-[#eff0f2] dark:bg-[#06062a] opacity-85 dark:opacity-[0.84] top-0 left-0 ">
         {" "}
       </div>
 
       {/*heading and subheading */}
-      <div className="w-full absolute z-[50] top-18 right-0 text-center ">
-        <h1 className={`${saira.className} text-2xl font-bold`}>
+      <div className="w-full absolute z-[50] top-14 right-0 text-center ">
+        <h1 className={`${saira.className} text-[26px] font-bold`}>
           {t("title")}
         </h1>
-        <p className="text-[14px] font-extralight">{t("subTitle")}</p>
+        <p className="text-[15px] font-extralight">{t("subTitle")}</p>
       </div>
 
       <div className="absolute bottom-0 right-0 w-full py-2 z-[40] text-white bg-green-600 dark:bg-green-700 flex justify-center">

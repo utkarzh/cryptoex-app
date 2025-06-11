@@ -112,7 +112,7 @@ const Navbar = () => {
               </div>
 
               {/*  */}
-              <div className="h-[50%] hidden xl:block border-r-2 rounded border-gray-600 my-2 border-2 "></div>
+              <div className="h-[50%] hidden xl:block border-r rounded border-gray-600 my-2 "></div>
 
               {/* items */}
               <div className="w-full flex flex-col xl:flex-row  gap-3 text-sm items-start pl-2 xl:pl-0 xl:items-center ">

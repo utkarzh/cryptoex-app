@@ -1,16 +1,4 @@
-// // middleware.ts
-// import createMiddleware from 'next-intl/middleware';
 
-// export default createMiddleware({
-//   // Define your supported locales
-//   locales: ['en', 'fr', 'de'],
-//   defaultLocale: 'en'
-// });
-
-// export const config = {
-//   // Enable middleware for all routes
-//   matcher: ['/((?!_next|favicon.ico|.*\\..*).*)']
-// };
 
 import createMiddleware from 'next-intl/middleware';
 import {routing} from './i18n/routing';
