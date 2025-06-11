@@ -25,11 +25,27 @@ const Navbar = () => {
 
   const sidebarHandler = () => {
     setIsSidebarOpen((prev) => !prev);
+    setVisibleItem({
+      earn: false,
+      trade: false,
+      events: false,
+      profile: false,
+      language: false,
+    });
   };
+
+  const [visibleItem, setVisibleItem] = useState({
+    earn: false,
+    trade: false,
+    events: false,
+    profile: false,
+    language: false,
+  });
+
   return (
     <>
       <div className="w-full min-h-[70px]">
-        <nav className=" fixed top-0 left-0 z-[999] w-full h-fit text-black dark:text-white bg-[#eff0f2] dark:bg-[#06062a]">
+        <nav className=" fixed top-0 left-0 z-[999] w-full h-fit text-black dark:text-white bg-[#e1e2e6] dark:bg-[#06062a]">
           {/* nav container */}
           <div className=" w-full relative min-h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
             {/* logo part */}
@@ -117,13 +133,33 @@ const Navbar = () => {
               {/* items */}
               <div className="w-full flex flex-col xl:flex-row  gap-3 text-sm items-start pl-2 xl:pl-0 xl:items-center ">
                 {/* trade */}
-                <div className="flex items-center cursor-pointer  relative group ">
+                <div
+                  className="flex items-center cursor-pointer  relative group "
+                  onClick={() =>
+                    setVisibleItem((prev) => {
+                      return {
+                        ...prev,
+                        trade: !prev.trade,
+                        events: false,
+                        earn: false,
+                      };
+                    })
+                  }
+                >
                   <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">
                     {t("NavItems.trade.label")}
                   </span>
-                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
-                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
-                  <TradeDropdown />
+                  <RiArrowDropDownFill
+                    className={`text-2xl ${
+                      visibleItem.trade ? "hidden sm:block" : ""
+                    } group-hover:hidden`}
+                  />
+                  <RiArrowDropUpFill
+                    className={`text-2xl ${
+                      visibleItem.trade ? "block sm:hidden" : "hidden"
+                    }   group-hover:block`}
+                  />
+                  <TradeDropdown isVisible={visibleItem.trade} />
                 </div>
 
                 {/* market */}
@@ -137,23 +173,63 @@ const Navbar = () => {
                 </Link>
 
                 {/* earn */}
-                <div className="flex items-center cursor-pointer  relative group z-[30] group">
+                <div
+                  className="flex items-center cursor-pointer  relative group z-[30] group"
+                  onClick={() =>
+                    setVisibleItem((prev) => {
+                      return {
+                        ...prev,
+                        trade: false,
+                        events: false,
+                        earn: !prev.earn,
+                      };
+                    })
+                  }
+                >
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
                     {t("NavItems.earn.label")}
                   </span>
-                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
-                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
-                  <EarnDropdown />
+                  <RiArrowDropDownFill
+                    className={`text-2xl ${
+                      visibleItem.earn ? "hidden sm:block" : ""
+                    } group-hover:hidden`}
+                  />
+                  <RiArrowDropUpFill
+                    className={`text-2xl ${
+                      visibleItem.earn ? "block sm:hidden" : "hidden"
+                    }   group-hover:block`}
+                  />
+                  <EarnDropdown isVisible={visibleItem.earn} />
                 </div>
 
                 {/* events */}
-                <div className="flex items-center cursor-pointer  relative group">
+                <div
+                  className="flex items-center cursor-pointer  relative group"
+                  onClick={() =>
+                    setVisibleItem((prev) => {
+                      return {
+                        ...prev,
+                        trade: false,
+                        events: !prev.events,
+                        earn: false,
+                      };
+                    })
+                  }
+                >
                   <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
                     {t("NavItems.events.label")}
                   </span>
-                  <RiArrowDropDownFill className="text-2xl group-hover:hidden" />
-                  <RiArrowDropUpFill className="text-2xl hidden group-hover:block" />
-                  <EventsDropdown />
+                  <RiArrowDropDownFill
+                    className={`text-2xl ${
+                      visibleItem.events ? "hidden sm:block" : ""
+                    } group-hover:hidden`}
+                  />
+                  <RiArrowDropUpFill
+                    className={`text-2xl ${
+                      visibleItem.events ? "block sm:hidden" : "hidden"
+                    }   group-hover:block`}
+                  />
+                  <EventsDropdown isVisible={visibleItem.events} />
                 </div>
               </div>
 
@@ -229,7 +305,7 @@ const Navbar = () => {
                     alt="profile"
                     width={80}
                     height={80}
-                    className="w-8 h-8 rounded-full cursor-pointer"
+                    className="w-8 h-8 rounded-full cursor-pointer "
                   />
 
                   <div className="hidden group-hover:block absolute  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit ">
@@ -242,7 +318,7 @@ const Navbar = () => {
               {/* language and theme buttons */}
               <div className="flex gap-2 text-xl items-center ">
                 <ThemeSwitcher />
-                <div className="group relative ">
+                <div className="group relative  ">
                   <MdLanguage className="cursor-pointer" />
                   <div className="hidden group-hover:block absolute z-[100]  top-[100%] left-[100%] -translate-x-[100%] pt-4   h-fit w-fit  ">
                     <LangDropdown />
@@ -255,24 +331,54 @@ const Navbar = () => {
             <div className="xl:hidden flex items-center gap-3">
               {/* after auth profile pic */}
               {isAuth && (
-                <div className="w-fit h-full border-r-2 pr-3 border-slate-500/30 relative group">
+                <div
+                  className="w-fit h-full border-r-2 pr-3 border-slate-500/30 relative group"
+                  onClick={() =>
+                    setVisibleItem((prev) => {
+                      return {
+                        ...prev,
+                        language: false,
+                        profile: !prev.profile,
+                      };
+                    })
+                  }
+                >
                   <Image
                     src="/images/profile.png"
                     alt="profile"
                     width={80}
                     height={80}
-                    className="w-8 h-8 rounded-full cursor-pointer"
+                    className="w-8 h-8 rounded-full cursor-pointer "
                   />
-                  <div className="hidden group-hover:block absolute  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit  ">
+                  <div
+                    className={` ${
+                      visibleItem.profile ? "block sm:hidden" : "hidden"
+                    }  group-hover:block absolute z-[100]  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit  `}
+                  >
                     <ProfileDropdown />
                   </div>
                 </div>
               )}
               <div className="flex gap-3 text-2xl items-center">
                 <ThemeSwitcher size={26} />
-                <div className="group relative ">
+                <div
+                  className="group relative "
+                  onClick={() =>
+                    setVisibleItem((prev) => {
+                      return {
+                        ...prev,
+                        language: !prev.language,
+                        profile: false,
+                      };
+                    })
+                  }
+                >
                   <MdLanguage className="cursor-pointer" />
-                  <div className="hidden group-hover:block absolute z-[100]  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit  ">
+                  <div
+                    className={` ${
+                      visibleItem.language ? "block sm:hidden" : "hidden"
+                    }  group-hover:block absolute z-[100]  top-[100%] -left-1/2 -translate-x-1/2 pt-4   h-fit w-fit`}
+                  >
                     <LangDropdown />
                   </div>
                 </div>

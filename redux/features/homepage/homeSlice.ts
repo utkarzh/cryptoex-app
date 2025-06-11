@@ -1,24 +1,35 @@
+import { getSessionId } from "@/utils/session";
 import { apiSlice } from "../apiSlice";
 
 
 export const userApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getHomePageData: builder.mutation({
-      query: () => ({
+      query: () => {
+        const sessionid = getSessionId();
+        return {
         url: "getHomepagedata",
         method: "POST",
         body: {
+          sessionid
         }
-      }),
+      }
+      },
     }),
+
     getPartners: builder.mutation({
-      query: () => ({
-        url: "getpartners",
-        method: "POST",
-        body: {
-        }
-      }),
-    }),
+  query: () => {
+    const sessionid = getSessionId();
+    return {
+      url: "getpartners",
+      method: "POST",
+      body: {
+        sessionid,
+      },
+    };
+  },
+}),
+
 
      
   }),

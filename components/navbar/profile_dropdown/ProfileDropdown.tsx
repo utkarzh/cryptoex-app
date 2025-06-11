@@ -31,7 +31,7 @@ export default function ProfileDropdown() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <aside className="w-fit max-h-[90vh] overflow-y-auto min-w-[280px] bg-gray-50/95 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
+      <aside className="w-fit max-h-[90vh] overflow-y-auto min-w-[280px] 2xl:px-4 bg-gray-50/50 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
         <div>
           {/* Profile Header */}
           <div className="flex mx-4 items-center space-x-3 mb-6">
@@ -43,8 +43,12 @@ export default function ProfileDropdown() {
               height={40}
             />
             <div>
-              <p className="font-normal text-sm ">John Williams</p>
-              <p className="text-[10px] text-gray-400">28798498</p>
+              <p className="font-normal text-sm 2xl:text-nowrap ">
+                John Williams
+              </p>
+              <p className="text-[10px] 2xl:text-[0.6rem] text-gray-400">
+                28798498
+              </p>
             </div>
             <button className=" p-2 rounded-full dark:bg-slate-200/20 bg-slate-700/20 ml-4 cursor-pointer hover:scale-105 transition-all duration-300">
               <FiEdit className="text-sm " />

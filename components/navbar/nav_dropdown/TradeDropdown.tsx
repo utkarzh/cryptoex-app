@@ -4,8 +4,13 @@ import { FiTarget, FiTrendingUp, FiRepeat } from "react-icons/fi";
 import DropdownCard from "./DropdownCard";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { FC } from "react";
 
-export default function TradeDropdown() {
+type Props = {
+  isVisible: boolean;
+};
+
+const TradeDropdown: FC<Props> = ({ isVisible }) => {
   const t = useTranslations("Navbar.NavItems.trade.items");
   const options = [
     {
@@ -28,20 +33,22 @@ export default function TradeDropdown() {
     },
   ];
   return (
-    <DropdownCard>
+    <DropdownCard isVisible={isVisible}>
       <ul className="w-full rounded-2xl p-2  max-w-md">
         {options.map((opt, index) => (
           <li key={index}>
             <Link
               href={opt.href}
-              className="flex items-center gap-4 p-3.5 rounded-md dark:hover:bg-[#35354b] hover:bg-slate-200"
+              className="flex items-center gap-4 p-2.5 rounded-md dark:hover:bg-[#35354b] hover:bg-slate-200"
             >
               <div className="border border-md border-slate-500/20 p-2 rounded-lg">
                 {opt.icon}
               </div>
               <div>
                 <div className="text-xs">{opt.title}</div>
-                <div className="text-[10px] opacity-50">{opt.description}</div>
+                <div className="text-[10px] 2xl:text-[0.6rem] opacity-50">
+                  {opt.description}
+                </div>
               </div>
             </Link>
           </li>
@@ -49,4 +56,6 @@ export default function TradeDropdown() {
       </ul>
     </DropdownCard>
   );
-}
+};
+
+export default TradeDropdown;

@@ -1,4 +1,6 @@
 "use client";
+import { getSessionId } from "@/utils/session";
+import { generateSiteAuthCode } from "@/utils/siteauth";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import { userLoggedIn } from "./auth/authSlice";
 // import { userLoggedIn } from "../auth/authSlice";
@@ -10,6 +12,13 @@ export const apiSlice = createApi({
     // baseUrl: process.env.NEXT_PUBLIC_SERVER_URI,
     // baseUrl: "https://jsonplaceholder.typicode.com/",
     baseUrl: "https://masternode.indoex.io/",
+     prepareHeaders: (headers) => {
+      const sessionid = getSessionId();
+      const body = { sessionid };
+      const siteauthcode = generateSiteAuthCode(body);
+      headers.set('siteauthcode', siteauthcode);
+      return headers;
+    },
   }),
   endpoints: (builder) => ({
     // refreshToken: builder.query({

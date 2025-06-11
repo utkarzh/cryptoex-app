@@ -3,12 +3,18 @@ import { motion } from "framer-motion";
 
 type Props = {
   children: React.ReactNode;
+  isVisible: boolean;
 };
 
-const DropdownCard: FC<Props> = ({ children }) => {
+const DropdownCard: FC<Props> = ({ children, isVisible }) => {
+  console.log("Isvisible is:--", isVisible);
   return (
-    <div className="absolute z-[200] min-w-[300px] w-full -bottom-0 translate-y-[100%] left-0 lg:left-1/2 translate-x-0 lg:-translate-x-1/2  hidden group-hover:block bg-transparent">
-      <div className=" mt-4 bg-gray-50/95 dark:bg-[#21213b]/95 rounded-md ">
+    <div
+      className={`absolute z-[200] min-w-[300px] 2xl:min-w-[25vw] w-full -bottom-0 translate-y-[100%] left-0 lg:left-1/2 translate-x-0 lg:-translate-x-1/2  ${
+        isVisible ? "block sm:hidden" : "hidden"
+      } group-hover:block bg-transparent `}
+    >
+      <div className=" mt-1 bg-gray-50/50 dark:bg-[#21213b]/80 z-[100]  rounded-md relative backdrop-blur 2xl:backdrop-blur-xl">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}

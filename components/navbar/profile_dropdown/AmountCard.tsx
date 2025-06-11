@@ -9,7 +9,7 @@ const AmountCard = () => {
   const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations("sidebar");
   return (
-    <div className="w-[90%] mx-auto mb-6 rounded-md border border-slate-500/50 p-4 flex flex-col gap-4">
+    <div className="w-[90%] 2xl:w-[98%] mx-auto mb-6 rounded-md border border-slate-500/50 p-4 flex flex-col gap-4">
       {/* details */}
       <div className="w-full flex justify-between">
         <div className="space-y-2">

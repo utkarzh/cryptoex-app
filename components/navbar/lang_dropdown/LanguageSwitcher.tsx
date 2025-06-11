@@ -19,12 +19,12 @@ export default function LanguageSwitcher() {
   console.log("The data from routing", localeObjects);
 
   return (
-    <div className=" h-fit static mt-2  rounded z-50 min-w-[120px] flex flex-col gap-2">
+    <div className=" h-fit static mt-2 w-full rounded z-50 bg-transparent flex flex-col">
       {localeObjects.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => handleLocaleChange(code)}
-          className={` w-full cursor-pointer text-left px-4 py-2 text-sm p-3.5 rounded-md dark:hover:bg-[#35354b] hover:bg-slate-200 ${
+          className={` w-full text-nowrap cursor-pointer text-left px-4 py-2 text-sm bg-transparent  rounded-md dark:hover:bg-[#35354b] hover:bg-slate-200 ${
             code === currentLocale ? "font-bold text-green-600" : ""
           }`}
         >
