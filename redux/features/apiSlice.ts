@@ -8,7 +8,8 @@ export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
     // baseUrl: process.env.NEXT_PUBLIC_SERVER_URI,
-    baseUrl: "https://jsonplaceholder.typicode.com/",
+    // baseUrl: "https://jsonplaceholder.typicode.com/",
+    baseUrl: "https://masternode.indoex.io/",
   }),
   endpoints: (builder) => ({
     // refreshToken: builder.query({
@@ -19,35 +20,38 @@ export const apiSlice = createApi({
     //   }),
     // }),
 
-    // loadUser: builder.query({
-    //   query: () => ({
-    //     url: "me",
-    //     method: "GET",
-    //     credentials: "include" as const,
-    //   }),
-    //   async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-    //     try {
-    //       const result = await queryFulfilled;
-    //       dispatch(
-    //         userLoggedIn({
-    //           accessToken: result.data.accessToken,
-    //           user: result.data.user,
-    //         })
-    //       );
-    //     } catch (error) {
-    //       console.log("error", error);
-    //     }
-    //   },
-    // }),
+    loadUser: builder.query({
+      query: () => ({
+        url: "me",
+        method: "GET",
+        credentials: "include" as const,
+      }),
+      // async onQueryStarted(arg, { queryFulfilled, dispatch }) {
+      //   try {
+      //     const result = await queryFulfilled;
+      //     dispatch(
+      //       userLoggedIn({
+      //         accessToken: result.data.accessToken,
+      //         user: result.data.user,
+      //       })
+      //     );
+      //   } catch (error) {
+      //     console.log("error", error);
+      //   }
+      // },
 
-    testApi: builder.query({
-        query: () => ( {
-            url: "todos",
-            method:"GET"
-        })
-    })
+      
+    }),
+
+    // testApi: builder.query({
+    //     query: () => ( {
+    //         url: "todos",
+    //         method:"GET"
+    //     })
+    // })
+
   }),
 });
 
 // export const { useRefreshTokenQuery, useLoadUserQuery, useTestApiQuery } = apiSlice;
-export const {  useTestApiQuery } = apiSlice;
+// export const {  useTestApiQuery } = apiSlice;

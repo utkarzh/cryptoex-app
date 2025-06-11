@@ -26,14 +26,14 @@ const Marketing = () => {
     setTimeout(() => {
       const tempData = coinRotatingData;
       const popedData = tempData.pop();
-      console.log("Poped data", popedData);
-      console.log("temp Array", tempData);
-      const newArr = [popedData, ...tempData];
-      console.log("New Array ", newArr);
+      // console.log("Poped data", popedData);
+      // console.log("temp Array", tempData);
+      // const newArr = [popedData, ...tempData];
+      // console.log("New Array ", newArr);
       setCoinRotatingData([popedData as string, ...tempData]);
     }, 1700);
   }, [coinRotatingData]);
-  console.log("coinRotaing data is", coinRotatingData);
+  // console.log("coinRotaing data is", coinRotatingData);
   return (
     <div>
       <div className=" mr-[6px] w-[92vw] h-[78vw]  sm:w-[80vw] sm:h-[33vw] md:w-[60vw] md:h-[25vw] flex flex-col-reverse sm:flex-row gap-2 relative   z-[80]  ">
