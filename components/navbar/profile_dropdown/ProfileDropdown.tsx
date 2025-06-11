@@ -73,7 +73,8 @@ export default function ProfileDropdown() {
                   <div
                     // href={item.href}
                     className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation();
                       if (item.children) {
                         toggleMenu(item.label);
                       } else {
@@ -99,7 +100,8 @@ export default function ProfileDropdown() {
                   <Link
                     href={item.link}
                     className="flex items-center justify-between p-2 rounded cursor-pointer text-xs font-normal hover:bg-slate-400/30 "
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation();
                       if (item.children) {
                         toggleMenu(item.label);
                       } else {
@@ -134,7 +136,8 @@ export default function ProfileDropdown() {
                             ? "border-l-3 border-green-600 bg-gradient-to-r from-green-500/20 via-green-500/20 to-transparent hover:bg-none"
                             : ""
                         } pl-10 cursor-pointer hover:bg-slate-400/20 hover:rounded-md py-2 flex gap-1 items-center`}
-                        onClick={() => {
+                        onClick={(e) => {
+                          e.stopPropagation();
                           setActiveMenu(sub.item);
                         }}
                       >
