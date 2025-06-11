@@ -28,17 +28,17 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="w-full h-[70px]">
+      <div className="w-full min-h-[70px]">
         <nav className=" fixed top-0 left-0 z-[999] w-full h-fit text-black dark:text-white bg-[#eff0f2] dark:bg-[#06062a]">
           {/* nav container */}
-          <div className=" w-full relative h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
+          <div className=" w-full relative min-h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
             {/* logo part */}
             <Link href="/" className="">
               {/* dark background */}
               <Image
                 width={200}
                 height={100}
-                className="w-auto max-w-[130px] dark:block hidden cursor-pointer p-1 rounded "
+                className="w-auto max-w-[10vw] 2xl:max-w-[10vw] 2xl:min-w-[10vw] dark:block hidden cursor-pointer p-1 rounded "
                 src="/images/logo/logo_indoex_white.svg"
                 alt="logo"
               />
@@ -46,7 +46,7 @@ const Navbar = () => {
               <Image
                 width={200}
                 height={100}
-                className="w-auto max-w-[130px] block dark:hidden  cursor-pointer p-1 rounded "
+                className="w-auto max-w-[130px] lg:max-w-[180px] 2xl:max-w-[10vw] 2xl:min-w-[10vw] block dark:hidden  cursor-pointer p-1 rounded "
                 src="/images/logo/logo_indoex_black.svg"
                 alt="logo"
               />
@@ -104,7 +104,7 @@ const Navbar = () => {
                     !isExchange
                       ? "bg-green-600 dark:bg-green-700 text-white"
                       : "bg-transparent "
-                  }  rounded-full px-4 py-1 cursor-pointer transition-all duration-300 text-nowrap `}
+                  }  rounded-full px-4 py-1 text-[0.8rem] cursor-pointer transition-all duration-300 text-nowrap `}
                   onClick={() => setIsExchange(false)}
                 >
                   {t("toggle.web3")}
@@ -178,7 +178,7 @@ const Navbar = () => {
             {/* last part */}
             <div className="hidden xl:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
               <div className="flex gap-1 text-xl items-center ">
-                <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
+                <IoMdSearch className="text-[24px] 2xl:text-[1.5rem] mt-2 cursor-pointer" />
                 <span className="relative ">
                   <GrAnnounce className=" -rotate-15 cursor-pointer" />
                   <span className=" absolute -top-[3px] -right-[2px] w-[7px] h-[7px] bg-green-500 rounded-full"></span>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   className="w-7 h-auto"
                 />
 
-                <div className="flex flex-col  text-[12px]">
+                <div className="flex flex-col  text-xs">
                   <span className="text-slate-500">
                     {t("auth.new_listing")}
                   </span>

@@ -10,13 +10,13 @@ const Hero = () => {
   const t = useTranslations("homePage.heroSection");
 
   return (
-    <div className="w-full h-[calc(100vh-70px)] min-h-[600px] flex justify-center items-center relative  ">
+    <div className="w-full h-[100vh] min-h-[600px] flex justify-center items-center relative  ">
       {/* background images*/}
       <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover "></div>
       <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover "></div>
       {/* background text */}
       <span
-        className={`z-[40] ${saira.className} text-[25vw] lg:text-[18vw] font-bold tracking-wide bg-gradient-to-b  via-slate-700 to-white dark:from-white dark:via-[#5b719c] dark:to-[#021e55] bg-clip-text text-transparent opacity-100`}
+        className={`z-[40] ${saira.className} text-[25vw] lg:text-[18vw] font-bold tracking-wide bg-gradient-to-b  via-slate-700 to-white dark:from-white dark:via-[#5b719c] dark:to-[#021e55] bg-clip-text text-transparent opacity-100 `}
       >
         INDOEX
       </span>
@@ -26,7 +26,7 @@ const Hero = () => {
       </div>
 
       {/*heading and subheading */}
-      <div className="w-full absolute z-[50] top-18 right-0 text-center ">
+      <div className="w-full absolute z-[50] top-18  right-0 text-center ">
         <h1 className={`${saira.className} text-2xl lg:text-[2vw] font-bold`}>
           {t("title")}
         </h1>
