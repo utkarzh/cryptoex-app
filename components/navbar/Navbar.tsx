@@ -146,7 +146,13 @@ const Navbar = () => {
                     })
                   }
                 >
-                  <span className=" group-hover:text-green-600  transition-all duration-300 ease-out">
+                  <span
+                    className={`${
+                      visibleItem.trade
+                        ? " text-green-600 sm:text-inherit"
+                        : "sm:text-inherit"
+                    } group-hover:text-green-600  transition-all duration-300 ease-out`}
+                  >
                     {t("NavItems.trade.label")}
                   </span>
                   <RiArrowDropDownFill
@@ -186,7 +192,13 @@ const Navbar = () => {
                     })
                   }
                 >
-                  <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
+                  <span
+                    className={`${
+                      visibleItem.earn
+                        ? " text-green-600 sm:text-inherit"
+                        : "sm:text-inherit"
+                    } group-hover:text-green-600  transition-all duration-300 ease-out`}
+                  >
                     {t("NavItems.earn.label")}
                   </span>
                   <RiArrowDropDownFill
@@ -216,7 +228,13 @@ const Navbar = () => {
                     })
                   }
                 >
-                  <span className="group-hover:text-green-600  transition-all duration-300 ease-out">
+                  <span
+                    className={`${
+                      visibleItem.events
+                        ? " text-green-600 sm:text-inherit"
+                        : "sm:text-inherit"
+                    } group-hover:text-green-600  transition-all duration-300 ease-out`}
+                  >
                     {t("NavItems.events.label")}
                   </span>
                   <RiArrowDropDownFill
