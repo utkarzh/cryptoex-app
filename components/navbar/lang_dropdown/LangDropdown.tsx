@@ -11,7 +11,7 @@ const LangDropdown = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <div className="w-fit max-h-[90vh] overflow-y-auto min-w-[130px] 2xl:min-w-[200px]  h-fit  py-4  flex flex-col justify-between  bg-gray-50/80 dark:bg-[#21213b]/80 rounded-md relative backdrop-blur 2xl:backdrop-blur-xl ">
+      <div className="w-fit max-h-[90vh] overflow-y-auto min-w-[130px] 2xl:min-w-[200px]  h-fit  py-4  flex flex-col justify-between  bg-gray-50 sm:bg-gray-50/80 dark:bg-[#21213b] sm:dark:bg-[#21213b]/80 rounded-md relative backdrop-blur 2xl:backdrop-blur-xl ">
         <LanguageSwitcher />
       </div>
     </motion.div>

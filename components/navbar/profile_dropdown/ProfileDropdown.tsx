@@ -31,7 +31,7 @@ export default function ProfileDropdown() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.2 }}
     >
-      <aside className="w-fit max-h-[90vh] overflow-y-auto min-w-[280px] 2xl:px-4 bg-gray-50/80 dark:bg-[#21213b]/95   h-fit  py-4 rounded-lg flex flex-col justify-between">
+      <aside className="w-fit max-h-[90vh] overflow-y-auto min-w-[280px] 2xl:px-4 bg-gray-50 sm:bg-gray-50/80 dark:bg-[#21213b] sm:dark:bg-[#21213b]/80   h-fit  py-4 rounded-lg flex flex-col justify-between">
         <div>
           {/* Profile Header */}
           <div className="flex mx-4 items-center space-x-3 mb-6">

@@ -14,7 +14,7 @@ const DropdownCard: FC<Props> = ({ children, isVisible }) => {
         isVisible ? "block sm:hidden" : "hidden"
       } group-hover:block bg-transparent `}
     >
-      <div className=" mt-1 bg-gray-50/80 dark:bg-[#21213b]/80 z-[100]  rounded-md relative backdrop-blur 2xl:backdrop-blur-xl">
+      <div className=" mt-1 bg-gray-50 sm:bg-gray-50/80 dark:bg-[#21213b] sm:dark:bg-[#21213b]/80 z-[100]  rounded-md relative backdrop-blur 2xl:backdrop-blur-xl">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
