@@ -19,8 +19,14 @@ const CoinCard: FC<Props> = ({ coinImgUrl, cointTitle, coinName, isSmall }) => {
         className="w-6 h-6 rounded-full"
       />
       <div className="flex flex-col items-start  ">
-        <span className=" font-medium text-[12px]">{cointTitle}</span>
-        {!isSmall && <span className="text-[10px] capitalize">{coinName}</span>}
+        <span className=" font-medium text-[12px] 2xl:text-[0.6rem]">
+          {cointTitle}
+        </span>
+        {!isSmall && (
+          <span className="text-[10px] 2xl:text-[0.4rem] capitalize">
+            {coinName}
+          </span>
+        )}
       </div>
     </div>
   );
