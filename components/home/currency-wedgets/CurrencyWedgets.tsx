@@ -15,7 +15,7 @@ const CurrencyWedgets = () => {
   const t = useTranslations("homePage.currencyWedgets");
 
   return (
-    <div className="w-full mt-20 text-black dark:text-white  flex justify-center p-4 sm:p-6 md:p-8 lg:p-10  ">
+    <div className="w-full 2xl:w-[90%] mx-auto mt-20 text-black dark:text-white  flex justify-center p-4 sm:p-6 md:p-8 lg:p-10  ">
       {/* container */}
       <div className="w-full flex flex-col md:flex-row gap-2 overflow-x-auto scrollbar-custom overflow-y-hidden ">
         <HomeCryptoList

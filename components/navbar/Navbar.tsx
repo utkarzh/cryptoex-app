@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <>
       <div className="w-full min-h-[70px]">
-        <nav className=" fixed top-0 left-0 z-[999] w-full h-fit text-black dark:text-white bg-[#e1e2e6] dark:bg-[#06062a]">
+        <nav className=" fixed top-0 left-0 z-[999] pt-1 w-full h-fit text-black dark:text-white bg-[#e1e2e6] dark:bg-[#06062a]">
           {/* nav container */}
           <div className=" w-full relative min-h-[70px] max-w-screen flex justify-between items-center gap-4 py-2 pl-4 ">
             {/* logo part */}

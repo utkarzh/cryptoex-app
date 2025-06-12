@@ -25,7 +25,7 @@ const Hero = () => {
       </div>
 
       {/*heading and subheading */}
-      <div className="w-full absolute z-[50] top-[10vh] lg:top-16  right-0 text-center ">
+      <div className="w-full absolute z-[50] top-[15vh] lg:top-16 2xl:top-[11vh] right-0 text-center ">
         <h1 className={`${saira.className} text-2xl lg:text-[2vw] font-bold`}>
           {t("title")}
         </h1>
