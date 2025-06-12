@@ -126,6 +126,9 @@
       "newlyListed":"Newly listed",
       "topGainers":"Top gainers"
     },
+    "terms":{
+      "search":"Search"
+    },
     "tableHead":{
       "coins":"Coins",
       "lastPrice":"Last price",

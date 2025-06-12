@@ -1,7 +1,14 @@
 import CoinCard from "@/components/common/CoinCard";
 import CointStatsCard from "@/components/common/CointStatsCard";
-import React from "react";
-const HeroCurrencyStrip = () => {
+import React, { FC, useEffect, useState } from "react";
+import { Announcement_int, HomeDataStructure_int, Vendors_int } from "../types";
+
+type StripListData = Vendors_int & Announcement_int;
+
+type Props = {
+  stripData: HomeDataStructure_int;
+};
+const HeroCurrencyStrip: FC<Props> = ({ stripData: data }) => {
   const test = [];
   for (let i = 0; i <= 100; i++) {
     if (i % 3 === 0) {
@@ -24,6 +31,30 @@ const HeroCurrencyStrip = () => {
       });
     }
   }
+
+  // const [stripDataList, setstripDataList] = useState<StripListData[]>([]);
+  // useEffect(() => {
+  //   const stripList: StripListData[] = [];
+  //   for (let loopvar = 0; loopvar < data.vendors.length; loopvar++) {
+  //     for (
+  //       let loopvarinner = 0;
+  //       loopvarinner < data.analytics.length;
+  //       loopvarinner++
+  //     ) {
+  //       if (
+  //         data.analytics[loopvarinner].vendor ==
+  //         data.vendors[loopvar].vendors_vendorshortcode
+  //       ) {
+  //         const tempArr = [
+  //           { ...data.analytics[loopvarinner], ...data.vendors[loopvarinner] },
+  //         ];
+  //         stripList.push(data.analytics[loopvarinner]);
+  //       }
+  //     }
+  //   }
+
+  //   setstripDataList(stripList);
+  // }, [stripDataList]);
   return (
     <div className="w-full flex gap-8 ">
       {test.map((val, index) => (

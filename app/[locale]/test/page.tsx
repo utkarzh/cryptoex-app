@@ -3,8 +3,10 @@
 // import LoginForm from "@/components/auth/LoginForm";
 "use client";
 
+// import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
+import TokenCard from "./Test1";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
-import ImageCarousel from "./Test";
+// import ImageCarousel from "./Test";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
 
 const Page = () => {
@@ -12,7 +14,9 @@ const Page = () => {
     <div className="w-[90%] mx-auto flex justify-end mr-10 relative ">
       {/* <LangDropdown /> */}
       {/* <LangDropdown /> */}
-      <ImageCarousel />
+      {/* <ImageCarousel /> */}
+      {/* <LoadingTableSkeleton /> */}
+      <TokenCard />
     </div>
   );
 };

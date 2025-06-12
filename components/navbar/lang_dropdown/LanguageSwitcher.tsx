@@ -16,7 +16,7 @@ export default function LanguageSwitcher() {
     router.replace(pathname, { locale: newLocale });
   };
 
-  console.log("The data from routing", localeObjects);
+  // console.log("The data from routing", localeObjects);
 
   return (
     <div className=" h-fit static mt-2 w-full rounded z-50 bg-transparent flex flex-col">

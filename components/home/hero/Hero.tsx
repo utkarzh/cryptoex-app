@@ -1,12 +1,28 @@
-import React from "react";
+import React, { FC } from "react";
 import HeroCurrencyStrip from "./HeroCurrencyStrip";
 import Image from "next/image";
 import { saira } from "@/utils/Font";
 import Marquee from "react-fast-marquee";
 import { useTranslations } from "next-intl";
+import { HomeDataStructure_int } from "../types";
 
-const Hero = () => {
+type Props = {
+  stripData: HomeDataStructure_int;
+};
+
+const Hero: FC<Props> = ({ stripData }) => {
   const t = useTranslations("homePage.heroSection");
+
+  // var analytics=[];
+  //   for(var loopvar=0;loopvar<this.newvendors.length;loopvar++)
+  //   {
+  //     for(var loopvarinner=0;loopvarinner<this.analytics.length;loopvarinner++)
+  //     {
+  //       if(this.analytics[loopvarinner].vendor==this.newvendors[loopvar].vendors_vendorshortcode)
+  //       {
+  //         analytics.push(this.analytics[loopvarinner])
+  //       }
+  //     }
 
   return (
     <div className="w-full min-h-[calc(100vh-70px)] max-h-[calc(100vh-70px)]  flex justify-center items-center relative   ">
@@ -36,7 +52,7 @@ const Hero = () => {
 
       <div className="absolute bottom-0 right-0 w-full py-2 z-[60] sm:z-[40] text-white bg-green-600 dark:bg-green-700 flex justify-center">
         <Marquee>
-          <HeroCurrencyStrip />
+          <HeroCurrencyStrip stripData={stripData} />
         </Marquee>
       </div>
 

@@ -7,7 +7,7 @@ type Props = {
 };
 
 const DropdownCard: FC<Props> = ({ children, isVisible }) => {
-  console.log("Isvisible is:--", isVisible);
+  // console.log("Isvisible is:--", isVisible);
   return (
     <div
       className={`absolute z-[200] min-w-[300px] 2xl:min-w-[25vw] w-full -bottom-0 translate-y-[100%] left-0 lg:left-1/2 translate-x-0 lg:-translate-x-1/2  ${

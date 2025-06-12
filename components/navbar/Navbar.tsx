@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdClose, IoMdSearch } from "react-icons/io";
 import { MdLanguage } from "react-icons/md";
 import { RiArrowDropDownFill, RiArrowDropUpFill } from "react-icons/ri";
 import { GrAnnounce } from "react-icons/gr";
-import { GrAssistListening } from "react-icons/gr";
 import ThemeSwitcher from "@/utils/ThemeSwitcher";
 import { IoMenu } from "react-icons/io5";
 import TradeDropdown from "./nav_dropdown/TradeDropdown";
@@ -15,11 +14,15 @@ import EventsDropdown from "./nav_dropdown/EventsDropdown";
 import ProfileDropdown from "./profile_dropdown/ProfileDropdown";
 import LangDropdown from "./lang_dropdown/LangDropdown";
 import { useTranslations } from "next-intl";
+import { useGetHomePageDataMutation } from "@/redux/features/homepage/homeSlice";
+import { HomeDataApi_int, Vendors_int } from "../home/types";
+import NewListingCard from "./NewListingCard";
 
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isAuth] = useState(true);
+  const [isAuth] = useState(false);
+  const [newListing, setNewListing] = useState<Vendors_int[]>([]);
 
   const t = useTranslations("Navbar");
 
@@ -41,6 +44,17 @@ const Navbar = () => {
     profile: false,
     language: false,
   });
+
+  const [getHomeData, { data }] = useGetHomePageDataMutation<HomeDataApi_int>();
+  useEffect(() => {
+    getHomeData({});
+  }, []);
+
+  useEffect(() => {
+    if (data) {
+      setNewListing(data.vendors);
+    }
+  }, [data]);
 
   return (
     <>
@@ -80,26 +94,18 @@ const Navbar = () => {
                 <div className="flex flex-row-reverse gap-2 justify-between pr-4 items-center">
                   <div className="flex gap-1 text-xl items-center ">
                     <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
-                    <span className="relative ">
+                    <Link href="/announcements" className="relative  ">
                       <GrAnnounce className=" -rotate-15 cursor-pointer" />
                       <span className=" absolute -top-[3px] -right-[2px] w-[7px] h-[7px] bg-green-500 rounded-full"></span>
-                    </span>
+                    </Link>
                   </div>
 
-                  <div className="flex gap-3 items-center px-3 p-1 border border-gray-700 rounded-full text-sm ">
-                    <GrAssistListening className="text-3xl bg-yellow-400 p-1 rounded-full text-white" />
-
-                    <div className="flex flex-col  text-[12px]">
-                      <span className="text-slate-500">
-                        {t("auth.new_listing")}
-                      </span>
-                      <span>Plath(PLATH)</span>
-                    </div>
-
-                    <div className="text-green-600 cursor-pointer ">
-                      {t("auth.see_all")}
-                    </div>
-                  </div>
+                  {/* new listing */}
+                  {newListing.length > 0 ? (
+                    <NewListingCard newListing={newListing} />
+                  ) : (
+                    <div className="h-8 w-[200px] bg-gray-400 dark:bg-[#353563] rounded-full animate-pulse"></div>
+                  )}
                 </div>
               </div>
 
@@ -128,7 +134,9 @@ const Navbar = () => {
               </div>
 
               {/*  */}
-              <div className="h-[50%] hidden xl:block border-r rounded border-gray-600 my-2 "></div>
+              <div className="h-[50%] hidden xl:block text-gray-300 dark:text-gray-600 my-2 ">
+                |
+              </div>
 
               {/* items */}
               <div className="w-full flex flex-col xl:flex-row  gap-3 text-sm items-start pl-2 xl:pl-0 xl:items-center ">
@@ -273,32 +281,18 @@ const Navbar = () => {
             <div className="hidden xl:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
               <div className="flex gap-1 text-xl items-center ">
                 <IoMdSearch className="text-[24px] 2xl:text-[1.5rem] mt-2 cursor-pointer" />
-                <span className="relative ">
+                <Link href="/announcements" className="relative  ">
                   <GrAnnounce className=" -rotate-15 cursor-pointer" />
                   <span className=" absolute -top-[3px] -right-[2px] w-[7px] h-[7px] bg-green-500 rounded-full"></span>
-                </span>
+                </Link>
               </div>
 
-              <div className="flex gap-3 items-center px-3 p-1 border border-gray-700 rounded-full text-sm ">
-                <Image
-                  src="/images/coins/plath.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className="w-7 h-auto"
-                />
-
-                <div className="flex flex-col  text-xs">
-                  <span className="text-slate-500">
-                    {t("auth.new_listing")}
-                  </span>
-                  <span>Plath(PLATH)</span>
-                </div>
-
-                <div className="text-green-600 cursor-pointer ">
-                  {t("auth.see_all")}
-                </div>
-              </div>
+              {/* new listing */}
+              {newListing.length > 0 ? (
+                <NewListingCard newListing={newListing} />
+              ) : (
+                <div className="h-8 w-[200px] bg-gray-400 dark:bg-[#353563] rounded-full animate-pulse"></div>
+              )}
 
               {/* sign in and signup pages */}
               {!isAuth ? (
@@ -332,7 +326,9 @@ const Navbar = () => {
                 </div>
               )}
 
-              <div className="h-[50%] border-r-2 border-gray-700"></div>
+              <div className="h-[50%] hidden xl:block text-gray-300 dark:text-gray-600 my-2 ">
+                |
+              </div>
               {/* language and theme buttons */}
               <div className="flex gap-2 text-xl items-center ">
                 <ThemeSwitcher />

@@ -12,20 +12,6 @@ type PartnersData = {
 };
 
 const PartnersHeading = () => {
-  // const partnersUrl = [
-  //   "1.png",
-  //   "2.png",
-  //   "3.png",
-  //   "4.png",
-  //   "5.png",
-  //   "6.png",
-  //   "7.png",
-  //   "2.png",
-  //   "4.png",
-  //   "6.png",
-  //   "3.png",
-  // ];
-
   const [PartnersData, setPartnersData] = useState<PartnersData[]>([]);
 
   const [getPartners, { data, isSuccess }] = useGetPartnersMutation();
@@ -39,8 +25,6 @@ const PartnersHeading = () => {
       setPartnersData(data.cards);
     }
   }, [data]);
-
-  console.log("Partners data is:---,", PartnersData);
 
   return (
     <div className="w-full h-[24vw] relative flex  ">

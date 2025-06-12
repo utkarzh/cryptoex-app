@@ -6,8 +6,14 @@ import React from "react";
 
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const MiniGraph: React.FC = () => {
-  const lineColor = "#a2d2ff"; // Tailwind blue-500
+type Props = {
+  dataRange: number[];
+  rate: number;
+  vendor: string;
+};
+
+const MiniGraph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
+  const lineColor = rate > 0 ? "#27a043" : rate < 0 ? "#e24d4a" : "#a2d2ff";
 
   const options: ApexOptions = {
     chart: {
@@ -53,8 +59,8 @@ const MiniGraph: React.FC = () => {
 
   const series = [
     {
-      name: "Data",
-      data: [10, 20, 15, 25, 18, 22, 30],
+      name: vendor,
+      data: dataRange,
     },
   ];
 
