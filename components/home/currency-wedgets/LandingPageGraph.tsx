@@ -1,5 +1,4 @@
 "use client";
-
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 import React from "react";
@@ -12,7 +11,7 @@ type Props = {
   vendor: string;
 };
 
-const Graph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
+const LandingPageGraph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
   const lineColor = rate > 0 ? "#27a043" : rate < 0 ? "#e24d4a" : "#a2d2ff";
 
   const options: ApexOptions = {
@@ -77,4 +76,4 @@ const Graph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
   );
 };
 
-export default Graph;
+export default LandingPageGraph;

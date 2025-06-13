@@ -7,7 +7,7 @@ type Props = {
 
 const Auth: FC<Props> = ({ children }) => {
   return (
-    <div className="w-full flex justify-center items-center relative pt-20 ">
+    <div className="w-full  h-full md:h-[calc(100vh-110px)]  flex justify-center items-center relative mt-[30px] ">
       {/* background images*/}
       <div className="w-[50%] opacity-40 dark:opacity-80 h-full z-[30]  absolute top-0 right-0 bg-[url(/images/homebg.png)] bg-cover "></div>
       <div className="w-[50%] h-full z-[30] opacity-40 dark:opacity-80 absolute top-0 left-0 rotate-y-180 bg-[url(/images/homebg.png)] bg-cover "></div>
@@ -17,10 +17,10 @@ const Auth: FC<Props> = ({ children }) => {
       </div>
 
       {/* content */}
-      <div className="w-full h-full   flex flex-col sm:flex-row justify-center gap-10 z-[60]">
+      <div className="w-full h-full  lg:pt-10  2xl:pt-20 overflow-y-auto flex flex-col md:flex-row justify-center gap-10 z-[60]">
         {/* image part */}
-        <div className="w-full  flex justify-center mt-2 items-start">
-          <div className="w-[80vw] h-[80vw] max-w-[500px] max-h-[500px] sm:w-[40vw] sm:h-[40vw] lg:w-[30vw] lg:h-[30vw] rounded-full bg-gradient-to-b from-green-500/40 via-green-600/30 to-transparent flex justify-center items-center relative z-[50]">
+        <div className="w-full items-start flex justify-center  py-10 md:py-0">
+          <div className="w-[80vw] h-[80vw] max-w-[500px] 2xl:max-w-[600px] 2xl:max-h-[600px] max-h-[500px] md:w-[40vw] md:h-[40vw] lg:w-[30vw] lg:h-[30vw] 2xl:w-[70vw] 2xl:h-[70vw] 2xl:max-w-auto 2xl:max-h-auto rounded-full bg-gradient-to-b from-green-500/40 via-green-600/30 to-transparent flex justify-center items-center relative z-[50] ">
             {/* btc image */}
             <Image
               src="/images/login/login_btc.png"
@@ -53,7 +53,8 @@ const Auth: FC<Props> = ({ children }) => {
           </div>
         </div>
         {/* form part */}
-        <div className="w-full  ">{children}</div>
+        {/* <div className="w-full h-full overflow-auto  flex items-start md:py-10 lg:py-14 xl:py-24  "> */}
+        <div className="w-full h-full  flex items-start ">{children}</div>
       </div>
     </div>
   );
