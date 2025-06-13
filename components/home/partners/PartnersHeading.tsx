@@ -52,7 +52,7 @@ const PartnersHeading = () => {
                       height={300}
                       src={url.imagepath}
                       alt={url.altdesc}
-                      className="w-auto h-8 dark:invert"
+                      className="w-auto h-4 sm:h-6 lg:h-8 dark:invert"
                       key={index}
                     />
                   </a>

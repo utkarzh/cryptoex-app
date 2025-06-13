@@ -18,25 +18,25 @@ const FooterInfo = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-2">
-        <h3 className={` ${saira.className} text-[14px] font-medium`}>
+        <h3 className={` ${saira.className} text-lg font-medium`}>
           {t("label")}
         </h3>
         <div className="flex flex-col gap-[7px]">
           {otherLinks.map((val, index) => (
             <Link
               href={`${val.url}`}
-              className="text-[13px] font-extralight"
+              className="text-xs font-extralight"
               key={index}
             >
               {val.title}
             </Link>
           ))}
-          <div className="text-[13px] font-extralight flex flex-col gap-[2px] ">
+          <div className="text-xs font-extralight flex flex-col gap-[2px] ">
             <span className="opacity-70">{t("items.support")}</span>
             <span>support@indoex.io</span>
           </div>
 
-          <div className="text-[13px] font-extralight flex flex-col gap-[2px] ">
+          <div className="text-xs font-extralight flex flex-col gap-[2px] ">
             <span className="opacity-70">{t("items.mails")}</span>
             <div>
               <div>gracenorth@indoex.io</div>

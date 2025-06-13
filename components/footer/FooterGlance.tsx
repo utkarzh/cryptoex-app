@@ -2,8 +2,9 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BsTwitterX } from "react-icons/bs";
 import { IoIosArrowRoundForward, IoLogoInstagram } from "react-icons/io";
-import { RiThreadsFill, RiTwitterXLine, RiYoutubeLine } from "react-icons/ri";
+import { RiThreadsFill, RiYoutubeLine } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 
 const FooterGlance = () => {
@@ -15,27 +16,27 @@ const FooterGlance = () => {
         {/* logo */}
         <Link href="/" className="">
           <Image
-            width={100}
-            height={100}
-            className="w-auto  cursor-pointer rounded p-1 block dark:hidden"
+            width={300}
+            height={300}
+            className="w-auto cursor-pointer rounded p-1 block dark:hidden"
             src="/images/logo/logo_indoex_black.svg"
             alt="logo"
           />
 
           <Image
-            width={100}
-            height={100}
-            className="w-auto  cursor-pointer rounded p-1 dark:block hidden"
+            width={300}
+            height={300}
+            className="w-[50%] cursor-pointer rounded p-1 dark:block hidden"
             src="/images/logo/logo_indoex_white.svg"
             alt="logo"
           />
         </Link>
         {/* content */}
-        <p className="text-[12px] ">{t("text")}</p>
+        <p className="text-xs ">{t("text")}</p>
         {/* button */}
         <Link
           href="/signup"
-          className=" w-fit flex text-[12px]  items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer hover:bg-green-600 transition-all duration-200"
+          className=" w-fit flex text-xs xl:py-2 font-normal  items-center gap-1 px-3 py-1 rounded-full bg-green-700 text-white dark:text-black cursor-pointer hover:bg-green-600 transition-all duration-200"
         >
           {t("button")}
           <IoIosArrowRoundForward className="text-lg" />
@@ -57,7 +58,7 @@ const FooterGlance = () => {
         </div>
         {/* x */}
         <div className="w-fit p-[5px] cursor-pointer hover:scale-110 transition-all duration-300 bg-slate-200 dark:bg-[#63647e]/70 rounded-full">
-          <RiTwitterXLine className="text-[14px]" />
+          <BsTwitterX className="p-0.5" />
         </div>
         {/* youtube */}
         <div className="w-fit p-1 cursor-pointer hover:scale-110 transition-all duration-300 bg-slate-200 dark:bg-[#63647e]/70 rounded-full">

@@ -36,13 +36,14 @@ export interface Announcement_int {
 }
 
 export interface HomeDataStructure_int {
-  bitrate: number;
+  btcrate: number;
   analytics: Analytics_int[];
   volume: string;
   vendors: Vendors_int[];
   announcement: Announcement_int[];
   registeredUsers: number;
   supportedCountries: number;
+  coinslisted?: number;
   sessionid: string;
   socialmedia: string;
 }

@@ -130,9 +130,9 @@ export default function CreateAccountCard() {
           exit={{ y: -0, opacity: 0.2 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="flex items-center gap-2"
+          className="flex w-full sm:w-fit  items-center gap-2"
         >
-          <div className="flex flex-col sm:justify-start  items-start  sm:items-start text-start sm:text-start  w-full sm:w-fit ml-20 sm:ml-0 ">
+          <div className="flex flex-col sm:justify-start  items-start  sm:items-start text-start sm:text-start  w-full sm:w-fit ml-[5%] sm:ml-0 ">
             {/* title */}
             <h3 className={`${saira.className} font-bold text-xl`}>
               {current.heading}

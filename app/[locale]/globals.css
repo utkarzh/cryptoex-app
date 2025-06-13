@@ -64,7 +64,7 @@
   background-image: conic-gradient(
     from -75deg,
     transparent 40%,
-    rgb(70, 199, 70),
+    #46c746,
     transparent
   );
   opacity: 0.6;

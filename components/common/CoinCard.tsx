@@ -16,7 +16,7 @@ const CoinCard: FC<Props> = ({ coinImgUrl, cointTitle, coinName, isSmall }) => {
         height={100}
         src={coinImgUrl}
         alt=""
-        className="w-6 h-6 rounded-full"
+        className="w-6 h-6 xl:w-7 xl:h-7 rounded-full"
       />
       <div className="flex flex-col items-start  ">
         <span className=" font-medium text-xs 2xl:text-[0.7rem]">

@@ -9,7 +9,7 @@ const Footer = () => {
   const t = useTranslations("footer");
   return (
     // shadow-[1px_0px_4px_#48b873]
-    <div className="w-full max-w-[100vw]  h-fit  flex justify-center bg-[#eff0f2] dark:bg-[#06062a]/100 items-center rounded-md pt-14 pb-6 relative  ">
+    <div className="w-full max-w-[100vw]  h-fit  flex justify-center bg-[#eff0f2] dark:bg-[#06062a]/100 items-center rounded-md pt-14 pb-6 relative shadow-[-0px_-0px_7px_#27a043] lg:shadow-none ">
       {/* shadow effect left*/}
       <div className="partShadowFooterLeft"></div>
       {/* shadow effect left*/}
@@ -27,7 +27,7 @@ const Footer = () => {
         {/* message section */}
         <div className="w-full flex gap-2 items-center justify-start text-slate-400">
           <CiWarning className="text-lg" />
-          <p className="text-[12px] font-extralight">{t("alert")}</p>
+          <p className="text-xs font-extralight">{t("alert")}</p>
         </div>
       </div>
     </div>

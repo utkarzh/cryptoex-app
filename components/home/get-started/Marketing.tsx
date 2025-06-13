@@ -1,13 +1,14 @@
 "use client";
 import { saira } from "@/utils/Font";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { FaCoins } from "react-icons/fa";
 import { IoMdStats } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
 import CoinCircle from "./CoinCircle";
 import { useTranslations } from "next-intl";
+import { HomeDataStructure_int } from "../types";
 
 const testCoin = [
   "/images/coins/usdtrounded.png",
@@ -17,29 +18,52 @@ const testCoin = [
   "/images/coins/polygonrounded.png",
 ];
 
-const Marketing = () => {
-  const [coinRotatingData, setCoinRotatingData] = useState(testCoin);
+type Props = {
+  marketData: HomeDataStructure_int;
+};
+type Data_int = {
+  pair: number;
+  volume: number;
+  coins: number;
+  countries: number;
+};
 
+const Marketing: FC<Props> = ({ marketData }) => {
+  const [coinRotatingData, setCoinRotatingData] = useState(testCoin);
   const t = useTranslations("homePage.getStarted.marketing");
+  const [data, setData] = useState<Data_int>();
+
+  useEffect(() => {
+    if (!marketData) return;
+    let temp24hVolume = 0;
+    for (let i = 0; i < marketData.analytics.length; i++) {
+      temp24hVolume +=
+        marketData.analytics[i].usdrate * marketData.analytics[i].baseVolume;
+    }
+
+    const tempVar = temp24hVolume / marketData.btcrate;
+    setData({
+      pair: marketData.analytics.length,
+      volume: tempVar,
+      coins: marketData.coinslisted ? marketData.coinslisted : 543,
+      countries: marketData.supportedCountries,
+    });
+  }, [marketData]);
 
   useEffect(() => {
     setTimeout(() => {
       const tempData = coinRotatingData;
       const popedData = tempData.pop();
-      // console.log("Poped data", popedData);
-      // console.log("temp Array", tempData);
-      // const newArr = [popedData, ...tempData];
-      // console.log("New Array ", newArr);
       setCoinRotatingData([popedData as string, ...tempData]);
     }, 1700);
   }, [coinRotatingData]);
-  // console.log("coinRotaing data is", coinRotatingData);
+
   return (
     <div>
       <div className=" mr-[6px] w-[92vw] h-[78vw]  sm:w-[80vw] sm:h-[33vw] md:w-[60vw] md:h-[25vw] flex flex-col-reverse sm:flex-row gap-2 relative   z-[80]  ">
         {/* left most div */}
         {/* shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green] */}
-        <div className=" w-full h-[40%] sm:w-[35%] sm:h-[100%] bg-white  dark:bg-[#161735]   rounded-lg relative    ">
+        <div className=" w-full h-[40%] sm:w-[35%] sm:h-[100%] xl:h-[97%] bg-white  dark:bg-[#161735]   rounded-lg relative    ">
           {/* part shadow effect */}
           <div className="partShadowMarketing1"></div>
           {/* coins */}
@@ -90,13 +114,21 @@ const Marketing = () => {
           {/* content */}
           <div className="w-[50%] right-0 sm:w-full absolute bottom-[7%] flex flex-wrap gap-4 h-fit  justify-evenly items-center">
             <div className="">
-              <h2 className={`text-[16px] font-bold ${saira.className}`}>
-                283
-              </h2>
-              <p className="text-[10px] font-light">{t("marketPairs")}</p>
+              {data ? (
+                <h2
+                  className={`text-[16px] xl:text-lg font-bold ${saira.className}`}
+                >
+                  {data?.pair}
+                </h2>
+              ) : (
+                <div className="h-6 w-full mb-2 bg-gray-400 dark:bg-[#353563] rounded animate-pulse"></div>
+              )}
+              <p className="text-[10px] xl:text-xs font-light">
+                {t("marketPairs")}
+              </p>
             </div>
             <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20">
-              <IoMdStats className=" text-white dark:text-green-600 text-md" />
+              <IoMdStats className=" text-white dark:text-green-600 text-md xl:text-xl" />
             </div>
           </div>
         </div>
@@ -110,23 +142,31 @@ const Marketing = () => {
               {/* content */}
               <div className=" flex gap-4 justify-evenly items-center w-full">
                 <div>
-                  <p className="text-[10px] font-light">{t("24hVolume")}</p>
-                  <h2 className={`text-[16px] font-bold ${saira.className}`}>
-                    62689.44
-                  </h2>
+                  <p className="text-[10px] xl:text-xs font-light">
+                    {t("24hVolume")}
+                  </p>
+                  {data ? (
+                    <h2
+                      className={`text-[16px] xl:text-lg font-bold ${saira.className}`}
+                    >
+                      {data?.volume.toFixed(4)}
+                    </h2>
+                  ) : (
+                    <div className="h-6 w-full mt-2 bg-gray-400 dark:bg-[#353563] rounded animate-pulse"></div>
+                  )}
                 </div>
                 <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20 ">
-                  <PiCurrencyDollarSimpleBold className=" text-white dark:text-green-700 text-md" />
+                  <PiCurrencyDollarSimpleBold className=" text-white dark:text-green-700 text-md xl:text-xl" />
                 </div>
               </div>
             </div>
             <div className="w-[50%] h-[50%] bg-white dark:bg-[#161735]  rounded-b-lg absolute -bottom-[10px] left-0 ">
               <Image
-                src="/images/man.png"
+                src="/images/man1.png"
                 alt=""
                 width={300}
                 height={300}
-                className="w-[80%] sm:w-[96%]   absolute bottom-0 left-[10%] sm:left-[2%]"
+                className="w-[70%] absolute bottom-0 left-[15%] "
               />
               <div className="absolute z-[20] top-0 left-0 w-full  h-full bg-gradient-to-b from-transparent via-[#06062a]/0 to-white/70 dark:to-[#06062a]/60 pointer-events-none "></div>
             </div>
@@ -137,13 +177,21 @@ const Marketing = () => {
             <div className="partShadowMarketing2"></div>
             <div className=" flex gap-4 h-full w-full justify-evenly items-center">
               <div>
-                <h2 className={`text-[16px] font-bold ${saira.className}`}>
-                  150
-                </h2>
-                <p className="text-[10px] font-light">{t("countries")}</p>
+                {data ? (
+                  <h2
+                    className={`text-[16px] xl:text-lg font-bold ${saira.className}`}
+                  >
+                    {data?.countries}
+                  </h2>
+                ) : (
+                  <div className="h-6 w-full mb-2 bg-gray-400 dark:bg-[#353563] rounded animate-pulse"></div>
+                )}
+                <p className="text-[10px] xl:text-xs font-light">
+                  {t("countries")}
+                </p>
               </div>
               <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20 ">
-                <IoLocationOutline className=" text-white dark:text-green-600 text-md" />
+                <IoLocationOutline className=" text-white dark:text-green-600 text-md xl:text-xl" />
               </div>
             </div>
           </div>
@@ -151,16 +199,24 @@ const Marketing = () => {
           <div className="w-[50%] h-[68%] rounded-lg bg-white dark:bg-[#161735] absolute -bottom-[20px] -right-[10px] shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green] overflow-hidden ">
             <div className=" flex gap-4 h-fit mt-[10px] w-full justify-evenly items-center">
               <div>
-                <h2 className={`text-[16px] font-bold ${saira.className}`}>
-                  187
-                </h2>
-                <p className="text-[10px] font-light">{t("coinsListed")}</p>
+                {data ? (
+                  <h2
+                    className={`text-[16px] xl:text-lg font-bold ${saira.className}`}
+                  >
+                    {data?.coins}
+                  </h2>
+                ) : (
+                  <div className="h-6 w-full mb-2 bg-gray-400 dark:bg-[#353563] rounded animate-pulse"></div>
+                )}
+                <p className="text-[10px] xl:text-xs  font-light">
+                  {t("coinsListed")}
+                </p>
               </div>
               <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20">
-                <FaCoins className=" text-white dark:text-green-600 text-ms" />
+                <FaCoins className=" text-white dark:text-green-600 text-ms xl:text-xl" />
               </div>
             </div>
-            <div className="absolute w-full h-full top-1/2 -right-1/2 -translate-y-[10%] sm:translate-y-0 translate-x-0">
+            <div className="absolute w-full h-full top-1/2 -right-1/2 -translate-y-[10%]  sm:translate-y-0 md:-translate-y-[10%] md:-translate-x-[10%] 2xl:translate-y-[20%] 2xl:translate-x-[20%] xl:translate-y-[10%] xl:translate-x-[10%]  translate-x-0">
               <CoinCircle />
             </div>
           </div>

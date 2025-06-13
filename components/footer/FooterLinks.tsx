@@ -56,14 +56,14 @@ const FooterLinks = () => {
       <div className="w-full flex flex-wrap lg:flex-nowrap gap-8 lg:gap-16 ">
         {/* services */}
         <div className="flex flex-col gap-2">
-          <h3 className={` ${saira.className} text-[14px] font-medium`}>
+          <h3 className={` ${saira.className} text-lg font-medium`}>
             {t("services.label")}
           </h3>
           <div className="flex flex-col gap-1">
             {serviceLinks.map((val, index) => (
               <Link
                 href={`${val.url}`}
-                className="text-[13px] font-extralight"
+                className="text-xs font-extralight"
                 key={index}
               >
                 {val.title}
@@ -74,14 +74,14 @@ const FooterLinks = () => {
 
         {/* Legalisation */}
         <div className="flex flex-col gap-2">
-          <h3 className={` ${saira.className} text-[14px] font-medium`}>
+          <h3 className={` ${saira.className} text-lg font-medium`}>
             {t("legalisation.label")}
           </h3>
           <div className="flex flex-col gap-1">
             {legalisationLinks.map((val, index) => (
               <Link
                 href={`${val.url}`}
-                className="text-[13px] font-extralight text-nowrap"
+                className="text-xs font-extralight text-nowrap"
                 key={index}
               >
                 {val.title}
@@ -92,7 +92,7 @@ const FooterLinks = () => {
       </div>
 
       {/* rights */}
-      <p className="text-[10px] font-normal text-slate-400/70">{t("rights")}</p>
+      <p className="text-xs font-normal text-slate-400/70">{t("rights")}</p>
     </div>
   );
 };

@@ -13,17 +13,6 @@ type Props = {
 const Hero: FC<Props> = ({ stripData }) => {
   const t = useTranslations("homePage.heroSection");
 
-  // var analytics=[];
-  //   for(var loopvar=0;loopvar<this.newvendors.length;loopvar++)
-  //   {
-  //     for(var loopvarinner=0;loopvarinner<this.analytics.length;loopvarinner++)
-  //     {
-  //       if(this.analytics[loopvarinner].vendor==this.newvendors[loopvar].vendors_vendorshortcode)
-  //       {
-  //         analytics.push(this.analytics[loopvarinner])
-  //       }
-  //     }
-
   return (
     <div className="w-full min-h-[calc(100vh-70px)] max-h-[calc(100vh-70px)]  flex justify-center items-center relative   ">
       {/* background images*/}

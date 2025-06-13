@@ -7,31 +7,6 @@ import { useTranslations } from "next-intl";
 import { Vendors_int } from "../home/types";
 import Link from "next/link";
 
-// type Token = {
-//   name: string;
-//   symbol: string;
-//   logo: string;
-// };
-
-// const tokens: Token[] = [
-//   {
-//     name: "Plath",
-//     symbol: "PLATH",
-//     logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/plath.png",
-//   },
-//   {
-//     name: "Bitcoin",
-//     symbol: "BTC",
-//     logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/btc.png",
-//   },
-//   {
-//     name: "Ethereum",
-//     symbol: "ETH",
-//     logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/eth.png",
-//   },
-//   // Add more tokens as needed
-// ];
-
 type Props = {
   newListing: Vendors_int[];
 };

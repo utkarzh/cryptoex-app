@@ -69,8 +69,8 @@ const FeaturesContent = () => {
       if (container1.scrollTop <= 0) {
         clearInterval(scrollInterval1!);
       }
-      container1.scrollTop -= 5; // adjust speed of container1
-    }, 60); // ~60fps
+      container1.scrollTop -= 2; // adjust speed of container1
+    }, 20); // ~60fps
 
     scrollInterval2 = setInterval(() => {
       if (!container2) return;
@@ -78,8 +78,8 @@ const FeaturesContent = () => {
         clearInterval(scrollInterval2!);
         return;
       }
-      container2.scrollTop -= 5; // adjust speed
-    }, 60);
+      container2.scrollTop -= 2; // adjust speed
+    }, 20);
   };
 
   const scrollDown = () => {
@@ -103,8 +103,8 @@ const FeaturesContent = () => {
           clearInterval(scrollInterval1!);
           return;
         }
-        container1.scrollTop += 5; // adjust speed of container1
-      }, 60); // ~60fps
+        container1.scrollTop += 2; // adjust speed of container1
+      }, 20); // ~60fps
 
       if (container2) {
         scrollInterval2 = setInterval(() => {
@@ -117,8 +117,8 @@ const FeaturesContent = () => {
             setIsScrolled(true);
             return;
           }
-          container2.scrollTop += 5; // adjust speed
-        }, 60);
+          container2.scrollTop += 2; // adjust speed
+        }, 20);
       }
     }
   };
@@ -137,29 +137,31 @@ const FeaturesContent = () => {
       // onMouseLeave={resetScroll}
     >
       {/* container */}
-      <div className="w-full sm:w-fit  flex flex-col sm:flex-row gap-2 relative  ">
+      <div className="w-full sm:w-fit  flex flex-col sm:flex-row gap-2   relative  ">
         {/* left section */}
         <div
-          className="w-full sm:w-fit max-h-full sm:max-h-[270px]  overflow-hidden flex flex-col gap-2"
+          className="w-full sm:w-fit max-h-full  sm:max-h-[270px] lg:max-h-[350px] xl:max-h-[500px]  overflow-hidden flex flex-col gap-2"
           ref={containerRef1}
         >
           {[...leftSectionFeatures, leftSectionFeatures[0]].map(
             (val, index) => (
               <div
                 key={index}
-                className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]"
+                className="w-[90%] mx-auto   rounded-md p-2 bg-white   dark:bg-[#161735]"
               >
-                <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+                <div className="w-full ms:w-[30vw] lg:w-[35vw] xl:p-8  lg:p-6 p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
                   <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                     {val.icons}
                   </div>
-                  <div className="w-full flex flex-col gap-1">
+                  <div className="w-full  flex flex-col gap-1">
                     <h3
-                      className={` ${saira.className} text-[14px] font-medium`}
+                      className={` ${saira.className} text-lg lg:text-[1.5rem] font-medium`}
                     >
                       {val.title}
                     </h3>
-                    <p className="text-[10px] font-extralight">{val.content}</p>
+                    <p className="text-xs lg:text-[1rem] font-extralight">
+                      {val.content}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -193,26 +195,28 @@ const FeaturesContent = () => {
 
         {/* rightside section */}
         <div
-          className="flex  max-h-[270px] overflow-hidden flex-col gap-2 z-[40]"
+          className="w-full sm:w-fit max-h-full  sm:max-h-[270px] lg:max-h-[350px] xl:max-h-[500px]  overflow-hidden flex flex-col gap-2"
           ref={containerRef2}
         >
           {[...rightSectionFeatures, rightSectionFeatures[0]].map(
             (val, index) => (
               <div
                 key={index}
-                className="w-[90%] mx-auto  sm:w-fit rounded-md p-2 bg-white  dark:bg-[#161735]"
+                className="w-[90%] mx-auto rounded-md p-2 bg-white   dark:bg-[#161735]"
               >
-                <div className="w-full sm:w-[250px] p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
+                <div className="w-full sm:w-[30vw] lg:w-[35vw] xl:p-8 lg:p-6 p-2 py-4 min-h-[100px] justify-start flex flex-col gap-3">
                   <div className="w-fit p-[6px] bg-gray-300 dark:bg-slate-700 rounded-full">
                     {val.icons}
                   </div>
                   <div className="w-full flex flex-col gap-1">
                     <h3
-                      className={` ${saira.className} text-[14px] font-medium`}
+                      className={` ${saira.className} text-lg lg:text-[1.5rem] font-medium`}
                     >
                       {val.title}
                     </h3>
-                    <p className="text-[10px] font-extralight">{val.content}</p>
+                    <p className="text-xs lg:text-[1rem] font-extralight">
+                      {val.content}
+                    </p>
                   </div>
                 </div>
               </div>
