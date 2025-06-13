@@ -5,10 +5,10 @@ import { FaFire } from "react-icons/fa";
 import { MdClose, MdSearch } from "react-icons/md";
 import { IoSearch, IoStatsChart } from "react-icons/io5";
 import { VscDiffAdded } from "react-icons/vsc";
-import MiniGraph from "./MiniGraph";
 import { useTranslations } from "next-intl";
 import { Analytics_int } from "../types";
 import Link from "next/link";
+import LandingPageGraph from "./LandingPageGraph";
 
 type Value = "spot" | "newadded" | "topgainer";
 
@@ -198,7 +198,7 @@ const HomeCryptoList: FC<Props> = ({
                     }`}
                   >
                     <div className="px-2">
-                      <MiniGraph
+                      <LandingPageGraph
                         rate={val.rate}
                         vendor={val.vendor}
                         dataRange={val.graphimage}

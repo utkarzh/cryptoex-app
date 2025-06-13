@@ -7,14 +7,13 @@ import React from "react";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 type Props = {
-  dataRange?: number[];
-  rate?: number;
-  vendor?: string;
+  dataRange: number[];
+  rate: number;
+  vendor: string;
 };
 
-const MiniGraph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
-  const lineColor =
-    rate && rate > 0 ? "#27a043" : rate && rate < 0 ? "#e24d4a" : "#a2d2ff";
+const Graph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
+  const lineColor = rate > 0 ? "#27a043" : rate < 0 ? "#e24d4a" : "#a2d2ff";
 
   const options: ApexOptions = {
     chart: {
@@ -61,7 +60,7 @@ const MiniGraph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
   const series = [
     {
       name: vendor,
-      data: dataRange ? dataRange : [1, 2, 3, 4, 5, 2, 3, 7],
+      data: dataRange,
     },
   ];
 
@@ -78,4 +77,4 @@ const MiniGraph: React.FC<Props> = ({ dataRange, rate, vendor }) => {
   );
 };
 
-export default MiniGraph;
+export default Graph;
