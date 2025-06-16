@@ -12,12 +12,12 @@ const AirdropJoinCard = () => {
       {/* dates */}
       <div className="flex flex-col gap-4">
         {/* start date */}
-        <div className="w-full flex justify-between gap-2 text-[10px] font-normal dark:text-slate-500 text-slate-600">
+        <div className="w-full flex justify-between gap-2 text-[10px] xl:text-xs font-normal dark:text-slate-500 text-slate-600">
           <span>{t("sDate")}</span>
           <span>19-05-2023</span>
         </div>
         {/* end date */}
-        <div className="w-full flex justify-between gap-2 text-[10px] font-normal dark:text-slate-500 text-slate-600">
+        <div className="w-full flex justify-between gap-2 text-[10px] xl:text-xs font-normal dark:text-slate-500 text-slate-600">
           <span>{t("eDate")}</span>
           <span>25-05-2023</span>
         </div>

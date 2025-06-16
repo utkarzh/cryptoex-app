@@ -1,24 +1,16 @@
 import { useTranslations } from "next-intl";
-import { BiTrendingUp } from "react-icons/bi";
+import { BiTrendingDown, BiTrendingUp } from "react-icons/bi";
+import { Analytics_int } from "../home/types";
+import { FC } from "react";
+import Link from "next/link";
+import CoinCard from "../common/CoinCard";
+import { formatDecimalNumber } from "@/utils/formatDecimalNumber";
 
-const topGainers = [
-  {
-    symbol: "AAVE",
-    price: "$45.56",
-    change: +8.88,
-    color: "bg-purple-400",
-  },
-  { symbol: "ANT", price: "$302.74", change: +7.23, color: "bg-cyan-400" },
-  {
-    symbol: "ECA",
-    price: "$0.24",
-    change: -6.59,
-    color: "bg-fuchsia-400",
-  },
-  { symbol: "GAS", price: "$1.81", change: -4.63, color: "bg-green-400" },
-];
+type Props = {
+  listData: Analytics_int[];
+};
 
-export default function TopTranding() {
+const TopTranding: FC<Props> = ({ listData }) => {
   const t = useTranslations("marketPage.quickViewTable");
   return (
     <div className="rounded-xl border border-slate-300 dark:border-[#1c1f3a] p-4 w-full  ">
@@ -37,27 +29,37 @@ export default function TopTranding() {
           </tr>
         </thead>
         <tbody>
-          {topGainers.map((coin, index) => (
+          {listData.map((coin, index) => (
             <tr key={index} className="text-xs">
               <td className="py-2">
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`w-5 h-5 rounded-full bg-opacity-20 ${coin.color} flex items-center justify-center`}
-                  >
-                    {/* <span className={`w-2 h-2 rounded-full bg-current`} /> */}
-                  </span>
-                  <span>{coin.symbol}</span>
-                </div>
+                <Link href={`/trade/${coin.pair}`} className="">
+                  <CoinCard
+                    isSmall={true}
+                    cointTitle={coin.pair}
+                    coinName={coin.pair}
+                    coinImgUrl={coin.logopath}
+                  />
+                </Link>
               </td>
-              <td className="py-2">{coin.price}</td>
+              <td className="py-2">{formatDecimalNumber(coin.last)}</td>
               <td className="py-2 flex gap-2 justify-center">
                 <div
                   className={`flex items-center justify-end gap-1 ${
-                    Number(coin.change) > 0 ? "text-green-500" : "text-red-600"
+                    Number(coin.rate) > 0
+                      ? "text-green-500"
+                      : coin.rate < 0
+                      ? "text-red-600"
+                      : ""
                   } `}
                 >
-                  {coin.change} %
-                  <BiTrendingUp className="text-xs" />
+                  {coin.rate.toFixed(2)} %
+                  {coin.rate > 0 ? (
+                    <BiTrendingUp className="text-xs" />
+                  ) : coin.rate < 0 ? (
+                    <BiTrendingDown className="text-xs" />
+                  ) : (
+                    ""
+                  )}
                 </div>
               </td>
             </tr>
@@ -66,4 +68,6 @@ export default function TopTranding() {
       </table>
     </div>
   );
-}
+};
+
+export default TopTranding;

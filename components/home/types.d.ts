@@ -15,6 +15,7 @@ export interface Analytics_int {
   bookmark: boolean;
   isincontest: boolean;
   isdefi: boolean;
+  istrending: boolean; //later it will be added to the api
 }
 
 export interface Vendors_int {
@@ -43,7 +44,7 @@ export interface HomeDataStructure_int {
   announcement: Announcement_int[];
   registeredUsers: number;
   supportedCountries: number;
-  coinslisted?: number;
+  coinslisted?: number; //it will be added to the api later
   sessionid: string;
   socialmedia: string;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const LoadingTableSkeleton = ({ rows = 5, columns = 3 }) => {
   return (
-    <div className="w-full overflow-x-auto mt-10">
+    <div className="w-full overflow-x-auto mt-10 ">
       <table className="min-w-full">
         <thead>
           <tr>

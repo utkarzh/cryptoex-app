@@ -8,7 +8,8 @@ import { VscDiffAdded } from "react-icons/vsc";
 import { useTranslations } from "next-intl";
 import { Analytics_int } from "../types";
 import Link from "next/link";
-import LandingPageGraph from "./LandingPageGraph";
+import { formatDecimalNumber } from "@/utils/formatDecimalNumber";
+import MiniGraph from "@/components/common/MiniGraph";
 
 type Value = "spot" | "newadded" | "topgainer";
 
@@ -170,7 +171,9 @@ const HomeCryptoList: FC<Props> = ({
                       isExpended ? "table-cell" : "table-cell md:hidden"
                     }`}
                   >
-                    <div className="text-nowrap ">${val.last.toFixed(6)} </div>
+                    <div className="text-nowrap ">
+                      ${formatDecimalNumber(val.last)}{" "}
+                    </div>
                   </td>
                   <td
                     className={` ${
@@ -198,7 +201,7 @@ const HomeCryptoList: FC<Props> = ({
                     }`}
                   >
                     <div className="px-2">
-                      <LandingPageGraph
+                      <MiniGraph
                         rate={val.rate}
                         vendor={val.vendor}
                         dataRange={val.graphimage}

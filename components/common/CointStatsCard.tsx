@@ -1,3 +1,4 @@
+import { formatDecimalNumber } from "@/utils/formatDecimalNumber";
 import React, { FC } from "react";
 
 type Props = {
@@ -6,23 +7,23 @@ type Props = {
 };
 
 const CointStatsCard: FC<Props> = ({ coinUnitAmount, changePercent }) => {
-  function formatDecimalNumber(value: number): string {
-    // Convert exponential to full decimal
-    const fullStr = value.toString().includes("e")
-      ? value.toFixed(20).replace(/0+$/, "") // remove trailing zeros
-      : value.toString();
+  // function formatDecimalNumber(value: number): string {
+  //   // Convert exponential to full decimal
+  //   const fullStr = value.toString().includes("e")
+  //     ? value.toFixed(20).replace(/0+$/, "") // remove trailing zeros
+  //     : value.toString();
 
-    const [integerPart, decimalPart] = fullStr.split(".");
+  //   const [integerPart, decimalPart] = fullStr.split(".");
 
-    if (!decimalPart || decimalPart.length <= 9) {
-      return fullStr; // No formatting needed
-    }
+  //   if (!decimalPart || decimalPart.length <= 9) {
+  //     return fullStr; // No formatting needed
+  //   }
 
-    const firstThree = decimalPart.slice(0, 3);
-    const lastThree = decimalPart.slice(-3);
+  //   const firstThree = decimalPart.slice(0, 3);
+  //   const lastThree = decimalPart.slice(-3);
 
-    return `${integerPart}.${firstThree}...${lastThree}`;
-  }
+  //   return `${integerPart}.${firstThree}...${lastThree}`;
+  // }
   return (
     <div className="w-fit flex flex-col justify-center items-start ">
       {/* amount */}

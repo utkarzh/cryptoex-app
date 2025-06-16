@@ -1,13 +1,13 @@
 import { getSessionId } from "@/utils/session";
 import { apiSlice } from "../apiSlice";
 
-export const userApi = apiSlice.injectEndpoints({
+export const eventsApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getHomePageData: builder.mutation({
+    getAirdropList: builder.mutation({
       query: () => {
         const sessionid = getSessionId();
         return {
-          url: "getHomepagedata",
+          url: "getairdroplisting",
           method: "POST",
           body: {
             sessionid,
@@ -16,14 +16,15 @@ export const userApi = apiSlice.injectEndpoints({
       },
     }),
 
-    getPartners: builder.mutation({
-      query: () => {
+    getAirdropDetails: builder.mutation({
+      query: (icoid: string) => {
         const sessionid = getSessionId();
         return {
-          url: "getpartners",
+          url: "airdropdetails",
           method: "POST",
           body: {
             sessionid,
+            icoid,
           },
         };
       },
@@ -31,4 +32,5 @@ export const userApi = apiSlice.injectEndpoints({
   }),
 });
 
-export const { useGetHomePageDataMutation, useGetPartnersMutation } = userApi;
+export const { useGetAirdropListMutation, useGetAirdropDetailsMutation } =
+  eventsApi;

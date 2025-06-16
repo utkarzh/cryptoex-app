@@ -801,7 +801,10 @@
     "airSupply":"Airdrop supply",
     "start":"Start",
     "end":"End",
-    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. ",
+     "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
   },
   "contest":{
     "terms":{
@@ -825,7 +828,11 @@
       "sDate":"Start Date",
       "eDate":"End Date",
       "participants":"Active Participants",
-      "button":"Participate in Airdrop"
+      "daysRem":"Days Remaining",
+      "button":"Participate in Airdrop",
+       "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
     }
     
   }

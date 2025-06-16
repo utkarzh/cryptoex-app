@@ -25,7 +25,7 @@ const AirdropBanner = () => {
         >
           <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#eff0f2]/100 dark:to-[#06062a]/70 "></div>
 
-          <span className=" bg-gradient-to-b from-white via-slate-600 to-black bg-clip-text text-transparent opacity-20">
+          <span className=" bg-gradient-to-b from-white via-slate-600 to-black bg-clip-text text-transparent opacity-40">
             AIRDROP
           </span>
         </div>
@@ -35,30 +35,30 @@ const AirdropBanner = () => {
           src="/images/airdrop/dogeumb.png"
           alt="Coin 1"
           className="absolute left-[10vw] top-20 w-[9vw] z-[60]"
-          width={48}
-          height={48}
+          width={480}
+          height={480}
         />
 
         <Image
           src="/images/airdrop/solumb.png"
           alt="Coin 2"
           className="absolute left-0 top-[50%] w-[9vw] z-[60]"
-          width={40}
-          height={40}
+          width={500}
+          height={500}
         />
         <Image
           src="/images/airdrop/usdtumb.png"
           alt="Coin 3"
           className="absolute right-1/2 translate-x-[25vw] top-10 w-[8vw] z-[60]"
-          width={48}
-          height={48}
+          width={500}
+          height={500}
         />
         <Image
           src="/images/airdrop/bitumb.png"
           alt="Coin 4"
           className="absolute right-[2vw] bottom-6 w-[15vw] z-[60]"
-          width={80}
-          height={80}
+          width={500}
+          height={500}
         />
       </div>
 

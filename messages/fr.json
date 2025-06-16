@@ -783,7 +783,10 @@
       "airSupply": "Alimentation aérienne",
       "start": "Commencer",
       "end": "Fin",
-      "cardContent": "Le LaunchPad sera la caractéristique utilitaire de base du jeton CAT APE. "
+      "cardContent": "Le LaunchPad sera la caractéristique utilitaire de base du jeton CAT APE. ",
+      "ongoing": "En cours",
+      "upcoming": "Prochain",
+      "completed": "Complété"
     },
     "contest": {
       "terms": {
@@ -807,7 +810,10 @@
         "sDate": "Date de début",
         "eDate": "Date de fin",
         "participants": "Participants actifs",
-        "button": "Participer à AirDrop"
+        "button": "Participer à AirDrop",
+        "ongoing": "En cours",
+      "upcoming": "Prochain",
+      "completed": "Complété"
       }
     }
   },

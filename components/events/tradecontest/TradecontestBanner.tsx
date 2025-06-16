@@ -22,7 +22,7 @@ const TradecontestBanner = () => {
         >
           <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#eff0f2]/100 dark:to-[#06062a]/70 "></div>
 
-          <span className=" bg-gradient-to-b from-white via-slate-600 to-black bg-clip-text text-transparent opacity-20">
+          <span className=" bg-gradient-to-b from-white via-slate-600 to-black bg-clip-text text-transparent opacity-40">
             TRADE CONTEST
           </span>
         </div>
