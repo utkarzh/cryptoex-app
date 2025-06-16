@@ -9,26 +9,26 @@ export default function LoginForm() {
   const t = useTranslations("auth.signin");
   return (
     <div className="w-full  flex flex-col items-center justify-center px-4">
-      <div className="w-full max-w-sm p-6 rounded-2xl bg-white dark:bg-[#161735] shadow-2xl">
+      <div className="w-full max-w-full md:max-w-sm p-6 rounded-2xl bg-white dark:bg-[#161735] shadow-2xl">
         <div className="w-full flex justify-between">
           {/* heading */}
-          <h2 className={` ${saira.className} text-sm font-semibold mb-6`}>
+          <h2 className={` ${saira.className} text-lg font-semibold mb-6`}>
             {t("title")}
           </h2>
           {/* qr */}
-          <IoQrCodeOutline className="text-green-600 cursor-pointer" />
+          <IoQrCodeOutline className="text-green-600 cursor-pointer xl:text-xl" />
         </div>
         {/*  */}
-        <form className="space-y-4">
+        <form className="space-y-4 xl:space-y-6">
           {/* email */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.email.label")}
             </label>
             <input
               type="text"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.email.holder")}
             />
           </div>
@@ -36,12 +36,12 @@ export default function LoginForm() {
           {/* password */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.password.label")}
             </label>
             <input
               type="password"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.password.holder")}
             />
           </div>
@@ -56,7 +56,7 @@ export default function LoginForm() {
       </div>
 
       <div className="mb-4">
-        <div className="text-center text-[10px] text-slate-500 dark:text-gray-400 mt-4">
+        <div className="text-center text-[10px] xl:text-xs text-slate-500 dark:text-gray-400 mt-4">
           {t("signinOption")}
         </div>
 
@@ -79,7 +79,7 @@ export default function LoginForm() {
           </button>
         </div>
 
-        <div className="text-center text-[10px]  mt-4">
+        <div className="text-center text-[10px] xl:text-xs mt-4">
           {t("noAcc.part1")}{" "}
           <span className="text-green-400 hover:underline cursor-pointer">
             {t("noAcc.part2")}

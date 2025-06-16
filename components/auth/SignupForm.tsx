@@ -11,23 +11,23 @@ export default function SignupForm() {
   const t = useTranslations("auth.signup");
 
   return (
-    <div className="w-full  flex flex-col items-center justify-center px-4">
-      <div className="w-full max-w-sm p-6 rounded-2xl bg-white dark:bg-[#161735] shadow-2xl">
+    <div className="w-full   flex flex-col items-center justify-center px-4">
+      <div className="w-full max-w-full md:max-w-sm p-6 rounded-2xl bg-white dark:bg-[#161735] shadow-2xl">
         {/* heading */}
-        <h2 className={` ${saira.className} text-sm font-semibold mb-6`}>
+        <h2 className={` ${saira.className} text-lg font-semibold mb-6`}>
           {t("title")}
         </h2>
         {/*  */}
-        <form className="space-y-4">
+        <form className="space-y-4 xl:space-y-6">
           {/* email */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.email.label")}
             </label>
             <input
               type="text"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.email.holder")}
             />
           </div>
@@ -35,12 +35,12 @@ export default function SignupForm() {
           {/*username*/}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.username.label")}
             </label>
             <input
               type="text"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.username.holder")}
             />
           </div>
@@ -48,12 +48,12 @@ export default function SignupForm() {
           {/* password */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.password.label")}
             </label>
             <input
               type="password"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.password.holder")}
             />
           </div>
@@ -61,11 +61,11 @@ export default function SignupForm() {
           {/* country */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.country.label")}
             </label>
 
-            <select className="w-full border outline-none border-none bg-transparent text-xs placeholder:text-[11px] mr-2">
+            <select className="w-full border outline-none border-none bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem] mr-2">
               <option className=" dark:bg-[#06062a]">
                 {t("items.country.holder")}
               </option>
@@ -87,12 +87,12 @@ export default function SignupForm() {
           {/* referral code */}
           <div className="w-full border py-3 border-black/30 dark:border-white/30 flex justify-between items-center  rounded-lg pl-4 relative">
             {/* label */}
-            <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+            <label className="text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
               {t("items.referrals.label")}
             </label>
             <input
               type="text"
-              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px]"
+              className="outline-none border-none w-full bg-transparent text-xs placeholder:text-[11px] xl:placeholder:text-[0.7rem]"
               placeholder={t("items.referrals.holder")}
             />
           </div>
@@ -104,7 +104,7 @@ export default function SignupForm() {
               onChange={() => setAcceptedTerms(!acceptedTerms)}
               className=""
             />
-            <label className="text-[10px]">
+            <label className="text-xs">
               {t("terms.part1")}{" "}
               <span className="text-green-400 cursor-pointer">
                 {t("terms.part2")}
@@ -122,7 +122,7 @@ export default function SignupForm() {
       </div>
 
       <div className="mb-4">
-        <div className="text-center text-[10px] text-slate-500 dark:text-gray-400 mt-4">
+        <div className="text-center text-xs text-slate-500 dark:text-gray-400 mt-4">
           {t("signupOption")}
         </div>
 
@@ -145,7 +145,7 @@ export default function SignupForm() {
           </button>
         </div>
 
-        <div className="text-center text-[10px]  mt-4">
+        <div className="text-center text-xs  mt-4">
           {t("haveAcc.part1")}{" "}
           <span className="text-green-400 hover:underline cursor-pointer">
             {t("haveAcc.part2")}

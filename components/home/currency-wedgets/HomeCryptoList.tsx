@@ -60,7 +60,7 @@ const HomeCryptoList: FC<Props> = ({
       onClick={selectHandler}
     >
       <div
-        className={`w-[84%] mx-auto flex px-4 mt-4 ${
+        className={`w-[84%]  mx-auto flex px-4 mt-4 ${
           isExpended ? "justify-between" : " justify-between md:justify-center"
         } `}
       >

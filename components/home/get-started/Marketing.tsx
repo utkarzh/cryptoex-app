@@ -55,7 +55,7 @@ const Marketing: FC<Props> = ({ marketData }) => {
       const tempData = coinRotatingData;
       const popedData = tempData.pop();
       setCoinRotatingData([popedData as string, ...tempData]);
-    }, 1700);
+    }, 2000);
   }, [coinRotatingData]);
 
   return (
@@ -70,7 +70,11 @@ const Marketing: FC<Props> = ({ marketData }) => {
 
           <div className="w-[50%] sm:w-[90%] mx-auto   flex justify-center items-center absolute top-[12%] left-0 translate-x-0 sm:left-1/2 sm:-translate-x-1/2 ">
             <Image
-              src={coinRotatingData[0]}
+              src={
+                coinRotatingData[0]
+                  ? coinRotatingData[0]
+                  : "/images/coins/usdtrounded.png"
+              }
               alt=""
               width={100}
               height={100}
@@ -78,7 +82,11 @@ const Marketing: FC<Props> = ({ marketData }) => {
             />
 
             <Image
-              src={coinRotatingData[1]}
+              src={
+                coinRotatingData[1]
+                  ? coinRotatingData[1]
+                  : "/images/coins/binancerounded.png"
+              }
               alt=""
               width={100}
               height={100}
@@ -87,7 +95,11 @@ const Marketing: FC<Props> = ({ marketData }) => {
 
             {/* btc */}
             <Image
-              src={coinRotatingData[2]}
+              src={
+                coinRotatingData[2]
+                  ? coinRotatingData[2]
+                  : "/images/coins/btc.png"
+              }
               alt=""
               width={100}
               height={100}
@@ -95,7 +107,11 @@ const Marketing: FC<Props> = ({ marketData }) => {
             />
 
             <Image
-              src={coinRotatingData[3]}
+              src={
+                coinRotatingData[3]
+                  ? coinRotatingData[3]
+                  : "/images/coins/ethereumrounded.png"
+              }
               alt=""
               width={100}
               height={100}
@@ -103,7 +119,11 @@ const Marketing: FC<Props> = ({ marketData }) => {
             />
 
             <Image
-              src={coinRotatingData[4]}
+              src={
+                coinRotatingData[4]
+                  ? coinRotatingData[4]
+                  : "/images/coins/polygonrounded.png"
+              }
               alt=""
               width={100}
               height={100}
