@@ -828,7 +828,7 @@
       "sDate":"Start Date",
       "eDate":"End Date",
       "participants":"Active Participants",
-      "daysRem":"Days Remaining",
+      "daysRem":"Days remaining",
       "button":"Participate in Airdrop",
        "ongoing":"Ongoing",
     "upcoming":"Upcoming",
@@ -851,11 +851,16 @@
     "airSupply":"Airdrop supply",
     "start":"Start",
     "end":"End",
-    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. ",
+     "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
   },
   "contest":{
     "terms":{
       "countDown":"Countdown",
+      "startsIn":"Starts In",
+      "endsIn":"Ends In",
       "days":"Days",
       "hours":"Hours",
       "minutes":"Minutes",
@@ -876,7 +881,10 @@
       "docu":"Documents",
       "wPaper":"White Paper",
       "team":"Team",
-      "sMedia":"Social Media"
+      "sMedia":"Social Media",
+       "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed"
 
     },
     "form":{

@@ -18,16 +18,15 @@ const images = [
   "/images/coins/binancerounded.png",
   "/images/coins/btc.png",
   "/images/coins/ethereumrounded.png",
-  "/images/coins/polygonrounded.png",
-   "/images/coins/usdtrounded.png",
-  "/images/coins/binancerounded.png",
-  
+  // "/images/coins/polygonrounded.png",
+  // "/images/coins/usdtrounded.png",
+  // "/images/coins/binancerounded.png",
 ];
 
 const CoinCircle = () => {
   const imageSize = 30; // Size of each image
   const padding = 6; // Padding between image and outer border
-  const spacing = 36; // Arc length spacing between images in pixels
+  const spacing = 45; // Arc length spacing between images in pixels
   const innerRadius = 100; // Radius at which images are placed
   const outerRadius = innerRadius + imageSize / 2 + padding; // Outer radius of container
   const containerSize = outerRadius * 2; // Width and height of the parent div

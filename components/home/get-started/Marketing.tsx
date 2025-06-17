@@ -2,10 +2,10 @@
 import { saira } from "@/utils/Font";
 import Image from "next/image";
 import React, { FC, useEffect, useState } from "react";
-import { FaCoins } from "react-icons/fa";
+
 import { IoMdStats } from "react-icons/io";
 import { IoLocationOutline } from "react-icons/io5";
-import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
+import { PiCrownSimple, PiCurrencyDollarSimpleBold } from "react-icons/pi";
 import CoinCircle from "./CoinCircle";
 import { useTranslations } from "next-intl";
 import { HomeDataStructure_int } from "../types";
@@ -186,7 +186,7 @@ const Marketing: FC<Props> = ({ marketData }) => {
                 alt=""
                 width={300}
                 height={300}
-                className="w-[70%] absolute bottom-0 left-[15%] "
+                className="w-[86%] absolute bottom-0 left-[7%]  "
               />
               <div className="absolute z-[20] top-0 left-0 w-full  h-full bg-gradient-to-b from-transparent via-[#06062a]/0 to-white/70 dark:to-[#06062a]/60 pointer-events-none "></div>
             </div>
@@ -216,7 +216,7 @@ const Marketing: FC<Props> = ({ marketData }) => {
             </div>
           </div>
           {/* bottom right */}
-          <div className="w-[50%] h-[68%] rounded-lg bg-white dark:bg-[#161735] absolute -bottom-[20px] -right-[10px] shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green] overflow-hidden ">
+          <div className="w-[50%] h-[68%] rounded-lg bg-white dark:bg-[#161735] absolute -bottom-[20px] -right-[10px] shadow-[1px_1px_3px_green] dark:shadow-[1px_1px_1px_green] overflow-hidden  ">
             <div className=" flex gap-4 h-fit mt-[10px] w-full justify-evenly items-center">
               <div>
                 {data ? (
@@ -233,7 +233,7 @@ const Marketing: FC<Props> = ({ marketData }) => {
                 </p>
               </div>
               <div className="p-1 rounded-full bg-green-600 dark:bg-green-600/20">
-                <FaCoins className=" text-white dark:text-green-600 text-ms xl:text-xl" />
+                <PiCrownSimple className=" text-white dark:text-green-600 text-ms xl:text-xl" />
               </div>
             </div>
             <div className="absolute w-full h-full top-1/2 -right-1/2 -translate-y-[10%]  sm:translate-y-0 md:-translate-y-[10%] md:-translate-x-[10%] 2xl:translate-y-[20%] 2xl:translate-x-[20%] xl:translate-y-[10%] xl:translate-x-[10%]  translate-x-0">

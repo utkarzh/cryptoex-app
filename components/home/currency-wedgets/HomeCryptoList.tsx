@@ -4,12 +4,12 @@ import React, { FC, useEffect, useState } from "react";
 import { FaFire } from "react-icons/fa";
 import { MdClose, MdSearch } from "react-icons/md";
 import { IoSearch, IoStatsChart } from "react-icons/io5";
-import { VscDiffAdded } from "react-icons/vsc";
 import { useTranslations } from "next-intl";
 import { Analytics_int } from "../types";
 import Link from "next/link";
 import { formatDecimalNumber } from "@/utils/formatDecimalNumber";
 import MiniGraph from "@/components/common/MiniGraph";
+import { FiTarget } from "react-icons/fi";
 
 type Value = "spot" | "newadded" | "topgainer";
 
@@ -56,8 +56,8 @@ const HomeCryptoList: FC<Props> = ({
       className={` bg-white dark:bg-[#161735] ${
         isExpended
           ? "w-full min-w-none md:min-w-md"
-          : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 opacoty-100 md:opacity-35"
-      }  overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-2  flex flex-col gap-4 transition-all duration-700 ease-in-out`}
+          : "w-full min-w-none md:w-fit md:min-w-fit px-0 md:px-8 xl:px-10 pb-4 opacoty-100 md:opacity-35"
+      }  overflow-x-auto overflow-y-hidden scrollbar-custom  rounded-md px-6  flex flex-col gap-4 transition-all duration-700 ease-in-out `}
       onClick={selectHandler}
     >
       <div
@@ -68,7 +68,7 @@ const HomeCryptoList: FC<Props> = ({
         {/* heading */}
         <div className="w-fit gap-1 flex items-center justify-center">
           {value === "spot" && <FaFire />}
-          {value === "newadded" && <VscDiffAdded />}
+          {value === "newadded" && <FiTarget />}
           {value === "topgainer" && <IoStatsChart />}
           <h2
             className={`text-nowrap font-medium text-lg cursor-pointer ${saira.className}`}
@@ -110,7 +110,7 @@ const HomeCryptoList: FC<Props> = ({
         </div>
       </div>
 
-      <div className="w-full  border-b border-slate-500"></div>
+      <div className="w-full  border-b border-slate-500/30"></div>
 
       <div className="w-full items-start justify-center flex flex-col gap-6">
         <table className=" w-full table-auto">

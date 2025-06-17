@@ -16,6 +16,7 @@ const HeroCurrencyStrip: FC<Props> = ({ stripData: data }) => {
   const [stripDataList, setstripDataList] = useState<StripListData[]>([]);
   useEffect(() => {
     if (!data) return;
+    if (data.status === 0) return;
     const stripList: StripListData[] = [];
     for (let loopvar = 0; loopvar < data.analytics.length; loopvar++) {
       for (

@@ -37,6 +37,8 @@ export interface Announcement_int {
 }
 
 export interface HomeDataStructure_int {
+  status: number;
+  message: string;
   btcrate: number;
   analytics: Analytics_int[];
   volume: string;

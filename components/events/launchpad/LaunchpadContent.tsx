@@ -1,84 +1,53 @@
 "use client";
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
-import StatusCard, { Data_Type } from "../../common/StatusCard";
 import { useTranslations } from "next-intl";
+import { IeoVendorLaunchpad_int, LaunchpadApiResult_int } from "../types";
+import { useGetLaunchpadListMutation } from "@/redux/features/events/eventsApi";
+import StatusCardLaunchpad from "./StatusCardLaunchpad";
+import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 
 const LaunchpadContent = () => {
   const t = useTranslations("launchPad");
-
-  const airdropData: Data_Type[] = [
-    {
-      key: "upcoming",
-      status: t("tabs.upcoming"),
-      statusColor: "bg-yellow-500",
-      borderColor: "border-yellow-500",
-      shadow: "shadow-[1px_1px_2px_#f0b101]",
-      token: "Leeu SPEL (SPL)",
-      disc: t("terms.cardContent"),
-      logo: "/images/airdrop/noded.png",
-      supply: "100,000,000",
-      start: "03-02-2025",
-      end: "20-02-2025",
-    },
-    {
-      key: "ongoing",
-      status: t("tabs.ongoing"),
-      href: "/launchpad/contest",
-      statusColor: "bg-green-500",
-      borderColor: "border-green-500",
-      shadow: "shadow-[1px_1px_2px_#00c951]",
-      token: "Leeu SPEL (SPL)",
-      disc: t("terms.cardContent"),
-      logo: "/images/airdrop/leeu.png",
-      supply: "100,000,000",
-      start: "03-02-2025",
-      end: "20-02-2025",
-    },
-    {
-      key: "completed",
-      status: t("tabs.completed"),
-      statusColor: "bg-gray-500",
-      borderColor: "border-gray-500",
-      shadow: "shadow-[1px_1px_2px_#6a7181]",
-      token: "VIEW (VIEW)",
-      disc: t("terms.cardContent"),
-      logo: "/images/airdrop/view.png",
-      supply: "100,000,000",
-      start: "03-02-2025",
-      end: "20-02-2025",
-    },
-    {
-      key: "completed",
-      status: t("tabs.completed"),
-      statusColor: "bg-gray-500",
-      borderColor: "border-gray-500",
-      shadow: "shadow-[1px_1px_2px_#6a7181]",
-      token: "VIEW (VIEW)",
-      disc: t("terms.cardContent"),
-      logo: "/images/airdrop/view.png",
-      supply: "100,000,000",
-      start: "03-02-2025",
-      end: "20-02-2025",
-    },
-  ];
+  const [filteredData, setFilteredData] = useState<IeoVendorLaunchpad_int[]>(
+    []
+  );
   const [selectedTab, setSelectedTab] = useState<
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
 
-  const [filteredData, setFilteredData] = useState<Data_Type[]>(airdropData);
+  const [getAirDropList, { data }] =
+    useGetLaunchpadListMutation<LaunchpadApiResult_int>();
+  useEffect(() => {
+    getAirDropList({});
+  }, []);
 
   useEffect(() => {
-    const filteredData = airdropData.filter((val) => {
-      if (selectedTab === "all") {
-        return true;
-      } else {
-        return val.key === selectedTab;
-      }
-    });
+    if (!data) return;
+    if (data.status === 0) return;
+    if (selectedTab === "all") {
+      setFilteredData(data.ieovendors);
+    } else if (selectedTab === "ongoing") {
+      const tempFilteredArr = data.ieovendors.filter(
+        (val) =>
+          Number(val.icocoins_startdays) < 0 && Number(val.icocoins_enddays) > 0
+      );
+      setFilteredData(tempFilteredArr);
+    } else if (selectedTab === "upcoming") {
+      const tempFilteredArr = data.ieovendors.filter(
+        (val) =>
+          Number(val.icocoins_startdays) > 0 && Number(val.icocoins_enddays) > 0
+      );
+      setFilteredData(tempFilteredArr);
+    } else if (selectedTab === "completed") {
+      const tempFilteredArr = data.ieovendors.filter(
+        (val) =>
+          Number(val.icocoins_startdays) < 0 && Number(val.icocoins_enddays) < 0
+      );
+      setFilteredData(tempFilteredArr);
+    }
+  }, [data, selectedTab]);
 
-    setFilteredData(filteredData);
-  }, [selectedTab]);
   return (
     <div className="w-full min-h-[100vh] mt-30 mb-10 flex justify-center">
       {/* container */}
@@ -103,8 +72,14 @@ const LaunchpadContent = () => {
         </div>
 
         {/* content */}
-        <div className="mt-10 w-full flex flex-wrap justify-center">
-          <StatusCard data={filteredData} />
+        <div className=" w-[90%] md:w-[85%] lg:w-[80%] mt-10 mx-auto flex flex-wrap justify-center">
+          {filteredData.length > 0 ? (
+            <StatusCardLaunchpad data={filteredData} />
+          ) : (
+            <div className="w-screen ">
+              <LoadingTableSkeleton columns={3} rows={6} />
+            </div>
+          )}
         </div>
       </div>
     </div>

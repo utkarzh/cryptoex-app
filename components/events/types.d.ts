@@ -84,3 +84,103 @@ export interface AirdropDetails_int {
 export interface AirDropDetailsApiResult_int {
   data: AirdropDetails_int;
 }
+
+// launchpad list related types
+export interface IeoVendorLaunchpad_int {
+  vendors_id: number;
+  vendors_vendorname: string;
+  vendors_vendorshortcode: string;
+  icocoins_id: number;
+  icocoins_createdon: date;
+  icocoins_startdate: string;
+  icocoins_startdays: string;
+  icocoins_enddate: string;
+  icocoins_enddays: string;
+  icocoins_mincount: number;
+  icocoins_numberofcoins: number;
+  icocoins_currentsale: number;
+  icocoins_description: string;
+  starthours: string;
+  icocoins_bonus: number;
+  endhours: string;
+  icocoin_listingstatus: string;
+  icocoins_bannerimage: string;
+  icocoins_logopath?: string; // will be added later by backend team
+  icocoins_buywithvendors: string;
+}
+
+export interface LaunchPadData_int {
+  status: number;
+  message: string;
+  ieovendors: IeoVendorLaunchpad_int[];
+  sessionid: null | string;
+}
+
+export interface LaunchpadApiResult_int {
+  data: LaunchPadData_int;
+}
+
+// launchpad contest details
+export interface IeoLunchpadVendorDetails_int {
+  vendors_id: number;
+  vendors_logopath: string;
+  vendors_vendorname: string;
+  vendors_vendorshortcode: string;
+  vendors_maxsupply: string;
+  vendors_website: string;
+  vendors_blockexplorersource: string;
+  vendors_githubsource: string;
+  vendors_telegram: string;
+  vendors_twitter: string;
+  vendors_facebook: string;
+  vendors_usdrate: number;
+  vendors_linkedin: string;
+  vendors_youtube: string; //  it will be added later
+  vendors_threads: string; //  it will be added later
+  vendors_discord: string; //  it will be added later
+  vendors_instagram: string; //  it will be added later
+  icocoins_id: number;
+  icocoins_whitepaper: string;
+  icocoins_announcements: string;
+  icocoins_createdon: date;
+  icocoins_startdate: string;
+  icocoins_startdays: string;
+  icocoins_projectdetaildescription: string;
+  icocoins_enddate: string;
+  icocoins_enddays: string;
+  icocoins_mincount: number;
+  icocoins_numberofcoins: number;
+  icocoins_currentsale: number;
+  icocoins_description: string;
+  icocoins_coincost: number;
+  icocoins_buywith: number;
+  icocoins_technology: string;
+  icocoins_bonus: number;
+  icocoins_auditreport: string;
+  icocoins_presentation: string;
+  icocoins_executivesummary: string;
+  icocoins_teamrichtext: string;
+  icocoins_bannerimage: string;
+}
+
+export interface MarketResult_int {
+  vendorid: number;
+  vendorname: string;
+  vendorticker: string;
+  usdrate: number;
+  userbalance: number;
+  venders_logopath?: string;
+}
+
+export interface LaunchpadDetails_int {
+  status: number;
+  message: string;
+  ieovendors: IeoLunchpadVendorDetails_int[];
+  marketsresults: MarketResult_int[];
+  ieoteam: [];
+  sessionid: null | string;
+}
+
+export interface LaunchpadDetailsApiResult_int {
+  data: LaunchpadDetails_int;
+}

@@ -2,6 +2,7 @@
 // import CryptoConvert from "@/components/convert/ConvertTest1";
 // import LoginForm from "@/components/auth/LoginForm";
 "use client";
+import SliderControl from "./Test1";
 import TokenCard1 from "./Test2";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
 // import ImageCarousel from "./Test";
@@ -10,13 +11,7 @@ import TokenCard1 from "./Test2";
 const Page = () => {
   return (
     <div className="w-[90%] mx-auto flex justify-end mr-10 relative ">
-      {/* <LangDropdown /> */}
-      {/* <LangDropdown /> */}
-      {/* <ImageCarousel /> */}
-      {/* <LoadingTableSkeleton /> */}
-      {/* <TokenCard /> */}
-      {/* <Test2 /> */}
-      <TokenCard1 />
+      <SliderControl />
     </div>
   );
 };

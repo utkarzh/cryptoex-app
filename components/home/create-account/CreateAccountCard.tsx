@@ -33,7 +33,7 @@ export default function CreateAccountCard() {
       heading: t("step2.heading"),
       content: t("step2.content"),
       button: t("step2.button"),
-      buttonColor: "bg-yellow-700",
+      buttonColor: "bg-green-700",
       imgUrl: "/images/computerSignUp.png",
     },
     {
@@ -41,7 +41,7 @@ export default function CreateAccountCard() {
       heading: t("step3.heading"),
       content: t("step3.content"),
       button: t("step3.button"),
-      buttonColor: "bg-cyan-700",
+      buttonColor: "bg-green-700",
       imgUrl: "/images/computerSignUp.png",
     },
   ];
@@ -66,9 +66,7 @@ export default function CreateAccountCard() {
         </div>
         <div
           className={`h-0 sm:h-3 w-full sm:w-0 xl:h-4 ${
-            index >= 1
-              ? "border-green-600"
-              : "border-slate-300 dark:border-white"
+            index >= 0 ? "border-green-600" : "border-transparent"
           } border transition-all duration-300 `}
         ></div>
         <div
@@ -82,9 +80,7 @@ export default function CreateAccountCard() {
         </div>
         <div
           className={`h-0 sm:h-3 w-full sm:w-0 xl:h-4 ${
-            index >= 2
-              ? "border-green-600"
-              : "border-slate-300 dark:border-white"
+            index >= 1 ? "border-green-600" : "border-transparent"
           } border transition-all duration-300`}
         ></div>
         <div

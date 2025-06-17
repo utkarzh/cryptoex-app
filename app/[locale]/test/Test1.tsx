@@ -1,73 +1,54 @@
 "use client";
+import { useState } from "react";
+import { BiMinus, BiPlus, BiPulse } from "react-icons/bi";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+export default function SliderControl() {
+  const [value, setValue] = useState(0);
 
-type Token = {
-  name: string;
-  symbol: string;
-  logo: string;
-};
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = Math.min(100, Math.max(0, Number(e.target.value)));
+    setValue(newValue);
+  };
 
-const tokens: Token[] = [
-  {
-    name: "Plath",
-    symbol: "PLATH",
-    logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/plath.png",
-  },
-  {
-    name: "Bitcoin",
-    symbol: "BTC",
-    logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/btc.png",
-  },
-  {
-    name: "Ethereum",
-    symbol: "ETH",
-    logo: "https://cdncheck.nyc3.cdn.digitaloceanspaces.com/data/logo/eth.png",
-  },
-  // Add more tokens as needed
-];
+  const increment = () => {
+    setValue((prev) => Math.min(100, prev + 1));
+  };
 
-export default function TokenCard() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % tokens.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const current = tokens[index];
+  const decrement = () => {
+    setValue((prev) => Math.max(0, prev - 1));
+  };
 
   return (
-    <div className="w-[300px] h-[60px] overflow-hidden rounded-full bg-[#0b0b2a] text-white flex items-center justify-between px-4 shadow-lg">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={current.symbol}
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -50, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-2"
-        >
-          <img
-            src={current.logo}
-            alt={current.name}
-            className="w-8 h-8 rounded-full"
-          />
-          <div>
-            <p className="text-xs text-gray-400 -mb-1">New Listing</p>
-            <p className="font-semibold text-sm">
-              {current.name} ({current.symbol})
-            </p>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+    <div className="flex items-center gap-3 bg-[#0e0e2e] p-2 rounded-full w-fit">
+      <div>{value}</div>
+      {/* Minus Button */}
+      <button
+        onClick={decrement}
+        className="w-8 h-8 flex items-center justify-center rounded-full bg-[#1a1a40] text-white"
+      >
+        <BiMinus size={16} />
+      </button>
 
-      <p className="text-green-400 font-semibold text-sm cursor-pointer">
-        See All
-      </p>
+      {/* Slider */}
+      <input
+        type="range"
+        min={0}
+        max={100}
+        value={value}
+        onChange={handleChange}
+        className="appearance-none w-40 h-1 bg-[#3b3b5b] rounded-full [&::-webkit-slider-thumb]:appearance-none
+          [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full
+          [&::-webkit-slider-thumb]:bg-green-600 [&::-webkit-slider-thumb]:border-2
+          [&::-webkit-slider-thumb]:border-white"
+      />
+
+      {/* Plus Button */}
+      <button
+        onClick={increment}
+        className="w-8 h-8 flex items-center justify-center rounded-full bg-[#1a1a40] text-white"
+      >
+        <BiPlus size={16} />
+      </button>
     </div>
   );
 }

@@ -29,8 +29,39 @@ export const eventsApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    getLaunchpadList: builder.mutation({
+      query: () => {
+        const sessionid = getSessionId();
+        return {
+          url: "getieolisting",
+          method: "POST",
+          body: {
+            sessionid,
+          },
+        };
+      },
+    }),
+
+    getLaunchpadDetails: builder.mutation({
+      query: (icoid: string) => {
+        const sessionid = getSessionId();
+        return {
+          url: "ieolistingdetailmultivendor",
+          method: "POST",
+          body: {
+            sessionid,
+            icoid,
+          },
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetAirdropListMutation, useGetAirdropDetailsMutation } =
-  eventsApi;
+export const {
+  useGetAirdropListMutation,
+  useGetAirdropDetailsMutation,
+  useGetLaunchpadListMutation,
+  useGetLaunchpadDetailsMutation,
+} = eventsApi;

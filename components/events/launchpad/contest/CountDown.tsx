@@ -1,11 +1,16 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
-function Countdown() {
+type Props = {
+  startDate: string;
+};
+
+const Countdown: FC<Props> = ({ startDate }) => {
   const t = useTranslations("launchPad.contest.terms");
+  console.log("Formated date is:---", startDate);
   const calculateTimeLeft = () => {
-    const difference = +new Date("2025-06-02T00:00:00") - +new Date();
+    const difference = +new Date(startDate) - +new Date();
     let timeLeft = {
       days: "00",
       hours: "00",
@@ -57,6 +62,6 @@ function Countdown() {
       ))}
     </div>
   );
-}
+};
 
 export default Countdown;

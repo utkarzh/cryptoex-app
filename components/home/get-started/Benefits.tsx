@@ -2,11 +2,11 @@
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
-import { BiDollar, BiStats } from "react-icons/bi";
+import { BiDollar, BiTrendingUp } from "react-icons/bi";
 import { CiStar } from "react-icons/ci";
+import { FaCrosshairs } from "react-icons/fa";
 import { ImUserPlus } from "react-icons/im";
 import { IoStorefront } from "react-icons/io5";
-import { RiFocus3Line } from "react-icons/ri";
 
 const Benefits = () => {
   const [isUserBenefits, setIsUserBenifits] = useState(false);
@@ -14,12 +14,12 @@ const Benefits = () => {
 
   const vendorData = [
     {
-      icons: <RiFocus3Line className="text-[20px] xl:text-[26px] " />,
+      icons: <FaCrosshairs className="text-[20px]  " />,
       heading: t("vendor.ben1.title"),
       content: t("vendor.ben1.content"),
     },
     {
-      icons: <BiStats className="text-[20px]" />,
+      icons: <BiTrendingUp className="text-[20px]" />,
       heading: t("vendor.ben2.title"),
       content: t("vendor.ben2.content"),
     },
@@ -37,12 +37,12 @@ const Benefits = () => {
 
   const userData = [
     {
-      icons: <BiStats className="text-[20px]" />,
+      icons: <FaCrosshairs className="text-[20px]" />,
       heading: t("vendor.ben1.title"),
       content: t("vendor.ben1.content"),
     },
     {
-      icons: <BiStats className="text-[20px]" />,
+      icons: <BiTrendingUp className="text-[20px]" />,
       heading: t("vendor.ben2.title"),
       content: t("vendor.ben2.content"),
     },
@@ -75,7 +75,7 @@ const Benefits = () => {
         <div
           className={` w-full ${
             isUserBenefits
-              ? "bg-yellow-600 dark:bg-yellow-700 text-white"
+              ? "bg-green-600 dark:bg-green-700 text-white"
               : "bg-transparent "
           }  rounded-full px-4 py-2  cursor-pointer transition-all duration-300 text-nowrap `}
           onClick={() => setIsUserBenifits(true)}
@@ -89,7 +89,7 @@ const Benefits = () => {
         <div
           className={`opacity-80 rounded-r-md  h-full w-full absolute top-0 right-0 ${
             isUserBenefits
-              ? " bg-yellow-500 dark:bg-yellow-600"
+              ? " bg-green-400 dark:bg-green-600"
               : "bg-green-400 dark:bg-green-600"
           } transition-all duration-500 z-[30]`}
         ></div>
@@ -97,7 +97,7 @@ const Benefits = () => {
         <div
           className={`w-[95%] sm:w-[80%] z-[40]   ${
             isUserBenefits
-              ? "bg-yellow-700/50 dark:bg-yellow-600/50"
+              ? "bg-green-800/50 dark:bg-green-600/50"
               : "bg-green-800/50 dark:bg-green-600/50"
           }  transition-all duration-500 p-4 py-6 xl:py-10 xl:my-2 rounded-l-md flex flex-col gap-6 sm:gap-10`}
         >
@@ -196,7 +196,7 @@ const Benefits = () => {
           <div className=" p-1 rounded-full bg-gradient-to-r from-transparent to-[#eff0f2]/70 dark:to-black/70 z-[30] ">
             <div className="p-1 bg-[#eff0f2] rounded-full ">
               {isUserBenefits ? (
-                <ImUserPlus className="text-[16px] sm:text-[22px] text-yellow-700" />
+                <ImUserPlus className="text-[16px] sm:text-[22px] text-green-700" />
               ) : (
                 <IoStorefront className="text-[16px] sm:text-[22px] text-green-600 dark:text-green-700" />
               )}
@@ -206,7 +206,7 @@ const Benefits = () => {
           <div
             className={`absolute left-1/2 bg-gradient-to-r ${
               isUserBenefits
-                ? "from-yellow-600/50 dark:from-yellow-700 via-yellow-500/50 dark:via-yellow-700"
+                ? "from-green-600/50 dark:from-green-700 via-green-500/50 dark:via-green-700"
                 : "from-green-600/50 dark:from-green-700 via-green-500/40 dark:via-green-700"
             } to-[#eff0f2] dark:to-[#06062a] transition-all duration-500 w-fit h-[70%] text-nowrap pl-[50%] z-[20] flex justify-center items-center pr-2 text-[12px] sm:text-[14px] xl:text-[0.8rem] font-medium`}
           >

@@ -1,5 +1,3 @@
-"use client";
-
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
 

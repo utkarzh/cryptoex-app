@@ -3,11 +3,11 @@ import React, { FC, useEffect, useState } from "react";
 import AirdropJoinCard from "./AirdropJoinCard";
 import ParticipantCard from "@/components/common/ParticipantCard";
 import AirdropContestInfo from "./AirdropContestInfo";
-import SocialMediaIconCard from "@/components/common/SocialMediaIconCard";
 import { useGetAirdropDetailsMutation } from "@/redux/features/events/eventsApi";
 import { AirDropDetailsApiResult_int } from "../../types";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import { getStatus } from "@/utils/getStatus";
+import SocialMediaIconCardAirdrop from "./SocialMediaIconCardAirdrop";
 
 type Props = {
   ieovendor: string;
@@ -27,8 +27,8 @@ const AirdropContest: FC<Props> = ({ ieovendor }) => {
   useEffect(() => {
     if (!data) return;
     const returnedStatus = getStatus(
-      data.ieovendors[0].airdropcoins_startdays,
-      data.ieovendors[0].airdropcoins_enddays
+      data?.ieovendors[0]?.airdropcoins_startdays,
+      data?.ieovendors[0]?.airdropcoins_enddays
     );
     setStatue(returnedStatus);
   }, [data]);
@@ -38,8 +38,8 @@ const AirdropContest: FC<Props> = ({ ieovendor }) => {
       <div className="w-full flex flex-col ">
         {data ? (
           <>
-            <AirdropContestInfo contestInfo={data.ieovendors[0]} />
-            <SocialMediaIconCard contestInfo={data.ieovendors[0]} />
+            <AirdropContestInfo contestInfo={data?.ieovendors[0]} />
+            <SocialMediaIconCardAirdrop contestInfo={data?.ieovendors[0]} />
           </>
         ) : (
           <LoadingTableSkeleton columns={1} rows={5} />
@@ -47,8 +47,16 @@ const AirdropContest: FC<Props> = ({ ieovendor }) => {
       </div>
       {/* right section */}
       <div className="w-full flex flex-col gap-2 items-end ">
-        <AirdropJoinCard />
-        {status === "ongoing" && <ParticipantCard Participants={3} />}
+        {data ? (
+          <AirdropJoinCard contestInfo={data?.ieovendors[0]} />
+        ) : (
+          <LoadingTableSkeleton rows={2} columns={1} />
+        )}
+        {status === "ongoing" && (
+          <ParticipantCard
+            Participants={Number(data?.ieovendors[0]?.airdropcoins_enddays)}
+          />
+        )}
       </div>
     </div>
   );

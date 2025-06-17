@@ -51,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (data) {
+    if (data && data.status === 1) {
       setNewListing(data.vendors);
     }
   }, [data]);

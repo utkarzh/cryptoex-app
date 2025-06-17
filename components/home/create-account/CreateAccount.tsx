@@ -49,9 +49,7 @@ const CreateAccount = () => {
             </div>
             <div
               className={`h-0 sm:h-3 w-full sm:w-0 xl:h-4 ${
-                activeState >= 2
-                  ? "border-green-600"
-                  : "border-slate-300 dark:border-white"
+                activeState >= 2 ? "border-green-600" : "border-transparent"
               } border transition-all duration-300 `}
             ></div>
             <div

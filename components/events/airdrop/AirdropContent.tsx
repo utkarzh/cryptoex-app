@@ -10,7 +10,7 @@ import StatusCardAirdrop from "./StatusCardAirdrop";
 const AirdropContent = () => {
   const t = useTranslations("airDrop");
 
-  const [filteredData, setFilteredData] = useState<IeoVendor_int[]>();
+  const [filteredData, setFilteredData] = useState<IeoVendor_int[]>([]);
   const [selectedTab, setSelectedTab] = useState<
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
@@ -23,6 +23,7 @@ const AirdropContent = () => {
 
   useEffect(() => {
     if (!data) return;
+    if (data.status == 0) return;
     if (selectedTab === "all") {
       setFilteredData(data.ieovendors);
     } else if (selectedTab === "ongoing") {
@@ -69,11 +70,13 @@ const AirdropContent = () => {
         </div>
 
         {/* content */}
-        <div className=" w-[90%] md:w-[85%] lg:w-[80%] mt-10 mx-auto flex flex-wrap justify-center ">
-          {filteredData ? (
+        <div className=" w-[90%]  md:w-[85%] lg:w-[80%] mt-10 mx-auto flex flex-wrap justify-center ">
+          {filteredData.length > 0 ? (
             <StatusCardAirdrop data={filteredData} />
           ) : (
-            <LoadingTableSkeleton columns={1} rows={6} />
+            <div className="w-screen ">
+              <LoadingTableSkeleton columns={3} rows={6} />
+            </div>
           )}
         </div>
       </div>
