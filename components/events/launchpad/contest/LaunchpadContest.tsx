@@ -1,6 +1,6 @@
 import React from "react";
 import LaunchpadContestInfo from "./LaunchpadContestInfo";
-import SocialMediaIconCard from "@/components/common/SocialMediaIconCard";
+// import SocialMediaIconCard from "@/components/common/SocialMediaIconCard";
 import ContestTeam from "./ContestTeam";
 import LaunchJoinCard from "./LaunchJoinCard";
 
@@ -11,7 +11,7 @@ const LaunchpadContest = () => {
       <div className="w-full flex flex-col ">
         <LaunchpadContestInfo />
         <ContestTeam />
-        <SocialMediaIconCard />
+        {/* <SocialMediaIconCard  /> */}
       </div>
       {/* right section */}
       <div className="w-full flex flex-col gap-2 items-end">
