@@ -56,6 +56,33 @@ export const eventsApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    getTradeContestList: builder.mutation({
+      query: () => {
+        const sessionid = getSessionId();
+        return {
+          url: "gettradecontestlisting",
+          method: "POST",
+          body: {
+            sessionid,
+          },
+        };
+      },
+    }),
+
+    getTradeContestDetails: builder.mutation({
+      query: (tradecontestid: string) => {
+        const sessionid = getSessionId();
+        return {
+          url: "gettradecontestindetail",
+          method: "POST",
+          body: {
+            sessionid,
+            tradecontestid,
+          },
+        };
+      },
+    }),
   }),
 });
 
@@ -64,4 +91,6 @@ export const {
   useGetAirdropDetailsMutation,
   useGetLaunchpadListMutation,
   useGetLaunchpadDetailsMutation,
+  useGetTradeContestListMutation,
+  useGetTradeContestDetailsMutation,
 } = eventsApi;

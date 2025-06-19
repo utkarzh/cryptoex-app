@@ -8,12 +8,18 @@ import Features from "./features/Features";
 import Partners from "./partners/Partners";
 import { useGetHomePageDataMutation } from "@/redux/features/homepage/homeApi";
 import { HomeDataApi_int } from "./types";
+import { toast } from "sonner";
 
 const Home = () => {
-  const [getHomeData, { data }] = useGetHomePageDataMutation<HomeDataApi_int>();
+  const [getHomeData, { data, error }] =
+    useGetHomePageDataMutation<HomeDataApi_int>();
   useEffect(() => {
     getHomeData({});
   }, []);
+
+  useEffect(() => {
+    if (error) toast.error(error);
+  }, [error]);
 
   return (
     <div className="w-full">

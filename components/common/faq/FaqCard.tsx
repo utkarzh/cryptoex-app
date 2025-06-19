@@ -18,7 +18,7 @@ const FaqCard: FC<Props> = ({ question, answer, defaultVisibility }) => {
     <div className="w-full rounded-xl p-6 px-8 bg-white dark:bg-[#161735] shadow shadow-black/40 dark:shadow-white/20 flex flex-col gap-3">
       {/* question */}
       <div className="w-full flex justify-between items-center">
-        <h2 className={`${saira.className} text-[12px] font-bold`}>
+        <h2 className={`${saira.className} text-xs xl:text-[0.9rem] font-bold`}>
           {question}
         </h2>
         <div onClick={visibilityHandler} className="cursor-pointer text-lg">
@@ -28,7 +28,7 @@ const FaqCard: FC<Props> = ({ question, answer, defaultVisibility }) => {
 
       {/* answer*/}
       {isVisible && (
-        <div className="w-full text-[12px] font-extralight">{answer}</div>
+        <div className="w-full text-xs font-extralight ">{answer}</div>
       )}
     </div>
   );

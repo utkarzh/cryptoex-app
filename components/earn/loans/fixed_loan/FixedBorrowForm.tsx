@@ -55,7 +55,7 @@ export default function FixedBorrowForm() {
   return (
     <div className="w-full mb-8 bg-white/80 dark:bg-[#161735] rounded-2xl  shadow-lg p-4   ">
       {/* Tabs */}
-      <div className="flex text-[14px] justify-evenly mb-6">
+      <div className="flex text-[14px] xl:text-[0.9rem] justify-evenly mb-6">
         {["borrow", "supply"].map((val) => (
           <button
             key={val}
@@ -72,12 +72,12 @@ export default function FixedBorrowForm() {
       {/* Borrow Amount */}
       <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
-        <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+        <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
           {t("borrow.terms.bAmount")}
         </label>
         <input
           type="text"
-          className="outline-none border-none w-full bg-transparent text-[12px]"
+          className="outline-none border-none w-full bg-transparent text-xs"
           placeholder={t("borrow.terms.min")}
         />
         {/* coin selection */}
@@ -95,14 +95,14 @@ export default function FixedBorrowForm() {
               width={30}
               height={30}
               alt=""
-              className="w-4 h-auto py-1"
+              className="w-4 xl:w-5 h-auto py-1"
             />
             {/* name */}
-            <p className="text-[12px]">{borrowCoin.symbol}</p>
+            <p className="text-xs">{borrowCoin.symbol}</p>
           </div>
 
           {isBorrowSelectionOpen && (
-            <div className="absolute w-full min-w-[100px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
+            <div className="absolute w-full min-w-[100px] xl:min-w-[120px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
               {testCoinData.map((val) => (
                 <div
                   key={val.symbol}
@@ -119,10 +119,10 @@ export default function FixedBorrowForm() {
                       width={30}
                       height={30}
                       alt=""
-                      className="w-4 h-auto py-1"
+                      className="w-4 xl:w-5 h-auto py-1"
                     />
                     {/* name */}
-                    <p className="text-[12px]">{val.symbol}</p>
+                    <p className="text-xs">{val.symbol}</p>
                   </div>
                 </div>
               ))}
@@ -136,12 +136,12 @@ export default function FixedBorrowForm() {
       {/* Expected Interest Rate */}
       <div className="w-full mt-6 border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
-        <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+        <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
           {t("borrow.terms.expRate")}
         </label>
         <input
           type="text"
-          className="outline-none border-none w-full bg-transparent text-[12px]"
+          className="outline-none border-none w-full bg-transparent text-xs"
           placeholder={t("borrow.terms.intRate")}
         />
         {/* coin selection */}
@@ -149,7 +149,7 @@ export default function FixedBorrowForm() {
           %
         </div>
 
-        <p className="absolute -bottom-5 left-3 text-[10px] font-extralight dark:opacity-60 opacity-100">
+        <p className="absolute -bottom-5 xl:-bottom-5.5 left-3 text-[10px] xl:text-xs   font-extralight dark:opacity-60 opacity-100">
           {t("borrow.terms.refMarket")}: 5.04%
         </p>
       </div>
@@ -179,11 +179,11 @@ export default function FixedBorrowForm() {
       {/* Collateral */}
       <div className="w-full mt-6 border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
         {/* label */}
-        <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
+        <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#161735] px-1 ">
           {t("borrow.terms.collateral")}
         </label>
 
-        <div className="w-full flex gap-1 justify-center items-center text-[12px] font-extralight opacity-70 dark:opacity-40">
+        <div className="w-full flex gap-1 justify-center items-center text-xs font-extralight opacity-70 dark:opacity-40">
           <IoIosAddCircleOutline className="text-lg" />
           <span>{t("borrow.terms.setUp")}</span>
         </div>
@@ -208,7 +208,7 @@ export default function FixedBorrowForm() {
       </div>
 
       {/* Button */}
-      <button className="w-full mt-6 text-[14px] bg-green-600 hover:bg-green-700 text-white dark:text-black  font-semibold py-2 rounded-full cursor-pointer transition-all duration-300">
+      <button className="w-full mt-6 text-[14px] xl:text-xs bg-green-600 hover:bg-green-700 text-white dark:text-black  font-semibold py-2 rounded-full cursor-pointer transition-all duration-300">
         {t("button")}
       </button>
     </div>

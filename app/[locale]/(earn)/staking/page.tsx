@@ -5,7 +5,9 @@ const Page = () => {
   return (
     <div className="w-full h-fit ">
       <StakeHero />
-      <StakeMain />
+      <div className="w-[95%] sm:w-[85%] md:w-[80%]  lg:w-[70%] mx-auto">
+        <StakeMain />
+      </div>
     </div>
   );
 };

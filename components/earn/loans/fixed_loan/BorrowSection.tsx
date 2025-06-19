@@ -18,7 +18,7 @@ const BorrowSection = () => {
         {/*  */}
         <div className="flex h-fit items-center gap-3 text-sm mb-8">
           <div className="">
-            <p className="text-[12px] opacity-70 font-light">
+            <p className="text-xs opacity-70 font-light">
               {t("stats.totalBorrowed")}
             </p>
             <p className="text-xs font-bold">$173.02M</p>
@@ -27,7 +27,7 @@ const BorrowSection = () => {
           <div className="flex h-full opacity-30 ">|</div>
 
           <div>
-            <p className="text-[12px] opacity-70 font-light">
+            <p className="text-xs opacity-70 font-light">
               {t("stats.currentOrders")}
             </p>
             <p className="text-xs font-bold">$39.11M</p>
@@ -36,10 +36,10 @@ const BorrowSection = () => {
           <div className="flex h-full opacity-30 ">|</div>
 
           <div>
-            <p className="text-[12px] opacity-70 font-light">
+            <p className="text-xs opacity-70 font-light">
               {t("stats.rate.label")}
             </p>
-            <p className="text-[12px] opacity-70 font-light">
+            <p className="text-xs opacity-70 font-light">
               {t("stats.rate.content")}
             </p>
           </div>
@@ -61,10 +61,10 @@ const BorrowSection = () => {
               <div className="flex items-center gap-3">
                 <LuClock3 />
                 <div className="text-left">
-                  <p className=" text-[14px] font-medium">
+                  <p className="text-[14px] xl:text-[1rem]  font-medium">
                     {t("myOrder.pOrders.label")}
                   </p>
-                  <p className="text-[10px] font-extralight">
+                  <p className="text-xs font-extralight">
                     {t("myOrder.pOrders.content")}
                   </p>
                 </div>
@@ -75,10 +75,10 @@ const BorrowSection = () => {
               <div className="flex items-center gap-3">
                 <MdReplay className="text-lg rotate-y-180" />
                 <div className="text-left">
-                  <p className="text-[14px] font-medium">
+                  <p className="text-[14px] xl:text-[1rem] font-medium">
                     {t("myOrder.oOrders.label")}
                   </p>
-                  <p className="text-[10px] font-extralight">
+                  <p className="text-xs font-extralight">
                     {t("myOrder.oOrders.content")}
                   </p>
                 </div>
@@ -89,7 +89,7 @@ const BorrowSection = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-full ">
+      <div className="w-full xl:w-[86%] ">
         <FixedBorrowForm />
       </div>
     </div>

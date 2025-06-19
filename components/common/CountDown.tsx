@@ -48,7 +48,7 @@ const Countdown: FC<Props> = ({ startDate }) => {
   }, []);
 
   return (
-    <div className="w-fit bg-white dark:bg-[#161735] p-4 rounded-xl px-6 flex gap-4 justify-start items-center">
+    <div className="w-fit bg-white dark:bg-[#161735] p-4 rounded-xl px-6  flex gap-4 justify-start items-center">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex flex-col items-center  ">
           <span className="text-green-100 text-lg font-bold bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-3 border border-green-600 rounded-md hover:bg-green-700 dark:hover:bg-green-500/30">

@@ -8,6 +8,7 @@ import { ReduxProvider } from "@/redux/ReduxProvider";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Indoex Digital Assets Exchange",
@@ -38,6 +39,7 @@ export default async function RootLayout({
           <ReduxProvider>
             <NextIntlClientProvider>
               <Navbar />
+              <Toaster richColors position="top-right" />
               <div className="w-full mt-[0] overflow-hidden">{children}</div>
               {/* <Footer /> */}
             </NextIntlClientProvider>

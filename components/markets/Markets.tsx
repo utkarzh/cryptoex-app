@@ -34,39 +34,41 @@ const Markets = () => {
 
   useEffect(() => {
     if (!data) return;
-    const newListed = [];
-    for (let loopvar = 0; loopvar < data.vendors.length; loopvar++) {
-      for (
-        let loopvarinner = 0;
-        loopvarinner < data.analytics.length;
-        loopvarinner++
-      ) {
-        if (
-          data.analytics[loopvarinner].vendor ==
-          data.vendors[loopvar].vendors_vendorshortcode
+    if (data?.status === 1) {
+      const newListed = [];
+      for (let loopvar = 0; loopvar < data.vendors.length; loopvar++) {
+        for (
+          let loopvarinner = 0;
+          loopvarinner < data.analytics.length;
+          loopvarinner++
         ) {
-          newListed.push(data.analytics[loopvarinner]);
+          if (
+            data.analytics[loopvarinner].vendor ==
+            data.vendors[loopvar].vendors_vendorshortcode
+          ) {
+            newListed.push(data.analytics[loopvarinner]);
+          }
         }
       }
+
+      const topGainer = data.analytics.slice().sort((a, b) => b.rate - a.rate);
+      // whole data
+      setSpotList(data.analytics);
+      setNewList(newListed);
+      setTopList(topGainer);
+
+      // glance data is:--
+      const tempGainerGlance = topGainer.slice(0, 4);
+      const tempNewListingGlance = newListed.slice(0, 4);
+      const tranding = data.analytics.filter((val) => val.istrending);
+      const tempTredningGlance =
+        tranding.length > 0 ? tranding.slice(0, 4) : newListed.slice(4, 8);
+      setGlanceData({
+        topGainers: tempGainerGlance,
+        newListing: tempNewListingGlance,
+        trending: tempTredningGlance,
+      });
     }
-
-    const topGainer = data.analytics.slice().sort((a, b) => b.rate - a.rate);
-    // whole data
-    setSpotList(data.analytics);
-    setNewList(newListed);
-    setTopList(topGainer);
-
-    // glance data is:--
-    const tempGainerGlance = topGainer.slice(0, 4);
-    const tempNewListingGlance = newListed.slice(0, 4);
-    const tranding = data.analytics.filter((val) => val.istrending);
-    const tempTredningGlance =
-      tranding.length > 0 ? tranding.slice(0, 4) : newListed.slice(4, 8);
-    setGlanceData({
-      topGainers: tempGainerGlance,
-      newListing: tempNewListingGlance,
-      trending: tempTredningGlance,
-    });
   }, [data]);
 
   console.log("Data at market page is:-", data);

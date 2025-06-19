@@ -3,6 +3,9 @@ import ContentCard from "./ContentCard";
 import StakeTable from "./StakeTable";
 import Faq from "@/components/common/faq/Faq";
 import { useTranslations } from "next-intl";
+import { LuClock3 } from "react-icons/lu";
+import { RiStackLine } from "react-icons/ri";
+import { TbGift } from "react-icons/tb";
 
 const StakeMain = () => {
   const t = useTranslations("stakingPage");
@@ -10,14 +13,17 @@ const StakeMain = () => {
     {
       title: t("info.info1.title"),
       content: t("info.info1.content"),
+      icon: <RiStackLine className="text-xl" />,
     },
     {
       title: t("info.info2.title"),
       content: t("info.info2.content"),
+      icon: <LuClock3 className="text-xl" />,
     },
     {
       title: t("info.info3.title"),
       content: t("info.info3.content"),
+      icon: <TbGift className="text-xl" />,
     },
   ];
 
@@ -40,11 +46,16 @@ const StakeMain = () => {
     },
   ];
   return (
-    <div className="w-[95%] sm:w-[85%] md:w-[80%]  lg:w-[70%] mx-auto py-20 h-full">
+    <div className="w-full mx-auto py-20 h-full">
       {/* content cards */}
-      <div className="w-full flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="w-full flex flex-col sm:flex-row gap-5 justify-center">
         {test.map((val, index) => (
-          <ContentCard title={val.title} content={val.content} key={index} />
+          <ContentCard
+            title={val.title}
+            content={val.content}
+            key={index}
+            icon={val.icon}
+          />
         ))}
       </div>
 

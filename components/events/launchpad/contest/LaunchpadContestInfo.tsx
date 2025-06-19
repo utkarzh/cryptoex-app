@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
-import Countdown from "./CountDown";
 import { LuDownload } from "react-icons/lu";
 import { useTranslations } from "next-intl";
 import { IeoLunchpadVendorDetails_int, MarketResult_int } from "../../types";
 import { FC } from "react";
 import { formatCoinRate } from "@/utils/formateCoinRate";
-import { formatDateToISO } from "@/utils/formateDateToISO";
+// import { formatDateToISO } from "@/utils/formateDateToISO";
 import { getStatus } from "@/utils/getStatus";
+// import Countdown from "@/components/common/CountDown";
 
 type Props = {
   contestInfo: IeoLunchpadVendorDetails_int;
@@ -15,7 +15,6 @@ type Props = {
 };
 
 const LaunchpadContestInfo: FC<Props> = ({ contestInfo, currentVendor }) => {
-  console.log("Current vendor data at contestpage :--", currentVendor);
   const t = useTranslations("launchPad.contest.terms");
   const coinDetails = [
     { label: t("fName"), value: `${contestInfo.vendors_vendorname}` },
@@ -68,7 +67,7 @@ const LaunchpadContestInfo: FC<Props> = ({ contestInfo, currentVendor }) => {
 
       {/* countdown */}
       <section className="space-y-4 pt-2">
-        {(contestStatus === "ongoing" || contestStatus === "upcoming") && (
+        {/* {(contestStatus === "ongoing" || contestStatus === "upcoming") && (
           <>
             <h6 className="text-xs font-normal ">
               {contestStatus === "upcoming" ? t("startsIn") : t("endsIn")}
@@ -76,14 +75,14 @@ const LaunchpadContestInfo: FC<Props> = ({ contestInfo, currentVendor }) => {
             <Countdown
               startDate={
                 contestStatus == "ongoing"
-                  ? formatDateToISO("19-06-2025")
+                  ? formatDateToISO(contestInfo.icocoins_enddate)
                   : contestStatus == "upcoming"
-                  ? formatDateToISO("20-06-2025")
+                  ? formatDateToISO(contestInfo.icocoins_startdate)
                   : ""
               }
             />
           </>
-        )}
+        )} */}
 
         {contestStatus === "completed" && (
           <div className="w-full bg-white dark:bg-[#161735] p-4 rounded-xl px-6 flex gap-4 justify-center items-center">

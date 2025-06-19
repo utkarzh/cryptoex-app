@@ -27,6 +27,7 @@ export interface AirDropData_int {
 
 export interface AirdropApiResult_int {
   data: AirDropData_int;
+  isLoading: boolean;
 }
 
 // airdrop contest details
@@ -118,9 +119,10 @@ export interface LaunchPadData_int {
 
 export interface LaunchpadApiResult_int {
   data: LaunchPadData_int;
+  isLoading: boolean;
 }
 
-// launchpad contest details
+// single launchpad contest details
 export interface IeoLunchpadVendorDetails_int {
   vendors_id: number;
   vendors_logopath: string;
@@ -149,6 +151,7 @@ export interface IeoLunchpadVendorDetails_int {
   icocoins_enddate: string;
   icocoins_enddays: string;
   icocoins_mincount: number;
+  icocoins_maxcount?: number; // it will be added later
   icocoins_numberofcoins: number;
   icocoins_currentsale: number;
   icocoins_description: string;
@@ -183,4 +186,87 @@ export interface LaunchpadDetails_int {
 
 export interface LaunchpadDetailsApiResult_int {
   data: LaunchpadDetails_int;
+}
+
+// tradecontest list related types
+export interface TradeContestVendor_int {
+  vendors_id: number;
+  vendors_vendorname: string;
+  vendors_vendorshortcode: string;
+  tradecontestcoins_id: number;
+  tradecontestcoins_refkey: number;
+  tradecontestcoins_createdon: date;
+  tradecontestcoins_priceamount: number;
+  tradecontestcoins_pricemembers: number;
+  tradecontestcoins_description: string;
+  tradecontestcoins_bannerimage: string;
+  tradecontestcoins_logopath: string; //will be added later by backend team
+  tradecontestcoins_startdate: string;
+  tradecontestcoins_enddate: string;
+  tradecontestcoins_startdays: string;
+  tradecontestcoins_enddays: string;
+}
+
+export interface TradeContestData_int {
+  status: number;
+  message: string;
+  tradecontestvendors: TradeContestVendor_int[];
+  sessionid: null | string;
+}
+
+export interface TradeContestApiResult_int {
+  data: TradeContestData_int;
+  isLoading: boolean;
+}
+
+// single trade contest details
+export interface TradeContestUsers_int {
+  tradecontestusers_username: string;
+  tradecontestusers_amount: number;
+}
+
+export interface TradeContestVendors_int {
+  vendors_id: number;
+  vendors_logopath: string;
+  vendors_vendorname: string;
+  vendors_vendorshortcode: string;
+  vendors_maxsupply: string;
+  vendors_website: string;
+  vendors_blockexplorersource: string;
+  vendors_githubsource: string;
+  vendors_telegram: string;
+  vendors_twitter: string;
+  vendors_facebook: string;
+  vendors_usdrate: number;
+  vendors_linkedin: string;
+  vendors_tradewithticker: string;
+  tradecontestcoins_id: number;
+  tradecontestcoins_refkey: number;
+  tradecontestcoins_createdon: date;
+  tradecontestcoins_projectdetaildescription: string;
+  tradecontestcoins_winnerrewards: string;
+  tradecontestcoins_priceamount: number;
+  tradecontestcoins_pricemembers: number;
+  tradecontestcoins_description: string;
+  tradecontestcoins_bannerimage: string;
+  tradecontestcoins_detailbannerimage: string;
+  tradecontestcoins_startdate: string;
+  tradecontestcoins_enddate: string;
+  tradecontestcoins_startdays: string;
+  tradecontestcoins_enddays: string;
+}
+
+export interface TradeContestDetails_int {
+  status: number;
+  message: string;
+  userstatus: boolean;
+  tradecontestuserscount: number;
+  tradecontestusers: TradeContestUsers_int[];
+  tradecontestvendors: TradeContestVendors_int[];
+  sessionid: null | string;
+}
+
+export interface TradeContestDetailsApiResult_int {
+  data: TradeContestDetails_int;
+  isLoading: boolean;
 }

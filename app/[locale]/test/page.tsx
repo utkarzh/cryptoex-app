@@ -3,7 +3,7 @@
 // import LoginForm from "@/components/auth/LoginForm";
 "use client";
 import SliderControl from "./Test1";
-import TokenCard1 from "./Test2";
+// import TokenCard1 from "./Test2";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
 // import ImageCarousel from "./Test";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";

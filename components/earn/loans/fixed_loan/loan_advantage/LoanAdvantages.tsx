@@ -32,20 +32,22 @@ export default function LoanAdvantages() {
 
   const scrollRight = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: 400, behavior: "smooth" });
     }
   };
 
   const scrollLeft = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      containerRef.current.scrollBy({ left: -400, behavior: "smooth" });
     }
   };
 
   return (
     <div className="py-10 px-4">
       <div className="flex items-center justify-between mb-6">
-        <h2 className={`${saira.className} text-[20px]`}>{t("title")}</h2>
+        <h2 className={`${saira.className} text-[20px] xl:text-[1.7rem]`}>
+          {t("title")}
+        </h2>
 
         {/* button */}
         <div className="flex gap-2">
@@ -66,12 +68,12 @@ export default function LoanAdvantages() {
       </div>
       <div
         ref={containerRef}
-        className="flex space-x-4  overflow-hidden scrollbar-hide py-2"
+        className="flex space-x-4 overflow-hidden scrollbar-hide py-2"
       >
         {advantages.map((item, idx) => (
           <div
             key={idx}
-            className="min-w-[250px] bg-white  shadow shadow-black/40 dark:shadow-white/20 dark:bg-[#161735]  rounded-xl p-3 py-5 flex  flex-col gap-3"
+            className="w-full min-w-[400px] h-[200px] bg-white  shadow shadow-black/40 dark:shadow-white/20 dark:bg-[#161735]  rounded-xl p-3 py-5 flex  flex-col gap-3"
           >
             {/* heading */}
             <div className="flex gap-1 items-center">

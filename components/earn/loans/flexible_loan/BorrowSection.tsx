@@ -97,20 +97,20 @@ export default function BorrowSection() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full space-y-4 ">
+      <div className="w-full space-y-4 xl:space-y-6">
         {/* collateral input */}
         <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
           {/* label */}
-          <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#06062a] px-1 ">
+          <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#06062a] px-1 ">
             {t("borrowForm.terms.collateral")}
           </label>
           <input
             type="text"
-            className="outline-none border-none w-full bg-transparent text-[12px]"
+            className="outline-none border-none w-full bg-transparent text-xs"
             placeholder={t("borrowForm.terms.enterAmount")}
           />
 
-          <div className="opacity-70 text-green-600 text-[12px]">
+          <div className="opacity-70 text-green-600 text-xs">
             {t("borrowForm.terms.max")}
           </div>
           {/* coin selection collateral */}
@@ -128,18 +128,18 @@ export default function BorrowSection() {
                 width={30}
                 height={30}
                 alt=""
-                className="w-4 h-auto py-1"
+                className="w-4 xl:w-5 h-auto py-1"
               />
               {/* name */}
-              <p className="text-[12px]">{collateralCoin.symbol}</p>
+              <p className="text-xs">{collateralCoin.symbol}</p>
             </div>
 
             {isCollateralSelectionOpen && (
-              <div className="absolute w-full min-w-[100px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
+              <div className="absolute w-full min-w-[100px] xl:min-w-[120px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
                 {testCoinData.map((val) => (
                   <div
                     key={val.symbol}
-                    className="p-1 px-2 bg-slate-300/30 dark:bg-slate-500/20 rounded-full cursor-pointer"
+                    className="p-1 px-2  bg-slate-300/30 dark:bg-slate-500/20 rounded-full cursor-pointer"
                     onClick={(e) => {
                       e.stopPropagation();
                       collateralSelectHandler(val);
@@ -152,10 +152,10 @@ export default function BorrowSection() {
                         width={30}
                         height={30}
                         alt=""
-                        className="w-4 h-auto py-1"
+                        className="w-4 xl:w-5 h-auto py-1"
                       />
                       {/* name */}
-                      <p className="text-[12px]">{val.symbol}</p>
+                      <p className="text-xs">{val.symbol}</p>
                     </div>
                   </div>
                 ))}
@@ -169,12 +169,12 @@ export default function BorrowSection() {
         {/* Borrow Input */}
         <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
           {/* label */}
-          <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#06062a] px-1 ">
+          <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-[#eff0f2]  dark:bg-[#06062a] px-1 ">
             {t("borrowForm.terms.wantBorrow")}
           </label>
           <input
             type="text"
-            className="outline-none border-none w-full bg-transparent text-[12px]"
+            className="outline-none border-none w-full bg-transparent text-xs"
             placeholder={t("borrowForm.terms.enterAmount")}
           />
 
@@ -193,14 +193,14 @@ export default function BorrowSection() {
                 width={30}
                 height={30}
                 alt=""
-                className="w-4 h-auto py-1"
+                className="w-4 xl:w-5 h-auto py-1"
               />
               {/* name */}
-              <p className="text-[12px]">{borrowCoin.symbol}</p>
+              <p className="text-xs">{borrowCoin.symbol}</p>
             </div>
 
             {isBorrowSelectionOpen && (
-              <div className="absolute w-full min-w-[100px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
+              <div className="absolute w-full min-w-[100px] xl:min-w-[120px] h-[200px] border top-[100%] translate-y-1 rounded-md left-0 overflow-y-auto bg-white dark:bg-[#1d1f38] z-[40] border-black/30 dark:border-white/30 flex flex-col gap-2 p-1.5">
                 {testCoinData.map((val) => (
                   <div
                     key={val.symbol}
@@ -217,10 +217,10 @@ export default function BorrowSection() {
                         width={30}
                         height={30}
                         alt=""
-                        className="w-4 h-auto py-1"
+                        className="w-4 xl:w-5 h-auto py-1"
                       />
                       {/* name */}
-                      <p className="text-[12px]">{val.symbol}</p>
+                      <p className="text-xs">{val.symbol}</p>
                     </div>
                   </div>
                 ))}
@@ -234,13 +234,13 @@ export default function BorrowSection() {
         {/* Details Dropdown - Placeholder */}
         <div className="dark:bg-[#161735] bg-slate-700/15 px-4 py-2 rounded-lg">
           <button className="text-left w-full flex gap-2 items-center">
-            <span className="text-[12px]">{t("borrowForm.terms.details")}</span>
+            <span className="text-xs">{t("borrowForm.terms.details")}</span>
             <IoIosArrowDown className=" text-sm cursor-pointer" />
           </button>
         </div>
 
         {/* Login Button */}
-        <button className="w-full mt-4 text-[14px] bg-green-600 hover:bg-green-700 text-white dark:text-black  font-semibold py-2 rounded-full cursor-pointer transition-all duration-300">
+        <button className="w-full mt-4 text-[14px] xl:text-xs bg-green-600 hover:bg-green-700 text-white dark:text-black  font-semibold py-2.5 rounded-full cursor-pointer transition-all duration-300">
           {t("borrowForm.button")}
         </button>
       </div>

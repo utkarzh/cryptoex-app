@@ -3,14 +3,17 @@ import React, { FC } from "react";
 
 type Props = {
   Participants: number;
+  status: "ongoing" | "upcoming" | "completed" | "";
 };
 
-const ParticipantCard: FC<Props> = ({ Participants }) => {
+const AirdropStatusCard: FC<Props> = ({ Participants, status }) => {
   const t = useTranslations("airDrop.contest.terms");
   return (
     <div className="w-full bg-white dark:bg-[#161735] p-4 rounded-md">
       <div className="flex gap-6 justify-between items-center">
-        <p className="text-sm font-medium">{t("daysRem")}</p>
+        <p className="text-sm font-medium">
+          {status === "ongoing" ? t("daysRem") : t("startsIn")}
+        </p>
         <div className="text-[12px] text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-3 border border-green-600 rounded-md hover:bg-green-700 dark:hover:bg-green-500/30 cursor-pointer  transition-all duration-300 ">
           <span className="text-2xl font-bold">{Participants}</span>
         </div>
@@ -19,4 +22,4 @@ const ParticipantCard: FC<Props> = ({ Participants }) => {
   );
 };
 
-export default ParticipantCard;
+export default AirdropStatusCard;

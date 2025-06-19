@@ -15,7 +15,7 @@ const StakeButton = () => {
   return (
     <>
       <button
-        className="px-4 p-1 text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 rounded-full cursor-pointer "
+        className="px-4 p-1 text-xs text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 rounded-full cursor-pointer "
         onClick={modelOpenhandler}
       >
         {t("button")}

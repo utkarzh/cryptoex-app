@@ -16,7 +16,7 @@ const LaunchpadContent = () => {
     "all" | "ongoing" | "upcoming" | "completed"
   >("all");
 
-  const [getAirDropList, { data }] =
+  const [getAirDropList, { data, isLoading }] =
     useGetLaunchpadListMutation<LaunchpadApiResult_int>();
   useEffect(() => {
     getAirDropList({});
@@ -24,27 +24,32 @@ const LaunchpadContent = () => {
 
   useEffect(() => {
     if (!data) return;
-    if (data.status === 0) return;
-    if (selectedTab === "all") {
-      setFilteredData(data.ieovendors);
-    } else if (selectedTab === "ongoing") {
-      const tempFilteredArr = data.ieovendors.filter(
-        (val) =>
-          Number(val.icocoins_startdays) < 0 && Number(val.icocoins_enddays) > 0
-      );
-      setFilteredData(tempFilteredArr);
-    } else if (selectedTab === "upcoming") {
-      const tempFilteredArr = data.ieovendors.filter(
-        (val) =>
-          Number(val.icocoins_startdays) > 0 && Number(val.icocoins_enddays) > 0
-      );
-      setFilteredData(tempFilteredArr);
-    } else if (selectedTab === "completed") {
-      const tempFilteredArr = data.ieovendors.filter(
-        (val) =>
-          Number(val.icocoins_startdays) < 0 && Number(val.icocoins_enddays) < 0
-      );
-      setFilteredData(tempFilteredArr);
+
+    if (data?.status === 1) {
+      if (selectedTab === "all") {
+        setFilteredData(data.ieovendors);
+      } else if (selectedTab === "ongoing") {
+        const tempFilteredArr = data.ieovendors.filter(
+          (val) =>
+            Number(val.icocoins_startdays) < 0 &&
+            Number(val.icocoins_enddays) > 0
+        );
+        setFilteredData(tempFilteredArr);
+      } else if (selectedTab === "upcoming") {
+        const tempFilteredArr = data.ieovendors.filter(
+          (val) =>
+            Number(val.icocoins_startdays) > 0 &&
+            Number(val.icocoins_enddays) > 0
+        );
+        setFilteredData(tempFilteredArr);
+      } else if (selectedTab === "completed") {
+        const tempFilteredArr = data.ieovendors.filter(
+          (val) =>
+            Number(val.icocoins_startdays) < 0 &&
+            Number(val.icocoins_enddays) < 0
+        );
+        setFilteredData(tempFilteredArr);
+      }
     }
   }, [data, selectedTab]);
 
@@ -73,7 +78,7 @@ const LaunchpadContent = () => {
 
         {/* content */}
         <div className=" w-[90%] md:w-[85%] lg:w-[80%] mt-10 mx-auto flex flex-wrap justify-center">
-          {filteredData.length > 0 ? (
+          {data && data?.status === 1 && !isLoading ? (
             <StatusCardLaunchpad data={filteredData} />
           ) : (
             <div className="w-screen ">

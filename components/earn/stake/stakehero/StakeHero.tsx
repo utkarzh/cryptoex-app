@@ -11,13 +11,17 @@ const StakeHero = () => {
       <div className="partShadowStake"></div>
       <div className="w-[95%] sm:w-[85%] md:w-[80%] lg:w-[70%] mx-auto flex gap-2 justify-center items-center  ">
         {/* left section */}
-        <div className="w-full flex flex-col gap-8 ">
+        <div className=" w-[80%] flex flex-col gap-8 ">
           {/* content */}
-          <div className="flex flex-col ">
-            <h1 className={`${saira.className} text-2xl font-bold`}>
+          <div className="flex flex-col mt-3">
+            <h1
+              className={`${saira.className} text-2xl xl:text-[2rem] font-bold`}
+            >
               {t("title")}
             </h1>
-            <p className="text-[14px] font-extralight">{t("content")}</p>
+            <p className="text-[14px] xl:text-[1rem] mt-2 font-extralight">
+              {t("content")}
+            </p>
           </div>
           {/* overview */}
           <Overview />

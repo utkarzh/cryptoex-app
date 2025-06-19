@@ -12,9 +12,9 @@ const OverviewCard: FC<Props> = ({
   isOverviewVisible,
 }) => {
   return (
-    <div className="w-fit border border-[#464765] rounded-xl flex flex-col gap-1 p-2 px-4">
-      <div className="text-[10px] font-extralight opacity-90">{title}</div>
-      <div className="text-[11px] font-bold">
+    <div className="w-fit border border-[#464765] rounded-xl flex flex-col gap-1 p-3 px-4 space-y-1">
+      <div className="text-xs font-extralight opacity-90">{title}</div>
+      <div className="text-xs font-bold">
         {isOverviewVisible ? value : "***"}
       </div>
     </div>

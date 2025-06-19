@@ -18,7 +18,7 @@ const TradecontestBanner = () => {
 
         {/* text with effect */}
         <div
-          className={` ${saira.className} text-[10vw] lg:text-[10vw] font-bold tracking-wide opacity-100 dark:opacity-100  z-[40] relative mt-10`}
+          className={` ${saira.className} text-[10vw] lg:text-[10vw] xl:text-[11vw] font-bold tracking-wide opacity-100 dark:opacity-100  z-[40] relative mt-10`}
         >
           <div className="absolute z-[40] top-1/2 -translate-y-[50%] left-0 w-full h-[50%] bg-gradient-to-b from-transparent to-[#eff0f2]/100 dark:to-[#06062a]/70 "></div>
 

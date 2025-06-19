@@ -21,7 +21,7 @@ const PartnersHeading = () => {
   }, []);
 
   useEffect(() => {
-    if (isSuccess && data) {
+    if (isSuccess && data && data?.status === 1) {
       setPartnersData(data.cards);
     }
   }, [data]);

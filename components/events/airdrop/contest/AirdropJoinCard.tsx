@@ -42,13 +42,13 @@ const AirdropJoinCard: FC<Props> = ({ contestInfo }) => {
         </a>
       )}
       {contestStatus === "upcoming" && (
-        <div className="w-full text-center bg-yellow-600/40  font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
-          {t("upcoming")}
+        <div className="w-full text-center bg-[#eff0f2] dark:bg-[#20203c]  font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
+          {t("button")}
         </div>
       )}
 
       {contestStatus === "completed" && (
-        <div className="w-full text-center bg-[#eff0f2] dark:bg-[#06062a] font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
+        <div className="w-full text-center bg-[#eff0f2] dark:bg-[#20203c] font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
           {t("completed")}
         </div>
       )}

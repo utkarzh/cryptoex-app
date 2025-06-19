@@ -119,8 +119,8 @@ const StakeTable = () => {
           {/* search and selection */}
           <div className="w-fit flex gap-2 sm:gap-8 items-center flex-wrap sm:flex-nowrap  ">
             <div className="flex gap-2">
-              <input type="checkbox" />
-              <label className="text-[10px] text-nowrap">
+              <input type="checkbox" className=" xl:w-3 xl:h-3" />
+              <label className="text-[10px] xl:text-xs text-nowrap">
                 {t("terms.matchAssets")}
               </label>
             </div>
@@ -130,7 +130,7 @@ const StakeTable = () => {
                 placeholder={t("terms.search")}
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+                className="dark:bg-[#1a1c36] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
               />
               <IoSearch className="absolute top-2 left-2 opacity-60 " />
             </div>
@@ -140,7 +140,7 @@ const StakeTable = () => {
 
         <table className="w-full text-xs text-left">
           <thead className=" ">
-            <tr className="text-[12px] opacity-90 dark:opacity-60">
+            <tr className="text-xs opacity-90 dark:opacity-60">
               <th className="py-4 px-2 font-extralight ">{t("tHead.coin")}</th>
               <th className="py-4 px-2 font-extralight text-center">
                 <div className="flex w-full gap-1 justify-start items-center ">

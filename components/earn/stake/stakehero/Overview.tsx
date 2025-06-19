@@ -29,9 +29,9 @@ const Overview = () => {
     <div className="w-full flex flex-col gap-4">
       {/* heading and button */}
       <div className="flex gap-2 items-center ml-3">
-        <span className="text-sm font-bold">{t("label")}</span>
+        <span className="text-lg font-bold">{t("label")}</span>
         <div
-          className="p-[3px] flex justify-center items-center border border-slate-600 dark:hover:border-white hover:border-black cursor-pointer rounded-full text-[12px] hover:scale-105 transition-all duration-200"
+          className="p-[3px] flex justify-center items-center border border-slate-600 dark:hover:border-white hover:border-black cursor-pointer rounded-full text-xs hover:scale-105 transition-all duration-200"
           onClick={overViewChangeHandler}
         >
           {isOverviewVisible ? (

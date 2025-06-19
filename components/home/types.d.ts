@@ -53,4 +53,7 @@ export interface HomeDataStructure_int {
 
 export interface HomeDataApi_int {
   data: HomeDataStructure_int;
+  isLoading: boolean;
+  isError: boolean;
+  error: string | null;
 }

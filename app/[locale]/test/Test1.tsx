@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { BiMinus, BiPlus, BiPulse } from "react-icons/bi";
+import { BiMinus, BiPlus } from "react-icons/bi";
 
 export default function SliderControl() {
   const [value, setValue] = useState(0);

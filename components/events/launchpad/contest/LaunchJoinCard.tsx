@@ -4,6 +4,9 @@ import React, { FC, useEffect, useState } from "react";
 import { LaunchpadDetails_int, MarketResult_int } from "../../types";
 import Image from "next/image";
 import { formatCoinRate } from "@/utils/formateCoinRate";
+import SliderLunchpad from "./SliderLaunchpad";
+import Link from "next/link";
+import { getStatus } from "@/utils/getStatus";
 
 type Props = {
   data: LaunchpadDetails_int;
@@ -13,6 +16,13 @@ type Props = {
 
 const LaunchJoinCard: FC<Props> = ({ data, currentVendor, setVendor }) => {
   const t = useTranslations("launchPad.contest.form.terms");
+
+  const isAuth = true; // change with context
+
+  const status = getStatus(
+    data.ieovendors[0].icocoins_startdays,
+    data.ieovendors[0].icocoins_enddays
+  );
 
   const [buyAmount, setBuyAmount] = useState(
     data.ieovendors[0].icocoins_mincount
@@ -45,6 +55,10 @@ const LaunchJoinCard: FC<Props> = ({ data, currentVendor, setVendor }) => {
 
   const selectTabHandler = (data: string) => {
     setSelectedTab(data);
+  };
+
+  const launchPadBuyHandler = async () => {
+    console.log("Buy button clicked....");
   };
 
   useEffect(() => {
@@ -137,9 +151,40 @@ const LaunchJoinCard: FC<Props> = ({ data, currentVendor, setVendor }) => {
             <span className="text-[10px] xl:text-xs opacity-80">
               {t("ord")}
             </span>
-            <span className="text-[11px] xl:text-xs"> {t("bar")}</span>
+            <span className="text-[11px] xl:text-xs">
+              {" "}
+              <SliderLunchpad
+                currentValue={buyAmount}
+                maxValue={
+                  data.ieovendors[0].icocoins_maxcount
+                    ? data.ieovendors[0].icocoins_maxcount
+                    : data.ieovendors[0].icocoins_numberofcoins -
+                      data.ieovendors[0].icocoins_currentsale
+                }
+                minValue={data.ieovendors[0].icocoins_mincount}
+                setCoins={(data) => {
+                  setBuyAmount(data);
+                }}
+              />{" "}
+            </span>
             <span className="text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-2 py-1 border border-green-600 rounded-md hover:bg-green-700 dark:hover:bg-green-500/30 text-xs font-light">
-              10000
+              <input
+                type="number"
+                value={buyAmount}
+                onChange={(e) => {
+                  if (
+                    Number(e.target.value) <=
+                      (data.ieovendors[0].icocoins_maxcount
+                        ? data.ieovendors[0].icocoins_maxcount
+                        : data.ieovendors[0].icocoins_numberofcoins -
+                          data.ieovendors[0].icocoins_currentsale) &&
+                    Number(e.target.value) >=
+                      data.ieovendors[0].icocoins_mincount
+                  )
+                    setBuyAmount(Number(e.target.value));
+                }}
+                className="w-fit border-none outline-none"
+              />
             </span>
           </div>
         </div>
@@ -168,9 +213,35 @@ const LaunchJoinCard: FC<Props> = ({ data, currentVendor, setVendor }) => {
         </div>
       </div>
       {/* button */}
-      <button className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer">
-        {t("button")}
-      </button>
+      {!isAuth && (
+        <Link
+          href="/login"
+          className="w-full flex justify-center bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer"
+        >
+          {t("button")}
+        </Link>
+      )}
+
+      {status === "upcoming" && isAuth && (
+        <div className="w-full flex justify-center bg-[#eff0f2] dark:bg-[#20203c] font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
+          {t("buy")}
+        </div>
+      )}
+
+      {status === "ongoing" && isAuth && (
+        <button
+          className="w-full flex justify-center bg-green-500 hover:bg-green-600 text-black font-medium py-3 rounded-full transition text-xs cursor-pointer"
+          onClick={launchPadBuyHandler}
+        >
+          {t("buy")}
+        </button>
+      )}
+
+      {status === "completed" && isAuth && (
+        <div className="w-full flex justify-center bg-[#eff0f2] dark:bg-[#20203c] font-medium py-3 rounded-full transition text-xs cursor-not-allowed">
+          {t("soldOut")}
+        </div>
+      )}
     </div>
   );
 };

@@ -84,7 +84,7 @@ export default function BorrowTable() {
             placeholder={t("search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+            className="dark:bg-[#1a1c36] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
           />
           <IoSearch className="absolute top-2 left-2 opacity-60 " />
         </div>
@@ -93,7 +93,7 @@ export default function BorrowTable() {
       <div className="overflow-x-auto">
         <table className="w-full text-xs text-left">
           <thead className=" ">
-            <tr className="text-[12px] opacity-90 dark:opacity-60">
+            <tr className="text-xs opacity-90 dark:opacity-60">
               <th className="py-3 px-2 font-extralight">{t("tHead.coin")}</th>
               <th className="py-3 px-2 font-extralight text-center">
                 {t("tHead.hIntRate")}
@@ -119,7 +119,7 @@ export default function BorrowTable() {
                 <td className="py-3 px-2 text-center">{item.hourly}</td>
                 <td className="py-3 px-2  text-center">{item.annual}</td>
                 <td className="py-3 px-2 text-right">
-                  <button className="text-[12px] text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300">
+                  <button className="text-xs text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300">
                     {t("tHead.action.button")}
                   </button>
                 </td>
@@ -129,7 +129,7 @@ export default function BorrowTable() {
         </table>
       </div>
 
-      <div className="text-center mt-4">
+      <div className="text-center mt-10">
         <button className="bg-green-600 text-white dark:text-black px-6 py-1 rounded-full hover:bg-green-500 transition cursor-pointer">
           {t("viewMore")}
         </button>

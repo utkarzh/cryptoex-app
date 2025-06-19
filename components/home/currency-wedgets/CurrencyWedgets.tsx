@@ -26,27 +26,29 @@ const CurrencyWedgets: FC<Props> = ({ listsData: data }) => {
 
   useEffect(() => {
     if (!data) return;
-    const newListed = [];
-    for (let loopvar = 0; loopvar < data.vendors.length; loopvar++) {
-      for (
-        let loopvarinner = 0;
-        loopvarinner < data.analytics.length;
-        loopvarinner++
-      ) {
-        if (
-          data.analytics[loopvarinner].vendor ==
-          data.vendors[loopvar].vendors_vendorshortcode
+    if (data.status === 1) {
+      const newListed = [];
+      for (let loopvar = 0; loopvar < data.vendors.length; loopvar++) {
+        for (
+          let loopvarinner = 0;
+          loopvarinner < data.analytics.length;
+          loopvarinner++
         ) {
-          newListed.push(data.analytics[loopvarinner]);
+          if (
+            data.analytics[loopvarinner].vendor ==
+            data.vendors[loopvar].vendors_vendorshortcode
+          ) {
+            newListed.push(data.analytics[loopvarinner]);
+          }
         }
       }
+
+      const topGainer = data.analytics.slice().sort((a, b) => b.rate - a.rate);
+
+      setSpotList(data.analytics);
+      setNewList(newListed);
+      setTopList(topGainer);
     }
-
-    const topGainer = data.analytics.slice().sort((a, b) => b.rate - a.rate);
-
-    setSpotList(data.analytics);
-    setNewList(newListed);
-    setTopList(topGainer);
   }, [data]);
 
   return (

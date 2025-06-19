@@ -35,19 +35,21 @@ const Marketing: FC<Props> = ({ marketData }) => {
 
   useEffect(() => {
     if (!marketData) return;
-    let temp24hVolume = 0;
-    for (let i = 0; i < marketData.analytics.length; i++) {
-      temp24hVolume +=
-        marketData.analytics[i].usdrate * marketData.analytics[i].baseVolume;
-    }
+    if (marketData?.status === 1) {
+      let temp24hVolume = 0;
+      for (let i = 0; i < marketData.analytics.length; i++) {
+        temp24hVolume +=
+          marketData.analytics[i].usdrate * marketData.analytics[i].baseVolume;
+      }
 
-    const tempVar = temp24hVolume / marketData.btcrate;
-    setData({
-      pair: marketData.analytics.length,
-      volume: tempVar,
-      coins: marketData.coinslisted ? marketData.coinslisted : 543,
-      countries: marketData.supportedCountries,
-    });
+      const tempVar = temp24hVolume / marketData.btcrate;
+      setData({
+        pair: marketData.analytics.length,
+        volume: tempVar,
+        coins: marketData.coinslisted ? marketData.coinslisted : 543,
+        countries: marketData.supportedCountries,
+      });
+    }
   }, [marketData]);
 
   useEffect(() => {

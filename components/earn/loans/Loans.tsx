@@ -29,7 +29,7 @@ const Loans = () => {
               <button
                 key={pair}
                 onClick={() => loanTypeHandler(pair as LoanType)}
-                className={`text-[14px] font-light pb-2 cursor-pointer top-[2px] relative  ${
+                className={`text-[14px] xl:text-xs font-light pb-2 cursor-pointer top-[2px] relative  ${
                   pair === loanType
                     ? "text-green-400 border-b-3 "
                     : "border-b-3 border-transparent"
@@ -47,7 +47,7 @@ const Loans = () => {
               <button
                 key={pair}
                 onClick={() => setLoanValue(pair as LoanValue)}
-                className={`text-[14px] font-extralight pb-2 cursor-pointer top-[2px] relative  ${
+                className={`text-[14px] xl:text-xs font-extralight pb-2 cursor-pointer top-[2px] relative  ${
                   pair === loanValue
                     ? "text-green-400 border-b-3 "
                     : "border-b-3 border-transparent"

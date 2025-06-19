@@ -16,30 +16,31 @@ const HeroCurrencyStrip: FC<Props> = ({ stripData: data }) => {
   const [stripDataList, setstripDataList] = useState<StripListData[]>([]);
   useEffect(() => {
     if (!data) return;
-    if (data.status === 0) return;
-    const stripList: StripListData[] = [];
-    for (let loopvar = 0; loopvar < data.analytics.length; loopvar++) {
-      for (
-        let loopvarinner = 0;
-        loopvarinner < data.vendors.length;
-        loopvarinner++
-      ) {
-        if (!data.vendors[loopvarinner].vendors_vendorshortcode) {
-          continue;
-        }
-        if (
-          data.analytics[loopvar].vendor ==
-          data.vendors[loopvarinner].vendors_vendorshortcode
+    if (data.status === 1) {
+      const stripList: StripListData[] = [];
+      for (let loopvar = 0; loopvar < data.analytics.length; loopvar++) {
+        for (
+          let loopvarinner = 0;
+          loopvarinner < data.vendors.length;
+          loopvarinner++
         ) {
-          stripList.push({
-            analytic: data.analytics[loopvarinner],
-            vendor: data.vendors[loopvarinner],
-          });
+          if (!data.vendors[loopvarinner].vendors_vendorshortcode) {
+            continue;
+          }
+          if (
+            data.analytics[loopvar].vendor ==
+            data.vendors[loopvarinner].vendors_vendorshortcode
+          ) {
+            stripList.push({
+              analytic: data.analytics[loopvarinner],
+              vendor: data.vendors[loopvarinner],
+            });
+          }
         }
       }
-    }
 
-    setstripDataList(stripList);
+      setstripDataList(stripList);
+    }
   }, [data]);
 
   console.log("Striped data list:--", stripDataList);

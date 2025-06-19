@@ -266,6 +266,11 @@
         "holder":"Enter password"
       }
     },
+    "errors":{
+      "email":"Enter a valid email address",
+      "password":"Password should contain atleast one small letter, one capital, one special character and number Password must be at least 8 characters",
+      "checkCre":"Check Your Credentials"
+    },
     "button":"Log In",
     "signinOption": "Or Log In with",
     "noAcc": {
@@ -804,7 +809,11 @@
     "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. ",
      "ongoing":"Ongoing",
     "upcoming":"Upcoming",
-    "completed":"Completed"
+    "completed":"Completed",
+    "pPool":"Round prize pool",
+    "timeLeft":"Time Left"
+
+
   },
   "contest":{
     "terms":{
@@ -829,6 +838,7 @@
       "eDate":"End Date",
       "participants":"Active Participants",
       "daysRem":"Days remaining",
+      "startsIn":"Starts In (Days)",
       "button":"Participate in Airdrop",
        "ongoing":"Ongoing",
     "upcoming":"Upcoming",
@@ -854,7 +864,8 @@
     "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. ",
      "ongoing":"Ongoing",
     "upcoming":"Upcoming",
-    "completed":"Completed"
+    "completed":"Completed",
+    "timeLeft":"Time Left"
   },
   "contest":{
     "terms":{
@@ -898,8 +909,11 @@
         "ord":"Orders",
         "bar":"bar",
         "buy":"Buy",
+        "soldOut":"Sold out",
         "rec":"Receive",
-        "button":"Log in / Sign up"
+        "button":"Log in / Sign up",
+        "upcoming":"Upcoming",
+    "completed":"Completed"
       }
     }
   }
@@ -918,7 +932,8 @@
     "airSupply":"Airdrop supply",
     "start":"Start",
     "end":"End",
-    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. "
+    "cardContent":"The LaunchPad will be the core utility feature of the Cat Ape Token. ",
+    "timeLeft":"Time Left"
   },
   "contest":{
     "terms":{
@@ -946,7 +961,29 @@
       "ieoSDate":"IEO Start Date",
       "ieoEDate":"IEO End Date",
       "button":"Go Trade",
-      "participants":"Active Participants"
+      "participants":"Participants",
+      "ongoing":"Ongoing",
+    "upcoming":"Upcoming",
+    "completed":"Completed",
+      "rules":{
+        "r1":{
+          "part1":"Trading Competition period starts at",
+          "part2":"and closes at"
+        },
+        "r2":{
+          "part1":"Final Trading Volume data is collected at",
+          "part2":"This snapshot time is used to build up the winners list."
+        },
+        "r3":{
+          "part1":"One Competition - One Crypto asset rule. Only trades on",
+          "part2":"markets will be counted towards the competition’s results. All trading pairs for the asset are included."
+        },
+        "r4":"Only users who apply for the competition by pressing the “Participate” button on the competition page are considered participants and may claim the prize. The applications close 12 hours before the competition ends.",
+        "r5":"Only one account per person is accepted.",
+        "r6":"Trading to yourself is not counted towards volume.",
+        "r7":"Each contestant's trading volume is calculated as total amount of the respective instrument (token or coin) traded in IndoEx starting from the time the user applied to participate in the competition.",
+        "r8":"Prizes are distributed in the form of crypto assets from the Prize Fund."
+      }
     }
   }
 },

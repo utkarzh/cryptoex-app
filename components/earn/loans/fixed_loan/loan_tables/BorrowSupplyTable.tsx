@@ -38,7 +38,7 @@ const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
           {isSupply ? t("title2") : t("title1")}
         </h2>
         <div className="border dark:border-slate-200/20 border-slate-600/20 px-2 py-1 rounded-md flex gap-1 justify-center items-center">
-          <span className="opacity-70 text-[12px] font-extralight">
+          <span className="opacity-70 text-xs font-extralight">
             {t("terms.duration")}
           </span>
           <select className="text-xs border-none outline-none">
@@ -59,21 +59,21 @@ const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
       <div className=" border px-3 border-slate-600/20 dark:border-slate-200/20 rounded-xl overflow-hidden">
         <table className="w-full text-sm">
           <thead className=" ">
-            <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-3 px-4 text-left font-extralight">
+            <tr className="text-xs opacity-90 dark:opacity-60">
+              <th className="py-3  text-left font-extralight">
                 {isSupply
                   ? t("supplyTableHead.supplyApr")
                   : t("borrowTableHead.bRate")}
               </th>
-              <th className="py-3 px-4 text-left font-extralight">
+              <th className="py-3  text-left font-extralight">
                 {t("terms.duration")}
               </th>
-              <th className="py-3 px-4 text-left font-extralight">
+              <th className="py-3  text-left font-extralight">
                 {isSupply
                   ? t("supplyTableHead.estInt")
                   : t("borrowTableHead.minBAmount")}
               </th>
-              <th className="py-3 px-4 text-left font-extralight">
+              <th className="py-3  text-left font-extralight">
                 {isSupply
                   ? t("supplyTableHead.tAmount")
                   : t("borrowTableHead.bAbleAmount")}
@@ -84,19 +84,19 @@ const BorrowSupplyTable: FC<Props> = ({ isSupply }) => {
             {currentItems.map((row, i) => (
               <tr
                 key={i}
-                className="border-b sm:text-nowrap border-slate-600/20 dark:border-slate-200/20 text-center text-[12px]"
+                className="border-b sm:text-nowrap border-slate-600/20 dark:border-slate-200/20 text-center text-xs"
               >
-                <td className="py-3 px-4 ">{row.rate}</td>
-                <td className="py-3 px-4">{row.duration}</td>
-                <td className="py-3 px-4">{row.minAmount}</td>
-                <td className="py-3 px-4">{row.borrowable}</td>
+                <td className="py-3  ">{row.rate}</td>
+                <td className="py-3 ">{row.duration}</td>
+                <td className="py-3 ">{row.minAmount}</td>
+                <td className="py-3 ">{row.borrowable}</td>
               </tr>
             ))}
           </tbody>
         </table>
 
         {/* Pagination */}
-        <div className="mt-4 mb-4">
+        <div className="mt-6 mb-4">
           <ReactPaginate
             previousLabel="<"
             nextLabel=">"
