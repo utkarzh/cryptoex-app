@@ -26,7 +26,7 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
     setTimeout(() => setError(""), 2000);
   };
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-5">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[550px] mx-auto shadow-lg relative space-y-5">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -43,18 +43,18 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
       <div className="w-full space-y-3">
         {/* verification code */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 xl:mb-2 text-[10px] xl:text-[0.6rem] font-light">
             {t("codeSentAt")} kdk****fx@gmail.com
           </label>
-          <div className="flex gap-1">
+          <div className="flex gap-1 ">
             <input
               type="text"
               value={emailCode}
               placeholder={t("enterCode")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px]"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
               onChange={(e) => setEmailCode(e.target.value)}
             />
-            <button className="text-[10px] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
+            <button className="text-[10px] xl:text-[0.65rem] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
               {t("buttons.sendCode")}
             </button>
           </div>
@@ -62,14 +62,14 @@ const SecurityConfirmationPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/*google 2fa*/}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.6rem] font-light">
             {t("2faCode")}
           </label>
           <input
             type="text"
             value={twoFaCode}
             placeholder={t("enter2fa")}
-            className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
+            className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
             onChange={(e) => setTwoFaCode(e.target.value)}
           />
         </div>

@@ -32,7 +32,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
     setTimeout(() => setError(""), 2000);
   };
   return (
-    <div className="mt-30 bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-5">
+    <div className="mt-30 pb-10 mb-4 bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[650px] mx-auto shadow-lg relative space-y-5">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -47,7 +47,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       </h2>
 
       {/* warning message */}
-      <div className="flex gap-2 text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
+      <div className="flex gap-2 text-[10px] xl:text-[0.65rem] font-light bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
         <FiAlertTriangle className="text-5xl dark:text-[#c97b26] text-[#bc8d5b]" />
         <p>{t("alert")}</p>
       </div>
@@ -55,7 +55,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
       <div className="w-full space-y-3 border-b-2 pb-4 border-slate-500/30">
         {/* anit-phishing code input */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("antiPhiCode")}
           </label>
           <div className=" relative">
@@ -63,7 +63,7 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
               type={antiPhiCode.isVisible ? "text" : "password"}
               value={antiPhiCode.antiPhiCode}
               placeholder={t("enterCode")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem] pr-6"
               onChange={(e) =>
                 setAntiPhiCode((prev) => {
                   return { ...prev, antiPhiCode: e.target.value };
@@ -87,17 +87,23 @@ const AntiPhiSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           </div>
         </div>
 
-        <p className="text-[10px] font-light opacity-90 dark:opacity-70">
+        <p className="text-[10px] xl:text-[0.6rem] font-light opacity-90 dark:opacity-70">
           {t("message")}
         </p>
       </div>
-      {error && <p className="text-[10px] font-light text-red-700">{error}</p>}
+      {error && (
+        <p className="text-[10px] xl:text-[0.5rem] font-light text-red-700">
+          {error}
+        </p>
+      )}
 
       {/* what is anti-phishing code */}
       <div className="space-y-3 mb-10">
         <div className="space-y-1">
-          <h4 className="text-[11px] font-light">{t("whatIsIt")}</h4>
-          <p className="text-[10px] font-light opacity-90 dark:opacity-70">
+          <h4 className="text-[11px] xl:text-[0.65rem] font-light">
+            {t("whatIsIt")}
+          </h4>
+          <p className="text-[10px] xl:text-[0.6rem] font-light opacity-90 dark:opacity-70">
             {t("whatIsItContent")}
           </p>
         </div>

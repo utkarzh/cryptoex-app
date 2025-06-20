@@ -68,7 +68,7 @@ const PinForgotPopup: FC<Props> = ({ onClose, onSuccess }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[650px] mx-auto shadow-lg relative">
       <button
         className="absolute top-4 right-4 hover:scale-110 transition-all duration-200 cursor-pointer"
         onClick={onClose}
@@ -103,7 +103,7 @@ const PinForgotPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* error message */}
       {errorMessage && (
-        <p className="text-[10px] mt-4 font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
+        <p className="text-[10px] xl:text-[0.5rem] mt-4 font-light bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
           {errorMessage}
         </p>
       )}

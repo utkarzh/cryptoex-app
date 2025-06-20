@@ -73,7 +73,7 @@ export default function LoanAdvantages() {
         {advantages.map((item, idx) => (
           <div
             key={idx}
-            className="w-full min-w-[400px] h-[200px] bg-white  shadow shadow-black/40 dark:shadow-white/20 dark:bg-[#161735]  rounded-xl p-3 py-5 flex  flex-col gap-3"
+            className="w-full min-w-[400px] h-[200px] xl:h-[220px] bg-white  shadow shadow-black/40 dark:shadow-white/20 dark:bg-[#161735]  rounded-xl p-3 py-5 flex  flex-col gap-3"
           >
             {/* heading */}
             <div className="flex gap-1 items-center">
@@ -87,7 +87,7 @@ export default function LoanAdvantages() {
             <div className="w-full border-b opacity-30 "></div>
 
             {/* content */}
-            <p className="text-[12px] font-light">{item.description}</p>
+            <p className="text-xs font-light xl:mt-2">{item.description}</p>
           </div>
         ))}
       </div>

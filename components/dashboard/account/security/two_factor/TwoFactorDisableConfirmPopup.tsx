@@ -12,7 +12,7 @@ const TwoFactorDisablePopupConfirm: FC<Props> = ({ onClose, onSuccess }) => {
     "dashboard.security.securitySetting.twofactor.removePopUp2"
   );
   return (
-    <div className="bg-white flex flex-col gap-6 dark:bg-[#161735] max-w-[400px]  rounded-xl p-6 relative">
+    <div className="bg-white flex flex-col gap-6 dark:bg-[#161735] max-w-[400px] xl:max-w-[450px]  rounded-xl p-6 relative">
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
         <h2 className={`${saira.className} text-sm font-semibold `}>
@@ -26,7 +26,9 @@ const TwoFactorDisablePopupConfirm: FC<Props> = ({ onClose, onSuccess }) => {
       {/* message */}
       <div className="flex flex-col gap-1 p-2 border border-slate-500/30 rounded-md">
         <h4 className="text-xs">{t("notice")}:</h4>
-        <p className="text-[10px] font-light">{t("noticeMess")}</p>
+        <p className="text-[10px] xl:text-[0.6rem] font-light">
+          {t("noticeMess")}
+        </p>
       </div>
 
       {/* Action buttons */}

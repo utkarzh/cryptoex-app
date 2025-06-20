@@ -81,22 +81,20 @@ const DepositRecordsTable = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">
-                {t("tHead.dNt")}
-              </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">{t("tHead.dNt")}</th>
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.coin")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.amount")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.bRecords")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.remark")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.action")}
               </th>
             </tr>
@@ -111,7 +109,7 @@ const DepositRecordsTable = () => {
               return (
                 <tr
                   key={index}
-                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                 >
                   <td className="py-3 px-4">{record.datetime}</td>
                   <td className="py-3 px-4">

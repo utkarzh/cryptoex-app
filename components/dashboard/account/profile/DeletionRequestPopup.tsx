@@ -10,7 +10,7 @@ type Props = {
 const DeletionRequestPopup: FC<Props> = ({ onClose }) => {
   const t = useTranslations("dashboard.profile.accManagement.closeAcc.popUp");
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-4">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[700px] mx-auto shadow-lg relative space-y-4">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -24,7 +24,7 @@ const DeletionRequestPopup: FC<Props> = ({ onClose }) => {
         {t("title")}
       </h2>
       {/* message */}
-      <p className="text-[10px] font-light opacity-100 dark:opacity-80">
+      <p className="text-[10px] xl:text-xs xl:font-extralight font-light opacity-100 dark:opacity-80">
         {t("content.part1")}{" "}
         <a
           href="mailto:support@indoex.io"
@@ -37,20 +37,20 @@ const DeletionRequestPopup: FC<Props> = ({ onClose }) => {
 
       {/* notice*/}
       <div className="rounded-md bg-slate-200 dark:bg-[#24243c] p-3 space-y-4">
-        <h5 className="text-[11px] font-light"> {t("notice")}:</h5>
-        <p className="text-[10px] font-light opacity-100 dark:opacity-80">
+        <h5 className="text-[11px] xl:text-xs font-light"> {t("notice")}:</h5>
+        <p className="text-[10px] xl:text-xs xl:font-extralight font-light opacity-100 dark:opacity-80">
           {t("noticePoints.point1")}
         </p>
-        <p className="text-[10px] font-light opacity-100 dark:opacity-80">
+        <p className="text-[10px] xl:text-xs xl:font-extralight font-light opacity-100 dark:opacity-80">
           {t("noticePoints.point2")}
         </p>
-        <p className="text-[10px] font-light opacity-100 dark:opacity-80">
+        <p className="text-[10px] xl:text-xs xl:font-extralight font-light opacity-100 dark:opacity-80">
           {t("noticePoints.point3.part1")}{" "}
           <Link href="#" className="text-green-600">
             {t("noticePoints.point3.part2")}
           </Link>
         </p>
-        <p className="text-[10px] font-light opacity-100 dark:opacity-80">
+        <p className="text-[10px] xl:text-xs xl:font-extralight font-light opacity-100 dark:opacity-80">
           {t("noticePoints.point4.part1")}{" "}
           <Link href="#" className="text-green-600">
             {t("noticePoints.point4.part2")}

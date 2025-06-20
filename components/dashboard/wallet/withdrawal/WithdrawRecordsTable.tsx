@@ -85,15 +85,15 @@ const WithdrawRecordsTable = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">Date/Time</th>
-              <th className="px-4 py-3 text-[11px] font-light">Coin</th>
-              <th className="px-4 py-3 text-[11px] font-light">Amount</th>
-              <th className="px-4 py-3 text-[11px] font-light">Withdraw to</th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">Date/Time</th>
+              <th className="px-4 py-3 text-xs font-light">Coin</th>
+              <th className="px-4 py-3 text-xs font-light">Amount</th>
+              <th className="px-4 py-3 text-xs font-light">Withdraw to</th>
+              <th className="px-4 py-3 text-xs font-light">
                 Blockchain Record
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">Remarks</th>
-              <th className="px-4 py-3 text-[11px] font-light">Action</th>
+              <th className="px-4 py-3 text-xs font-light">Remarks</th>
+              <th className="px-4 py-3 text-xs font-light">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -107,7 +107,7 @@ const WithdrawRecordsTable = () => {
               return (
                 <tr
                   key={index}
-                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                 >
                   <td className="py-3 px-4">{record.datetime}</td>
                   <td className="py-3 px-4">
@@ -154,7 +154,7 @@ const WithdrawRecordsTable = () => {
                   </td>
                   <td className="py-3 px-4 text-gray-400">{record.remarks}</td>
                   <td className="py-3 px-4">
-                    <button className="border border-slate-500/20 text-xs px-3 py-1 rounded-md cursor-pointer hover:scale-105 transition-all duration-200">
+                    <button className="border bg-slate-500/25 border-slate-500/20 text-xs px-3 py-1 rounded-md cursor-pointer hover:scale-105 transition-all duration-200">
                       Details
                     </button>
                   </td>

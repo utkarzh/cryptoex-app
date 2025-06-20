@@ -29,7 +29,7 @@ const DepositSelectCryptoPopup: FC<Props> = ({
   );
 
   return (
-    <div className="bg-white flex flex-col gap-4 dark:bg-[#161735] w-[400px] rounded-xl p-6 relative">
+    <div className="bg-white flex flex-col gap-4 dark:bg-[#161735] w-[400px] xl:w-[550px] rounded-xl p-6 relative">
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
         <h2 className=" text-sm ">{t("title")}</h2>

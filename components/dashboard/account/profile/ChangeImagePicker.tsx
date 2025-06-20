@@ -61,7 +61,7 @@ const ChangeImagePicker: FC<Props> = ({ onUpload }) => {
               tab === val
                 ? "text-green-500  border-green-500"
                 : "border-transparent text-inherit"
-            } pb-1 text-[10px] font-normal`}
+            } pb-1 text-[10px] xl:text-xs font-normal`}
           >
             {/* {val === "avatar" ? "Avatar" : "Upload from this device"} */}
             {t(`${val}`)}
@@ -99,13 +99,13 @@ const ChangeImagePicker: FC<Props> = ({ onUpload }) => {
         <div className="text-center">
           {uploadedImage && (
             <div className="w-full py-3  flex flex-col justify-center items-center text-center">
-              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-green-400">
+              <div className="w-16 h-16 xl:w-20 xl:h-20 rounded-full overflow-hidden border-2 border-green-400">
                 <Image
                   src={uploadedImage}
                   alt="Uploaded"
                   className="w-full h-full object-cover"
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                 />
               </div>
             </div>

@@ -40,11 +40,11 @@ const EmailInfo = () => {
       <div className="flex justify-between items-center  text-xs ">
         <div className="flex items-start gap-2  ">
           <div className="">
-            <MdOutlineEmail className=" text-[17px]" />
+            <MdOutlineEmail className=" text-[17px] xl:text-[22px]" />
           </div>
           <div>
             <div className="font-xs font-light opacity-90">{t("label")}</div>
-            <div className="text-[11px] font-light opacity-60">
+            <div className="text-[11px] xl:text-[0.65rem] font-light opacity-60">
               {t("content")}
             </div>
           </div>
@@ -59,9 +59,9 @@ const EmailInfo = () => {
                   width={24}
                   height={24}
                   alt=""
-                  className="w-3 h-auto"
+                  className="w-3 xl:w-4 h-auto"
                 />
-                <span className="opacity-60 flex gap-1 text-[10px] font-light">
+                <span className="opacity-60 flex gap-1 text-[10px] xl:text-[0.65rem] font-light">
                   kdk***@****
                   <FaEye className="text-xs cursor-pointer" />
                 </span>
@@ -70,7 +70,7 @@ const EmailInfo = () => {
           )}
 
           <button
-            className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
+            className="border border-slate-500/20 bg-slate-500/25 cursor-pointer text-[10px] px-2 py-1 text-sm xl:text-[0.65rem] rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15"
             onClick={() => setPopupStatus("change_mail")}
           >
             {t("button")}

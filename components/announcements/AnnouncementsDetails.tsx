@@ -17,7 +17,7 @@ const AnnouncementsDetails = () => {
   return (
     <div className=" ml-2 h-full w-full dark:bg-[#161735]  bg-white rounded-md px-4 py-6">
       {/* link details */}
-      <div className="text-sm fonr-bold pb-4 opacity-50 flex  items-center">
+      <div className="text-xs fonr-bold pb-4 opacity-50 flex  items-center">
         {t("title")} <MdOutlineKeyboardArrowRight className="text-lg" />
       </div>
 
@@ -25,14 +25,16 @@ const AnnouncementsDetails = () => {
         {announcementsDetails.map((val, index) => (
           <div key={index} className="cursor-pointer">
             <div className="flex ">
-              <p className="text-xs ">{val.title}: &nbsp;</p>
+              <p className="text-xs xl:text-[0.9rem]">{val.title}: &nbsp;</p>
               <p className="text-xs"> {val.token}</p>
             </div>
-            <div className="text-[10px] font-light text-slate-600 dark:text-slate-500">
+            <div className="mt-1 text-[10px] xl:text-[0.7rem] font-light text-slate-600 dark:text-slate-500">
               {val.timestamp}
             </div>
 
-            <p className="mt-2 text-[10px] font-light ">{val.details}</p>
+            <p className="mt-4 text-[10px] xl:text-xs font-light">
+              {val.details}
+            </p>
           </div>
         ))}
       </div>

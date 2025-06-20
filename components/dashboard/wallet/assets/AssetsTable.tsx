@@ -116,7 +116,7 @@ export default function AssetsTable() {
         {/* heading left */}
         <div className="flex flex-col gap-2 ">
           <div className="flex gap-2 items-center">
-            <h2 className="text-sm ">{t("title")}</h2>
+            <h2 className="text-sm  ">{t("title")}</h2>
             <span
               className="cursor-pointer hover:scale-105 transition-all duration-200"
               onClick={() => setIsVisible((prev) => !prev)}
@@ -167,9 +167,11 @@ export default function AssetsTable() {
           <div className="flex items-center gap-1">
             <input
               type="checkbox"
-              className="w-fit h-auto bg-tranparent border-md border-slate-500"
+              className="w-fit h-auto bg-tranparent border-md xl:w-3 xl:h-3 border-slate-500"
             />
-            <label className="text-[10px]">{t("terms.hideLabel")}</label>
+            <label className="text-[10px] xl:text-xs">
+              {t("terms.hideLabel")}
+            </label>
           </div>
 
           <div className="relative flex-wrap gap-2 flex items-center ">
@@ -178,7 +180,7 @@ export default function AssetsTable() {
               placeholder={t("terms.search")}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+              className="dark:bg-[#1a1c36] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
             />
             <IoSearch className="absolute top-2 left-2 opacity-60 " />
           </div>
@@ -189,7 +191,7 @@ export default function AssetsTable() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left">
             <thead className=" ">
-              <tr className="text-[12px] opacity-90 dark:opacity-60">
+              <tr className="text-xs opacity-90 dark:opacity-60">
                 <th className="py-3 px-2 font-extralight">
                   {t("tHead.crypto")}
                 </th>
@@ -205,7 +207,7 @@ export default function AssetsTable() {
                 <th className="py-3 px-2 font-extralight text-center pr-6">
                   {t("tHead.avgPrice")}
                 </th>
-                <th className="py-3 px-2 font-extralight text-right pr-6">
+                <th className="py-3 px-2 font-extralight text-center pr-6">
                   {t("tHead.action")}
                 </th>
               </tr>
@@ -229,7 +231,7 @@ export default function AssetsTable() {
                     <div className="flex justify-center">
                       <div className="w-fit  flex flex-col gap-[2px] items-start">
                         <span>{item.available}</span>
-                        <span className="text-[10px] font-normal text-slate-500">
+                        <span className="text-[10px] xl:text-[0.55rem] font-normal text-slate-500">
                           =0.00 USD
                         </span>
                       </div>
@@ -239,7 +241,7 @@ export default function AssetsTable() {
                     <div className="flex justify-center">
                       <div className="w-fit  flex flex-col gap-[2px] items-start">
                         <span>{item.inOrders}</span>
-                        <span className="text-[10px] font-normal text-slate-500">
+                        <span className="text-[10px] xl:text-[0.55rem] font-normal text-slate-500">
                           =0.00 USD
                         </span>
                       </div>
@@ -247,16 +249,16 @@ export default function AssetsTable() {
                   </td>
                   <td className="py-3 px-2  text-center">{item.avgPrice}</td>
 
-                  <td className="py-3 px-2 text-right space-x-1">
-                    <div className="flex gap-2 flex-wrap justify-end">
+                  <td className="py-3 px-2  space-x-1">
+                    <div className="flex gap-2 flex-wrap justify-center">
                       <button
-                        className={`text-[12px] px-2 py-1 ${"text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
+                        className={`text-xs px-2 py-1 ${"text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
                       >
                         {t("tHead.buttons.withdraw")}
                       </button>
 
                       <button
-                        className={`text-[12px] px-2 py-1 ${"text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
+                        className={`text-xs px-2 py-1 ${"text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"}   rounded-full  cursor-pointer  transition-all duration-300`}
                       >
                         {t("tHead.buttons.deposit")}
                       </button>
@@ -271,7 +273,7 @@ export default function AssetsTable() {
 
       {/* Pagination */}
       {filteredData.length > 0 && (
-        <div className="mt-4 mb-4">
+        <div className="mt-8 mb-4">
           <ReactPaginate
             previousLabel="<"
             nextLabel=">"

@@ -18,7 +18,9 @@ const Faq: FC<Props> = ({ data }) => {
     <>
       <section className="w-full mt-10 flex flex-col gap-6">
         {/* heading */}
-        <h1 className={` ${saira.className} text-xl`}>{t("faq.label")}</h1>
+        <h1 className={` ${saira.className} text-xl xl:text-[1.7rem]`}>
+          {t("faq.label")}
+        </h1>
 
         <div className="flex flex-col gap-4">
           {data.map((val, index) => (

@@ -68,14 +68,14 @@ export default function TermsContent() {
   ];
 
   return (
-    <section className="px-6 py-10 mb-10 max-w-4xl mx-auto bg-white dark:bg-[#161735] rounded-md">
+    <section className="w-[95%] sm:w-[85%] md:w-[80%]  lg:w-[70%] px-6 py-10 mb-10 relative z-[60]  mx-auto bg-white dark:bg-[#161735] rounded-md">
       <h1 className="text-sm font-semibold">{t("subTitle")}</h1>
-      <p className="mt-2 text-[11px] font-light ">{t("content")}</p>
+      <p className="mt-2 text-xs font-light ">{t("content")}</p>
 
       {termsOfUse.map((section, index) => (
         <div key={index} className="mb-4 mt-6">
           <h2 className="text-sm font-semibold">{section.title}</h2>
-          <ol className="list-decimal list-inside space-y-1 mt-2 text-[11px] font-light">
+          <ol className="list-decimal list-inside space-y-1 mt-2 text-xs font-light">
             {section.points.map((point, idx) => (
               <li key={idx}>{point}</li>
             ))}

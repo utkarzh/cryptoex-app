@@ -50,7 +50,7 @@ const TwoFactor = () => {
         </div>
         <div>
           <div className="font-xs font-light opacity-90">{t("label")}</div>
-          <div className="text-[11px] font-light opacity-60">
+          <div className="text-[11px] xl:text-[0.65rem] font-light opacity-60">
             {t("content")}
           </div>
         </div>
@@ -65,15 +65,17 @@ const TwoFactor = () => {
                 width={24}
                 height={24}
                 alt=""
-                className="w-3 h-auto"
+                className="w-3 xl:w-4 h-auto"
               />
-              <span className="opacity-60 text-[10px] font-light">Linked</span>
+              <span className="opacity-60 text-[10px] xl:text-[.65rem] font-light">
+                Linked
+              </span>
             </span>
           </>
         )}
 
         <button
-          className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
+          className="border border-slate-500/20 bg-slate-500/25 cursor-pointer text-[10px] px-2 py-1 text-sm xl:text-[0.65rem] rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15"
           onClick={is2FAVerified ? disable2FAHandler : setup2FAHandler}
         >
           {is2FAVerified ? t("buttons.disable") : t("buttons.setUp")}

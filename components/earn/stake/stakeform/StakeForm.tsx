@@ -115,9 +115,9 @@ const StakeForm: FC<Props> = ({ onClose }) => {
       <div className="w-full h-fit mx-auto flex flex-col rounded-xl bg-white  dark:bg-[#1d1f38]">
         {/* heading */}
         <div className="w-full  bg-[#eff0f2] dark:bg-[#2d2d47] rounded-t-xl py-2 flex justify-between items-center">
-          <h2 className="text-md ml-4">{t("title")}</h2>
+          <h2 className="text-lg ml-4">{t("title")}</h2>
           <IoIosCloseCircleOutline
-            className=" text-[20px] mr-4 cursor-pointer opacity-50 hover:opacity-100 transition-all duration-200 "
+            className=" text-[20px] xl:text-xl mr-4 cursor-pointer opacity-50 hover:opacity-100 transition-all duration-200 "
             onClick={onClose}
           />
         </div>
@@ -126,14 +126,14 @@ const StakeForm: FC<Props> = ({ onClose }) => {
           {/* left section */}
           <div className="w-full   px-4 flex flex-col gap-4">
             {/* inputs */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 xl:gap-6">
               {/* coin selector  */}
               <div
                 className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative "
                 onClick={() => setIsCoinListOpen(true)}
               >
                 {/* label */}
-                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
+                <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
                   {t("form.terms.currency")}
                 </label>
 
@@ -175,26 +175,24 @@ const StakeForm: FC<Props> = ({ onClose }) => {
               {/* amount selector */}
               <div className="w-full border min-h-[50px] border-black/30 dark:border-white/30 flex justify-between items-center py-3 rounded-lg pl-4 relative">
                 {/* label */}
-                <label className="text-[10px] font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
+                <label className="text-[10px] xl:text-xs font-medium absolute top-0 -translate-y-1/2 left-2 bg-white  dark:bg-[#1d1f38] px-1 ">
                   {t("form.terms.amount")}
                 </label>
 
                 <input
                   type="text"
-                  className="outline-none border-none w-full bg-transparent text-[12px]"
+                  className="outline-none border-none w-full bg-transparent text-xs font-light"
                   placeholder={t("form.terms.minAmount")}
                 />
 
                 <div className="flex items-center gap-1 mr-1">
                   <div className="opacity-60 pr-2 mr-1 border-r">BTC</div>
-                  <div className="opacity-60 text-green-600 text-[12px]">
-                    Max
-                  </div>
+                  <div className="opacity-60 text-green-600 text-xs">Max</div>
                 </div>
               </div>
             </div>
             {/* info */}
-            <div className="w-[90%] mx-auto  ">
+            <div className="w-[90%] mx-auto xl:space-y-1  ">
               {testInfoLeft.map((val, index) => (
                 <StakeFormInfoCard
                   title={val.title}
@@ -212,12 +210,12 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             {/* preview */}
             <div className="w-full flex flex-col gap-3">
               {/* heading */}
-              <div className="text-[12px] text-start font-medium">
+              <div className="text-xs xl:text-[0.9rem] text-start font-medium">
                 {t("preview.lable")}
               </div>
               <div className="border-b opacity-30"></div>
               {/* info */}
-              <div>
+              <div className="xl:space-y-1">
                 {testInfoRight.map((val, index) => (
                   <StakeFormInfoCard
                     title={val.title}
@@ -232,7 +230,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
             {/* Estimated Returns */}
             <div className="w-full flex flex-col gap-3">
               {/* heading */}
-              <div className="text-[12px] text-start font-medium">
+              <div className="text-xs xl:text-[0.9rem] text-start font-medium">
                 {t("estimated.label")}
               </div>
               <div className="border-b opacity-30"></div>
@@ -247,8 +245,8 @@ const StakeForm: FC<Props> = ({ onClose }) => {
 
             {/* agree checkbox */}
             <div className="w-full flex gap-1 items-center mt-2">
-              <input type="checkbox" className="bg-transparent" />
-              <label className="text-[11px] font-normal">
+              <input type="checkbox" className="bg-transparent xl:w-3 xl:h-3" />
+              <label className="text-xs font-normal">
                 {t("estimated.terms.agg.part1")}{" "}
                 <span className="text-green-600 cursor-pointer hover:text-green-500 hover:underline">
                   {t("estimated.terms.agg.part2")}
@@ -258,7 +256,7 @@ const StakeForm: FC<Props> = ({ onClose }) => {
 
             {/* stake button */}
             <div className="w-full  mt-2">
-              <button className="w-full rounded-full py-1 text-center text-white dark:text-black bg-green-500 hover:bg-green-600   dark:bg-green-600 dark:hover:bg-green-700 transition-all duration-200 cursor-pointer">
+              <button className="w-full rounded-full py-1 text-center text-white dark:text-black bg-green-500 hover:bg-green-600  xl:text-[1rem] xl:py-1.5  dark:bg-green-600 dark:hover:bg-green-700 transition-all duration-200 cursor-pointer">
                 {t("button")}
               </button>
             </div>

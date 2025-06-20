@@ -56,11 +56,9 @@ const WithdrawalSteps = () => {
               <span className="bg-green-600 text-white dark:text-black rounded w-5 h-5 text-xs flex items-center justify-center font-light">
                 {step.number}
               </span>
-              <span className="text-green-600 text-xs font-light">
-                {step.title}
-              </span>
+              <span className="text-green-600 text-xs ">{step.title}</span>
             </div>
-            <p className="text-[10px] font-light opacity-80">
+            <p className="text-[10px] xl:text-[0.65rem] font-light opacity-80">
               {step.description}
             </p>
           </div>

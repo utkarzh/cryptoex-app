@@ -13,7 +13,7 @@ const ChangePicturePopup: FC<Props> = ({ onClose, onSuccess }) => {
   const t = useTranslations("dashboard.profile.profile.photo.popUp");
   const [imgUrl, setImgUrl] = useState("");
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-4">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[500px] mx-auto shadow-lg relative space-y-4">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"

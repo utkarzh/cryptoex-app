@@ -59,13 +59,13 @@ const Profile = () => {
         <div className="flex justify-between items-center  text-xs ">
           <div className="flex items-center gap-2  ">
             <div className="">
-              <TbUserPentagon className=" text-[17px]" />
+              <TbUserPentagon className=" text-[17px] xl:text-[22px]" />
             </div>
             <div>
-              <div className="font-xs font-light opacity-90">
+              <div className="text-xs font-light opacity-90">
                 {t("nickName.label")}
               </div>
-              <div className="text-[11px] font-light opacity-60">
+              <div className="text-[11px] xl:text-[0.65rem] font-extralight opacity-60">
                 {t("nickName.content")}
               </div>
             </div>
@@ -75,7 +75,7 @@ const Profile = () => {
             {
               <>
                 <span className="flex items-center gap-1 text-sm">
-                  <span className="opacity-80 flex gap-1 text-[12px] font-light">
+                  <span className="opacity-80 flex gap-1 text-xs xl:text-[0.65rem] font-light">
                     {nickname}
                   </span>
                 </span>
@@ -83,7 +83,7 @@ const Profile = () => {
             }
 
             <button
-              className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
+              className="border border-slate-500/20 bg-slate-500/25 cursor-pointer text-[10px] xl:text-[0.65rem]  px-2 py-1 text-sm rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15"
               onClick={() => setIsChangeName(true)}
             >
               {t("nickName.button")}
@@ -95,13 +95,13 @@ const Profile = () => {
         <div className="flex justify-between items-center  text-xs ">
           <div className="flex items-center gap-2  ">
             <div className="">
-              <IoCameraReverseOutline className=" text-[17px]" />
+              <IoCameraReverseOutline className=" text-[17px] xl:text-[24px]" />
             </div>
             <div>
-              <div className="font-xs font-light opacity-90">
+              <div className="font-xs font-light opacity-90 capitalize">
                 {t("photo.label")}
               </div>
-              <div className="text-[11px] font-light opacity-60">
+              <div className="text-[11px] xl:text-[0.65rem] font-extralight opacity-60">
                 {t("photo.content")}
               </div>
             </div>
@@ -123,14 +123,14 @@ const Profile = () => {
             }
 
             <button
-              className="border  cursor-pointer text-[10px] px-2 py-1 text-sm rounded border-red-500 text-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-400 dark:hover:border-red-400 transition-all"
+              className="border  cursor-pointer text-[10px] px-2 py-1 text-sm xl:text-[0.65rem] rounded border-red-500 text-red-500 hover:text-red-600 hover:border-red-600 dark:hover:text-red-400 dark:hover:border-red-400 transition-all"
               onClick={pictureDeleteHandler}
             >
               {t("photo.buttons.delete")}
             </button>
 
             <button
-              className="border border-slate-500/20 bg-slate-500/10 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15"
+              className="border border-slate-500/20 bg-slate-500/25 cursor-pointer text-[10px] xl:text-[0.65rem]  px-2 py-1 text-sm rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15"
               onClick={() => setIsPictureChange(true)}
             >
               {t("photo.buttons.upload")}

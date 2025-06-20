@@ -152,7 +152,7 @@ const DepositForm = () => {
   }, [selectedNetwork]);
 
   return (
-    <div className="bg-white dark:bg-[#161735] p-6 rounded-xl flex flex-col md:flex-row gap-10">
+    <div className=" xl:p-8 xl:py-10 bg-white dark:bg-[#161735] p-6 rounded-xl flex flex-col md:flex-row gap-10">
       {/* Form Area */}
       <div className="w-full pl-10 space-y-1">
         {/* Select Crypto */}
@@ -194,12 +194,12 @@ const DepositForm = () => {
                   width={30}
                   height={30}
                   alt=""
-                  className="w-[18px] h-auto "
+                  className="w-[18px] xl:w-[24px] h-auto "
                 />
                 {/* name */}
-                <p className="text-[11px] flex gap-1 items-center">
+                <p className="text-[11px] xl:text-[0.65rem] flex gap-1 items-center">
                   <span>{selectedCrypto.symbol}</span>
-                  <span className="text-[9px] font-light opacity-90 dark:opacity-50">
+                  <span className="text-[9px] xl:text-[0.5rem] font-light opacity-90 dark:opacity-50">
                     {selectedCrypto.name}
                   </span>
                 </p>
@@ -330,7 +330,7 @@ const DepositForm = () => {
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
-          <div className="space-y-1 text-[10px] font-light opacity-70 dark:opacity-50">
+          <div className="space-y-1 text-[10px] xl:text-[0.65rem] font-light opacity-70 dark:opacity-50">
             <p className=" ">{t("tips.content")}</p>
           </div>
         </div>
@@ -350,7 +350,7 @@ const DepositForm = () => {
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
-          <ul className="space-y-3 text-[10px] opacity-70 dark:opacity-50">
+          <ul className="space-y-3 text-[10px] xl:text-[0.65rem] opacity-70 dark:opacity-50">
             {FaqArray.map((val, index) => (
               <li className="flex gap-1 items-center" key={index}>
                 <LuMessageCircleQuestion className="text-[16px]" />{" "}

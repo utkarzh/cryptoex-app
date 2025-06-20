@@ -29,7 +29,7 @@ const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
       </h2>
       {/* input */}
       <div>
-        <label className="block mb-2 text-[10px] font-light">
+        <label className="block mb-2 text-[10px] xl:text-xs font-light">
           {t("nickname")}
         </label>
         <input
@@ -39,7 +39,7 @@ const ChangeNamePopup: FC<Props> = ({ onClose, onSuccess, nickname }) => {
           className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-xs"
           onChange={(e) => setChangedNickname(e.target.value)}
         />
-        <p className="text-[9px] font-light mt-1 text-red-600">
+        <p className="text-[9px] xl:text-[0.6rem] font-normal mt-1 text-red-600">
           {t("message")}
         </p>
       </div>

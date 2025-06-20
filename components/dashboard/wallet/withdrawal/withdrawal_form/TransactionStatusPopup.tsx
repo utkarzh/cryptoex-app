@@ -52,7 +52,7 @@ const TransactionStatusPopup: FC<Props> = ({ status }) => {
         {t(`${status}.title`)}
       </h2>
 
-      <p className="text-[11px] font-light mb-6 opacity-80 dark:opacity-50">
+      <p className="text-[11px] xl:text-[0.65rem] font-light mb-6 opacity-80 dark:opacity-50">
         {t(`${status}.content`)}
       </p>
 

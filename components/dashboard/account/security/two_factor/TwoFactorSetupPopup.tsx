@@ -32,7 +32,7 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
   };
 
   return (
-    <div className=" mt-30 pb-10 bg-white flex flex-col gap-4 dark:bg-[#161735] max-w-[450px]  rounded-xl p-6 relative">
+    <div className=" mt-30 pb-10 mb-10 bg-white flex flex-col gap-4 dark:bg-[#161735] max-w-[500px] xl:max-w-[700px]  rounded-xl p-6 relative">
       {/* heading and close button*/}
       <div className="w-full flex justify-between items-center">
         <h2 className={`${saira.className} text-sm font-semibold `}>
@@ -51,7 +51,7 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
             1
           </div>
           <p className="text-xs font-light mt-2">{t("downloadMsgTitle")}</p>
-          <p className="text-[9px] font-extralight opacity-80 dark:opacity-60">
+          <p className="text-[9px] xl:text-[0.5rem] font-extralight opacity-80 dark:opacity-60">
             {t("downloadMsgContent")}
           </p>
         </div>
@@ -63,14 +63,14 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
             2
           </div>
           <p className="text-xs font-light mt-2">{t("addKeyTitle")}</p>
-          <p className="text-[9px] font-extralight opacity-80 dark:opacity-60">
+          <p className="text-[9px] xl:text-[0.5rem] font-extralight opacity-80 dark:opacity-60">
             {t("addKeyContent")}
           </p>
         </div>
       </div>
 
       {/* Alert */}
-      <div className="flex gap-2 text-[10px] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
+      <div className="flex gap-2 text-[10px] xl:text-[0.6rem] font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-md justify-center items-center">
         <FiAlertTriangle className="text-5xl dark:text-[#c97b26] text-[#bc8d5b]" />
         <p>{t("alertMsg")}</p>
       </div>
@@ -93,13 +93,13 @@ const TwoFactorSetupPopup: FC<Props> = ({ onClose, onSuccess }) => {
           <Image
             src="/images/testqr.png"
             alt="QR Code"
-            className="w-20 h-20 invert"
+            className="w-22 h-auto xl:w-26 xl:h-auto invert"
             width={80}
             height={80}
           />
         </div>
         <div className="w-full">
-          <div className="text-[11px] font-light opacity-80 mb-1">
+          <div className="text-[11px] xl:text-[0.65rem] font-light opacity-80 mb-1">
             {t("copyKey")}
           </div>
           <div className="w-full flex flex-wrap items-center gap-2  rounded">

@@ -1051,7 +1051,7 @@
     "annu":"Indoex MemeBox has Initial Listed Token"
   },
   "sidebar":{
-    "all":"all",
+    "all":"All",
     "news":{
       "label":"News",
       "item1":"Indoex updates",
@@ -1152,6 +1152,10 @@
         "part1":"Please do not contact any unofficial/non-verified sources or reveal your account details to them. For further queries, please contact",
         "part2":"Indoex Support"
       }
+    },
+    "message":{
+      "error":"The source you entered is not verified and may not be an Indoex official",
+      "success":"The source you entered is an official source of Indoex"
     }
   },
 

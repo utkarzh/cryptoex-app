@@ -69,18 +69,15 @@ const DeviceManagement = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.dateTime")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.location")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
-                {" "}
-                {t("tHead.ip")}
-              </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light"> {t("tHead.ip")}</th>
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.action")}
               </th>
@@ -92,7 +89,7 @@ const DeviceManagement = () => {
                 return (
                   <tr
                     key={index}
-                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                   >
                     <td className="py-3 px-4">{item.dateTime}</td>
                     <td className="py-3 px-4">{item.location}</td>

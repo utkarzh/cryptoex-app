@@ -25,7 +25,7 @@ const TradeHistory = () => {
         {t("title")}
       </h2>
       {/* filter tab */}
-      <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] mt-2">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] xl:text-[0.65rem] mt-2">
         <select className="border border-slate-500/40 p-1 px-2 rounded ">
           <option>1 {t("terms.month")}</option>
         </select>
@@ -48,32 +48,28 @@ const TradeHistory = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.filledTime")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.pair")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.bOrS")}
               </th>
 
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.type")}
               </th>
 
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.fillPrice")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.amount")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
-                {t("tHead.vol")}
-              </th>
-              <th className="px-4 py-3 text-[9px] font-light">
-                {t("tHead.fee")}
-              </th>
+              <th className="px-4 py-3 text-xs font-light">{t("tHead.vol")}</th>
+              <th className="px-4 py-3 text-xs font-light">{t("tHead.fee")}</th>
             </tr>
           </thead>
           {mockData.length > 0 && (

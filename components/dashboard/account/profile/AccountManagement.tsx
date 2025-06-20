@@ -21,13 +21,13 @@ const AccountManagement = () => {
         <div className="flex justify-between items-center  text-xs ">
           <div className="flex items-center gap-2  ">
             <div className="">
-              <RiUserForbidLine className=" text-[17px]" />
+              <RiUserForbidLine className=" text-[17px] xl:text-[24px]" />
             </div>
             <div>
               <div className="font-xs font-light opacity-90">
                 {t("closeAcc.label")}
               </div>
-              <div className="text-[11px] font-light opacity-60">
+              <div className="text-[11px] xl:text-[0.65rem] font-extralight opacity-60">
                 {t("closeAcc.content")}
               </div>
             </div>

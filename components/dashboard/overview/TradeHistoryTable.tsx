@@ -93,34 +93,34 @@ const TradeHistoryTable = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.filledTime")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.pair")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.bOrS")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.orderType")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.fillPrice")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.amount")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.vol")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {" "}
                 {t("tHead.fee")}
               </th>
@@ -130,7 +130,7 @@ const TradeHistoryTable = () => {
             {trades.map((trade, idx) => (
               <tr
                 key={idx}
-                className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
               >
                 <td className="px-4 py-3 ">{trade.time}</td>
                 <td className="px-4 py-3 ">

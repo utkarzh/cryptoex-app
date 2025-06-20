@@ -3,7 +3,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className="w-full flex justify-center my-10">
+    <div className="w-full flex justify-center my-14">
       <IndoexVerify />
     </div>
   );

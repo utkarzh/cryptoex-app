@@ -20,13 +20,13 @@ const CryptoDepositAddress: FC<Props> = ({ address }) => {
   };
 
   return (
-    <div className=" p-4 flex flex-col  gap-1  ">
+    <div className=" p-4 flex flex-col  gap-2 xl:gap-4  ">
       <div className="flex gap-2">
         <div>
           <h2 className="text-xs font-light mb-1">
             USDT(Tether) {t("terms.addPub")}
           </h2>
-          <p className="text-[10px] mt-2 opacity-90 dark:opacity-70">
+          <p className="text-[10px] xl:text-[0.65rem] mt-2 opacity-90 dark:opacity-70">
             {t("terms.addPubContent")}
           </p>
         </div>
@@ -38,7 +38,7 @@ const CryptoDepositAddress: FC<Props> = ({ address }) => {
             alt="QR Code"
             width={100}
             height={100}
-            className="rounded dark:invert-0 invert"
+            className="rounded w-20 xl:w-24 dark:invert-0 invert"
           />
         </div>
       </div>

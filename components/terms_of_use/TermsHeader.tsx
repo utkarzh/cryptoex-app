@@ -7,7 +7,7 @@ const TermsHeader = () => {
   const t = useTranslations("termsOfUse");
   return (
     <div className="w-full h-[250px] flex justify-end relative z-[40]">
-      <div className="w-[25%] flex justify-end items-center relative left-[2vw] bottom-[10px]">
+      <div className="w-[25%]  flex justify-end items-center relative left-[2vw] bottom-[10px]">
         <h2
           className={`${saira.className} text-3xl w-fit font-semibold tracking-wide pb-3 border-b-3 border-green-600 `}
         >

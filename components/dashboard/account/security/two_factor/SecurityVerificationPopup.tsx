@@ -69,7 +69,7 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
   };
 
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[650px] mx-auto shadow-lg relative">
       <button
         className="absolute top-4 right-4 hover:scale-110 transition-all duration-200 cursor-pointer"
         onClick={onClose}
@@ -104,7 +104,7 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
         ))}
       </div>
 
-      <p className="flex text-[11px] gap-[2px] font-light ">
+      <p className="flex text-[11px] xl:text-[0.6rem] gap-[2px] font-light ">
         <span className="opacity-60">{t("noCode.part1")}</span>
         <button className="text-green-500 hover:underline cursor-pointer">
           {t("noCode.part2")}
@@ -113,7 +113,7 @@ const SecurityVerificationPopup: FC<Props> = ({ onClose, onOTPEntered }) => {
 
       {/* error message */}
       {errorMessage && (
-        <p className="text-[10px] mt-4 font-extralight bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
+        <p className="text-[10px] xl:text-[0.55rem] mt-4 font-light bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
           {errorMessage}
         </p>
       )}

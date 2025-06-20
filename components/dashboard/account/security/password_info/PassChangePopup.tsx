@@ -37,7 +37,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
     onSuccess(data);
   };
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-5">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[600px] mx-auto shadow-lg relative space-y-5">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -53,14 +53,18 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
 
       {/* notice */}
       <div className="border border-slate-500/30 bg-slate-500/10 rounded-md p-2 space-y-1">
-        <h5 className="text-[10px] font-medium">{t("notice")}:</h5>
-        <p className="text-[10px] font-light">{t("noticeMessage")}</p>
+        <h5 className="text-[10px] xl:text-[0.65rem] font-medium">
+          {t("notice")}:
+        </h5>
+        <p className="text-[10px] xl:text-[0.6rem] font-light">
+          {t("noticeMessage")}
+        </p>
       </div>
       {/* inputs */}
       <div className="w-full space-y-4">
         {/* old password */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("oldPass")}
           </label>
           <div className=" relative">
@@ -68,7 +72,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
               type={oldPassword.isVisible ? "text" : "password"}
               value={oldPassword.oldPassword}
               placeholder={t("oldPassHolder")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem] pr-6"
               onChange={(e) =>
                 setOldPassword((prev) => {
                   return { ...prev, oldPassword: e.target.value };
@@ -94,7 +98,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/* New password */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("newPass")}
           </label>
           <div className=" relative">
@@ -102,7 +106,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
               type={newPassword.isVisible ? "text" : "password"}
               value={newPassword.newPassword}
               placeholder={t("newPassHolder")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem] pr-6"
               onChange={(e) =>
                 setNewPassword((prev) => {
                   return { ...prev, newPassword: e.target.value };
@@ -128,7 +132,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/* confirm New password */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("confirmPass")}
           </label>
           <div className=" relative">
@@ -136,7 +140,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
               type={confirmPassword.isVisible ? "text" : "password"}
               value={confirmPassword.confirmPassword}
               placeholder={t("confirmPassHolder")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem] pr-6"
               onChange={(e) =>
                 setConfirmPassword((prev) => {
                   return { ...prev, confirmPassword: e.target.value };
@@ -162,7 +166,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/* 2FA verification code */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("2faCode")}
           </label>
           <div className=" relative">
@@ -170,7 +174,7 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
               type="text"
               value={twoFaCode}
               placeholder={t("2faCodeHolder")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] pr-6"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem] pr-6"
               onChange={(e) => setTwoFaCode(e.target.value)}
             />
             <p className="text-xs font-light text-green-600 mt-2">

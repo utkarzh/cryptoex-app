@@ -14,7 +14,7 @@ const ChangeMailConfirmationPopup: FC<Props> = ({ onSuccess, onClose }) => {
     "dashboard.security.securitySetting.emailInfo.popUp1"
   );
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-4">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[500px] mx-auto shadow-lg relative space-y-4">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -30,7 +30,9 @@ const ChangeMailConfirmationPopup: FC<Props> = ({ onSuccess, onClose }) => {
       {/* message */}
       <div className="p-2 rounded-md border border-slate-500/30 space-y-1">
         <h4 className="text-xs">{t("message.title")}</h4>
-        <p className="text-[9px] font-light">{t("message.content")}</p>
+        <p className="text-[9px] xl:text-[0.65rem] font-light">
+          {t("message.content")}
+        </p>
       </div>
 
       {/* Action buttons */}

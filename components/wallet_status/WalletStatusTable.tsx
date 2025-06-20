@@ -110,7 +110,7 @@ export default function WalletStatusTable() {
             placeholder={t("terms.search")}
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+            className="dark:bg-[#1a1c36] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
           />
           <IoSearch className="absolute top-2 left-2 opacity-60 " />
         </div>
@@ -120,7 +120,7 @@ export default function WalletStatusTable() {
         <div className="overflow-x-auto">
           <table className="w-full text-xs text-left">
             <thead className=" ">
-              <tr className="text-[12px] opacity-90 dark:opacity-60">
+              <tr className="text-xs opacity-90 dark:opacity-60">
                 <th className="py-3 px-2 font-extralight">{t("tHead.name")}</th>
                 <th className="py-3 px-2 font-extralight text-center">
                   {t("tHead.tSupply")}
@@ -160,7 +160,7 @@ export default function WalletStatusTable() {
 
                   <td className="py-3 px-2 text-right">
                     <button
-                      className={`text-[12px] w-[100px] py-1 ${
+                      className={`text-xs w-[100px] xl:w-[120px] py-1 ${
                         item.status === "active"
                           ? "text-green-100  bg-green-600 dark:bg-green-500/30 dark:text-green-600 hover:bg-green-700 dark:hover:bg-green-500/20"
                           : "text-gray-100  bg-gray-600 dark:bg-gray-500/30 dark:text-gray-300 hover:bg-gray-700 dark:hover:bg-gray-500/20"
@@ -178,7 +178,7 @@ export default function WalletStatusTable() {
 
       {/* Pagination */}
       {filteredData.length > 0 && (
-        <div className="mt-4 mb-4">
+        <div className="mt-8 mb-4 ">
           <ReactPaginate
             previousLabel="<"
             nextLabel=">"

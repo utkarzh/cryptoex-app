@@ -16,7 +16,7 @@ const AnnouncementsHeader = () => {
           placeholder={t("terms.search")}
           // value={search}
           // onChange={(e) => setSearch(e.target.value)}
-          className="dark:bg-[#1a1c36] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+          className="dark:bg-[#1a1c36] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
         />
         <IoSearch className="absolute top-2 left-2 opacity-60 " />
       </div>

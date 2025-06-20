@@ -109,7 +109,7 @@ const DepositHistory = () => {
         {t("title")}
       </h2>
       {/* filter tab */}
-      <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] mt-2">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-end gap-4 mb-4 text-[10px] xl:text-[0.65rem] mt-2">
         <input
           type="date"
           className="border border-slate-500/40 p-1 px-2 rounded "
@@ -130,23 +130,23 @@ const DepositHistory = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.cOrT")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.amount")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.time")}
               </th>
 
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.bRecords")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.remark")}
               </th>
-              <th className="px-4 py-3 text-[11px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.status")}
               </th>
             </tr>
@@ -157,11 +157,13 @@ const DepositHistory = () => {
               return (
                 <tr
                   key={index}
-                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                  className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                 >
                   <td className="py-3 px-4">
                     {item.coin}{" "}
-                    <span className="text-[10px] opacity-60">Bitcoin</span>
+                    <span className="text-[10px] xl:text-[0.6rem] opacity-60">
+                      Bitcoin
+                    </span>
                   </td>
                   <td className="py-3 px-4">{item.amount}</td>
                   <td className="py-3 px-4">{item.time}</td>

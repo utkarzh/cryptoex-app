@@ -23,7 +23,7 @@ const AuthLevel = () => {
             <div className="w-full px-2 max-w-full sm:max-w-[60%] s flex gap-2 items-center">
               <span className="w-7 h-7 text-xs font-medium flex justify-center items-center rounded-full bg-green-600 relative">
                 L1
-                <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[12px] font-light opacity-60 text-nowrap">
+                <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-light opacity-60 text-nowrap">
                   100 BTC
                 </p>
               </span>
@@ -32,7 +32,7 @@ const AuthLevel = () => {
 
               <span className="w-7 h-7 text-xs font-medium flex justify-center items-center rounded-full bg-slate-500/30 relative">
                 L2
-                <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-[12px] font-light opacity-60 text-nowrap">
+                <p className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-light opacity-60 text-nowrap">
                   {t("terms.unlimited")}
                 </p>
               </span>

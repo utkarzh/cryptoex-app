@@ -33,11 +33,11 @@ const SecondaryPin = () => {
       <div className="flex justify-between items-center  text-xs ">
         <div className="flex items-start gap-2  ">
           <div className="">
-            <IoLockClosedOutline className="text-[17px]" />
+            <IoLockClosedOutline className="text-[17px] xl:text-[22px]" />
           </div>
           <div>
             <div className="font-xs font-light opacity-90">{t("label")}</div>
-            <div className="text-[11px] font-light opacity-60">
+            <div className="text-[11px] xl:text-[0.65rem] font-light opacity-60">
               {t("content")}
             </div>
           </div>
@@ -47,13 +47,13 @@ const SecondaryPin = () => {
           {true ? (
             <div className="flex gap-2 ">
               <button
-                className="  cursor-pointer text-[10px] px-2 py-1 text-sm rounded text-nowrap"
+                className="  cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded text-nowrap"
                 onClick={() => setPopup("fotgot")}
               >
                 {t("buttons.forgot")}
               </button>
               <button
-                className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap"
+                className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded bg-slate-500/25 dark:hover:bg-slate-500/30 hover:bg-slate-500/15 text-nowrap"
                 onClick={() => setPopup("change")}
               >
                 {t("buttons.change")}

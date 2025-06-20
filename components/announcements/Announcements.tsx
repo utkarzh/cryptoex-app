@@ -73,7 +73,7 @@ const Announcements = () => {
   ];
   return (
     <div className=" ml-2 h-full w-full dark:bg-[#161735]  bg-white rounded-md">
-      <div className="w-full flex flex-col gap-1 px-4 py-6 ">
+      <div className="w-full flex flex-col gap-2 px-4 py-6 ">
         {listedTokens.map((val, index) => (
           <Link
             href="/announcements/details"
@@ -84,7 +84,7 @@ const Announcements = () => {
               <p className="text-xs ">{val.title}: &nbsp;</p>
               <p className="text-xs"> {val.token}</p>
             </div>
-            <div className="text-[10px] font-light text-slate-600 dark:text-slate-500">
+            <div className="text-[10px] xl:text-[0.7rem] font-light text-slate-600 dark:text-slate-500">
               {val.timestamp}
             </div>
           </Link>

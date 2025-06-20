@@ -38,7 +38,7 @@ const Security = () => {
         {["passkey", "2fa", "antiPhi"].map((item) => (
           <div key={item} className="flex justify-between items-center pb-2">
             <p className="text-xs">{t(`terms.${item}`)}</p>
-            <span className="flex items-center gap-1 text-green-50 bg-green-600 dark:text-green-400 dark:bg-green-700/30 px-3 py-1 rounded-full text-[10px]">
+            <span className="flex items-center gap-1 text-green-50 bg-green-600 dark:text-green-400 dark:bg-green-700/30 px-3 py-1 rounded-full text-xs">
               &#10003; {t("terms.button")}
             </span>
           </div>

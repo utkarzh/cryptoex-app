@@ -149,7 +149,7 @@ const WithdrawalForm = () => {
     setTransactionStatus("pending");
   };
   return (
-    <div className="bg-white dark:bg-[#161735] p-6 rounded-xl flex flex-col md:flex-row gap-10">
+    <div className="xl:p-8 xl:py-10 bg-white dark:bg-[#161735] p-6 rounded-xl flex flex-col md:flex-row gap-10">
       {/* Form Area */}
       <div className="w-full pl-10 space-y-1">
         {/* Select Crypto */}
@@ -191,12 +191,12 @@ const WithdrawalForm = () => {
                   width={30}
                   height={30}
                   alt=""
-                  className="w-[18px] h-auto "
+                  className="w-[18px] xl:w-[22px] h-auto "
                 />
                 {/* name */}
-                <p className="text-[11px] flex gap-1 items-center">
+                <p className="text-[11px] xl:text-[0.65rem] flex gap-1 items-center">
                   <span>{selectedCrypto.symbol}</span>
-                  <span className="text-[9px] font-light opacity-90 dark:opacity-50">
+                  <span className="text-[9px] xl:text-[0.5rem] font-light opacity-90 dark:opacity-50">
                     {selectedCrypto.name}
                   </span>
                 </p>
@@ -252,7 +252,7 @@ const WithdrawalForm = () => {
           </label>
           <div className="">
             {selectedNetwork && (
-              <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1">
+              <label className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light pb-1">
                 {t("terms.net")}
               </label>
             )}
@@ -276,7 +276,7 @@ const WithdrawalForm = () => {
             </div>
 
             {selectedNetwork && withdrawalAddress && (
-              <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1 mt-4">
+              <label className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light pb-1 mt-4">
                 {t("terms.add")}
               </label>
             )}
@@ -342,11 +342,11 @@ const WithdrawalForm = () => {
           {selectedCrypto && selectedNetwork && withdrawalAddress && (
             <div className="">
               <div className="w-full flex justify-between items-center">
-                <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1">
+                <label className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light pb-1">
                   {t("terms.amount")}
                 </label>
 
-                <span className="text-[10px]  ">
+                <span className="text-[10px] xl:text-[0.6rem] mb-1  ">
                   {t("terms.avalBal")}: 530 USDT
                 </span>
               </div>
@@ -355,7 +355,7 @@ const WithdrawalForm = () => {
                 {/* max valued div */}
                 <div className="absolute top-1/2 -translate-y-1/2 right-8 flex gap-2 items-center text-xs">
                   <span>USDT</span>
-                  <span className="text-[11px] text-green-600">Max</span>
+                  <span className="text-xs text-green-600">Max</span>
                 </div>
                 <input
                   type="number"
@@ -366,7 +366,7 @@ const WithdrawalForm = () => {
                 />
               </div>
 
-              <label className="opacity-80 dark:opacity-50 text-[10px] font-light pb-1 mt-4">
+              <label className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light pb-1 mt-4">
                 {t("terms.remark")}
               </label>
               {/* remark optional */}
@@ -384,15 +384,15 @@ const WithdrawalForm = () => {
               <div className="w-full mt-10">
                 {/* info */}
                 <div className="w-full flex justify-between items-center">
-                  <span className="flex gap-1 w-fit text-[10px] items-center">
-                    <span className="opacity-80 dark:opacity-50 text-[10px] font-light">
+                  <span className="flex gap-1 w-fit text-[10px] xl:text-[0.6rem] items-center">
+                    <span className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light">
                       {t("terms.rAmount")}:
                     </span>
                     <span> 0 USDT</span>
                   </span>
 
-                  <span className="flex gap-1 w-fit text-[10px] items-center">
-                    <span className="opacity-80 dark:opacity-50 text-[10px] font-light">
+                  <span className="flex gap-1 w-fit text-[10px] xl:text-[0.6rem] items-center">
+                    <span className="opacity-80 dark:opacity-50 text-[10px] xl:text-[0.6rem] font-light">
                       {t("terms.netFee")}:
                     </span>
                     <span> 0 ETH</span>
@@ -429,7 +429,7 @@ const WithdrawalForm = () => {
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
-          <div className="space-y-1 text-[10px] font-light opacity-70 dark:opacity-50">
+          <div className="space-y-1 text-[10px] xl:text-[0.65rem] font-light opacity-70 dark:opacity-50">
             <p className=" ">{t("tips.content.point1")}</p>
             <p className="">{t("tips.content.point2")}</p>
           </div>
@@ -450,7 +450,7 @@ const WithdrawalForm = () => {
           {/* border */}
           <div className="w-full border-t opacity-20"></div>
           {/* content */}
-          <ul className="space-y-3 text-[10px] opacity-70 dark:opacity-50">
+          <ul className="space-y-3 text-[10px] xl:text-[0.65rem] opacity-70 dark:opacity-50">
             {FaqArray.map((val, index) => (
               <li className="flex gap-1 items-center" key={index}>
                 <LuMessageCircleQuestion className="text-[16px]" />{" "}

@@ -28,7 +28,7 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
     setTimeout(() => setError(""), 2000);
   };
   return (
-    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] mx-auto shadow-lg relative space-y-5">
+    <div className="bg-white dark:bg-[#161735] p-8 rounded-2xl max-w-[400px] xl:max-w-[500px] mx-auto shadow-lg relative space-y-5">
       {/* close button */}
       <button
         className="absolute border rounded-full border-slate-600 dark:border-slate-500 right-2 top-2 hover:scale-105 transition-all duration-200 cursor-pointer"
@@ -38,14 +38,14 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
       </button>
 
       {/* heading and close button*/}
-      <h2 className={`${saira.className} text-sm font-semibold `}>
+      <h2 className={`${saira.className} text-sm  font-semibold `}>
         {t("title")}
       </h2>
       {/* inputs */}
       <div className="w-full space-y-3">
         {/* new email */}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("newEmail")}
           </label>
           <div className="flex gap-1">
@@ -53,10 +53,10 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
               type="text"
               value={newEmail}
               placeholder={t("enterEmail")}
-              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px]"
+              className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20  focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
               onChange={(e) => setNewEmail(e.target.value)}
             />
-            <button className="text-[10px] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
+            <button className="text-[10px] xl:text-[0.65rem] text-wrap sm:text-nowrap text-green-100 bg-green-600 dark:bg-green-500/20 dark:text-green-600 px-4 py-1 rounded-md hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer border border-green-600 transition-all duration-300">
               {t("buttons.sendCode")}
             </button>
           </div>
@@ -64,7 +64,7 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
 
         {/*varification code*/}
         <div>
-          <label className="block mb-1 text-[10px] font-light">
+          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light ">
             {t("veriCode")}
           </label>
 
@@ -72,11 +72,11 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
             type="text"
             value={code}
             placeholder={t("enterveriCode")}
-            className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px]"
+            className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none  placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
             onChange={(e) => setCode(e.target.value)}
           />
 
-          <p className="text-[10px] hover:text=-green-500 cursor-pointer mt-2 relative group flex flex-col gap-1">
+          <p className="text-[10px] xl:text-[0.6rem] hover:text=-green-500 cursor-pointer mt-2 relative group flex flex-col gap-1">
             <span className="hidden group-hover:block p-1 px-2 rounded-md bg-white dark:bg-slate-700 absolute bottom-4 -left-1">
               {t("checkSpam")}
             </span>
@@ -84,7 +84,11 @@ const ChangeMailSubmitPopup: FC<Props> = ({ onClose, onSuccess }) => {
           </p>
         </div>
       </div>
-      {error && <p className="text-[10px] font-light text-red-700">{error}</p>}
+      {error && (
+        <p className="text-[10px] xl:text-[0.6rem] font-light text-red-700">
+          {error}
+        </p>
+      )}
 
       {/* Action buttons */}
       <div className="w-full flex flex-col sm:flex-row gap-2 justify-between mt-2 text-xs">

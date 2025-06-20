@@ -1,119 +1,61 @@
 "use client";
 
+import { useGetFeeListMutation } from "@/redux/features/footer/footerApi";
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
-import { FaBitcoin, FaEthereum } from "react-icons/fa";
+import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
-import { SiBinance, SiPolygon, SiTether } from "react-icons/si";
 import ReactPaginate from "react-paginate";
-
-const mockData = [
-  {
-    coin: "BTC",
-    name: "Bitcoin",
-    icon: <FaBitcoin className="text-xl text-yellow-400" />,
-    minDeposit: "0.0009",
-    minWithdraw: "0.0009",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "ETH",
-    name: "Ethereum",
-    icon: <FaEthereum className="text-xl text-blue-400" />,
-    minDeposit: "0.015",
-    minWithdraw: "0.015",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "BNB",
-    name: "Bancoin",
-    icon: <SiBinance className="text-xl text-yellow-300" />,
-    minDeposit: "10",
-    minWithdraw: "10",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "MATIC",
-    name: "Matic",
-    icon: <SiPolygon className="text-xl text-purple-400" />,
-    minDeposit: "100",
-    minWithdraw: "100",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "BTC",
-    name: "Bitcoin",
-    icon: <FaBitcoin className="text-xl text-yellow-400" />,
-    minDeposit: "100",
-    minWithdraw: "100",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "ETH",
-    name: "Ethereum",
-    icon: <FaEthereum className="text-xl text-blue-400" />,
-    minDeposit: "0.1",
-    minWithdraw: "0.1",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "BTC",
-    name: "Bitcoin",
-    icon: <FaBitcoin className="text-xl text-yellow-400" />,
-    minDeposit: "0.1",
-    minWithdraw: "0.1",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "USDT",
-    name: "Usdt",
-    icon: <SiTether className="text-xl text-green-400" />,
-    minDeposit: "0.1",
-    minWithdraw: "0.1",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-  {
-    coin: "ETH",
-    name: "Ethereum",
-    icon: <FaEthereum className="text-xl text-blue-400" />,
-    minDeposit: "0.1",
-    minWithdraw: "0.1",
-    withdrawFee: "0.0015",
-    makerFee: "0.0015",
-    takerFee: "0.0015",
-  },
-];
+import { FeeApiResult_int, VendorFee_int } from "./types";
+import LoadingTableSkeleton from "../common/loading/LoadingTableSkeleton";
+import CoinCard from "../common/CoinCard";
 
 export default function Fee() {
   const t = useTranslations("feePage");
+  const itemsPerPage = 10;
   const [search, setSearch] = useState("");
+  const [filteredData, setFilteredData] = useState<VendorFee_int[]>([]);
+  const [pageCount, setPageCount] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredData = mockData.filter((item) =>
-    item.coin.toLowerCase().includes(search.toLowerCase())
-  );
-
-  const pageCount = 10;
+  const [getFeeList, { data }] = useGetFeeListMutation<FeeApiResult_int>();
+  useEffect(() => {
+    getFeeList({});
+  }, []);
 
   const handlePageChange = (event: { selected: number }) => {
     console.log("None", event);
+    if (event.selected >= 0 && event.selected <= pageCount) {
+      setCurrentPage(event.selected + 1);
+    }
   };
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+    setCurrentPage(1);
+  };
+
+  useEffect(() => {
+    if (!data) return;
+    if (data?.status === 1) {
+      const filterArr = data.vendors.filter(
+        (item) =>
+          item.vendors_vendorshortcode
+            .toLowerCase()
+            .includes(search.toLowerCase()) ||
+          item.vendors_vendorname.toLowerCase().includes(search.toLowerCase())
+      );
+
+      const pages = Math.ceil(filterArr.length / itemsPerPage);
+
+      const paginatedArray = filterArr.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+      );
+      setPageCount(pages);
+      setFilteredData(paginatedArray);
+    }
+  }, [data, currentPage, search]);
 
   return (
     <div className="bg-white dark:bg-[#161735] rounded-md p-6 px-8">
@@ -127,76 +69,100 @@ export default function Fee() {
             type="text"
             placeholder={t("terms.search")}
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="dark:bg-[#202344] bg-slate-600/15 text-[12px] px-8 py-2 rounded-md focus:outline-none"
+            onChange={handleSearch}
+            className="dark:bg-[#202344] bg-slate-600/15 text-xs px-8 py-2 rounded-md focus:outline-none"
           />
           <IoSearch className="absolute top-2 left-2 opacity-60 " />
         </div>
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-xs text-left">
-          <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
-            <tr className="text-[12px] opacity-90 dark:opacity-60">
-              <th className="py-3 px-2 font-extralight">{t("tHead.name")}</th>
-              <th className="py-3 px-2 font-extralight text-center">
-                {t("tHead.minDeposit")}
-              </th>
-              <th className="py-3 px-2 font-extralight  text-center">
-                {t("tHead.minWithdraw")}
-              </th>
-              <th className="py-3 px-2 font-extralight  text-center">
-                {t("tHead.withdrawFee")}
-              </th>
-              <th className="py-3 px-2 font-extralight  text-center">
-                {t("tHead.makerFee")}
-              </th>
-              <th className="py-3 px-2 font-extralight  text-center">
-                {t("tHead.takerFee")}
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item, idx) => (
-              <tr
-                key={idx}
-                className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
-              >
-                <td className="py-3 px-2 flex items-center gap-2">
-                  {item.icon}
-                  <span className="flex flex-col ">
-                    <span>{item.coin}</span>
-                    <span className="text-[8px] opacity-80">{item.name}</span>
-                  </span>
-                </td>
-                <td className="py-3 px-2 text-center">{item.minDeposit}</td>
-                <td className="py-3 px-2  text-center">{item.minWithdraw}</td>
-                <td className="py-3 px-2  text-center">{item.withdrawFee}</td>
-                <td className="py-3 px-2  text-center">{item.makerFee}</td>
-                <td className="py-3 px-2  text-center">{item.takerFee}</td>
+        {data && data.status === 1 ? (
+          <table className="w-full text-xs text-left">
+            <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
+              <tr className="text-xs opacity-90 dark:opacity-60">
+                <th className="py-3 px-2 font-extralight">{t("tHead.name")}</th>
+                <th className="py-3 px-2 font-extralight text-center">
+                  {t("tHead.minDeposit")}
+                </th>
+                <th className="py-3 px-2 font-extralight  text-center">
+                  {t("tHead.minWithdraw")}
+                </th>
+                <th className="py-3 px-2 font-extralight  text-center">
+                  {t("tHead.withdrawFee")}
+                </th>
+                <th className="py-3 px-2 font-extralight  text-center">
+                  {t("tHead.makerFee")}
+                </th>
+                <th className="py-3 px-2 font-extralight  text-center">
+                  {t("tHead.takerFee")}
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            {filteredData.length > 0 && (
+              <tbody>
+                {filteredData.map((item, idx) => (
+                  <tr
+                    key={idx}
+                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
+                  >
+                    <td className="py-3 px-2 ">
+                      <div className="w-fit min-w-[150px] mx-auto overflow-visible">
+                        <CoinCard
+                          isSmall={false}
+                          cointTitle={item.vendors_vendorshortcode}
+                          coinName={item.vendors_vendorname}
+                          coinImgUrl={item.vendors_logopath}
+                        />
+                      </div>
+                    </td>
+                    <td className="py-3 px-2 text-center">
+                      {item.vendors_mindeposit}
+                    </td>
+                    <td className="py-3 px-2  text-center">
+                      {item.vendors_minwithdraw}
+                    </td>
+                    <td className="py-3 px-2  text-center">
+                      {item.vendors_transferfee}
+                    </td>
+                    <td className="py-3 px-2  text-center">
+                      {(item.vendors_salepricefee * 100).toFixed(2)} %
+                    </td>
+                    <td className="py-3 px-2  text-center">
+                      {(item.vendors_buypricefee * 100).toFixed(2)}%
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            )}
+          </table>
+        ) : (
+          <LoadingTableSkeleton rows={8} columns={6} />
+        )}
       </div>
 
       {/* Pagination */}
-      <div className="mt-4 mb-4">
-        <ReactPaginate
-          previousLabel="<"
-          nextLabel=">"
-          breakLabel="..."
-          pageCount={pageCount}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={3}
-          onPageChange={handlePageChange}
-          containerClassName="flex justify-center items-center gap-2 text-sm mt-4"
-          pageClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 cursor-pointer" //remaining page number
-          activeClassName="dark:bg-green-600 bg-green-600 text-white dark:text-black" // active page number
-          previousClassName="px-3 py-1 rounded border-slate-600/50 dark:border-slate-200/50 border cursor-pointer" //prev click button
-          nextClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 bg-transparent cursor-pointer" //next click button
-          disabledClassName="opacity-50 cursor-not-allowed"
-        />
+      <div className="mt-8 mb-4">
+        {pageCount > 0 ? (
+          <ReactPaginate
+            previousLabel="<"
+            nextLabel=">"
+            breakLabel="..."
+            pageCount={pageCount}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageChange}
+            forcePage={currentPage - 1}
+            containerClassName="flex justify-center items-center gap-2 text-sm mt-4"
+            pageClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 cursor-pointer" //remaining page number
+            activeClassName="dark:bg-green-600 bg-green-600 text-white dark:text-black" // active page number
+            previousClassName="px-3 py-1 rounded border-slate-600/50 dark:border-slate-200/50 border cursor-pointer" //prev click button
+            nextClassName="px-3 py-1 rounded border border-slate-600/50 dark:border-slate-200/50 bg-transparent cursor-pointer" //next click button
+            disabledClassName="opacity-50 cursor-not-allowed"
+          />
+        ) : (
+          <div className="w-full text-center opacity-60">No Data Found</div>
+        )}
       </div>
     </div>
   );

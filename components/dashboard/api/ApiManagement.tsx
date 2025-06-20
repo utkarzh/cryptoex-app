@@ -13,7 +13,9 @@ const ApiManagement = () => {
         <h2 className={`${saira.className} text-sm font-semibold`}>
           {t("title")}
         </h2>
-        <p className="text-[10px] font-light">{t("subTitle")}</p>
+        <p className="text-[10px] xl:text-[0.6rem] font-light">
+          {t("subTitle")}
+        </p>
       </div>
 
       {/* content */}

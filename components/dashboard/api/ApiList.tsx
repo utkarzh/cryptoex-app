@@ -41,25 +41,23 @@ const ApiList = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.createDate")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.notes")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.permission")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.accKey")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
-                {t("tHead.ip")}
-              </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">{t("tHead.ip")}</th>
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.expire")}
               </th>
-              <th className="px-4 py-3 text-[9px] font-light">
+              <th className="px-4 py-3 text-xs font-light">
                 {t("tHead.action")}
               </th>
             </tr>
@@ -70,7 +68,7 @@ const ApiList = () => {
                 return (
                   <tr
                     key={index}
-                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-[11px]"
+                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                   >
                     <td className="py-3 px-4">{item.createdDate}</td>
                     <td className="py-3 px-4">{item.notes}</td>
