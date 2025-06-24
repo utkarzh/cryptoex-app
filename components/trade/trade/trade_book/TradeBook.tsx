@@ -18,6 +18,29 @@ const MOCK_DATA_BUY = [
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
   { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "buy" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "buy" },
 ];
 
 const MOCK_DATA_RECENT = [
@@ -38,6 +61,28 @@ const MOCK_DATA_SELL = [
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
   { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
   { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "1965535.18", type: "sell" },
+  { price: "19355.18", amount: "0.00100", total: "19355.18", type: "sell" },
 ];
 
 const TradeBook = () => {
@@ -50,14 +95,14 @@ const TradeBook = () => {
   const [decimalPlaces, setDecimalPlaces] = useState(2);
 
   return (
-    <div className=" h-[100%] overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm  w-full  lg:max-w-xs rounded-xl shadow-lg space-y-3 flex flex-col ">
+    <div className=" h-[100%] overflow-hidden bg-transparent border-2 dark:border-white/10 border-[#161735]/10 text-gray-700 dark:text-gray-400 text-sm  w-full  lg:max-w-xs rounded-xl shadow-lg gap-3 flex flex-col">
       {/* Tab Header */}
-      <div className="flex justify-around border-b-2 dark:border-white/10 border-[#161735]/10 pt-2  ">
+      <div className="flex h-fit justify-around border-b-2 dark:border-white/10 border-[#161735]/10 pt-2  ">
         {["orderbook", "tradehistory"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab as typeof activeTab)}
-            className={`text-[12px] font-medium capitalize pb-2 cursor-pointer  ${
+            className={`text-xs font-medium capitalize pb-2 cursor-pointer  ${
               activeTab === tab
                 ? "text-green-400 border-b-2 relative top-[2px]"
                 : ""
@@ -69,7 +114,7 @@ const TradeBook = () => {
       </div>
 
       {(activeTab === "orderbook" || activeTab === "tradehistory") && (
-        <div className="mx-4 h-[100%] flex flex-col ">
+        <div className="mx-4 h-full  flex flex-col  ">
           {/*Filter & Decimal Selector */}
           <div className="h-fit flex justify-between  items-center text-xs">
             {/* filter */}
@@ -130,127 +175,135 @@ const TradeBook = () => {
           </div>
 
           {/* Table Header */}
-          <div className=" h-fit flex justify-between   text-xs  pt-4  ">
+          <div className=" h-fit flex justify-between   text-xs  pt-4 ">
             <span>{t("tHead.price")}</span>
             <span>{t("tHead.amount")}</span>
             <span>{t("tHead.total")}</span>
           </div>
 
           {/* Order Rows */}
-          <div className="h-full  w-full flex flex-col  custom-scroll mt-2">
+          <div className="h-[78%] 2xl:h-[76%]  w-full flex flex-col  custom-scroll pt-2 ">
             {/* sell rows */}
-            {/* <div className="flex flex-col h-full"> */}
-            {filterView !== "buy" && (
-              <div
-                className={` ${
-                  filterView === "sell" ? "h-fit" : "h-full"
-                }   flex flex-col`}
-              >
-                {MOCK_DATA_SELL.map((row, i) => (
-                  <div
-                    key={i}
-                    className={`flex  gap-1 w-full  py-0.5 rounded-sm transition-colors  ${
-                      row.type === "buy"
-                        ? "text-green-400 text-xs"
-                        : row.type === "sell"
-                        ? "text-red-500 text-xs"
-                        : "text-bold text-[15px]"
-                    }`}
-                  >
-                    <span className="w-full">
-                      {Number(row.price).toFixed(decimalPlaces)}
-                    </span>
-
-                    {row.type === "mid" ? (
-                      <span className="font-light">{row.total}</span>
-                    ) : (
-                      <span className="w-full text-end"> {row.amount}</span>
-                    )}
-
-                    {row.type === "mid" ? (
-                      <span>{t("more")}</span>
-                    ) : (
-                      <span className="w-full text-end">{row.total}</span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-            {/* </div> */}
-
-            {/* recent activity row */}
-            <div className="h-fit flex flex-col ">
-              {MOCK_DATA_RECENT.map((row, i) => (
+            {/* <div className={"flex flex-col h-[50%] overflow-hidden"}> */}
+            {/* {filterView !== "buy" && ( */}
+            <div
+              className={` ${
+                filterView === "sell"
+                  ? "h-full overflow-hidden"
+                  : filterView === "buy"
+                  ? "hidden"
+                  : "h-[50%] overflow-hidden"
+              }   flex flex-col`}
+            >
+              {MOCK_DATA_SELL.map((row, i) => (
                 <div
                   key={i}
-                  className={`flex gap-1  py-0.5 rounded-sm transition-colors  ${
+                  className={`flex  gap-1 w-full  py-1 2xl:py-0.5 rounded-sm transition-colors  ${
                     row.type === "buy"
-                      ? "text-green-400 text-xs"
+                      ? "text-green-700 dark:text-green-600 text-xs"
                       : row.type === "sell"
-                      ? "text-red-500 text-xs"
-                      : "text-bold text-[15px]"
+                      ? "text-red-500 dark:text-[#d24e4c] text-xs"
+                      : "text-bold text-[15px] xl:text-[1rem]"
                   }`}
                 >
-                  <span className="w-full text-green-600">
-                    {Number(row.price).toFixed(decimalPlaces + 1)}
+                  <span className="w-full">
+                    {Number(row.price).toFixed(decimalPlaces)}
                   </span>
 
                   {row.type === "mid" ? (
-                    <span className="w-full text-start font-light">
-                      {row.total}
-                    </span>
+                    <span className="font-light">{row.total}</span>
                   ) : (
                     <span className="w-full text-end"> {row.amount}</span>
                   )}
 
                   {row.type === "mid" ? (
-                    <span className="w-full text-end text-[12px] cursor-pointer">
-                      {t("more")}
-                    </span>
+                    <span>{t("more")}</span>
                   ) : (
-                    <span>{row.total}</span>
+                    <span className="w-full text-end">{row.total}</span>
                   )}
                 </div>
               ))}
             </div>
-            {/* buy rows */}
-            {/* <div className="flex flex-col h-full"> */}
-            {filterView !== "sell" && (
+            {/* )} */}
+            {/* </div> */}
+
+            {/* recent activity row */}
+            {/* <div className="h-fit flex flex-col "> */}
+            {MOCK_DATA_RECENT.map((row, i) => (
               <div
-                className={` ${
-                  filterView === "buy" ? "h-fit" : "h-full"
-                }   flex flex-col`}
+                key={i}
+                className={`flex gap-1  py-1.5 2xl:py-0.5 rounded-sm transition-colors  ${
+                  row.type === "buy"
+                    ? "text-green-400 text-xs"
+                    : row.type === "sell"
+                    ? "text-red-500 text-xs"
+                    : "text-bold text-[15px] xl:text-[1rem]"
+                }`}
               >
-                {MOCK_DATA_BUY.map((row, i) => (
-                  <div
-                    key={i}
-                    className={`flex gap-1 py-0.5 rounded-sm transition-colors  ${
-                      row.type === "buy"
-                        ? "text-green-400 text-xs"
-                        : row.type === "sell"
-                        ? "text-red-500 text-xs"
-                        : "text-bold text-[15px]"
-                    }`}
-                  >
-                    <span className="w-full">
-                      {Number(row.price).toFixed(decimalPlaces)}
-                    </span>
+                <span className="w-full text-green-600">
+                  {Number(row.price).toFixed(decimalPlaces + 1)}
+                </span>
 
-                    {row.type === "mid" ? (
-                      <span className="font-light">{row.total}</span>
-                    ) : (
-                      <span className="w-ful text-end"> {row.amount}</span>
-                    )}
+                {row.type === "mid" ? (
+                  <span className="w-full text-start font-light">
+                    {row.total}
+                  </span>
+                ) : (
+                  <span className="w-full text-end"> {row.amount}</span>
+                )}
 
-                    {row.type === "mid" ? (
-                      <span className="text-[10px]">{t("more")}</span>
-                    ) : (
-                      <span className="w-full text-end">{row.total}</span>
-                    )}
-                  </div>
-                ))}
+                {row.type === "mid" ? (
+                  <span className="w-full text-end text-xs cursor-pointer">
+                    {t("more")}
+                  </span>
+                ) : (
+                  <span>{row.total}</span>
+                )}
               </div>
-            )}
+            ))}
+            {/* </div> */}
+            {/* buy rows */}
+            {/* <div className="flex flex-col h-[50%] overflow-hidden"> */}
+            {/* {filterView !== "sell" && ( */}
+            <div
+              className={` ${
+                filterView === "buy"
+                  ? "h-full"
+                  : filterView === "sell"
+                  ? "hidden"
+                  : "h-[50%] overflow-hidden"
+              }   flex flex-col`}
+            >
+              {MOCK_DATA_BUY.map((row, i) => (
+                <div
+                  key={i}
+                  className={`flex gap-1 py-1 2xl:py-0.5 rounded-sm transition-colors  ${
+                    row.type === "buy"
+                      ? "text-green-700 dark:text-green-600 text-xs"
+                      : row.type === "sell"
+                      ? "text-red-500 text-xs"
+                      : "text-bold  text-[15px] xl:text-[1rem]"
+                  }`}
+                >
+                  <span className="w-full">
+                    {Number(row.price).toFixed(decimalPlaces)}
+                  </span>
+
+                  {row.type === "mid" ? (
+                    <span className="font-light">{row.total}</span>
+                  ) : (
+                    <span className="w-ful text-end"> {row.amount}</span>
+                  )}
+
+                  {row.type === "mid" ? (
+                    <span className="text-[10px]">{t("more")}</span>
+                  ) : (
+                    <span className="w-full text-end">{row.total}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+            {/* )} */}
             {/* </div> */}
           </div>
         </div>

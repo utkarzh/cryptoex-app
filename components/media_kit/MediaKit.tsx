@@ -1,3 +1,4 @@
+"use client";
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -5,6 +6,13 @@ import React from "react";
 
 const MediaKit = () => {
   const t = useTranslations("mediaKitPage");
+
+  const handleDownload = (file: string, downloadName?: string) => {
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = downloadName ? downloadName : "indoex";
+    link.click();
+  };
   return (
     <div className="w-full my-10 flex flex-col gap-8">
       {/*heading  */}
@@ -25,13 +33,16 @@ const MediaKit = () => {
             {t("terms.downloadHeading")}
           </h4>
           {/* button */}
-          <button className="w-fit text-[10px] xl:text-xs bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer">
+          <button
+            className="w-fit text-[10px] xl:text-xs bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer"
+            onClick={() => handleDownload("/test.pdf", "brand_guidelines.pdf")}
+          >
             {t("terms.buttons.downloadPdf")}
           </button>
         </div>
 
         {/*  */}
-        <div className="w-full  bg-green-600 text-white flex flex-col justify-center items-center rounded-md ">
+        <div className="w-full bg-white  dark:bg-[#161735] flex flex-col justify-center items-center rounded-md ">
           <div className="text-[50px] xl:text-[4rem] font-medium py-20">
             <p>IndoEx</p>
             <p>{t("terms.guideHeading")}</p>
@@ -69,7 +80,15 @@ const MediaKit = () => {
             <p className="text-[10px] xl:text-xs fonr-light opacity-80 ">
               {t("terms.logosContent")}
             </p>
-            <button className="w-fit mt-1 text-[10px] xl:text-xs bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer">
+            <button
+              className="w-fit mt-1 text-[10px] xl:text-xs bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer"
+              onClick={() =>
+                handleDownload(
+                  "/images/logo/logo_indoex_black.svg",
+                  "indoex_logos"
+                )
+              }
+            >
               {t("terms.buttons.download")}
             </button>
           </div>
@@ -90,25 +109,23 @@ const MediaKit = () => {
             <p className="text-[10px] xl:text-xs fonr-light opacity-80 ">
               {t("terms.typeFaceContent")}
             </p>
-            <button className="w-fit text-[10px] xl:text-xs mt-1 bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer">
+            <button
+              className="w-fit text-[10px] xl:text-xs mt-1 bg-green-500 hover:bg-green-600 text-white dark:text-black font-medium py-1.5 px-3 rounded-full transition text-xs cursor-pointer"
+              onClick={() => handleDownload("/indoex_font.zip", "indoex_fonts")}
+            >
+              {/* indoex_font */}
               {t("terms.buttons.download")}
             </button>
           </div>
         </div>
 
         {/* color */}
-        <div className="rounded-md p-4 bg-white dark:bg-[#161735] h-full flex gap-2 items-center ">
-          <div className="flex flex-col gap-1 h-full max-w-[100px] xl:min-w-[200px]">
-            <p className="text-sm xl:text-lg font-bold">
-              {t("terms.sairaBold")}
-            </p>
-            <p className="text-sm xl:text-lg font-normal">{t("terms.inter")}</p>
-            {/* <div className="w-full h-[100%] p-2 flex bg-[#07082D]">
-              
-            </div> */}
+        <div className="rounded-md p-4  bg-white dark:bg-[#161735] h-full flex gap-2 items-center ">
+          <div className="flex bg-[#07082D]  rounded-lg flex-col gap-1 h-[100%] max-w-[100px] xl:min-w-[200px] min-h-[110px]">
+            <div className="w-[60%] bg-[#27A043] min-h-[110px] rounded-l-lg "></div>
           </div>
 
-          <div className="w-full flex flex-col gap-1 xl:gap-2 border-l-2 border-slate-500/20 pl-6 ml-6">
+          <div className="w-full  flex flex-col gap-1 xl:gap-2 border-l-2 border-slate-500/20 pl-6 ml-6">
             <h3 className="text-sm xl:text-lg font-normal">
               {t("terms.colors")}
             </h3>

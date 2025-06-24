@@ -156,7 +156,7 @@ const HomeCryptoList: FC<Props> = ({
               return (
                 <tr key={index} className="text-xs font-normal ">
                   <td className="text-[12px] flex justify-start items-center my-3 pl-0 lg:pl-2 ">
-                    <Link href={`/trade/${val.pair}`} className="">
+                    <Link href={`/spot/${val.pair}`} className="">
                       <CoinCard
                         cointTitle={val.vendor}
                         coinName={val.pair}

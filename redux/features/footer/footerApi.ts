@@ -15,7 +15,40 @@ export const footerApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    getAnnouncement: builder.mutation({
+      query: ({ pagenumber = 0, searchquery = "" }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "getannouncement",
+          method: "POST",
+          body: {
+            sessionid,
+            pagenumber,
+            searchquery,
+          },
+        };
+      },
+    }),
+
+    getSingleAnnouncement: builder.mutation({
+      query: (announcement_id) => {
+        const sessionid = getSessionId();
+        return {
+          url: "getannouncementdetails",
+          method: "POST",
+          body: {
+            sessionid,
+            announcement_id,
+          },
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetFeeListMutation } = footerApi;
+export const {
+  useGetFeeListMutation,
+  useGetAnnouncementMutation,
+  useGetSingleAnnouncementMutation,
+} = footerApi;

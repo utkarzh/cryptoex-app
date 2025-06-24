@@ -25,7 +25,7 @@ const FooterInfo = () => {
           {otherLinks.map((val, index) => (
             <Link
               href={`${val.url}`}
-              className="text-xs font-extralight"
+              className="text-xs font-light hover:text-green-600"
               key={index}
             >
               {val.title}

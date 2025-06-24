@@ -19,15 +19,12 @@ const OpenOrderAndHistory = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab as typeof activeTab)}
-              className={`text-[12px] font-medium capitalize pb-2 cursor-pointer  ${
+              className={`text-xs font-medium capitalize pb-2 cursor-pointer  ${
                 activeTab === tab
                   ? "text-green-400 border-b-2 relative top-[2px]"
                   : ""
               }`}
             >
-              {/* {tab
-                .replace("openorders", "Open Orders")
-                .replace("orderhistory", "Order History")} */}
               {t(`tabs.${tab}`)}
             </button>
           ))}
@@ -36,7 +33,7 @@ const OpenOrderAndHistory = () => {
         {/* content */}
         <div className="w-full min-h-40 flex justify-center items-center">
           {/* login and singup div */}
-          <div className="text-[12px]">
+          <div className="text-xs">
             <Link href="#" className="text-green-600 ">
               {t("message.part1")}
             </Link>{" "}

@@ -2,12 +2,12 @@ import React from "react";
 
 const LoadingTableSkeleton = ({ rows = 5, columns = 3 }) => {
   return (
-    <div className="w-full overflow-x-auto mt-10 ">
+    <div className={`w-full overflow-x-auto ${!rows ? "mt-0" : "mt-10"}`}>
       <table className="min-w-full">
         <thead>
           <tr>
             {Array.from({ length: columns }).map((_, i) => (
-              <th key={i} className="px-4 py-2">
+              <th key={i} className={`px-4 ${!rows ? "py-0" : "py-2"}`}>
                 <div className="h-6 w-full bg-gray-400 dark:bg-[#353563] rounded animate-pulse"></div>
               </th>
             ))}

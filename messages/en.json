@@ -381,7 +381,8 @@
       "24hHigh":"24h High",
       "24hLow":"24h Low",
       "24hVolumeBtc":"24h Volume(BTC)",
-      "24hVolumeUsdc":"24h Volume(USDT)"
+      "24hVolumeUsdc":"24h Volume(USDT)",
+      "24hVolume": "24h Volume"
     }
   },
   "tradeForm":{
@@ -1001,8 +1002,8 @@
     "sellFee":"Sell Fee",
     "status":"status",
     "buttons":{
-      "active":"Active",
-      "maintenance":"Maintenance"
+      "ACTIVE":"Active",
+      "MAINTENANCE":"Maintenance"
     }
   }
 },

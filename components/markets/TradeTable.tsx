@@ -165,7 +165,7 @@ const TradeTable: FC<Props> = ({ listData }) => {
                   className="border-b dark:border-slate-200/20 border-slate-600/15"
                 >
                   <td className="py-3 px-2 ">
-                    <Link href={`/trade/${item.pair}`} className="">
+                    <Link href={`/spot/${item.pair}`} className="">
                       <CoinCard
                         isSmall={true}
                         cointTitle={item.pair}
@@ -209,7 +209,7 @@ const TradeTable: FC<Props> = ({ listData }) => {
                   </td>
                   <td className="py-3 px-2 text-right">
                     <Link
-                      href={`/trade/${item.pair}`}
+                      href={`/spot/${item.pair}`}
                       className="text-xs text-green-100 bg-green-600 dark:bg-green-500/30 dark:text-green-600 px-4 py-1 rounded-full hover:bg-green-700 dark:hover:bg-green-500/20 cursor-pointer  transition-all duration-300"
                     >
                       {t("button")}

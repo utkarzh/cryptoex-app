@@ -21,7 +21,7 @@ const FooterLinks = () => {
     },
     {
       title: t("services.items.announcements"),
-      url: "/announcements",
+      url: "/announcements/all",
     },
     {
       title: t("services.items.media"),
@@ -63,7 +63,7 @@ const FooterLinks = () => {
             {serviceLinks.map((val, index) => (
               <Link
                 href={`${val.url}`}
-                className="text-xs font-extralight"
+                className="text-xs font-light hover:text-green-600"
                 key={index}
               >
                 {val.title}
@@ -81,7 +81,7 @@ const FooterLinks = () => {
             {legalisationLinks.map((val, index) => (
               <Link
                 href={`${val.url}`}
-                className="text-xs font-extralight text-nowrap"
+                className="text-xs font-light text-nowrap hover:text-green-600"
                 key={index}
               >
                 {val.title}

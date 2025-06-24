@@ -45,7 +45,7 @@ const PartnersContent = () => {
             </div>
             <div className="w-fit  lg:w-full h-full  flex gap-2  ">
               {/* qr code */}
-              <div className="   flex items-center justify-center ">
+              <div className=" flex items-center justify-center ">
                 <Card>
                   <Image
                     width={500}
@@ -60,41 +60,49 @@ const PartnersContent = () => {
               <div className="h-full flex flex-col justify-between gap-2 ">
                 {/*  android store*/}
 
-                <div className="w-full h-15 lg:h-13 xl:h-15 flex  items-center text-center rounded-md p-2 px-2 bg-white dark:bg-[#161735]">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.indoex.finance"
+                  target="_blank"
+                  className="w-full h-15 lg:h-13 xl:h-15 flex  items-center text-center rounded-md p-2 px-2 bg-white dark:bg-[#161735] hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300"
+                >
                   <div className=" w-full h-full flex gap-2 items-center">
                     {/* logo */}
                     <BiLogoPlayStore className="text-lg lg:text-3xl" />
                     {/* title and subtitle */}
                     <div className="flex flex-col items-start">
-                      <p className="text-xs font-extralight text-nowrap">
+                      <p className="text-[12px] font-extralight text-nowrap">
                         GET IT ON
                       </p>
-                      <h4 className="text-sm lg:text-lg font-medium text-nowrap">
+                      <h4 className="text-sm lg:text-md font-medium text-nowrap">
                         Google Play
                       </h4>
                     </div>
                     <div></div>
                   </div>
-                </div>
+                </a>
 
                 {/* apple store */}
 
-                <div className="w-full h-15 lg:h-13 xl:h-15 flex items-center text-center">
-                  <div className="w-full h-full flex items-center text-center gap-2 rounded-md p-2 px-3 bg-white dark:bg-[#161735]">
+                <a
+                  href="https://apps.apple.com/us/app/indoex/id6447252534"
+                  target="_blank"
+                  className="w-full h-15 lg:h-13 xl:h-15 flex items-center text-center "
+                >
+                  <div className="w-full h-full flex items-center text-center gap-2 rounded-md p-2 px-3 bg-white dark:bg-[#161735] hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
                     {/* logo */}
                     <IoLogoApple className="text-lg lg:text-3xl" />
                     {/* title and subtitle */}
                     <div className="flex flex-col items-start">
-                      <p className="text-xs font-extralight text-nowrap">
+                      <p className="text-[12px] font-extralight text-nowrap">
                         Download on the
                       </p>
-                      <h4 className="text-sm lg:text-lg font-medium text-nowrap">
+                      <h4 className="text-sm lg:text-md font-medium text-nowrap">
                         App Store
                       </h4>
                     </div>
                     <div></div>
                   </div>
-                </div>
+                </a>
               </div>
 
               <div></div>
