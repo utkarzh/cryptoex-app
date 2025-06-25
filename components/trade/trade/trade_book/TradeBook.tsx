@@ -182,7 +182,7 @@ const TradeBook = () => {
           </div>
 
           {/* Order Rows */}
-          <div className="h-[78%] 2xl:h-[76%]  w-full flex flex-col  custom-scroll pt-2 ">
+          <div className="h-[78%] 2xl:h-[78%]  w-full flex flex-col  custom-scroll pt-2 ">
             {/* sell rows */}
             {/* <div className={"flex flex-col h-[50%] overflow-hidden"}> */}
             {/* {filterView !== "buy" && ( */}
@@ -237,7 +237,7 @@ const TradeBook = () => {
                     ? "text-green-400 text-xs"
                     : row.type === "sell"
                     ? "text-red-500 text-xs"
-                    : "text-bold text-[15px] xl:text-[1rem]"
+                    : "text-bold text-[15px] my-1 xl:text-[1rem]"
                 }`}
               >
                 <span className="w-full text-green-600">

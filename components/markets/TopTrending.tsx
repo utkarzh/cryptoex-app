@@ -32,7 +32,7 @@ const TopTranding: FC<Props> = ({ listData }) => {
           {listData.map((coin, index) => (
             <tr key={index} className="text-xs">
               <td className="py-2">
-                <Link href={`/trade/${coin.pair}`} className="">
+                <Link href={`/spot/${coin.pair}`} className="">
                   <CoinCard
                     isSmall={true}
                     cointTitle={coin.pair}
