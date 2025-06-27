@@ -31,7 +31,6 @@ export default function IndoExSocketWithProfile() {
 
     // 🔌 Connect and emit setmycombinations
     socketMain.on("connect", (data) => {
-      console.log("Data at main socket:--", data);
       console.log("✅ Connected to MAIN socket");
       socketMain.emit("setmycombinations", { myordercombination: COMBINATION });
     });

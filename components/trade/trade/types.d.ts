@@ -36,13 +36,13 @@ export interface TradeApiResult_int<T> {
 // data for trade history
 
 export interface SingleOrderBook_int {
-  tradeID: "0xB39C7981";
-  type: "Buy Order";
-  baseVolume: 2639536.9022375154;
-  price: 0.000006295098898568;
-  quoteVolume: 0.000006295098898568;
-  time: "2025-06-27T05:49:11.000Z";
-  isBuyerMaker: false;
+  tradeID: string;
+  type: string;
+  baseVolume: number;
+  price: number;
+  quoteVolume: number;
+  time: string;
+  isBuyerMaker: boolean;
 }
 export interface OrderBook_int {
   status: 1;
