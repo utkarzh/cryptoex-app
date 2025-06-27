@@ -2,7 +2,7 @@
 import React, { FC, useEffect, useState } from "react";
 import TradeCompetitionJoinCard from "./TradeCompetitionJoinCard";
 import TradeCompetitionInfo from "./TradeCompetitionInfo";
-import { useGetTradeContestDetailsMutation } from "@/redux/features/events/eventsApi";
+import { useGetTradeContestDetailsMutation } from "@/redux/masternode/events/eventsApi";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import { TradeContestDetailsApiResult_int } from "../../types";
 import TradeContestParticipantCard from "./TradeContestParticipantCard";

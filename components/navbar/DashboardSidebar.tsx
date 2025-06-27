@@ -16,8 +16,12 @@ import {
 } from "react-icons/md";
 import { useSidebarItems } from "./MenuItems";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 export default function DashboardSidebar() {
+  const pathName = usePathname();
+  const base = pathName.split("/").pop();
+  console.log("Base value at dashboard", base);
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
   const [activeMenu, setActiveMenu] = useState<string>("Overview");
   const [isSidebar, setIsSidebar] = useState(false);

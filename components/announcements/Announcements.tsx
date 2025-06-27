@@ -1,5 +1,5 @@
 "use client";
-import { useGetAnnouncementMutation } from "@/redux/features/footer/footerApi";
+import { useGetAnnouncementMutation } from "@/redux/masternode/footer/footerApi";
 // import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React, { FC, useEffect, useState } from "react";

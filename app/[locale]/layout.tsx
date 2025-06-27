@@ -11,8 +11,42 @@ import { routing } from "@/i18n/routing";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "Indoex Digital Assets Exchange",
+  title: {
+    default: "Indoex Digital Assets Exchange",
+    template: "%s | Indoex",
+  },
   description: "Indoex Digital Assets Exchange",
+  keywords: ["crypto", "exchange", "bitcoin", "trading", "indoex"],
+  authors: [{ name: "Indoex Team", url: "https://indoex.io" }],
+  openGraph: {
+    title: "Indoex",
+    description: "Trade crypto safely and quickly.",
+    url: "https://indoex.io",
+    siteName: "Indoex",
+    images: [
+      {
+        url: "/images/logo/logo_indoex_black",
+        width: 1200,
+        height: 630,
+        alt: "Indoex Exchange Preview",
+        type: "image/svg",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Indoex",
+    description: "Trade crypto safely and quickly.",
+    images: ["/og-image.png"],
+    creator: "@indoex",
+  },
+
+  metadataBase: new URL("https://indoex.io"),
+  // themeColor: "#ffffff",
+  // colorScheme: "light",
+  category: "finance",
 };
 
 export default async function RootLayout({

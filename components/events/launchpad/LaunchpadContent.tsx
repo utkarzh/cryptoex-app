@@ -3,7 +3,7 @@ import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { IeoVendorLaunchpad_int, LaunchpadApiResult_int } from "../types";
-import { useGetLaunchpadListMutation } from "@/redux/features/events/eventsApi";
+import { useGetLaunchpadListMutation } from "@/redux/masternode/events/eventsApi";
 import StatusCardLaunchpad from "./StatusCardLaunchpad";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 

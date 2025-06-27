@@ -1,6 +1,6 @@
 "use client";
 
-import { useGetFeeListMutation } from "@/redux/features/footer/footerApi";
+import { useGetFeeListMutation } from "@/redux/masternode/footer/footerApi";
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";

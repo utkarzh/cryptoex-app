@@ -2,7 +2,7 @@
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { useGetTradeContestListMutation } from "@/redux/features/events/eventsApi";
+import { useGetTradeContestListMutation } from "@/redux/masternode/events/eventsApi";
 import { TradeContestApiResult_int, TradeContestVendor_int } from "../types";
 import StatusCardTradeContest from "./StatusCardTradeContest";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";

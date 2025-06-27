@@ -2,7 +2,7 @@
 import React, { FC, useEffect, useState } from "react";
 import AirdropJoinCard from "./AirdropJoinCard";
 import AirdropContestInfo from "./AirdropContestInfo";
-import { useGetAirdropDetailsMutation } from "@/redux/features/events/eventsApi";
+import { useGetAirdropDetailsMutation } from "@/redux/masternode/events/eventsApi";
 import { AirDropDetailsApiResult_int } from "../../types";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import { getStatus } from "@/utils/getStatus";

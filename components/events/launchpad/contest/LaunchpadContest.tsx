@@ -4,7 +4,7 @@ import LaunchpadContestInfo from "./LaunchpadContestInfo";
 // import SocialMediaIconCard from "@/components/common/SocialMediaIconCard";
 import ContestTeam from "./ContestTeam";
 import LaunchJoinCard from "./LaunchJoinCard";
-import { useGetLaunchpadDetailsMutation } from "@/redux/features/events/eventsApi";
+import { useGetLaunchpadDetailsMutation } from "@/redux/masternode/events/eventsApi";
 import { LaunchpadDetailsApiResult_int, MarketResult_int } from "../../types";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import SocialMediaIconCardLaunchpad from "./SocialMediaIconCardLaunchpad";

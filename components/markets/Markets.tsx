@@ -5,7 +5,7 @@ import TopTranding from "./TopTrending";
 import NewListings from "./NewListings";
 import TradeTable from "./TradeTable";
 import { useTranslations } from "next-intl";
-import { useGetMArketPageDataMutation } from "@/redux/features/market/marketApi";
+import { useGetMArketPageDataMutation } from "@/redux/masternode/market/marketApi";
 import { Analytics_int, HomeDataApi_int } from "../home/types";
 import LoadingTableSkeleton from "../common/loading/LoadingTableSkeleton";
 

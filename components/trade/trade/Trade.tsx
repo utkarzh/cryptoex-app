@@ -10,8 +10,8 @@ import {
   SingleAvailablePair_int,
   TradeApiResult_int,
 } from "./types";
-import { useGetAvailablePairsMutation } from "@/redux/features/trade/eventsApi";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
+import { useGetAvailablePairsMutation } from "@/redux/masternode/trade/eventsApi";
 
 type Props = {
   isSpot: boolean;
@@ -81,7 +81,7 @@ const Trade: FC<Props> = ({ isSpot, pair }) => {
       <div className="w-full h-full lg:h-[480px] 2xl:h-[calc(90vh-200px)]   flex flex-col lg:flex-row gap-4 ">
         {/*trade book*/}
         <div className="w-full max-w-xs h-[100%]  hidden lg:flex  ">
-          <TradeBook />
+          <TradeBook pair={pair} />
         </div>
         {/* Graph */}
         <div className="w-full   ">
@@ -99,7 +99,7 @@ const Trade: FC<Props> = ({ isSpot, pair }) => {
         {/* Trade form */}
         <div className="w-full lg:max-w-xs  flex gap-2 flex-wrap sm:flex-nowrap justify-evenly  ">
           <div className="w-full min-w-xs max-h-[480px] lg:max-w-xs block lg:hidden ">
-            <TradeBook />
+            <TradeBook pair={pair} />
           </div>
           <TradeForm />
         </div>

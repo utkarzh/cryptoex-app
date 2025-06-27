@@ -14,7 +14,7 @@ import EventsDropdown from "./nav_dropdown/EventsDropdown";
 import ProfileDropdown from "./profile_dropdown/ProfileDropdown";
 import LangDropdown from "./lang_dropdown/LangDropdown";
 import { useTranslations } from "next-intl";
-import { useGetHomePageDataMutation } from "@/redux/features/homepage/homeApi";
+import { useGetHomePageDataMutation } from "@/redux/masternode/homepage/homeApi";
 import { HomeDataApi_int, Vendors_int } from "../home/types";
 import NewListingCard from "./NewListingCard";
 

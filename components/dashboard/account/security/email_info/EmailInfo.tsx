@@ -1,18 +1,23 @@
+"use client";
 import Model from "@/components/common/Model";
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import ChangeMailConfirmationPopup from "./ChangeMailConfirmationPopup";
 import SecurityConfirmationPopup from "./SecurityConfirmationPopup";
 import ChangeMailSubmitPopup from "./ChangeMailSubmitPopup";
 import { IoMdClose } from "react-icons/io";
 import { useTranslations } from "next-intl";
+import { maskEmail } from "@/utils/maskEmail";
 
 export type PopupData = "change_mail" | "next_step" | "confirm" | "";
 
 const EmailInfo = () => {
   const t = useTranslations("dashboard.security.securitySetting.emailInfo");
+
+  const tempEmail = "test.123@gmail.com";
+  const [isEmailVisible, setIsEmailVisible] = useState(false);
   const [popupStatus, setPopupStatus] = useState<PopupData>("");
   const [error, setError] = useState<string>("");
 
@@ -62,8 +67,13 @@ const EmailInfo = () => {
                   className="w-3 xl:w-4 h-auto"
                 />
                 <span className="opacity-60 flex gap-1 text-[10px] xl:text-[0.65rem] font-light">
-                  kdk***@****
-                  <FaEye className="text-xs cursor-pointer" />
+                  {isEmailVisible ? tempEmail : maskEmail(tempEmail)}
+                  <span
+                    className="text-xs cursor-pointer"
+                    onClick={() => setIsEmailVisible((prev) => !prev)}
+                  >
+                    {isEmailVisible ? <FaEye /> : <FaEyeSlash />}
+                  </span>
                 </span>
               </span>
             </>

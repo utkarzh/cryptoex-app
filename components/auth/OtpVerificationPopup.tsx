@@ -1,6 +1,6 @@
 "use client";
 
-import { useValidateCodeMutation } from "@/redux/features/auth/authApi";
+import { useValidateCodeMutation } from "@/redux/masternode/auth/authApi";
 import { saira } from "@/utils/Font";
 import { maskEmail } from "@/utils/maskEmail";
 import { useTranslations } from "next-intl";

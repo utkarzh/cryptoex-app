@@ -6,7 +6,7 @@ import CreateAccount from "./create-account/CreateAccount";
 import GetStarted from "./get-started/GetStarted";
 import Features from "./features/Features";
 import Partners from "./partners/Partners";
-import { useGetHomePageDataMutation } from "@/redux/features/homepage/homeApi";
+import { useGetHomePageDataMutation } from "@/redux/masternode/homepage/homeApi";
 import { HomeDataApi_int } from "./types";
 import { toast } from "sonner";
 

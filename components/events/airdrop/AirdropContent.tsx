@@ -2,7 +2,7 @@
 import { saira } from "@/utils/Font";
 import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
-import { useGetAirdropListMutation } from "@/redux/features/events/eventsApi";
+import { useGetAirdropListMutation } from "@/redux/masternode/events/eventsApi";
 import { AirdropApiResult_int, IeoVendor_int } from "../types";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import StatusCardAirdrop from "./StatusCardAirdrop";

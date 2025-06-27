@@ -1,5 +1,5 @@
 "use client";
-import { useGetSingleAnnouncementMutation } from "@/redux/features/footer/footerApi";
+import { useGetSingleAnnouncementMutation } from "@/redux/masternode/footer/footerApi";
 import { useTranslations } from "next-intl";
 import React, { FC, useEffect } from "react";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";

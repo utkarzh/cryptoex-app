@@ -17,13 +17,13 @@ const TradeDropdown: FC<Props> = ({ isVisible }) => {
       icon: <FiTarget className=" text-xl" />,
       title: t("spot.label"),
       description: t("spot.desc"),
-      href: "/spot",
+      href: "/spot/BTC_USDT",
     },
     {
       icon: <FiTrendingUp className=" text-xl" />,
       title: t("margin.label"),
       description: t("margin.desc"),
-      href: "/margin",
+      href: "/margin/BTC_USDT",
     },
     {
       icon: <FiRepeat className=" text-xl" />,

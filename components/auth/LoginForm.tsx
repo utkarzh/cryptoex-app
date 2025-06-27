@@ -1,5 +1,5 @@
 "use client";
-import { useGetCodeMutation } from "@/redux/features/auth/authApi";
+import { useGetCodeMutation } from "@/redux/masternode/auth/authApi";
 import { saira } from "@/utils/Font";
 import { isPasswordValid, isValidEmail } from "@/utils/regex";
 import { useTranslations } from "next-intl";

@@ -12,7 +12,7 @@ import {
   SingleAvailablePair_int,
   TradeApiResult_int,
 } from "../trade/trade/types";
-import { useGetAvailablePairsMutation } from "@/redux/features/trade/eventsApi";
+import { useGetAvailablePairsMutation } from "@/redux/masternode/trade/eventsApi";
 
 const TradeNavBar = () => {
   const pathname = usePathname();

@@ -369,9 +369,11 @@
       "tradehistory": "Trade history"
     },
     "tHead":{
-      "price":"Price(USDT)",
-      "amount":"Amount(BTC)",
-      "total":"Total"
+      "price":"Price",
+      "amount":"Amount",
+      "vol":"Vol",
+      "total":"Total",
+      "time":"Time"
     },
     "more":"More"
   },

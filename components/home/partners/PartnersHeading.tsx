@@ -1,5 +1,5 @@
 "use client";
-import { useGetPartnersMutation } from "@/redux/features/homepage/homeApi";
+import { useGetPartnersMutation } from "@/redux/masternode/homepage/homeApi";
 import { saira } from "@/utils/Font";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
