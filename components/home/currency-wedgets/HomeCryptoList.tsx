@@ -171,7 +171,7 @@ const HomeCryptoList: FC<Props> = ({
                       isExpended ? "table-cell" : "table-cell md:hidden"
                     }`}
                   >
-                    <div className="text-nowrap ">
+                    <div className="text-nowrap " title={val.last.toString()}>
                       ${formatDecimalNumber(val.last)}{" "}
                     </div>
                   </td>

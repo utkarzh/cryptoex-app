@@ -4,6 +4,7 @@
 "use client";
 import IndoExDualSocket from "./SocketTest";
 import SliderControl from "./Test1";
+import Test3 from "./Test3";
 // import TokenCard1 from "./Test2";
 // import LangDropdown from "@/components/navbar/lang_dropdown/LangDropdown";
 // import ImageCarousel from "./Test";
@@ -11,9 +12,10 @@ import SliderControl from "./Test1";
 
 const Page = () => {
   return (
-    <div className="w-[90%] mx-auto flex justify-end mr-10 relative ">
+    <div className="w-[90%] mx-auto flex mr-10 relative ">
       {/* <SliderControl /> */}
-      <IndoExDualSocket />
+      {/* <IndoExDualSocket /> */}
+      <Test3 />
     </div>
   );
 };

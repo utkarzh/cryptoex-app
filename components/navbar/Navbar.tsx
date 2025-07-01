@@ -21,7 +21,7 @@ import NewListingCard from "./NewListingCard";
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isAuth] = useState(false);
+  const [isAuth] = useState(true);
   const [newListing, setNewListing] = useState<Vendors_int[]>([]);
 
   const t = useTranslations("Navbar");
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <div className="flex flex-row-reverse gap-2 justify-between pr-4 items-center">
                   <div className="flex gap-1 text-xl items-center ">
                     <IoMdSearch className="text-[24px] mt-2 cursor-pointer" />
-                    <Link href="/announcements" className="relative  ">
+                    <Link href="/announcements/all" className="relative  ">
                       <GrAnnounce className=" -rotate-15 cursor-pointer" />
                       <span className=" absolute -top-[3px] -right-[2px] w-[7px] h-[7px] bg-green-500 rounded-full"></span>
                     </Link>
@@ -281,7 +281,7 @@ const Navbar = () => {
             <div className="hidden xl:flex w-full h-full  justify-end items-center gap-3 pr-2  ">
               <div className="flex gap-1 text-xl items-center ">
                 <IoMdSearch className="text-[24px] 2xl:text-[1.5rem] mt-2 cursor-pointer" />
-                <Link href="/announcements" className="relative  ">
+                <Link href="/announcements/all" className="relative  ">
                   <GrAnnounce className=" -rotate-15 cursor-pointer" />
                   <span className=" absolute -top-[3px] -right-[2px] w-[7px] h-[7px] bg-green-500 rounded-full"></span>
                 </Link>

@@ -8,7 +8,7 @@ export const localeObjects = [
   { code: "ch", label: "中国人 (ch)" },
   { code: "tw", label: "中國人 (tw)" },
   { code: "it", label: "Italiano (it)" },
-  // {code: 'ar', label: 'Arbic (ar)'},
+  { code: "ar", label: "Arbic (ar)" },
   { code: "pt", label: "Português (pt)" },
 ];
 
