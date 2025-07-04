@@ -17,11 +17,13 @@ import { useTranslations } from "next-intl";
 import { useGetHomePageDataMutation } from "@/redux/masternode/homepage/homeApi";
 import { HomeDataApi_int, Vendors_int } from "../home/types";
 import NewListingCard from "./NewListingCard";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 const Navbar = () => {
   const [isExchange, setIsExchange] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isAuth] = useState(true);
+  const isAuth = useSelector((state: RootState) => state.auth.isAuth);
   const [newListing, setNewListing] = useState<Vendors_int[]>([]);
 
   const t = useTranslations("Navbar");

@@ -6,7 +6,6 @@ type Props = {
 };
 
 const Page: FC<Props> = async ({ params }) => {
-  console.log("Params", params);
   const pair = (await params).pair;
   return (
     <>

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineLogout } from "react-icons/ai";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -10,10 +9,14 @@ import AmountCard from "./AmountCard";
 import { useSidebarItems } from "../MenuItems";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useLogoutUserMutation } from "@/redux/masternode/auth/authApi";
 
 export default function ProfileDropdown() {
   const [openMenus, setOpenMenus] = useState<Record<string, boolean>>({});
   const [activeMenu, setActiveMenu] = useState<string>("Overview");
+  const router = useRouter();
 
   // multi language data
   const menuItems = useSidebarItems();
@@ -22,6 +25,23 @@ export default function ProfileDropdown() {
   const toggleMenu = (label: string) => {
     setOpenMenus((prev) => ({ ...prev, [label]: !prev[label] }));
     // setOpenMenus((prev) => ({ [label]: !prev[label] }));
+  };
+
+  const [logoutUser] = useLogoutUserMutation();
+
+  const handleLogout = async () => {
+    try {
+      const response = await logoutUser({}); // Call the logout API
+
+      if (response.data.status === 1) {
+        alert("User logged out successfully!");
+        router.push("/");
+      } else {
+        console.log("Logout failed:", response.data.message);
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
   };
 
   return (
@@ -44,15 +64,20 @@ export default function ProfileDropdown() {
             />
             <div>
               <p className="font-normal text-sm 2xl:text-nowrap ">
-                John Williams
+                Utkarsh Singh Parihar
               </p>
               <p className="text-[10px] 2xl:text-[0.6rem] text-gray-400">
-                28798498
+                28798498343
               </p>
             </div>
-            <button className=" p-2 rounded-full dark:bg-slate-200/20 bg-slate-700/20 ml-4 cursor-pointer hover:scale-105 transition-all duration-300">
-              <FiEdit className="text-sm " />
-            </button>
+            <Link href="/profile">
+              <button
+                type="button" // Prevents form submission if the button is inside a form
+                className="p-2 rounded-full dark:bg-slate-200/20 bg-slate-700/20 ml-4 cursor-pointer hover:scale-105 transition-all duration-300"
+              >
+                <FiEdit className="text-sm" />
+              </button>
+            </Link>
           </div>
 
           {/* amount card */}
@@ -154,12 +179,15 @@ export default function ProfileDropdown() {
         {/* Bottom Log Out */}
         <div className="mt-8">
           <div className="border-t border-gray-700 pt-4">
-            <div className="flex ml-1 items-center gap-2 text-red-500 cursor-pointer dark:hover:text-red-400 hover:text-red-600 group">
+            <button
+              onClick={handleLogout}
+              className="flex ml-1 items-center gap-2 text-red-500 cursor-pointer dark:hover:text-red-400 hover:text-red-600 group"
+            >
               <span className=" p-2 rounded-full border dark:border-slate-200/40 border-slate-700/20 group-hover:bg-red-500 group-hover:border-transparent group-hover:text-white transition-all duration-300">
                 <AiOutlineLogout className="text-md" />
               </span>
               <span className="text-sm">{t("logout")}</span>
-            </div>
+            </button>
           </div>
         </div>
       </aside>

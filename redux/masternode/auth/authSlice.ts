@@ -8,10 +8,6 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    // userRegistration: (state, action: PayloadAction<{ token: string }>) => {
-    //   state.token = action.payload.token;
-    // },
-
     userLoggedIn: (state, action: PayloadAction<{ isAuth: boolean }>) => {
       localStorage.setItem(
         "indoex_userauthentication",
@@ -19,13 +15,14 @@ const authSlice = createSlice({
       );
       state.isAuth = action.payload.isAuth;
     },
-    // userLoggedOut: (state) => {
-    //   // state.token = "";
-    //   // state.user = "";
-    // },
+    userLoggedOut: (state) => {
+      // Clear the authentication state
+      localStorage.removeItem("indoex_userauthentication");
+      state.isAuth = false; // Reset isAuth to false
+    },
   },
 });
 
-export const { userLoggedIn } = authSlice.actions;
+export const { userLoggedIn, userLoggedOut } = authSlice.actions;
 
 export default authSlice.reducer;

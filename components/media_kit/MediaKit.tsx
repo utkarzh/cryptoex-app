@@ -13,6 +13,7 @@ const MediaKit = () => {
     link.download = downloadName ? downloadName : "indoex";
     link.click();
   };
+  
   return (
     <div className="w-full my-10 flex flex-col gap-8">
       {/*heading  */}

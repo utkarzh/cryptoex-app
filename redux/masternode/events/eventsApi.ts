@@ -83,6 +83,18 @@ export const eventsApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    // Add the new endpoint for getCombinationInfo
+    getCombinationInfo: builder.mutation({
+      query: ({ vendor, market }: { vendor: string; market: string }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "getcombinationinfo",
+          method: "POST",
+          body: { vendor, market, sessionid },
+        };
+      },
+    }),
   }),
 });
 
@@ -93,4 +105,5 @@ export const {
   useGetLaunchpadDetailsMutation,
   useGetTradeContestListMutation,
   useGetTradeContestDetailsMutation,
+  useGetCombinationInfoMutation,
 } = eventsApi;
