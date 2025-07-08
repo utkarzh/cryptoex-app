@@ -1,7 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
+// Check for session from localStorage once
+const isSessionActive =
+  typeof window !== "undefined" &&
+  !!localStorage.getItem("indoex_userauthentication");
+
 const initialState = {
-  isAuth: false,
+  isAuth: isSessionActive,
 };
 
 const authSlice = createSlice({
@@ -16,13 +21,11 @@ const authSlice = createSlice({
       state.isAuth = action.payload.isAuth;
     },
     userLoggedOut: (state) => {
-      // Clear the authentication state
       localStorage.removeItem("indoex_userauthentication");
-      state.isAuth = false; // Reset isAuth to false
+      state.isAuth = false;
     },
   },
 });
 
 export const { userLoggedIn, userLoggedOut } = authSlice.actions;
-
 export default authSlice.reducer;

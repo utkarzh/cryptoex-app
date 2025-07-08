@@ -39,7 +39,7 @@ const PasswordInfo = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-end gap-2">
-          {true && (
+          {/* {true && (
             <>
               <span className="flex items-center gap-1 text-sm">
                 <Image
@@ -55,7 +55,7 @@ const PasswordInfo = () => {
                 </span>
               </span>
             </>
-          )}
+          )} */}
 
           <button
             className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded bg-slate-500/25 dark:hover:bg-slate-500/30 hover:bg-slate-500/15"

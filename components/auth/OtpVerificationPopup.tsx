@@ -74,8 +74,8 @@ const OtpVerificationPopup: FC<Props> = ({ onClose, credentials }) => {
       setErrorMessage(apiError);
       setError(true);
     }
-
-    if (data && data?.status === 1) {
+    //  note: please handle data.status==2 for asking to enable 2fa
+    if (data && (data?.status === 1 || data?.status === 2)) {
       setSuccess(true);
       //  redirect to api page
       router.push("/");

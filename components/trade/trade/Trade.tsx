@@ -104,7 +104,6 @@ const Trade: FC<Props> = ({ isSpot, pair }) => {
           <TradeForm />
         </div>
       </div>
-
       {/* bottom part */}
       <div className="w-full mt-6 mb-2">
         <OpenOrderAndHistory />

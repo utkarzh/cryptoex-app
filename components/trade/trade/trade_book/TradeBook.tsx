@@ -15,6 +15,7 @@ import { formatSmartNumber } from "@/utils/formatSmartNumber";
 import LoadingTableSkeleton from "@/components/common/loading/LoadingTableSkeleton";
 import { OrderBook_int } from "../types";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+import Link from "next/link";
 
 type Props = {
   pair: string;
@@ -30,31 +31,37 @@ const TradeBook: FC<Props> = ({ pair }) => {
   const [decimalPlaces, setDecimalPlaces] = useState(2);
   const [isUIValid, setIsUIValid] = useState(false);
   const [usdConversion, setUsdConversion] = useState<number | null>(null);
+  const [buyOrders, setBuyOrders] = useState<
+    { price: number; quantity: number }[]
+  >([]);
+  const [sellOrders, setSellOrders] = useState<
+    { price: number; quantity: number }[]
+  >([]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const [getCombinationInfo] = useGetCombinationInfoMutation();
-  const { data: depthData, refetch: refetchDepth } = useGetOrderBookDepthQuery({
-    pair,
-  });
+  const { data: depthData } = useGetOrderBookDepthQuery({ pair });
   const { data: tradeHistoryData, refetch: refetchHistory } =
     useGetTradeHistoryQuery({ pair });
 
   const [base, quote] = pair.split("_");
   const latestTrade = (tradeHistoryData as OrderBook_int)?.orderbook?.[0];
 
+  // Initialize data on pair change
   useEffect(() => {
     const vendor = base;
     const market = quote;
 
     const fetchInitialData = async () => {
       try {
-        const res: any = await getCombinationInfo({ vendor, market }).unwrap();
+        const res = await getCombinationInfo({ vendor, market }).unwrap();
         const valid = res?.uistatus === 200;
         setIsUIValid(valid);
 
         if (valid) {
           setUsdConversion(res?.marketinfo?.vendors_usdrate ?? null);
-          await refetchDepth();
+          setBuyOrders(depthData?.bids?.slice(0, 20) ?? []);
+          setSellOrders(depthData?.asks?.slice(0, 20) ?? []);
           await refetchHistory();
         }
       } catch (err) {
@@ -64,17 +71,17 @@ const TradeBook: FC<Props> = ({ pair }) => {
     };
 
     fetchInitialData();
-  }, [pair, getCombinationInfo, refetchDepth, refetchHistory, base, quote]);
+  }, [pair, getCombinationInfo, refetchHistory, base, quote, depthData]);
 
+  // Simulate updates
   useEffect(() => {
-    const asksLen = depthData?.asks?.length ?? 0;
-    const bidsLen = depthData?.bids?.length ?? 0;
-    const shouldPoll = isUIValid && asksLen >= 15 && bidsLen >= 15;
+    const shouldPoll =
+      isUIValid && buyOrders.length >= 15 && sellOrders.length >= 15;
 
     if (shouldPoll && !intervalRef.current) {
       intervalRef.current = setInterval(() => {
-        // refetchDepth();
-        // refetchHistory();
+        setBuyOrders((prev) => updaterFunction(prev));
+        setSellOrders((prev) => updaterFunction(prev));
       }, 200);
     } else if (!shouldPoll && intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -87,13 +94,7 @@ const TradeBook: FC<Props> = ({ pair }) => {
         intervalRef.current = null;
       }
     };
-  }, [
-    isUIValid,
-    depthData?.asks?.length,
-    depthData?.bids?.length,
-    refetchDepth,
-    refetchHistory,
-  ]);
+  }, [isUIValid, buyOrders.length, sellOrders.length]);
 
   const renderOrderRow = (
     price: number,
@@ -152,8 +153,8 @@ const TradeBook: FC<Props> = ({ pair }) => {
       {activeTab === "orderbook" && (
         <div className="px-4 flex justify-between items-center text-xs">
           <div className="flex space-x-1">
-            {["both", "buy", "sell"].map((type) => (
-              <button key={type} onClick={() => setFilterView(type as any)}>
+            {(["both", "buy", "sell"] as const).map((type) => (
+              <button key={type} onClick={() => setFilterView(type)}>
                 <Image
                   src={`/images/icons/${
                     type === "both" ? "sellnbuy" : type
@@ -211,36 +212,38 @@ const TradeBook: FC<Props> = ({ pair }) => {
                 filterView === "sell" ? "h-full" : "h-[50%]"
               } overflow-hidden flex flex-col`}
             >
-              {(depthData?.asks?.slice(0, 7).reverse() ?? []).map((ask) =>
-                renderOrderRow(ask.price, ask.quantity, "sell")
-              )}
+              {[...sellOrders]
+                .slice(0, 7)
+                .reverse()
+                .map((ask) => renderOrderRow(ask.price, ask.quantity, "sell"))}
             </div>
           )}
 
-          {/* Latest Trade Price Center Divider */}
           {latestTrade && (
-            <div className="flex py-1.5 my-1 text-[16px] bg-transparent font-bold">
+            <div className="flex py-1.5 my-1  bg-transparent font-bold">
               <span
                 className={`flex-[1] flex items-center gap-1 ${getLatestTradeColor()}`}
                 style={{ fontFamily: "monospace" }}
               >
-                {latestTrade.price.toFixed(3)}
+                {latestTrade.price.toFixed(2)}
                 <span className="text-sm">{getLatestTradeArrow()}</span>
               </span>
               <span
-                className="flex-[1] text-center text-white/60"
+                className="flex-[1] text-center "
                 style={{ fontFamily: "monospace" }}
               >
                 {usdConversion
-                  ? `$${(latestTrade.price * usdConversion).toFixed(3)}`
+                  ? `$${(latestTrade.price * usdConversion).toFixed(2)}`
                   : "—"}
               </span>
-              <span
-                className="flex-[1] text-right text-xs cursor-pointer"
-                style={{ fontFamily: "monospace" }}
-              >
-                {t("more")}
-              </span>
+              <Link href={`/orderbook/${pair}`}>
+                <span
+                  className="flex-[1] text-right text-xs cursor-pointer"
+                  style={{ fontFamily: "monospace" }}
+                >
+                  {t("more")}
+                </span>
+              </Link>
             </div>
           )}
 
@@ -250,7 +253,7 @@ const TradeBook: FC<Props> = ({ pair }) => {
                 filterView === "buy" ? "h-full" : "h-[50%]"
               } overflow-hidden flex flex-col`}
             >
-              {(depthData?.bids ?? []).map((bid) =>
+              {buyOrders.map((bid) =>
                 renderOrderRow(bid.price, bid.quantity, "buy")
               )}
             </div>
@@ -258,7 +261,7 @@ const TradeBook: FC<Props> = ({ pair }) => {
         </div>
       )}
 
-      {/* Trade History Content */}
+      {/* Trade History */}
       {activeTab === "tradehistory" && (
         <div className="h-full px-4 pt-2 custom-scroll overflow-auto">
           {!(tradeHistoryData as OrderBook_int)?.orderbook ? (
@@ -298,3 +301,19 @@ const TradeBook: FC<Props> = ({ pair }) => {
 };
 
 export default TradeBook;
+
+// Helper simulation function
+function updaterFunction(orders: { price: number; quantity: number }[]) {
+  if (orders.length < 15) return orders;
+
+  const posn = helper(2, 14); // within index range
+  const multiplier = helper(101, 103) / 100;
+
+  return orders.map((order, i) =>
+    i === posn ? { ...order, quantity: order.quantity * multiplier } : order
+  );
+}
+
+function helper(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}

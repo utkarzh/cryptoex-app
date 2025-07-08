@@ -12,8 +12,11 @@ import { useTranslations } from "next-intl";
 import { maskEmail } from "@/utils/maskEmail";
 
 export type PopupData = "change_mail" | "next_step" | "confirm" | "";
+type EmailInfoProps = {
+  email: string;
+};
 
-const EmailInfo = () => {
+const EmailInfo: React.FC<EmailInfoProps> = ({ email }) => {
   const t = useTranslations("dashboard.security.securitySetting.emailInfo");
 
   const tempEmail = "test.123@gmail.com";
@@ -67,7 +70,7 @@ const EmailInfo = () => {
                   className="w-3 xl:w-4 h-auto"
                 />
                 <span className="opacity-60 flex gap-1 text-[10px] xl:text-[0.65rem] font-light">
-                  {isEmailVisible ? tempEmail : maskEmail(tempEmail)}
+                  {isEmailVisible ? email : maskEmail(email)}
                   <span
                     className="text-xs cursor-pointer"
                     onClick={() => setIsEmailVisible((prev) => !prev)}

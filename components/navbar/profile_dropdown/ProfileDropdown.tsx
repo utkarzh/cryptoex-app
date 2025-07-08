@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { toast } from "sonner";
 import { useLogoutUserMutation } from "@/redux/masternode/auth/authApi";
 
 export default function ProfileDropdown() {
@@ -31,15 +32,16 @@ export default function ProfileDropdown() {
 
   const handleLogout = async () => {
     try {
-      const response = await logoutUser({}); // Call the logout API
+      const response = await logoutUser({});
 
-      if (response.data.status === 1) {
-        alert("User logged out successfully!");
+      if (response.data?.status === 1) {
+        toast.success("Logged out successfully");
         router.push("/");
       } else {
-        console.log("Logout failed:", response.data.message);
+        toast.error(response.data?.message || "Logout failed");
       }
     } catch (error) {
+      toast.error("An error occurred during logout");
       console.error("Logout error:", error);
     }
   };

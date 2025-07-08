@@ -13,6 +13,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import ErrorCard from "../common/ErrorCard";
 import Spinner from "../common/Spinner";
 import { AuthApiResult_int, LoginResponse_int } from "./types";
+import Link from "next/link";
 
 export default function LoginForm() {
   const t = useTranslations("auth.signin");
@@ -222,9 +223,11 @@ export default function LoginForm() {
 
         <div className="text-center text-[10px] xl:text-xs mt-4">
           {t("noAcc.part1")}{" "}
-          <span className="text-green-400 hover:underline cursor-pointer">
-            {t("noAcc.part2")}
-          </span>
+          <Link href="/signup">
+            <span className="text-green-400 hover:underline cursor-pointer">
+              {t("noAcc.part2")}
+            </span>
+          </Link>
         </div>
       </div>
       {isOtpPopUp && (
