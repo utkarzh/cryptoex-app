@@ -11,6 +11,7 @@ import {
   useRegisterUserMutation,
   useResendVerificationMailMutation,
 } from "@/redux/masternode/auth/authApi";
+import { validatePassword } from "@/utils/regex";
 
 type Errors = {
   email?: string;
@@ -74,14 +75,6 @@ export default function SignupForm() {
     /^[a-zA-Z0-9]{6,}$/.test(v)
       ? undefined
       : "Username must be at least 6 letters/numbers.";
-
-  const validatePassword = (v: string) => {
-    const re =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\S]{8,}$/;
-    return re.test(v)
-      ? undefined
-      : "Password must be 8+ chars, with upper, lower, number & special char.";
-  };
 
   const validateCountry = (v: string) =>
     v === "none" ? "Please select a country." : undefined;

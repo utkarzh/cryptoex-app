@@ -77,13 +77,11 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
       >
         <IoClose size={24} />
       </button>
-
       <h2 className={`${saira.className} text-sm font-semibold `}>
         {t("title")}
       </h2>
       <p className="mt-6 opacity-60 text-xs font-light mb-4">{t("enter2fa")}</p>
-
-      {/* box */}
+      {/* box */}fdfsdfdf
       <div className="flex justify-between mb-4">
         {code.map((digit, idx) => (
           <input
@@ -102,7 +100,6 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
           />
         ))}
       </div>
-
       {/* <p className="flex text-[11px] gap-[2px] font-light ">
         <span className="opacity-60">
           Not able to receive verification code?
@@ -111,14 +108,12 @@ const AntiPhiSecurityPopup: FC<Props> = ({ onClose, onSuccess }) => {
           Resend verification code
         </button>
       </p> */}
-
       {/* error message */}
       {errorMessage && (
         <p className="text-[10px] xl:text-[0.5rem] mt-4 font-light bg-red-700 text-red-50 dark:bg-red-400/15  dark:text-red-500 px-4 py-2 rounded-full">
           {errorMessage}
         </p>
       )}
-
       <p className="text-green-500 text-xs font-light mt-2 cursor-pointer">
         {t("havingProb")}
       </p>

@@ -1445,7 +1445,8 @@
         "antiPhishing":{
           "label":"Anti phishing",
           "content":"The email sent to you by the platform will contain the anti-phishing code to distinguish from fake mail",
-          "button":"Set Up",
+          "buttonSetUp":"Set Up",
+          "buttonDisable":"Disable Anti-Phishing",
           "popUp1":{
             "title":"Set Up Anti-phishing Code",
             "alert":"Please do not disclose your anti-phishing code to anyone, including IndoEx employees.",
@@ -1454,9 +1455,16 @@
             "message":"Please enter 4 to 20 characters that contain letters, numbers and underscores only. Please do not set your frequently used password as the anti-phishing code.",
             "whatIsIt":"What Is Anti-Phishing Code?",
             "whatIsItContent":"Your anti-phishing code will appear in all IndoEx emails, helping you spot genuine communications and avoid scams.",
+            "emailSent":"Email Sent!",
+            "verificationCodePlaceholder":"Enter the verification code sent to your email.",
+            "verificationCode":"Enter Verification Code",
             "buttons":{
               "cancel":"Cancel",
-              "confirm":"Confirm"
+              "confirm":"Confirm",
+               "sending":"Sending...",
+              "sendEmail":"Send Email",
+              "verifying":"Verifying..."
+
             },
             "error":"Error Occured"
           },

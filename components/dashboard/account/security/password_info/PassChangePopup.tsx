@@ -6,6 +6,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 import { useChangePasswordMutation } from "@/redux/masternode/dashboard/security/securityApi";
 import { toast } from "sonner";
+import { validatePassword } from "@/utils/regex";
 
 type Props = {
   onClose: () => void;
@@ -41,6 +42,12 @@ const PassChangePopup: FC<Props> = ({ onClose, onSuccess }) => {
     isLoading;
 
   const verificationHandler = async (data: string) => {
+    const passwordError = validatePassword(newPassword.newPassword);
+    if (passwordError) {
+      setError(passwordError);
+      return;
+    }
+
     if (newPassword.newPassword !== confirmPassword.confirmPassword) {
       setError("Passwords do not match");
       return;

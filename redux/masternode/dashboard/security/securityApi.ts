@@ -15,8 +15,8 @@ export const securityApi = apiSlice.injectEndpoints({
     }),
 
     changePassword: builder.mutation<
-      { status: number; message: string }, // ✅ expected response type
-      { oldpassword: string; newpassword: string } // ✅ input to the mutation
+      { status: number; message: string },
+      { oldpassword: string; newpassword: string }
     >({
       query: ({ oldpassword, newpassword }) => {
         const sessionid = getSessionId();
@@ -31,8 +31,50 @@ export const securityApi = apiSlice.injectEndpoints({
         };
       },
     }),
+
+    sendPhishingCode: builder.mutation<
+      { status: number; message: string },
+      { userphishingcode: string }
+    >({
+      query: ({ userphishingcode }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "sendphishingcode",
+          method: "POST",
+          body: {
+            sessionid,
+            userphishingcode,
+          },
+        };
+      },
+    }),
+
+    validatePhishingCode: builder.mutation<
+      { status: number; message: string },
+      {
+        userphishingcode: string;
+        userverificationcode: string;
+      }
+    >({
+      query: ({ userphishingcode, userverificationcode }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "validatephishingcode",
+          method: "POST",
+          body: {
+            sessionid,
+            userphishingcode,
+            userverificationcode,
+          },
+        };
+      },
+    }),
   }),
 });
 
-export const { useGetProfileSettingsQuery, useChangePasswordMutation } =
-  securityApi;
+export const {
+  useGetProfileSettingsQuery,
+  useChangePasswordMutation,
+  useSendPhishingCodeMutation,
+  useValidatePhishingCodeMutation,
+} = securityApi;

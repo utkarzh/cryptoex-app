@@ -5,14 +5,20 @@ import { IoLockClosedOutline } from "react-icons/io5";
 import AntiPhiSetupPopup from "./AnitPhiSetupPopup";
 import AntiPhiSecurityPopup from "./AntiPhiSecurityPopup";
 import { useTranslations } from "next-intl";
+import { useSendPhishingCodeMutation } from "@/redux/masternode/dashboard/security/securityApi";
+import CustomPopup from "@/components/common/CustomPopUp";
 
-const AntiPhishing = () => {
+type AntiPhishingProps = {
+  isSet: boolean;
+};
+
+const AntiPhishing: React.FC<AntiPhishingProps> = ({ isSet }) => {
   const t = useTranslations("dashboard.security.securitySetting.antiPhishing");
-  const [popup, setPopup] = useState<"open" | "security" | "">("");
+  const [popup, setPopup] = useState<"open" | "disable" | "">("");
   const [isVerified, setIsVerified] = useState(false);
 
   const successHandler = () => {
-    setPopup("security");
+    setPopup("");
   };
 
   const updateAntiPhishingHandler = () => {
@@ -38,42 +44,35 @@ const AntiPhishing = () => {
       </div>
 
       <div className="flex items-center gap-2">
-        {isVerified && (
-          <>
-            <span className="flex items-center gap-1 text-sm">
-              <Image
-                src="/images/icons/verified.png"
-                width={24}
-                height={24}
-                alt=""
-                className="w-3 xl:w-4 h-auto"
-              />
-              <span className="opacity-60 text-[10px] xl:text-[0.65rem] font-light">
-                123456
-              </span>
-            </span>
-          </>
-        )}
-
-        <button
-          className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded bg-slate-500/25 dark:hover:bg-slate-500/30 hover:bg-slate-500/15 text-nowrap"
-          onClick={() => setPopup("open")}
-        >
-          {t("button")}
-        </button>
+        {isSet ? (
+          <button
+            className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded bg-red-500/25 dark:hover:bg-red-500/30 hover:bg-red-500/15 text-nowrap"
+            onClick={() => setPopup("disable")}
+          >
+            {t("buttonDisable")}
+          </button>
+        ) : (
+          <button
+            className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded bg-slate-500/25 dark:hover:bg-slate-500/30 hover:bg-slate-500/15 text-nowrap"
+            onClick={() => setPopup("open")}
+          >
+            {t("buttonSetUp")}
+          </button>
+        )}{" "}
       </div>
 
       {popup && (
         <Model>
-          {popup === "open" ? (
+          {popup === "open" && (
             <AntiPhiSetupPopup
               onClose={closeHandler}
               onSuccess={successHandler}
             />
-          ) : (
-            <AntiPhiSecurityPopup
+          )}
+          {popup === "disable" && (
+            <CustomPopup
+              message={"Are you sure you want to disable Anti-Phising?"}
               onClose={closeHandler}
-              onSuccess={updateAntiPhishingHandler}
             />
           )}
         </Model>

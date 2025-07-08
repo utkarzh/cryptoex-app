@@ -44,7 +44,7 @@ const SecuritySettings = ({ userInfo }: SecuritySettingsProps) => {
         {/* Secondary Pin */}
         <SecondaryPin />
         {/*Anti phishing  */}
-        <AntiPhishing />
+        <AntiPhishing isSet={userInfo.phishing === "SET"} />
       </div>
     </div>
   );
