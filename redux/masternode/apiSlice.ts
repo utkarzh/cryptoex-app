@@ -1,4 +1,3 @@
-// src/redux/masternode/apiSlice.ts
 "use client";
 
 import { getSessionId } from "@/utils/session";
@@ -44,10 +43,11 @@ const baseQueryWithSessionHandler: typeof rawBaseQuery = async (
   return result;
 };
 
-// Create the API slice using the custom base query
+// ✅ Added tagTypes for automatic cache invalidation/refetch
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: baseQueryWithSessionHandler,
+  tagTypes: ["ProfileSettings"], // <-- Add all other tag types here as needed
   endpoints: (builder) => ({
     loadUser: builder.query({
       query: () => ({

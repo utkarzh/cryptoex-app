@@ -16,6 +16,12 @@ const nextConfig: NextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "quickchart.io",
+        port: "",
+        pathname: "/**", // <-- Add this for QR code images
+      },
     ],
   },
 };

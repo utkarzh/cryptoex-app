@@ -6,9 +6,11 @@ import { PiSealCheckFill } from "react-icons/pi";
 import ChangePinPopup from "./ChangePinPopup";
 import { useTranslations } from "next-intl";
 
-export type PopupValue = "fotgot" | "change" | "";
-
-const SecondaryPin = () => {
+export type PopupValue = "fotgot" | "change" | "" | "setNew";
+type SecondaryPinProps = {
+  isSet: boolean;
+};
+const SecondaryPin = ({ isSet }: SecondaryPinProps) => {
   const t = useTranslations("dashboard.security.securitySetting.secondaryPin");
 
   const [popup, setPopup] = useState<PopupValue>("");
@@ -44,7 +46,7 @@ const SecondaryPin = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          {true ? (
+          {isSet ? (
             <div className="flex gap-2 ">
               <button
                 className="  cursor-pointer text-[10px] xl:text-[0.65rem] px-2 py-1 text-sm rounded text-nowrap"
@@ -60,7 +62,10 @@ const SecondaryPin = () => {
               </button>
             </div>
           ) : (
-            <button className="border border-slate-500/20 cursor-pointer text-[10px] px-2 py-1 text-sm rounded dark:hover:bg-slate-500/25 hover:bg-slate-500/15 text-nowrap">
+            <button
+              className="border border-slate-500/20 cursor-pointer text-[10px] xl:text-[0.68rem] px-2 py-1 text-sm bg-slate-500/25 rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15 text-nowrap"
+              onClick={() => setPopup("setNew")}
+            >
               Set up
             </button>
           )}

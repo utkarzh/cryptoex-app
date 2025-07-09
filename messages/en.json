@@ -1405,7 +1405,7 @@
             "notice":"Notice",
             "noticeMess":"For your account`s security, after removing Google Two-Factor Authentication, actions such as on-chain withdrawals, internal transfers, fiat withdrawals, P2P trading, and other transactions will be temporarily suspended for 24 hours.",
             "buttons":{
-              "cancel":"Cnacel",
+              "cancel":"Cancel",
               "remove":"Remove"
             }
           }

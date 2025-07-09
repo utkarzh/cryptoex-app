@@ -3,7 +3,10 @@ import { apiSlice } from "@/redux/masternode/apiSlice";
 
 export const securityApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
-    getProfileSettings: builder.query({
+    getProfileSettings: builder.query<
+      { status: number; data: any }, // Adjust `data` type as needed
+      void
+    >({
       query: () => {
         const sessionid = getSessionId();
         return {
@@ -12,6 +15,7 @@ export const securityApi = apiSlice.injectEndpoints({
           body: { sessionid },
         };
       },
+      providesTags: ["ProfileSettings"],
     }),
 
     changePassword: builder.mutation<
@@ -68,6 +72,98 @@ export const securityApi = apiSlice.injectEndpoints({
           },
         };
       },
+      invalidatesTags: ["ProfileSettings"],
+    }),
+
+    removePhishingCode: builder.mutation<
+      { status: number; message: string },
+      void
+    >({
+      query: () => {
+        const sessionid = getSessionId();
+        return {
+          url: "removephishingcode",
+          method: "POST",
+          body: {
+            sessionid,
+          },
+        };
+      },
+      invalidatesTags: ["ProfileSettings"],
+    }),
+
+    validateMobileCode: builder.mutation<
+      { status: number; message: string },
+      { otp: string }
+    >({
+      query: ({ otp }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "validatemobilecode",
+          method: "POST",
+          body: {
+            sessionid,
+            otp,
+          },
+        };
+      },
+      invalidatesTags: ["ProfileSettings"],
+    }),
+
+    resetMobileCode: builder.mutation<
+      { status: number; message: string },
+      { otp: string }
+    >({
+      query: ({ otp }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "resetmobilecode",
+          method: "POST",
+          body: {
+            sessionid,
+            otp,
+          },
+        };
+      },
+      invalidatesTags: ["ProfileSettings"],
+    }),
+
+    // ✅ ADD / UPDATE Secondary PIN
+    updatePin: builder.mutation<
+      { status: number; message: string },
+      { oldpin: string; newpin: string }
+    >({
+      query: ({ oldpin, newpin }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "updatepin",
+          method: "POST",
+          body: {
+            sessionid,
+            oldpin,
+            newpin,
+          },
+        };
+      },
+      invalidatesTags: ["ProfileSettings"],
+    }),
+
+    // ✅ FORGOT Secondary PIN (just sends email, no refetch)
+    forgot2Pin: builder.mutation<
+      { status: number; message: string },
+      { otp: string }
+    >({
+      query: ({ otp }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "forgot2pin",
+          method: "POST",
+          body: {
+            sessionid,
+            otp,
+          },
+        };
+      },
     }),
   }),
 });
@@ -77,4 +173,9 @@ export const {
   useChangePasswordMutation,
   useSendPhishingCodeMutation,
   useValidatePhishingCodeMutation,
+  useRemovePhishingCodeMutation,
+  useValidateMobileCodeMutation,
+  useResetMobileCodeMutation,
+  useUpdatePinMutation,
+  useForgot2PinMutation,
 } = securityApi;

@@ -1,12 +1,13 @@
+"use client";
+
 import Model from "@/components/common/Model";
-import Image from "next/image";
 import React, { useState } from "react";
 import { IoLockClosedOutline } from "react-icons/io5";
 import AntiPhiSetupPopup from "./AnitPhiSetupPopup";
-import AntiPhiSecurityPopup from "./AntiPhiSecurityPopup";
 import { useTranslations } from "next-intl";
-import { useSendPhishingCodeMutation } from "@/redux/masternode/dashboard/security/securityApi";
+import { useRemovePhishingCodeMutation } from "@/redux/masternode/dashboard/security/securityApi";
 import CustomPopup from "@/components/common/CustomPopUp";
+import { toast } from "sonner";
 
 type AntiPhishingProps = {
   isSet: boolean;
@@ -15,26 +16,35 @@ type AntiPhishingProps = {
 const AntiPhishing: React.FC<AntiPhishingProps> = ({ isSet }) => {
   const t = useTranslations("dashboard.security.securitySetting.antiPhishing");
   const [popup, setPopup] = useState<"open" | "disable" | "">("");
-  const [isVerified, setIsVerified] = useState(false);
+
+  const [removePhishingCode, { isLoading }] = useRemovePhishingCodeMutation();
+
+  const closeHandler = () => {
+    setPopup("");
+  };
 
   const successHandler = () => {
     setPopup("");
   };
 
-  const updateAntiPhishingHandler = () => {
-    setIsVerified(true);
-    setPopup("");
+  const handleRemovePhishing = async () => {
+    try {
+      const res = await removePhishingCode().unwrap();
+      if (res.status === 1) {
+        toast.success("Anti-phishing disabled successfully.");
+        closeHandler();
+      } else {
+        toast.error(res.message || "Failed to disable Anti-phishing.");
+      }
+    } catch (err: any) {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
-  const closeHandler = () => {
-    setPopup("");
-  };
   return (
-    <div className="flex justify-between items-center  text-xs ">
-      <div className="flex items-start gap-2  ">
-        <div className="">
-          <IoLockClosedOutline className="text-[17px] xl:text-[22px]" />
-        </div>
+    <div className="flex justify-between items-center text-xs">
+      <div className="flex items-start gap-2">
+        <IoLockClosedOutline className="text-[17px] xl:text-[22px]" />
         <div>
           <div className="font-xs font-light opacity-90">{t("label")}</div>
           <div className="text-[11px] xl:text-[0.65rem] font-light opacity-60">
@@ -58,7 +68,7 @@ const AntiPhishing: React.FC<AntiPhishingProps> = ({ isSet }) => {
           >
             {t("buttonSetUp")}
           </button>
-        )}{" "}
+        )}
       </div>
 
       {popup && (
@@ -71,8 +81,10 @@ const AntiPhishing: React.FC<AntiPhishingProps> = ({ isSet }) => {
           )}
           {popup === "disable" && (
             <CustomPopup
-              message={"Are you sure you want to disable Anti-Phising?"}
+              message="Are you sure you want to disable Anti-Phishing?"
               onClose={closeHandler}
+              onConfirm={handleRemovePhishing}
+              onLoading={isLoading}
             />
           )}
         </Model>

@@ -1,53 +1,81 @@
-import Model from "@/components/common/Model";
-import Image from "next/image";
+"use client";
+
 import React, { useState } from "react";
+import Image from "next/image";
 import { BsShieldLock } from "react-icons/bs";
-import SecurityVerificationPopup from "./SecurityVerificationPopup";
+import { useTranslations } from "next-intl";
+import { toast } from "sonner";
+
+import Model from "@/components/common/Model";
 import TwoFactorSetupPopup from "./TwoFactorSetupPopup";
 import TwoFactorDisableFormPopup from "./TwoFactorDisableFormPopup";
 import TwoFactorDisablePopupConfirm from "./TwoFactorDisableConfirmPopup";
-import { useTranslations } from "next-intl";
+import { useResetMobileCodeMutation } from "@/redux/masternode/dashboard/security/securityApi";
 
-// type Props = {};
+import { getSessionId } from "@/utils/session";
 
-const TwoFactor = () => {
+type TwoFactorProps = {
+  isSet: boolean;
+  qrImage: string;
+  gPrivateKey: string;
+};
+
+type DisableFormData = {
+  password: string;
+  otp: string;
+};
+
+const TwoFactor: React.FC<TwoFactorProps> = ({
+  isSet,
+  qrImage,
+  gPrivateKey,
+}) => {
   const t = useTranslations("dashboard.security.securitySetting.twofactor");
-  const [twoFASetup, setTwoFASetup] = useState<
-    "otp" | "google-auth" | "disable-form" | "disable-confirmation" | ""
-  >();
-  const [is2FAVerified, setIs2FAVerified] = useState(false);
 
-  const disable2FAHandler = () => {
-    setTwoFASetup("disable-form");
-  };
-  const setup2FAHandler = () => {
-    setTwoFASetup("otp");
-  };
+  const [modalType, setModalType] = useState<
+    "setup" | "disable-form" | "disable-confirmation" | ""
+  >("");
 
-  const onClose2FASetup = () => {
-    setTwoFASetup("");
+  const [formData, setFormData] = useState<DisableFormData | null>(null);
+
+  const [resetMobileCode, { isLoading }] = useResetMobileCodeMutation();
+
+  const handleSetupClick = () => {
+    setModalType("setup");
   };
 
-  const otpDataHandler = (data: string) => {
-    console.log("Otp data is", data);
-    setTwoFASetup("google-auth");
+  const handleDisableClick = () => {
+    setModalType("disable-form");
   };
 
-  const googleAuthHandler = () => {
-    setIs2FAVerified(true);
-    setTwoFASetup("");
+  const closeModal = () => {
+    setModalType("");
   };
 
-  const disableSuccessHandler = () => {
-    setIs2FAVerified(false);
-    setTwoFASetup("");
+  const handleDisableSuccess = async () => {
+    if (!formData?.otp) {
+      toast.error("Missing OTP. Please try again.");
+      return;
+    }
+
+    try {
+      const res = await resetMobileCode({ otp: formData.otp }).unwrap();
+      if (res.status === 1) {
+        toast.success("Two-factor authentication disabled successfully.");
+        closeModal();
+        // Optional: trigger profile refetch or update local state
+      } else {
+        toast.error(res.message || "Failed to disable 2FA");
+      }
+    } catch (error: any) {
+      toast.error(error?.data?.message || "An unexpected error occurred.");
+    }
   };
+
   return (
-    <div className="flex justify-between items-center  text-xs ">
-      <div className="flex items-start gap-2  ">
-        <div className="">
-          <BsShieldLock className="text-[17px]" />
-        </div>
+    <div className="flex justify-between items-center text-xs">
+      <div className="flex items-start gap-2">
+        <BsShieldLock className="text-[17px]" />
         <div>
           <div className="font-xs font-light opacity-90">{t("label")}</div>
           <div className="text-[11px] xl:text-[0.65rem] font-light opacity-60">
@@ -57,56 +85,56 @@ const TwoFactor = () => {
       </div>
 
       <div className="flex flex-wrap items-center justify-end gap-2">
-        {is2FAVerified && (
-          <>
-            <span className="flex items-center gap-1 text-sm">
-              <Image
-                src="/images/icons/verified.png"
-                width={24}
-                height={24}
-                alt=""
-                className="w-3 xl:w-4 h-auto"
-              />
-              <span className="opacity-60 text-[10px] xl:text-[.65rem] font-light">
-                Linked
-              </span>
+        {isSet && (
+          <span className="flex items-center gap-1 text-sm">
+            <Image
+              src="/images/icons/verified.png"
+              width={24}
+              height={24}
+              alt=""
+              className="w-3 xl:w-4 h-auto"
+            />
+            <span className="opacity-60 text-[10px] xl:text-[.65rem] font-light">
+              Linked
             </span>
-          </>
+          </span>
         )}
 
         <button
           className="border border-slate-500/20 bg-slate-500/25 cursor-pointer text-[10px] px-2 py-1 text-sm xl:text-[0.65rem] rounded dark:hover:bg-slate-500/30 hover:bg-slate-500/15"
-          onClick={is2FAVerified ? disable2FAHandler : setup2FAHandler}
+          onClick={isSet ? handleDisableClick : handleSetupClick}
         >
-          {is2FAVerified ? t("buttons.disable") : t("buttons.setUp")}
+          {isSet ? t("buttons.disable") : t("buttons.setUp")}
         </button>
       </div>
 
-      {/* 2fa setup popup */}
-      {twoFASetup && (
+      {/* Modals */}
+      {modalType && (
         <Model>
-          {twoFASetup === "otp" ? (
-            <SecurityVerificationPopup
-              onClose={onClose2FASetup}
-              onOTPEntered={otpDataHandler}
-            />
-          ) : twoFASetup === "google-auth" ? (
+          {modalType === "setup" && (
             <TwoFactorSetupPopup
-              onClose={onClose2FASetup}
-              onSuccess={googleAuthHandler}
+              qrImage={qrImage}
+              gPrivateKey={gPrivateKey}
+              onClose={closeModal}
+              onSuccess={closeModal}
             />
-          ) : twoFASetup === "disable-form" ? (
+          )}
+
+          {modalType === "disable-form" && (
             <TwoFactorDisableFormPopup
-              onClose={onClose2FASetup}
-              onSuccess={() => setTwoFASetup("disable-confirmation")}
+              onClose={closeModal}
+              onSuccess={(data) => {
+                setFormData(data); // Save form data here
+                setModalType("disable-confirmation");
+              }}
             />
-          ) : twoFASetup === "disable-confirmation" ? (
+          )}
+
+          {modalType === "disable-confirmation" && (
             <TwoFactorDisablePopupConfirm
-              onClose={onClose2FASetup}
-              onSuccess={disableSuccessHandler}
+              onClose={closeModal}
+              onSuccess={handleDisableSuccess}
             />
-          ) : (
-            ""
           )}
         </Model>
       )}
