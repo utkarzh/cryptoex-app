@@ -12,13 +12,12 @@ type Props = {
   onSuccess: (data: string) => void;
 };
 
-const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
+const SetupPinPopup: FC<Props> = ({ onClose, onSuccess }) => {
   const t = useTranslations(
     "dashboard.security.securitySetting.secondaryPin.changepopUp"
   );
 
   const [data, setData] = useState({
-    currentPin: "",
     newPin: "",
     confirmPin: "",
   });
@@ -33,7 +32,7 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
   };
 
   const validateInputs = (): boolean => {
-    if (!data.currentPin || !data.newPin || !data.confirmPin) {
+    if (!data.newPin || !data.confirmPin) {
       toast.error(t("errors.allFieldsRequired"));
       return false;
     }
@@ -48,20 +47,15 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
       return false;
     }
 
-    if (data.currentPin === data.newPin) {
-      toast.error(t("errors.samePin"));
-      return false;
-    }
-
     return true;
   };
 
-  const changePinHandler = async () => {
+  const setupPinHandler = async () => {
     if (!validateInputs()) return;
 
     try {
       const response = await updatePin({
-        oldpin: data.currentPin,
+        oldpin: "", // sending blank for setup
         newpin: data.newPin,
       }).unwrap();
 
@@ -72,7 +66,7 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
         toast.error(response.message || t("errors.generic"));
       }
     } catch (err: any) {
-      console.error("Update PIN error:", err);
+      console.error("Setup PIN error:", err);
       toast.error(err?.data?.message || t("errors.generic"));
     }
   };
@@ -94,28 +88,12 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
       <div className="w-full space-y-3">
         <div>
           <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
-            {t("currentPin")}
-          </label>
-          <input
-            type="password"
-            value={data.currentPin}
-            name="currentPin"
-            maxLength={4}
-            placeholder={t("enterCurrentPin")}
-            onChange={inputChangeHandler}
-            className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
-          />
-        </div>
-
-        <div>
-          <label className="block mb-1 text-[10px] xl:text-[0.65rem] font-light">
             {t("newPin")}
           </label>
           <input
             type="password"
             value={data.newPin}
             name="newPin"
-            maxLength={4}
             placeholder={t("enterNewPin")}
             onChange={inputChangeHandler}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
@@ -130,7 +108,6 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
             type="password"
             value={data.confirmPin}
             name="confirmPin"
-            maxLength={4}
             placeholder={t("enterCofirmPin")}
             onChange={inputChangeHandler}
             className="w-full p-2 rounded-md bg-slate-500/10 border border-gray-500/20 focus:outline-none placeholder:text-[10px] xl:placeholder:text-[0.6rem]"
@@ -147,7 +124,7 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
         </button>
         <button
           className="w-full border border-transparent bg-green-600 dark:text-black text-white py-2 rounded-full cursor-pointer hover:scale-105 transition-all duration-200 disabled:opacity-50"
-          onClick={changePinHandler}
+          onClick={setupPinHandler}
           disabled={isLoading}
         >
           {isLoading ? t("buttons.loading") : t("buttons.confirm")}
@@ -157,4 +134,4 @@ const ChangePinPopup: FC<Props> = ({ onClose, onSuccess }) => {
   );
 };
 
-export default ChangePinPopup;
+export default SetupPinPopup;

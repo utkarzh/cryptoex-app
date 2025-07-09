@@ -46,7 +46,12 @@ const SecuritySettings = ({ userInfo }: SecuritySettingsProps) => {
           gPrivateKey={userInfo.GprivateKey}
         />
         {/* Secondary Pin */}
-        <SecondaryPin isSet={userInfo.user2pin == "SET"} />
+        <SecondaryPin
+          qrImage={userInfo.get2FAImage}
+          gPrivateKey={userInfo.GprivateKey}
+          is2faSet={userInfo.mobile2fa !== "DISABLED"}
+          isSet={userInfo.user2pin == "SET"}
+        />
         {/*Anti phishing  */}
         <AntiPhishing isSet={userInfo.phishing === "SET"} />
       </div>

@@ -5,12 +5,22 @@ import PinForgotPopup from "./PinForgotPopup";
 import { PiSealCheckFill } from "react-icons/pi";
 import ChangePinPopup from "./ChangePinPopup";
 import { useTranslations } from "next-intl";
+import SetupPinPopup from "./SetupPinPopup";
+import TwoFactorSetupPopup from "../two_factor/TwoFactorSetupPopup";
 
 export type PopupValue = "fotgot" | "change" | "" | "setNew";
 type SecondaryPinProps = {
   isSet: boolean;
+  is2faSet: boolean;
+  qrImage: string;
+  gPrivateKey: string;
 };
-const SecondaryPin = ({ isSet }: SecondaryPinProps) => {
+const SecondaryPin = ({
+  isSet,
+  is2faSet,
+  qrImage,
+  gPrivateKey,
+}: SecondaryPinProps) => {
   const t = useTranslations("dashboard.security.securitySetting.secondaryPin");
 
   const [popup, setPopup] = useState<PopupValue>("");
@@ -73,13 +83,28 @@ const SecondaryPin = ({ isSet }: SecondaryPinProps) => {
 
         {popup && (
           <Model>
-            {popup === "fotgot" ? (
-              <PinForgotPopup
-                onClose={() => setPopup("")}
-                onSuccess={forgotSuccessHandler}
-              />
-            ) : (
+            {popup === "fotgot" &&
+              (is2faSet ? (
+                <PinForgotPopup
+                  onClose={() => setPopup("")}
+                  onSuccess={forgotSuccessHandler}
+                />
+              ) : (
+                <TwoFactorSetupPopup
+                  qrImage={qrImage}
+                  gPrivateKey={gPrivateKey}
+                  onClose={() => setPopup("")}
+                  onSuccess={() => setPopup("fotgot")}
+                />
+              ))}
+            {popup === "change" && (
               <ChangePinPopup
+                onClose={() => setPopup("")}
+                onSuccess={changePinSuccessHandler}
+              />
+            )}
+            {popup === "setNew" && (
+              <SetupPinPopup
                 onClose={() => setPopup("")}
                 onSuccess={changePinSuccessHandler}
               />

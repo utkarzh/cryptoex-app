@@ -1414,7 +1414,7 @@
           "label":"Secondary Pin",
           "content":"Set up a personalized code to ensure emails from the platform are authentic and not phishing attempts",
           "buttons":{
-            "forgot":"Forgot",
+            "forgot":"Forgot Pin?",
             "change":"Change"
           },
           "forgotPopUp":{
@@ -1426,19 +1426,29 @@
               "expOtp":"Verification code has expired. Please request a new code."
             }
           },
-          "changepopUp":{
-            "title":"Update pin",
-            "currentPin":"Current Pin",
-            "enterCurrentPin":"Please enter current pin",
-            "newPin":"New Pin",
-            "enterNewPin":"Please enter new pin",
-            "confirmPin":"Confirm Pin",
-            "enterCofirmPin":"Please enter new pin again",
-            "buttons":{
-              "cancel":"Cancel",
-              "confirm":"Confirm"
-            }
-          },
+         "changepopUp": {
+  "title": "Update pin",
+  "currentPin": "Current Pin",
+  "enterCurrentPin": "Please enter current pin",
+  "newPin": "New Pin",
+  "enterNewPin": "Please enter new pin",
+  "confirmPin": "Confirm Pin",
+  "enterCofirmPin": "Please enter new pin again",
+  "buttons": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "loading": "Updating..."
+  },
+  "successMessage": "PIN updated successfully!",
+  "errors": {
+    "allFieldsRequired": "All fields are required.",
+    "pinMismatch": "New PIN and confirmation do not match.",
+    "pinLength": "PIN must be between 4 and 6 digits.",
+    "samePin": "New PIN must be different from current PIN.",
+    "generic": "Something went wrong. Please try again."
+  }
+}
+,
           "forgotSuccessMessage":"Your secondary pin sent to registered mail address",
           "changeSuccessMessage":"Your secondary pin updated suceessfully"
         },
