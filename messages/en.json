@@ -1882,18 +1882,26 @@
       }
 
     },
-    "apiList":{
-      "title":"Created API Keys",
-      "tHead":{
-        "createDate":"Create Date",
-        "notes":"Notes",
-        "permission":"Permission",
-        "accKey":"Access Key",
-        "ip":"Bind IP Address",
-        "expire":"Expire in(days)",
-        "action":"Action"
-      }
-    }
+   "apiList": {
+  "title": "Created API Keys",
+  "tHead": {
+    "createDate": "Create Date",
+    "notes": "Notes",
+    "permission": "Permission",
+    "accKey": "Access Key",
+    "ip": "Bind IP Address",
+    "expire": "Expire in (days)",
+    "action": "Action"
+  },
+  "permissions": {
+    "balance": "Account Balance",
+    "addOrder": "Add Order",
+    "viewOrder": "View Order",
+    "deleteOrder": "Close Order"
+  },
+  "empty": "No API keys created yet"
+}
+
   }
   }
 }

@@ -1,36 +1,23 @@
 "use client";
 import { saira } from "@/utils/Font";
 import { useTranslations } from "next-intl";
-import React from "react";
-
+import React, { useEffect } from "react";
 import { RxValueNone } from "react-icons/rx";
-
-type MockData = {
-  createdDate: string;
-  notes: string;
-  Permission: string;
-  access_key: string;
-  ip_add: string;
-  expire: string;
-  action: string;
-};
-
-export const mockData: MockData[] = [
-  {
-    createdDate: "2025-04-21 10:48",
-    notes: "af",
-    Permission: "Account Balance, Add Order, Get Order,",
-    access_key: "75627b1d3a99f609de4b9787a23f49416ff02355",
-    ip_add: "192.168.1.101",
-    expire: "2026-04-21",
-    action: "-",
-  },
-];
+import { useGetMyKeysMutation } from "@/redux/masternode/dashboard/api_management/apiManagementApi";
 
 const ApiList = () => {
   const t = useTranslations("dashboard.apiPage.apiList");
+
+  const [getMyKeys, { data, isLoading, isError }] = useGetMyKeysMutation();
+
+  useEffect(() => {
+    getMyKeys(); // trigger once on mount
+  }, [getMyKeys]);
+
+  const apikeys = data?.apikeys ?? [];
+
   return (
-    <div className="w-full bg-white dark:bg-[#161735]  rounded-xl p-6 ">
+    <div className="w-full bg-white dark:bg-[#161735] rounded-xl p-6">
       {/* heading */}
       <h2 className={`${saira.className} text-sm font-semibold mb-10`}>
         {t("title")}
@@ -41,44 +28,41 @@ const ApiList = () => {
         <table className="min-w-full text-sm">
           <thead className="bg-slate-200 dark:bg-slate-700/40 dark:opacity-70 opacity-90 text-center">
             <tr className="text-xs">
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.createDate")}
-              </th>
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.notes")}
-              </th>
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.permission")}
-              </th>
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.accKey")}
-              </th>
-              <th className="px-4 py-3 text-xs font-light">{t("tHead.ip")}</th>
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.expire")}
-              </th>
-              <th className="px-4 py-3 text-xs font-light">
-                {t("tHead.action")}
-              </th>
+              <th className="px-4 py-3 font-light">{t("tHead.createDate")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.notes")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.permission")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.accKey")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.ip")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.expire")}</th>
+              <th className="px-4 py-3 font-light">{t("tHead.action")}</th>
             </tr>
           </thead>
-          {mockData.length > 0 && (
+
+          {apikeys.length > 0 && (
             <tbody>
-              {mockData.map((item, index) => {
+              {apikeys.map((item, index) => {
+                const permissions = [
+                  item.balance === "ENABLED" && t("permissions.balance"),
+                  item.addorder === "ENABLED" && t("permissions.addOrder"),
+                  item.vieworder === "ENABLED" && t("permissions.viewOrder"),
+                  item.deleteorder === "ENABLED" &&
+                    t("permissions.deleteOrder"),
+                ]
+                  .filter(Boolean)
+                  .join(", ");
+
                 return (
                   <tr
                     key={index}
-                    className=" dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
+                    className="dark:even:bg-slate-700/20 even:bg-slate-300/20 transition text-center text-xs"
                   >
-                    <td className="py-3 px-4">{item.createdDate}</td>
-                    <td className="py-3 px-4">{item.notes}</td>
-                    <td className="py-3 px-4 max-w-[200px]">
-                      {item.Permission}
-                    </td>
-                    <td className="py-3 px-4 text-wrap ">{item.access_key}</td>
-                    <td className="py-3 px-4">{item.ip_add}</td>
-                    <td className="py-3 px-4">{item.expire}</td>
-                    <td className="py-3 px-4">{item.action}</td>
+                    <td className="py-3 px-4">{item.createdon}</td>
+                    <td className="py-3 px-4">{item.name}</td>
+                    <td className="py-3 px-4 max-w-[200px]">{permissions}</td>
+                    <td className="py-3 px-4 break-words">{item.publickey}</td>
+                    <td className="py-3 px-4">{item.iplist}</td>
+                    <td className="py-3 px-4">{item.expiresin} days</td>
+                    <td className="py-3 px-4">-</td>
                   </tr>
                 );
               })}
@@ -87,7 +71,7 @@ const ApiList = () => {
         </table>
       </div>
 
-      {!mockData.length && (
+      {!apikeys.length && !isLoading && (
         <div className="w-full h-[40vh] flex justify-center items-center">
           <RxValueNone className="text-[30vh] opacity-5" />
         </div>
