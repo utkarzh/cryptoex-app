@@ -6,7 +6,6 @@ import AuthLevel from "./AuthLevel";
 import { useGetProfileSettingsQuery } from "@/redux/masternode/dashboard/security/securityApi";
 import Spinner from "@/components/common/Spinner";
 
-// Define expected shape for `userinfo` (if not already defined in RTK types)
 type UserInfo = {
   firstName: string;
   email: string;
@@ -22,7 +21,7 @@ type UserInfo = {
 };
 
 const Security = () => {
-  const { data, isLoading, error } = useGetProfileSettingsQuery({});
+  const { data, isLoading, error } = useGetProfileSettingsQuery();
 
   if (isLoading) {
     return (

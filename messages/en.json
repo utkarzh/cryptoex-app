@@ -1862,7 +1862,7 @@
           "part2":"(optional)"
         },
         "expDate":"Expiry date of the key unbound to IP address is 100 days",
-        "button":"create"
+        "button":"Create"
       },
       
       "note":{
@@ -1891,7 +1891,11 @@
     "accKey": "Access Key",
     "ip": "Bind IP Address",
     "expire": "Expire in (days)",
-    "action": "Action"
+    "action": "Action",
+    "button":{
+      "edit":"Edit",
+      "delete":"Delete"
+    }
   },
   "permissions": {
     "balance": "Account Balance",

@@ -58,9 +58,8 @@ export default function SignupForm() {
   });
 
   const [registerUser, { isLoading: isRegistering }] =
-    useRegisterUserMutation<RegisterResponse>();
-  const [resendVerificationMail] =
-    useResendVerificationMailMutation<ResendVerificationResponse>();
+    useRegisterUserMutation();
+  const [resendVerificationMail] = useResendVerificationMailMutation();
 
   // ✅ Validation functions
   const validateEmail = (v: string) => {
@@ -127,8 +126,6 @@ export default function SignupForm() {
 
       const resendRes = await resendVerificationMail({
         useremail: email,
-        sessionid: regRes.sessionid,
-        captchacode: regRes.captchacode,
       }).unwrap();
 
       if (resendRes.status === 1) {

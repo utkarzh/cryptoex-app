@@ -1,14 +1,14 @@
 import { getSessionId } from "@/utils/session";
-import { apiSlice } from "@/redux/masternode/apiSlice";
+import { apiSlice } from "../../apiSlice";
 
-// Common response structure
+// ------------------ Common Response ------------------
 type BaseResponse = {
   status: number;
   message: string;
   sessionid: string;
 };
 
-// ------------------ Types ------------------
+// ------------------ Request/Response Types ------------------
 
 // generatekey
 export type GenerateKeyRequest = {
@@ -76,12 +76,24 @@ export type UpdateKeyRequest = {
   api_iplist: string;
 };
 
-export type UpdateKeyResponse = BaseResponse;
+export type UpdateKeyResponse = BaseResponse & {
+  apirefkey: string;
+};
+
+// deletekey
+export type DeleteKeyRequest = {
+  id: number;
+};
+
+export type DeleteKeyResponse = BaseResponse & {
+  apirefkey: string;
+};
 
 // ------------------ API Slice ------------------
 
 export const apiKeyManagementApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
+    // Generate key
     generateKey: builder.mutation<GenerateKeyResponse, GenerateKeyRequest>({
       query: (data) => {
         const sessionid = getSessionId();
@@ -93,6 +105,7 @@ export const apiKeyManagementApi = apiSlice.injectEndpoints({
       },
     }),
 
+    // Resend verification key
     resendVerificationKey: builder.mutation<
       ResendVerificationKeyResponse,
       void
@@ -107,6 +120,7 @@ export const apiKeyManagementApi = apiSlice.injectEndpoints({
       },
     }),
 
+    // Validate key
     validateKey: builder.mutation<ValidateKeyResponse, ValidateKeyRequest>({
       query: ({ api_authcode, apirefkey }) => {
         const sessionid = getSessionId();
@@ -116,9 +130,11 @@ export const apiKeyManagementApi = apiSlice.injectEndpoints({
           body: { sessionid, api_authcode, apirefkey },
         };
       },
+      invalidatesTags: ["MyKeys"],
     }),
 
-    getMyKeys: builder.mutation<GetMyKeysResponse, void>({
+    // Get My Keys
+    getMyKeys: builder.query<GetMyKeysResponse, void>({
       query: () => {
         const sessionid = getSessionId();
         return {
@@ -127,8 +143,10 @@ export const apiKeyManagementApi = apiSlice.injectEndpoints({
           body: { sessionid },
         };
       },
+      providesTags: ["MyKeys"],
     }),
 
+    // Update key
     updateKey: builder.mutation<UpdateKeyResponse, UpdateKeyRequest>({
       query: (data) => {
         const sessionid = getSessionId();
@@ -138,8 +156,24 @@ export const apiKeyManagementApi = apiSlice.injectEndpoints({
           body: { ...data, sessionid },
         };
       },
+      invalidatesTags: ["MyKeys"],
+    }),
+
+    // Delete key
+    deleteKey: builder.mutation<DeleteKeyResponse, DeleteKeyRequest>({
+      query: ({ id }) => {
+        const sessionid = getSessionId();
+        return {
+          url: "deletekey",
+          method: "POST",
+          body: { sessionid, id },
+        };
+      },
+      invalidatesTags: ["MyKeys"],
     }),
   }),
+
+  overrideExisting: false,
 });
 
 // ------------------ Hooks ------------------
@@ -148,6 +182,7 @@ export const {
   useGenerateKeyMutation,
   useResendVerificationKeyMutation,
   useValidateKeyMutation,
-  useGetMyKeysMutation,
+  useGetMyKeysQuery,
   useUpdateKeyMutation,
+  useDeleteKeyMutation,
 } = apiKeyManagementApi;

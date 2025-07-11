@@ -47,7 +47,7 @@ const baseQueryWithSessionHandler: typeof rawBaseQuery = async (
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: baseQueryWithSessionHandler,
-  tagTypes: ["ProfileSettings"], // <-- Add all other tag types here as needed
+  tagTypes: ["ProfileSettings", "MyKeys"], // <-- Add all other tag types here as needed
   endpoints: (builder) => ({
     loadUser: builder.query({
       query: () => ({
